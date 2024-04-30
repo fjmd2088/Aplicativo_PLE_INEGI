@@ -151,3 +151,24 @@ D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\D
 D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
 D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.exe
 D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.pdb

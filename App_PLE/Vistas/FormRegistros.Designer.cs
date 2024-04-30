@@ -1570,7 +1570,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(1006, 2167);
+            this.btnGuardarCL.Location = new System.Drawing.Point(998, 2322);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1665,7 +1665,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(917, 4230);
+            this.button24.Location = new System.Drawing.Point(909, 4385);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -4844,7 +4844,6 @@
             this.cmb_carrera_maestria_personal_apoyo.Name = "cmb_carrera_maestria_personal_apoyo";
             this.cmb_carrera_maestria_personal_apoyo.Size = new System.Drawing.Size(172, 24);
             this.cmb_carrera_maestria_personal_apoyo.TabIndex = 35;
-            this.cmb_carrera_maestria_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label42
             // 
@@ -5259,7 +5258,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox116.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox116.Location = new System.Drawing.Point(384, 3);
+            this.textBox116.Location = new System.Drawing.Point(393, 3);
             this.textBox116.Name = "textBox116";
             this.textBox116.Size = new System.Drawing.Size(170, 22);
             this.textBox116.TabIndex = 23;
@@ -5272,7 +5271,7 @@
             this.label278.AutoSize = true;
             this.label278.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label278.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label278.Location = new System.Drawing.Point(275, 0);
+            this.label278.Location = new System.Drawing.Point(284, 0);
             this.label278.Name = "label278";
             this.label278.Size = new System.Drawing.Size(103, 26);
             this.label278.TabIndex = 22;
@@ -5284,7 +5283,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox117.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox117.Location = new System.Drawing.Point(99, 3);
+            this.textBox117.Location = new System.Drawing.Point(108, 3);
             this.textBox117.Name = "textBox117";
             this.textBox117.Size = new System.Drawing.Size(170, 22);
             this.textBox117.TabIndex = 21;
@@ -5299,9 +5298,9 @@
             this.label279.ForeColor = System.Drawing.Color.Green;
             this.label279.Location = new System.Drawing.Point(3, 0);
             this.label279.Name = "label279";
-            this.label279.Size = new System.Drawing.Size(90, 26);
+            this.label279.Size = new System.Drawing.Size(99, 26);
             this.label279.TabIndex = 19;
-            this.label279.Text = "Primer nombre";
+            this.label279.Text = "Primerprueba git";
             // 
             // label280
             // 
@@ -5311,7 +5310,7 @@
             this.label280.AutoSize = true;
             this.label280.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label280.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label280.Location = new System.Drawing.Point(560, 0);
+            this.label280.Location = new System.Drawing.Point(569, 0);
             this.label280.Name = "label280";
             this.label280.Size = new System.Drawing.Size(88, 26);
             this.label280.TabIndex = 24;
@@ -5323,7 +5322,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox118.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox118.Location = new System.Drawing.Point(654, 3);
+            this.textBox118.Location = new System.Drawing.Point(663, 3);
             this.textBox118.Name = "textBox118";
             this.textBox118.Size = new System.Drawing.Size(212, 22);
             this.textBox118.TabIndex = 25;
