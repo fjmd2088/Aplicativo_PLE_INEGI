@@ -353,7 +353,7 @@
             this.label260 = new System.Windows.Forms.Label();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
             this.label261 = new System.Windows.Forms.Label();
-            this.comboBox91 = new System.Windows.Forms.ComboBox();
+            this.cmb_dinamico = new System.Windows.Forms.ComboBox();
             this.label262 = new System.Windows.Forms.Label();
             this.textBox111 = new System.Windows.Forms.TextBox();
             this.comboBox92 = new System.Windows.Forms.ComboBox();
@@ -1570,7 +1570,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(998, 2322);
+            this.btnGuardarCL.Location = new System.Drawing.Point(990, 2477);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1665,7 +1665,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(909, 4385);
+            this.button24.Location = new System.Drawing.Point(901, 4540);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -4669,7 +4669,7 @@
             // groupBox61
             // 
             this.groupBox61.Controls.Add(this.label261);
-            this.groupBox61.Controls.Add(this.comboBox91);
+            this.groupBox61.Controls.Add(this.cmb_dinamico);
             this.groupBox61.Controls.Add(this.label262);
             this.groupBox61.Controls.Add(this.textBox111);
             this.groupBox61.Controls.Add(this.comboBox92);
@@ -4694,20 +4694,20 @@
             this.label261.ForeColor = System.Drawing.Color.Black;
             this.label261.Location = new System.Drawing.Point(3, 105);
             this.label261.Name = "label261";
-            this.label261.Size = new System.Drawing.Size(121, 30);
+            this.label261.Size = new System.Drawing.Size(236, 30);
             this.label261.TabIndex = 40;
-            this.label261.Text = "Grupo parlamentario\r\nde adscripción";
+            this.label261.Text = "Grupo parlamentario\r\nde adscripción por confirmar nombre cmb";
             this.label261.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBox91
+            // cmb_dinamico
             // 
-            this.comboBox91.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox91.FormattingEnabled = true;
-            this.comboBox91.Location = new System.Drawing.Point(144, 108);
-            this.comboBox91.Name = "comboBox91";
-            this.comboBox91.Size = new System.Drawing.Size(528, 24);
-            this.comboBox91.TabIndex = 39;
+            this.cmb_dinamico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_dinamico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_dinamico.FormattingEnabled = true;
+            this.cmb_dinamico.Location = new System.Drawing.Point(266, 111);
+            this.cmb_dinamico.Name = "cmb_dinamico";
+            this.cmb_dinamico.Size = new System.Drawing.Size(528, 24);
+            this.cmb_dinamico.TabIndex = 39;
             // 
             // label262
             // 
@@ -5258,7 +5258,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox116.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox116.Location = new System.Drawing.Point(393, 3);
+            this.textBox116.Location = new System.Drawing.Point(386, 3);
             this.textBox116.Name = "textBox116";
             this.textBox116.Size = new System.Drawing.Size(170, 22);
             this.textBox116.TabIndex = 23;
@@ -5271,7 +5271,7 @@
             this.label278.AutoSize = true;
             this.label278.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label278.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label278.Location = new System.Drawing.Point(284, 0);
+            this.label278.Location = new System.Drawing.Point(277, 0);
             this.label278.Name = "label278";
             this.label278.Size = new System.Drawing.Size(103, 26);
             this.label278.TabIndex = 22;
@@ -5283,7 +5283,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox117.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox117.Location = new System.Drawing.Point(108, 3);
+            this.textBox117.Location = new System.Drawing.Point(101, 3);
             this.textBox117.Name = "textBox117";
             this.textBox117.Size = new System.Drawing.Size(170, 22);
             this.textBox117.TabIndex = 21;
@@ -5298,9 +5298,9 @@
             this.label279.ForeColor = System.Drawing.Color.Green;
             this.label279.Location = new System.Drawing.Point(3, 0);
             this.label279.Name = "label279";
-            this.label279.Size = new System.Drawing.Size(99, 26);
+            this.label279.Size = new System.Drawing.Size(92, 26);
             this.label279.TabIndex = 19;
-            this.label279.Text = "Primerprueba git";
+            this.label279.Text = "Primer Nombre";
             // 
             // label280
             // 
@@ -5310,7 +5310,7 @@
             this.label280.AutoSize = true;
             this.label280.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label280.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label280.Location = new System.Drawing.Point(569, 0);
+            this.label280.Location = new System.Drawing.Point(562, 0);
             this.label280.Name = "label280";
             this.label280.Size = new System.Drawing.Size(88, 26);
             this.label280.TabIndex = 24;
@@ -5322,7 +5322,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox118.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox118.Location = new System.Drawing.Point(663, 3);
+            this.textBox118.Location = new System.Drawing.Point(656, 3);
             this.textBox118.Name = "textBox118";
             this.textBox118.Size = new System.Drawing.Size(212, 22);
             this.textBox118.TabIndex = 25;
@@ -10437,7 +10437,7 @@
         private System.Windows.Forms.Label label260;
         private System.Windows.Forms.GroupBox groupBox61;
         private System.Windows.Forms.Label label261;
-        private System.Windows.Forms.ComboBox comboBox91;
+        private System.Windows.Forms.ComboBox cmb_dinamico;
         private System.Windows.Forms.Label label262;
         private System.Windows.Forms.TextBox textBox111;
         private System.Windows.Forms.ComboBox comboBox92;
