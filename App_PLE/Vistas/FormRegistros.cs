@@ -3331,10 +3331,7 @@ namespace App_PLE.Vistas
         }
 
        
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+   
 
 
 

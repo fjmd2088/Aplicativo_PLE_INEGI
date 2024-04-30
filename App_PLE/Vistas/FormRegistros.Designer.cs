@@ -363,6 +363,8 @@
             this.cmb_tipo_adscripcion_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label265 = new System.Windows.Forms.Label();
             this.groupBox62 = new System.Windows.Forms.GroupBox();
+            this.cmb_carrera_doctorado_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
             this.cmb_carrera_maestria_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.cmb_carrera_licenciatura_personal_apoyo = new System.Windows.Forms.ComboBox();
@@ -752,8 +754,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmb_carrera_doctorado_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label54 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDG.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1570,7 +1570,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(1014, 2012);
+            this.btnGuardarCL.Location = new System.Drawing.Point(1006, 2167);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1665,7 +1665,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(925, 4075);
+            this.button24.Location = new System.Drawing.Point(917, 4230);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -4812,6 +4812,28 @@
             this.groupBox62.TabIndex = 34;
             this.groupBox62.TabStop = false;
             this.groupBox62.Text = "Escolaridad";
+            // 
+            // cmb_carrera_doctorado_personal_apoyo
+            // 
+            this.cmb_carrera_doctorado_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_carrera_doctorado_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_carrera_doctorado_personal_apoyo.FormattingEnabled = true;
+            this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(1015, 45);
+            this.cmb_carrera_doctorado_personal_apoyo.Name = "cmb_carrera_doctorado_personal_apoyo";
+            this.cmb_carrera_doctorado_personal_apoyo.Size = new System.Drawing.Size(172, 24);
+            this.cmb_carrera_doctorado_personal_apoyo.TabIndex = 37;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label54.Location = new System.Drawing.Point(895, 48);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(112, 15);
+            this.label54.TabIndex = 36;
+            this.label54.Text = "Nombre Doctorado";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cmb_carrera_maestria_personal_apoyo
             // 
@@ -9629,28 +9651,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            // 
-            // cmb_carrera_doctorado_personal_apoyo
-            // 
-            this.cmb_carrera_doctorado_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_carrera_doctorado_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_carrera_doctorado_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(1015, 45);
-            this.cmb_carrera_doctorado_personal_apoyo.Name = "cmb_carrera_doctorado_personal_apoyo";
-            this.cmb_carrera_doctorado_personal_apoyo.Size = new System.Drawing.Size(172, 24);
-            this.cmb_carrera_doctorado_personal_apoyo.TabIndex = 37;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label54.Location = new System.Drawing.Point(895, 48);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(112, 15);
-            this.label54.TabIndex = 36;
-            this.label54.Text = "Nombre Doctorado";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormRegistros
             // 
