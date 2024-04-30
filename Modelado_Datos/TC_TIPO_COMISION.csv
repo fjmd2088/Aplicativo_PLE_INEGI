@@ -1,0 +1,5 @@
+﻿id_comision,abr,descripcion
+1,ORD,"Ordinaria, permanente u homóloga"
+2,ESP,Especial
+3,EXT,Extraordinaria 
+4,OTR,Otro tipo (especifique)

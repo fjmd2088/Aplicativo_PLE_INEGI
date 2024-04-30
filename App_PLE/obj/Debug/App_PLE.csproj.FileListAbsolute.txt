@@ -1,0 +1,153 @@
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_11abr2023\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_16abr2023\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.pdb
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.exe.config
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.exe
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\App_PLE.pdb
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.dll
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.dll
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.xml
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\bin\Debug\System.Data.SQLite.xml
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Form1.resources
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.exe
+C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\App_PLE_25abr2024\App_PLE\obj\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\App_PLE.exe.config
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\App_PLE.pdb
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.exe
+D:\OneDrive - INEGI\01_Aplicaciones_C#\02_PLE\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.pdb
