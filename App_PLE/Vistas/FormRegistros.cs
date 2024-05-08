@@ -24,7 +24,7 @@ namespace App_PLE.Vistas
         private void FormRegistros_Load(object sender, EventArgs e)
         {
             // datos generales
-            cmb_NumeroLegislatura();
+            //cmb_NumeroLegislatura();
             cmb_Entidad();
             cmb_ejercicio_const();
             cmb_PeriodoReportado_PO();
@@ -107,6 +107,7 @@ namespace App_PLE.Vistas
             btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false;
             Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_ID_comision_legislativa.Enabled = false;
             txt_otro_tema_comision_legislativa_especifique.Enabled = false;
+            txt_agee.Enabled = false;
 
             // configuracion de fechas
             dtp_termino_funciones_legislatura.Value = DateTime.Today;
@@ -119,6 +120,8 @@ namespace App_PLE.Vistas
             Txt_ID_comision_legislativa.Text =  string.Empty;
             cmb_tema_comision_legislativa.Text = "";
             cmb_tipo_comision_legislativa.Text = "";
+            cmb_numero_legislatura.Text = "";
+            txt_agee.Text = string.Empty;
 
            
         }
@@ -137,8 +140,9 @@ namespace App_PLE.Vistas
                     // abrir la conexion
                     conexion.Open();
 
+                    string variable1 = cmb_entidad_federativa.Text;
                     // comando de sql
-                    string query = "select descripcion from TC_NUM_LEGISLATURA";
+                    string query = "select legislatura from TC_CALENDARIO_SESIONES where entidad = @variable1";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -148,7 +152,7 @@ namespace App_PLE.Vistas
                     adapter.Fill(dataTable);
 
                     cmb_numero_legislatura.DataSource = dataTable;
-                    cmb_numero_legislatura.DisplayMember = "descripcion";
+                    cmb_numero_legislatura.DisplayMember = "legislatura";
 
                     cmb_numero_legislatura.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                     cmb_numero_legislatura.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -2857,6 +2861,7 @@ namespace App_PLE.Vistas
         // DATOS GENERALES
         private void btnAgregarPeriodoOrdinario_Click_1(object sender, EventArgs e)
         {
+            /*
             // se obtienen los valores
             string periodo_reportado_po = cmb_periodo_reportado_po.Text.Trim();
             string fecha_inicio_po = dtp_fecha_inicio_po.Text.Trim();
@@ -2875,6 +2880,7 @@ namespace App_PLE.Vistas
 
                 cmb_periodo_reportado_po.Text = ""; Txt_sesiones_celebradas_po.Clear();
             }
+            */
         }
 
         private void btnAgregarPE_Click_1(object sender, EventArgs e)
@@ -2901,6 +2907,7 @@ namespace App_PLE.Vistas
 
         private void BtnGuardarDG_Click_1(object sender, EventArgs e)
         {
+            /*
             DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -3034,10 +3041,12 @@ namespace App_PLE.Vistas
             {
 
             }
+            */
         }
 
         private void BtnEliminarPO_Click_1(object sender, EventArgs e)
         {
+            /*
             if (dgvPO.SelectedRows.Count > 0)
             {
                 dgvPO.Rows.RemoveAt(dgvPO.SelectedRows[0].Index);
@@ -3046,6 +3055,7 @@ namespace App_PLE.Vistas
             {
                 MessageBox.Show("Seleccionar registro a eliminar");
             }
+            */
         }
 
         private void BtnEliminarPE_Click_1(object sender, EventArgs e)
@@ -3113,8 +3123,10 @@ namespace App_PLE.Vistas
         -------------------------------------------------- CREACION ID ----------------------------------------------------
          */
         // ID LEGISLATURA
+        
         private void cmb_entidad_federativa_SelectedIndexChanged(object sender, EventArgs e)
         {
+                
             string cadena = "Data Source = DB_PLE.db;Version=3;";
 
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -3150,12 +3162,90 @@ namespace App_PLE.Vistas
             string valorComboBox2 = cmb_numero_legislatura.Text.ToString();
             string resultadoConcatenado = c2Value + "_" + valorComboBox2 + "_" + c3Value;
 
-            // Mostrar el resultado en TextBox1
+            // Se muestra el ID y AGEE
             txtID.Text = resultadoConcatenado;
-        }
+            txt_agee.Text = c2Value;
 
+            // SE LLENA EL COMBOBOX QUE DEPENDE DE LA ENTIDAD PARA LLENAR COMBOBO LEGISLATURA
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                // Verifica que haya una selección 
+                if (cmb_entidad_federativa.SelectedItem != null)
+                {
+                    try
+                    {
+                        // se obtiene el objeto DataRowView seleccionado
+                        DataRowView rowView = cmb_entidad_federativa.SelectedItem as DataRowView;
+
+                        if (rowView != null)
+                        {
+                            // Obtener el valor específico (por ejemplo, "claveProducto") del DataRowView
+                            string entidad_federativa = rowView["nom_ent"].ToString();
+
+                            conexion.Open();
+                            // Consulta SQL para obtener otros datos basados en el valor seleccionado en el ComboBox
+                            string query = "select distinct legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                            {
+                                cmd.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                                DataTable table = new DataTable();
+                                adapter.Fill(table);
+
+                                cmb_numero_legislatura.DisplayMember = "legislatura";
+                                cmb_numero_legislatura.ValueMember = "legislatura";
+                                cmb_numero_legislatura.DataSource = table;
+
+                                cmb_numero_legislatura.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_numero_legislatura.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                                cmb_numero_legislatura.DropDownStyle = ComboBoxStyle.DropDown;
+                                //cmbProducto.Text = "";
+                            }
+                            /*
+                            // Consulta SQL para obtener otros datos basados en el valor seleccionado en el ComboBox
+                            string queryProveedor = "SELECT rfcProveedor, regimenFiscalProveedor,domicilioFiscalProveedor  FROM tablaProveedor WHERE proveedorProducto= @proveedorProducto";
+
+                            using (SQLiteCommand cmdProveedor = new SQLiteCommand(queryProveedor, conexion))
+                            {
+
+                                // Agregar parámetros para evitar la inyección de SQL
+                                cmdProveedor.Parameters.AddWithValue("@proveedorProducto", proveedorProducto);
+
+                                using (SQLiteDataReader reader = cmdProveedor.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        // Mostrar los datos en los TextBox correspondientes
+                                        txtRFCProveedor.Text = reader["rfcProveedor"].ToString();
+                                        txtRFProveedor.Text = reader["regimenFiscalProveedor"].ToString();
+                                        txtDomicilioProveedor.Text = reader["domicilioFiscalProveedor"].ToString();
+                                    }
+                                }
+
+
+                            }
+                            */
+                            conexion.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al cargar cmbProductos: " + ex.Message);
+                    }
+                }
+
+            }
+
+            
+        }
+        
+
+        
         private void cmb_numero_legislatura_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             string cadena = "Data Source = DB_PLE.db;Version=3;";
 
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -3193,8 +3283,9 @@ namespace App_PLE.Vistas
 
             // Mostrar el resultado en TextBox1
             txtID.Text = resultadoConcatenado;
+            */
         }
-
+        
         private void cmb_periodo_reportado_po_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";

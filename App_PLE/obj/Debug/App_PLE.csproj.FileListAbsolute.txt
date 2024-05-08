@@ -194,3 +194,25 @@ C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta 
 C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
 C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.exe
 C:\Users\Guizmmo\OneDrive - INEGI\Desktop\Poder lejislativos\Proyecto propuesta C#\Repositorio_GitH\App_PLE\obj\Debug\App_PLE.pdb
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\App_PLE.exe.config
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\App_PLE.exe
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\App_PLE.pdb
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.dll
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.SqlServer.dll
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.dll
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.EF6.dll
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.Linq.dll
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.xml
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\EntityFramework.SqlServer.xml
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Data.SQLite.xml
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.AssemblyReference.cache
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Form1.resources
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Properties.Resources.resources
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Vistas.FormRegistros.resources
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Vistas.Resumen.resources
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.GenerateResource.cache
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.exe
+D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.pdb
