@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -18,25 +19,39 @@ namespace App_PLE.Vistas
         {
             InitializeComponent();
         }
-        /*
-        -------------------------------------------------- CARGA INICIAL DE FORMULARIO ----------------------------------------------------
-         */
+        
+        //-------------------------------------------------- CARGA INICIAL DE FORMULARIO ----------------------------------------------------
+         
         private void FormRegistros_Load(object sender, EventArgs e)
         {
-            // DATOS GENERALES
-            //cmb_NumeroLegislatura();
+            // ---------------------------------------------- DATOS GENERALES ---------------------------------------------------------------
             cmb_Entidad();
-            //cmb_ejercicio_const();
-            //cmb_PeriodoReportado_PO();
-            //cmb_PeriodoReportado_PE();
 
-            // comisiones legislativas
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_agee.Enabled = false; dtp_inicio_funciones_legislatura.Enabled = false; dtp_termino_funciones_legislatura.Enabled = false;
+            dtp_fecha_inicio_informacion_reportada.Enabled = false; dtp_fecha_termino_informacion_reportada.Enabled = false;
+            dtp_fecha_inicio_po.Enabled = false; dtp_fecha_termino_po.Enabled = false;
+            txt_id_legislatura.Enabled = false; dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
+            dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
+            btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
+            chbPE.Enabled = false;
+
+            // CAMPOS VACIOS O CON VALOR PREDETERMINADO
+            txt_id_legislatura.Text = string.Empty; txt_agee.Text = string.Empty; cmb_numero_legislatura.Text = "";
+            dtp_inicio_funciones_legislatura.Value = new DateTime(1899, 9, 9); dtp_termino_funciones_legislatura.Value = new DateTime(1899, 9, 9);
+            cmb_ejercicio_constitucional_informacion_reportada.Text = "";
+            dtp_fecha_inicio_informacion_reportada.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_informacion_reportada.Value = new DateTime(1899, 9, 9);
+            cmb_periodo_reportado_po.Text = "";
+            dtp_fecha_inicio_po.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_po.Value = new DateTime(1899, 9, 9);
+            dtp_fecha_inicio_pe.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_pe.Value = new DateTime(1899, 9, 9);
+
+            // ---------------------------------------------- COMISIONES LEGISLATIVAS ---------------------------------------------------------------
             cmb_Tipo_CL();
             cmb_Tema_CL();
             cmb_cond_transmision_reuniones_celebradas_CL();
             cmb_cond_celebracion_reuniones_CL();
 
-            //  PERSONAS LEGISLADORAS
+            // ---------------------------------------------- PERSONAS LEGISLADORAS ---------------------------------------------------------------
             cmb_Sexo_Persona_Legisladora();
             cmb_Estatus_persona_legisladora();
             cmb_Tipo_licencia_persona_legisladora();
@@ -71,7 +86,7 @@ namespace App_PLE.Vistas
             cmb_Cargo_mesa_directiva_PL();
             cmb_Cargo_jucopo();
 
-            //  PERSONAL DE APOYO
+            // ---------------------------------------------- PERSONAL DE APOYO ---------------------------------------------------------------
             cmb_Sexo_personal_apoyo();
             cmb_Institucion_seguridad_social_personal_apoyo();
             cmb_Regimen_ontratacion_personal_apoyo();
@@ -87,7 +102,7 @@ namespace App_PLE.Vistas
             cmb_Cond_secretario_tecnico_comision_legislativa_personal_apoyo();
             cmb_Pueblo_ind_pertenencia_personal_apoyo();
 
-            //  INICIATIVAS
+            // ---------------------------------------------- INICIATIVAS ---------------------------------------------------------------
             cmb_Cond_presentacion_iniciativa_legislatura_actual();
             cmb_Cond_presentacion_iniciativa_periodo();
             cmb_Numero_legislatura_presentacion_iniciativa();
@@ -101,14 +116,7 @@ namespace App_PLE.Vistas
 
 
 
-            // CAMPOS DESHABILITADOS INICIALMENTE
-            // DATOS GENERALES
-            txt_agee.Enabled = false; dtp_inicio_funciones_legislatura.Enabled = false; dtp_termino_funciones_legislatura.Enabled = false;
-            dtp_fecha_inicio_informacion_reportada.Enabled = false; dtp_fecha_termino_informacion_reportada.Enabled = false;
-            dtp_fecha_inicio_po.Enabled = false; dtp_fecha_termino_po.Enabled = false;
-            txtID.Enabled = false;  dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
-            dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
-            btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
+            
 
 
 
@@ -116,119 +124,15 @@ namespace App_PLE.Vistas
             txt_otro_tema_comision_legislativa_especifique.Enabled = false;
 
 
-            // configuracion de fechas
-            //
-            //Dtp_fecha_termino_informacion_reportada.Value = DateTime.Today;
-            //dtp_fecha_termino_po.Value = DateTime.Today;
-            //dtp_fecha_termino_pe.Value = DateTime.Today;
-
-            // CAMPOS VACIOS O CON VALOR PREDETERMINADO
-            // DATOS GENERALES
-            txtID.Text = string.Empty; txt_agee.Text = string.Empty; cmb_numero_legislatura.Text = "";
-            dtp_inicio_funciones_legislatura.Value = new DateTime(1899,9,9); dtp_termino_funciones_legislatura.Value = new DateTime(1899, 9, 9);
-            cmb_ejercicio_constitucional_informacion_reportada.Text = "";
-            dtp_fecha_inicio_informacion_reportada.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_informacion_reportada.Value = new DateTime(1899, 9, 9);
-            cmb_periodo_reportado_po.Text = "";
-            dtp_fecha_inicio_po.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_po.Value = new DateTime(1899, 9, 9);
-            dtp_fecha_inicio_pe.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_pe.Value = new DateTime(1899, 9, 9);
+           
 
             Txt_ID_comision_legislativa.Text =  string.Empty;
             cmb_tema_comision_legislativa.Text = "";
             cmb_tipo_comision_legislativa.Text = "";
             
-            
-
-           
         }
-        /*
-        -------------------------------------------------- LISTAS DESPLEGABLES ----------------------------------------------------
-         */
-        // DATOS GENERALES
-        private void cmb_NumeroLegislatura()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    string variable1 = cmb_entidad_federativa.Text;
-                    // comando de sql
-                    string query = "select legislatura from TC_CALENDARIO_SESIONES where entidad = @variable1";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_numero_legislatura.DataSource = dataTable;
-                    cmb_numero_legislatura.DisplayMember = "legislatura";
-
-                    cmb_numero_legislatura.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_numero_legislatura.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_numero_legislatura.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_numero_legislatura.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
-        private void cmb_ejercicio_const()
-        {
-            /*
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_EJERCICIO_CONST";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_ejercicio_constitucional_informacion_reportada.DataSource = dataTable;
-                    cmb_ejercicio_constitucional_informacion_reportada.DisplayMember = "descripcion";
-
-                    cmb_ejercicio_constitucional_informacion_reportada.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_ejercicio_constitucional_informacion_reportada.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_ejercicio_constitucional_informacion_reportada.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_ejercicio_constitucional_informacion_reportada.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-            */
-        }
+        
+        //-------------------------------------------------- DATOS GENERALES ----------------------------------------------------
         private void cmb_Entidad()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -269,92 +173,883 @@ namespace App_PLE.Vistas
                 }
             }
         }
-        private void cmb_PeriodoReportado_PO()
+        private void btnAgregarPE_Click_1(object sender, EventArgs e)
         {
-            /*
+            // se obtienen los valores
+            string periodo_reportado_pe = cmb_periodo_extraordinario_reportado.Text.Trim();
+            string fecha_inicio_pe = dtp_fecha_inicio_pe.Text.Trim();
+            string fecha_termino_pe = dtp_fecha_termino_pe.Text.Trim();
+            string sesiones_celebradas_pe = Txt_sesiones_celebradas_pe.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(Txt_sesiones_celebradas_pe.Text) ||
+                string.IsNullOrWhiteSpace(cmb_periodo_extraordinario_reportado.Text))
+            {
+                MessageBox.Show("Revisar datos vacios");
+            }
+            else
+            {
+                bool respuesta = IsDuplicateRecord(cmb_periodo_extraordinario_reportado.Text.ToString());
+
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Dato duplicado");
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgvPE.Rows.Add(periodo_reportado_pe, fecha_inicio_pe, fecha_termino_pe, sesiones_celebradas_pe);
+
+                    Txt_sesiones_celebradas_pe.Clear();
+                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+                }
+
+
+            }
+        }
+        private void BtnGuardarDG_Click_1(object sender, EventArgs e)
+        {
+
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes) // NO HAY PERIODOS EXTRAORDINARIOS
+            {
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                {
+                    connection.Open();
+
+                    // el dgv de periodos extraordinarios esta vacio
+                    if (dgvPE.RowCount == 0)
+                    {
+                        // Insertamos los datos en la base de datos
+                        string query = "INSERT INTO TR_DATOS_GENERALES (id_legislatura," +
+                            "entidad_federativa," +
+                            "agee," +
+                            "numero_legislatura," +
+                            "nombre_legislatura," +
+                            "inicio_funciones_legislatura," +
+                            "termino_funciones_legislatura," +
+                            "distritos_uninominales," +
+                            "diputaciones_plurinominales," +
+                            //"periodo_extraordinario_reportado," +
+                            "ejercicio_constitucional_informacion_reportada," +
+                            "fecha_inicio_informacion_reportada," +
+                            "fecha_termino_informacion_reportada," +
+                            "periodo_reportado," +
+                            "fecha_inicio_p," +
+                            "fecha_termino_p," +
+                            "sesiones_celebradas_p," +
+                            //"cond_celebracion_periodos_extraordinarios," +
+                            //"periodos_extraordinarios_celebrados," +
+                            //"periodo_extraordinario_reportado," +
+                            //"fecha_inicio_pe," +
+                            //"fecha_termino_pe," +
+                            //"sesiones_celebradas_pe," +
+                            //"cond_reconocimiento_iniciativa_p," +
+                            //"cond_reconocimiento_iniciativa_urgente_obvia," +
+                            //"cond_existencia_juicio_politico," +
+                            //"cond_existencia_declaracion_procedencia," +
+                            //"cond_existencia_comparecencia," +
+                            "fecha_actualizacion)" +
+                     "VALUES" +
+                            " (@id_legislatura," +
+                            "@entidad_federativa," +
+                            "@agee," +
+                            "@numero_legislatura," +
+                            "@nombre_legislatura," +
+                            "@inicio_funciones_legislatura," +
+                            "@termino_funciones_legislatura," +
+                            "@distritos_uninominales," +
+                            "@diputaciones_plurinominales," +
+                            //"periodo_extraordinario_reportado," +
+                            "@ejercicio_constitucional_informacion_reportada," +
+                            "@fecha_inicio_informacion_reportada," +
+                            "@fecha_termino_informacion_reportada," +
+                            "@periodo_reportado," +
+                            "@fecha_inicio_p," +
+                            "@fecha_termino_p," +
+                            "@sesiones_celebradas_p," +
+                            //"cond_celebracion_periodos_extraordinarios," +
+                            //"periodos_extraordinarios_celebrados," +
+                            //"periodo_extraordinario_reportado," +
+                            //"fecha_inicio_pe," +
+                            //"fecha_termino_pe," +
+                            //"sesiones_celebradas_pe," +
+                            //"cond_reconocimiento_iniciativa_p," +
+                            //"cond_reconocimiento_iniciativa_urgente_obvia," +
+                            //"cond_existencia_juicio_politico," +
+                            //"cond_existencia_declaracion_procedencia," +
+                            //"cond_existencia_comparecencia," +
+                            "@fecha_actualizacion)";
+
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                        {
+                            // Variables individuales
+                            command.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text);
+                            command.Parameters.AddWithValue("@entidad_federativa", cmb_entidad_federativa.Text);
+                            command.Parameters.AddWithValue("@agee", txt_agee.Text);
+                            command.Parameters.AddWithValue("@numero_legislatura", cmb_numero_legislatura.Text);
+                            command.Parameters.AddWithValue("@nombre_legislatura", txt_nombre_legislatura.Text);
+                            command.Parameters.AddWithValue("@inicio_funciones_legislatura", dtp_inicio_funciones_legislatura.Text);
+                            command.Parameters.AddWithValue("@termino_funciones_legislatura", dtp_termino_funciones_legislatura.Text);
+                            command.Parameters.AddWithValue("@distritos_uninominales", Txt_distritos_uninominales.Text);
+                            command.Parameters.AddWithValue("@diputaciones_plurinominales", Txt_diputaciones_plurinominales.Text);
+                            command.Parameters.AddWithValue("@ejercicio_constitucional_informacion_reportada", cmb_ejercicio_constitucional_informacion_reportada.Text);
+                            command.Parameters.AddWithValue("@fecha_inicio_informacion_reportada", dtp_fecha_inicio_informacion_reportada.Text);
+                            command.Parameters.AddWithValue("@fecha_termino_informacion_reportada", dtp_fecha_termino_informacion_reportada.Text);
+                            command.Parameters.AddWithValue("@periodo_reportado", cmb_periodo_reportado_po.Text);
+                            command.Parameters.AddWithValue("@fecha_inicio_p", dtp_fecha_inicio_po.Text);
+                            command.Parameters.AddWithValue("@fecha_termino_p", dtp_fecha_termino_po.Text);
+                            command.Parameters.AddWithValue("@sesiones_celebradas_p", Txt_sesiones_celebradas_po.Text);
+                            command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+
+
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        // Recorremos las filas del DataGridView
+                        foreach (DataGridViewRow row in dgvPE.Rows)
+                        {
+                            // Ignoramos la fila vacía al final
+                            if (!row.IsNewRow)
+                            {
+                                // Insertamos los datos en la base de datos
+                                // Insertamos los datos en la base de datos
+                                string query = "INSERT INTO TR_DATOS_GENERALES (id_legislatura," +
+                                    "entidad_federativa," +
+                                    "agee," +
+                                    "numero_legislatura," +
+                                    "nombre_legislatura," +
+                                    "inicio_funciones_legislatura," +
+                                    "termino_funciones_legislatura," +
+                                    "distritos_uninominales," +
+                                    "diputaciones_plurinominales," +
+                                    //"periodo_extraordinario_reportado," +
+                                    "ejercicio_constitucional_informacion_reportada," +
+                                    "fecha_inicio_informacion_reportada," +
+                                    "fecha_termino_informacion_reportada," +
+                                    "periodo_reportado," +
+                                    "fecha_inicio_p," +
+                                    "fecha_termino_p," +
+                                    "sesiones_celebradas_p," +
+                                    //"cond_celebracion_periodos_extraordinarios," +
+                                    "periodos_extraordinarios_celebrados," +
+                                    "periodo_extraordinario_reportado," +
+                                    "fecha_inicio_pe," +
+                                    "fecha_termino_pe," +
+                                    "sesiones_celebradas_pe," +
+                                    //"cond_reconocimiento_iniciativa_p," +
+                                    //"cond_reconocimiento_iniciativa_urgente_obvia," +
+                                    //"cond_existencia_juicio_politico," +
+                                    //"cond_existencia_declaracion_procedencia," +
+                                    //"cond_existencia_comparecencia," +
+                                    "fecha_actualizacion)" +
+                             "VALUES" +
+                                    " (@id_legislatura," +
+                                    "@entidad_federativa," +
+                                    "@agee," +
+                                    "@numero_legislatura," +
+                                    "@nombre_legislatura," +
+                                    "@inicio_funciones_legislatura," +
+                                    "@termino_funciones_legislatura," +
+                                    "@distritos_uninominales," +
+                                    "@diputaciones_plurinominales," +
+                                    //"periodo_extraordinario_reportado," +
+                                    "@ejercicio_constitucional_informacion_reportada," +
+                                    "@fecha_inicio_informacion_reportada," +
+                                    "@fecha_termino_informacion_reportada," +
+                                    "@periodo_reportado," +
+                                    "@fecha_inicio_p," +
+                                    "@fecha_termino_p," +
+                                    "@sesiones_celebradas_p," +
+                                    //"cond_celebracion_periodos_extraordinarios," +
+                                    "@periodos_extraordinarios_celebrados," +
+                                    "@periodo_extraordinario_reportado," +
+                                    "@fecha_inicio_pe," +
+                                    "@fecha_termino_pe," +
+                                    "@sesiones_celebradas_pe," +
+                                    //"cond_reconocimiento_iniciativa_p," +
+                                    //"cond_reconocimiento_iniciativa_urgente_obvia," +
+                                    //"cond_existencia_juicio_politico," +
+                                    //"cond_existencia_declaracion_procedencia," +
+                                    //"cond_existencia_comparecencia," +
+                                    "@fecha_actualizacion)";
+
+                                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                                {
+                                    // Variables individuales
+                                    command.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text);
+                                    command.Parameters.AddWithValue("@entidad_federativa", cmb_entidad_federativa.Text);
+                                    command.Parameters.AddWithValue("@agee", txt_agee.Text);
+                                    command.Parameters.AddWithValue("@numero_legislatura", cmb_numero_legislatura.Text);
+                                    command.Parameters.AddWithValue("@nombre_legislatura", txt_nombre_legislatura.Text);
+                                    command.Parameters.AddWithValue("@inicio_funciones_legislatura", dtp_inicio_funciones_legislatura.Text);
+                                    command.Parameters.AddWithValue("@termino_funciones_legislatura", dtp_termino_funciones_legislatura.Text);
+                                    command.Parameters.AddWithValue("@distritos_uninominales", Txt_distritos_uninominales.Text);
+                                    command.Parameters.AddWithValue("@diputaciones_plurinominales", Txt_diputaciones_plurinominales.Text);
+                                    command.Parameters.AddWithValue("@ejercicio_constitucional_informacion_reportada", cmb_ejercicio_constitucional_informacion_reportada.Text);
+                                    command.Parameters.AddWithValue("@fecha_inicio_informacion_reportada", dtp_fecha_inicio_informacion_reportada.Text);
+                                    command.Parameters.AddWithValue("@fecha_termino_informacion_reportada", dtp_fecha_termino_informacion_reportada.Text);
+                                    command.Parameters.AddWithValue("@periodo_reportado", cmb_periodo_reportado_po.Text);
+                                    command.Parameters.AddWithValue("@fecha_inicio_p", dtp_fecha_inicio_po.Text);
+                                    command.Parameters.AddWithValue("@fecha_termino_p", dtp_fecha_termino_po.Text);
+                                    command.Parameters.AddWithValue("@sesiones_celebradas_p", Txt_sesiones_celebradas_po.Text);
+                                    command.Parameters.AddWithValue("@periodos_extraordinarios_celebrados", txt_periodos_extraordinarios_celebrados.Text);
+                                    command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+
+                                    // Variables del dgv
+                                    command.Parameters.AddWithValue("@periodo_extraordinario_reportado", row.Cells["periodo_reportado_pe"].Value);
+                                    command.Parameters.AddWithValue("@fecha_inicio_pe", row.Cells["fecha_inicio_pe"].Value);
+                                    command.Parameters.AddWithValue("@fecha_termino_pe", row.Cells["fecha_termino_pe"].Value);
+                                    command.Parameters.AddWithValue("@sesiones_celebradas_pe", row.Cells["sesiones_celebradas_pe"].Value);
+
+                                    command.ExecuteNonQuery();
+                                }
+                            }
+
+                        }
+                    }
+                    connection.Close();
+                }
+
+                // Se reinicion los botones
+                cmb_entidad_federativa.Enabled = false; cmb_numero_legislatura.Enabled = false;
+                txt_nombre_legislatura.Clear(); Txt_distritos_uninominales.Text = ""; Txt_diputaciones_plurinominales.Text = "";
+                cmb_ejercicio_constitucional_informacion_reportada.Text = "";
+                Txt_sesiones_celebradas_pe.Text = "";
+                dgvPE.Rows.Clear();
+
+                MessageBox.Show("Datos guardados correctamente");
+
+                this.Close();
+            }
+            else
+            {
+
+            }
+
+        }
+        private void BtnEliminarPE_Click_1(object sender, EventArgs e)
+        {
+            if (dgvPE.SelectedRows.Count > 0)
+            {
+                dgvPE.Rows.RemoveAt(dgvPE.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private void construccion_id_legislatura()
+        {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            // se obtiene cve_ent
+            string valorComboBox1 = cmb_entidad_federativa.Text.ToString();
+            string CVE_ENT = "";
+            using (SQLiteConnection con = new SQLiteConnection(cadena))
+            {
+                con.Open();
+                string query = "SELECT distinct cve_ent FROM TC_AGEEM WHERE nom_ent = @valorComboBox1";
+                SQLiteCommand cmd = new SQLiteCommand(query, con);
+                cmd.Parameters.AddWithValue("@valorComboBox1", valorComboBox1);
+                CVE_ENT = cmd.ExecuteScalar()?.ToString();
+                con.Close();
+            }
+
+            // se obtiene periodo reportado
+            string valorComboBox3 = cmb_periodo_reportado_po.Text.ToString();
+            string PR = "";
+            using (SQLiteConnection con = new SQLiteConnection(cadena))
+            {
+                con.Open();
+                string query = "SELECT distinct abr_pr FROM TC_CALENDARIO_SESIONES WHERE periodos_reportar = @valorComboBox3";
+                SQLiteCommand cmd = new SQLiteCommand(query, con);
+                cmd.Parameters.AddWithValue("@valorComboBox3", valorComboBox3);
+                PR = cmd.ExecuteScalar()?.ToString();
+                con.Close();
+            }
+
+            // se obtiene numero de legislatura
+            string NL = cmb_numero_legislatura.Text.ToString();
+
+            // se obtiene el ejercicio constitucional
+            string valorEC = cmb_ejercicio_constitucional_informacion_reportada.Text.ToString();
+            string EC = "";
+            using (SQLiteConnection con = new SQLiteConnection(cadena))
+            {
+                con.Open();
+                string query = "SELECT distinct abr_ec FROM TC_CALENDARIO_SESIONES  WHERE ejercicio_constitucional = @valorEC";
+                SQLiteCommand cmd = new SQLiteCommand(query, con);
+                cmd.Parameters.AddWithValue("@valorEC", valorEC);
+                EC = cmd.ExecuteScalar()?.ToString();
+                con.Close();
+            }
+
+            // Concatenar ID
+
+            string resultadoConcatenado = CVE_ENT + "_" + NL + "_" + EC + "_" + PR;
+
+            // Se muestra el ID y AGEE
+            txt_id_legislatura.Text = resultadoConcatenado;
+            txt_agee.Text = CVE_ENT;
+        }
+        private void cmb_entidad_federativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // CONSTRUCCION ID----------------------------------------------------------------------------------------------    
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            construccion_id_legislatura();
+
+            // SE LLENA EL COMBOBOX QUE DEPENDE DE LA ENTIDAD PARA LLENAR COMBOBO LEGISLATURA-----------------------------------
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                // Verifica que haya una selección 
+                if (cmb_entidad_federativa.SelectedItem != null)
+                {
+                    try
+                    {
+                        // se obtiene el objeto DataRowView seleccionado
+                        DataRowView rowView = cmb_entidad_federativa.SelectedItem as DataRowView;
+
+                        if (rowView != null)
+                        {
+                            // Se obtiene el valor de nom_ent de la tabla TC_AGEEM
+                            string entidad_federativa = rowView["nom_ent"].ToString();
+
+                            conexion.Open();
+
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la legislatura------------------------------
+                            string query = "select distinct legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                            {
+                                cmd.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                                DataTable table = new DataTable();
+                                adapter.Fill(table);
+
+                                cmb_numero_legislatura.DisplayMember = "legislatura";
+                                cmb_numero_legislatura.ValueMember = "legislatura";
+                                cmb_numero_legislatura.DataSource = table;
+
+                                cmb_numero_legislatura.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_numero_legislatura.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                                cmb_numero_legislatura.DropDownStyle = ComboBoxStyle.DropDown;
+                            }
+
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer inicio legislatura------------------------------
+                            string query2 = "select distinct inicio_legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
+                            {
+                                cmd2.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                object resultado = cmd2.ExecuteScalar();
+
+                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicioLegislatura))
+                                {
+                                    dtp_inicio_funciones_legislatura.Value = inicioLegislatura;
+                                }
+                                else
+                                {
+                                    // Manejo de error si no se puede convertir el resultado a DateTime
+                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                }
+                            }
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer inicio legislatura------------------------------
+                            string query3 = "select distinct fin_legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
+                            {
+                                cmd3.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                object resultado = cmd3.ExecuteScalar();
+
+                                if (DateTime.TryParse(resultado.ToString(), out DateTime finLegislatura))
+                                {
+                                    dtp_termino_funciones_legislatura.Value = finLegislatura;
+                                }
+                                else
+                                {
+                                    // Manejo de error si no se puede convertir el resultado a DateTime
+                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                }
+                            }
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la año legislativo------------------------------
+                            string query4 = "select distinct ejercicio_constitucional from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmd4 = new SQLiteCommand(query4, conexion))
+                            {
+                                cmd4.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd4);
+                                DataTable table = new DataTable();
+                                adapter.Fill(table);
+
+                                cmb_ejercicio_constitucional_informacion_reportada.DisplayMember = "ejercicio_constitucional";
+                                cmb_ejercicio_constitucional_informacion_reportada.ValueMember = "ejercicio_constitucional";
+                                cmb_ejercicio_constitucional_informacion_reportada.DataSource = table;
+
+                                cmb_ejercicio_constitucional_informacion_reportada.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_ejercicio_constitucional_informacion_reportada.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                                cmb_ejercicio_constitucional_informacion_reportada.DropDownStyle = ComboBoxStyle.DropDown;
+                            }
+
+                            conexion.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+
+            }
+
+
+        }
+        private void cmb_ejercicio_constitucional_informacion_reportada_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            // construccion id
+            construccion_id_legislatura();
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
-                try
+                // Verifica que haya una selección 
+                if (cmb_ejercicio_constitucional_informacion_reportada.SelectedItem != null)
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                    try
+                    {
+                        // se obtiene el objeto DataRowView seleccionado
+                        DataRowView rowView = cmb_ejercicio_constitucional_informacion_reportada.SelectedItem as DataRowView;
+                        DataRowView rowView2 = cmb_entidad_federativa.SelectedItem as DataRowView;
 
-                    // comando de sql
-                    string query = "select descripcion from TC_PERIODO_REPORTADO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                        if (rowView != null & rowView2 != null)
+                        {
+                            // Se obtiene el valor de ejercicio_constitucional de la tabla TC_CALENDARIO_SESIONES
+                            string ec = rowView["ejercicio_constitucional"].ToString();
+                            string ent = rowView2["nom_ent"].ToString();
 
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
+                            conexion.Open();
 
-                    cmb_periodo_reportado_po.DataSource = dataTable;
-                    cmb_periodo_reportado_po.DisplayMember = "descripcion";
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer inicio legislatura------------------------------
 
-                    cmb_periodo_reportado_po.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_periodo_reportado_po.AutoCompleteSource = AutoCompleteSource.ListItems;
+                            string query2 = "select distinct inicio_ec from TC_CALENDARIO_SESIONES" +
+                            " WHERE ejercicio_constitucional = @ec and entidad = @ent";
+                            using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
+                            {
+                                cmd2.Parameters.AddWithValue("@ec", ec);
+                                cmd2.Parameters.AddWithValue("@ent", ent);
 
-                    cmb_periodo_reportado_po.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_periodo_reportado_po.Text = "";
+                                object resultado = cmd2.ExecuteScalar();
+
+                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_ec))
+                                {
+                                    dtp_fecha_inicio_informacion_reportada.Value = inicio_ec;
+                                }
+                                else
+                                {
+                                    // Manejo de error si no se puede convertir el resultado a DateTime
+                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                }
+                            }
+
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer fin legislatura------------------------------
+
+                            string query3 = "select distinct fin_ec from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec and entidad = @ent";
+                            using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
+                            {
+                                cmd3.Parameters.AddWithValue("@ec", ec);
+                                cmd3.Parameters.AddWithValue("@ent", ent);
+
+
+                                object resultado = cmd3.ExecuteScalar();
+
+                                if (DateTime.TryParse(resultado.ToString(), out DateTime fin_ec))
+                                {
+                                    dtp_fecha_termino_informacion_reportada.Value = fin_ec;
+                                }
+                                else
+                                {
+                                    // Manejo de error si no se puede convertir el resultado a DateTime
+                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                }
+                            }
+
+
+
+
+                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la periodo reportado------------------------------
+
+
+                            string query4 = "select  distinct periodos_reportar from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec AND entidad = @ent";
+                            using (SQLiteCommand cmd4 = new SQLiteCommand(query4, conexion))
+                            {
+                                cmd4.Parameters.AddWithValue("@ec", ec);
+                                cmd4.Parameters.AddWithValue("@ent", ent);
+
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd4);
+                                DataTable table = new DataTable();
+                                adapter.Fill(table);
+
+                                cmb_periodo_reportado_po.DisplayMember = "periodos_reportar";
+                                cmb_periodo_reportado_po.ValueMember = "periodos_reportar";
+                                cmb_periodo_reportado_po.DataSource = table;
+
+                                cmb_periodo_reportado_po.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_periodo_reportado_po.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_periodo_reportado_po.DropDownStyle = ComboBoxStyle.DropDown;
+                            }
+                            conexion.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
                 }
-                catch (Exception ex)
+
+            }
+        }
+        private void cmb_periodo_reportado_po_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            // construccion id
+            construccion_id_legislatura();
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                // Verifica que haya una selección 
+                if (cmb_periodo_reportado_po.SelectedItem != null)
                 {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
+                    try
+                    {
+                        // se obtiene el objeto DataRowView seleccionado
+                        DataRowView rowView = cmb_periodo_reportado_po.SelectedItem as DataRowView;
+                        DataRowView rowView2 = cmb_entidad_federativa.SelectedItem as DataRowView;
+                        DataRowView rowView3 = cmb_ejercicio_constitucional_informacion_reportada.SelectedItem as DataRowView;
+
+
+                        if (rowView != null & rowView2 != null & rowView3 != null)
+                        {
+                            // Se obtiene el valor de ejercicio_constitucional de la tabla TC_CALENDARIO_SESIONES
+                            string pr = rowView["periodos_reportar"].ToString();
+                            string ent = rowView2["nom_ent"].ToString();
+                            string ec = rowView3["ejercicio_constitucional"].ToString();
+
+
+                            conexion.Open();
+
+                            // Consulta SQL para obtener datos del cmb de periodos reportar y extraer inicio pr------------------------------
+
+                            string query1 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES " +
+                                "WHERE periodos_reportar = @pr and entidad = @ent and ejercicio_constitucional = @ec";
+                            using (SQLiteCommand cmd1 = new SQLiteCommand(query1, conexion))
+                            {
+                                cmd1.Parameters.AddWithValue("@pr", pr);
+                                cmd1.Parameters.AddWithValue("@ent", ent);
+                                cmd1.Parameters.AddWithValue("@ec", ec);
+
+                                object resultado = cmd1.ExecuteScalar();
+
+                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_pr))
+                                {
+                                    dtp_fecha_inicio_po.Value = inicio_pr;
+                                }
+                                else
+                                {
+                                    // Manejo de error si no se puede convertir el resultado a DateTime
+                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                }
+                            }
+
+                            // Consulta SQL para obtener datos del cmb de periodos reportar y extraer fin pr------------------------------
+
+                            string query2 = "select distinct fin_pr from TC_CALENDARIO_SESIONES " +
+                                "WHERE periodos_reportar = @pr and entidad = @ent and ejercicio_constitucional = @ec";
+                            using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
+                            {
+                                cmd2.Parameters.AddWithValue("@pr", pr);
+                                cmd2.Parameters.AddWithValue("@ent", ent);
+                                cmd2.Parameters.AddWithValue("@ec", ec);
+
+                                object resultado = cmd2.ExecuteScalar();
+
+                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_pr))
+                                {
+                                    dtp_fecha_termino_po.Value = inicio_pr;
+                                }
+                                else
+                                {
+                                    // Manejo de error si no se puede convertir el resultado a DateTime
+                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                }
+                            }
+
+
+                            conexion.Close();
+
+                            // SE ACTIVA EL CHECKBOX DEPENDIENDO SI HAY RECESO
+                            if (cmb_periodo_reportado_po.Text.ToString() == "Primer periodo de receso" ||
+                                cmb_periodo_reportado_po.Text.ToString() == "Segundo periodo de receso" ||
+                                cmb_periodo_reportado_po.Text.ToString() == "Tercer periodo de receso")
+                            {
+                                chbPE.Enabled = true;
+                            }
+                            else
+                            {
+                                dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
+                                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
+                                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
+                                dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Text = ""; txt_periodos_extraordinarios_celebrados.Clear();
+                                Txt_sesiones_celebradas_pe.Clear();
+                                chbPE.Checked = false; chbPE.Enabled = false;
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
                 }
 
+            }
+
+        }
+        private void txt_periodos_extraordinarios_celebrados_TextChanged(object sender, EventArgs e)
+        {
+            int valorTextBox;
+
+            // Verificar si el valor del TextBox es un número válido
+            if (int.TryParse(txt_periodos_extraordinarios_celebrados.Text, out valorTextBox))
+            {
+                // Delimitar el valor del ComboBox según el valor del TextBox
+                if (valorTextBox >= 1 && valorTextBox <= 10)
+                {
+                    // Limpiar el ComboBox antes de agregar nuevos elementos
+                    cmb_periodo_extraordinario_reportado.Items.Clear();
+
+                    // Llenar el ComboBox con los elementos del 1 al valor del TextBox
+                    for (int i = 1; i <= valorTextBox; i++)
+                    {
+                        string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                        using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                        {
+                            try
+                            {
+                                // abrir la conexion
+                                conexion.Open();
+
+                                // comando de sql con filtro
+                                string query = "select descripcion from TC_PERIODO_EXT where id_periodo_ext = @id";
+                                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                                cmd.Parameters.AddWithValue("@id", i);
+
+                                // Utilizar un DataReader para obtener los datos
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                                DataTable dataTable = new DataTable();
+                                adapter.Fill(dataTable);
+
+                                // Agregar los elementos del DataTable al ComboBox
+                                foreach (DataRow row in dataTable.Rows)
+                                {
+                                    cmb_periodo_extraordinario_reportado.Items.Add(row["descripcion"].ToString());
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                            }
+                            finally
+                            {
+                                conexion.Close();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    // Si el valor del TextBox está fuera del rango permitido, mostrar un mensaje de error
+                    MessageBox.Show("El valor debe estar entre 1 y 10");
+                }
+            }
+            else
+            {
+                // Si el valor del TextBox no es un número válido, mostrar un mensaje de error
+                //MessageBox.Show("Ingrese un número válido");
+            }
+        }
+        private bool IsDuplicateRecord(string periodo_reportado_pe)
+        {
+            foreach (DataGridViewRow row in dgvPE.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["periodo_reportado_pe"].Value.ToString();
+
+                if (existingId == periodo_reportado_pe)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private void txt_nombre_legislatura_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_nombre_legislatura.Text = txt_nombre_legislatura.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_nombre_legislatura.SelectionStart = txt_nombre_legislatura.Text.Length;
+        }
+        private void Txt_distritos_uninominales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void Txt_diputaciones_plurinominales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void Txt_sesiones_celebradas_po_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void Txt_sesiones_celebradas_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void txt_periodos_extraordinarios_celebrados_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void Dtp_inicio_funciones_legislatura_ValueChanged_1(object sender, EventArgs e)
+        {
+            /*
+            if (dtp_inicio_funciones_legislatura.Value >= dtp_termino_funciones_legislatura.Value)
+            {
+                MessageBox.Show("La fecha de inicio debe ser menor que la fecha de término.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_inicio_funciones_legislatura.Value = dtp_termino_funciones_legislatura.Value.AddDays(-1);
+                dtp_inicio_funciones_legislatura.Focus();
             }
             */
         }
-        private void cmb_PeriodoReportado_PE()
+        private void Dtp_fecha_inicio_informacion_reportada_ValueChanged_1(object sender, EventArgs e)
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            /*
+            if (dtp_fecha_inicio_informacion_reportada.Value < dtp_inicio_funciones_legislatura.Value ||
+                dtp_fecha_inicio_informacion_reportada.Value > dtp_termino_funciones_legislatura.Value)
             {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
+                MessageBox.Show("La fecha debe estar entre el inicio y término de funciones", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                dtp_fecha_inicio_informacion_reportada.Value = dtp_inicio_funciones_legislatura.Value.AddDays(1);
+                dtp_fecha_inicio_informacion_reportada.Focus();
+            }
+            */
+        }
+        private void Dtp_fecha_termino_informacion_reportada_ValueChanged_1(object sender, EventArgs e)
+        {
+            /*
+            if (dtp_fecha_termino_informacion_reportada.Value > dtp_termino_funciones_legislatura.Value ||
+               dtp_fecha_termino_informacion_reportada.Value < dtp_fecha_inicio_informacion_reportada.Value)
+            {
+                MessageBox.Show("La fecha debe estar entre el inicio y término de funciones", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
 
-                    // comando de sql
-                    string query = "select descripcion from TC_PERIODO_EXT";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                dtp_fecha_termino_informacion_reportada.Value = dtp_termino_funciones_legislatura.Value.AddDays(-1);
+                dtp_fecha_termino_informacion_reportada.Focus();
+            }
+            */
+        }
+        private void dtp_fecha_inicio_po_ValueChanged_1(object sender, EventArgs e)
+        {
 
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
 
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
 
-                    cmb_periodo_extraordinario_reportado.DataSource = dataTable;
-                    cmb_periodo_extraordinario_reportado.DisplayMember = "descripcion";
+        }
+        private void dtp_fecha_inicio_pe_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_fecha_inicio_pe.Value <= dtp_fecha_termino_po.Value
+                 && dtp_fecha_inicio_pe.Value >= dtp_fecha_inicio_po.Value)
+            {
 
-                    cmb_periodo_extraordinario_reportado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_periodo_extraordinario_reportado.AutoCompleteSource = AutoCompleteSource.ListItems;
+            }
+            else
+            {
+                MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value;
+                dtp_fecha_inicio_pe.Focus();
+            }
 
-                    cmb_periodo_extraordinario_reportado.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_periodo_extraordinario_reportado.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
+        }
+        private void dtp_fecha_termino_pe_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_fecha_termino_pe.Value <= dtp_fecha_termino_po.Value
+                 && dtp_fecha_termino_pe.Value >= dtp_fecha_inicio_po.Value)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+                dtp_fecha_termino_pe.Focus();
             }
         }
 
-        // COMISIONES LEGISLATIVAS
+        //-------------------------------------------------- COMISIONES LEGISLATIVAS ----------------------------------------------------
+
+
         private void cmb_Tipo_CL()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -520,7 +1215,10 @@ namespace App_PLE.Vistas
             }
         }
 
-        // PERSONAS LEGISLADORAS
+        
+        //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
+         
+   
         private void cmb_Sexo_Persona_Legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1875,7 +2573,9 @@ namespace App_PLE.Vistas
             }
         }
 
-        // PERSONAL DE APOYO
+        
+        //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
+        
         private void cmb_Sexo_personal_apoyo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2451,7 +3151,8 @@ namespace App_PLE.Vistas
             }
         }
 
-        // INICIATIVAS
+        
+        //-------------------------------------------------- INICIATIVAS ----------------------------------------------------
 
         private void cmb_Cond_presentacion_iniciativa_legislatura_actual()
         {
@@ -2863,232 +3564,19 @@ namespace App_PLE.Vistas
 
             }
         }
-        /*
-        -------------------------------------------------- CARGAR DATOS ----------------------------------------------------
-         */
+      
 
         public void CargarDatos(string id_registro)
         {
             // Usa los datos recibidos para cargar los controles en el formulario nuevo
-            txtID.Text = id_registro;
+            txt_id_legislatura.Text = id_registro;
             
         }
 
-        /*
-        -------------------------------------------------- BOTONES ----------------------------------------------------
-         */
-        // DATOS GENERALES
-        private void btnAgregarPeriodoOrdinario_Click_1(object sender, EventArgs e)
-        {
-            /*
-            // se obtienen los valores
-            string periodo_reportado_po = cmb_periodo_reportado_po.Text.Trim();
-            string fecha_inicio_po = dtp_fecha_inicio_po.Text.Trim();
-            string fecha_termino_po = dtp_fecha_termino_po.Text.Trim();
-            string sesiones_celebradas_po = Txt_sesiones_celebradas_po.Text.Trim();
+       
+      
+       
 
-            if (string.IsNullOrWhiteSpace(Txt_sesiones_celebradas_po.Text) ||
-                string.IsNullOrWhiteSpace(cmb_periodo_reportado_po.Text))
-            {
-                MessageBox.Show("Revisar datos vacios");
-            }
-            else
-            {
-                // Agregar una nueva fila al DataGridView
-                dgvPO.Rows.Add(periodo_reportado_po, fecha_inicio_po, fecha_termino_po, sesiones_celebradas_po);
-
-                cmb_periodo_reportado_po.Text = ""; Txt_sesiones_celebradas_po.Clear();
-            }
-            */
-        }
-
-        private void btnAgregarPE_Click_1(object sender, EventArgs e)
-        {
-            // se obtienen los valores
-            string periodo_reportado_pe = cmb_periodo_extraordinario_reportado.Text.Trim();
-            string fecha_inicio_pe = dtp_fecha_inicio_pe.Text.Trim();
-            string fecha_termino_pe = dtp_fecha_termino_pe.Text.Trim();
-            string sesiones_celebradas_pe = Txt_sesiones_celebradas_pe.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(Txt_sesiones_celebradas_pe.Text) ||
-                string.IsNullOrWhiteSpace(cmb_periodo_extraordinario_reportado.Text))
-            {
-                MessageBox.Show("Revisar datos vacios");
-            }
-            else
-            {
-                // Agregar una nueva fila al DataGridView
-                dgvPE.Rows.Add(periodo_reportado_pe, fecha_inicio_pe, fecha_termino_pe, sesiones_celebradas_pe);
-
-                cmb_periodo_extraordinario_reportado.Text = ""; Txt_sesiones_celebradas_pe.Clear();
-            }
-        }
-
-        private void BtnGuardarDG_Click_1(object sender, EventArgs e)
-        {
-            /*
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.Yes)
-            {
-                string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-                using (SQLiteConnection connection = new SQLiteConnection(cadena))
-                {
-                    connection.Open();
-
-                    // Recorremos las filas del DataGridView
-                    foreach (DataGridViewRow row in dgvPO.Rows)
-                    {
-                        // Ignoramos la fila vacía al final
-                        if (!row.IsNewRow)
-                        {
-                            // Insertamos los datos en la base de datos
-                            string query = "INSERT INTO TR_DATOS_GENERALES (entidad_federativa, periodo_reportado, fecha_inicio_p," +
-                                "numero_legislatura, nombre_legislatura, inicio_funciones_legislatura," +
-                                "termino_funciones_legislatura, distritos_uninominales, diputaciones_plurinominales," +
-                                "ejercicio_constitucional_informacion_reportada, fecha_inicio_informacion_reportada," +
-                                "fecha_termino_informacion_reportada, fecha_termino_p,sesiones_celebradas_p,id_datos_generales," +
-                                "fecha_actualizacion) " +
-                                "VALUES" +
-                                " (@entidad_federativa, @periodo_reportado, @fecha_inicio_p," +
-                                "@numero_legislatura, @nombre_legislatura, @inicio_funciones_legislatura," +
-                                "@termino_funciones_legislatura, @distritos_uninominales, @diputaciones_plurinominales," +
-                                "@ejercicio_constitucional_informacion_reportada, @fecha_inicio_informacion_reportada, " +
-                                "@fecha_termino_informacion_reportada, @fecha_termino_p, @sesiones_celebradas_p,@id_datos_generales," +
-                                "@fecha_actualizacion)";
-
-                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                            {
-                                // Variables restantes
-                                command.Parameters.AddWithValue("@entidad_federativa", cmb_entidad_federativa.Text);
-                                command.Parameters.AddWithValue("@numero_legislatura", cmb_numero_legislatura.Text);
-                                command.Parameters.AddWithValue("@nombre_legislatura", txt_nombre_legislatura.Text);
-                                command.Parameters.AddWithValue("@inicio_funciones_legislatura", Dtp_inicio_funciones_legislatura.Text);
-                                command.Parameters.AddWithValue("@termino_funciones_legislatura", dtp_termino_funciones_legislatura.Text);
-                                command.Parameters.AddWithValue("@distritos_uninominales", Txt_distritos_uninominales.Text);
-                                command.Parameters.AddWithValue("@diputaciones_plurinominales", Txt_diputaciones_plurinominales.Text);
-                                command.Parameters.AddWithValue("@ejercicio_constitucional_informacion_reportada", cmb_ejercicio_constitucional_informacion_reportada.Text);
-                                command.Parameters.AddWithValue("@fecha_inicio_informacion_reportada", Dtp_fecha_inicio_informacion_reportada.Text);
-                                command.Parameters.AddWithValue("@fecha_termino_informacion_reportada", Dtp_fecha_termino_informacion_reportada.Text);
-                                command.Parameters.AddWithValue("@id_datos_generales", txtID.Text);
-                                command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
-                                
-                                // Variables del dgv
-                                command.Parameters.AddWithValue("@periodo_reportado", row.Cells["periodo_reportado_po"].Value);
-                                command.Parameters.AddWithValue("@fecha_inicio_p", row.Cells["fecha_inicio_po"].Value);
-                                command.Parameters.AddWithValue("@fecha_termino_p", row.Cells["fecha_termino_po"].Value);
-                                command.Parameters.AddWithValue("@sesiones_celebradas_p", row.Cells["sesiones_celebradas_po"].Value);
-
-                                command.ExecuteNonQuery();
-                            }
-                        }
-
-                    }
-
-                    if (dgvPE.RowCount == 0)
-                    {
-                        // El DataGridView está vacío
-                    }
-                    else
-                    {
-                        // Recorremos las filas del DataGridView
-                        foreach (DataGridViewRow row in dgvPE.Rows)
-                        {
-                            // Ignoramos la fila vacía al final
-                            if (!row.IsNewRow)
-                            {
-                                // Insertamos los datos en la base de datos
-                                string query = "INSERT INTO TR_DATOS_GENERALES (entidad_federativa, periodo_extraordinario_reportado," +
-                                "numero_legislatura, nombre_legislatura, inicio_funciones_legislatura," +
-                                "termino_funciones_legislatura, distritos_uninominales, diputaciones_plurinominales," +
-                                "ejercicio_constitucional_informacion_reportada, fecha_inicio_informacion_reportada," +
-                                "fecha_termino_informacion_reportada,id_datos_generales,fecha_inicio_pe,fecha_termino_pe," +
-                                "sesiones_celebradas_pe,fecha_actualizacion) " +
-                                "VALUES" +
-                                " (@entidad_federativa, @periodo_extraordinario_reportado, " +
-                                "@numero_legislatura, @nombre_legislatura, @inicio_funciones_legislatura," +
-                                "@termino_funciones_legislatura, @distritos_uninominales, @diputaciones_plurinominales," +
-                                "@ejercicio_constitucional_informacion_reportada, @fecha_inicio_informacion_reportada, " +
-                                "@fecha_termino_informacion_reportada,@id_datos_generales,@fecha_inicio_pe,@fecha_termino_pe," +
-                                "@sesiones_celebradas_pe,@fecha_actualizacion)";
-
-                                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                                {
-                                    // Variables restantes
-                                    command.Parameters.AddWithValue("@entidad_federativa", cmb_entidad_federativa.Text);
-                                    command.Parameters.AddWithValue("@numero_legislatura", cmb_numero_legislatura.Text);
-                                    command.Parameters.AddWithValue("@nombre_legislatura", txt_nombre_legislatura.Text);
-                                    command.Parameters.AddWithValue("@inicio_funciones_legislatura", Dtp_inicio_funciones_legislatura.Text);
-                                    command.Parameters.AddWithValue("@termino_funciones_legislatura", dtp_termino_funciones_legislatura.Text);
-                                    command.Parameters.AddWithValue("@distritos_uninominales", Txt_distritos_uninominales.Text);
-                                    command.Parameters.AddWithValue("@diputaciones_plurinominales", Txt_diputaciones_plurinominales.Text);
-                                    command.Parameters.AddWithValue("@ejercicio_constitucional_informacion_reportada", cmb_ejercicio_constitucional_informacion_reportada.Text);
-                                    command.Parameters.AddWithValue("@fecha_inicio_informacion_reportada", Dtp_fecha_inicio_informacion_reportada.Text);
-                                    command.Parameters.AddWithValue("@fecha_termino_informacion_reportada", Dtp_fecha_termino_informacion_reportada.Text);
-                                    command.Parameters.AddWithValue("@id_datos_generales", txtID.Text);
-                                    command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
-
-                                    // Variables del dgv
-                                    command.Parameters.AddWithValue("@periodo_extraordinario_reportado", row.Cells["periodo_reportado_pe"].Value);
-                                    command.Parameters.AddWithValue("@fecha_inicio_pe", row.Cells["fecha_inicio_pe"].Value);
-                                    command.Parameters.AddWithValue("@fecha_termino_pe", row.Cells["fecha_termino_pe"].Value);
-                                    command.Parameters.AddWithValue("@sesiones_celebradas_pe", row.Cells["sesiones_celebradas_pe"].Value);
-
-                                    command.ExecuteNonQuery();
-                                }
-                            }
-
-                        }
-                    }
-                    connection.Close();
-                }
-
-                // Se reinicion los botones
-                cmb_entidad_federativa.Enabled = false; cmb_numero_legislatura.Enabled = false;
-                txt_nombre_legislatura.Clear(); Txt_distritos_uninominales.Text = ""; Txt_diputaciones_plurinominales.Text = "";
-                cmb_ejercicio_constitucional_informacion_reportada.Text = "";
-                Txt_sesiones_celebradas_pe.Text = "";
-                dgvPO.Rows.Clear(); dgvPE.Rows.Clear();
-
-                MessageBox.Show("Datos guardados correctamente");
-
-                this.Close();
-            }
-            else
-            {
-
-            }
-            */
-        }
-
-        private void BtnEliminarPO_Click_1(object sender, EventArgs e)
-        {
-            /*
-            if (dgvPO.SelectedRows.Count > 0)
-            {
-                dgvPO.Rows.RemoveAt(dgvPO.SelectedRows[0].Index);
-            }
-            else
-            {
-                MessageBox.Show("Seleccionar registro a eliminar");
-            }
-            */
-        }
-
-        private void BtnEliminarPE_Click_1(object sender, EventArgs e)
-        {
-            if (dgvPE.SelectedRows.Count > 0)
-            {
-                dgvPE.Rows.RemoveAt(dgvPE.SelectedRows[0].Index);
-            }
-            else
-            {
-                MessageBox.Show("Seleccionar registro a eliminar");
-            }
-        }
-        
         // COMISIONES LEGISLATIVAS
         private void BtnSalirDG_Click(object sender, EventArgs e)
         {
@@ -3138,463 +3626,15 @@ namespace App_PLE.Vistas
             }
         }
 
-        /*
-        -------------------------------------------------- PROGRAMACION ----------------------------------------------------
-         */
-        // DATOS GENERALES
-        
-        private void cmb_entidad_federativa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // CONSTRUCCION ID----------------------------------------------------------------------------------------------    
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
-            string valorComboBox1 = cmb_entidad_federativa.Text.ToString();
+        //-------------------------------------------------- PROGRAMACION ----------------------------------------------------
 
-            // Realizar la consulta para obtener el valor de c2
-            string c2Value = "";
-            using (SQLiteConnection con = new SQLiteConnection(cadena))
-            {
-                con.Open();
-                string query = "SELECT cve_ent FROM TC_AGEEM WHERE nom_ent = @valorComboBox1";
-                SQLiteCommand cmd = new SQLiteCommand(query, con);
-                cmd.Parameters.AddWithValue("@valorComboBox1", valorComboBox1);
-                c2Value = cmd.ExecuteScalar()?.ToString();
-                con.Close();
-            }
 
-            // se encuentra la abreviatura periodo reportado
-            string valorComboBox3 = cmb_periodo_reportado_po.Text.ToString();
 
-            string c3Value = "";
-            using (SQLiteConnection con = new SQLiteConnection(cadena))
-            {
-                con.Open();
-                string query = "SELECT distinct abr FROM TC_PERIODO_REPORTADO WHERE descripcion = @valorComboBox3";
-                SQLiteCommand cmd = new SQLiteCommand(query, con);
-                cmd.Parameters.AddWithValue("@valorComboBox3", valorComboBox3);
-                c3Value = cmd.ExecuteScalar()?.ToString();
-                con.Close();
-            }
 
-            // Concatenar ID
-            string valorComboBox2 = cmb_numero_legislatura.Text.ToString();
-            string resultadoConcatenado = c2Value + "_" + valorComboBox2 + "_" + c3Value;
-
-            // Se muestra el ID y AGEE
-            txtID.Text = resultadoConcatenado;
-            txt_agee.Text = c2Value;
-
-            // SE LLENA EL COMBOBOX QUE DEPENDE DE LA ENTIDAD PARA LLENAR COMBOBO LEGISLATURA-----------------------------------
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                // Verifica que haya una selección 
-                if (cmb_entidad_federativa.SelectedItem != null)
-                {
-                    try
-                    {
-                        // se obtiene el objeto DataRowView seleccionado
-                        DataRowView rowView = cmb_entidad_federativa.SelectedItem as DataRowView;
-
-                        if (rowView != null)
-                        {
-                            // Se obtiene el valor de nom_ent de la tabla TC_AGEEM
-                            string entidad_federativa = rowView["nom_ent"].ToString();
-
-                            conexion.Open();
-
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la legislatura------------------------------
-                            string query = "select distinct legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
-                            using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
-                            {
-                                cmd.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
-
-                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                                DataTable table = new DataTable();
-                                adapter.Fill(table);
-
-                                cmb_numero_legislatura.DisplayMember = "legislatura";
-                                cmb_numero_legislatura.ValueMember = "legislatura";
-                                cmb_numero_legislatura.DataSource = table;
-
-                                cmb_numero_legislatura.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                cmb_numero_legislatura.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                                cmb_numero_legislatura.DropDownStyle = ComboBoxStyle.DropDown;
-                            }
-
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer inicio legislatura------------------------------
-                            string query2 = "select distinct inicio_legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
-                            using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
-                            {
-                                cmd2.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
-
-                                object resultado = cmd2.ExecuteScalar();
-                                
-                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicioLegislatura))
-                                {
-                                    dtp_inicio_funciones_legislatura.Value = inicioLegislatura;
-                                }
-                                else
-                                {
-                                    // Manejo de error si no se puede convertir el resultado a DateTime
-                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
-                                }
-                            }
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer inicio legislatura------------------------------
-                            string query3 = "select distinct fin_legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
-                            using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
-                            {
-                                cmd3.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
-
-                                object resultado = cmd3.ExecuteScalar();
-
-                                if (DateTime.TryParse(resultado.ToString(), out DateTime finLegislatura))
-                                {
-                                    dtp_termino_funciones_legislatura.Value = finLegislatura;
-                                }
-                                else
-                                {
-                                    // Manejo de error si no se puede convertir el resultado a DateTime
-                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
-                                }
-                            }
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la año legislativo------------------------------
-                            string query4 = "select distinct ejercicio_constitucional from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
-                            using (SQLiteCommand cmd4 = new SQLiteCommand(query4, conexion))
-                            {
-                                cmd4.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
-
-                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd4);
-                                DataTable table = new DataTable();
-                                adapter.Fill(table);
-
-                                cmb_ejercicio_constitucional_informacion_reportada.DisplayMember = "ejercicio_constitucional";
-                                cmb_ejercicio_constitucional_informacion_reportada.ValueMember = "ejercicio_constitucional";
-                                cmb_ejercicio_constitucional_informacion_reportada.DataSource = table;
-
-                                cmb_ejercicio_constitucional_informacion_reportada.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                cmb_ejercicio_constitucional_informacion_reportada.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                                cmb_ejercicio_constitucional_informacion_reportada.DropDownStyle = ComboBoxStyle.DropDown;
-                            }
-                            
-                            conexion.Close();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-
-            }
-
-            
-        }
-
-        private void cmb_ejercicio_constitucional_informacion_reportada_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                // Verifica que haya una selección 
-                if (cmb_ejercicio_constitucional_informacion_reportada.SelectedItem != null)
-                {
-                    try
-                    {
-                        // se obtiene el objeto DataRowView seleccionado
-                        DataRowView rowView = cmb_ejercicio_constitucional_informacion_reportada.SelectedItem as DataRowView;
-                        DataRowView rowView2 = cmb_entidad_federativa.SelectedItem as DataRowView;
-
-
-                        if (rowView != null & rowView2 != null)
-                        {
-                            // Se obtiene el valor de ejercicio_constitucional de la tabla TC_CALENDARIO_SESIONES
-                            string ec = rowView["ejercicio_constitucional"].ToString();
-                            string ent = rowView2["nom_ent"].ToString();
-
-                            conexion.Open();
-
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer inicio legislatura------------------------------
-                            
-                                string query2 = "select distinct inicio_ec from TC_CALENDARIO_SESIONES" +
-                                " WHERE ejercicio_constitucional = @ec and entidad = @ent";
-                                using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
-                                {
-                                    cmd2.Parameters.AddWithValue("@ec", ec);
-                                    cmd2.Parameters.AddWithValue("@ent", ent);
-
-                                    object resultado = cmd2.ExecuteScalar();
-
-                                    if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_ec))
-                                    {
-                                        dtp_fecha_inicio_informacion_reportada.Value = inicio_ec;
-                                    }
-                                    else
-                                    {
-                                        // Manejo de error si no se puede convertir el resultado a DateTime
-                                        MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
-                                    }
-                                }
-
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer fin legislatura------------------------------
-
-                                string query3 = "select distinct fin_ec from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec and entidad = @ent";
-                                using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
-                                {
-                                    cmd3.Parameters.AddWithValue("@ec", ec);
-                                    cmd3.Parameters.AddWithValue("@ent", ent);
-
-
-                                object resultado = cmd3.ExecuteScalar();
-
-                                    if (DateTime.TryParse(resultado.ToString(), out DateTime fin_ec))
-                                    {
-                                        dtp_fecha_termino_informacion_reportada.Value = fin_ec;
-                                    }
-                                    else
-                                    {
-                                        // Manejo de error si no se puede convertir el resultado a DateTime
-                                        MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
-                                    }
-                                }
-                            
-
-                            
-
-                            // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la periodo reportado------------------------------
-                        
-
-                            string query4 = "select  distinct periodos_reportar from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec AND entidad = @ent";
-                            using (SQLiteCommand cmd4 = new SQLiteCommand(query4, conexion))
-                            {
-                                cmd4.Parameters.AddWithValue("@ec", ec);
-                                cmd4.Parameters.AddWithValue("@ent", ent);
-
-                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd4);
-                                DataTable table = new DataTable();
-                                adapter.Fill(table);
-
-                                cmb_periodo_reportado_po.DisplayMember = "periodos_reportar";
-                                cmb_periodo_reportado_po.ValueMember = "periodos_reportar";
-                                cmb_periodo_reportado_po.DataSource = table;
-
-                                cmb_periodo_reportado_po.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                cmb_periodo_reportado_po.AutoCompleteSource = AutoCompleteSource.ListItems;
-                                cmb_periodo_reportado_po.DropDownStyle = ComboBoxStyle.DropDown;
-                            }
-                            conexion.Close();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-
-            }
-        }
-
-        private void cmb_numero_legislatura_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
-            string valorComboBox1 = cmb_entidad_federativa.Text.ToString();
-
-            // Realizar la consulta para obtener el valor de c2
-            string c2Value = "";
-            using (SQLiteConnection con = new SQLiteConnection(cadena))
-            {
-                con.Open();
-                string query = "SELECT cve_ent FROM TC_AGEEM WHERE nom_ent = @valorComboBox1";
-                SQLiteCommand cmd = new SQLiteCommand(query, con);
-                cmd.Parameters.AddWithValue("@valorComboBox1", valorComboBox1);
-                c2Value = cmd.ExecuteScalar()?.ToString();
-                con.Close();
-            }
-
-            // se encuentra la abreviatura periodo reportado
-            string valorComboBox3 = cmb_periodo_reportado_po.Text.ToString();
-
-            string c3Value = "";
-            using (SQLiteConnection con = new SQLiteConnection(cadena))
-            {
-                con.Open();
-                string query = "SELECT abr FROM TC_PERIODO_REPORTADO WHERE descripcion = @valorComboBox3";
-                SQLiteCommand cmd = new SQLiteCommand(query, con);
-                cmd.Parameters.AddWithValue("@valorComboBox3", valorComboBox3);
-                c3Value = cmd.ExecuteScalar()?.ToString();
-                con.Close();
-            }
-
-            // Concatenar c2 con el valor de ComboBox2
-            string valorComboBox2 = cmb_numero_legislatura.Text.ToString();
-            string resultadoConcatenado = c2Value + "_" + valorComboBox2 + "_" + c3Value;
-
-            // Mostrar el resultado en TextBox1
-            txtID.Text = resultadoConcatenado;
-            */
-        }
-        
-        private void cmb_periodo_reportado_po_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                // Verifica que haya una selección 
-                if (cmb_periodo_reportado_po.SelectedItem != null)
-                {
-                    try
-                    {
-                        // se obtiene el objeto DataRowView seleccionado
-                        DataRowView rowView = cmb_periodo_reportado_po.SelectedItem as DataRowView;
-                        DataRowView rowView2 = cmb_entidad_federativa.SelectedItem as DataRowView;
-                        DataRowView rowView3 = cmb_ejercicio_constitucional_informacion_reportada.SelectedItem as DataRowView;
-
-
-                        if (rowView != null & rowView2 != null & rowView3 != null)
-                        {
-                            // Se obtiene el valor de ejercicio_constitucional de la tabla TC_CALENDARIO_SESIONES
-                            string pr = rowView["periodos_reportar"].ToString();
-                            string ent = rowView2["nom_ent"].ToString();
-                            string ec = rowView3["ejercicio_constitucional"].ToString();
-
-
-                            conexion.Open();
-
-                            // Consulta SQL para obtener datos del cmb de periodos reportar y extraer inicio pr------------------------------
-
-                            string query1 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES " +
-                                "WHERE periodos_reportar = @pr and entidad = @ent and ejercicio_constitucional = @ec";
-                            using (SQLiteCommand cmd1 = new SQLiteCommand(query1, conexion))
-                            {
-                                cmd1.Parameters.AddWithValue("@pr", pr);
-                                cmd1.Parameters.AddWithValue("@ent", ent);
-                                cmd1.Parameters.AddWithValue("@ec", ec);
-
-                                object resultado = cmd1.ExecuteScalar();
-
-                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_pr))
-                                {
-                                    dtp_fecha_inicio_po.Value = inicio_pr;
-                                }
-                                else
-                                {
-                                    // Manejo de error si no se puede convertir el resultado a DateTime
-                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
-                                }
-                            }
-
-                            // Consulta SQL para obtener datos del cmb de periodos reportar y extraer fin pr------------------------------
-
-                            string query2 = "select distinct fin_pr from TC_CALENDARIO_SESIONES " +
-                                "WHERE periodos_reportar = @pr and entidad = @ent and ejercicio_constitucional = @ec";
-                            using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
-                            {
-                                cmd2.Parameters.AddWithValue("@pr", pr);
-                                cmd2.Parameters.AddWithValue("@ent", ent);
-                                cmd2.Parameters.AddWithValue("@ec", ec);
-
-                                object resultado = cmd2.ExecuteScalar();
-
-                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_pr))
-                                {
-                                    dtp_fecha_termino_po.Value = inicio_pr;
-                                }
-                                else
-                                {
-                                    // Manejo de error si no se puede convertir el resultado a DateTime
-                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
-                                }
-                            }
-
-
-                            conexion.Close();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-
-            }
-            
-        }
-
-        private void txt_periodos_extraordinarios_celebrados_TextChanged(object sender, EventArgs e)
-        {
-            int valorTextBox;
-
-            // Verificar si el valor del TextBox es un número válido
-            if (int.TryParse(txt_periodos_extraordinarios_celebrados.Text, out valorTextBox))
-            {
-                // Delimitar el valor del ComboBox según el valor del TextBox
-                if (valorTextBox >= 1 && valorTextBox <= 10)
-                {
-                    // Limpiar el ComboBox antes de agregar nuevos elementos
-                    cmb_periodo_extraordinario_reportado.Items.Clear();
-
-                    // Llenar el ComboBox con los elementos del 1 al valor del TextBox
-                    for (int i = 1; i <= valorTextBox; i++)
-                    {
-                        string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-                        using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-                        {
-                            try
-                            {
-                                // abrir la conexion
-                                conexion.Open();
-
-                                // comando de sql con filtro
-                                string query = "select descripcion from TC_PERIODO_EXT where id_periodo_ext = @id";
-                                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-                                cmd.Parameters.AddWithValue("@id", i);
-
-                                // Utilizar un DataReader para obtener los datos
-                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                                DataTable dataTable = new DataTable();
-                                adapter.Fill(dataTable);
-
-                                // Agregar los elementos del DataTable al ComboBox
-                                foreach (DataRow row in dataTable.Rows)
-                                {
-                                    cmb_periodo_extraordinario_reportado.Items.Add(row["descripcion"].ToString());
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                            }
-                            finally
-                            {
-                                conexion.Close();
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    // Si el valor del TextBox está fuera del rango permitido, mostrar un mensaje de error
-                    MessageBox.Show("El valor debe estar entre 1 y 10");
-                }
-            }
-            else
-            {
-                // Si el valor del TextBox no es un número válido, mostrar un mensaje de error
-                MessageBox.Show("Ingrese un número válido");
-            }
-        }
-        // ID COMISION LEGISLATIVA
         private void cmb_tipo_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
+        /*
             string cadena = "Data Source = DB_PLE.db;Version=3;";
 
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -3624,13 +3664,13 @@ namespace App_PLE.Vistas
 
             // Concatenar c2 con el valor de ComboBox2
             string valorComboBox2 = Txt_consecutivo_comision_legislativa.Text.ToString();
-            string valorComboBox3 = txtID.Text.Substring(0,2).ToString();
+            string valorComboBox3 = txt_id_legislatura.Text.Substring(0,2).ToString();
             string resultadoConcatenado = "COM_" + c2Value + "_" + valorComboBox3 + "_" + valorComboBox2;
 
             // Mostrar el resultado en TextBox1
             Txt_ID_comision_legislativa.Text = resultadoConcatenado;
 
-           
+           */
 
         }
         private void Txt_consecutivo_comision_legislativa_TextChanged(object sender, EventArgs e)
@@ -3654,25 +3694,14 @@ namespace App_PLE.Vistas
 
             // Concatenar c2 con el valor de ComboBox2
             string valorComboBox2 = Txt_consecutivo_comision_legislativa.Text.ToString();
-            string valorComboBox3 = txtID.Text.Substring(0,2).ToString();
+            string valorComboBox3 = txt_id_legislatura.Text.Substring(0,2).ToString();
             string resultadoConcatenado = "COM_" + c2Value + "_" + valorComboBox3 + "_" + valorComboBox2;
 
             // Mostrar el resultado en TextBox1
             Txt_ID_comision_legislativa.Text = resultadoConcatenado;
         }
-        /*
-        -------------------------------------------------- MAYUSCULAS ----------------------------------------------------
-         */
-        // datos generales
-        private void txt_nombre_legislatura_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            txt_nombre_legislatura.Text = txt_nombre_legislatura.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            txt_nombre_legislatura.SelectionStart = txt_nombre_legislatura.Text.Length;
-        }
-
+      
+ 
         // COMISIONES LEGISLATIVAS
         private void Txt_nombre_comision_legislativa_TextChanged(object sender, EventArgs e)
         {
@@ -3714,71 +3743,11 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_observaciones_cl.SelectionStart = txt_observaciones_cl.Text.Length;
         }
-        /*
-        -------------------------------------------------- VALOR NUMERICO ----------------------------------------------------
-         */
-        // datos generales
-        private void Txt_distritos_uninominales_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void Txt_diputaciones_plurinominales_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void Txt_sesiones_celebradas_po_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void Txt_sesiones_celebradas_pe_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void txt_periodos_extraordinarios_celebrados_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         
+        //-------------------------------------------------- VALOR NUMERICO ----------------------------------------------------
+      
+       
+       
         // COMISIONES LEGISLATIVAS
         private void Txt_consecutivo_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -3839,88 +3808,11 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
-        /*
-        -------------------------------------------------- VALIDACIONES ----------------------------------------------------
-         */
-        // datos generales
-        private void Dtp_inicio_funciones_legislatura_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_inicio_funciones_legislatura.Value >= dtp_termino_funciones_legislatura.Value)
-            {
-                MessageBox.Show("La fecha de inicio debe ser menor que la fecha de término.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_inicio_funciones_legislatura.Value = dtp_termino_funciones_legislatura.Value.AddDays(-1);
-                dtp_inicio_funciones_legislatura.Focus();
-            }
-            */
-        }
-
-        private void Dtp_fecha_inicio_informacion_reportada_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_fecha_inicio_informacion_reportada.Value < dtp_inicio_funciones_legislatura.Value ||
-                dtp_fecha_inicio_informacion_reportada.Value > dtp_termino_funciones_legislatura.Value)
-            {
-                MessageBox.Show("La fecha debe estar entre el inicio y término de funciones", "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                dtp_fecha_inicio_informacion_reportada.Value = dtp_inicio_funciones_legislatura.Value.AddDays(1);
-                dtp_fecha_inicio_informacion_reportada.Focus();
-            }
-            */
-        }
-
-        private void Dtp_fecha_termino_informacion_reportada_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_fecha_termino_informacion_reportada.Value > dtp_termino_funciones_legislatura.Value ||
-               dtp_fecha_termino_informacion_reportada.Value < dtp_fecha_inicio_informacion_reportada.Value)
-            {
-                MessageBox.Show("La fecha debe estar entre el inicio y término de funciones", "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-
-                dtp_fecha_termino_informacion_reportada.Value = dtp_termino_funciones_legislatura.Value.AddDays(-1);
-                dtp_fecha_termino_informacion_reportada.Focus();
-            }
-            */
-        }
-
-        private void dtp_fecha_inicio_po_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_fecha_inicio_po.Value < dtp_fecha_inicio_informacion_reportada.Value
-                || dtp_fecha_inicio_po.Value > dtp_fecha_termino_informacion_reportada.Value)
-            {
-                MessageBox.Show("La fecha debe estar entre el periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_fecha_inicio_po.Value = dtp_fecha_inicio_informacion_reportada.Value.AddDays(1);
-                dtp_fecha_inicio_po.Focus();
-            }
-            */
-        }
-        private void dtp_fecha_inicio_pe_ValueChanged(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_fecha_inicio_pe.Value <= dtp_fecha_inicio_po.Value
-                && dtp_fecha_inicio_pe.Value > dtp_fecha_termino_informacion_reportada.Value)
-            {
-                MessageBox.Show("La fecha debe estar entre el periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_fecha_inicio_po.Value = dtp_fecha_inicio_informacion_reportada.Value.AddDays(1);
-                dtp_fecha_inicio_po.Focus();
-            }
-            */
-            
-        }
-        private void dtp_fecha_termino_po_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_fecha_termino_po.Value < dtp_fecha_inicio_informacion_reportada.Value
-               || dtp_fecha_termino_po.Value > dtp_fecha_termino_informacion_reportada.Value)
-            {
-                MessageBox.Show("La fecha debe estar entre el periodo reportado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_fecha_termino_po.Value = dtp_fecha_termino_informacion_reportada.Value.AddDays(-1);
-                dtp_fecha_termino_po.Focus();
-            }
-            */
-        }
+        
+        //-------------------------------------------------- VALIDACIONES ----------------------------------------------------
+         
+      
+       
 
         // COMISIONES LEGISLATIVAS
         private void cmb_tema_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
@@ -4043,10 +3935,14 @@ namespace App_PLE.Vistas
             CheckBox chbPE = (CheckBox)sender;
             if (chbPE.Checked)
             {
-                // Si el CheckBox está marcado
-                dgvPE.Enabled = true; cmb_periodo_extraordinario_reportado.Enabled = true;
-                dtp_fecha_inicio_pe.Enabled = true; dtp_fecha_termino_pe.Enabled = true; Txt_sesiones_celebradas_pe.Enabled = true;
-                btnAgregarPE.Enabled = true; BtnEliminarPE.Enabled = true; txt_periodos_extraordinarios_celebrados.Enabled = true;
+               
+                    // Si el CheckBox está marcado
+                    dgvPE.Enabled = true; cmb_periodo_extraordinario_reportado.Enabled = true;
+                    dtp_fecha_inicio_pe.Enabled = true; dtp_fecha_termino_pe.Enabled = true; Txt_sesiones_celebradas_pe.Enabled = true;
+                    btnAgregarPE.Enabled = true; BtnEliminarPE.Enabled = true; txt_periodos_extraordinarios_celebrados.Enabled = true;
+                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+
+
             }
             else
             {
@@ -4054,7 +3950,7 @@ namespace App_PLE.Vistas
                 dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
                 dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
                 btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
-                dgvPE.Rows.Clear();
+                dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Items.Clear();
             }
         }
 
@@ -4138,54 +4034,6 @@ namespace App_PLE.Vistas
 
             MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

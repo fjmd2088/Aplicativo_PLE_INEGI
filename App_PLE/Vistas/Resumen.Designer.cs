@@ -82,6 +82,7 @@
             this.dgvResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResumen.Size = new System.Drawing.Size(990, 539);
             this.dgvResumen.TabIndex = 30;
+            this.dgvResumen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResumen_CellContentClick);
             // 
             // btnEditarRegistro
             // 

@@ -36,8 +36,9 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select distinct id_datos_generales, entidad_federativa, nombre_legislatura," +
-                        "inicio_funciones_legislatura,termino_funciones_legislatura" +
+                    string query = "select distinct id_legislatura, entidad_federativa, nombre_legislatura," +
+                        "inicio_funciones_legislatura,termino_funciones_legislatura,periodo_reportado," +
+                        "fecha_inicio_p,fecha_termino_p" +
                         " from" +
                         " TR_DATOS_GENERALES";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
@@ -52,7 +53,7 @@ namespace App_PLE.Vistas
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    MessageBox.Show("Error al llenar la tabla de resumen: " + ex.Message);
                 }
                 finally
                 {
@@ -102,6 +103,11 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Por favor, selecciona un registro.");
             }
             */
+        }
+
+        private void dgvResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
