@@ -66,48 +66,29 @@ namespace App_PLE.Vistas
 
         private void btnAgregarNuevoRegistro_Click(object sender, EventArgs e)
         {
-            // FormDatosGenerales frmDatosGenerales  = new FormDatosGenerales();
-
-            // Form1 frm = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-            // frm.AbrirFormInPanel(frmDatosGenerales);
-
-            //**********************
-
             FormRegistros frmRegistros = new FormRegistros();
 
             // Crear instancias de los formularios secundarios
             frmRegistros.ShowDialog();
-
-
         }
 
         private void btnEditarRegistro_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (dgvResumen.SelectedRows.Count > 0)
             {
-                // Se obtiene el ID del registro
-                DataGridViewRow filaSeleccionada = dgvResumen.SelectedRows[0];
+                FormRegistros frmRegistros = new FormRegistros();
 
-                string id_registro = filaSeleccionada.Cells["id_datos_generales"].Value.ToString();
-
-                // crear instancia al formulario
-                FormRegistrosPrecargado frmRegistros = new FormRegistrosPrecargado();
-
-                frmRegistros.CargarDatos(id_registro);
-
-                frmRegistros.Show();
+                // Crear instancias de los formularios secundarios
+                frmRegistros.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Por favor, selecciona un registro.");
             }
-            */
+            
         }
 
-        private void dgvResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
     }
 }

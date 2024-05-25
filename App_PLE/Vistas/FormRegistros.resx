@@ -129,15 +129,6 @@
   <metadata name="sesiones_celebradas_pe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button24.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -236,26 +227,12 @@
         YII=
 </value>
   </data>
-  <metadata name="tema_comision.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="tema_comision_legislativa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="pboConsecutivoComision.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJPSURBVEhLtZZL
-        aBNRFIZnleRON25ciFVcuHVRu9CFNKQNIYKZQAVR3KmgUOvKlbir4CINijXYGPqy+KiPmWhqBSl0Ia6U
-        IFq0PgpVcdEKptiKVNscz5neSe/cuRmbQH/4yCb5/pn7jOYXlihsZ4Z1WjfyTxoM671uWIuBlm4IRC4v
-        BSNXv4ei2bssOrCXf339Ye0PGlGWRf4iIBJoSbkJpwDLvrJ4dh//uX/0hLUfRfOy2MFTUCFdDrXmLnKN
-        OixhdaJkRZYSW46MwqkrRUjn38COg72KAoTepq33Hte5w598WRYTjUcfw8zsL6C8LAEUf6zAzsO5qiWh
-        WO4C166Gxhwn86dKTpwbmLTlFCog+iem1QVEOF3WY4PNXI9Pb1h9slSk6+Y7rl8ruPX8s1rOCbZmpmw5
-        LUWUKIfGYdfJp7D4e7lSUJwHCHeOKMVrdAOL9e/RWNI8o5LK7O4Yh0zhE4y+noX4WVMh9EL7hIZnTJb5
-        oRJVIxjpmaOCj7JEZPOhR1Ba+FOhWCrbNB27oZS6iFxaooIFWSqyqf0hnB+ahFfTOPB8DojmE8NqqYt0
-        +b8FDrcnvtRegMtVw0Psg0ooU1cBHorrnuR6CuxJXj2O1VKRut4gmr3jbDTPsSxTewHfaBQ9YeZUUpFa
-        C4Jtmbe2nOJ32FVbpvdffIPjqXGl3HPYURoMM45Cz5lUbaMRw89mFHI6rq93ca07fheOg0co4nfhONnQ
-        K9MJO1DYirKNufTFsGR+m540O1A8hotgCj+Fvy09c6HotZHKUlRG0/4BYZsGgJD/WOwAAAAASUVORK5C
-        YII=
-</value>
-  </data>
+  <metadata name="otro_tema_comision_legislativa_especifique.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="dataGridViewTextBoxColumn13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

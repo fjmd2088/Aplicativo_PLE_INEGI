@@ -6,9 +6,11 @@ using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Resources.ResXFileRef;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace App_PLE.Vistas
@@ -36,6 +38,10 @@ namespace App_PLE.Vistas
             btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
             chbPE.Enabled = false;
 
+            //tabPageCL.Enabled = false; tabPagePL.Enabled = false; tabPagePA.Enabled = false; tabPageIni.Enabled = false;
+            //tabPageIniUO.Enabled = false; tabPageJP.Enabled = false; tabPageDP.Enabled = false; tabPageCom.Enabled = false;
+
+
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
             txt_id_legislatura.Text = string.Empty; txt_agee.Text = string.Empty; cmb_numero_legislatura.Text = "";
             dtp_inicio_funciones_legislatura.Value = new DateTime(1899, 9, 9); dtp_termino_funciones_legislatura.Value = new DateTime(1899, 9, 9);
@@ -50,6 +56,13 @@ namespace App_PLE.Vistas
             cmb_Tema_CL();
             cmb_cond_transmision_reuniones_celebradas_CL();
             cmb_cond_celebracion_reuniones_CL();
+            DGV_REGISTROS_CL();
+
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false;
+            txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false;
+            cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false;
+            txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false;
 
             // ---------------------------------------------- PERSONAS LEGISLADORAS ---------------------------------------------------------------
             cmb_Sexo_Persona_Legisladora();
@@ -120,13 +133,13 @@ namespace App_PLE.Vistas
 
 
 
-            Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_ID_comision_legislativa.Enabled = false;
+            Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; txt_ID_comision_legislativa.Enabled = false;
             txt_otro_tema_comision_legislativa_especifique.Enabled = false;
 
 
            
 
-            Txt_ID_comision_legislativa.Text =  string.Empty;
+            txt_ID_comision_legislativa.Text =  string.Empty;
             cmb_tema_comision_legislativa.Text = "";
             cmb_tipo_comision_legislativa.Text = "";
             
@@ -1046,9 +1059,32 @@ namespace App_PLE.Vistas
                 dtp_fecha_termino_pe.Focus();
             }
         }
+        private void chbPE_CheckedChanged_1(object sender, EventArgs e)
+        {
+            // Cuando el estado del CheckBox cambia, se ejecutará este código
+            CheckBox chbPE = (CheckBox)sender;
+            if (chbPE.Checked)
+            {
+
+                // Si el CheckBox está marcado
+                dgvPE.Enabled = true; cmb_periodo_extraordinario_reportado.Enabled = true;
+                dtp_fecha_inicio_pe.Enabled = true; dtp_fecha_termino_pe.Enabled = true; Txt_sesiones_celebradas_pe.Enabled = true;
+                btnAgregarPE.Enabled = true; BtnEliminarPE.Enabled = true; txt_periodos_extraordinarios_celebrados.Enabled = true;
+                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+
+
+            }
+            else
+            {
+                // Si el CheckBox está desmarcado
+                dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
+                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
+                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
+                dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Items.Clear();
+            }
+        }
 
         //-------------------------------------------------- COMISIONES LEGISLATIVAS ----------------------------------------------------
-
 
         private void cmb_Tipo_CL()
         {
@@ -1144,7 +1180,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -1185,7 +1221,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO WHERE id_si_no IN (1, 6, 3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -1214,11 +1250,597 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void pbo_cant_integrantes_comision_legislativa_Click_1(object sender, EventArgs e)
+        {
+            string mensaje = "1. En caso de que sus registros no le permitan desglosar la información de acuerdo" +
+                " con los requerimientos solicitados capture - 1 (no se sabe “NS”).\n\n" +
+               "2.En caso de que determinada categoría no se encuentre prevista en la normatividad aplicable, " +
+               "capture - 2 (no aplica “NA”).\r\n";
 
-        
+            string titulo = "";
+
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void pbo_cant_reuniones_celebradas_comision_legislativa_Click(object sender, EventArgs e)
+        {
+            string mensaje = "1. En caso de que sus registros no le permitan desglosar la información de acuerdo" +
+                " con los requerimientos solicitados capture - 1 (no se sabe “NS”).\n\n" +
+               "2.En caso de que determinada categoría no se encuentre prevista en la normatividad aplicable, " +
+               "capture - 2 (no aplica “NA”).\r\n";
+
+            string titulo = "";
+
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa_Click(object sender, EventArgs e)
+        {
+            string mensaje = "1. En caso de que sus registros no le permitan desglosar la información de acuerdo" +
+                " con los requerimientos solicitados capture - 1 (no se sabe “NS”).\n\n" +
+               "2.En caso de que determinada categoría no se encuentre prevista en la normatividad aplicable, " +
+               "capture - 2 (no aplica “NA”).\r\n";
+
+            string titulo = "";
+
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void pbo_cant_iniciativas_turnadas_a_comision_legislativa_Click(object sender, EventArgs e)
+        {
+            string mensaje = "1. En caso de que sus registros no le permitan desglosar la información de acuerdo" +
+                 " con los requerimientos solicitados capture - 1 (no se sabe “NS”).\n\n" +
+                "2.En caso de que determinada categoría no se encuentre prevista en la normatividad aplicable, " +
+                "capture - 2 (no aplica “NA”).\r\n";
+
+            string titulo = "";
+
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void pbo_cant_dictamenes_emitidos_por_comision_legislativa_Click(object sender, EventArgs e)
+        {
+            string mensaje = "1. En caso de que sus registros no le permitan desglosar la información de acuerdo" +
+                " con los requerimientos solicitados capture - 1 (no se sabe “NS”).\n\n" +
+               "2.En caso de que determinada categoría no se encuentre prevista en la normatividad aplicable, " +
+               "capture - 2 (no aplica “NA”).\r\n";
+
+            string titulo = "";
+
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void txt_consecutivo_comision_legislativa_TextChanged(object sender, EventArgs e)
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string tipo_cl = cmb_tipo_comision_legislativa.Text.ToString();
+
+            string num_leg = "";
+            using (SQLiteConnection con = new SQLiteConnection(cadena))
+            {
+                con.Open();
+                string query = "SELECT abr FROM TC_TIPO_COMISION WHERE descripcion = @tipo_cl";
+                SQLiteCommand cmd = new SQLiteCommand(query, con);
+                cmd.Parameters.AddWithValue("@tipo_cl", tipo_cl);
+                num_leg = cmd.ExecuteScalar()?.ToString();
+                con.Close();
+            }
+
+            string conse_cl = txt_consecutivo_comision_legislativa.Text.ToString();
+            string cve_ent = txt_id_legislatura.Text.Substring(0, 2).ToString();
+            string resultadoConcatenado = "COM_" + num_leg + "_" + cve_ent + "_" + conse_cl;
+
+            // Mostrar el resultado en TextBox1
+            txt_ID_comision_legislativa.Text = resultadoConcatenado;
+
+        }
+        private void cmb_tipo_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+                string tipo_cl = cmb_tipo_comision_legislativa.Text.ToString();
+
+                if (tipo_cl == "Otro tipo (especifique)")
+                {
+                    Txt_otro_tipo_comision_legislativa_especifique.Enabled = true;
+                    Txt_otro_tipo_comision_legislativa_especifique.Focus();
+            }
+                else
+                {
+                    Txt_otro_tipo_comision_legislativa_especifique.Enabled = false;
+                    Txt_otro_tipo_comision_legislativa_especifique.Text = "";
+                }
+
+            string num_leg = "";
+            using (SQLiteConnection con = new SQLiteConnection(cadena))
+            {
+                con.Open();
+                string query = "SELECT abr FROM TC_TIPO_COMISION WHERE descripcion = @tipo_cl";
+                SQLiteCommand cmd = new SQLiteCommand(query, con);
+                cmd.Parameters.AddWithValue("@tipo_cl", tipo_cl);
+                num_leg = cmd.ExecuteScalar()?.ToString();
+                con.Close();
+            }
+
+            if (txt_id_legislatura.Text == "")
+            {
+                string cve_ent = "";
+                string conse_cl = txt_consecutivo_comision_legislativa.Text.ToString();
+                string resultadoConcatenado = "COM_" + num_leg + "_" + cve_ent + "_" + conse_cl;
+                txt_ID_comision_legislativa.Text = resultadoConcatenado;
+            }
+            else
+            {
+                string cve_ent = txt_id_legislatura.Text.Substring(0, 2).ToString();
+                string conse_cl = txt_consecutivo_comision_legislativa.Text.ToString();
+                string resultadoConcatenado = "COM_" + num_leg + "_" + cve_ent + "_" + conse_cl;
+                txt_ID_comision_legislativa.Text = resultadoConcatenado;
+            }
+
+        }
+        private void btnAgregarCL_Click(object sender, EventArgs e)
+        {
+            // se obtienen los valores
+            string tema_comision_legislativa = cmb_tema_comision_legislativa.Text.Trim();
+            string otro_tema = txt_otro_tema_comision_legislativa_especifique.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(cmb_tema_comision_legislativa.Text))
+            {
+                MessageBox.Show("Revisar datos vacios");
+            }
+            else
+            {
+                // Agregar una nueva fila al DataGridView
+                bool respuesta = IsDuplicateRecord_CL(cmb_tema_comision_legislativa.Text.ToString());
+
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Dato duplicado");
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_tema_comision_legislativa.Rows.Add(tema_comision_legislativa, otro_tema);
+
+                    cmb_tema_comision_legislativa.Text = ""; txt_otro_tema_comision_legislativa_especifique.Clear();
+                }
+            }
+
+        }
+        private bool IsDuplicateRecord_CL(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_tema_comision_legislativa.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["tema_comision_legislativa"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private void cmb_tema_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_tema_comision_legislativa.Text.ToString();
+
+            if (valorComboBox1 == "Otro tema o asunto (especifique)")
+            {
+                txt_otro_tema_comision_legislativa_especifique.Enabled = true;
+                txt_otro_tema_comision_legislativa_especifique.Focus();
+            }
+            else
+            {
+                txt_otro_tema_comision_legislativa_especifique.Enabled = false;
+                txt_otro_tema_comision_legislativa_especifique.Text = "";
+            }
+
+        }
+        private void Txt_otro_tipo_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            Txt_otro_tipo_comision_legislativa_especifique.Text = Txt_otro_tipo_comision_legislativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            Txt_otro_tipo_comision_legislativa_especifique.SelectionStart = Txt_otro_tipo_comision_legislativa_especifique.Text.Length;
+
+        }
+        private void txt_otro_tema_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_tema_comision_legislativa_especifique.Text = txt_otro_tema_comision_legislativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_tema_comision_legislativa_especifique.SelectionStart = txt_otro_tema_comision_legislativa_especifique.Text.Length;
+        }
+        private void btnEliminarCL_Click(object sender, EventArgs e)
+        {
+            if (dgv_tema_comision_legislativa.SelectedRows.Count > 0)
+            {
+                dgv_tema_comision_legislativa.Rows.RemoveAt(dgv_tema_comision_legislativa.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+
+        }
+        private void txt_cant_integrantes_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+
+        }
+        private void cmb_cond_celebracion_reuniones_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_celebracion_reuniones_comision_legislativa.Text.ToString();
+
+            if (valorComboBox1 == "No (especifique)")
+            {
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = true;
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
+            }
+            else
+            {
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false;
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text = "";
+            }
+
+            if (valorComboBox1 == "Si")
+            {
+                txt_cant_reuniones_celebradas_comision_legislativa.Enabled = true;
+                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = true;
+            }
+            else
+            {
+                txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false;
+                txt_cant_reuniones_celebradas_comision_legislativa.Text = "";
+
+                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false;
+                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text = "";
+            }
+        }
+        private void cmb_cond_transmision_reuniones_celebradas_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = true;
+            }
+            else
+            {
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false;
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = "";
+            }
+        }
+        private void txt_observaciones_cl_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_observaciones_cl.Text = txt_observaciones_cl.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_observaciones_cl.SelectionStart = txt_observaciones_cl.Text.Length;
+
+        }
+        private void Txt_otro_tipo_comision_legislativa_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Txt_otro_tipo_comision_legislativa_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro tipo de comisión legislativa.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Txt_otro_tipo_comision_legislativa_especifique.Focus();
+            }
+        }
+        private void txt_otro_tema_comision_legislativa_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_tema_comision_legislativa_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro tema o asunto atendido por la comisión legislativa.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_tema_comision_legislativa_especifique.Focus();
+            }
+        }
+        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el motivo por el cual la comisión legislativa no se reunió durante el periodo reportado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
+            }
+        }
+        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_TextChanged(object sender, EventArgs e)
+        {
+            int valor;
+            int valor2;
+
+            int.TryParse(txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text, out valor);
+            int.TryParse(txt_cant_reuniones_celebradas_comision_legislativa.Text, out valor2);
+
+            // Verificar si el valor está dentro del rango permitido
+            if (valor > valor2)
+            {
+                MessageBox.Show("Debe ser igual o menor a la cantidad de reuniones celebradas por la comisión legislativa.",
+                    "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Focus();
+            }
+            if (valor < -2)
+            {
+                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+            }
+
+            if (valor == -1 || valor == -2 )
+            {
+                MessageBox.Show("Justificar la elección en el apartado de observaciones");
+                txt_observaciones_cl.Focus();
+            }
+        }
+        private void Txt_nombre_comision_legislativa_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_nombre_comision_legislativa.Text = txt_nombre_comision_legislativa.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_nombre_comision_legislativa.SelectionStart = txt_nombre_comision_legislativa.Text.Length;
+        }
+        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text = txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.SelectionStart = txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text.Length;
+        }
+        private void txt_cant_reuniones_celebradas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_cant_reuniones_celebradas_comision_legislativa_Leave(object sender, EventArgs e)
+        {
+            int valor;
+            int.TryParse(txt_cant_reuniones_celebradas_comision_legislativa.Text, out valor);
+
+            // Verificar si el valor está dentro del rango permitido
+            if (valor < -2)
+            {
+                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
+                txt_cant_reuniones_celebradas_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+            }
+
+            if (valor == -1 || valor == -2)
+            {
+                MessageBox.Show("Justificar la elección en el apartado de observaciones");
+                txt_observaciones_cl.Focus();
+            }
+        }
+        private void Txt_consecutivo_comision_legislativa_MouseHover(object sender, EventArgs e)
+        {
+            // Mostrar mensaje al pasar el ratón sobre el TextBox
+            System.Windows.Forms.ToolTip tooltip = new System.Windows.Forms.ToolTip();
+            tooltip.SetToolTip(txt_consecutivo_comision_legislativa, "Número asignado a la comisión legislativa." +
+                " Para el caso de las comisiones ordinarias, permanentes u homólogas, " +
+                "se sugiere respetar el orden descendente de las fracciones establecidas en el correspondiente " +
+                "artículo de la Ley o Reglamento del Congreso de la entidad federativa.");
+        }
+        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_TextChanged(object sender, EventArgs e)
+        {
+            int valor;
+            int.TryParse(txt_cant_iniciativas_turnadas_a_comision_legislativa.Text, out valor);
+
+            // Verificar si el valor está dentro del rango permitido
+            if (valor < -2)
+            {
+                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
+                txt_cant_iniciativas_turnadas_a_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+            }
+
+            if (valor == -1 || valor == -2)
+            {
+                MessageBox.Show("Justificar la elección en el apartado de observaciones");
+                txt_observaciones_cl.Focus();
+            }
+        }
+        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_TextChanged(object sender, EventArgs e)
+        {
+            int valor;
+            int.TryParse(txt_cant_dictamenes_emitidos_por_comision_legislativa.Text, out valor);
+
+            // Verificar si el valor está dentro del rango permitido
+            if (valor < -2)
+            {
+                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
+                txt_cant_dictamenes_emitidos_por_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+            }
+
+            if (valor == -1 || valor == -2)
+            {
+                MessageBox.Show("Justificar la elección en el apartado de observaciones");
+                txt_observaciones_cl.Focus();
+            }
+        }
+        private void btnGuardarDB_CL_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes) 
+            {
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                {
+                    connection.Open();
+
+                    // Recorremos las filas del DataGridView
+                    foreach (DataGridViewRow row in dgv_tema_comision_legislativa.Rows)
+                    {
+                        // Ignoramos la fila vacía al final
+                        if (!row.IsNewRow)
+                        {
+                            // Insertamos los datos en la base de datos
+                            string query = "INSERT INTO TR_COMISIONES_LEGISLATIVAS (" +
+                                "id_legislatura," +
+                                "ID_comision_legislativa," +
+                                "consecutivo_comision_legislativa," +
+                                "nombre_comision_legislativa," +
+                                "tipo_comision_legislativa," +
+                                "otro_tipo_comision_legislativa_especifique," +
+                                "tema_comision_legislativa," +
+                                "otro_tema_comision_legislativa_especifique," +
+                                "cant_integrantes_comision_legislativa," +
+                                "cond_celebracion_reuniones_comision_legislativa," +
+                                "no_cond_celebracion_reuniones_comision_legislativa_especifique," +
+                                "cant_reuniones_celebradas_comision_legislativa," +
+                                "cond_transmision_reuniones_celebradas_comision_legislativa," +
+                                "cant_reuniones_celebradas_transmitidas_comision_legislativa," +
+                                "cant_iniciativas_turnadas_a_comision_legislativa," +
+                                "cant_dictamenes_emitidos_por_comision_legislativa," +
+                                "observaciones_cl," +
+                                "fecha_actualizacion" +
+                                ")" +
+                         "VALUES" +
+                                " (" +
+                                "@id_legislatura," +
+                                "@ID_comision_legislativa," +
+                                "@consecutivo_comision_legislativa," +
+                                "@nombre_comision_legislativa," +
+                                "@tipo_comision_legislativa," +
+                                "@otro_tipo_comision_legislativa_especifique," +
+                                "@tema_comision_legislativa," +
+                                "@otro_tema_comision_legislativa_especifique," +
+                                "@cant_integrantes_comision_legislativa," +
+                                "@cond_celebracion_reuniones_comision_legislativa," +
+                                "@no_cond_celebracion_reuniones_comision_legislativa_especifique," +
+                                "@cant_reuniones_celebradas_comision_legislativa," +
+                                "@cond_transmision_reuniones_celebradas_comision_legislativa," +
+                                "@cant_reuniones_celebradas_transmitidas_comision_legislativa," +
+                                "@cant_iniciativas_turnadas_a_comision_legislativa," +
+                                "@cant_dictamenes_emitidos_por_comision_legislativa," +
+                                "@observaciones_cl," +
+                                "@fecha_actualizacion" +
+                                ")";
+
+                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                            {
+                                // Variables individuales
+                                command.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text);
+                                command.Parameters.AddWithValue("@ID_comision_legislativa",txt_ID_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@consecutivo_comision_legislativa",txt_consecutivo_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@nombre_comision_legislativa", txt_nombre_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@tipo_comision_legislativa", cmb_tipo_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@otro_tipo_comision_legislativa_especifique", Txt_otro_tipo_comision_legislativa_especifique.Text);
+                                command.Parameters.AddWithValue("@cant_integrantes_comision_legislativa", txt_cant_integrantes_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@cond_celebracion_reuniones_comision_legislativa", cmb_cond_celebracion_reuniones_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@no_cond_celebracion_reuniones_comision_legislativa_especifique", txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text);
+                                command.Parameters.AddWithValue("@cant_reuniones_celebradas_comision_legislativa", txt_cant_reuniones_celebradas_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@cond_transmision_reuniones_celebradas_comision_legislativa", cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@cant_reuniones_celebradas_transmitidas_comision_legislativa", txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@cant_iniciativas_turnadas_a_comision_legislativa", txt_cant_iniciativas_turnadas_a_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@cant_dictamenes_emitidos_por_comision_legislativa", txt_cant_dictamenes_emitidos_por_comision_legislativa.Text);
+                                command.Parameters.AddWithValue("@observaciones_cl", txt_observaciones_cl.Text);
+                                command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+
+                                // Variables del dgv
+                                command.Parameters.AddWithValue("@tema_comision_legislativa", row.Cells["tema_comision_legislativa"].Value);
+                                command.Parameters.AddWithValue("@otro_tema_comision_legislativa_especifique", row.Cells["otro_tema_comision_legislativa_especifique"].Value);
+                                
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                    }
+                    connection.Close();
+                }
+
+                // Se reinicion los botones
+                MessageBox.Show("Datos guardados correctamente");
+                dgv_registros_cl.Refresh();
+
+            }
+            else
+            {
+
+            }
+        }
+        private void DGV_REGISTROS_CL()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select distinct ID_comision_legislativa, nombre_comision_legislativa," +
+                        "tipo_comision_legislativa,cant_integrantes_comision_legislativa" +
+                        " from" +
+                        " TR_COMISIONES_LEGISLATIVAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dgv_registros_cl.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar DGV comisiones legisltivas: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+        }
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
-         
-   
+
+
         private void cmb_Sexo_Persona_Legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3564,8 +4186,8 @@ namespace App_PLE.Vistas
 
             }
         }
-      
 
+        // OTROS-----------------------------------------------------------------------------------------------------------------
         public void CargarDatos(string id_registro)
         {
             // Usa los datos recibidos para cargar los controles en el formulario nuevo
@@ -3573,11 +4195,6 @@ namespace App_PLE.Vistas
             
         }
 
-       
-      
-       
-
-        // COMISIONES LEGISLATIVAS
         private void BtnSalirDG_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("¿Está seguro de Salir?", "Confirmacion",
@@ -3594,446 +4211,64 @@ namespace App_PLE.Vistas
                 
         }
 
-        private void BtnAgregarCL_Click(object sender, EventArgs e)
-        {
-            // se obtienen los valores
-            string tema_comision_legislativa = cmb_tema_comision_legislativa.Text.Trim();
-            
-
-            if (string.IsNullOrWhiteSpace(cmb_tema_comision_legislativa.Text) ||
-                string.IsNullOrWhiteSpace(cmb_tema_comision_legislativa.Text))
-            {
-                MessageBox.Show("Revisar datos vacios");
-            }
-            else
-            {
-                // Agregar una nueva fila al DataGridView
-                dgv_tema_comision_legislativa.Rows.Add(tema_comision_legislativa);
-
-                cmb_tema_comision_legislativa.Text = ""; 
-            }
-        }
-
-        private void btnEliminarCL_Click(object sender, EventArgs e)
-        {
-            if (dgv_tema_comision_legislativa.SelectedRows.Count > 0)
-            {
-                dgv_tema_comision_legislativa.Rows.RemoveAt(dgv_tema_comision_legislativa.SelectedRows[0].Index);
-            }
-            else
-            {
-                MessageBox.Show("Seleccionar registro a eliminar");
-            }
-        }
-
-
-        //-------------------------------------------------- PROGRAMACION ----------------------------------------------------
-
-
-
-
-        private void cmb_tipo_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        /*
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
-            string valorComboBox1 = cmb_tipo_comision_legislativa.Text.ToString();
-
-            if (valorComboBox1 == "Otro tipo (especifique)")
-            {
-                Txt_otro_tipo_comision_legislativa_especifique.Enabled = true;
-            }
-            else
-            {
-                Txt_otro_tipo_comision_legislativa_especifique.Enabled = false;
-                Txt_otro_tipo_comision_legislativa_especifique.Text = "";
-            }
-
-            // Realizar la consulta para obtener el valor de c2
-            string c2Value = "";
-            using (SQLiteConnection con = new SQLiteConnection(cadena))
-            {
-                con.Open();
-                string query = "SELECT abr FROM TC_TIPO_COMISION WHERE descripcion = @valorComboBox1";
-                SQLiteCommand cmd = new SQLiteCommand(query, con);
-                cmd.Parameters.AddWithValue("@valorComboBox1", valorComboBox1);
-                c2Value = cmd.ExecuteScalar()?.ToString();
-                con.Close();
-            }
-
-            // Concatenar c2 con el valor de ComboBox2
-            string valorComboBox2 = Txt_consecutivo_comision_legislativa.Text.ToString();
-            string valorComboBox3 = txt_id_legislatura.Text.Substring(0,2).ToString();
-            string resultadoConcatenado = "COM_" + c2Value + "_" + valorComboBox3 + "_" + valorComboBox2;
-
-            // Mostrar el resultado en TextBox1
-            Txt_ID_comision_legislativa.Text = resultadoConcatenado;
-
-           */
-
-        }
-        private void Txt_consecutivo_comision_legislativa_TextChanged(object sender, EventArgs e)
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
-            string valorComboBox1 = cmb_tipo_comision_legislativa.Text.ToString();
-
-            // Realizar la consulta para obtener el valor de c2
-            string c2Value = "";
-            using (SQLiteConnection con = new SQLiteConnection(cadena))
-            {
-                con.Open();
-                string query = "SELECT abr FROM TC_TIPO_COMISION WHERE descripcion = @valorComboBox1";
-                SQLiteCommand cmd = new SQLiteCommand(query, con);
-                cmd.Parameters.AddWithValue("@valorComboBox1", valorComboBox1);
-                c2Value = cmd.ExecuteScalar()?.ToString();
-                con.Close();
-            }
-
-            // Concatenar c2 con el valor de ComboBox2
-            string valorComboBox2 = Txt_consecutivo_comision_legislativa.Text.ToString();
-            string valorComboBox3 = txt_id_legislatura.Text.Substring(0,2).ToString();
-            string resultadoConcatenado = "COM_" + c2Value + "_" + valorComboBox3 + "_" + valorComboBox2;
-
-            // Mostrar el resultado en TextBox1
-            Txt_ID_comision_legislativa.Text = resultadoConcatenado;
-        }
-      
- 
-        // COMISIONES LEGISLATIVAS
-        private void Txt_nombre_comision_legislativa_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            Txt_nombre_comision_legislativa.Text = Txt_nombre_comision_legislativa.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            Txt_nombre_comision_legislativa.SelectionStart = Txt_nombre_comision_legislativa.Text.Length;
-        }
-        private void Txt_otro_tipo_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            Txt_otro_tipo_comision_legislativa_especifique.Text = Txt_otro_tipo_comision_legislativa_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            Txt_otro_tipo_comision_legislativa_especifique.SelectionStart = Txt_otro_tipo_comision_legislativa_especifique.Text.Length;
-        }
-        private void txt_otro_tema_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            txt_otro_tema_comision_legislativa_especifique.Text = txt_otro_tema_comision_legislativa_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            txt_otro_tema_comision_legislativa_especifique.SelectionStart = txt_otro_tema_comision_legislativa_especifique.Text.Length;
-        }
-        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text = txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.SelectionStart = txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text.Length;
-        }
-        private void txt_observaciones_cl_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            txt_observaciones_cl.Text = txt_observaciones_cl.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            txt_observaciones_cl.SelectionStart = txt_observaciones_cl.Text.Length;
-        }
         
-        //-------------------------------------------------- VALOR NUMERICO ----------------------------------------------------
-      
-       
-       
-        // COMISIONES LEGISLATIVAS
-        private void Txt_consecutivo_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        
-        private void txt_cant_integrantes_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        
-        private void txt_cant_reuniones_celebradas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        
-        //-------------------------------------------------- VALIDACIONES ----------------------------------------------------
-         
-      
-       
-
-        // COMISIONES LEGISLATIVAS
-        private void cmb_tema_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
-            string valorComboBox1 = cmb_tema_comision_legislativa.Text.ToString();
-
-            if (valorComboBox1 == "Otro tema o asunto (especifique)")
-            {
-                txt_otro_tema_comision_legislativa_especifique.Enabled = true;
-            }
-            else
-            {
-                txt_otro_tema_comision_legislativa_especifique.Enabled = false;
-                txt_otro_tema_comision_legislativa_especifique.Text = "";
-            }
-        }
-      
-        private void txt_cant_integrantes_comision_legislativa_Leave(object sender, EventArgs e)
-        {
-            int valor;
-            int.TryParse(txt_cant_integrantes_comision_legislativa.Text, out valor);
-            
-            // Verificar si el valor está dentro del rango permitido
-            if (valor < -3)
-            {
-                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
-                txt_cant_integrantes_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
-            }
-
-            if (valor == -1 || valor == -2 || valor == -3)
-            {
-                MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
-            }
-
-        }
-        private void txt_cant_reuniones_celebradas_comision_legislativa_Leave(object sender, EventArgs e)
-        {
-            int valor;
-            int.TryParse(txt_cant_reuniones_celebradas_comision_legislativa.Text, out valor);
-
-            // Verificar si el valor está dentro del rango permitido
-            if (valor < -3)
-            {
-                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
-                txt_cant_reuniones_celebradas_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
-            }
-
-            if (valor == -1 || valor == -2 || valor == -3)
-            {
-                MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
-            }
-        }
-
-        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_TextChanged(object sender, EventArgs e)
-        {
-            int valor;
-            int.TryParse(txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text, out valor);
-
-            // Verificar si el valor está dentro del rango permitido
-            if (valor < -3)
-            {
-                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
-                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
-            }
-
-            if (valor == -1 || valor == -2 || valor == -3)
-            {
-                MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
-            }
-        }
-
-        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_TextChanged(object sender, EventArgs e)
-        {
-            int valor;
-            int.TryParse(txt_cant_iniciativas_turnadas_a_comision_legislativa.Text, out valor);
-
-            // Verificar si el valor está dentro del rango permitido
-            if (valor < -3)
-            {
-                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
-                txt_cant_iniciativas_turnadas_a_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
-            }
-
-            if (valor == -1 || valor == -2 || valor == -3)
-            {
-                MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
-            }
-        }
-
-        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_TextChanged(object sender, EventArgs e)
-        {
-            int valor;
-            int.TryParse(txt_cant_dictamenes_emitidos_por_comision_legislativa.Text, out valor);
-
-            // Verificar si el valor está dentro del rango permitido
-            if (valor < -3)
-            {
-                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
-                txt_cant_dictamenes_emitidos_por_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
-            }
-
-            if (valor == -1 || valor == -2 || valor == -3)
-            {
-                MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
-            }
-        }
-        /*
-         -------------------------------------------------- CHECK BOX ----------------------------------------------------
-          */
-        private void chbPE_CheckedChanged_1(object sender, EventArgs e)
-        {
-            // Cuando el estado del CheckBox cambia, se ejecutará este código
-            CheckBox chbPE = (CheckBox)sender;
-            if (chbPE.Checked)
-            {
-               
-                    // Si el CheckBox está marcado
-                    dgvPE.Enabled = true; cmb_periodo_extraordinario_reportado.Enabled = true;
-                    dtp_fecha_inicio_pe.Enabled = true; dtp_fecha_termino_pe.Enabled = true; Txt_sesiones_celebradas_pe.Enabled = true;
-                    btnAgregarPE.Enabled = true; BtnEliminarPE.Enabled = true; txt_periodos_extraordinarios_celebrados.Enabled = true;
-                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
 
 
-            }
-            else
-            {
-                // Si el CheckBox está desmarcado
-                dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
-                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
-                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
-                dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Items.Clear();
-            }
-        }
 
-        /*
-         -------------------------------------------------- MENSAJES DE AYUDA ----------------------------------------------------
-          */
 
-        // COMISIONES LEGISLATIVAS
-        private void Txt_consecutivo_comision_legislativa_MouseHover(object sender, EventArgs e)
-        {
-            // Mostrar mensaje al pasar el ratón sobre el TextBox
-            System.Windows.Forms.ToolTip tooltip = new System.Windows.Forms.ToolTip();
-            tooltip.SetToolTip(Txt_consecutivo_comision_legislativa, "Número asignado a la comisión legislativa." +
-                " Para el caso de las comisiones ordinarias, permanentes u homólogas, " +
-                "se sugiere respetar el orden descendente de las fracciones establecidas en el correspondiente " +
-                "artículo de la Ley o Reglamento del Congreso de la entidad federativa.");
-        }
 
-        private void pboConsecutivoComision_Click(object sender, EventArgs e)
-        {
-            string mensaje = "Número asignado a la comisión legislativa.\n\n" +
-                "Para el caso de las comisiones ordinarias, permanentes u homólogas, " +
-                "se sugiere respetar el orden descendente de las fracciones establecidas en el correspondiente " +
-                "artículo de la Ley o Reglamento del Congreso de la entidad federativa.";
-            string titulo = "Consecutivo de la comisión";
 
-            MessageBox.Show(mensaje,titulo,MessageBoxButtons.OK,MessageBoxIcon.Information);
-        }
 
-        private void pbo_cant_integrantes_comision_legislativa_Click(object sender, EventArgs e)
-        {
-            string mensaje = "Los valores permitidos son:\n\n" +
-                "-1: NS(No se sabe),\r\n     -2: NA(No aplica),\r\n     -3: ND(No te lo quiero dar)\r\n\n" +
-                "Utilizar está numeración para los casos que apliquen.";
 
-            string titulo = "";
 
-            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
-        private void pbo_cant_reuniones_celebradas_comision_legislativa_Click(object sender, EventArgs e)
-        {
-            string mensaje = "Los valores permitidos son:\n\n" +
-               "-1: NS(No se sabe),\r\n     -2: NA(No aplica),\r\n     -3: ND(No te lo quiero dar)\r\n\n" +
-               "Utilizar está numeración para los casos que apliquen.";
 
-            string titulo = "";
 
-            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
-        private void pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa_Click(object sender, EventArgs e)
-        {
-            string mensaje = "Los valores permitidos son:\n\n" +
-               "-1: NS(No se sabe),\r\n     -2: NA(No aplica),\r\n     -3: ND(No te lo quiero dar)\r\n\n" +
-               "Utilizar está numeración para los casos que apliquen.";
 
-            string titulo = "";
 
-            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
-        private void pbo_cant_iniciativas_turnadas_a_comision_legislativa_Click(object sender, EventArgs e)
-        {
-            string mensaje = "Los valores permitidos son:\n\n" +
-               "-1: NS(No se sabe),\r\n     -2: NA(No aplica),\r\n     -3: ND(No te lo quiero dar)\r\n\n" +
-               "Utilizar está numeración para los casos que apliquen.";
 
-            string titulo = "";
 
-            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
-        private void pbo_cant_dictamenes_emitidos_por_comision_legislativa_Click(object sender, EventArgs e)
-        {
-            string mensaje = "Los valores permitidos son:\n\n" +
-               "-1: NS(No se sabe),\r\n     -2: NA(No aplica),\r\n     -3: ND(No te lo quiero dar)\r\n\n" +
-               "Utilizar está numeración para los casos que apliquen.";
 
-            string titulo = "";
 
-            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

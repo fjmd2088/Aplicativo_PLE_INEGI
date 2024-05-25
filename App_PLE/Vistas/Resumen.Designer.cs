@@ -82,7 +82,6 @@
             this.dgvResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResumen.Size = new System.Drawing.Size(990, 539);
             this.dgvResumen.TabIndex = 30;
-            this.dgvResumen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResumen_CellContentClick);
             // 
             // btnEditarRegistro
             // 
@@ -92,7 +91,7 @@
             this.btnEditarRegistro.Name = "btnEditarRegistro";
             this.btnEditarRegistro.Size = new System.Drawing.Size(184, 35);
             this.btnEditarRegistro.TabIndex = 40;
-            this.btnEditarRegistro.Text = "Editar Registro";
+            this.btnEditarRegistro.Text = "Continuar Registro";
             this.btnEditarRegistro.UseVisualStyleBackColor = true;
             this.btnEditarRegistro.Click += new System.EventHandler(this.btnEditarRegistro_Click);
             // 
