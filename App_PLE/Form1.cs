@@ -17,6 +17,9 @@ namespace App_PLE
         public Form1()
         {
             InitializeComponent();
+
+            
+
         }
         /*
         -------------------------------------------------- CARGA INICIAL DEL FORMULARIO PRINCIPAL ----------------------------------------------------
@@ -24,6 +27,11 @@ namespace App_PLE
         private void Form1_Load(object sender, EventArgs e)
         {
             AbrirFormInPanel(new Resumen());
+
+            // ajustar el tamaño del formulario
+            this.Size = new System.Drawing.Size(1300, 720); // ancho, alto
+            // ajustar posicion del formulario
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         // arrastrar ventana

@@ -26,6 +26,11 @@ namespace App_PLE.Vistas
          
         private void FormRegistros_Load(object sender, EventArgs e)
         {
+            // ajustar el tamaño del formulario
+            this.Size = new System.Drawing.Size(1300, 720); // ancho, alto
+            // ajustar posicion del formulario
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             // ---------------------------------------------- DATOS GENERALES ---------------------------------------------------------------
             cmb_Entidad();
 
@@ -59,10 +64,13 @@ namespace App_PLE.Vistas
             DGV_REGISTROS_CL();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
-            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false;
-            txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false;
-            cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false;
-            txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false;
+            Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.LightGray;
+            txt_otro_tema_comision_legislativa_especifique.Enabled = false; txt_otro_tema_comision_legislativa_especifique.BackColor = Color.LightGray;
+            txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false; txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.LightGray;
+            txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false; txt_cant_reuniones_celebradas_comision_legislativa.BackColor = Color.LightGray;
+            cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false; cmb_cond_transmision_reuniones_celebradas_comision_legislativa.BackColor = Color.LightGray;
+            txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false; txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.BackColor = Color.LightGray;
+            
 
             // ---------------------------------------------- PERSONAS LEGISLADORAS ---------------------------------------------------------------
             cmb_Sexo_Persona_Legisladora();
@@ -902,7 +910,7 @@ namespace App_PLE.Vistas
                 // Si el valor del TextBox no es un número válido, mostrar un mensaje de error
                 //MessageBox.Show("Ingrese un número válido");
             }
-        }
+        }   
         private bool IsDuplicateRecord(string periodo_reportado_pe)
         {
             foreach (DataGridViewRow row in dgvPE.Rows)
@@ -1341,13 +1349,13 @@ namespace App_PLE.Vistas
 
                 if (tipo_cl == "Otro tipo (especifique)")
                 {
-                    Txt_otro_tipo_comision_legislativa_especifique.Enabled = true;
+                    Txt_otro_tipo_comision_legislativa_especifique.Enabled = true; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.Honeydew;
                     Txt_otro_tipo_comision_legislativa_especifique.Focus();
             }
                 else
                 {
-                    Txt_otro_tipo_comision_legislativa_especifique.Enabled = false;
-                    Txt_otro_tipo_comision_legislativa_especifique.Text = "";
+                    Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.LightGray;
+                Txt_otro_tipo_comision_legislativa_especifique.Text = "";
                 }
 
             string num_leg = "";
@@ -1401,7 +1409,9 @@ namespace App_PLE.Vistas
                     // Agregar una nueva fila al DataGridView
                     dgv_tema_comision_legislativa.Rows.Add(tema_comision_legislativa, otro_tema);
 
-                    cmb_tema_comision_legislativa.Text = ""; txt_otro_tema_comision_legislativa_especifique.Clear();
+                    cmb_tema_comision_legislativa.Text = "";
+                    txt_otro_tema_comision_legislativa_especifique.Clear(); txt_otro_tema_comision_legislativa_especifique.Enabled = false;
+                    txt_otro_tema_comision_legislativa_especifique.BackColor = Color.LightGray;
                 }
             }
 
@@ -1428,12 +1438,12 @@ namespace App_PLE.Vistas
 
             if (valorComboBox1 == "Otro tema o asunto (especifique)")
             {
-                txt_otro_tema_comision_legislativa_especifique.Enabled = true;
+                txt_otro_tema_comision_legislativa_especifique.Enabled = true; txt_otro_tema_comision_legislativa_especifique.BackColor = Color.Honeydew;
                 txt_otro_tema_comision_legislativa_especifique.Focus();
             }
             else
             {
-                txt_otro_tema_comision_legislativa_especifique.Enabled = false;
+                txt_otro_tema_comision_legislativa_especifique.Enabled = false; txt_otro_tema_comision_legislativa_especifique.BackColor = Color.LightGray;
                 txt_otro_tema_comision_legislativa_especifique.Text = "";
             }
 
@@ -1479,6 +1489,10 @@ namespace App_PLE.Vistas
         }
         private void cmb_cond_celebracion_reuniones_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txt_cant_reuniones_celebradas_comision_legislativa.Clear();
+            cmb_cond_transmision_reuniones_celebradas_comision_legislativa.SelectedIndex = -1;
+            txt_cant_reuniones_celebradas_comision_legislativa.Clear();
+
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
             string valorComboBox1 = cmb_cond_celebracion_reuniones_comision_legislativa.Text.ToString();
 
@@ -1486,24 +1500,26 @@ namespace App_PLE.Vistas
             {
                 txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = true;
                 txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.Honeydew;
             }
             else
             {
                 txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false;
                 txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text = "";
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.LightGray;
             }
 
             if (valorComboBox1 == "Si")
             {
-                txt_cant_reuniones_celebradas_comision_legislativa.Enabled = true;
-                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = true;
+                txt_cant_reuniones_celebradas_comision_legislativa.Enabled = true; txt_cant_reuniones_celebradas_comision_legislativa.BackColor = Color.Honeydew;
+                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = true; cmb_cond_transmision_reuniones_celebradas_comision_legislativa.BackColor = Color.Honeydew;
             }
             else
             {
-                txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false;
+                txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false; txt_cant_reuniones_celebradas_comision_legislativa.BackColor = Color.LightGray;
                 txt_cant_reuniones_celebradas_comision_legislativa.Text = "";
 
-                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false;
+                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false; cmb_cond_transmision_reuniones_celebradas_comision_legislativa.BackColor = Color.LightGray;
                 cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text = "";
             }
         }
@@ -1514,11 +1530,11 @@ namespace App_PLE.Vistas
 
             if (valorComboBox1 == "Si")
             {
-                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = true;
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = true; txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.BackColor = Color.Honeydew;
             }
             else
             {
-                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false;
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false; txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.BackColor = Color.LightGray;
                 txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = "";
             }
         }
@@ -1705,6 +1721,11 @@ namespace App_PLE.Vistas
 
             if (respuesta == DialogResult.Yes) 
             {
+                // Agregar una nueva fila al DataGridView
+                //bool duplicado = IsDuplicateRecord_RegistrosCL(cmb_tema_comision_legislativa.Text.ToString());
+
+
+
                 string cadena = "Data Source = DB_PLE.db;Version=3;";
 
                 using (SQLiteConnection connection = new SQLiteConnection(cadena))
@@ -1794,8 +1815,24 @@ namespace App_PLE.Vistas
 
                 // Se reinicion los botones
                 MessageBox.Show("Datos guardados correctamente");
-                dgv_registros_cl.Refresh();
 
+                txt_nombre_comision_legislativa.Clear();
+                cmb_tipo_comision_legislativa.Text = ""; Txt_otro_tipo_comision_legislativa_especifique.Clear();
+                cmb_tema_comision_legislativa.Text = ""; txt_otro_tema_comision_legislativa_especifique.Clear();
+                dgv_tema_comision_legislativa.Rows.Clear();
+                txt_cant_integrantes_comision_legislativa.Clear(); cmb_cond_celebracion_reuniones_comision_legislativa.Text = "";
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Clear();
+                txt_cant_reuniones_celebradas_comision_legislativa.Clear();
+                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.SelectedIndex = -1;
+                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Clear();
+                txt_cant_iniciativas_turnadas_a_comision_legislativa.Clear();
+                txt_cant_dictamenes_emitidos_por_comision_legislativa.Clear();
+                txt_observaciones_cl.Clear();
+                txt_consecutivo_comision_legislativa.Clear();
+                Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.LightGray;
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false; txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.LightGray;
+                DGV_REGISTROS_CL();
+                txt_ID_comision_legislativa.Text = "";
             }
             else
             {
@@ -1837,6 +1874,21 @@ namespace App_PLE.Vistas
                     conexion.Close();
                 }
             }
+        }
+        private bool IsDuplicateRecord_RegistrosCL(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_registros_cl.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["ID_comision_legislativa"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
 
@@ -4212,6 +4264,8 @@ namespace App_PLE.Vistas
         }
 
         
+
+
 
 
 
