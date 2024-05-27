@@ -1716,128 +1716,148 @@ namespace App_PLE.Vistas
         }
         private void btnGuardarDB_CL_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
+            bool cv = ValidarCampos_CL();
+
+            if (cv == true)
+            {
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (respuesta == DialogResult.Yes) 
-            {
-                // Agregar una nueva fila al DataGridView
-                //bool duplicado = IsDuplicateRecord_RegistrosCL(cmb_tema_comision_legislativa.Text.ToString());
-
-
-
-                string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-                using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                if (respuesta == DialogResult.Yes)
                 {
-                    connection.Open();
+                    // Agregar una nueva fila al DataGridView
+                    bool duplicado = IsDuplicateRecord_RegistrosCL(txt_ID_comision_legislativa.Text.ToString());
 
-                    // Recorremos las filas del DataGridView
-                    foreach (DataGridViewRow row in dgv_tema_comision_legislativa.Rows)
+                    if (duplicado == true)
                     {
-                        // Ignoramos la fila vacía al final
-                        if (!row.IsNewRow)
+                        MessageBox.Show("El ID ya se encuentra registrado. Favor de verificar la información.", "Comisiones Legislativas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+
+
+                        string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                        using (SQLiteConnection connection = new SQLiteConnection(cadena))
                         {
-                            // Insertamos los datos en la base de datos
-                            string query = "INSERT INTO TR_COMISIONES_LEGISLATIVAS (" +
-                                "id_legislatura," +
-                                "ID_comision_legislativa," +
-                                "consecutivo_comision_legislativa," +
-                                "nombre_comision_legislativa," +
-                                "tipo_comision_legislativa," +
-                                "otro_tipo_comision_legislativa_especifique," +
-                                "tema_comision_legislativa," +
-                                "otro_tema_comision_legislativa_especifique," +
-                                "cant_integrantes_comision_legislativa," +
-                                "cond_celebracion_reuniones_comision_legislativa," +
-                                "no_cond_celebracion_reuniones_comision_legislativa_especifique," +
-                                "cant_reuniones_celebradas_comision_legislativa," +
-                                "cond_transmision_reuniones_celebradas_comision_legislativa," +
-                                "cant_reuniones_celebradas_transmitidas_comision_legislativa," +
-                                "cant_iniciativas_turnadas_a_comision_legislativa," +
-                                "cant_dictamenes_emitidos_por_comision_legislativa," +
-                                "observaciones_cl," +
-                                "fecha_actualizacion" +
-                                ")" +
-                         "VALUES" +
-                                " (" +
-                                "@id_legislatura," +
-                                "@ID_comision_legislativa," +
-                                "@consecutivo_comision_legislativa," +
-                                "@nombre_comision_legislativa," +
-                                "@tipo_comision_legislativa," +
-                                "@otro_tipo_comision_legislativa_especifique," +
-                                "@tema_comision_legislativa," +
-                                "@otro_tema_comision_legislativa_especifique," +
-                                "@cant_integrantes_comision_legislativa," +
-                                "@cond_celebracion_reuniones_comision_legislativa," +
-                                "@no_cond_celebracion_reuniones_comision_legislativa_especifique," +
-                                "@cant_reuniones_celebradas_comision_legislativa," +
-                                "@cond_transmision_reuniones_celebradas_comision_legislativa," +
-                                "@cant_reuniones_celebradas_transmitidas_comision_legislativa," +
-                                "@cant_iniciativas_turnadas_a_comision_legislativa," +
-                                "@cant_dictamenes_emitidos_por_comision_legislativa," +
-                                "@observaciones_cl," +
-                                "@fecha_actualizacion" +
-                                ")";
+                            connection.Open();
 
-                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                            // Recorremos las filas del DataGridView
+                            foreach (DataGridViewRow row in dgv_tema_comision_legislativa.Rows)
                             {
-                                // Variables individuales
-                                command.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text);
-                                command.Parameters.AddWithValue("@ID_comision_legislativa",txt_ID_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@consecutivo_comision_legislativa",txt_consecutivo_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@nombre_comision_legislativa", txt_nombre_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@tipo_comision_legislativa", cmb_tipo_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@otro_tipo_comision_legislativa_especifique", Txt_otro_tipo_comision_legislativa_especifique.Text);
-                                command.Parameters.AddWithValue("@cant_integrantes_comision_legislativa", txt_cant_integrantes_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@cond_celebracion_reuniones_comision_legislativa", cmb_cond_celebracion_reuniones_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@no_cond_celebracion_reuniones_comision_legislativa_especifique", txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text);
-                                command.Parameters.AddWithValue("@cant_reuniones_celebradas_comision_legislativa", txt_cant_reuniones_celebradas_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@cond_transmision_reuniones_celebradas_comision_legislativa", cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@cant_reuniones_celebradas_transmitidas_comision_legislativa", txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@cant_iniciativas_turnadas_a_comision_legislativa", txt_cant_iniciativas_turnadas_a_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@cant_dictamenes_emitidos_por_comision_legislativa", txt_cant_dictamenes_emitidos_por_comision_legislativa.Text);
-                                command.Parameters.AddWithValue("@observaciones_cl", txt_observaciones_cl.Text);
-                                command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+                                // Ignoramos la fila vacía al final
+                                if (!row.IsNewRow)
+                                {
+                                    // Insertamos los datos en la base de datos
+                                    string query = "INSERT INTO TR_COMISIONES_LEGISLATIVAS (" +
+                                        "id_legislatura," +
+                                        "ID_comision_legislativa," +
+                                        "consecutivo_comision_legislativa," +
+                                        "nombre_comision_legislativa," +
+                                        "tipo_comision_legislativa," +
+                                        "otro_tipo_comision_legislativa_especifique," +
+                                        "tema_comision_legislativa," +
+                                        "otro_tema_comision_legislativa_especifique," +
+                                        "cant_integrantes_comision_legislativa," +
+                                        "cond_celebracion_reuniones_comision_legislativa," +
+                                        "no_cond_celebracion_reuniones_comision_legislativa_especifique," +
+                                        "cant_reuniones_celebradas_comision_legislativa," +
+                                        "cond_transmision_reuniones_celebradas_comision_legislativa," +
+                                        "cant_reuniones_celebradas_transmitidas_comision_legislativa," +
+                                        "cant_iniciativas_turnadas_a_comision_legislativa," +
+                                        "cant_dictamenes_emitidos_por_comision_legislativa," +
+                                        "observaciones_cl," +
+                                        "fecha_actualizacion" +
+                                        ")" +
+                                 "VALUES" +
+                                        " (" +
+                                        "@id_legislatura," +
+                                        "@ID_comision_legislativa," +
+                                        "@consecutivo_comision_legislativa," +
+                                        "@nombre_comision_legislativa," +
+                                        "@tipo_comision_legislativa," +
+                                        "@otro_tipo_comision_legislativa_especifique," +
+                                        "@tema_comision_legislativa," +
+                                        "@otro_tema_comision_legislativa_especifique," +
+                                        "@cant_integrantes_comision_legislativa," +
+                                        "@cond_celebracion_reuniones_comision_legislativa," +
+                                        "@no_cond_celebracion_reuniones_comision_legislativa_especifique," +
+                                        "@cant_reuniones_celebradas_comision_legislativa," +
+                                        "@cond_transmision_reuniones_celebradas_comision_legislativa," +
+                                        "@cant_reuniones_celebradas_transmitidas_comision_legislativa," +
+                                        "@cant_iniciativas_turnadas_a_comision_legislativa," +
+                                        "@cant_dictamenes_emitidos_por_comision_legislativa," +
+                                        "@observaciones_cl," +
+                                        "@fecha_actualizacion" +
+                                        ")";
 
-                                // Variables del dgv
-                                command.Parameters.AddWithValue("@tema_comision_legislativa", row.Cells["tema_comision_legislativa"].Value);
-                                command.Parameters.AddWithValue("@otro_tema_comision_legislativa_especifique", row.Cells["otro_tema_comision_legislativa_especifique"].Value);
-                                
-                                command.ExecuteNonQuery();
+                                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                                    {
+                                        // Variables individuales
+                                        command.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text);
+                                        command.Parameters.AddWithValue("@ID_comision_legislativa", txt_ID_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@consecutivo_comision_legislativa", txt_consecutivo_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@nombre_comision_legislativa", txt_nombre_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@tipo_comision_legislativa", cmb_tipo_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@otro_tipo_comision_legislativa_especifique", Txt_otro_tipo_comision_legislativa_especifique.Text);
+                                        command.Parameters.AddWithValue("@cant_integrantes_comision_legislativa", txt_cant_integrantes_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@cond_celebracion_reuniones_comision_legislativa", cmb_cond_celebracion_reuniones_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@no_cond_celebracion_reuniones_comision_legislativa_especifique", txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text);
+                                        command.Parameters.AddWithValue("@cant_reuniones_celebradas_comision_legislativa", txt_cant_reuniones_celebradas_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@cond_transmision_reuniones_celebradas_comision_legislativa", cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@cant_reuniones_celebradas_transmitidas_comision_legislativa", txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@cant_iniciativas_turnadas_a_comision_legislativa", txt_cant_iniciativas_turnadas_a_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@cant_dictamenes_emitidos_por_comision_legislativa", txt_cant_dictamenes_emitidos_por_comision_legislativa.Text);
+                                        command.Parameters.AddWithValue("@observaciones_cl", txt_observaciones_cl.Text);
+                                        command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+
+                                        // Variables del dgv
+                                        command.Parameters.AddWithValue("@tema_comision_legislativa", row.Cells["tema_comision_legislativa"].Value);
+                                        command.Parameters.AddWithValue("@otro_tema_comision_legislativa_especifique", row.Cells["otro_tema_comision_legislativa_especifique"].Value);
+
+                                        command.ExecuteNonQuery();
+                                    }
+                                }
+
                             }
+                            connection.Close();
                         }
 
+                        // Se reinicion los botones
+                        MessageBox.Show("Datos guardados correctamente");
+
+                        txt_nombre_comision_legislativa.Clear();
+                        cmb_tipo_comision_legislativa.Text = ""; Txt_otro_tipo_comision_legislativa_especifique.Clear();
+                        cmb_tema_comision_legislativa.Text = ""; txt_otro_tema_comision_legislativa_especifique.Clear();
+                        dgv_tema_comision_legislativa.Rows.Clear();
+                        txt_cant_integrantes_comision_legislativa.Clear(); cmb_cond_celebracion_reuniones_comision_legislativa.Text = "";
+                        txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Clear();
+                        txt_cant_reuniones_celebradas_comision_legislativa.Clear();
+                        cmb_cond_transmision_reuniones_celebradas_comision_legislativa.SelectedIndex = -1;
+                        txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Clear();
+                        txt_cant_iniciativas_turnadas_a_comision_legislativa.Clear();
+                        txt_cant_dictamenes_emitidos_por_comision_legislativa.Clear();
+                        txt_observaciones_cl.Clear();
+                        txt_consecutivo_comision_legislativa.Clear();
+                        Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.LightGray;
+                        txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false; txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.LightGray;
+                        DGV_REGISTROS_CL();
+                        txt_ID_comision_legislativa.Text = "";
                     }
-                    connection.Close();
+
+
+
                 }
+                else
+                {
 
-                // Se reinicion los botones
-                MessageBox.Show("Datos guardados correctamente");
-
-                txt_nombre_comision_legislativa.Clear();
-                cmb_tipo_comision_legislativa.Text = ""; Txt_otro_tipo_comision_legislativa_especifique.Clear();
-                cmb_tema_comision_legislativa.Text = ""; txt_otro_tema_comision_legislativa_especifique.Clear();
-                dgv_tema_comision_legislativa.Rows.Clear();
-                txt_cant_integrantes_comision_legislativa.Clear(); cmb_cond_celebracion_reuniones_comision_legislativa.Text = "";
-                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Clear();
-                txt_cant_reuniones_celebradas_comision_legislativa.Clear();
-                cmb_cond_transmision_reuniones_celebradas_comision_legislativa.SelectedIndex = -1;
-                txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Clear();
-                txt_cant_iniciativas_turnadas_a_comision_legislativa.Clear();
-                txt_cant_dictamenes_emitidos_por_comision_legislativa.Clear();
-                txt_observaciones_cl.Clear();
-                txt_consecutivo_comision_legislativa.Clear();
-                Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.LightGray;
-                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false; txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.LightGray;
-                DGV_REGISTROS_CL();
-                txt_ID_comision_legislativa.Text = "";
+                }
             }
             else
             {
-
+                //MessageBox.Show("El ID ya se encuentra registrado. Favor de verificar la información.", "Comisiones Legislativas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
         private void DGV_REGISTROS_CL()
         {
@@ -1889,6 +1909,37 @@ namespace App_PLE.Vistas
                 }
             }
             return false;
+        }
+        private bool ValidarCampos_CL()
+        {
+            // Array de controles a validar
+            Control[] controlesAValidar = { txt_consecutivo_comision_legislativa, txt_nombre_comision_legislativa, cmb_tipo_comision_legislativa,
+            txt_cant_integrantes_comision_legislativa,cmb_cond_celebracion_reuniones_comision_legislativa,txt_cant_iniciativas_turnadas_a_comision_legislativa,
+            txt_cant_dictamenes_emitidos_por_comision_legislativa};
+
+            foreach (Control control in controlesAValidar)
+            {
+                // Verificar si el control está vacío
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    MessageBox.Show($"Existen campos vacíos.", "Campo vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    control.Focus(); // Enfocar el control vacío
+                    return false; // Salir del método después de encontrar el primer campo vacío
+                }
+            }
+
+            int ren_dg;
+            ren_dg = dgv_tema_comision_legislativa.Rows.Count;
+
+            if(ren_dg == 0)
+            {
+                MessageBox.Show($"Existen campos vacíos.", "Campo vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmb_tema_comision_legislativa.Focus();
+                return false;
+                
+            }
+
+            return true;
         }
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
 
