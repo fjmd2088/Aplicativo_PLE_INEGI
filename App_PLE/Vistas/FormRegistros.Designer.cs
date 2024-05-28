@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDG = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -262,7 +262,7 @@
             this.cmb_empleo_anterior_persona_legisladora = new System.Windows.Forms.ComboBox();
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora = new System.Windows.Forms.ComboBox();
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_ID_persona_legisladora = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
@@ -316,17 +316,17 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.cmb_sexo_persona_legisladora = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.dtp_fecha_nacimiento_persona_legisladora = new System.Windows.Forms.DateTimePicker();
+            this.txt_apellido_3_persona_legisladora = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txt_apellido_2_persona_legisladora = new System.Windows.Forms.TextBox();
+            this.txt_apellido_1_persona_legisladora = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txt_nombre_1_persona_legisladora = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txt_nombre_2_persona_legisladora = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txt_nombre_3_persona_legisladora = new System.Windows.Forms.TextBox();
             this.tabPagePA = new System.Windows.Forms.TabPage();
             this.groupBox66 = new System.Windows.Forms.GroupBox();
             this.label282 = new System.Windows.Forms.Label();
@@ -860,7 +860,7 @@
             this.tabControl1.Controls.Add(this.tabPageCom);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(16, 71);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1680, 809);
@@ -873,9 +873,9 @@
             this.tabPageDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageDG.ForeColor = System.Drawing.Color.ForestGreen;
             this.tabPageDG.Location = new System.Drawing.Point(4, 29);
-            this.tabPageDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageDG.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDG.Name = "tabPageDG";
-            this.tabPageDG.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageDG.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageDG.Size = new System.Drawing.Size(1672, 776);
             this.tabPageDG.TabIndex = 0;
             this.tabPageDG.Text = "Datos generales";
@@ -904,9 +904,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox1.Location = new System.Drawing.Point(8, -30);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1653, 796);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
@@ -917,7 +917,7 @@
             this.BtnGuardarDG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnGuardarDG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGuardarDG.Location = new System.Drawing.Point(724, 758);
-            this.BtnGuardarDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuardarDG.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardarDG.Name = "BtnGuardarDG";
             this.BtnGuardarDG.Size = new System.Drawing.Size(111, 31);
             this.BtnGuardarDG.TabIndex = 39;
@@ -942,7 +942,7 @@
             this.txt_agee.BackColor = System.Drawing.Color.Honeydew;
             this.txt_agee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_agee.Location = new System.Drawing.Point(1543, 49);
-            this.txt_agee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_agee.Margin = new System.Windows.Forms.Padding(4);
             this.txt_agee.Name = "txt_agee";
             this.txt_agee.Size = new System.Drawing.Size(88, 24);
             this.txt_agee.TabIndex = 53;
@@ -968,9 +968,9 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox3.Location = new System.Drawing.Point(35, 456);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1576, 303);
             this.groupBox3.TabIndex = 51;
             this.groupBox3.TabStop = false;
@@ -982,7 +982,7 @@
             this.txt_periodos_extraordinarios_celebrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_periodos_extraordinarios_celebrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_periodos_extraordinarios_celebrados.Location = new System.Drawing.Point(791, 23);
-            this.txt_periodos_extraordinarios_celebrados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_periodos_extraordinarios_celebrados.Margin = new System.Windows.Forms.Padding(4);
             this.txt_periodos_extraordinarios_celebrados.Name = "txt_periodos_extraordinarios_celebrados";
             this.txt_periodos_extraordinarios_celebrados.Size = new System.Drawing.Size(96, 24);
             this.txt_periodos_extraordinarios_celebrados.TabIndex = 42;
@@ -1006,7 +1006,7 @@
             this.chbPE.AutoSize = true;
             this.chbPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbPE.Location = new System.Drawing.Point(24, 26);
-            this.chbPE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbPE.Margin = new System.Windows.Forms.Padding(4);
             this.chbPE.Name = "chbPE";
             this.chbPE.Size = new System.Drawing.Size(268, 22);
             this.chbPE.TabIndex = 40;
@@ -1017,7 +1017,7 @@
             // BtnEliminarPE
             // 
             this.BtnEliminarPE.Location = new System.Drawing.Point(1452, 245);
-            this.BtnEliminarPE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEliminarPE.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEliminarPE.Name = "BtnEliminarPE";
             this.BtnEliminarPE.Size = new System.Drawing.Size(99, 33);
             this.BtnEliminarPE.TabIndex = 39;
@@ -1031,7 +1031,7 @@
             this.Txt_sesiones_celebradas_pe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_sesiones_celebradas_pe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Txt_sesiones_celebradas_pe.Location = new System.Drawing.Point(1459, 98);
-            this.Txt_sesiones_celebradas_pe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_sesiones_celebradas_pe.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_sesiones_celebradas_pe.Name = "Txt_sesiones_celebradas_pe";
             this.Txt_sesiones_celebradas_pe.Size = new System.Drawing.Size(96, 24);
             this.Txt_sesiones_celebradas_pe.TabIndex = 37;
@@ -1056,7 +1056,7 @@
             this.cmb_periodo_extraordinario_reportado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cmb_periodo_extraordinario_reportado.FormattingEnabled = true;
             this.cmb_periodo_extraordinario_reportado.Location = new System.Drawing.Point(227, 91);
-            this.cmb_periodo_extraordinario_reportado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_periodo_extraordinario_reportado.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_periodo_extraordinario_reportado.Name = "cmb_periodo_extraordinario_reportado";
             this.cmb_periodo_extraordinario_reportado.Size = new System.Drawing.Size(328, 26);
             this.cmb_periodo_extraordinario_reportado.TabIndex = 35;
@@ -1079,7 +1079,7 @@
             this.dtp_fecha_termino_pe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_termino_pe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_termino_pe.Location = new System.Drawing.Point(1009, 106);
-            this.dtp_fecha_termino_pe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_termino_pe.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_termino_pe.Name = "dtp_fecha_termino_pe";
             this.dtp_fecha_termino_pe.Size = new System.Drawing.Size(115, 23);
             this.dtp_fecha_termino_pe.TabIndex = 33;
@@ -1104,7 +1104,7 @@
             this.dtp_fecha_inicio_pe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_inicio_pe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_inicio_pe.Location = new System.Drawing.Point(1009, 62);
-            this.dtp_fecha_inicio_pe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_inicio_pe.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_inicio_pe.Name = "dtp_fecha_inicio_pe";
             this.dtp_fecha_inicio_pe.Size = new System.Drawing.Size(115, 23);
             this.dtp_fecha_inicio_pe.TabIndex = 31;
@@ -1136,16 +1136,16 @@
             this.fecha_inicio_pe,
             this.fecha_termino_pe,
             this.sesiones_celebradas_pe});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle49;
             this.dgvPE.Location = new System.Drawing.Point(19, 138);
-            this.dgvPE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPE.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPE.Name = "dgvPE";
             this.dgvPE.ReadOnly = true;
             this.dgvPE.RowHeadersVisible = false;
@@ -1185,7 +1185,7 @@
             // btnAgregarPE
             // 
             this.btnAgregarPE.Location = new System.Drawing.Point(1452, 182);
-            this.btnAgregarPE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarPE.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarPE.Name = "btnAgregarPE";
             this.btnAgregarPE.Size = new System.Drawing.Size(99, 33);
             this.btnAgregarPE.TabIndex = 7;
@@ -1204,9 +1204,9 @@
             this.groupBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox69.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox69.Location = new System.Drawing.Point(35, 160);
-            this.groupBox69.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox69.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox69.Name = "groupBox69";
-            this.groupBox69.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox69.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox69.Size = new System.Drawing.Size(1576, 82);
             this.groupBox69.TabIndex = 48;
             this.groupBox69.TabStop = false;
@@ -1242,7 +1242,7 @@
             this.cmb_ejercicio_constitucional_informacion_reportada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_ejercicio_constitucional_informacion_reportada.FormattingEnabled = true;
             this.cmb_ejercicio_constitucional_informacion_reportada.Location = new System.Drawing.Point(319, 37);
-            this.cmb_ejercicio_constitucional_informacion_reportada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_ejercicio_constitucional_informacion_reportada.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_ejercicio_constitucional_informacion_reportada.Name = "cmb_ejercicio_constitucional_informacion_reportada";
             this.cmb_ejercicio_constitucional_informacion_reportada.Size = new System.Drawing.Size(149, 26);
             this.cmb_ejercicio_constitucional_informacion_reportada.TabIndex = 23;
@@ -1253,7 +1253,7 @@
             this.dtp_fecha_inicio_informacion_reportada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_inicio_informacion_reportada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_inicio_informacion_reportada.Location = new System.Drawing.Point(896, 41);
-            this.dtp_fecha_inicio_informacion_reportada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_inicio_informacion_reportada.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_inicio_informacion_reportada.Name = "dtp_fecha_inicio_informacion_reportada";
             this.dtp_fecha_inicio_informacion_reportada.Size = new System.Drawing.Size(119, 24);
             this.dtp_fecha_inicio_informacion_reportada.TabIndex = 3;
@@ -1277,7 +1277,7 @@
             this.dtp_fecha_termino_informacion_reportada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_termino_informacion_reportada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_termino_informacion_reportada.Location = new System.Drawing.Point(1452, 44);
-            this.dtp_fecha_termino_informacion_reportada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_termino_informacion_reportada.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_termino_informacion_reportada.Name = "dtp_fecha_termino_informacion_reportada";
             this.dtp_fecha_termino_informacion_reportada.Size = new System.Drawing.Size(112, 24);
             this.dtp_fecha_termino_informacion_reportada.TabIndex = 5;
@@ -1293,9 +1293,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox2.Location = new System.Drawing.Point(35, 358);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1576, 90);
             this.groupBox2.TabIndex = 47;
             this.groupBox2.TabStop = false;
@@ -1318,7 +1318,7 @@
             this.Txt_distritos_uninominales.BackColor = System.Drawing.Color.Honeydew;
             this.Txt_distritos_uninominales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_distritos_uninominales.Location = new System.Drawing.Point(483, 33);
-            this.Txt_distritos_uninominales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_distritos_uninominales.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_distritos_uninominales.Name = "Txt_distritos_uninominales";
             this.Txt_distritos_uninominales.Size = new System.Drawing.Size(88, 24);
             this.Txt_distritos_uninominales.TabIndex = 14;
@@ -1341,7 +1341,7 @@
             this.Txt_diputaciones_plurinominales.BackColor = System.Drawing.Color.Honeydew;
             this.Txt_diputaciones_plurinominales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_diputaciones_plurinominales.Location = new System.Drawing.Point(1237, 34);
-            this.Txt_diputaciones_plurinominales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_diputaciones_plurinominales.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_diputaciones_plurinominales.Name = "Txt_diputaciones_plurinominales";
             this.Txt_diputaciones_plurinominales.Size = new System.Drawing.Size(91, 24);
             this.Txt_diputaciones_plurinominales.TabIndex = 16;
@@ -1360,9 +1360,9 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox5.Location = new System.Drawing.Point(35, 250);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(1576, 101);
             this.groupBox5.TabIndex = 36;
             this.groupBox5.TabStop = false;
@@ -1386,7 +1386,7 @@
             this.Txt_sesiones_celebradas_po.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_sesiones_celebradas_po.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Txt_sesiones_celebradas_po.Location = new System.Drawing.Point(1312, 66);
-            this.Txt_sesiones_celebradas_po.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_sesiones_celebradas_po.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_sesiones_celebradas_po.Name = "Txt_sesiones_celebradas_po";
             this.Txt_sesiones_celebradas_po.Size = new System.Drawing.Size(96, 24);
             this.Txt_sesiones_celebradas_po.TabIndex = 37;
@@ -1399,7 +1399,7 @@
             this.cmb_periodo_reportado_po.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cmb_periodo_reportado_po.FormattingEnabled = true;
             this.cmb_periodo_reportado_po.Location = new System.Drawing.Point(200, 41);
-            this.cmb_periodo_reportado_po.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_periodo_reportado_po.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_periodo_reportado_po.Name = "cmb_periodo_reportado_po";
             this.cmb_periodo_reportado_po.Size = new System.Drawing.Size(225, 26);
             this.cmb_periodo_reportado_po.TabIndex = 35;
@@ -1436,7 +1436,7 @@
             this.dtp_fecha_termino_po.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_termino_po.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_termino_po.Location = new System.Drawing.Point(909, 68);
-            this.dtp_fecha_termino_po.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_termino_po.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_termino_po.Name = "dtp_fecha_termino_po";
             this.dtp_fecha_termino_po.Size = new System.Drawing.Size(115, 23);
             this.dtp_fecha_termino_po.TabIndex = 33;
@@ -1448,7 +1448,7 @@
             this.dtp_fecha_inicio_po.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_inicio_po.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_inicio_po.Location = new System.Drawing.Point(909, 22);
-            this.dtp_fecha_inicio_po.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_inicio_po.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_inicio_po.Name = "dtp_fecha_inicio_po";
             this.dtp_fecha_inicio_po.Size = new System.Drawing.Size(115, 23);
             this.dtp_fecha_inicio_po.TabIndex = 31;
@@ -1473,7 +1473,7 @@
             this.cmb_entidad_federativa.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_entidad_federativa.FormattingEnabled = true;
             this.cmb_entidad_federativa.Location = new System.Drawing.Point(213, 43);
-            this.cmb_entidad_federativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_entidad_federativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_entidad_federativa.Name = "cmb_entidad_federativa";
             this.cmb_entidad_federativa.Size = new System.Drawing.Size(393, 28);
             this.cmb_entidad_federativa.TabIndex = 46;
@@ -1485,7 +1485,7 @@
             this.cmb_numero_legislatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_numero_legislatura.FormattingEnabled = true;
             this.cmb_numero_legislatura.Location = new System.Drawing.Point(240, 86);
-            this.cmb_numero_legislatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_numero_legislatura.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_numero_legislatura.Name = "cmb_numero_legislatura";
             this.cmb_numero_legislatura.Size = new System.Drawing.Size(123, 26);
             this.cmb_numero_legislatura.TabIndex = 20;
@@ -1520,7 +1520,7 @@
             this.txt_nombre_legislatura.BackColor = System.Drawing.Color.Honeydew;
             this.txt_nombre_legislatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre_legislatura.Location = new System.Drawing.Point(316, 134);
-            this.txt_nombre_legislatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre_legislatura.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre_legislatura.Name = "txt_nombre_legislatura";
             this.txt_nombre_legislatura.Size = new System.Drawing.Size(1315, 24);
             this.txt_nombre_legislatura.TabIndex = 7;
@@ -1531,7 +1531,7 @@
             this.dtp_termino_funciones_legislatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_termino_funciones_legislatura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_termino_funciones_legislatura.Location = new System.Drawing.Point(1476, 95);
-            this.dtp_termino_funciones_legislatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_termino_funciones_legislatura.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_termino_funciones_legislatura.Name = "dtp_termino_funciones_legislatura";
             this.dtp_termino_funciones_legislatura.Size = new System.Drawing.Size(119, 23);
             this.dtp_termino_funciones_legislatura.TabIndex = 12;
@@ -1554,7 +1554,7 @@
             this.dtp_inicio_funciones_legislatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_inicio_funciones_legislatura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_inicio_funciones_legislatura.Location = new System.Drawing.Point(849, 90);
-            this.dtp_inicio_funciones_legislatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_inicio_funciones_legislatura.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_inicio_funciones_legislatura.Name = "dtp_inicio_funciones_legislatura";
             this.dtp_inicio_funciones_legislatura.Size = new System.Drawing.Size(115, 23);
             this.dtp_inicio_funciones_legislatura.TabIndex = 10;
@@ -1601,9 +1601,9 @@
             this.tabPageCL.Controls.Add(this.txt_ID_comision_legislativa);
             this.tabPageCL.Controls.Add(this.label33);
             this.tabPageCL.Location = new System.Drawing.Point(4, 29);
-            this.tabPageCL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageCL.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCL.Name = "tabPageCL";
-            this.tabPageCL.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageCL.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageCL.Size = new System.Drawing.Size(1672, 776);
             this.tabPageCL.TabIndex = 1;
             this.tabPageCL.Text = "Comisiones legislativas";
@@ -1615,7 +1615,7 @@
             this.btnGuardarDB_CL.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnGuardarDB_CL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarDB_CL.Location = new System.Drawing.Point(677, 741);
-            this.btnGuardarDB_CL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarDB_CL.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarDB_CL.Name = "btnGuardarDB_CL";
             this.btnGuardarDB_CL.Size = new System.Drawing.Size(197, 33);
             this.btnGuardarDB_CL.TabIndex = 47;
@@ -1628,7 +1628,7 @@
             this.txt_observaciones_cl.BackColor = System.Drawing.Color.Honeydew;
             this.txt_observaciones_cl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_observaciones_cl.Location = new System.Drawing.Point(171, 706);
-            this.txt_observaciones_cl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_observaciones_cl.Margin = new System.Windows.Forms.Padding(4);
             this.txt_observaciones_cl.Name = "txt_observaciones_cl";
             this.txt_observaciones_cl.Size = new System.Drawing.Size(1467, 24);
             this.txt_observaciones_cl.TabIndex = 46;
@@ -1650,8 +1650,8 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(1044, 5902);
-            this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarCL.Location = new System.Drawing.Point(1033, 6004);
+            this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
             this.btnGuardarCL.TabIndex = 44;
@@ -1668,9 +1668,9 @@
             this.groupBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox68.ForeColor = System.Drawing.Color.Green;
             this.groupBox68.Location = new System.Drawing.Point(24, 782);
-            this.groupBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox68.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox68.Name = "groupBox68";
-            this.groupBox68.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox68.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox68.Size = new System.Drawing.Size(1615, 199);
             this.groupBox68.TabIndex = 43;
             this.groupBox68.TabStop = false;
@@ -1681,7 +1681,7 @@
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button26.Location = new System.Drawing.Point(1475, 112);
-            this.button26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button26.Margin = new System.Windows.Forms.Padding(4);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(129, 33);
             this.button26.TabIndex = 44;
@@ -1693,7 +1693,7 @@
             this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button27.Location = new System.Drawing.Point(1475, 55);
-            this.button27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button27.Margin = new System.Windows.Forms.Padding(4);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(129, 33);
             this.button27.TabIndex = 43;
@@ -1705,7 +1705,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(979, 281);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 33);
             this.button2.TabIndex = 40;
@@ -1717,7 +1717,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(495, 281);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 33);
             this.button3.TabIndex = 39;
@@ -1733,16 +1733,16 @@
             this.dgv_registros_cl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_cl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_cl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle50;
             this.dgv_registros_cl.Location = new System.Drawing.Point(16, 26);
-            this.dgv_registros_cl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_registros_cl.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_registros_cl.MultiSelect = false;
             this.dgv_registros_cl.Name = "dgv_registros_cl";
             this.dgv_registros_cl.ReadOnly = true;
@@ -1757,8 +1757,8 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(924, 8440);
-            this.button24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button24.Location = new System.Drawing.Point(913, 8542);
+            this.button24.Margin = new System.Windows.Forms.Padding(4);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
             this.button24.TabIndex = 42;
@@ -1800,9 +1800,9 @@
             this.groupBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox67.ForeColor = System.Drawing.Color.Green;
             this.groupBox67.Location = new System.Drawing.Point(24, 450);
-            this.groupBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox67.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox67.Name = "groupBox67";
-            this.groupBox67.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox67.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox67.Size = new System.Drawing.Size(1615, 235);
             this.groupBox67.TabIndex = 41;
             this.groupBox67.TabStop = false;
@@ -1814,7 +1814,7 @@
             this.cmb_cond_celebracion_reuniones_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_celebracion_reuniones_comision_legislativa.FormattingEnabled = true;
             this.cmb_cond_celebracion_reuniones_comision_legislativa.Location = new System.Drawing.Point(369, 36);
-            this.cmb_cond_celebracion_reuniones_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_celebracion_reuniones_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_celebracion_reuniones_comision_legislativa.Name = "cmb_cond_celebracion_reuniones_comision_legislativa";
             this.cmb_cond_celebracion_reuniones_comision_legislativa.Size = new System.Drawing.Size(131, 26);
             this.cmb_cond_celebracion_reuniones_comision_legislativa.TabIndex = 41;
@@ -1824,7 +1824,7 @@
             // 
             this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.Image = ((System.Drawing.Image)(resources.GetObject("pbo_cant_dictamenes_emitidos_por_comision_legislativa.Image")));
             this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.Location = new System.Drawing.Point(1463, 185);
-            this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.Name = "pbo_cant_dictamenes_emitidos_por_comision_legislativa";
             this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.Size = new System.Drawing.Size(21, 26);
             this.pbo_cant_dictamenes_emitidos_por_comision_legislativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1837,7 +1837,7 @@
             // 
             this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.Image = ((System.Drawing.Image)(resources.GetObject("pbo_cant_iniciativas_turnadas_a_comision_legislativa.Image")));
             this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.Location = new System.Drawing.Point(684, 183);
-            this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.Name = "pbo_cant_iniciativas_turnadas_a_comision_legislativa";
             this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.Size = new System.Drawing.Size(21, 26);
             this.pbo_cant_iniciativas_turnadas_a_comision_legislativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1850,7 +1850,7 @@
             // 
             this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Image = ((System.Drawing.Image)(resources.GetObject("pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Image")));
             this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Location = new System.Drawing.Point(1385, 117);
-            this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Name = "pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa";
             this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.Size = new System.Drawing.Size(21, 26);
             this.pbo_cant_reuniones_celebradas_transmitidas_comision_legislativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1863,7 +1863,7 @@
             // 
             this.pbo_cant_reuniones_celebradas_comision_legislativa.Image = ((System.Drawing.Image)(resources.GetObject("pbo_cant_reuniones_celebradas_comision_legislativa.Image")));
             this.pbo_cant_reuniones_celebradas_comision_legislativa.Location = new System.Drawing.Point(388, 107);
-            this.pbo_cant_reuniones_celebradas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbo_cant_reuniones_celebradas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.pbo_cant_reuniones_celebradas_comision_legislativa.Name = "pbo_cant_reuniones_celebradas_comision_legislativa";
             this.pbo_cant_reuniones_celebradas_comision_legislativa.Size = new System.Drawing.Size(21, 26);
             this.pbo_cant_reuniones_celebradas_comision_legislativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1877,7 +1877,7 @@
             this.txt_cant_dictamenes_emitidos_por_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_cant_dictamenes_emitidos_por_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cant_dictamenes_emitidos_por_comision_legislativa.Location = new System.Drawing.Point(1365, 185);
-            this.txt_cant_dictamenes_emitidos_por_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cant_dictamenes_emitidos_por_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cant_dictamenes_emitidos_por_comision_legislativa.Name = "txt_cant_dictamenes_emitidos_por_comision_legislativa";
             this.txt_cant_dictamenes_emitidos_por_comision_legislativa.Size = new System.Drawing.Size(88, 24);
             this.txt_cant_dictamenes_emitidos_por_comision_legislativa.TabIndex = 20;
@@ -1889,7 +1889,7 @@
             this.txt_cant_reuniones_celebradas_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_cant_reuniones_celebradas_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cant_reuniones_celebradas_comision_legislativa.Location = new System.Drawing.Point(291, 107);
-            this.txt_cant_reuniones_celebradas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cant_reuniones_celebradas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cant_reuniones_celebradas_comision_legislativa.Name = "txt_cant_reuniones_celebradas_comision_legislativa";
             this.txt_cant_reuniones_celebradas_comision_legislativa.Size = new System.Drawing.Size(88, 24);
             this.txt_cant_reuniones_celebradas_comision_legislativa.TabIndex = 33;
@@ -1913,7 +1913,7 @@
             this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Location = new System.Drawing.Point(1288, 117);
-            this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Name = "txt_cant_reuniones_celebradas_transmitidas_comision_legislativa";
             this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Size = new System.Drawing.Size(88, 24);
             this.txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.TabIndex = 28;
@@ -1925,7 +1925,7 @@
             this.txt_cant_iniciativas_turnadas_a_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_cant_iniciativas_turnadas_a_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cant_iniciativas_turnadas_a_comision_legislativa.Location = new System.Drawing.Point(587, 181);
-            this.txt_cant_iniciativas_turnadas_a_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cant_iniciativas_turnadas_a_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cant_iniciativas_turnadas_a_comision_legislativa.Name = "txt_cant_iniciativas_turnadas_a_comision_legislativa";
             this.txt_cant_iniciativas_turnadas_a_comision_legislativa.Size = new System.Drawing.Size(88, 24);
             this.txt_cant_iniciativas_turnadas_a_comision_legislativa.TabIndex = 18;
@@ -1949,7 +1949,7 @@
             this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = System.Drawing.Color.Honeydew;
             this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Location = new System.Drawing.Point(889, 36);
-            this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Margin = new System.Windows.Forms.Padding(4);
             this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Name = "txt_no_cond_celebracion_reuniones_comision_legislativa_especifique";
             this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Size = new System.Drawing.Size(713, 24);
             this.txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.TabIndex = 31;
@@ -2000,7 +2000,7 @@
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.FormattingEnabled = true;
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Location = new System.Drawing.Point(737, 114);
-            this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Name = "cmb_cond_transmision_reuniones_celebradas_comision_legislativa";
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Size = new System.Drawing.Size(244, 26);
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.TabIndex = 26;
@@ -2059,9 +2059,9 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.Green;
             this.groupBox7.Location = new System.Drawing.Point(24, 44);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(1615, 399);
             this.groupBox7.TabIndex = 29;
             this.groupBox7.TabStop = false;
@@ -2071,7 +2071,7 @@
             // 
             this.pbo_cant_integrantes_comision_legislativa.Image = ((System.Drawing.Image)(resources.GetObject("pbo_cant_integrantes_comision_legislativa.Image")));
             this.pbo_cant_integrantes_comision_legislativa.Location = new System.Drawing.Point(781, 362);
-            this.pbo_cant_integrantes_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbo_cant_integrantes_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.pbo_cant_integrantes_comision_legislativa.Name = "pbo_cant_integrantes_comision_legislativa";
             this.pbo_cant_integrantes_comision_legislativa.Size = new System.Drawing.Size(21, 26);
             this.pbo_cant_integrantes_comision_legislativa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2085,7 +2085,7 @@
             this.txt_cant_integrantes_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_cant_integrantes_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cant_integrantes_comision_legislativa.Location = new System.Drawing.Point(668, 362);
-            this.txt_cant_integrantes_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cant_integrantes_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cant_integrantes_comision_legislativa.Name = "txt_cant_integrantes_comision_legislativa";
             this.txt_cant_integrantes_comision_legislativa.Size = new System.Drawing.Size(104, 24);
             this.txt_cant_integrantes_comision_legislativa.TabIndex = 37;
@@ -2115,9 +2115,9 @@
             this.groupBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox70.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox70.Location = new System.Drawing.Point(20, 127);
-            this.groupBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox70.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox70.Name = "groupBox70";
-            this.groupBox70.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox70.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox70.Size = new System.Drawing.Size(1584, 223);
             this.groupBox70.TabIndex = 28;
             this.groupBox70.TabStop = false;
@@ -2128,7 +2128,7 @@
             this.btnEliminarCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarCL.Location = new System.Drawing.Point(1415, 153);
-            this.btnEliminarCL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCL.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCL.Name = "btnEliminarCL";
             this.btnEliminarCL.Size = new System.Drawing.Size(129, 33);
             this.btnEliminarCL.TabIndex = 42;
@@ -2141,7 +2141,7 @@
             this.txt_otro_tema_comision_legislativa_especifique.BackColor = System.Drawing.Color.Honeydew;
             this.txt_otro_tema_comision_legislativa_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_otro_tema_comision_legislativa_especifique.Location = new System.Drawing.Point(1020, 38);
-            this.txt_otro_tema_comision_legislativa_especifique.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_otro_tema_comision_legislativa_especifique.Margin = new System.Windows.Forms.Padding(4);
             this.txt_otro_tema_comision_legislativa_especifique.Name = "txt_otro_tema_comision_legislativa_especifique";
             this.txt_otro_tema_comision_legislativa_especifique.Size = new System.Drawing.Size(551, 24);
             this.txt_otro_tema_comision_legislativa_especifique.TabIndex = 47;
@@ -2153,7 +2153,7 @@
             this.btnAgregarCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarCL.Location = new System.Drawing.Point(1415, 96);
-            this.btnAgregarCL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarCL.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCL.Name = "btnAgregarCL";
             this.btnAgregarCL.Size = new System.Drawing.Size(129, 33);
             this.btnAgregarCL.TabIndex = 41;
@@ -2185,16 +2185,16 @@
             this.dgv_tema_comision_legislativa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tema_comision_legislativa,
             this.otro_tema_comision_legislativa_especifique});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle51;
             this.dgv_tema_comision_legislativa.Location = new System.Drawing.Point(16, 78);
-            this.dgv_tema_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_tema_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_tema_comision_legislativa.Name = "dgv_tema_comision_legislativa";
             this.dgv_tema_comision_legislativa.ReadOnly = true;
             this.dgv_tema_comision_legislativa.RowHeadersVisible = false;
@@ -2236,7 +2236,7 @@
             this.cmb_tema_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tema_comision_legislativa.FormattingEnabled = true;
             this.cmb_tema_comision_legislativa.Location = new System.Drawing.Point(217, 38);
-            this.cmb_tema_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tema_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tema_comision_legislativa.Name = "cmb_tema_comision_legislativa";
             this.cmb_tema_comision_legislativa.Size = new System.Drawing.Size(552, 26);
             this.cmb_tema_comision_legislativa.TabIndex = 44;
@@ -2248,7 +2248,7 @@
             this.cmb_tipo_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_comision_legislativa.FormattingEnabled = true;
             this.cmb_tipo_comision_legislativa.Location = new System.Drawing.Point(285, 80);
-            this.cmb_tipo_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_comision_legislativa.Name = "cmb_tipo_comision_legislativa";
             this.cmb_tipo_comision_legislativa.Size = new System.Drawing.Size(336, 26);
             this.cmb_tipo_comision_legislativa.TabIndex = 18;
@@ -2259,7 +2259,7 @@
             this.Txt_otro_tipo_comision_legislativa_especifique.BackColor = System.Drawing.Color.Honeydew;
             this.Txt_otro_tipo_comision_legislativa_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_otro_tipo_comision_legislativa_especifique.Location = new System.Drawing.Point(901, 82);
-            this.Txt_otro_tipo_comision_legislativa_especifique.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_otro_tipo_comision_legislativa_especifique.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_otro_tipo_comision_legislativa_especifique.Name = "Txt_otro_tipo_comision_legislativa_especifique";
             this.Txt_otro_tipo_comision_legislativa_especifique.Size = new System.Drawing.Size(704, 24);
             this.Txt_otro_tipo_comision_legislativa_especifique.TabIndex = 20;
@@ -2295,7 +2295,7 @@
             this.txt_nombre_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_nombre_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre_comision_legislativa.Location = new System.Drawing.Point(767, 41);
-            this.txt_nombre_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre_comision_legislativa.Name = "txt_nombre_comision_legislativa";
             this.txt_nombre_comision_legislativa.Size = new System.Drawing.Size(839, 24);
             this.txt_nombre_comision_legislativa.TabIndex = 26;
@@ -2319,7 +2319,7 @@
             this.txt_consecutivo_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_consecutivo_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_consecutivo_comision_legislativa.Location = new System.Drawing.Point(291, 41);
-            this.txt_consecutivo_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_consecutivo_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_consecutivo_comision_legislativa.Name = "txt_consecutivo_comision_legislativa";
             this.txt_consecutivo_comision_legislativa.Size = new System.Drawing.Size(85, 24);
             this.txt_consecutivo_comision_legislativa.TabIndex = 23;
@@ -2343,7 +2343,7 @@
             this.txt_ID_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_ID_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ID_comision_legislativa.Location = new System.Drawing.Point(1425, 10);
-            this.txt_ID_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ID_comision_legislativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID_comision_legislativa.Name = "txt_ID_comision_legislativa";
             this.txt_ID_comision_legislativa.Size = new System.Drawing.Size(212, 26);
             this.txt_ID_comision_legislativa.TabIndex = 28;
@@ -2374,7 +2374,7 @@
             this.tabPagePL.Controls.Add(this.label59);
             this.tabPagePL.Controls.Add(this.groupBox14);
             this.tabPagePL.Controls.Add(this.groupBox15);
-            this.tabPagePL.Controls.Add(this.textBox11);
+            this.tabPagePL.Controls.Add(this.txt_ID_persona_legisladora);
             this.tabPagePL.Controls.Add(this.groupBox8);
             this.tabPagePL.Controls.Add(this.groupBox9);
             this.tabPagePL.Controls.Add(this.groupBox10);
@@ -2382,10 +2382,10 @@
             this.tabPagePL.Controls.Add(this.groupBox12);
             this.tabPagePL.Controls.Add(this.groupBox13);
             this.tabPagePL.Location = new System.Drawing.Point(4, 29);
-            this.tabPagePL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPagePL.Margin = new System.Windows.Forms.Padding(4);
             this.tabPagePL.Name = "tabPagePL";
-            this.tabPagePL.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPagePL.Size = new System.Drawing.Size(1672, 769);
+            this.tabPagePL.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPagePL.Size = new System.Drawing.Size(1672, 776);
             this.tabPagePL.TabIndex = 2;
             this.tabPagePL.Text = "Personas legisladoras";
             this.tabPagePL.UseVisualStyleBackColor = true;
@@ -2399,9 +2399,9 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox4.Location = new System.Drawing.Point(9, 793);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(363, 123);
             this.groupBox4.TabIndex = 60;
             this.groupBox4.TabStop = false;
@@ -2427,7 +2427,7 @@
             this.cmb_cond_pueblo_ind_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_pueblo_ind_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_cond_pueblo_ind_persona_legisladora_PL.Location = new System.Drawing.Point(159, 34);
-            this.cmb_cond_pueblo_ind_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_pueblo_ind_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_pueblo_ind_persona_legisladora_PL.Name = "cmb_cond_pueblo_ind_persona_legisladora_PL";
             this.cmb_cond_pueblo_ind_persona_legisladora_PL.Size = new System.Drawing.Size(179, 26);
             this.cmb_cond_pueblo_ind_persona_legisladora_PL.TabIndex = 50;
@@ -2452,7 +2452,7 @@
             this.cmb_pueblo_ind_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_pueblo_ind_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_pueblo_ind_persona_legisladora_PL.Location = new System.Drawing.Point(117, 74);
-            this.cmb_pueblo_ind_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_pueblo_ind_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_pueblo_ind_persona_legisladora_PL.Name = "cmb_pueblo_ind_persona_legisladora_PL";
             this.cmb_pueblo_ind_persona_legisladora_PL.Size = new System.Drawing.Size(219, 26);
             this.cmb_pueblo_ind_persona_legisladora_PL.TabIndex = 49;
@@ -2466,9 +2466,9 @@
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox18.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox18.Location = new System.Drawing.Point(4, 2514);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox18.Size = new System.Drawing.Size(1317, 362);
             this.groupBox18.TabIndex = 75;
             this.groupBox18.TabStop = false;
@@ -2485,7 +2485,7 @@
             this.listView3.FullRowSelect = true;
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(12, 81);
-            this.listView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView3.Margin = new System.Windows.Forms.Padding(4);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(1287, 258);
             this.listView3.TabIndex = 29;
@@ -2495,7 +2495,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(1263, 41);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(37, 33);
             this.button7.TabIndex = 7;
@@ -2525,9 +2525,9 @@
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox19.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox19.Location = new System.Drawing.Point(4, 2399);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox19.Size = new System.Drawing.Size(1317, 108);
             this.groupBox19.TabIndex = 79;
             this.groupBox19.TabStop = false;
@@ -2539,7 +2539,7 @@
             this.textBox30.BackColor = System.Drawing.Color.Honeydew;
             this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox30.Location = new System.Drawing.Point(1051, 49);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(4);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(244, 24);
             this.textBox30.TabIndex = 68;
@@ -2564,7 +2564,7 @@
             this.cmb_cargo_mesa_directiva_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cargo_mesa_directiva_PL.FormattingEnabled = true;
             this.cmb_cargo_mesa_directiva_PL.Location = new System.Drawing.Point(679, 49);
-            this.cmb_cargo_mesa_directiva_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cargo_mesa_directiva_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cargo_mesa_directiva_PL.Name = "cmb_cargo_mesa_directiva_PL";
             this.cmb_cargo_mesa_directiva_PL.Size = new System.Drawing.Size(291, 26);
             this.cmb_cargo_mesa_directiva_PL.TabIndex = 66;
@@ -2576,7 +2576,7 @@
             this.cmb_cond_integrante_mesa_directiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_integrante_mesa_directiva.FormattingEnabled = true;
             this.cmb_cond_integrante_mesa_directiva.Location = new System.Drawing.Point(251, 49);
-            this.cmb_cond_integrante_mesa_directiva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_integrante_mesa_directiva.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_integrante_mesa_directiva.Name = "cmb_cond_integrante_mesa_directiva";
             this.cmb_cond_integrante_mesa_directiva.Size = new System.Drawing.Size(183, 26);
             this.cmb_cond_integrante_mesa_directiva.TabIndex = 47;
@@ -2619,9 +2619,9 @@
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox20.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox20.Location = new System.Drawing.Point(4, 2283);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox20.Size = new System.Drawing.Size(1317, 108);
             this.groupBox20.TabIndex = 78;
             this.groupBox20.TabStop = false;
@@ -2633,7 +2633,7 @@
             this.textBox31.BackColor = System.Drawing.Color.Honeydew;
             this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox31.Location = new System.Drawing.Point(1051, 49);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(4);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(244, 24);
             this.textBox31.TabIndex = 68;
@@ -2658,7 +2658,7 @@
             this.cmb_cargo_jucopo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cargo_jucopo.FormattingEnabled = true;
             this.cmb_cargo_jucopo.Location = new System.Drawing.Point(567, 49);
-            this.cmb_cargo_jucopo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cargo_jucopo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cargo_jucopo.Name = "cmb_cargo_jucopo";
             this.cmb_cargo_jucopo.Size = new System.Drawing.Size(291, 26);
             this.cmb_cargo_jucopo.TabIndex = 66;
@@ -2670,7 +2670,7 @@
             this.cmb_cond_integrante_jucopo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_integrante_jucopo.FormattingEnabled = true;
             this.cmb_cond_integrante_jucopo.Location = new System.Drawing.Point(188, 49);
-            this.cmb_cond_integrante_jucopo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_integrante_jucopo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_integrante_jucopo.Name = "cmb_cond_integrante_jucopo";
             this.cmb_cond_integrante_jucopo.Size = new System.Drawing.Size(183, 26);
             this.cmb_cond_integrante_jucopo.TabIndex = 47;
@@ -2717,9 +2717,9 @@
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox21.Location = new System.Drawing.Point(4, 2071);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox21.Size = new System.Drawing.Size(1317, 204);
             this.groupBox21.TabIndex = 77;
             this.groupBox21.TabStop = false;
@@ -2731,7 +2731,7 @@
             this.textBox32.BackColor = System.Drawing.Color.Honeydew;
             this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox32.Location = new System.Drawing.Point(949, 113);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox32.Margin = new System.Windows.Forms.Padding(4);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(347, 24);
             this.textBox32.TabIndex = 72;
@@ -2755,7 +2755,7 @@
             this.textBox33.BackColor = System.Drawing.Color.Honeydew;
             this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox33.Location = new System.Drawing.Point(305, 113);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox33.Margin = new System.Windows.Forms.Padding(4);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(305, 24);
             this.textBox33.TabIndex = 70;
@@ -2779,7 +2779,7 @@
             this.textBox34.BackColor = System.Drawing.Color.Honeydew;
             this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox34.Location = new System.Drawing.Point(1051, 49);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox34.Margin = new System.Windows.Forms.Padding(4);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(244, 24);
             this.textBox34.TabIndex = 68;
@@ -2804,7 +2804,7 @@
             this.cmb_cargo_comision_permanente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cargo_comision_permanente.FormattingEnabled = true;
             this.cmb_cargo_comision_permanente.Location = new System.Drawing.Point(725, 49);
-            this.cmb_cargo_comision_permanente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cargo_comision_permanente.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cargo_comision_permanente.Name = "cmb_cargo_comision_permanente";
             this.cmb_cargo_comision_permanente.Size = new System.Drawing.Size(257, 26);
             this.cmb_cargo_comision_permanente.TabIndex = 66;
@@ -2816,7 +2816,7 @@
             this.cmb_cond_integrante_comision_permanente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_integrante_comision_permanente.FormattingEnabled = true;
             this.cmb_cond_integrante_comision_permanente.Location = new System.Drawing.Point(297, 49);
-            this.cmb_cond_integrante_comision_permanente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_integrante_comision_permanente.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_integrante_comision_permanente.Name = "cmb_cond_integrante_comision_permanente";
             this.cmb_cond_integrante_comision_permanente.Size = new System.Drawing.Size(187, 26);
             this.cmb_cond_integrante_comision_permanente.TabIndex = 47;
@@ -2859,9 +2859,9 @@
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox22.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox22.Location = new System.Drawing.Point(4, 1979);
-            this.groupBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox22.Size = new System.Drawing.Size(1317, 85);
             this.groupBox22.TabIndex = 76;
             this.groupBox22.TabStop = false;
@@ -2873,7 +2873,7 @@
             this.textBox36.BackColor = System.Drawing.Color.Honeydew;
             this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox36.Location = new System.Drawing.Point(1189, 33);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(4);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(105, 24);
             this.textBox36.TabIndex = 65;
@@ -2884,7 +2884,7 @@
             this.textBox35.BackColor = System.Drawing.Color.Honeydew;
             this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox35.Location = new System.Drawing.Point(695, 33);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox35.Margin = new System.Windows.Forms.Padding(4);
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(105, 24);
             this.textBox35.TabIndex = 64;
@@ -2934,7 +2934,7 @@
             this.textBox37.BackColor = System.Drawing.Color.Honeydew;
             this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox37.Location = new System.Drawing.Point(283, 33);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox37.Margin = new System.Windows.Forms.Padding(4);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(105, 24);
             this.textBox37.TabIndex = 28;
@@ -2975,9 +2975,9 @@
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox16.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox16.Location = new System.Drawing.Point(9, 1514);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox16.Size = new System.Drawing.Size(1615, 458);
             this.groupBox16.TabIndex = 71;
             this.groupBox16.TabStop = false;
@@ -3003,7 +3003,7 @@
             this.cmb_cond_casa_atencion_ciudadana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_casa_atencion_ciudadana.FormattingEnabled = true;
             this.cmb_cond_casa_atencion_ciudadana.Location = new System.Drawing.Point(1355, 321);
-            this.cmb_cond_casa_atencion_ciudadana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_casa_atencion_ciudadana.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_casa_atencion_ciudadana.Name = "cmb_cond_casa_atencion_ciudadana";
             this.cmb_cond_casa_atencion_ciudadana.Size = new System.Drawing.Size(187, 26);
             this.cmb_cond_casa_atencion_ciudadana.TabIndex = 64;
@@ -3014,7 +3014,7 @@
             this.textBox17.BackColor = System.Drawing.Color.Honeydew;
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox17.Location = new System.Drawing.Point(676, 407);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(212, 24);
             this.textBox17.TabIndex = 63;
@@ -3025,7 +3025,7 @@
             this.textBox18.BackColor = System.Drawing.Color.Honeydew;
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox18.Location = new System.Drawing.Point(328, 407);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(212, 24);
             this.textBox18.TabIndex = 62;
@@ -3062,7 +3062,7 @@
             this.textBox19.BackColor = System.Drawing.Color.Honeydew;
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox19.Location = new System.Drawing.Point(1007, 321);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(289, 24);
             this.textBox19.TabIndex = 59;
@@ -3086,7 +3086,7 @@
             this.textBox20.BackColor = System.Drawing.Color.Honeydew;
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox20.Location = new System.Drawing.Point(596, 321);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(187, 24);
             this.textBox20.TabIndex = 57;
@@ -3110,7 +3110,7 @@
             this.textBox21.BackColor = System.Drawing.Color.Honeydew;
             this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox21.Location = new System.Drawing.Point(171, 321);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(187, 24);
             this.textBox21.TabIndex = 55;
@@ -3134,7 +3134,7 @@
             this.textBox22.BackColor = System.Drawing.Color.Honeydew;
             this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox22.Location = new System.Drawing.Point(1037, 265);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(259, 24);
             this.textBox22.TabIndex = 53;
@@ -3158,7 +3158,7 @@
             this.textBox23.BackColor = System.Drawing.Color.Honeydew;
             this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox23.Location = new System.Drawing.Point(597, 265);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(187, 24);
             this.textBox23.TabIndex = 51;
@@ -3182,7 +3182,7 @@
             this.textBox24.BackColor = System.Drawing.Color.Honeydew;
             this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox24.Location = new System.Drawing.Point(171, 265);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(187, 24);
             this.textBox24.TabIndex = 49;
@@ -3207,7 +3207,7 @@
             this.cmb_cond_presentacion_declaracion_fiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_presentacion_declaracion_fiscal.FormattingEnabled = true;
             this.cmb_cond_presentacion_declaracion_fiscal.Location = new System.Drawing.Point(408, 186);
-            this.cmb_cond_presentacion_declaracion_fiscal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_presentacion_declaracion_fiscal.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_presentacion_declaracion_fiscal.Name = "cmb_cond_presentacion_declaracion_fiscal";
             this.cmb_cond_presentacion_declaracion_fiscal.Size = new System.Drawing.Size(336, 26);
             this.cmb_cond_presentacion_declaracion_fiscal.TabIndex = 47;
@@ -3231,7 +3231,7 @@
             this.textBox25.BackColor = System.Drawing.Color.Honeydew;
             this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox25.Location = new System.Drawing.Point(839, 186);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(4);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(384, 24);
             this.textBox25.TabIndex = 45;
@@ -3256,7 +3256,7 @@
             this.cmb_cond_presentacion_declaracion_intereses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_presentacion_declaracion_intereses.FormattingEnabled = true;
             this.cmb_cond_presentacion_declaracion_intereses.Location = new System.Drawing.Point(408, 110);
-            this.cmb_cond_presentacion_declaracion_intereses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_presentacion_declaracion_intereses.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_presentacion_declaracion_intereses.Name = "cmb_cond_presentacion_declaracion_intereses";
             this.cmb_cond_presentacion_declaracion_intereses.Size = new System.Drawing.Size(336, 26);
             this.cmb_cond_presentacion_declaracion_intereses.TabIndex = 43;
@@ -3280,7 +3280,7 @@
             this.textBox26.BackColor = System.Drawing.Color.Honeydew;
             this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox26.Location = new System.Drawing.Point(839, 110);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(384, 24);
             this.textBox26.TabIndex = 41;
@@ -3305,7 +3305,7 @@
             this.cmb_cond_presentacion_declaracion_situacion_patrimonial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_presentacion_declaracion_situacion_patrimonial.FormattingEnabled = true;
             this.cmb_cond_presentacion_declaracion_situacion_patrimonial.Location = new System.Drawing.Point(281, 66);
-            this.cmb_cond_presentacion_declaracion_situacion_patrimonial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_presentacion_declaracion_situacion_patrimonial.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_presentacion_declaracion_situacion_patrimonial.Name = "cmb_cond_presentacion_declaracion_situacion_patrimonial";
             this.cmb_cond_presentacion_declaracion_situacion_patrimonial.Size = new System.Drawing.Size(276, 26);
             this.cmb_cond_presentacion_declaracion_situacion_patrimonial.TabIndex = 39;
@@ -3332,7 +3332,7 @@
             this.textBox27.BackColor = System.Drawing.Color.Honeydew;
             this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox27.Location = new System.Drawing.Point(839, 41);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(4);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(384, 24);
             this.textBox27.TabIndex = 28;
@@ -3368,9 +3368,9 @@
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox17.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox17.Location = new System.Drawing.Point(9, 1319);
-            this.groupBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox17.Size = new System.Drawing.Size(1615, 187);
             this.groupBox17.TabIndex = 70;
             this.groupBox17.TabStop = false;
@@ -3381,7 +3381,7 @@
             // 
             this.textBox28.BackColor = System.Drawing.Color.Honeydew;
             this.textBox28.Location = new System.Drawing.Point(1205, 127);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(291, 26);
             this.textBox28.TabIndex = 67;
@@ -3392,7 +3392,7 @@
             // 
             this.textBox29.BackColor = System.Drawing.Color.Honeydew;
             this.textBox29.Location = new System.Drawing.Point(1205, 44);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(4);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(291, 26);
             this.textBox29.TabIndex = 48;
@@ -3431,7 +3431,7 @@
             this.comboBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox27.FormattingEnabled = true;
             this.comboBox27.Location = new System.Drawing.Point(745, 123);
-            this.comboBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox27.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox27.Name = "comboBox27";
             this.comboBox27.Size = new System.Drawing.Size(324, 26);
             this.comboBox27.TabIndex = 61;
@@ -3456,7 +3456,7 @@
             this.comboBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox28.FormattingEnabled = true;
             this.comboBox28.Location = new System.Drawing.Point(745, 41);
-            this.comboBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox28.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox28.Name = "comboBox28";
             this.comboBox28.Size = new System.Drawing.Size(324, 26);
             this.comboBox28.TabIndex = 60;
@@ -3508,7 +3508,7 @@
             this.cmb_tipo_adscripcion_inicial_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_adscripcion_inicial_persona_legisladora.FormattingEnabled = true;
             this.cmb_tipo_adscripcion_inicial_persona_legisladora.Location = new System.Drawing.Point(213, 41);
-            this.cmb_tipo_adscripcion_inicial_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_adscripcion_inicial_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_adscripcion_inicial_persona_legisladora.Name = "cmb_tipo_adscripcion_inicial_persona_legisladora";
             this.cmb_tipo_adscripcion_inicial_persona_legisladora.Size = new System.Drawing.Size(184, 26);
             this.cmb_tipo_adscripcion_inicial_persona_legisladora.TabIndex = 41;
@@ -3520,7 +3520,7 @@
             this.cmb_tipo_adscripcion_final_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_adscripcion_final_persona_legisladora.FormattingEnabled = true;
             this.cmb_tipo_adscripcion_final_persona_legisladora.Location = new System.Drawing.Point(209, 124);
-            this.cmb_tipo_adscripcion_final_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_adscripcion_final_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_adscripcion_final_persona_legisladora.Name = "cmb_tipo_adscripcion_final_persona_legisladora";
             this.cmb_tipo_adscripcion_final_persona_legisladora.Size = new System.Drawing.Size(184, 26);
             this.cmb_tipo_adscripcion_final_persona_legisladora.TabIndex = 40;
@@ -3529,14 +3529,14 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(1219, 17);
+            this.label59.Location = new System.Drawing.Point(1076, 18);
             this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(190, 18);
+            this.label59.Size = new System.Drawing.Size(299, 18);
             this.label59.TabIndex = 15;
-            this.label59.Text = "ID de la persona legisladora";
+            this.label59.Text = "Identificador de la persona legisladora:";
             this.label59.UseWaitCursor = true;
             // 
             // groupBox14
@@ -3555,9 +3555,9 @@
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox14.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox14.Location = new System.Drawing.Point(9, 923);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox14.Size = new System.Drawing.Size(1615, 389);
             this.groupBox14.TabIndex = 60;
             this.groupBox14.TabStop = false;
@@ -3577,16 +3577,16 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle52;
             this.dataGridView4.Location = new System.Drawing.Point(451, 145);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowHeadersVisible = false;
@@ -3628,7 +3628,7 @@
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(1225, 254);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(37, 33);
             this.button5.TabIndex = 61;
@@ -3639,7 +3639,7 @@
             // 
             this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
             this.button23.Location = new System.Drawing.Point(1225, 202);
-            this.button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button23.Margin = new System.Windows.Forms.Padding(4);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(37, 33);
             this.button23.TabIndex = 60;
@@ -3652,7 +3652,7 @@
             this.comboBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox19.FormattingEnabled = true;
             this.comboBox19.Location = new System.Drawing.Point(315, 98);
-            this.comboBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox19.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(419, 26);
             this.comboBox19.TabIndex = 56;
@@ -3716,7 +3716,7 @@
             this.cmb_tipo_candidatura_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_candidatura_persona_legisladora.FormattingEnabled = true;
             this.cmb_tipo_candidatura_persona_legisladora.Location = new System.Drawing.Point(1299, 37);
-            this.cmb_tipo_candidatura_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_candidatura_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_candidatura_persona_legisladora.Name = "cmb_tipo_candidatura_persona_legisladora";
             this.cmb_tipo_candidatura_persona_legisladora.Size = new System.Drawing.Size(269, 26);
             this.cmb_tipo_candidatura_persona_legisladora.TabIndex = 43;
@@ -3728,7 +3728,7 @@
             this.cmb_forma_eleccion_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_forma_eleccion_persona_legisladora.FormattingEnabled = true;
             this.cmb_forma_eleccion_persona_legisladora.Location = new System.Drawing.Point(156, 41);
-            this.cmb_forma_eleccion_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_forma_eleccion_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_forma_eleccion_persona_legisladora.Name = "cmb_forma_eleccion_persona_legisladora";
             this.cmb_forma_eleccion_persona_legisladora.Size = new System.Drawing.Size(232, 26);
             this.cmb_forma_eleccion_persona_legisladora.TabIndex = 41;
@@ -3740,7 +3740,7 @@
             this.comboBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox23.FormattingEnabled = true;
             this.comboBox23.Location = new System.Drawing.Point(752, 41);
-            this.comboBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox23.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.Size = new System.Drawing.Size(291, 26);
             this.comboBox23.TabIndex = 40;
@@ -3761,9 +3761,9 @@
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox15.Location = new System.Drawing.Point(380, 793);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox15.Size = new System.Drawing.Size(1244, 123);
             this.groupBox15.TabIndex = 59;
             this.groupBox15.TabStop = false;
@@ -3789,7 +3789,7 @@
             this.cmb_antigüedad_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_antigüedad_persona_legisladora.FormattingEnabled = true;
             this.cmb_antigüedad_persona_legisladora.Location = new System.Drawing.Point(756, 80);
-            this.cmb_antigüedad_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_antigüedad_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_antigüedad_persona_legisladora.Name = "cmb_antigüedad_persona_legisladora";
             this.cmb_antigüedad_persona_legisladora.Size = new System.Drawing.Size(332, 26);
             this.cmb_antigüedad_persona_legisladora.TabIndex = 50;
@@ -3853,7 +3853,7 @@
             this.cmb_antigüedad_servicio_publico_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_antigüedad_servicio_publico_persona_legisladora.FormattingEnabled = true;
             this.cmb_antigüedad_servicio_publico_persona_legisladora.Location = new System.Drawing.Point(235, 80);
-            this.cmb_antigüedad_servicio_publico_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_antigüedad_servicio_publico_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_antigüedad_servicio_publico_persona_legisladora.Name = "cmb_antigüedad_servicio_publico_persona_legisladora";
             this.cmb_antigüedad_servicio_publico_persona_legisladora.Size = new System.Drawing.Size(332, 26);
             this.cmb_antigüedad_servicio_publico_persona_legisladora.TabIndex = 45;
@@ -3865,7 +3865,7 @@
             this.cmb_empleo_anterior_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_empleo_anterior_persona_legisladora.FormattingEnabled = true;
             this.cmb_empleo_anterior_persona_legisladora.Location = new System.Drawing.Point(965, 41);
-            this.cmb_empleo_anterior_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_empleo_anterior_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_empleo_anterior_persona_legisladora.Name = "cmb_empleo_anterior_persona_legisladora";
             this.cmb_empleo_anterior_persona_legisladora.Size = new System.Drawing.Size(268, 26);
             this.cmb_empleo_anterior_persona_legisladora.TabIndex = 43;
@@ -3877,7 +3877,7 @@
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora.FormattingEnabled = true;
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora.Location = new System.Drawing.Point(231, 41);
-            this.cmb_cond_pob_diversidad_sexual_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_pob_diversidad_sexual_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora.Name = "cmb_cond_pob_diversidad_sexual_persona_legisladora";
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora.Size = new System.Drawing.Size(184, 26);
             this.cmb_cond_pob_diversidad_sexual_persona_legisladora.TabIndex = 41;
@@ -3889,22 +3889,22 @@
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.Location = new System.Drawing.Point(620, 41);
-            this.cmb_cond_pob_afromexicana_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_pob_afromexicana_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.Name = "cmb_cond_pob_afromexicana_persona_legisladora_PL";
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.Size = new System.Drawing.Size(184, 26);
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.TabIndex = 40;
             this.cmb_cond_pob_afromexicana_persona_legisladora_PL.UseWaitCursor = true;
             // 
-            // textBox11
+            // txt_ID_persona_legisladora
             // 
-            this.textBox11.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox11.Location = new System.Drawing.Point(1441, 14);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(181, 26);
-            this.textBox11.TabIndex = 16;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox11.UseWaitCursor = true;
+            this.txt_ID_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_persona_legisladora.Location = new System.Drawing.Point(1406, 14);
+            this.txt_ID_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ID_persona_legisladora.Name = "txt_ID_persona_legisladora";
+            this.txt_ID_persona_legisladora.Size = new System.Drawing.Size(216, 26);
+            this.txt_ID_persona_legisladora.TabIndex = 16;
+            this.txt_ID_persona_legisladora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_ID_persona_legisladora.UseWaitCursor = true;
             // 
             // groupBox8
             // 
@@ -3916,9 +3916,9 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox8.Location = new System.Drawing.Point(825, 506);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox8.Size = new System.Drawing.Size(799, 279);
             this.groupBox8.TabIndex = 58;
             this.groupBox8.TabStop = false;
@@ -3927,7 +3927,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(537, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 33);
             this.button1.TabIndex = 56;
@@ -3937,7 +3937,7 @@
             // button22
             // 
             this.button22.Location = new System.Drawing.Point(405, 26);
-            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button22.Margin = new System.Windows.Forms.Padding(4);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(103, 33);
             this.button22.TabIndex = 55;
@@ -3957,16 +3957,16 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle53;
             this.dataGridView3.Location = new System.Drawing.Point(17, 74);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
@@ -4021,7 +4021,7 @@
             this.cmb_cond_discapacidad_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_discapacidad_persona_legisladora.FormattingEnabled = true;
             this.cmb_cond_discapacidad_persona_legisladora.Location = new System.Drawing.Point(164, 36);
-            this.cmb_cond_discapacidad_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_discapacidad_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_discapacidad_persona_legisladora.Name = "cmb_cond_discapacidad_persona_legisladora";
             this.cmb_cond_discapacidad_persona_legisladora.Size = new System.Drawing.Size(184, 26);
             this.cmb_cond_discapacidad_persona_legisladora.TabIndex = 48;
@@ -4037,9 +4037,9 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox9.Location = new System.Drawing.Point(9, 506);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox9.Size = new System.Drawing.Size(808, 279);
             this.groupBox9.TabIndex = 57;
             this.groupBox9.TabStop = false;
@@ -4058,16 +4058,16 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle54.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle54;
             this.dataGridView2.Location = new System.Drawing.Point(11, 74);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
@@ -4107,7 +4107,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(565, 25);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(147, 33);
             this.button4.TabIndex = 53;
@@ -4117,7 +4117,7 @@
             // button21
             // 
             this.button21.Location = new System.Drawing.Point(433, 31);
-            this.button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(103, 33);
             this.button21.TabIndex = 52;
@@ -4142,7 +4142,7 @@
             this.cmb_cond_lengua_ind_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_lengua_ind_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_cond_lengua_ind_persona_legisladora_PL.Location = new System.Drawing.Point(149, 31);
-            this.cmb_cond_lengua_ind_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_lengua_ind_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_lengua_ind_persona_legisladora_PL.Name = "cmb_cond_lengua_ind_persona_legisladora_PL";
             this.cmb_cond_lengua_ind_persona_legisladora_PL.Size = new System.Drawing.Size(184, 26);
             this.cmb_cond_lengua_ind_persona_legisladora_PL.TabIndex = 48;
@@ -4163,9 +4163,9 @@
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox10.Location = new System.Drawing.Point(9, 389);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(1615, 110);
             this.groupBox10.TabIndex = 56;
             this.groupBox10.TabStop = false;
@@ -4178,7 +4178,7 @@
             this.cmb_carrera_doctorado_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_doctorado_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_carrera_doctorado_persona_legisladora_PL.Location = new System.Drawing.Point(1312, 48);
-            this.cmb_carrera_doctorado_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_carrera_doctorado_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_carrera_doctorado_persona_legisladora_PL.Name = "cmb_carrera_doctorado_persona_legisladora_PL";
             this.cmb_carrera_doctorado_persona_legisladora_PL.Size = new System.Drawing.Size(287, 26);
             this.cmb_carrera_doctorado_persona_legisladora_PL.TabIndex = 48;
@@ -4216,7 +4216,7 @@
             this.cmb_carrera_maestria_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_maestria_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_carrera_maestria_persona_legisladora_PL.Location = new System.Drawing.Point(916, 48);
-            this.cmb_carrera_maestria_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_carrera_maestria_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_carrera_maestria_persona_legisladora_PL.Name = "cmb_carrera_maestria_persona_legisladora_PL";
             this.cmb_carrera_maestria_persona_legisladora_PL.Size = new System.Drawing.Size(287, 26);
             this.cmb_carrera_maestria_persona_legisladora_PL.TabIndex = 45;
@@ -4241,7 +4241,7 @@
             this.cmb_carrera_licenciatura_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_licenciatura_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_carrera_licenciatura_persona_legisladora_PL.Location = new System.Drawing.Point(533, 48);
-            this.cmb_carrera_licenciatura_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_carrera_licenciatura_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_carrera_licenciatura_persona_legisladora_PL.Name = "cmb_carrera_licenciatura_persona_legisladora_PL";
             this.cmb_carrera_licenciatura_persona_legisladora_PL.Size = new System.Drawing.Size(283, 26);
             this.cmb_carrera_licenciatura_persona_legisladora_PL.TabIndex = 43;
@@ -4266,7 +4266,7 @@
             this.cmb_escolaridad_persona_legisladora_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_escolaridad_persona_legisladora_PL.FormattingEnabled = true;
             this.cmb_escolaridad_persona_legisladora_PL.Location = new System.Drawing.Point(107, 30);
-            this.cmb_escolaridad_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_escolaridad_persona_legisladora_PL.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_escolaridad_persona_legisladora_PL.Name = "cmb_escolaridad_persona_legisladora_PL";
             this.cmb_escolaridad_persona_legisladora_PL.Size = new System.Drawing.Size(295, 26);
             this.cmb_escolaridad_persona_legisladora_PL.TabIndex = 41;
@@ -4278,7 +4278,7 @@
             this.cmb_estatus_escolaridad_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_estatus_escolaridad_persona_legisladora.FormattingEnabled = true;
             this.cmb_estatus_escolaridad_persona_legisladora.Location = new System.Drawing.Point(167, 69);
-            this.cmb_estatus_escolaridad_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_estatus_escolaridad_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estatus_escolaridad_persona_legisladora.Name = "cmb_estatus_escolaridad_persona_legisladora";
             this.cmb_estatus_escolaridad_persona_legisladora.Size = new System.Drawing.Size(233, 26);
             this.cmb_estatus_escolaridad_persona_legisladora.TabIndex = 40;
@@ -4308,9 +4308,9 @@
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox11.Location = new System.Drawing.Point(9, 284);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox11.Size = new System.Drawing.Size(1615, 97);
             this.groupBox11.TabIndex = 55;
             this.groupBox11.TabStop = false;
@@ -4334,7 +4334,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.Honeydew;
             this.textBox3.Location = new System.Drawing.Point(1216, 41);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(181, 26);
             this.textBox3.TabIndex = 35;
@@ -4347,7 +4347,7 @@
             this.cmb_caracter_cargo_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_caracter_cargo_persona_legisladora.FormattingEnabled = true;
             this.cmb_caracter_cargo_persona_legisladora.Location = new System.Drawing.Point(131, 41);
-            this.cmb_caracter_cargo_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_caracter_cargo_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_caracter_cargo_persona_legisladora.Name = "cmb_caracter_cargo_persona_legisladora";
             this.cmb_caracter_cargo_persona_legisladora.Size = new System.Drawing.Size(184, 26);
             this.cmb_caracter_cargo_persona_legisladora.TabIndex = 41;
@@ -4359,7 +4359,7 @@
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(599, 41);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(369, 26);
             this.comboBox6.TabIndex = 40;
@@ -4404,9 +4404,9 @@
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox12.Location = new System.Drawing.Point(9, 180);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox12.Size = new System.Drawing.Size(1615, 97);
             this.groupBox12.TabIndex = 54;
             this.groupBox12.TabStop = false;
@@ -4432,7 +4432,7 @@
             this.cbm_tipo_licencia_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbm_tipo_licencia_persona_legisladora.FormattingEnabled = true;
             this.cbm_tipo_licencia_persona_legisladora.Location = new System.Drawing.Point(768, 43);
-            this.cbm_tipo_licencia_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbm_tipo_licencia_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cbm_tipo_licencia_persona_legisladora.Name = "cbm_tipo_licencia_persona_legisladora";
             this.cbm_tipo_licencia_persona_legisladora.Size = new System.Drawing.Size(323, 26);
             this.cbm_tipo_licencia_persona_legisladora.TabIndex = 40;
@@ -4457,7 +4457,7 @@
             this.cbm_causa_fallecimiento_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbm_causa_fallecimiento_persona_legisladora.FormattingEnabled = true;
             this.cbm_causa_fallecimiento_persona_legisladora.Location = new System.Drawing.Point(1291, 41);
-            this.cbm_causa_fallecimiento_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbm_causa_fallecimiento_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cbm_causa_fallecimiento_persona_legisladora.Name = "cbm_causa_fallecimiento_persona_legisladora";
             this.cbm_causa_fallecimiento_persona_legisladora.Size = new System.Drawing.Size(315, 26);
             this.cbm_causa_fallecimiento_persona_legisladora.TabIndex = 38;
@@ -4481,7 +4481,7 @@
             this.textBox9.BackColor = System.Drawing.Color.Honeydew;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(413, 44);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(199, 24);
             this.textBox9.TabIndex = 36;
@@ -4506,7 +4506,7 @@
             this.cmb_estatus_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_estatus_persona_legisladora.FormattingEnabled = true;
             this.cmb_estatus_persona_legisladora.Location = new System.Drawing.Point(89, 43);
-            this.cmb_estatus_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_estatus_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estatus_persona_legisladora.Name = "cmb_estatus_persona_legisladora";
             this.cmb_estatus_persona_legisladora.Size = new System.Drawing.Size(212, 26);
             this.cmb_estatus_persona_legisladora.TabIndex = 34;
@@ -4519,27 +4519,27 @@
             this.groupBox13.Controls.Add(this.label57);
             this.groupBox13.Controls.Add(this.label58);
             this.groupBox13.Controls.Add(this.cmb_sexo_persona_legisladora);
-            this.groupBox13.Controls.Add(this.dateTimePicker1);
-            this.groupBox13.Controls.Add(this.textBox10);
+            this.groupBox13.Controls.Add(this.dtp_fecha_nacimiento_persona_legisladora);
+            this.groupBox13.Controls.Add(this.txt_apellido_3_persona_legisladora);
             this.groupBox13.Controls.Add(this.label60);
-            this.groupBox13.Controls.Add(this.textBox12);
-            this.groupBox13.Controls.Add(this.textBox13);
+            this.groupBox13.Controls.Add(this.txt_apellido_2_persona_legisladora);
+            this.groupBox13.Controls.Add(this.txt_apellido_1_persona_legisladora);
             this.groupBox13.Controls.Add(this.label61);
-            this.groupBox13.Controls.Add(this.textBox14);
+            this.groupBox13.Controls.Add(this.txt_nombre_1_persona_legisladora);
             this.groupBox13.Controls.Add(this.label62);
-            this.groupBox13.Controls.Add(this.textBox15);
+            this.groupBox13.Controls.Add(this.txt_nombre_2_persona_legisladora);
             this.groupBox13.Controls.Add(this.label63);
-            this.groupBox13.Controls.Add(this.textBox16);
+            this.groupBox13.Controls.Add(this.txt_nombre_3_persona_legisladora);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox13.Location = new System.Drawing.Point(8, 50);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox13.Size = new System.Drawing.Size(1616, 122);
             this.groupBox13.TabIndex = 53;
             this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Datos de la persona legisladora";
+            this.groupBox13.Text = "Datos generales de la persona legisladora";
             this.groupBox13.UseWaitCursor = true;
             // 
             // label15
@@ -4547,7 +4547,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(1395, 62);
+            this.label15.Location = new System.Drawing.Point(1258, 78);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(58, 18);
@@ -4558,40 +4558,40 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label56.Location = new System.Drawing.Point(1203, 22);
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.Black;
+            this.label56.Location = new System.Drawing.Point(1256, 31);
             this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(145, 18);
+            this.label56.Size = new System.Drawing.Size(176, 18);
             this.label56.TabIndex = 36;
-            this.label56.Text = "Fecha de nacimiento";
+            this.label56.Text = "Fecha de nacimiento:*";
             this.label56.UseWaitCursor = true;
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Black;
             this.label57.Location = new System.Drawing.Point(11, 78);
             this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(106, 18);
+            this.label57.Size = new System.Drawing.Size(133, 18);
             this.label57.TabIndex = 35;
-            this.label57.Text = "Primer apellido";
+            this.label57.Text = "Primer apellido*:";
             this.label57.UseWaitCursor = true;
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Black;
             this.label58.Location = new System.Drawing.Point(9, 41);
             this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(107, 18);
+            this.label58.Size = new System.Drawing.Size(132, 18);
             this.label58.TabIndex = 30;
-            this.label58.Text = "Primer nombre";
+            this.label58.Text = "Primer nombre*:";
             this.label58.UseWaitCursor = true;
             // 
             // cmb_sexo_persona_legisladora
@@ -4599,142 +4599,148 @@
             this.cmb_sexo_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_sexo_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sexo_persona_legisladora.FormattingEnabled = true;
-            this.cmb_sexo_persona_legisladora.Location = new System.Drawing.Point(1465, 58);
-            this.cmb_sexo_persona_legisladora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_sexo_persona_legisladora.Location = new System.Drawing.Point(1324, 70);
+            this.cmb_sexo_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_sexo_persona_legisladora.Name = "cmb_sexo_persona_legisladora";
             this.cmb_sexo_persona_legisladora.Size = new System.Drawing.Size(123, 26);
             this.cmb_sexo_persona_legisladora.TabIndex = 32;
             this.cmb_sexo_persona_legisladora.UseWaitCursor = true;
             // 
-            // dateTimePicker1
+            // dtp_fecha_nacimiento_persona_legisladora
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1224, 55);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 23);
-            this.dateTimePicker1.TabIndex = 30;
-            this.dateTimePicker1.UseWaitCursor = true;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_nacimiento_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_nacimiento_persona_legisladora.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_nacimiento_persona_legisladora.Location = new System.Drawing.Point(1454, 27);
+            this.dtp_fecha_nacimiento_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.dtp_fecha_nacimiento_persona_legisladora.Name = "dtp_fecha_nacimiento_persona_legisladora";
+            this.dtp_fecha_nacimiento_persona_legisladora.Size = new System.Drawing.Size(115, 23);
+            this.dtp_fecha_nacimiento_persona_legisladora.TabIndex = 30;
+            this.dtp_fecha_nacimiento_persona_legisladora.UseWaitCursor = true;
+            this.dtp_fecha_nacimiento_persona_legisladora.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
             // 
-            // textBox10
+            // txt_apellido_3_persona_legisladora
             // 
-            this.textBox10.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(920, 81);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(227, 24);
-            this.textBox10.TabIndex = 28;
-            this.textBox10.UseWaitCursor = true;
+            this.txt_apellido_3_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_apellido_3_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_3_persona_legisladora.Location = new System.Drawing.Point(963, 79);
+            this.txt_apellido_3_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_apellido_3_persona_legisladora.Name = "txt_apellido_3_persona_legisladora";
+            this.txt_apellido_3_persona_legisladora.Size = new System.Drawing.Size(227, 24);
+            this.txt_apellido_3_persona_legisladora.TabIndex = 28;
+            this.txt_apellido_3_persona_legisladora.UseWaitCursor = true;
+            this.txt_apellido_3_persona_legisladora.TextChanged += new System.EventHandler(this.txt_apellido_3_persona_legisladora_TextChanged);
             // 
             // label60
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.Black;
-            this.label60.Location = new System.Drawing.Point(793, 85);
+            this.label60.Location = new System.Drawing.Point(836, 83);
             this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(105, 18);
+            this.label60.Size = new System.Drawing.Size(109, 18);
             this.label60.TabIndex = 25;
-            this.label60.Text = "Tercer apellido";
+            this.label60.Text = "Tercer apellido:";
             this.label60.UseWaitCursor = true;
             // 
-            // textBox12
+            // txt_apellido_2_persona_legisladora
             // 
-            this.textBox12.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(535, 78);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(224, 24);
-            this.textBox12.TabIndex = 27;
-            this.textBox12.UseWaitCursor = true;
+            this.txt_apellido_2_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_apellido_2_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_2_persona_legisladora.Location = new System.Drawing.Point(578, 76);
+            this.txt_apellido_2_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_apellido_2_persona_legisladora.Name = "txt_apellido_2_persona_legisladora";
+            this.txt_apellido_2_persona_legisladora.Size = new System.Drawing.Size(224, 24);
+            this.txt_apellido_2_persona_legisladora.TabIndex = 27;
+            this.txt_apellido_2_persona_legisladora.UseWaitCursor = true;
+            this.txt_apellido_2_persona_legisladora.TextChanged += new System.EventHandler(this.txt_apellido_2_persona_legisladora_TextChanged);
             // 
-            // textBox13
+            // txt_apellido_1_persona_legisladora
             // 
-            this.textBox13.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(139, 74);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(224, 24);
-            this.textBox13.TabIndex = 26;
-            this.textBox13.UseWaitCursor = true;
+            this.txt_apellido_1_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_apellido_1_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_1_persona_legisladora.Location = new System.Drawing.Point(168, 72);
+            this.txt_apellido_1_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_apellido_1_persona_legisladora.Name = "txt_apellido_1_persona_legisladora";
+            this.txt_apellido_1_persona_legisladora.Size = new System.Drawing.Size(224, 24);
+            this.txt_apellido_1_persona_legisladora.TabIndex = 26;
+            this.txt_apellido_1_persona_legisladora.UseWaitCursor = true;
+            this.txt_apellido_1_persona_legisladora.TextChanged += new System.EventHandler(this.txt_apellido_1_persona_legisladora_TextChanged);
             // 
             // label61
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.Black;
-            this.label61.Location = new System.Drawing.Point(388, 78);
+            this.label61.Location = new System.Drawing.Point(431, 76);
             this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(121, 18);
+            this.label61.Size = new System.Drawing.Size(125, 18);
             this.label61.TabIndex = 24;
-            this.label61.Text = "Segundo apellido";
+            this.label61.Text = "Segundo apellido:";
             this.label61.UseWaitCursor = true;
             // 
-            // textBox14
+            // txt_nombre_1_persona_legisladora
             // 
-            this.textBox14.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(139, 37);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(225, 24);
-            this.textBox14.TabIndex = 17;
-            this.textBox14.UseWaitCursor = true;
+            this.txt_nombre_1_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_1_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_1_persona_legisladora.Location = new System.Drawing.Point(160, 38);
+            this.txt_nombre_1_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre_1_persona_legisladora.Name = "txt_nombre_1_persona_legisladora";
+            this.txt_nombre_1_persona_legisladora.Size = new System.Drawing.Size(225, 24);
+            this.txt_nombre_1_persona_legisladora.TabIndex = 17;
+            this.txt_nombre_1_persona_legisladora.UseWaitCursor = true;
+            this.txt_nombre_1_persona_legisladora.TextChanged += new System.EventHandler(this.txt_nombre_1_persona_legisladora_TextChanged);
             // 
             // label62
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Black;
-            this.label62.Location = new System.Drawing.Point(389, 41);
+            this.label62.Location = new System.Drawing.Point(432, 39);
             this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(122, 18);
+            this.label62.Size = new System.Drawing.Size(126, 18);
             this.label62.TabIndex = 19;
-            this.label62.Text = "Segundo nombre";
+            this.label62.Text = "Segundo nombre:";
             this.label62.UseWaitCursor = true;
             // 
-            // textBox15
+            // txt_nombre_2_persona_legisladora
             // 
-            this.textBox15.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(535, 37);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(225, 24);
-            this.textBox15.TabIndex = 20;
-            this.textBox15.UseWaitCursor = true;
+            this.txt_nombre_2_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_2_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_2_persona_legisladora.Location = new System.Drawing.Point(578, 35);
+            this.txt_nombre_2_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre_2_persona_legisladora.Name = "txt_nombre_2_persona_legisladora";
+            this.txt_nombre_2_persona_legisladora.Size = new System.Drawing.Size(225, 24);
+            this.txt_nombre_2_persona_legisladora.TabIndex = 20;
+            this.txt_nombre_2_persona_legisladora.UseWaitCursor = true;
+            this.txt_nombre_2_persona_legisladora.TextChanged += new System.EventHandler(this.txt_nombre_2_persona_legisladora_TextChanged);
             // 
             // label63
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.Black;
-            this.label63.Location = new System.Drawing.Point(793, 41);
+            this.label63.Location = new System.Drawing.Point(836, 39);
             this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(106, 18);
+            this.label63.Size = new System.Drawing.Size(110, 18);
             this.label63.TabIndex = 21;
-            this.label63.Text = "Tercer nombre";
+            this.label63.Text = "Tercer nombre:";
             this.label63.UseWaitCursor = true;
             // 
-            // textBox16
+            // txt_nombre_3_persona_legisladora
             // 
-            this.textBox16.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(919, 37);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(228, 24);
-            this.textBox16.TabIndex = 22;
-            this.textBox16.UseWaitCursor = true;
+            this.txt_nombre_3_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_3_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_3_persona_legisladora.Location = new System.Drawing.Point(962, 35);
+            this.txt_nombre_3_persona_legisladora.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre_3_persona_legisladora.Name = "txt_nombre_3_persona_legisladora";
+            this.txt_nombre_3_persona_legisladora.Size = new System.Drawing.Size(228, 24);
+            this.txt_nombre_3_persona_legisladora.TabIndex = 22;
+            this.txt_nombre_3_persona_legisladora.UseWaitCursor = true;
+            this.txt_nombre_3_persona_legisladora.TextChanged += new System.EventHandler(this.txt_nombre_3_persona_legisladora_TextChanged);
             // 
             // tabPagePA
             // 
@@ -4748,9 +4754,9 @@
             this.tabPagePA.Controls.Add(this.groupBox65);
             this.tabPagePA.Controls.Add(this.label281);
             this.tabPagePA.Location = new System.Drawing.Point(4, 29);
-            this.tabPagePA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPagePA.Margin = new System.Windows.Forms.Padding(4);
             this.tabPagePA.Name = "tabPagePA";
-            this.tabPagePA.Size = new System.Drawing.Size(1672, 769);
+            this.tabPagePA.Size = new System.Drawing.Size(1672, 776);
             this.tabPagePA.TabIndex = 3;
             this.tabPagePA.Text = "Personal apoyo";
             this.tabPagePA.UseVisualStyleBackColor = true;
@@ -4766,9 +4772,9 @@
             this.groupBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox66.ForeColor = System.Drawing.Color.Green;
             this.groupBox66.Location = new System.Drawing.Point(20, 956);
-            this.groupBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox66.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox66.Name = "groupBox66";
-            this.groupBox66.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox66.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox66.Size = new System.Drawing.Size(1172, 156);
             this.groupBox66.TabIndex = 38;
             this.groupBox66.TabStop = false;
@@ -4792,7 +4798,7 @@
             // 
             this.textBox119.BackColor = System.Drawing.Color.Honeydew;
             this.textBox119.Location = new System.Drawing.Point(245, 82);
-            this.textBox119.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox119.Margin = new System.Windows.Forms.Padding(4);
             this.textBox119.Name = "textBox119";
             this.textBox119.Size = new System.Drawing.Size(192, 26);
             this.textBox119.TabIndex = 41;
@@ -4803,7 +4809,7 @@
             this.comboBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox101.FormattingEnabled = true;
             this.comboBox101.Location = new System.Drawing.Point(785, 82);
-            this.comboBox101.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox101.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox101.Name = "comboBox101";
             this.comboBox101.Size = new System.Drawing.Size(375, 28);
             this.comboBox101.TabIndex = 40;
@@ -4828,7 +4834,7 @@
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.FormattingEnabled = true;
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1039, 30);
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Name = "cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo";
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(113, 28);
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.TabIndex = 32;
@@ -4864,9 +4870,9 @@
             this.groupBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox60.ForeColor = System.Drawing.Color.Green;
             this.groupBox60.Location = new System.Drawing.Point(20, 145);
-            this.groupBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox60.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox60.Name = "groupBox60";
-            this.groupBox60.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox60.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox60.Size = new System.Drawing.Size(1176, 122);
             this.groupBox60.TabIndex = 33;
             this.groupBox60.TabStop = false;
@@ -4878,7 +4884,7 @@
             this.cmb_institucion_seguridad_social_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_institucion_seguridad_social_personal_apoyo.FormattingEnabled = true;
             this.cmb_institucion_seguridad_social_personal_apoyo.Location = new System.Drawing.Point(956, 16);
-            this.cmb_institucion_seguridad_social_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_institucion_seguridad_social_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_institucion_seguridad_social_personal_apoyo.Name = "cmb_institucion_seguridad_social_personal_apoyo";
             this.cmb_institucion_seguridad_social_personal_apoyo.Size = new System.Drawing.Size(196, 28);
             this.cmb_institucion_seguridad_social_personal_apoyo.TabIndex = 31;
@@ -4899,7 +4905,7 @@
             // 
             this.textBox109.BackColor = System.Drawing.Color.Honeydew;
             this.textBox109.Location = new System.Drawing.Point(960, 78);
-            this.textBox109.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox109.Margin = new System.Windows.Forms.Padding(4);
             this.textBox109.Name = "textBox109";
             this.textBox109.Size = new System.Drawing.Size(196, 26);
             this.textBox109.TabIndex = 29;
@@ -4920,7 +4926,7 @@
             // 
             this.textBox110.BackColor = System.Drawing.Color.Honeydew;
             this.textBox110.Location = new System.Drawing.Point(491, 78);
-            this.textBox110.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox110.Margin = new System.Windows.Forms.Padding(4);
             this.textBox110.Name = "textBox110";
             this.textBox110.Size = new System.Drawing.Size(221, 26);
             this.textBox110.TabIndex = 27;
@@ -4943,7 +4949,7 @@
             this.cmb_regimen_contratacion_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_regimen_contratacion_personal_apoyo.FormattingEnabled = true;
             this.cmb_regimen_contratacion_personal_apoyo.Location = new System.Drawing.Point(139, 75);
-            this.cmb_regimen_contratacion_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_regimen_contratacion_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_regimen_contratacion_personal_apoyo.Name = "cmb_regimen_contratacion_personal_apoyo";
             this.cmb_regimen_contratacion_personal_apoyo.Size = new System.Drawing.Size(196, 28);
             this.cmb_regimen_contratacion_personal_apoyo.TabIndex = 25;
@@ -4969,7 +4975,7 @@
             this.cmb_sexo_personal_apoyo.FormattingEnabled = true;
             this.cmb_sexo_personal_apoyo.ItemHeight = 20;
             this.cmb_sexo_personal_apoyo.Location = new System.Drawing.Point(460, 16);
-            this.cmb_sexo_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_sexo_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_sexo_personal_apoyo.Name = "cmb_sexo_personal_apoyo";
             this.cmb_sexo_personal_apoyo.Size = new System.Drawing.Size(196, 28);
             this.cmb_sexo_personal_apoyo.TabIndex = 23;
@@ -4992,7 +4998,7 @@
             this.dtp_fecha_termino_p.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fecha_termino_p.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fecha_termino_p.Location = new System.Drawing.Point(215, 21);
-            this.dtp_fecha_termino_p.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_fecha_termino_p.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_fecha_termino_p.Name = "dtp_fecha_termino_p";
             this.dtp_fecha_termino_p.Size = new System.Drawing.Size(111, 23);
             this.dtp_fecha_termino_p.TabIndex = 21;
@@ -5025,9 +5031,9 @@
             this.groupBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox61.ForeColor = System.Drawing.Color.Green;
             this.groupBox61.Location = new System.Drawing.Point(21, 750);
-            this.groupBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox61.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox61.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox61.Size = new System.Drawing.Size(1172, 199);
             this.groupBox61.TabIndex = 37;
             this.groupBox61.TabStop = false;
@@ -5052,7 +5058,7 @@
             this.cmb_dinamico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_dinamico.FormattingEnabled = true;
             this.cmb_dinamico.Location = new System.Drawing.Point(355, 137);
-            this.cmb_dinamico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_dinamico.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_dinamico.Name = "cmb_dinamico";
             this.cmb_dinamico.Size = new System.Drawing.Size(703, 28);
             this.cmb_dinamico.TabIndex = 39;
@@ -5074,7 +5080,7 @@
             // 
             this.textBox111.BackColor = System.Drawing.Color.Honeydew;
             this.textBox111.Location = new System.Drawing.Point(192, 79);
-            this.textBox111.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox111.Margin = new System.Windows.Forms.Padding(4);
             this.textBox111.Name = "textBox111";
             this.textBox111.Size = new System.Drawing.Size(233, 26);
             this.textBox111.TabIndex = 37;
@@ -5085,7 +5091,7 @@
             this.comboBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox92.FormattingEnabled = true;
             this.comboBox92.Location = new System.Drawing.Point(664, 78);
-            this.comboBox92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox92.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox92.Name = "comboBox92";
             this.comboBox92.Size = new System.Drawing.Size(499, 28);
             this.comboBox92.TabIndex = 36;
@@ -5107,7 +5113,7 @@
             // 
             this.textBox112.BackColor = System.Drawing.Color.Honeydew;
             this.textBox112.Location = new System.Drawing.Point(875, 25);
-            this.textBox112.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox112.Margin = new System.Windows.Forms.Padding(4);
             this.textBox112.Name = "textBox112";
             this.textBox112.Size = new System.Drawing.Size(288, 26);
             this.textBox112.TabIndex = 34;
@@ -5130,7 +5136,7 @@
             this.cmb_tipo_adscripcion_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_adscripcion_personal_apoyo.FormattingEnabled = true;
             this.cmb_tipo_adscripcion_personal_apoyo.Location = new System.Drawing.Point(192, 23);
-            this.cmb_tipo_adscripcion_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_adscripcion_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_adscripcion_personal_apoyo.Name = "cmb_tipo_adscripcion_personal_apoyo";
             this.cmb_tipo_adscripcion_personal_apoyo.Size = new System.Drawing.Size(412, 28);
             this.cmb_tipo_adscripcion_personal_apoyo.TabIndex = 32;
@@ -5163,9 +5169,9 @@
             this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox62.ForeColor = System.Drawing.Color.Green;
             this.groupBox62.Location = new System.Drawing.Point(21, 274);
-            this.groupBox62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox62.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox62.Name = "groupBox62";
-            this.groupBox62.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox62.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox62.Size = new System.Drawing.Size(1591, 102);
             this.groupBox62.TabIndex = 34;
             this.groupBox62.TabStop = false;
@@ -5177,7 +5183,7 @@
             this.cmb_carrera_doctorado_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_doctorado_personal_apoyo.FormattingEnabled = true;
             this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(1353, 55);
-            this.cmb_carrera_doctorado_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_carrera_doctorado_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_carrera_doctorado_personal_apoyo.Name = "cmb_carrera_doctorado_personal_apoyo";
             this.cmb_carrera_doctorado_personal_apoyo.Size = new System.Drawing.Size(228, 28);
             this.cmb_carrera_doctorado_personal_apoyo.TabIndex = 37;
@@ -5201,7 +5207,7 @@
             this.cmb_carrera_maestria_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_maestria_personal_apoyo.FormattingEnabled = true;
             this.cmb_carrera_maestria_personal_apoyo.Location = new System.Drawing.Point(1353, 18);
-            this.cmb_carrera_maestria_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_carrera_maestria_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_carrera_maestria_personal_apoyo.Name = "cmb_carrera_maestria_personal_apoyo";
             this.cmb_carrera_maestria_personal_apoyo.Size = new System.Drawing.Size(228, 28);
             this.cmb_carrera_maestria_personal_apoyo.TabIndex = 35;
@@ -5225,7 +5231,7 @@
             this.cmb_carrera_licenciatura_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_licenciatura_personal_apoyo.FormattingEnabled = true;
             this.cmb_carrera_licenciatura_personal_apoyo.Location = new System.Drawing.Point(960, 34);
-            this.cmb_carrera_licenciatura_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_carrera_licenciatura_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_carrera_licenciatura_personal_apoyo.Name = "cmb_carrera_licenciatura_personal_apoyo";
             this.cmb_carrera_licenciatura_personal_apoyo.Size = new System.Drawing.Size(200, 28);
             this.cmb_carrera_licenciatura_personal_apoyo.TabIndex = 33;
@@ -5237,7 +5243,7 @@
             this.cmb_escolaridad_personal_apoyo.FormattingEnabled = true;
             this.cmb_escolaridad_personal_apoyo.ItemHeight = 20;
             this.cmb_escolaridad_personal_apoyo.Location = new System.Drawing.Point(139, 34);
-            this.cmb_escolaridad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_escolaridad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_escolaridad_personal_apoyo.Name = "cmb_escolaridad_personal_apoyo";
             this.cmb_escolaridad_personal_apoyo.Size = new System.Drawing.Size(200, 28);
             this.cmb_escolaridad_personal_apoyo.TabIndex = 32;
@@ -5261,7 +5267,7 @@
             this.cmb_estatus_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_estatus_escolaridad_personal_apoyo.FormattingEnabled = true;
             this.cmb_estatus_escolaridad_personal_apoyo.Location = new System.Drawing.Point(528, 34);
-            this.cmb_estatus_escolaridad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_estatus_escolaridad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estatus_escolaridad_personal_apoyo.Name = "cmb_estatus_escolaridad_personal_apoyo";
             this.cmb_estatus_escolaridad_personal_apoyo.Size = new System.Drawing.Size(200, 28);
             this.cmb_estatus_escolaridad_personal_apoyo.TabIndex = 23;
@@ -5302,9 +5308,9 @@
             this.groupBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox63.ForeColor = System.Drawing.Color.Green;
             this.groupBox63.Location = new System.Drawing.Point(20, 373);
-            this.groupBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox63.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox63.Name = "groupBox63";
-            this.groupBox63.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox63.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox63.Size = new System.Drawing.Size(1173, 127);
             this.groupBox63.TabIndex = 36;
             this.groupBox63.TabStop = false;
@@ -5327,7 +5333,7 @@
             // 
             this.button19.ForeColor = System.Drawing.Color.Black;
             this.button19.Location = new System.Drawing.Point(580, 36);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(35, 28);
             this.button19.TabIndex = 34;
@@ -5342,7 +5348,7 @@
             this.listView16.FullRowSelect = true;
             this.listView16.HideSelection = false;
             this.listView16.Location = new System.Drawing.Point(655, 26);
-            this.listView16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView16.Margin = new System.Windows.Forms.Padding(4);
             this.listView16.Name = "listView16";
             this.listView16.Size = new System.Drawing.Size(509, 86);
             this.listView16.TabIndex = 35;
@@ -5355,7 +5361,7 @@
             this.cmb_cond_discapacidad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_discapacidad_personal_apoyo.FormattingEnabled = true;
             this.cmb_cond_discapacidad_personal_apoyo.Location = new System.Drawing.Point(181, 39);
-            this.cmb_cond_discapacidad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_discapacidad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_discapacidad_personal_apoyo.Name = "cmb_cond_discapacidad_personal_apoyo";
             this.cmb_cond_discapacidad_personal_apoyo.Size = new System.Drawing.Size(111, 28);
             this.cmb_cond_discapacidad_personal_apoyo.TabIndex = 32;
@@ -5387,9 +5393,9 @@
             this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox64.ForeColor = System.Drawing.Color.Green;
             this.groupBox64.Location = new System.Drawing.Point(21, 507);
-            this.groupBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox64.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox64.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox64.Size = new System.Drawing.Size(1172, 218);
             this.groupBox64.TabIndex = 35;
             this.groupBox64.TabStop = false;
@@ -5403,7 +5409,7 @@
             this.listView17.FullRowSelect = true;
             this.listView17.HideSelection = false;
             this.listView17.Location = new System.Drawing.Point(655, 26);
-            this.listView17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView17.Margin = new System.Windows.Forms.Padding(4);
             this.listView17.Name = "listView17";
             this.listView17.Size = new System.Drawing.Size(508, 85);
             this.listView17.TabIndex = 43;
@@ -5416,7 +5422,7 @@
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.FormattingEnabled = true;
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Location = new System.Drawing.Point(655, 146);
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Name = "cmb_pueblo_ind_pertenencia_personal_apoyo";
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Size = new System.Drawing.Size(508, 28);
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.TabIndex = 42;
@@ -5440,7 +5446,7 @@
             this.cmb_cond_pueblo_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_pueblo_ind_personal_apoyo.FormattingEnabled = true;
             this.cmb_cond_pueblo_ind_personal_apoyo.Location = new System.Drawing.Point(181, 146);
-            this.cmb_cond_pueblo_ind_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_pueblo_ind_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_pueblo_ind_personal_apoyo.Name = "cmb_cond_pueblo_ind_personal_apoyo";
             this.cmb_cond_pueblo_ind_personal_apoyo.Size = new System.Drawing.Size(112, 28);
             this.cmb_cond_pueblo_ind_personal_apoyo.TabIndex = 38;
@@ -5475,7 +5481,7 @@
             // 
             this.button20.ForeColor = System.Drawing.Color.Black;
             this.button20.Location = new System.Drawing.Point(579, 53);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(35, 30);
             this.button20.TabIndex = 34;
@@ -5488,7 +5494,7 @@
             this.cmb_cond_lengua_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_lengua_ind_personal_apoyo.FormattingEnabled = true;
             this.cmb_cond_lengua_ind_personal_apoyo.Location = new System.Drawing.Point(181, 53);
-            this.cmb_cond_lengua_ind_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_lengua_ind_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_lengua_ind_personal_apoyo.Name = "cmb_cond_lengua_ind_personal_apoyo";
             this.cmb_cond_lengua_ind_personal_apoyo.Size = new System.Drawing.Size(112, 28);
             this.cmb_cond_lengua_ind_personal_apoyo.TabIndex = 32;
@@ -5513,9 +5519,9 @@
             this.groupBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox65.ForeColor = System.Drawing.Color.Green;
             this.groupBox65.Location = new System.Drawing.Point(19, 10);
-            this.groupBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox65.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox65.Name = "groupBox65";
-            this.groupBox65.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox65.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox65.Size = new System.Drawing.Size(1177, 126);
             this.groupBox65.TabIndex = 32;
             this.groupBox65.TabStop = false;
@@ -5537,7 +5543,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label276, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label277, 4, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 79);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -5551,7 +5557,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox113.BackColor = System.Drawing.Color.Honeydew;
             this.textBox113.Location = new System.Drawing.Point(480, 4);
-            this.textBox113.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox113.Margin = new System.Windows.Forms.Padding(4);
             this.textBox113.Name = "textBox113";
             this.textBox113.Size = new System.Drawing.Size(225, 26);
             this.textBox113.TabIndex = 23;
@@ -5578,7 +5584,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox114.BackColor = System.Drawing.Color.Honeydew;
             this.textBox114.Location = new System.Drawing.Point(826, 4);
-            this.textBox114.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox114.Margin = new System.Windows.Forms.Padding(4);
             this.textBox114.Name = "textBox114";
             this.textBox114.Size = new System.Drawing.Size(377, 26);
             this.textBox114.TabIndex = 25;
@@ -5590,7 +5596,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox115.BackColor = System.Drawing.Color.Honeydew;
             this.textBox115.Location = new System.Drawing.Point(118, 4);
-            this.textBox115.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox115.Margin = new System.Windows.Forms.Padding(4);
             this.textBox115.Name = "textBox115";
             this.textBox115.Size = new System.Drawing.Size(225, 26);
             this.textBox115.TabIndex = 21;
@@ -5641,7 +5647,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label280, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox118, 5, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 26);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -5655,7 +5661,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox116.BackColor = System.Drawing.Color.Honeydew;
             this.textBox116.Location = new System.Drawing.Point(485, 4);
-            this.textBox116.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox116.Margin = new System.Windows.Forms.Padding(4);
             this.textBox116.Name = "textBox116";
             this.textBox116.Size = new System.Drawing.Size(225, 26);
             this.textBox116.TabIndex = 23;
@@ -5682,7 +5688,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox117.BackColor = System.Drawing.Color.Honeydew;
             this.textBox117.Location = new System.Drawing.Point(122, 4);
-            this.textBox117.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox117.Margin = new System.Windows.Forms.Padding(4);
             this.textBox117.Name = "textBox117";
             this.textBox117.Size = new System.Drawing.Size(225, 26);
             this.textBox117.TabIndex = 21;
@@ -5724,7 +5730,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox118.BackColor = System.Drawing.Color.Honeydew;
             this.textBox118.Location = new System.Drawing.Point(832, 4);
-            this.textBox118.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox118.Margin = new System.Windows.Forms.Padding(4);
             this.textBox118.Name = "textBox118";
             this.textBox118.Size = new System.Drawing.Size(377, 26);
             this.textBox118.TabIndex = 25;
@@ -5759,9 +5765,9 @@
             this.tabPageIni.Controls.Add(this.groupBox34);
             this.tabPageIni.Controls.Add(this.groupBox35);
             this.tabPageIni.Location = new System.Drawing.Point(4, 29);
-            this.tabPageIni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageIni.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageIni.Name = "tabPageIni";
-            this.tabPageIni.Size = new System.Drawing.Size(1672, 769);
+            this.tabPageIni.Size = new System.Drawing.Size(1672, 776);
             this.tabPageIni.TabIndex = 4;
             this.tabPageIni.Text = "Iniciativas";
             this.tabPageIni.UseVisualStyleBackColor = true;
@@ -5774,9 +5780,9 @@
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox36.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox36.Location = new System.Drawing.Point(665, 1425);
-            this.groupBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox36.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox36.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox36.Size = new System.Drawing.Size(656, 325);
             this.groupBox36.TabIndex = 87;
             this.groupBox36.TabStop = false;
@@ -5805,7 +5811,7 @@
             this.listView9.FullRowSelect = true;
             this.listView9.HideSelection = false;
             this.listView9.Location = new System.Drawing.Point(12, 82);
-            this.listView9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView9.Margin = new System.Windows.Forms.Padding(4);
             this.listView9.Name = "listView9";
             this.listView9.Size = new System.Drawing.Size(628, 221);
             this.listView9.TabIndex = 29;
@@ -5815,7 +5821,7 @@
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(451, 42);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(37, 33);
             this.button12.TabIndex = 7;
@@ -5830,9 +5836,9 @@
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox37.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox37.Location = new System.Drawing.Point(4, 1425);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox37.Size = new System.Drawing.Size(653, 325);
             this.groupBox37.TabIndex = 86;
             this.groupBox37.TabStop = false;
@@ -5849,7 +5855,7 @@
             this.listView10.FullRowSelect = true;
             this.listView10.HideSelection = false;
             this.listView10.Location = new System.Drawing.Point(12, 82);
-            this.listView10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView10.Margin = new System.Windows.Forms.Padding(4);
             this.listView10.Name = "listView10";
             this.listView10.Size = new System.Drawing.Size(632, 221);
             this.listView10.TabIndex = 29;
@@ -5859,7 +5865,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(464, 42);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Margin = new System.Windows.Forms.Padding(4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(37, 33);
             this.button13.TabIndex = 7;
@@ -5895,9 +5901,9 @@
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox23.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox23.Location = new System.Drawing.Point(4, 322);
-            this.groupBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox23.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox23.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox23.Size = new System.Drawing.Size(1317, 193);
             this.groupBox23.TabIndex = 81;
             this.groupBox23.TabStop = false;
@@ -5910,7 +5916,7 @@
             this.cmb_tipo_promovente_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_promovente_iniciativa.FormattingEnabled = true;
             this.cmb_tipo_promovente_iniciativa.Location = new System.Drawing.Point(231, 133);
-            this.cmb_tipo_promovente_iniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_promovente_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_promovente_iniciativa.Name = "cmb_tipo_promovente_iniciativa";
             this.cmb_tipo_promovente_iniciativa.Size = new System.Drawing.Size(373, 26);
             this.cmb_tipo_promovente_iniciativa.TabIndex = 59;
@@ -5921,7 +5927,7 @@
             this.textBox38.BackColor = System.Drawing.Color.Honeydew;
             this.textBox38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox38.Location = new System.Drawing.Point(1071, 82);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox38.Margin = new System.Windows.Forms.Padding(4);
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(233, 26);
             this.textBox38.TabIndex = 57;
@@ -5959,7 +5965,7 @@
             this.cmb_tipo_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_iniciativa.FormattingEnabled = true;
             this.cmb_tipo_iniciativa.Location = new System.Drawing.Point(599, 82);
-            this.cmb_tipo_iniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_iniciativa.Name = "cmb_tipo_iniciativa";
             this.cmb_tipo_iniciativa.Size = new System.Drawing.Size(275, 26);
             this.cmb_tipo_iniciativa.TabIndex = 55;
@@ -5983,7 +5989,7 @@
             this.dateTimePicker5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker5.Location = new System.Drawing.Point(312, 86);
-            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker5.Name = "dateTimePicker5";
             this.dateTimePicker5.Size = new System.Drawing.Size(123, 23);
             this.dateTimePicker5.TabIndex = 53;
@@ -6008,7 +6014,7 @@
             this.textBox39.BackColor = System.Drawing.Color.Honeydew;
             this.textBox39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox39.Location = new System.Drawing.Point(627, 32);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox39.Margin = new System.Windows.Forms.Padding(4);
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(676, 26);
             this.textBox39.TabIndex = 51;
@@ -6045,7 +6051,7 @@
             this.dateTimePicker6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker6.Location = new System.Drawing.Point(325, 33);
-            this.dateTimePicker6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker6.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker6.Name = "dateTimePicker6";
             this.dateTimePicker6.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker6.TabIndex = 43;
@@ -6060,9 +6066,9 @@
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox24.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox24.Location = new System.Drawing.Point(665, 1093);
-            this.groupBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox24.Size = new System.Drawing.Size(656, 325);
             this.groupBox24.TabIndex = 80;
             this.groupBox24.TabStop = false;
@@ -6091,7 +6097,7 @@
             this.listView5.FullRowSelect = true;
             this.listView5.HideSelection = false;
             this.listView5.Location = new System.Drawing.Point(12, 82);
-            this.listView5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView5.Margin = new System.Windows.Forms.Padding(4);
             this.listView5.Name = "listView5";
             this.listView5.Size = new System.Drawing.Size(628, 221);
             this.listView5.TabIndex = 29;
@@ -6101,7 +6107,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(451, 42);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 33);
             this.button6.TabIndex = 7;
@@ -6116,9 +6122,9 @@
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox25.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox25.Location = new System.Drawing.Point(4, 1093);
-            this.groupBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox25.Size = new System.Drawing.Size(653, 325);
             this.groupBox25.TabIndex = 79;
             this.groupBox25.TabStop = false;
@@ -6135,7 +6141,7 @@
             this.listView6.FullRowSelect = true;
             this.listView6.HideSelection = false;
             this.listView6.Location = new System.Drawing.Point(12, 82);
-            this.listView6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView6.Margin = new System.Windows.Forms.Padding(4);
             this.listView6.Name = "listView6";
             this.listView6.Size = new System.Drawing.Size(632, 221);
             this.listView6.TabIndex = 29;
@@ -6145,7 +6151,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(464, 42);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(37, 33);
             this.button8.TabIndex = 7;
@@ -6175,9 +6181,9 @@
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox26.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox26.Location = new System.Drawing.Point(4, 1001);
-            this.groupBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox26.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox26.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox26.Size = new System.Drawing.Size(1317, 85);
             this.groupBox26.TabIndex = 83;
             this.groupBox26.TabStop = false;
@@ -6190,7 +6196,7 @@
             this.comboBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox42.FormattingEnabled = true;
             this.comboBox42.Location = new System.Drawing.Point(1159, 33);
-            this.comboBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox42.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox42.Name = "comboBox42";
             this.comboBox42.Size = new System.Drawing.Size(140, 26);
             this.comboBox42.TabIndex = 62;
@@ -6213,7 +6219,7 @@
             // 
             this.textBox40.BackColor = System.Drawing.Color.Honeydew;
             this.textBox40.Location = new System.Drawing.Point(252, 34);
-            this.textBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox40.Margin = new System.Windows.Forms.Padding(4);
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(248, 26);
             this.textBox40.TabIndex = 60;
@@ -6239,7 +6245,7 @@
             this.comboBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox43.FormattingEnabled = true;
             this.comboBox43.Location = new System.Drawing.Point(739, 34);
-            this.comboBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox43.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox43.Name = "comboBox43";
             this.comboBox43.Size = new System.Drawing.Size(188, 26);
             this.comboBox43.TabIndex = 41;
@@ -6267,9 +6273,9 @@
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox27.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox27.Location = new System.Drawing.Point(535, 855);
-            this.groupBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox27.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox27.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox27.Size = new System.Drawing.Size(787, 138);
             this.groupBox27.TabIndex = 82;
             this.groupBox27.TabStop = false;
@@ -6280,7 +6286,7 @@
             // 
             this.textBox41.BackColor = System.Drawing.Color.Honeydew;
             this.textBox41.Location = new System.Drawing.Point(381, 90);
-            this.textBox41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox41.Margin = new System.Windows.Forms.Padding(4);
             this.textBox41.Name = "textBox41";
             this.textBox41.Size = new System.Drawing.Size(387, 26);
             this.textBox41.TabIndex = 60;
@@ -6306,7 +6312,7 @@
             this.cmb_tipo_organo_constitucional_autonomo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_organo_constitucional_autonomo.FormattingEnabled = true;
             this.cmb_tipo_organo_constitucional_autonomo.Location = new System.Drawing.Point(327, 31);
-            this.cmb_tipo_organo_constitucional_autonomo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_tipo_organo_constitucional_autonomo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_organo_constitucional_autonomo.Name = "cmb_tipo_organo_constitucional_autonomo";
             this.cmb_tipo_organo_constitucional_autonomo.Size = new System.Drawing.Size(441, 26);
             this.cmb_tipo_organo_constitucional_autonomo.TabIndex = 41;
@@ -6334,9 +6340,9 @@
             this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox28.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox28.Location = new System.Drawing.Point(4, 855);
-            this.groupBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox28.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox28.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox28.Size = new System.Drawing.Size(523, 138);
             this.groupBox28.TabIndex = 74;
             this.groupBox28.TabStop = false;
@@ -6347,7 +6353,7 @@
             // 
             this.textBox42.BackColor = System.Drawing.Color.Honeydew;
             this.textBox42.Location = new System.Drawing.Point(368, 37);
-            this.textBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox42.Margin = new System.Windows.Forms.Padding(4);
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(135, 26);
             this.textBox42.TabIndex = 60;
@@ -6373,7 +6379,7 @@
             this.comboBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox45.FormattingEnabled = true;
             this.comboBox45.Location = new System.Drawing.Point(129, 90);
-            this.comboBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox45.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox45.Name = "comboBox45";
             this.comboBox45.Size = new System.Drawing.Size(371, 26);
             this.comboBox45.TabIndex = 41;
@@ -6400,9 +6406,9 @@
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox29.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox29.Location = new System.Drawing.Point(869, 523);
-            this.groupBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox29.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox29.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox29.Size = new System.Drawing.Size(452, 325);
             this.groupBox29.TabIndex = 78;
             this.groupBox29.TabStop = false;
@@ -6419,7 +6425,7 @@
             this.listView4.FullRowSelect = true;
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(12, 82);
-            this.listView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView4.Margin = new System.Windows.Forms.Padding(4);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(421, 221);
             this.listView4.TabIndex = 29;
@@ -6429,7 +6435,7 @@
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(353, 41);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(37, 33);
             this.button9.TabIndex = 7;
@@ -6456,9 +6462,9 @@
             this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox30.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox30.Location = new System.Drawing.Point(423, 523);
-            this.groupBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox30.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox30.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox30.Size = new System.Drawing.Size(439, 325);
             this.groupBox30.TabIndex = 77;
             this.groupBox30.TabStop = false;
@@ -6475,7 +6481,7 @@
             this.listView7.FullRowSelect = true;
             this.listView7.HideSelection = false;
             this.listView7.Location = new System.Drawing.Point(12, 82);
-            this.listView7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView7.Margin = new System.Windows.Forms.Padding(4);
             this.listView7.Name = "listView7";
             this.listView7.Size = new System.Drawing.Size(411, 221);
             this.listView7.TabIndex = 29;
@@ -6485,7 +6491,7 @@
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(337, 42);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(37, 33);
             this.button10.TabIndex = 7;
@@ -6512,9 +6518,9 @@
             this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox31.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox31.Location = new System.Drawing.Point(4, 523);
-            this.groupBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox31.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox31.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox31.Size = new System.Drawing.Size(408, 325);
             this.groupBox31.TabIndex = 76;
             this.groupBox31.TabStop = false;
@@ -6531,7 +6537,7 @@
             this.listView8.FullRowSelect = true;
             this.listView8.HideSelection = false;
             this.listView8.Location = new System.Drawing.Point(12, 82);
-            this.listView8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView8.Margin = new System.Windows.Forms.Padding(4);
             this.listView8.Name = "listView8";
             this.listView8.Size = new System.Drawing.Size(387, 221);
             this.listView8.TabIndex = 29;
@@ -6541,7 +6547,7 @@
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(308, 42);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(37, 33);
             this.button11.TabIndex = 7;
@@ -6575,9 +6581,9 @@
             this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox32.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox32.Location = new System.Drawing.Point(4, 169);
-            this.groupBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox32.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox32.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox32.Size = new System.Drawing.Size(1317, 146);
             this.groupBox32.TabIndex = 75;
             this.groupBox32.TabStop = false;
@@ -6589,7 +6595,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Honeydew;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(644, 97);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(283, 24);
             this.textBox1.TabIndex = 42;
@@ -6601,7 +6607,7 @@
             this.cmb_etapa_procesal_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_etapa_procesal_iniciativa.FormattingEnabled = true;
             this.cmb_etapa_procesal_iniciativa.Location = new System.Drawing.Point(1127, 94);
-            this.cmb_etapa_procesal_iniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_etapa_procesal_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_etapa_procesal_iniciativa.Name = "cmb_etapa_procesal_iniciativa";
             this.cmb_etapa_procesal_iniciativa.Size = new System.Drawing.Size(172, 26);
             this.cmb_etapa_procesal_iniciativa.TabIndex = 48;
@@ -6639,7 +6645,7 @@
             this.cmb_estatus_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_estatus_iniciativa.FormattingEnabled = true;
             this.cmb_estatus_iniciativa.Location = new System.Drawing.Point(145, 94);
-            this.cmb_estatus_iniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_estatus_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estatus_iniciativa.Name = "cmb_estatus_iniciativa";
             this.cmb_estatus_iniciativa.Size = new System.Drawing.Size(283, 26);
             this.cmb_estatus_iniciativa.TabIndex = 44;
@@ -6677,7 +6683,7 @@
             this.cmb_cond_modificacion_informacion_ingreso_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_modificacion_informacion_ingreso_periodo.FormattingEnabled = true;
             this.cmb_cond_modificacion_informacion_ingreso_periodo.Location = new System.Drawing.Point(957, 37);
-            this.cmb_cond_modificacion_informacion_ingreso_periodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_modificacion_informacion_ingreso_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_modificacion_informacion_ingreso_periodo.Name = "cmb_cond_modificacion_informacion_ingreso_periodo";
             this.cmb_cond_modificacion_informacion_ingreso_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_modificacion_informacion_ingreso_periodo.TabIndex = 41;
@@ -6689,7 +6695,7 @@
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.FormattingEnabled = true;
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Location = new System.Drawing.Point(369, 37);
-            this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Name = "cmb_cond_actualizacion_estatus_iniciativa_periodo";
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.TabIndex = 32;
@@ -6723,9 +6729,9 @@
             this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox33.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox33.Location = new System.Drawing.Point(4, 7);
-            this.groupBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox33.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox33.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox33.Size = new System.Drawing.Size(1317, 154);
             this.groupBox33.TabIndex = 73;
             this.groupBox33.TabStop = false;
@@ -6738,7 +6744,7 @@
             this.cmb_cond_presentacion_iniciativa_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_presentacion_iniciativa_periodo.FormattingEnabled = true;
             this.cmb_cond_presentacion_iniciativa_periodo.Location = new System.Drawing.Point(369, 103);
-            this.cmb_cond_presentacion_iniciativa_periodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_presentacion_iniciativa_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_presentacion_iniciativa_periodo.Name = "cmb_cond_presentacion_iniciativa_periodo";
             this.cmb_cond_presentacion_iniciativa_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_iniciativa_periodo.TabIndex = 41;
@@ -6749,7 +6755,7 @@
             this.textBox43.BackColor = System.Drawing.Color.Honeydew;
             this.textBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox43.Location = new System.Drawing.Point(1215, 55);
-            this.textBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox43.Margin = new System.Windows.Forms.Padding(4);
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new System.Drawing.Size(84, 24);
             this.textBox43.TabIndex = 40;
@@ -6761,7 +6767,7 @@
             this.cmb_numero_legislatura_presentacion_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_numero_legislatura_presentacion_iniciativa.FormattingEnabled = true;
             this.cmb_numero_legislatura_presentacion_iniciativa.Location = new System.Drawing.Point(892, 55);
-            this.cmb_numero_legislatura_presentacion_iniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_numero_legislatura_presentacion_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_numero_legislatura_presentacion_iniciativa.Name = "cmb_numero_legislatura_presentacion_iniciativa";
             this.cmb_numero_legislatura_presentacion_iniciativa.Size = new System.Drawing.Size(101, 26);
             this.cmb_numero_legislatura_presentacion_iniciativa.TabIndex = 39;
@@ -6812,7 +6818,7 @@
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.FormattingEnabled = true;
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.Location = new System.Drawing.Point(369, 55);
-            this.cmb_cond_presentacion_iniciativa_legislatura_actual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cond_presentacion_iniciativa_legislatura_actual.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.Name = "cmb_cond_presentacion_iniciativa_legislatura_actual";
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.TabIndex = 32;
@@ -6835,7 +6841,7 @@
             // 
             this.textBox44.BackColor = System.Drawing.Color.Honeydew;
             this.textBox44.Location = new System.Drawing.Point(1117, 14);
-            this.textBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox44.Margin = new System.Windows.Forms.Padding(4);
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(181, 26);
             this.textBox44.TabIndex = 16;
@@ -6866,9 +6872,9 @@
             this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox34.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox34.Location = new System.Drawing.Point(4, 1958);
-            this.groupBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox34.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox34.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox34.Size = new System.Drawing.Size(1317, 178);
             this.groupBox34.TabIndex = 85;
             this.groupBox34.TabStop = false;
@@ -6880,7 +6886,7 @@
             this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker4.Location = new System.Drawing.Point(1072, 97);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker4.TabIndex = 64;
@@ -6918,7 +6924,7 @@
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker3.Location = new System.Drawing.Point(295, 49);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker3.TabIndex = 61;
@@ -6931,7 +6937,7 @@
             this.comboBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox54.FormattingEnabled = true;
             this.comboBox54.Location = new System.Drawing.Point(296, 97);
-            this.comboBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox54.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox54.Name = "comboBox54";
             this.comboBox54.Size = new System.Drawing.Size(371, 26);
             this.comboBox54.TabIndex = 41;
@@ -6967,9 +6973,9 @@
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox35.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox35.Location = new System.Drawing.Point(4, 1758);
-            this.groupBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox35.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox35.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox35.Size = new System.Drawing.Size(1317, 193);
             this.groupBox35.TabIndex = 84;
             this.groupBox35.TabStop = false;
@@ -6981,7 +6987,7 @@
             this.textBox45.BackColor = System.Drawing.Color.Honeydew;
             this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox45.Location = new System.Drawing.Point(1171, 146);
-            this.textBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox45.Margin = new System.Windows.Forms.Padding(4);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(109, 24);
             this.textBox45.TabIndex = 69;
@@ -7005,7 +7011,7 @@
             this.textBox46.BackColor = System.Drawing.Color.Honeydew;
             this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox46.Location = new System.Drawing.Point(719, 146);
-            this.textBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox46.Margin = new System.Windows.Forms.Padding(4);
             this.textBox46.Name = "textBox46";
             this.textBox46.Size = new System.Drawing.Size(109, 24);
             this.textBox46.TabIndex = 67;
@@ -7029,7 +7035,7 @@
             this.textBox47.BackColor = System.Drawing.Color.Honeydew;
             this.textBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox47.Location = new System.Drawing.Point(284, 146);
-            this.textBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox47.Margin = new System.Windows.Forms.Padding(4);
             this.textBox47.Name = "textBox47";
             this.textBox47.Size = new System.Drawing.Size(109, 24);
             this.textBox47.TabIndex = 65;
@@ -7053,7 +7059,7 @@
             this.textBox48.BackColor = System.Drawing.Color.Honeydew;
             this.textBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox48.Location = new System.Drawing.Point(972, 86);
-            this.textBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox48.Margin = new System.Windows.Forms.Padding(4);
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(176, 24);
             this.textBox48.TabIndex = 63;
@@ -7077,7 +7083,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(284, 41);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker2.TabIndex = 61;
@@ -7103,7 +7109,7 @@
             this.comboBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox55.FormattingEnabled = true;
             this.comboBox55.Location = new System.Drawing.Point(284, 86);
-            this.comboBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox55.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox55.Name = "comboBox55";
             this.comboBox55.Size = new System.Drawing.Size(371, 26);
             this.comboBox55.TabIndex = 41;
@@ -7135,9 +7141,9 @@
             this.tabPageIniUO.Controls.Add(this.groupBox45);
             this.tabPageIniUO.Controls.Add(this.groupBox46);
             this.tabPageIniUO.Location = new System.Drawing.Point(4, 29);
-            this.tabPageIniUO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageIniUO.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageIniUO.Name = "tabPageIniUO";
-            this.tabPageIniUO.Size = new System.Drawing.Size(1672, 769);
+            this.tabPageIniUO.Size = new System.Drawing.Size(1672, 776);
             this.tabPageIniUO.TabIndex = 5;
             this.tabPageIniUO.Text = "Iniciativas UO";
             this.tabPageIniUO.UseVisualStyleBackColor = true;
@@ -7149,9 +7155,9 @@
             this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox38.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox38.Location = new System.Drawing.Point(4, 809);
-            this.groupBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox38.Size = new System.Drawing.Size(1317, 63);
             this.groupBox38.TabIndex = 75;
             this.groupBox38.TabStop = false;
@@ -7175,7 +7181,7 @@
             // 
             this.textBox49.BackColor = System.Drawing.Color.Honeydew;
             this.textBox49.Location = new System.Drawing.Point(464, 18);
-            this.textBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox49.Margin = new System.Windows.Forms.Padding(4);
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(387, 26);
             this.textBox49.TabIndex = 61;
@@ -7189,9 +7195,9 @@
             this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox39.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox39.Location = new System.Drawing.Point(4, 879);
-            this.groupBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox39.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox39.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox39.Size = new System.Drawing.Size(1317, 63);
             this.groupBox39.TabIndex = 73;
             this.groupBox39.TabStop = false;
@@ -7215,7 +7221,7 @@
             // 
             this.textBox50.BackColor = System.Drawing.Color.Honeydew;
             this.textBox50.Location = new System.Drawing.Point(464, 18);
-            this.textBox50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox50.Margin = new System.Windows.Forms.Padding(4);
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(387, 26);
             this.textBox50.TabIndex = 61;
@@ -7231,9 +7237,9 @@
             this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox40.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox40.Location = new System.Drawing.Point(535, 661);
-            this.groupBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox40.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox40.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox40.Size = new System.Drawing.Size(787, 138);
             this.groupBox40.TabIndex = 74;
             this.groupBox40.TabStop = false;
@@ -7244,7 +7250,7 @@
             // 
             this.textBox51.BackColor = System.Drawing.Color.Honeydew;
             this.textBox51.Location = new System.Drawing.Point(381, 90);
-            this.textBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox51.Margin = new System.Windows.Forms.Padding(4);
             this.textBox51.Name = "textBox51";
             this.textBox51.Size = new System.Drawing.Size(387, 26);
             this.textBox51.TabIndex = 60;
@@ -7270,7 +7276,7 @@
             this.comboBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox56.FormattingEnabled = true;
             this.comboBox56.Location = new System.Drawing.Point(327, 31);
-            this.comboBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox56.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox56.Name = "comboBox56";
             this.comboBox56.Size = new System.Drawing.Size(441, 26);
             this.comboBox56.TabIndex = 41;
@@ -7298,9 +7304,9 @@
             this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox41.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox41.Location = new System.Drawing.Point(4, 661);
-            this.groupBox41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox41.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox41.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox41.Size = new System.Drawing.Size(523, 138);
             this.groupBox41.TabIndex = 72;
             this.groupBox41.TabStop = false;
@@ -7311,7 +7317,7 @@
             // 
             this.textBox52.BackColor = System.Drawing.Color.Honeydew;
             this.textBox52.Location = new System.Drawing.Point(368, 37);
-            this.textBox52.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox52.Margin = new System.Windows.Forms.Padding(4);
             this.textBox52.Name = "textBox52";
             this.textBox52.Size = new System.Drawing.Size(135, 26);
             this.textBox52.TabIndex = 60;
@@ -7337,7 +7343,7 @@
             this.comboBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox57.FormattingEnabled = true;
             this.comboBox57.Location = new System.Drawing.Point(129, 90);
-            this.comboBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox57.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox57.Name = "comboBox57";
             this.comboBox57.Size = new System.Drawing.Size(371, 26);
             this.comboBox57.TabIndex = 41;
@@ -7364,9 +7370,9 @@
             this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox42.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox42.Location = new System.Drawing.Point(869, 327);
-            this.groupBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox42.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox42.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox42.Size = new System.Drawing.Size(452, 325);
             this.groupBox42.TabIndex = 68;
             this.groupBox42.TabStop = false;
@@ -7383,7 +7389,7 @@
             this.listView11.FullRowSelect = true;
             this.listView11.HideSelection = false;
             this.listView11.Location = new System.Drawing.Point(12, 82);
-            this.listView11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView11.Margin = new System.Windows.Forms.Padding(4);
             this.listView11.Name = "listView11";
             this.listView11.Size = new System.Drawing.Size(421, 221);
             this.listView11.TabIndex = 29;
@@ -7393,7 +7399,7 @@
             // button14
             // 
             this.button14.Location = new System.Drawing.Point(353, 41);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(37, 33);
             this.button14.TabIndex = 7;
@@ -7420,9 +7426,9 @@
             this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox43.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox43.Location = new System.Drawing.Point(443, 327);
-            this.groupBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox43.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox43.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox43.Size = new System.Drawing.Size(416, 326);
             this.groupBox43.TabIndex = 71;
             this.groupBox43.TabStop = false;
@@ -7439,7 +7445,7 @@
             this.listView12.FullRowSelect = true;
             this.listView12.HideSelection = false;
             this.listView12.Location = new System.Drawing.Point(12, 82);
-            this.listView12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView12.Margin = new System.Windows.Forms.Padding(4);
             this.listView12.Name = "listView12";
             this.listView12.Size = new System.Drawing.Size(395, 222);
             this.listView12.TabIndex = 29;
@@ -7449,7 +7455,7 @@
             // button15
             // 
             this.button15.Location = new System.Drawing.Point(273, 41);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(37, 33);
             this.button15.TabIndex = 7;
@@ -7476,9 +7482,9 @@
             this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox44.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox44.Location = new System.Drawing.Point(4, 327);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox44.Size = new System.Drawing.Size(431, 326);
             this.groupBox44.TabIndex = 70;
             this.groupBox44.TabStop = false;
@@ -7495,7 +7501,7 @@
             this.listView13.FullRowSelect = true;
             this.listView13.HideSelection = false;
             this.listView13.Location = new System.Drawing.Point(12, 82);
-            this.listView13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView13.Margin = new System.Windows.Forms.Padding(4);
             this.listView13.Name = "listView13";
             this.listView13.Size = new System.Drawing.Size(409, 222);
             this.listView13.TabIndex = 29;
@@ -7505,7 +7511,7 @@
             // button16
             // 
             this.button16.Location = new System.Drawing.Point(376, 47);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(37, 33);
             this.button16.TabIndex = 7;
@@ -7541,9 +7547,9 @@
             this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox45.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox45.Location = new System.Drawing.Point(4, 127);
-            this.groupBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox45.Size = new System.Drawing.Size(1317, 193);
             this.groupBox45.TabIndex = 69;
             this.groupBox45.TabStop = false;
@@ -7556,7 +7562,7 @@
             this.comboBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox58.FormattingEnabled = true;
             this.comboBox58.Location = new System.Drawing.Point(231, 133);
-            this.comboBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox58.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox58.Name = "comboBox58";
             this.comboBox58.Size = new System.Drawing.Size(373, 26);
             this.comboBox58.TabIndex = 59;
@@ -7567,7 +7573,7 @@
             this.textBox53.BackColor = System.Drawing.Color.Honeydew;
             this.textBox53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox53.Location = new System.Drawing.Point(1051, 90);
-            this.textBox53.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox53.Margin = new System.Windows.Forms.Padding(4);
             this.textBox53.Name = "textBox53";
             this.textBox53.Size = new System.Drawing.Size(233, 26);
             this.textBox53.TabIndex = 57;
@@ -7605,7 +7611,7 @@
             this.comboBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox59.FormattingEnabled = true;
             this.comboBox59.Location = new System.Drawing.Point(699, 82);
-            this.comboBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox59.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox59.Name = "comboBox59";
             this.comboBox59.Size = new System.Drawing.Size(311, 26);
             this.comboBox59.TabIndex = 55;
@@ -7629,7 +7635,7 @@
             this.dateTimePicker7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker7.Location = new System.Drawing.Point(325, 86);
-            this.dateTimePicker7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker7.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker7.Name = "dateTimePicker7";
             this.dateTimePicker7.Size = new System.Drawing.Size(123, 23);
             this.dateTimePicker7.TabIndex = 53;
@@ -7654,7 +7660,7 @@
             this.textBox54.BackColor = System.Drawing.Color.Honeydew;
             this.textBox54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox54.Location = new System.Drawing.Point(627, 32);
-            this.textBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox54.Margin = new System.Windows.Forms.Padding(4);
             this.textBox54.Name = "textBox54";
             this.textBox54.Size = new System.Drawing.Size(676, 26);
             this.textBox54.TabIndex = 51;
@@ -7691,7 +7697,7 @@
             this.dateTimePicker8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker8.Location = new System.Drawing.Point(325, 33);
-            this.dateTimePicker8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker8.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker8.Name = "dateTimePicker8";
             this.dateTimePicker8.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker8.TabIndex = 43;
@@ -7709,9 +7715,9 @@
             this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox46.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox46.Location = new System.Drawing.Point(4, 4);
-            this.groupBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox46.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox46.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox46.Size = new System.Drawing.Size(1317, 116);
             this.groupBox46.TabIndex = 67;
             this.groupBox46.TabStop = false;
@@ -7723,7 +7729,7 @@
             this.textBox55.BackColor = System.Drawing.Color.Honeydew;
             this.textBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox55.Location = new System.Drawing.Point(253, 68);
-            this.textBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox55.Margin = new System.Windows.Forms.Padding(4);
             this.textBox55.Name = "textBox55";
             this.textBox55.Size = new System.Drawing.Size(375, 24);
             this.textBox55.TabIndex = 40;
@@ -7735,7 +7741,7 @@
             this.comboBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox60.FormattingEnabled = true;
             this.comboBox60.Location = new System.Drawing.Point(951, 68);
-            this.comboBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox60.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox60.Name = "comboBox60";
             this.comboBox60.Size = new System.Drawing.Size(348, 26);
             this.comboBox60.TabIndex = 39;
@@ -7771,7 +7777,7 @@
             // 
             this.textBox56.BackColor = System.Drawing.Color.Honeydew;
             this.textBox56.Location = new System.Drawing.Point(1117, 26);
-            this.textBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox56.Margin = new System.Windows.Forms.Padding(4);
             this.textBox56.Name = "textBox56";
             this.textBox56.Size = new System.Drawing.Size(181, 26);
             this.textBox56.TabIndex = 16;
@@ -7800,9 +7806,9 @@
             this.tabPageJP.Controls.Add(this.groupBox50);
             this.tabPageJP.Controls.Add(this.groupBox51);
             this.tabPageJP.Location = new System.Drawing.Point(4, 29);
-            this.tabPageJP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageJP.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageJP.Name = "tabPageJP";
-            this.tabPageJP.Size = new System.Drawing.Size(1672, 769);
+            this.tabPageJP.Size = new System.Drawing.Size(1672, 776);
             this.tabPageJP.TabIndex = 6;
             this.tabPageJP.Text = "Juicios políticos";
             this.tabPageJP.UseVisualStyleBackColor = true;
@@ -7817,9 +7823,9 @@
             this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox47.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox47.Location = new System.Drawing.Point(4, 1161);
-            this.groupBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox47.Size = new System.Drawing.Size(1505, 326);
             this.groupBox47.TabIndex = 71;
             this.groupBox47.TabStop = false;
@@ -7831,7 +7837,7 @@
             this.comboBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox61.FormattingEnabled = true;
             this.comboBox61.Location = new System.Drawing.Point(1387, 46);
-            this.comboBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox61.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox61.Name = "comboBox61";
             this.comboBox61.Size = new System.Drawing.Size(109, 26);
             this.comboBox61.TabIndex = 55;
@@ -7861,7 +7867,7 @@
             this.listView14.FullRowSelect = true;
             this.listView14.HideSelection = false;
             this.listView14.Location = new System.Drawing.Point(12, 82);
-            this.listView14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView14.Margin = new System.Windows.Forms.Padding(4);
             this.listView14.Name = "listView14";
             this.listView14.Size = new System.Drawing.Size(1484, 222);
             this.listView14.TabIndex = 29;
@@ -7871,7 +7877,7 @@
             // button17
             // 
             this.button17.Location = new System.Drawing.Point(643, 43);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(37, 33);
             this.button17.TabIndex = 7;
@@ -7912,9 +7918,9 @@
             this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox48.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox48.Location = new System.Drawing.Point(4, 871);
-            this.groupBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox48.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox48.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox48.Size = new System.Drawing.Size(1505, 282);
             this.groupBox48.TabIndex = 74;
             this.groupBox48.TabStop = false;
@@ -7940,7 +7946,7 @@
             this.textBox57.BackColor = System.Drawing.Color.Honeydew;
             this.textBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox57.Location = new System.Drawing.Point(660, 239);
-            this.textBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox57.Margin = new System.Windows.Forms.Padding(4);
             this.textBox57.Name = "textBox57";
             this.textBox57.Size = new System.Drawing.Size(404, 24);
             this.textBox57.TabIndex = 42;
@@ -7964,7 +7970,7 @@
             this.textBox58.BackColor = System.Drawing.Color.Honeydew;
             this.textBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox58.Location = new System.Drawing.Point(660, 190);
-            this.textBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox58.Margin = new System.Windows.Forms.Padding(4);
             this.textBox58.Name = "textBox58";
             this.textBox58.Size = new System.Drawing.Size(404, 24);
             this.textBox58.TabIndex = 40;
@@ -7976,7 +7982,7 @@
             this.comboBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox62.FormattingEnabled = true;
             this.comboBox62.Location = new System.Drawing.Point(796, 143);
-            this.comboBox62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox62.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox62.Name = "comboBox62";
             this.comboBox62.Size = new System.Drawing.Size(239, 26);
             this.comboBox62.TabIndex = 38;
@@ -8001,7 +8007,7 @@
             this.comboBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox63.FormattingEnabled = true;
             this.comboBox63.Location = new System.Drawing.Point(532, 91);
-            this.comboBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox63.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox63.Name = "comboBox63";
             this.comboBox63.Size = new System.Drawing.Size(239, 26);
             this.comboBox63.TabIndex = 36;
@@ -8026,7 +8032,7 @@
             this.comboBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox64.FormattingEnabled = true;
             this.comboBox64.Location = new System.Drawing.Point(564, 38);
-            this.comboBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox64.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox64.Name = "comboBox64";
             this.comboBox64.Size = new System.Drawing.Size(123, 26);
             this.comboBox64.TabIndex = 32;
@@ -8037,7 +8043,7 @@
             this.textBox59.BackColor = System.Drawing.Color.Honeydew;
             this.textBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox59.Location = new System.Drawing.Point(263, 143);
-            this.textBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox59.Margin = new System.Windows.Forms.Padding(4);
             this.textBox59.Name = "textBox59";
             this.textBox59.Size = new System.Drawing.Size(227, 24);
             this.textBox59.TabIndex = 28;
@@ -8074,7 +8080,7 @@
             this.textBox60.BackColor = System.Drawing.Color.Honeydew;
             this.textBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox60.Location = new System.Drawing.Point(192, 91);
-            this.textBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox60.Margin = new System.Windows.Forms.Padding(4);
             this.textBox60.Name = "textBox60";
             this.textBox60.Size = new System.Drawing.Size(225, 24);
             this.textBox60.TabIndex = 17;
@@ -8111,7 +8117,7 @@
             this.textBox61.BackColor = System.Drawing.Color.Honeydew;
             this.textBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox61.Location = new System.Drawing.Point(1191, 91);
-            this.textBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox61.Margin = new System.Windows.Forms.Padding(4);
             this.textBox61.Name = "textBox61";
             this.textBox61.Size = new System.Drawing.Size(283, 24);
             this.textBox61.TabIndex = 22;
@@ -8138,9 +8144,9 @@
             this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox49.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox49.Location = new System.Drawing.Point(4, 626);
-            this.groupBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox49.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox49.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox49.Size = new System.Drawing.Size(1505, 238);
             this.groupBox49.TabIndex = 73;
             this.groupBox49.TabStop = false;
@@ -8205,7 +8211,7 @@
             this.comboBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox65.FormattingEnabled = true;
             this.comboBox65.Location = new System.Drawing.Point(64, 180);
-            this.comboBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox65.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox65.Name = "comboBox65";
             this.comboBox65.Size = new System.Drawing.Size(123, 26);
             this.comboBox65.TabIndex = 32;
@@ -8216,7 +8222,7 @@
             this.textBox62.BackColor = System.Drawing.Color.Honeydew;
             this.textBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox62.Location = new System.Drawing.Point(1244, 110);
-            this.textBox62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox62.Margin = new System.Windows.Forms.Padding(4);
             this.textBox62.Name = "textBox62";
             this.textBox62.Size = new System.Drawing.Size(227, 24);
             this.textBox62.TabIndex = 28;
@@ -8228,7 +8234,7 @@
             this.comboBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox66.FormattingEnabled = true;
             this.comboBox66.Location = new System.Drawing.Point(291, 180);
-            this.comboBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox66.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox66.Name = "comboBox66";
             this.comboBox66.Size = new System.Drawing.Size(1183, 26);
             this.comboBox66.TabIndex = 34;
@@ -8252,7 +8258,7 @@
             this.textBox63.BackColor = System.Drawing.Color.Honeydew;
             this.textBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox63.Location = new System.Drawing.Point(748, 107);
-            this.textBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox63.Margin = new System.Windows.Forms.Padding(4);
             this.textBox63.Name = "textBox63";
             this.textBox63.Size = new System.Drawing.Size(224, 24);
             this.textBox63.TabIndex = 27;
@@ -8263,7 +8269,7 @@
             this.textBox64.BackColor = System.Drawing.Color.Honeydew;
             this.textBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox64.Location = new System.Drawing.Point(137, 111);
-            this.textBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox64.Margin = new System.Windows.Forms.Padding(4);
             this.textBox64.Name = "textBox64";
             this.textBox64.Size = new System.Drawing.Size(224, 24);
             this.textBox64.TabIndex = 26;
@@ -8287,7 +8293,7 @@
             this.textBox65.BackColor = System.Drawing.Color.Honeydew;
             this.textBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox65.Location = new System.Drawing.Point(136, 64);
-            this.textBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox65.Margin = new System.Windows.Forms.Padding(4);
             this.textBox65.Name = "textBox65";
             this.textBox65.Size = new System.Drawing.Size(225, 24);
             this.textBox65.TabIndex = 17;
@@ -8311,7 +8317,7 @@
             this.textBox66.BackColor = System.Drawing.Color.Honeydew;
             this.textBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox66.Location = new System.Drawing.Point(747, 60);
-            this.textBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox66.Margin = new System.Windows.Forms.Padding(4);
             this.textBox66.Name = "textBox66";
             this.textBox66.Size = new System.Drawing.Size(225, 24);
             this.textBox66.TabIndex = 20;
@@ -8335,7 +8341,7 @@
             this.textBox67.BackColor = System.Drawing.Color.Honeydew;
             this.textBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox67.Location = new System.Drawing.Point(1243, 60);
-            this.textBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox67.Margin = new System.Windows.Forms.Padding(4);
             this.textBox67.Name = "textBox67";
             this.textBox67.Size = new System.Drawing.Size(228, 24);
             this.textBox67.TabIndex = 22;
@@ -8354,9 +8360,9 @@
             this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox50.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox50.Location = new System.Drawing.Point(4, 452);
-            this.groupBox50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox50.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox50.Name = "groupBox50";
-            this.groupBox50.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox50.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox50.Size = new System.Drawing.Size(1505, 167);
             this.groupBox50.TabIndex = 72;
             this.groupBox50.TabStop = false;
@@ -8368,7 +8374,7 @@
             this.textBox68.BackColor = System.Drawing.Color.Honeydew;
             this.textBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox68.Location = new System.Drawing.Point(1361, 103);
-            this.textBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox68.Margin = new System.Windows.Forms.Padding(4);
             this.textBox68.Name = "textBox68";
             this.textBox68.Size = new System.Drawing.Size(112, 24);
             this.textBox68.TabIndex = 66;
@@ -8392,7 +8398,7 @@
             this.textBox69.BackColor = System.Drawing.Color.Honeydew;
             this.textBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox69.Location = new System.Drawing.Point(847, 103);
-            this.textBox69.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox69.Margin = new System.Windows.Forms.Padding(4);
             this.textBox69.Name = "textBox69";
             this.textBox69.Size = new System.Drawing.Size(112, 24);
             this.textBox69.TabIndex = 64;
@@ -8416,7 +8422,7 @@
             this.textBox70.BackColor = System.Drawing.Color.Honeydew;
             this.textBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox70.Location = new System.Drawing.Point(328, 101);
-            this.textBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox70.Margin = new System.Windows.Forms.Padding(4);
             this.textBox70.Name = "textBox70";
             this.textBox70.Size = new System.Drawing.Size(131, 24);
             this.textBox70.TabIndex = 62;
@@ -8440,7 +8446,7 @@
             this.textBox71.BackColor = System.Drawing.Color.Honeydew;
             this.textBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox71.Location = new System.Drawing.Point(308, 43);
-            this.textBox71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox71.Margin = new System.Windows.Forms.Padding(4);
             this.textBox71.Name = "textBox71";
             this.textBox71.Size = new System.Drawing.Size(112, 24);
             this.textBox71.TabIndex = 60;
@@ -8490,9 +8496,9 @@
             this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox51.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox51.Location = new System.Drawing.Point(4, 6);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox51.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox51.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox51.Size = new System.Drawing.Size(1505, 438);
             this.groupBox51.TabIndex = 70;
             this.groupBox51.TabStop = false;
@@ -8504,7 +8510,7 @@
             this.dateTimePicker9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker9.Location = new System.Drawing.Point(233, 338);
-            this.dateTimePicker9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker9.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker9.Name = "dateTimePicker9";
             this.dateTimePicker9.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker9.TabIndex = 52;
@@ -8529,7 +8535,7 @@
             this.textBox72.BackColor = System.Drawing.Color.Honeydew;
             this.textBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox72.Location = new System.Drawing.Point(1147, 244);
-            this.textBox72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox72.Margin = new System.Windows.Forms.Padding(4);
             this.textBox72.Name = "textBox72";
             this.textBox72.Size = new System.Drawing.Size(327, 24);
             this.textBox72.TabIndex = 50;
@@ -8553,7 +8559,7 @@
             this.textBox73.BackColor = System.Drawing.Color.Honeydew;
             this.textBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox73.Location = new System.Drawing.Point(468, 244);
-            this.textBox73.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox73.Margin = new System.Windows.Forms.Padding(4);
             this.textBox73.Name = "textBox73";
             this.textBox73.Size = new System.Drawing.Size(269, 24);
             this.textBox73.TabIndex = 48;
@@ -8578,7 +8584,7 @@
             this.comboBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox67.FormattingEnabled = true;
             this.comboBox67.Location = new System.Drawing.Point(1015, 178);
-            this.comboBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox67.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox67.Name = "comboBox67";
             this.comboBox67.Size = new System.Drawing.Size(259, 26);
             this.comboBox67.TabIndex = 46;
@@ -8603,7 +8609,7 @@
             this.comboBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox68.FormattingEnabled = true;
             this.comboBox68.Location = new System.Drawing.Point(344, 391);
-            this.comboBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox68.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox68.Name = "comboBox68";
             this.comboBox68.Size = new System.Drawing.Size(197, 26);
             this.comboBox68.TabIndex = 58;
@@ -8615,7 +8621,7 @@
             this.comboBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox69.FormattingEnabled = true;
             this.comboBox69.Location = new System.Drawing.Point(493, 182);
-            this.comboBox69.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox69.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox69.Name = "comboBox69";
             this.comboBox69.Size = new System.Drawing.Size(104, 26);
             this.comboBox69.TabIndex = 44;
@@ -8652,7 +8658,7 @@
             this.dateTimePicker10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker10.Location = new System.Drawing.Point(1204, 336);
-            this.dateTimePicker10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker10.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker10.Name = "dateTimePicker10";
             this.dateTimePicker10.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker10.TabIndex = 56;
@@ -8665,7 +8671,7 @@
             this.comboBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox70.FormattingEnabled = true;
             this.comboBox70.Location = new System.Drawing.Point(493, 128);
-            this.comboBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox70.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox70.Name = "comboBox70";
             this.comboBox70.Size = new System.Drawing.Size(104, 26);
             this.comboBox70.TabIndex = 42;
@@ -8690,7 +8696,7 @@
             this.comboBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox71.FormattingEnabled = true;
             this.comboBox71.Location = new System.Drawing.Point(1169, 71);
-            this.comboBox71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox71.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox71.Name = "comboBox71";
             this.comboBox71.Size = new System.Drawing.Size(104, 26);
             this.comboBox71.TabIndex = 41;
@@ -8701,7 +8707,7 @@
             this.dateTimePicker11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker11.Location = new System.Drawing.Point(757, 337);
-            this.dateTimePicker11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker11.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker11.Name = "dateTimePicker11";
             this.dateTimePicker11.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker11.TabIndex = 54;
@@ -8713,7 +8719,7 @@
             this.textBox74.BackColor = System.Drawing.Color.Honeydew;
             this.textBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox74.Location = new System.Drawing.Point(1004, 124);
-            this.textBox74.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox74.Margin = new System.Windows.Forms.Padding(4);
             this.textBox74.Name = "textBox74";
             this.textBox74.Size = new System.Drawing.Size(269, 24);
             this.textBox74.TabIndex = 40;
@@ -8777,7 +8783,7 @@
             this.comboBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox72.FormattingEnabled = true;
             this.comboBox72.Location = new System.Drawing.Point(493, 75);
-            this.comboBox72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox72.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox72.Name = "comboBox72";
             this.comboBox72.Size = new System.Drawing.Size(104, 26);
             this.comboBox72.TabIndex = 32;
@@ -8800,7 +8806,7 @@
             // 
             this.textBox75.BackColor = System.Drawing.Color.Honeydew;
             this.textBox75.Location = new System.Drawing.Point(1277, 23);
-            this.textBox75.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox75.Margin = new System.Windows.Forms.Padding(4);
             this.textBox75.Name = "textBox75";
             this.textBox75.Size = new System.Drawing.Size(195, 26);
             this.textBox75.TabIndex = 16;
@@ -8828,9 +8834,9 @@
             this.tabPageDP.Controls.Add(this.groupBox54);
             this.tabPageDP.Controls.Add(this.groupBox55);
             this.tabPageDP.Location = new System.Drawing.Point(4, 29);
-            this.tabPageDP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageDP.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDP.Name = "tabPageDP";
-            this.tabPageDP.Size = new System.Drawing.Size(1672, 769);
+            this.tabPageDP.Size = new System.Drawing.Size(1672, 776);
             this.tabPageDP.TabIndex = 7;
             this.tabPageDP.Text = "Declaraciones procedencia";
             this.tabPageDP.UseVisualStyleBackColor = true;
@@ -8856,9 +8862,9 @@
             this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox52.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox52.Location = new System.Drawing.Point(4, 912);
-            this.groupBox52.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox52.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox52.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox52.Size = new System.Drawing.Size(1385, 369);
             this.groupBox52.TabIndex = 74;
             this.groupBox52.TabStop = false;
@@ -8884,7 +8890,7 @@
             this.textBox76.BackColor = System.Drawing.Color.Honeydew;
             this.textBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox76.Location = new System.Drawing.Point(660, 313);
-            this.textBox76.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox76.Margin = new System.Windows.Forms.Padding(4);
             this.textBox76.Name = "textBox76";
             this.textBox76.Size = new System.Drawing.Size(404, 24);
             this.textBox76.TabIndex = 42;
@@ -8908,7 +8914,7 @@
             this.textBox77.BackColor = System.Drawing.Color.Honeydew;
             this.textBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox77.Location = new System.Drawing.Point(635, 257);
-            this.textBox77.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox77.Margin = new System.Windows.Forms.Padding(4);
             this.textBox77.Name = "textBox77";
             this.textBox77.Size = new System.Drawing.Size(429, 24);
             this.textBox77.TabIndex = 40;
@@ -8920,7 +8926,7 @@
             this.comboBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox73.FormattingEnabled = true;
             this.comboBox73.Location = new System.Drawing.Point(291, 208);
-            this.comboBox73.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox73.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox73.Name = "comboBox73";
             this.comboBox73.Size = new System.Drawing.Size(239, 26);
             this.comboBox73.TabIndex = 38;
@@ -8945,7 +8951,7 @@
             this.comboBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox74.FormattingEnabled = true;
             this.comboBox74.Location = new System.Drawing.Point(692, 91);
-            this.comboBox74.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox74.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox74.Name = "comboBox74";
             this.comboBox74.Size = new System.Drawing.Size(239, 26);
             this.comboBox74.TabIndex = 36;
@@ -8970,7 +8976,7 @@
             this.comboBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox75.FormattingEnabled = true;
             this.comboBox75.Location = new System.Drawing.Point(648, 38);
-            this.comboBox75.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox75.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox75.Name = "comboBox75";
             this.comboBox75.Size = new System.Drawing.Size(123, 26);
             this.comboBox75.TabIndex = 32;
@@ -8981,7 +8987,7 @@
             this.textBox78.BackColor = System.Drawing.Color.Honeydew;
             this.textBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox78.Location = new System.Drawing.Point(1203, 153);
-            this.textBox78.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox78.Margin = new System.Windows.Forms.Padding(4);
             this.textBox78.Name = "textBox78";
             this.textBox78.Size = new System.Drawing.Size(140, 24);
             this.textBox78.TabIndex = 28;
@@ -9018,7 +9024,7 @@
             this.textBox79.BackColor = System.Drawing.Color.Honeydew;
             this.textBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox79.Location = new System.Drawing.Point(192, 91);
-            this.textBox79.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox79.Margin = new System.Windows.Forms.Padding(4);
             this.textBox79.Name = "textBox79";
             this.textBox79.Size = new System.Drawing.Size(225, 24);
             this.textBox79.TabIndex = 17;
@@ -9055,7 +9061,7 @@
             this.textBox80.BackColor = System.Drawing.Color.Honeydew;
             this.textBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox80.Location = new System.Drawing.Point(572, 153);
-            this.textBox80.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox80.Margin = new System.Windows.Forms.Padding(4);
             this.textBox80.Name = "textBox80";
             this.textBox80.Size = new System.Drawing.Size(359, 24);
             this.textBox80.TabIndex = 22;
@@ -9082,9 +9088,9 @@
             this.groupBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox53.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox53.Location = new System.Drawing.Point(4, 667);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox53.Size = new System.Drawing.Size(1385, 238);
             this.groupBox53.TabIndex = 73;
             this.groupBox53.TabStop = false;
@@ -9149,7 +9155,7 @@
             this.comboBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox76.FormattingEnabled = true;
             this.comboBox76.Location = new System.Drawing.Point(64, 180);
-            this.comboBox76.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox76.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox76.Name = "comboBox76";
             this.comboBox76.Size = new System.Drawing.Size(123, 26);
             this.comboBox76.TabIndex = 32;
@@ -9160,7 +9166,7 @@
             this.textBox81.BackColor = System.Drawing.Color.Honeydew;
             this.textBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox81.Location = new System.Drawing.Point(1117, 106);
-            this.textBox81.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox81.Margin = new System.Windows.Forms.Padding(4);
             this.textBox81.Name = "textBox81";
             this.textBox81.Size = new System.Drawing.Size(227, 24);
             this.textBox81.TabIndex = 28;
@@ -9172,7 +9178,7 @@
             this.comboBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox77.FormattingEnabled = true;
             this.comboBox77.Location = new System.Drawing.Point(291, 180);
-            this.comboBox77.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox77.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox77.Name = "comboBox77";
             this.comboBox77.Size = new System.Drawing.Size(1052, 26);
             this.comboBox77.TabIndex = 34;
@@ -9196,7 +9202,7 @@
             this.textBox82.BackColor = System.Drawing.Color.Honeydew;
             this.textBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox82.Location = new System.Drawing.Point(641, 108);
-            this.textBox82.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox82.Margin = new System.Windows.Forms.Padding(4);
             this.textBox82.Name = "textBox82";
             this.textBox82.Size = new System.Drawing.Size(224, 24);
             this.textBox82.TabIndex = 27;
@@ -9207,7 +9213,7 @@
             this.textBox83.BackColor = System.Drawing.Color.Honeydew;
             this.textBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox83.Location = new System.Drawing.Point(137, 111);
-            this.textBox83.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox83.Margin = new System.Windows.Forms.Padding(4);
             this.textBox83.Name = "textBox83";
             this.textBox83.Size = new System.Drawing.Size(224, 24);
             this.textBox83.TabIndex = 26;
@@ -9231,7 +9237,7 @@
             this.textBox84.BackColor = System.Drawing.Color.Honeydew;
             this.textBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox84.Location = new System.Drawing.Point(136, 64);
-            this.textBox84.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox84.Margin = new System.Windows.Forms.Padding(4);
             this.textBox84.Name = "textBox84";
             this.textBox84.Size = new System.Drawing.Size(225, 24);
             this.textBox84.TabIndex = 17;
@@ -9255,7 +9261,7 @@
             this.textBox85.BackColor = System.Drawing.Color.Honeydew;
             this.textBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox85.Location = new System.Drawing.Point(640, 60);
-            this.textBox85.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox85.Margin = new System.Windows.Forms.Padding(4);
             this.textBox85.Name = "textBox85";
             this.textBox85.Size = new System.Drawing.Size(225, 24);
             this.textBox85.TabIndex = 20;
@@ -9279,7 +9285,7 @@
             this.textBox86.BackColor = System.Drawing.Color.Honeydew;
             this.textBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox86.Location = new System.Drawing.Point(1116, 57);
-            this.textBox86.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox86.Margin = new System.Windows.Forms.Padding(4);
             this.textBox86.Name = "textBox86";
             this.textBox86.Size = new System.Drawing.Size(228, 24);
             this.textBox86.TabIndex = 22;
@@ -9298,9 +9304,9 @@
             this.groupBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox54.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox54.Location = new System.Drawing.Point(4, 452);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox54.Size = new System.Drawing.Size(1385, 208);
             this.groupBox54.TabIndex = 72;
             this.groupBox54.TabStop = false;
@@ -9312,7 +9318,7 @@
             this.textBox87.BackColor = System.Drawing.Color.Honeydew;
             this.textBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox87.Location = new System.Drawing.Point(433, 165);
-            this.textBox87.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox87.Margin = new System.Windows.Forms.Padding(4);
             this.textBox87.Name = "textBox87";
             this.textBox87.Size = new System.Drawing.Size(112, 24);
             this.textBox87.TabIndex = 66;
@@ -9336,7 +9342,7 @@
             this.textBox88.BackColor = System.Drawing.Color.Honeydew;
             this.textBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox88.Location = new System.Drawing.Point(1000, 101);
-            this.textBox88.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox88.Margin = new System.Windows.Forms.Padding(4);
             this.textBox88.Name = "textBox88";
             this.textBox88.Size = new System.Drawing.Size(112, 24);
             this.textBox88.TabIndex = 64;
@@ -9360,7 +9366,7 @@
             this.textBox89.BackColor = System.Drawing.Color.Honeydew;
             this.textBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox89.Location = new System.Drawing.Point(407, 103);
-            this.textBox89.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox89.Margin = new System.Windows.Forms.Padding(4);
             this.textBox89.Name = "textBox89";
             this.textBox89.Size = new System.Drawing.Size(131, 24);
             this.textBox89.TabIndex = 62;
@@ -9384,7 +9390,7 @@
             this.textBox90.BackColor = System.Drawing.Color.Honeydew;
             this.textBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox90.Location = new System.Drawing.Point(393, 43);
-            this.textBox90.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox90.Margin = new System.Windows.Forms.Padding(4);
             this.textBox90.Name = "textBox90";
             this.textBox90.Size = new System.Drawing.Size(112, 24);
             this.textBox90.TabIndex = 60;
@@ -9434,9 +9440,9 @@
             this.groupBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox55.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox55.Location = new System.Drawing.Point(4, 4);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox55.Size = new System.Drawing.Size(1385, 441);
             this.groupBox55.TabIndex = 71;
             this.groupBox55.TabStop = false;
@@ -9448,7 +9454,7 @@
             this.dateTimePicker12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker12.Location = new System.Drawing.Point(173, 341);
-            this.dateTimePicker12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker12.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker12.Name = "dateTimePicker12";
             this.dateTimePicker12.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker12.TabIndex = 52;
@@ -9473,7 +9479,7 @@
             this.textBox91.BackColor = System.Drawing.Color.Honeydew;
             this.textBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox91.Location = new System.Drawing.Point(951, 244);
-            this.textBox91.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox91.Margin = new System.Windows.Forms.Padding(4);
             this.textBox91.Name = "textBox91";
             this.textBox91.Size = new System.Drawing.Size(341, 24);
             this.textBox91.TabIndex = 50;
@@ -9497,7 +9503,7 @@
             this.textBox92.BackColor = System.Drawing.Color.Honeydew;
             this.textBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox92.Location = new System.Drawing.Point(553, 234);
-            this.textBox92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox92.Margin = new System.Windows.Forms.Padding(4);
             this.textBox92.Name = "textBox92";
             this.textBox92.Size = new System.Drawing.Size(301, 24);
             this.textBox92.TabIndex = 48;
@@ -9522,7 +9528,7 @@
             this.comboBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox78.FormattingEnabled = true;
             this.comboBox78.Location = new System.Drawing.Point(1099, 178);
-            this.comboBox78.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox78.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox78.Name = "comboBox78";
             this.comboBox78.Size = new System.Drawing.Size(259, 26);
             this.comboBox78.TabIndex = 46;
@@ -9547,7 +9553,7 @@
             this.comboBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox79.FormattingEnabled = true;
             this.comboBox79.Location = new System.Drawing.Point(412, 394);
-            this.comboBox79.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox79.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox79.Name = "comboBox79";
             this.comboBox79.Size = new System.Drawing.Size(197, 26);
             this.comboBox79.TabIndex = 58;
@@ -9559,7 +9565,7 @@
             this.comboBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox80.FormattingEnabled = true;
             this.comboBox80.Location = new System.Drawing.Point(579, 182);
-            this.comboBox80.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox80.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox80.Name = "comboBox80";
             this.comboBox80.Size = new System.Drawing.Size(104, 26);
             this.comboBox80.TabIndex = 44;
@@ -9596,7 +9602,7 @@
             this.dateTimePicker13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker13.Location = new System.Drawing.Point(1116, 341);
-            this.dateTimePicker13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker13.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker13.Name = "dateTimePicker13";
             this.dateTimePicker13.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker13.TabIndex = 56;
@@ -9609,7 +9615,7 @@
             this.comboBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox81.FormattingEnabled = true;
             this.comboBox81.Location = new System.Drawing.Point(579, 128);
-            this.comboBox81.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox81.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox81.Name = "comboBox81";
             this.comboBox81.Size = new System.Drawing.Size(104, 26);
             this.comboBox81.TabIndex = 42;
@@ -9634,7 +9640,7 @@
             this.comboBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox82.FormattingEnabled = true;
             this.comboBox82.Location = new System.Drawing.Point(1255, 71);
-            this.comboBox82.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox82.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox82.Name = "comboBox82";
             this.comboBox82.Size = new System.Drawing.Size(104, 26);
             this.comboBox82.TabIndex = 41;
@@ -9645,7 +9651,7 @@
             this.dateTimePicker14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker14.Location = new System.Drawing.Point(679, 341);
-            this.dateTimePicker14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker14.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker14.Name = "dateTimePicker14";
             this.dateTimePicker14.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker14.TabIndex = 54;
@@ -9657,7 +9663,7 @@
             this.textBox93.BackColor = System.Drawing.Color.Honeydew;
             this.textBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox93.Location = new System.Drawing.Point(1089, 128);
-            this.textBox93.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox93.Margin = new System.Windows.Forms.Padding(4);
             this.textBox93.Name = "textBox93";
             this.textBox93.Size = new System.Drawing.Size(269, 24);
             this.textBox93.TabIndex = 40;
@@ -9721,7 +9727,7 @@
             this.comboBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox83.FormattingEnabled = true;
             this.comboBox83.Location = new System.Drawing.Point(579, 75);
-            this.comboBox83.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox83.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox83.Name = "comboBox83";
             this.comboBox83.Size = new System.Drawing.Size(104, 26);
             this.comboBox83.TabIndex = 32;
@@ -9744,7 +9750,7 @@
             // 
             this.textBox94.BackColor = System.Drawing.Color.Honeydew;
             this.textBox94.Location = new System.Drawing.Point(1164, 26);
-            this.textBox94.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox94.Margin = new System.Windows.Forms.Padding(4);
             this.textBox94.Name = "textBox94";
             this.textBox94.Size = new System.Drawing.Size(195, 26);
             this.textBox94.TabIndex = 16;
@@ -9772,9 +9778,9 @@
             this.tabPageCom.Controls.Add(this.groupBox58);
             this.tabPageCom.Controls.Add(this.groupBox59);
             this.tabPageCom.Location = new System.Drawing.Point(4, 29);
-            this.tabPageCom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageCom.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCom.Name = "tabPageCom";
-            this.tabPageCom.Size = new System.Drawing.Size(1672, 769);
+            this.tabPageCom.Size = new System.Drawing.Size(1672, 776);
             this.tabPageCom.TabIndex = 8;
             this.tabPageCom.Text = "Comparecencias";
             this.tabPageCom.UseVisualStyleBackColor = true;
@@ -9794,9 +9800,9 @@
             this.groupBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox56.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox56.Location = new System.Drawing.Point(11, 566);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox56.Size = new System.Drawing.Size(1363, 226);
             this.groupBox56.TabIndex = 74;
             this.groupBox56.TabStop = false;
@@ -9822,7 +9828,7 @@
             this.textBox95.BackColor = System.Drawing.Color.Honeydew;
             this.textBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox95.Location = new System.Drawing.Point(660, 181);
-            this.textBox95.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox95.Margin = new System.Windows.Forms.Padding(4);
             this.textBox95.Name = "textBox95";
             this.textBox95.Size = new System.Drawing.Size(404, 24);
             this.textBox95.TabIndex = 42;
@@ -9846,7 +9852,7 @@
             this.textBox96.BackColor = System.Drawing.Color.Honeydew;
             this.textBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox96.Location = new System.Drawing.Point(660, 132);
-            this.textBox96.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox96.Margin = new System.Windows.Forms.Padding(4);
             this.textBox96.Name = "textBox96";
             this.textBox96.Size = new System.Drawing.Size(404, 24);
             this.textBox96.TabIndex = 40;
@@ -9858,7 +9864,7 @@
             this.comboBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox84.FormattingEnabled = true;
             this.comboBox84.Location = new System.Drawing.Point(291, 90);
-            this.comboBox84.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox84.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox84.Name = "comboBox84";
             this.comboBox84.Size = new System.Drawing.Size(299, 26);
             this.comboBox84.TabIndex = 38;
@@ -9882,7 +9888,7 @@
             this.textBox97.BackColor = System.Drawing.Color.Honeydew;
             this.textBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox97.Location = new System.Drawing.Point(1117, 38);
-            this.textBox97.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox97.Margin = new System.Windows.Forms.Padding(4);
             this.textBox97.Name = "textBox97";
             this.textBox97.Size = new System.Drawing.Size(227, 24);
             this.textBox97.TabIndex = 28;
@@ -9919,7 +9925,7 @@
             this.textBox98.BackColor = System.Drawing.Color.Honeydew;
             this.textBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox98.Location = new System.Drawing.Point(375, 39);
-            this.textBox98.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox98.Margin = new System.Windows.Forms.Padding(4);
             this.textBox98.Name = "textBox98";
             this.textBox98.Size = new System.Drawing.Size(380, 24);
             this.textBox98.TabIndex = 22;
@@ -9946,9 +9952,9 @@
             this.groupBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox57.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox57.Location = new System.Drawing.Point(632, 249);
-            this.groupBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox57.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox57.Name = "groupBox57";
-            this.groupBox57.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox57.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox57.Size = new System.Drawing.Size(741, 310);
             this.groupBox57.TabIndex = 73;
             this.groupBox57.TabStop = false;
@@ -9961,7 +9967,7 @@
             this.comboBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox85.FormattingEnabled = true;
             this.comboBox85.Location = new System.Drawing.Point(5, 261);
-            this.comboBox85.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox85.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox85.Name = "comboBox85";
             this.comboBox85.Size = new System.Drawing.Size(713, 26);
             this.comboBox85.TabIndex = 70;
@@ -10025,7 +10031,7 @@
             this.comboBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox86.FormattingEnabled = true;
             this.comboBox86.Location = new System.Drawing.Point(64, 206);
-            this.comboBox86.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox86.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox86.Name = "comboBox86";
             this.comboBox86.Size = new System.Drawing.Size(123, 26);
             this.comboBox86.TabIndex = 32;
@@ -10036,7 +10042,7 @@
             this.textBox99.BackColor = System.Drawing.Color.Honeydew;
             this.textBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox99.Location = new System.Drawing.Point(541, 156);
-            this.textBox99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox99.Margin = new System.Windows.Forms.Padding(4);
             this.textBox99.Name = "textBox99";
             this.textBox99.Size = new System.Drawing.Size(177, 24);
             this.textBox99.TabIndex = 28;
@@ -10060,7 +10066,7 @@
             this.textBox100.BackColor = System.Drawing.Color.Honeydew;
             this.textBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox100.Location = new System.Drawing.Point(541, 108);
-            this.textBox100.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox100.Margin = new System.Windows.Forms.Padding(4);
             this.textBox100.Name = "textBox100";
             this.textBox100.Size = new System.Drawing.Size(177, 24);
             this.textBox100.TabIndex = 27;
@@ -10071,7 +10077,7 @@
             this.textBox101.BackColor = System.Drawing.Color.Honeydew;
             this.textBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox101.Location = new System.Drawing.Point(541, 60);
-            this.textBox101.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox101.Margin = new System.Windows.Forms.Padding(4);
             this.textBox101.Name = "textBox101";
             this.textBox101.Size = new System.Drawing.Size(177, 24);
             this.textBox101.TabIndex = 26;
@@ -10095,7 +10101,7 @@
             this.textBox102.BackColor = System.Drawing.Color.Honeydew;
             this.textBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox102.Location = new System.Drawing.Point(152, 64);
-            this.textBox102.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox102.Margin = new System.Windows.Forms.Padding(4);
             this.textBox102.Name = "textBox102";
             this.textBox102.Size = new System.Drawing.Size(192, 24);
             this.textBox102.TabIndex = 17;
@@ -10119,7 +10125,7 @@
             this.textBox103.BackColor = System.Drawing.Color.Honeydew;
             this.textBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox103.Location = new System.Drawing.Point(152, 111);
-            this.textBox103.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox103.Margin = new System.Windows.Forms.Padding(4);
             this.textBox103.Name = "textBox103";
             this.textBox103.Size = new System.Drawing.Size(192, 24);
             this.textBox103.TabIndex = 20;
@@ -10143,7 +10149,7 @@
             this.textBox104.BackColor = System.Drawing.Color.Honeydew;
             this.textBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox104.Location = new System.Drawing.Point(152, 154);
-            this.textBox104.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox104.Margin = new System.Windows.Forms.Padding(4);
             this.textBox104.Name = "textBox104";
             this.textBox104.Size = new System.Drawing.Size(192, 24);
             this.textBox104.TabIndex = 22;
@@ -10157,9 +10163,9 @@
             this.groupBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox58.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox58.Location = new System.Drawing.Point(11, 249);
-            this.groupBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox58.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox58.Name = "groupBox58";
-            this.groupBox58.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox58.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox58.Size = new System.Drawing.Size(599, 310);
             this.groupBox58.TabIndex = 72;
             this.groupBox58.TabStop = false;
@@ -10176,7 +10182,7 @@
             this.listView15.FullRowSelect = true;
             this.listView15.HideSelection = false;
             this.listView15.Location = new System.Drawing.Point(12, 82);
-            this.listView15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView15.Margin = new System.Windows.Forms.Padding(4);
             this.listView15.Name = "listView15";
             this.listView15.Size = new System.Drawing.Size(577, 206);
             this.listView15.TabIndex = 29;
@@ -10186,7 +10192,7 @@
             // button18
             // 
             this.button18.Location = new System.Drawing.Point(476, 36);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(37, 33);
             this.button18.TabIndex = 7;
@@ -10224,9 +10230,9 @@
             this.groupBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox59.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox59.Location = new System.Drawing.Point(11, 4);
-            this.groupBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox59.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox59.Name = "groupBox59";
-            this.groupBox59.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox59.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox59.Size = new System.Drawing.Size(1363, 238);
             this.groupBox59.TabIndex = 71;
             this.groupBox59.TabStop = false;
@@ -10251,7 +10257,7 @@
             this.textBox105.BackColor = System.Drawing.Color.Honeydew;
             this.textBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox105.Location = new System.Drawing.Point(975, 191);
-            this.textBox105.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox105.Margin = new System.Windows.Forms.Padding(4);
             this.textBox105.Name = "textBox105";
             this.textBox105.Size = new System.Drawing.Size(365, 24);
             this.textBox105.TabIndex = 62;
@@ -10288,7 +10294,7 @@
             this.textBox106.BackColor = System.Drawing.Color.Honeydew;
             this.textBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox106.Location = new System.Drawing.Point(244, 76);
-            this.textBox106.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox106.Margin = new System.Windows.Forms.Padding(4);
             this.textBox106.Name = "textBox106";
             this.textBox106.Size = new System.Drawing.Size(248, 24);
             this.textBox106.TabIndex = 48;
@@ -10300,7 +10306,7 @@
             this.comboBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox87.FormattingEnabled = true;
             this.comboBox87.Location = new System.Drawing.Point(244, 191);
-            this.comboBox87.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox87.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox87.Name = "comboBox87";
             this.comboBox87.Size = new System.Drawing.Size(375, 26);
             this.comboBox87.TabIndex = 44;
@@ -10311,7 +10317,7 @@
             this.dateTimePicker15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker15.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker15.Location = new System.Drawing.Point(713, 75);
-            this.dateTimePicker15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker15.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker15.Name = "dateTimePicker15";
             this.dateTimePicker15.Size = new System.Drawing.Size(104, 23);
             this.dateTimePicker15.TabIndex = 56;
@@ -10324,7 +10330,7 @@
             this.comboBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox88.FormattingEnabled = true;
             this.comboBox88.Location = new System.Drawing.Point(244, 133);
-            this.comboBox88.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox88.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox88.Name = "comboBox88";
             this.comboBox88.Size = new System.Drawing.Size(375, 26);
             this.comboBox88.TabIndex = 41;
@@ -10335,7 +10341,7 @@
             this.textBox107.BackColor = System.Drawing.Color.Honeydew;
             this.textBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox107.Location = new System.Drawing.Point(975, 133);
-            this.textBox107.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox107.Margin = new System.Windows.Forms.Padding(4);
             this.textBox107.Name = "textBox107";
             this.textBox107.Size = new System.Drawing.Size(365, 24);
             this.textBox107.TabIndex = 40;
@@ -10384,7 +10390,7 @@
             // 
             this.textBox108.BackColor = System.Drawing.Color.Honeydew;
             this.textBox108.Location = new System.Drawing.Point(1145, 26);
-            this.textBox108.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox108.Margin = new System.Windows.Forms.Padding(4);
             this.textBox108.Name = "textBox108";
             this.textBox108.Size = new System.Drawing.Size(195, 26);
             this.textBox108.TabIndex = 16;
@@ -10409,7 +10415,7 @@
             this.BtnSalirDG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnSalirDG.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalirDG.Image")));
             this.BtnSalirDG.Location = new System.Drawing.Point(266, 20);
-            this.BtnSalirDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalirDG.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalirDG.Name = "BtnSalirDG";
             this.BtnSalirDG.Size = new System.Drawing.Size(51, 43);
             this.BtnSalirDG.TabIndex = 42;
@@ -10422,7 +10428,7 @@
             this.txt_id_legislatura.BackColor = System.Drawing.Color.Honeydew;
             this.txt_id_legislatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_legislatura.Location = new System.Drawing.Point(1099, 33);
-            this.txt_id_legislatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_id_legislatura.Margin = new System.Windows.Forms.Padding(4);
             this.txt_id_legislatura.Name = "txt_id_legislatura";
             this.txt_id_legislatura.Size = new System.Drawing.Size(279, 30);
             this.txt_id_legislatura.TabIndex = 17;
@@ -10444,7 +10450,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(213, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -10462,7 +10468,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormRegistros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistros";
@@ -10759,20 +10765,20 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.ComboBox cmb_sexo_persona_legisladora;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento_persona_legisladora;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_apellido_3_persona_legisladora;
         private System.Windows.Forms.ComboBox cmb_estatus_persona_legisladora;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txt_ID_persona_legisladora;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txt_apellido_2_persona_legisladora;
+        private System.Windows.Forms.TextBox txt_apellido_1_persona_legisladora;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_nombre_1_persona_legisladora;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txt_nombre_2_persona_legisladora;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txt_nombre_3_persona_legisladora;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.ComboBox comboBox19;
         private System.Windows.Forms.Label label65;
