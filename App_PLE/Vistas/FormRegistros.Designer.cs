@@ -874,7 +874,7 @@
             this.tabPageDG.ForeColor = System.Drawing.Color.ForestGreen;
             this.tabPageDG.Location = new System.Drawing.Point(4, 25);
             this.tabPageDG.Name = "tabPageDG";
-            this.tabPageDG.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageDG.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDG.Size = new System.Drawing.Size(1252, 628);
             this.tabPageDG.TabIndex = 0;
             this.tabPageDG.Text = "Datos generales";
@@ -1546,7 +1546,7 @@
             this.tabPageCL.Controls.Add(this.label33);
             this.tabPageCL.Location = new System.Drawing.Point(4, 25);
             this.tabPageCL.Name = "tabPageCL";
-            this.tabPageCL.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageCL.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageCL.Size = new System.Drawing.Size(1252, 628);
             this.tabPageCL.TabIndex = 1;
             this.tabPageCL.Text = "Comisiones legislativas";
@@ -1590,7 +1590,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(768, 4869);
+            this.btnGuardarCL.Location = new System.Drawing.Point(759, 4953);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1692,7 +1692,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(678, 6931);
+            this.button24.Location = new System.Drawing.Point(669, 7015);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -2271,7 +2271,7 @@
             this.tabPagePL.Controls.Add(this.groupBox13);
             this.tabPagePL.Location = new System.Drawing.Point(4, 25);
             this.tabPagePL.Name = "tabPagePL";
-            this.tabPagePL.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPagePL.Padding = new System.Windows.Forms.Padding(3);
             this.tabPagePL.Size = new System.Drawing.Size(1252, 628);
             this.tabPagePL.TabIndex = 2;
             this.tabPagePL.Text = "Personas legisladoras";
@@ -4394,7 +4394,7 @@
             // 
             this.txt_nombre_1_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
             this.txt_nombre_1_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_1_persona_legisladora.Location = new System.Drawing.Point(120, 31);
+            this.txt_nombre_1_persona_legisladora.Location = new System.Drawing.Point(123, 31);
             this.txt_nombre_1_persona_legisladora.Name = "txt_nombre_1_persona_legisladora";
             this.txt_nombre_1_persona_legisladora.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_1_persona_legisladora.TabIndex = 17;
