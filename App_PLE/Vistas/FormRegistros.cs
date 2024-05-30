@@ -79,7 +79,7 @@ namespace App_PLE.Vistas
             cmb_Causa_fallecimiento_persona_legisladora();
             cmb_Caracter_cargo_persona_legisladora();
             cmb_Escolaridad_persona_legisladora();
-            cmb_Estatus_escolaridad_persona_legisladora();
+            //cmb_Estatus_escolaridad_persona_legisladora();
             cmb_Carrera_licenciatura_persona_legisladora();
             cmb_Carrera_maestria_persona_legisladora();
             cmb_Carrera_doctorado_persona_legisladora();
@@ -112,6 +112,11 @@ namespace App_PLE.Vistas
             txt_nombre_3_persona_legisladora.Enabled = false; txt_nombre_3_persona_legisladora.BackColor = Color.LightGray;
             txt_apellido_2_persona_legisladora.Enabled = false; txt_apellido_2_persona_legisladora.BackColor = Color.LightGray;
             txt_apellido_3_persona_legisladora.Enabled = false; txt_apellido_3_persona_legisladora.BackColor = Color.LightGray;
+            txt_otro_estatus_persona_legisladora_especifique.Enabled = false; txt_otro_estatus_persona_legisladora_especifique.BackColor = Color.LightGray;
+            cbm_causa_fallecimiento_persona_legisladora.Enabled = false; cbm_causa_fallecimiento_persona_legisladora.BackColor = Color.LightGray;
+            cbm_tipo_licencia_persona_legisladora.Enabled = false; cbm_tipo_licencia_persona_legisladora.BackColor = Color.LightGray;
+            cmb_nombre_persona_legisladora_propietaria.Enabled = false; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.LightGray;
+            txt_ID_persona_legisladora_propietaria.Enabled = false; txt_ID_persona_legisladora_propietaria.BackColor = Color.LightGray;
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
             dtp_fecha_nacimiento_persona_legisladora.Value = new DateTime(1970, 9, 9);
@@ -3306,7 +3311,6 @@ namespace App_PLE.Vistas
 
             }
         }
-
         private void txt_nombre_1_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -3349,7 +3353,6 @@ namespace App_PLE.Vistas
                 txt_nombre_3_persona_legisladora.Enabled = true; txt_nombre_3_persona_legisladora.BackColor = Color.Honeydew;
             }
         }
-
         private void txt_nombre_3_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -3358,7 +3361,6 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_nombre_3_persona_legisladora.SelectionStart = txt_nombre_3_persona_legisladora.Text.Length;
         }
-
         private void txt_apellido_1_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -3379,7 +3381,6 @@ namespace App_PLE.Vistas
                 txt_apellido_2_persona_legisladora.Enabled = true; txt_apellido_2_persona_legisladora.BackColor = Color.Honeydew;
             }
         }
-
         private void txt_apellido_2_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -3400,7 +3401,6 @@ namespace App_PLE.Vistas
                 txt_apellido_3_persona_legisladora.Enabled = true; txt_apellido_3_persona_legisladora.BackColor = Color.Honeydew;
             }
         }
-
         private void txt_apellido_3_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -3409,7 +3409,148 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_apellido_3_persona_legisladora.SelectionStart = txt_apellido_3_persona_legisladora.Text.Length;
         }
+        private void txt_otro_estatus_persona_legisladora_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_estatus_persona_legisladora_especifique.Text = txt_otro_estatus_persona_legisladora_especifique.Text.ToUpper();
 
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_estatus_persona_legisladora_especifique.SelectionStart = txt_otro_estatus_persona_legisladora_especifique.Text.Length;
+        }
+        private void cmb_estatus_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_estatus_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Otro estatus (especifique)")
+            {
+                txt_otro_estatus_persona_legisladora_especifique.Enabled = true; txt_otro_estatus_persona_legisladora_especifique.BackColor = Color.Honeydew;
+                txt_otro_estatus_persona_legisladora_especifique.Focus();
+            }
+            else
+            {
+                txt_otro_estatus_persona_legisladora_especifique.Enabled = false; txt_otro_estatus_persona_legisladora_especifique.BackColor = Color.LightGray;
+                txt_otro_estatus_persona_legisladora_especifique.Text = "";
+            }
+
+            if (valorComboBox1 == "Fallecimiento")
+            {
+                cbm_causa_fallecimiento_persona_legisladora.Enabled = true; cbm_causa_fallecimiento_persona_legisladora.BackColor = Color.Honeydew;
+                cbm_causa_fallecimiento_persona_legisladora.Focus();
+            }
+            else
+            {
+                cbm_causa_fallecimiento_persona_legisladora.Enabled = false; cbm_causa_fallecimiento_persona_legisladora.BackColor = Color.LightGray;
+                cbm_causa_fallecimiento_persona_legisladora.SelectedIndex = -1;
+            }
+
+            if (valorComboBox1 == "Con licencia")
+            {
+                cbm_tipo_licencia_persona_legisladora.Enabled = true; cbm_tipo_licencia_persona_legisladora.BackColor = Color.Honeydew;
+                cbm_tipo_licencia_persona_legisladora.Focus();
+            }
+            else
+            {
+                cbm_tipo_licencia_persona_legisladora.Enabled = false; cbm_tipo_licencia_persona_legisladora.BackColor = Color.LightGray;
+                cbm_tipo_licencia_persona_legisladora.SelectedIndex = -1;
+            }
+        }
+        private void txt_otro_estatus_persona_legisladora_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_estatus_persona_legisladora_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro tipo de estatus.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_estatus_persona_legisladora_especifique.Focus();
+            }
+        }
+        private void cmb_caracter_cargo_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_caracter_cargo_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Suplente")
+            {
+                cmb_nombre_persona_legisladora_propietaria.Enabled = true; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.Honeydew;
+                cmb_nombre_persona_legisladora_propietaria.Focus();
+            }
+            else
+            {
+                cmb_nombre_persona_legisladora_propietaria.Enabled = false; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.LightGray;
+                cmb_nombre_persona_legisladora_propietaria.Text = "";
+            }
+        }
+        private void cmb_escolaridad_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            if (cmb_escolaridad_persona_legisladora_PL.SelectedItem != null)
+            {
+                // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+                string valorComboBox = cmb_escolaridad_persona_legisladora_PL.Text.ToString();
+
+                
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        string query = "";
+
+                        switch (valorComboBox)
+                        {
+                            case "Ninguno":
+                                string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1)";
+                                break;
+
+                            default:
+                                string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1)";
+                                break;
+                        }
+
+                        // comando de sql
+                        //string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in @id_estatus_escolaridad";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        if (valorComboBox != "Ninguno")
+                        {
+                            cmd.Parameters.AddWithValue("@valor", valorComboBox);
+                        }
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                        //SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_estatus_escolaridad_persona_legisladora.DataSource = dataTable;
+                        cmb_estatus_escolaridad_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_estatus_escolaridad_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_estatus_escolaridad_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_estatus_escolaridad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_estatus_escolaridad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+            }
+            else { 
+            }
+
+            
+        }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
         private void cmb_Sexo_personal_apoyo()
@@ -4426,6 +4567,16 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
 
 
 
