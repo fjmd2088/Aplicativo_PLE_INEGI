@@ -114,7 +114,7 @@ namespace App_PLE.Vistas
             txt_apellido_3_persona_legisladora.Enabled = false; txt_apellido_3_persona_legisladora.BackColor = Color.LightGray;
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
-            dtp_fecha_nacimiento_persona_legisladora.Value = new DateTime(1899, 9, 9);
+            dtp_fecha_nacimiento_persona_legisladora.Value = new DateTime(1970, 9, 9);
 
             // ---------------------------------------------- PERSONAL DE APOYO ---------------------------------------------------------------
             cmb_Sexo_personal_apoyo();
@@ -3324,7 +3324,8 @@ namespace App_PLE.Vistas
             }
             else
             {
-                txt_nombre_2_persona_legisladora.Enabled = true; txt_nombre_2_persona_legisladora.BackColor = Color.Honeydew;
+                txt_nombre_2_persona_legisladora.Visible = false;
+                //txt_nombre_2_persona_legisladora.Enabled = true; txt_nombre_2_persona_legisladora.BackColor = Color.Honeydew;
             }
 
         }
@@ -3365,6 +3366,18 @@ namespace App_PLE.Vistas
 
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_apellido_1_persona_legisladora.SelectionStart = txt_apellido_1_persona_legisladora.Text.Length;
+
+            if (string.IsNullOrWhiteSpace(txt_apellido_1_persona_legisladora.Text))
+            {
+                MessageBox.Show("Debe especificar el apellido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_apellido_2_persona_legisladora.BackColor = Color.LightGray; txt_apellido_2_persona_legisladora.Enabled = false;
+                txt_apellido_2_persona_legisladora.Clear();
+                txt_apellido_1_persona_legisladora.Focus();
+            }
+            else
+            {
+                txt_apellido_2_persona_legisladora.Enabled = true; txt_apellido_2_persona_legisladora.BackColor = Color.Honeydew;
+            }
         }
 
         private void txt_apellido_2_persona_legisladora_TextChanged(object sender, EventArgs e)
@@ -3374,6 +3387,18 @@ namespace App_PLE.Vistas
 
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_apellido_2_persona_legisladora.SelectionStart = txt_apellido_2_persona_legisladora.Text.Length;
+
+            if (string.IsNullOrWhiteSpace(txt_apellido_2_persona_legisladora.Text))
+            {
+                MessageBox.Show("Debe especificar el apellido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_apellido_3_persona_legisladora.BackColor = Color.LightGray; txt_apellido_3_persona_legisladora.Enabled = false;
+                txt_apellido_3_persona_legisladora.Clear();
+                txt_apellido_2_persona_legisladora.Focus();
+            }
+            else
+            {
+                txt_apellido_3_persona_legisladora.Enabled = true; txt_apellido_3_persona_legisladora.BackColor = Color.Honeydew;
+            }
         }
 
         private void txt_apellido_3_persona_legisladora_TextChanged(object sender, EventArgs e)
