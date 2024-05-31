@@ -117,6 +117,10 @@ namespace App_PLE.Vistas
             cbm_tipo_licencia_persona_legisladora.Enabled = false; cbm_tipo_licencia_persona_legisladora.BackColor = Color.LightGray;
             cmb_nombre_persona_legisladora_propietaria.Enabled = false; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.LightGray;
             txt_ID_persona_legisladora_propietaria.Enabled = false; txt_ID_persona_legisladora_propietaria.BackColor = Color.LightGray;
+            cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
+            cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
+            cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+            btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
             dtp_fecha_nacimiento_persona_legisladora.Value = new DateTime(1970, 9, 9);
@@ -3496,32 +3500,49 @@ namespace App_PLE.Vistas
                         // abrir la conexion
                         conexion.Open();
 
-                        string query = "";
+                        string query;
 
                         switch (valorComboBox)
                         {
                             case "Ninguno":
-                                string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1)";
+                                 query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (8)";
+                                break;
+                            case "Preescolar o primaria":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,9)";
+                                break;
+                            case "Secundaria":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,9)";
+                                break;
+                            case "Preparatoria":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,9)";
+                                break;
+                            case "Carrera técnica o carrera comercial":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "Licenciatura":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "Maestría":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "Doctorado":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "No identificado":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (9)";
                                 break;
 
                             default:
-                                string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1)";
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (10)";
                                 break;
                         }
-
+                        
                         // comando de sql
-                        //string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in @id_estatus_escolaridad";
                         SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                        if (valorComboBox != "Ninguno")
-                        {
-                            cmd.Parameters.AddWithValue("@valor", valorComboBox);
-                        }
 
                         // Utilizar un DataReader para obtener los datos
                         SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                        //SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
+                        
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
@@ -3533,6 +3554,54 @@ namespace App_PLE.Vistas
 
                         cmb_estatus_escolaridad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
                         cmb_estatus_escolaridad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+
+                        if (valorComboBox == "Licenciatura")
+                        {
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = true; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.Honeydew;
+                            cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
+                            cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Focus();
+                            btnAgregarNivelEscPL.Enabled = true; btnEliminarNivelEscPL.Enabled = true;
+
+                            cmb_carrera_maestria_persona_legisladora_PL.Text = ""; cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
+                        }
+                        else if (valorComboBox == "Maestría")
+                        {
+
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = true; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.Honeydew;
+                            cmb_carrera_maestria_persona_legisladora_PL.Enabled = true; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.Honeydew;
+                            cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Focus();
+
+                            btnAgregarNivelEscPL.Enabled = true; btnEliminarNivelEscPL.Enabled = true;
+
+                            cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
+                        }
+                        else if (valorComboBox == "Doctorado")
+                        {
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = true; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.Honeydew;
+                            cmb_carrera_maestria_persona_legisladora_PL.Enabled = true; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.Honeydew;
+                            cmb_carrera_doctorado_persona_legisladora_PL.Enabled = true; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.Honeydew;
+
+                            btnAgregarNivelEscPL.Enabled = true; btnEliminarNivelEscPL.Enabled = true;
+
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Focus();
+                        }
+                        else
+                        {
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
+                            cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
+                            cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+
+                            cmb_carrera_licenciatura_persona_legisladora_PL.Text = ""; cmb_carrera_maestria_persona_legisladora_PL.Text = "";
+                            cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
+
+                            btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
+                        }
+
+                        
+
                     }
                     catch (Exception ex)
                     {
@@ -3550,6 +3619,45 @@ namespace App_PLE.Vistas
             }
 
             
+        }
+        private void btnAgregarNivelEscPL_Click(object sender, EventArgs e)
+        {
+            // se obtienen los valores
+            string lic_pl = cmb_carrera_licenciatura_persona_legisladora_PL.Text.Trim();
+            string mae_pl = cmb_carrera_maestria_persona_legisladora_PL.Text.Trim();
+            string doc_pl = cmb_carrera_doctorado_persona_legisladora_PL.Text.Trim();
+
+            //if (string.IsNullOrWhiteSpace(cmb_carrera_licenciatura_persona_legisladora_PL.Text))
+            //{
+            //    MessageBox.Show("Revisar datos vacios");
+            //}
+            //else
+            //{
+                
+                    // Agregar una nueva fila al DataGridView
+                    dgv_nivel_escolaridad_PL.Rows.Add(lic_pl, mae_pl, doc_pl);
+
+                    cmb_carrera_licenciatura_persona_legisladora_PL.Text = "";
+                    //cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
+
+                cmb_carrera_maestria_persona_legisladora_PL.Text = "";
+                //cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
+
+                cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
+                //cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+
+            //}
+        }
+        private void btnEliminarNivelEscPL_Click(object sender, EventArgs e)
+        {
+            if (dgv_nivel_escolaridad_PL.SelectedRows.Count > 0)
+            {
+                dgv_nivel_escolaridad_PL.Rows.RemoveAt(dgv_nivel_escolaridad_PL.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
         }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
@@ -4567,6 +4675,10 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
 
 
 
