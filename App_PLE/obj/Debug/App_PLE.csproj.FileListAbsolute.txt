@@ -236,5 +236,4 @@ C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.exe
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.pdb
-C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
-C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete
+C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.Up2Date

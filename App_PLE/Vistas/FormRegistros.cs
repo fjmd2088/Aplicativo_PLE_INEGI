@@ -84,7 +84,9 @@ namespace App_PLE.Vistas
             cmb_Carrera_maestria_persona_legisladora();
             cmb_Carrera_doctorado_persona_legisladora();
             cmb_Cond_lengua_ind_persona_legisladora();
+            cmb_Lengua_ind_persona_legisladora();
             cmb_Cond_discapacidad_persona_legisladora();
+            cmb_Tipo_discapacidad_persona_legisladora();
             cmb_Cond_pueblo_ind_persona_legisladora();
             cmb_Pueblo_ind_persona_legisladora();
             cmb_Cond_pob_diversidad_sexual_persona_legisladora();
@@ -120,7 +122,15 @@ namespace App_PLE.Vistas
             cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
             cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
             cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+            cmb_lengua_ind_persona_legisladora.Enabled = false; cmb_lengua_ind_persona_legisladora.BackColor = Color.LightGray;
+            cmb_pueblo_ind_persona_legisladora_PL.Enabled = false; cmb_pueblo_ind_persona_legisladora_PL.BackColor = Color.LightGray;
+            cmb_tipo_discapacidad_persona_legisladora.Enabled = false; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.LightGray;
+            cmb_cond_pob_diversidad_sexual_persona_legisladora.Enabled = false; cmb_cond_pob_diversidad_sexual_persona_legisladora.BackColor = Color.LightGray;
+
+
             btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
+            btnAgregarLenguaPL.Enabled = false;btnEliminarLenguaPL.Enabled = false;
+            btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false;
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
             dtp_fecha_nacimiento_persona_legisladora.Value = new DateTime(1970, 9, 9);
@@ -1960,8 +1970,6 @@ namespace App_PLE.Vistas
             return true;
         }
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
-
-
         private void cmb_Sexo_Persona_Legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2384,48 +2392,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_cond_discapacidad_persona_legisladora.DataSource = dataTable;
-                    cmb_cond_discapacidad_persona_legisladora.DisplayMember = "descripcion";
-
-                    cmb_cond_discapacidad_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_cond_discapacidad_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_cond_discapacidad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_cond_discapacidad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
-        private void cmb_Cond_discapacidad_persona_legisladora()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -2454,6 +2421,129 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_Lengua_ind_persona_legisladora()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_LENGUA_INDIGENA";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_lengua_ind_persona_legisladora.DataSource = dataTable;
+                    cmb_lengua_ind_persona_legisladora.DisplayMember = "descripcion";
+
+                    cmb_lengua_ind_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_lengua_ind_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_lengua_ind_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_lengua_ind_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_Cond_discapacidad_persona_legisladora()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cond_discapacidad_persona_legisladora.DataSource = dataTable;
+                    cmb_cond_discapacidad_persona_legisladora.DisplayMember = "descripcion";
+
+                    cmb_cond_discapacidad_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cond_discapacidad_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cond_discapacidad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cond_discapacidad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_Tipo_discapacidad_persona_legisladora()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_TIPO_DISCAPACIDAD";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_tipo_discapacidad_persona_legisladora.DataSource = dataTable;
+                    cmb_tipo_discapacidad_persona_legisladora.DisplayMember = "descripcion";
+
+                    cmb_tipo_discapacidad_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_tipo_discapacidad_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_tipo_discapacidad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_tipo_discapacidad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
         private void cmb_Cond_pueblo_ind_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2466,7 +2556,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -2548,7 +2638,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -2589,7 +2679,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3659,6 +3749,147 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Seleccionar registro a eliminar");
             }
         }
+        private void cmb_cond_lengua_ind_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_lengua_ind_persona_legisladora_PL.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_lengua_ind_persona_legisladora.Enabled = true; cmb_lengua_ind_persona_legisladora.BackColor = Color.Honeydew;
+                btnAgregarLenguaPL.Enabled = true; btnEliminarLenguaPL.Enabled = true;
+                cmb_lengua_ind_persona_legisladora.Focus();
+            }
+            else
+            {
+                cmb_lengua_ind_persona_legisladora.Enabled = false; cmb_lengua_ind_persona_legisladora.BackColor = Color.LightGray;
+                dgv_lengua_PL.Rows.Clear();
+                btnAgregarLenguaPL.Enabled = false; btnEliminarLenguaPL.Enabled = false;
+                
+                cmb_lengua_ind_persona_legisladora.Text = "";
+            }
+        }
+        private void btnAgregarLenguaPL_Click(object sender, EventArgs e)
+        {
+            // se obtienen los valores
+            string lengua_pl = cmb_lengua_ind_persona_legisladora.Text.Trim();
+            
+
+            if (string.IsNullOrWhiteSpace(cmb_lengua_ind_persona_legisladora.Text))
+            {
+                MessageBox.Show("Revisar datos vacios");
+            }
+            else
+            {
+
+            // Agregar una nueva fila al DataGridView
+            dgv_lengua_PL.Rows.Add(lengua_pl);
+
+            cmb_lengua_ind_persona_legisladora.Text = "";
+            
+            }
+        }
+        private void btnEliminarLenguaPL_Click(object sender, EventArgs e)
+        {
+            if (dgv_lengua_PL.SelectedRows.Count > 0)
+            {
+                dgv_lengua_PL.Rows.RemoveAt(dgv_lengua_PL.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private void cmb_cond_pueblo_ind_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_pueblo_ind_persona_legisladora_PL.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_pueblo_ind_persona_legisladora_PL.Enabled = true; cmb_pueblo_ind_persona_legisladora_PL.BackColor = Color.Honeydew;
+                cmb_pueblo_ind_persona_legisladora_PL.Focus();
+            }
+            else
+            {
+                cmb_pueblo_ind_persona_legisladora_PL.Enabled = false; cmb_pueblo_ind_persona_legisladora_PL.BackColor = Color.LightGray;
+                cmb_pueblo_ind_persona_legisladora_PL.Text = "";
+            }
+        }
+        private void cmb_cond_discapacidad_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_discapacidad_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_tipo_discapacidad_persona_legisladora.Enabled = true; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.Honeydew;
+                btnAgregarDiscapacidadPL.Enabled = true; btnEliminarDiscapacidadPL.Enabled = true;
+                cmb_tipo_discapacidad_persona_legisladora.Focus();
+            }
+            else
+            {
+                cmb_tipo_discapacidad_persona_legisladora.Enabled = false; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.LightGray;
+                dgv_tipo_discapacidad_PL.Rows.Clear();
+                btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false; 
+                cmb_tipo_discapacidad_persona_legisladora.Text = "";
+            }
+        }
+        private void btnAgregarDiscapacidadPL_Click(object sender, EventArgs e)
+        {
+            // se obtienen los valores
+            string tipo_discapacidad_pl = cmb_tipo_discapacidad_persona_legisladora.Text.Trim();
+
+
+            if (string.IsNullOrWhiteSpace(cmb_tipo_discapacidad_persona_legisladora.Text))
+            {
+                MessageBox.Show("Revisar datos vacios");
+            }
+            else
+            {
+
+                // Agregar una nueva fila al DataGridView
+                dgv_tipo_discapacidad_PL.Rows.Add(tipo_discapacidad_pl);
+
+                cmb_tipo_discapacidad_persona_legisladora.Text = "";
+
+            }
+        }
+        private void btnEliminarDiscapacidadPL_Click(object sender, EventArgs e)
+        {
+            if (dgv_tipo_discapacidad_PL.SelectedRows.Count > 0)
+            {
+                dgv_tipo_discapacidad_PL.Rows.RemoveAt(dgv_tipo_discapacidad_PL.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private void cmb_sexo_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_sexo_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "No binario")
+            {
+                cmb_cond_pob_diversidad_sexual_persona_legisladora.Enabled = true; cmb_cond_pob_diversidad_sexual_persona_legisladora.BackColor = Color.Honeydew;
+                cmb_cond_pob_diversidad_sexual_persona_legisladora.Focus();
+            }
+            else
+            {
+                cmb_cond_pob_diversidad_sexual_persona_legisladora.Enabled = false; cmb_cond_pob_diversidad_sexual_persona_legisladora.BackColor = Color.LightGray;
+                cmb_cond_pob_diversidad_sexual_persona_legisladora.Text = "";
+            }
+        }
+        private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmb_cond_pob_diversidad_sexual_persona_legisladora.Text))
+            {
+                MessageBox.Show("Debe especificar la condición de la persona legisladora de formar parte de algún grupo de la diversidad sexual.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmb_cond_pob_diversidad_sexual_persona_legisladora.Focus();
+            }
+        }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
         private void cmb_Sexo_personal_apoyo()
@@ -4675,6 +4906,21 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
