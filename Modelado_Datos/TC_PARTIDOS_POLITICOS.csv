@@ -1,0 +1,334 @@
+﻿id_partido_politico,entidad,descripcion
+1,Aguascalientes,Fuerza por México Aguascalientes
+2,Aguascalientes,Movimiento de Regeneración Nacional (MORENA)
+3,Aguascalientes,Partido Acción Nacional (PAN)
+4,Aguascalientes,Partido de la Revolución Democrática (PRD)
+5,Aguascalientes,Partido del Trabajo (PT)
+6,Aguascalientes,Movimiento Ciudadano (MC)
+7,Aguascalientes,Partido Revolucionario Institucional (PRI)
+8,Aguascalientes,Partido Verde Ecologista de México (PVEM)
+9,Aguascalientes,Otro partido político
+10,Baja California,Partido Encuentro Social de Baja California
+11,Baja California,Movimiento de Regeneración Nacional (MORENA)
+12,Baja California,Partido Acción Nacional (PAN)
+13,Baja California,Partido de la Revolución Democrática (PRD)
+14,Baja California,Partido del Trabajo (PT)
+15,Baja California,Movimiento Ciudadano (MC)
+16,Baja California,Partido Revolucionario Institucional (PRI)
+17,Baja California,Partido Verde Ecologista de México (PVEM)
+18,Baja California,Partido Estatal de Baja California
+19,Baja California,Redes Sociales Progresistas
+20,Baja California,Fuerza Social por México
+21,Baja California,Nacional Encuentro Solidario
+22,Baja California,Otro partido político
+23,Baja California Sur,Partido Humanista de Baja California Sur
+24,Baja California Sur,BCS Coherente
+25,Baja California Sur,Partido de Renovación Sudcaliforniana
+26,Baja California Sur,Nueva Alianza Baja California Sur
+27,Baja California Sur,Fuerza por México Baja California Sur
+28,Baja California Sur,Movimiento de Regeneración Nacional (MORENA)
+29,Baja California Sur,Partido Acción Nacional (PAN)
+30,Baja California Sur,Partido de la Revolución Democrática (PRD)
+31,Baja California Sur,Partido del Trabajo (PT)
+32,Baja California Sur,Movimiento Ciudadano (MC)
+33,Baja California Sur,Partido Revolucionario Institucional (PRI)
+34,Baja California Sur,Partido Verde Ecologista de México (PVEM)
+35,Baja California Sur,Otro partido político
+36,Campeche,Movimiento de Regeneración Nacional (MORENA)
+37,Campeche,Partido Acción Nacional (PAN)
+38,Campeche,Partido de la Revolución Democrática (PRD)
+39,Campeche,Partido del Trabajo (PT)
+40,Campeche,Movimiento Ciudadano (MC)
+41,Campeche,Partido Revolucionario Institucional (PRI)
+42,Campeche,Partido Verde Ecologista de México (PVEM)
+43,Campeche,Otro partido político
+44,Coahuila de Zaragoza,Unidad Democrática de Coahuila
+45,Coahuila de Zaragoza,Movimiento de Regeneración Nacional (MORENA)
+46,Coahuila de Zaragoza,Partido Acción Nacional (PAN)
+47,Coahuila de Zaragoza,Partido de la Revolución Democrática (PRD)
+48,Coahuila de Zaragoza,Partido del Trabajo (PT)
+49,Coahuila de Zaragoza,Movimiento Ciudadano (MC)
+50,Coahuila de Zaragoza,Partido Revolucionario Institucional (PRI)
+51,Coahuila de Zaragoza,Partido Verde Ecologista de México (PVEM)
+52,Coahuila de Zaragoza,Otro partido político
+53,Colima,Nueva Alianza Colima
+54,Colima,Partido Encuentro Solidario Colima
+55,Colima,Partido Fuerza por México Colima
+56,Colima,Movimiento de Regeneración Nacional (MORENA)
+57,Colima,Partido Acción Nacional (PAN)
+58,Colima,Partido de la Revolución Democrática (PRD)
+59,Colima,Partido del Trabajo (PT)
+60,Colima,Movimiento Ciudadano (MC)
+61,Colima,Partido Revolucionario Institucional (PRI)
+62,Colima,Partido Verde Ecologista de México (PVEM)
+63,Colima,Otro partido político
+64,Chiapas,Partido Chiapas Unido
+65,Chiapas,Podemos Mover a Chiapas
+66,Chiapas,Nueva Alianza Chiapas 
+67,Chiapas,Partido Popular Chiapaneco
+68,Chiapas,Redes Sociales Progresistas Chiapas
+69,Chiapas,Partido Encuentro Solidario Chiapas
+70,Chiapas,Movimiento de Regeneración Nacional (MORENA)
+71,Chiapas,Partido Acción Nacional (PAN)
+72,Chiapas,Partido Revolucionario Institucional (PRI)
+73,Chiapas,Partido Verde Ecologista de México (PVEM)
+74,Chiapas,Partido de la Revolución Democrática (PRD)
+75,Chiapas,Partido del Trabajo (PT)
+76,Chiapas,Movimiento Ciudadano (MC)
+77,Chiapas,Fuerza por México
+78,Chiapas,Otro partido político
+79,Chihuahua,Pueblo
+80,Chihuahua,Movimiento No Mas Políticos (NMP)
+81,Chihuahua,Partido Movimiento Laborista Chihuahua
+82,Chihuahua,México Republicano
+83,Chihuahua,Trabajando por Chihuahua
+84,Chihuahua,Partido Encuentro Solidario Chihuahua
+85,Chihuahua,Movimiento de Regeneración Nacional (MORENA)
+86,Chihuahua,Partido Acción Nacional (PAN)
+87,Chihuahua,Partido de la Revolución Democrática (PRD)
+88,Chihuahua,Partido del Trabajo (PT)
+89,Chihuahua,Movimiento Ciudadano (MC)
+90,Chihuahua,Partido Revolucionario Institucional (PRI)
+91,Chihuahua,Partido Verde Ecologista de México (PVEM)
+92,Chihuahua,Otro partido político
+93,Ciudad de México,Movimiento de Regeneración Nacional (MORENA)
+94,Ciudad de México,Partido Acción Nacional (PAN)
+95,Ciudad de México,Partido de la Revolución Democrática (PRD)
+96,Ciudad de México,Partido del Trabajo (PT)
+97,Ciudad de México,Movimiento Ciudadano (MC)
+98,Ciudad de México,Partido Revolucionario Institucional (PRI)
+99,Ciudad de México,Partido Verde Ecologista de México (PVEM)
+100,Ciudad de México,Otro partido político
+101,Durango,Redes Sociales Progresistas Durango
+102,Durango,Movimiento de Regeneración Nacional (MORENA)
+103,Durango,Partido Acción Nacional (PAN)
+104,Durango,Partido de la Revolución Democrática (PRD)
+105,Durango,Partido del Trabajo (PT)
+106,Durango,Movimiento Ciudadano (MC)
+107,Durango,Partido Revolucionario Institucional (PRI)
+108,Durango,Partido Verde Ecologista de México (PVEM)
+109,Durango,Otro partido político
+110,Guanajuato,Movimiento de Regeneración Nacional (MORENA)
+111,Guanajuato,Partido Acción Nacional (PAN)
+112,Guanajuato,Partido de la Revolución Democrática (PRD)
+113,Guanajuato,Partido del Trabajo (PT)
+114,Guanajuato,Movimiento Ciudadano (MC)
+115,Guanajuato,Partido Revolucionario Institucional (PRI)
+116,Guanajuato,Partido Verde Ecologista de México (PVEM)
+117,Guanajuato,Otro partido político
+118,Guerrero,Movimiento de Regeneración Nacional (MORENA)
+119,Guerrero,Partido Acción Nacional (PAN)
+120,Guerrero,Partido de la Revolución Democrática (PRD)
+121,Guerrero,Partido del Trabajo (PT)
+122,Guerrero,Movimiento Ciudadano (MC)
+123,Guerrero,Partido Revolucionario Institucional (PRI)
+124,Guerrero,Partido Verde Ecologista de México (PVEM)
+125,Guerrero,Otro partido político
+126,Hidalgo,Nueva Alianza Hidalgo
+127,Hidalgo,Encuentro Social Hidalgo
+128,Hidalgo,Movimiento de Regeneración Nacional (MORENA)
+129,Hidalgo,Partido Acción Nacional (PAN)
+130,Hidalgo,Partido de la Revolución Democrática (PRD)
+131,Hidalgo,Partido del Trabajo (PT)
+132,Hidalgo,Movimiento Ciudadano (MC)
+133,Hidalgo,Partido Revolucionario Institucional (PRI)
+134,Hidalgo,Partido Verde Ecologista de México (PVEM)
+135,Hidalgo,Otro partido político
+136,Jalisco,Hagamos
+137,Jalisco,Futuro
+138,Jalisco,Movimiento de Regeneración Nacional (MORENA)
+139,Jalisco,Partido Acción Nacional (PAN)
+140,Jalisco,Partido de la Revolución Democrática (PRD)
+141,Jalisco,Partido del Trabajo (PT)
+142,Jalisco,Movimiento Ciudadano (MC)
+143,Jalisco,Partido Revolucionario Institucional (PRI)
+144,Jalisco,Partido Verde Ecologista de México (PVEM)
+145,Jalisco,Otro partido político
+146,México,Nueva Alianza Estado de México
+147,México,Movimiento de Regeneración Nacional (MORENA)
+148,México,Partido Acción Nacional (PAN)
+149,México,Partido de la Revolución Democrática (PRD)
+150,México,Partido del Trabajo (PT)
+151,México,Movimiento Ciudadano (MC)
+152,México,Partido Revolucionario Institucional (PRI)
+153,México,Partido Verde Ecologista de México (PVEM)
+154,México,Otro partido político
+155,Michoacán,Partido Encuentro Solidario Michoacán 
+156,Michoacán,Movimiento de Regeneración Nacional (MORENA)
+157,Michoacán,Partido Acción Nacional (PAN)
+158,Michoacán,Partido de la Revolución Democrática (PRD)
+159,Michoacán,Partido del Trabajo (PT)
+160,Michoacán,Movimiento Ciudadano (MC)
+161,Michoacán,Partido Revolucionario Institucional (PRI)
+162,Michoacán,Partido Verde Ecologista de México (PVEM)
+163,Michoacán,Otro partido político
+164,Morelos,Encuentro Social Morelos
+165,Morelos,Nueva Alianza Morelos
+166,Morelos,"Movimiento Alternativa Social	"
+167,Morelos,Morelos Progresa
+168,Morelos,Redes Sociales Progresistas Morelos
+169,Morelos,Fuerza por México Morelos 
+170,Morelos,Partido Encuentro Solidario
+171,Morelos,Movimiento de Regeneración Nacional (MORENA)
+172,Morelos,Partido Acción Nacional (PAN)
+173,Morelos,Partido de la Revolución Democrática (PRD)
+174,Morelos,Partido del Trabajo (PT)
+175,Morelos,Movimiento Ciudadano (MC)
+176,Morelos,Partido Revolucionario Institucional (PRI)
+177,Morelos,Partido Verde Ecologista de México (PVEM)
+178,Morelos,Otro partido político
+179,Nayarit,Nueva Alianza Nayarit
+180,Nayarit,Movimiento Levántate para Nayarit
+181,Nayarit,Fuerza por México Nayarit
+182,Nayarit,Redes Sociales Progresistas Nayarit
+183,Nayarit,Movimiento de Regeneración Nacional (MORENA)
+184,Nayarit,Partido Acción Nacional (PAN)
+185,Nayarit,Partido de la Revolución Democrática (PRD)
+186,Nayarit,Partido del Trabajo (PT)
+187,Nayarit,Movimiento Ciudadano (MC)
+188,Nayarit,Partido Revolucionario Institucional (PRI)
+189,Nayarit,Partido Verde Ecologista de México (PVEM)
+190,Nayarit,Otro partido político
+191,Nuevo León,Nueva Alianza Nuevo León
+192,Nuevo León,Movimiento de Regeneración Nacional (MORENA)
+193,Nuevo León,Partido Acción Nacional (PAN)
+194,Nuevo León,Partido de la Revolución Democrática (PRD)
+195,Nuevo León,Partido del Trabajo (PT)
+196,Nuevo León,Movimiento Ciudadano (MC)
+197,Nuevo León,Partido Revolucionario Institucional (PRI)
+198,Nuevo León,Partido Verde Ecologista de México (PVEM)
+199,Nuevo León,Otro partido político
+200,Oaxaca,Partido Unidad Popular
+201,Oaxaca,Nueva Alianza Oaxaca
+202,Oaxaca,Fuerza por México Oaxaca
+203,Oaxaca,Movimiento de Regeneración Nacional (MORENA)
+204,Oaxaca,Partido Acción Nacional (PAN)
+205,Oaxaca,Partido de la Revolución Democrática (PRD)
+206,Oaxaca,Partido del Trabajo (PT)
+207,Oaxaca,Movimiento Ciudadano (MC)
+208,Oaxaca,Partido Revolucionario Institucional (PRI)
+209,Oaxaca,Partido Verde Ecologista de México (PVEM)
+210,Oaxaca,Otro partido político
+211,Puebla,"Pacto Social de Integración, Partido Político"
+212,Puebla,Compromiso por Puebla
+213,Puebla,Nueva Alianza Puebla
+214,Puebla,Fuerza por México Puebla
+215,Puebla,Movimiento de Regeneración Nacional (MORENA)
+216,Puebla,Partido Acción Nacional (PAN)
+217,Puebla,Partido de la Revolución Democrática (PRD)
+218,Puebla,Partido del Trabajo (PT)
+219,Puebla,Movimiento Ciudadano (MC)
+220,Puebla,Partido Revolucionario Institucional (PRI)
+221,Puebla,Partido Verde Ecologista de México (PVEM)
+222,Puebla,Otro partido político
+223,Querétaro,Movimiento de Regeneración Nacional (MORENA)
+224,Querétaro,Partido Acción Nacional (PAN)
+225,Querétaro,Partido de la Revolución Democrática (PRD)
+226,Querétaro,Partido del Trabajo (PT)
+227,Querétaro,Movimiento Ciudadano (MC)
+228,Querétaro,Partido Revolucionario Institucional (PRI)
+229,Querétaro,Partido Verde Ecologista de México (PVEM)
+230,Querétaro,Otro partido político
+231,Quintana Roo,Movimiento Autentico Social 
+232,Quintana Roo,Confianza por Quintana Roo
+233,Quintana Roo,Fuerza por México Quintana Roo
+234,Quintana Roo,Movimiento de Regeneración Nacional (MORENA)
+235,Quintana Roo,Partido Acción Nacional (PAN)
+236,Quintana Roo,Partido de la Revolución Democrática (PRD)
+237,Quintana Roo,Partido del Trabajo (PT)
+238,Quintana Roo,Movimiento Ciudadano (MC)
+239,Quintana Roo,Partido Revolucionario Institucional (PRI)
+240,Quintana Roo,Partido Verde Ecologista de México (PVEM)
+241,Quintana Roo,Otro partido político
+242,San Luis Potosí,Conciencia Popular
+243,San Luis Potosí,Nueva Alianza San Luis Potosí
+244,San Luis Potosí,Partido Encuentro Solidario 
+245,San Luis Potosí,Redes Sociales Progresistas
+246,San Luis Potosí,Movimiento de Regeneración Nacional (MORENA)
+247,San Luis Potosí,Fuerza por México
+248,San Luis Potosí,Partido Acción Nacional (PAN)
+249,San Luis Potosí,Partido de la Revolución Democrática (PRD)
+250,San Luis Potosí,Partido del Trabajo (PT)
+251,San Luis Potosí,Movimiento Ciudadano (MC)
+252,San Luis Potosí,Partido Revolucionario Institucional (PRI)
+253,San Luis Potosí,Partido Verde Ecologista de México (PVEM)
+254,San Luis Potosí,Otro partido político
+255,Sinaloa,Partido Sinaloense
+256,Sinaloa,Movimiento de Regeneración Nacional (MORENA)
+257,Sinaloa,Partido Acción Nacional (PAN)
+258,Sinaloa,Partido de la Revolución Democrática (PRD)
+259,Sinaloa,Partido del Trabajo (PT)
+260,Sinaloa,Movimiento Ciudadano (MC)
+261,Sinaloa,Partido Revolucionario Institucional (PRI)
+262,Sinaloa,Partido Verde Ecologista de México (PVEM)
+263,Sinaloa,Otro partido político
+264,Sonora,Nueva Alianza Sonora
+265,Sonora,Partido Encuentro Solidario Sonora
+266,Sonora,Movimiento de Regeneración Nacional (MORENA)
+267,Sonora,Partido Acción Nacional (PAN)
+268,Sonora,Partido de la Revolución Democrática (PRD)
+269,Sonora,Partido del Trabajo (PT)
+270,Sonora,Movimiento Ciudadano (MC)
+271,Sonora,Partido Revolucionario Institucional (PRI)
+272,Sonora,Partido Verde Ecologista de México (PVEM)
+273,Sonora,Otro partido político
+274,Tabasco,Movimiento de Regeneración Nacional (MORENA)
+275,Tabasco,Partido Acción Nacional (PAN)
+276,Tabasco,Partido de la Revolución Democrática (PRD)
+277,Tabasco,Partido del Trabajo (PT)
+278,Tabasco,Movimiento Ciudadano (MC)
+279,Tabasco,Partido Revolucionario Institucional (PRI)
+280,Tabasco,Partido Verde Ecologista de México (PVEM)
+281,Tabasco,Otro partido político
+282,Tamaulipas,Movimiento de Regeneración Nacional (MORENA)
+283,Tamaulipas,Partido Acción Nacional (PAN)
+284,Tamaulipas,Partido de la Revolución Democrática (PRD)
+285,Tamaulipas,Partido del Trabajo (PT)
+286,Tamaulipas,Movimiento Ciudadano (MC)
+287,Tamaulipas,Partido Revolucionario Institucional (PRI)
+288,Tamaulipas,Partido Verde Ecologista de México (PVEM)
+289,Tamaulipas,Otro partido político
+290,Tlaxcala,Partido Alianza Ciudadana
+291,Tlaxcala,Nueva Alianza Tlaxcala
+292,Tlaxcala,Redes Sociales Progresistas Tlaxcala
+293,Tlaxcala,Fuerza por México Tlaxcala 
+294,Tlaxcala,Movimiento de Regeneración Nacional (MORENA)
+295,Tlaxcala,Partido Acción Nacional (PAN)
+296,Tlaxcala,Partido de la Revolución Democrática (PRD)
+297,Tlaxcala,Partido del Trabajo (PT)
+298,Tlaxcala,Movimiento Ciudadano (MC)
+299,Tlaxcala,Partido Revolucionario Institucional (PRI)
+300,Tlaxcala,Partido Verde Ecologista de México (PVEM)
+301,Tlaxcala,Otro partido político
+302,Veracruz de Ignacio de la Llave,Todos por Veracruz
+303,Veracruz de Ignacio de la Llave,Partido Cardenista
+304,Veracruz de Ignacio de la Llave,Podemos
+305,Veracruz de Ignacio de la Llave,Unidad Ciudadana
+306,Veracruz de Ignacio de la Llave,Fuerza por México Veracruz
+307,Veracruz de Ignacio de la Llave,Movimiento de Regeneración Nacional (MORENA)
+308,Veracruz de Ignacio de la Llave,Partido Acción Nacional (PAN)
+309,Veracruz de Ignacio de la Llave,Partido de la Revolución Democrática (PRD)
+310,Veracruz de Ignacio de la Llave,Partido del Trabajo (PT)
+311,Veracruz de Ignacio de la Llave,Movimiento Ciudadano (MC)
+312,Veracruz de Ignacio de la Llave,Partido Revolucionario Institucional (PRI)
+313,Veracruz de Ignacio de la Llave,Partido Verde Ecologista de México (PVEM)
+314,Veracruz de Ignacio de la Llave,Otro partido político
+315,Yucatán,Nueva Alianza Yucatán 
+316,Yucatán,Movimiento de Regeneración Nacional (MORENA)
+317,Yucatán,Partido Acción Nacional (PAN)
+318,Yucatán,Partido de la Revolución Democrática (PRD)
+319,Yucatán,Partido del Trabajo (PT)
+320,Yucatán,Movimiento Ciudadano (MC)
+321,Yucatán,Partido Revolucionario Institucional (PRI)
+322,Yucatán,Partido Verde Ecologista de México (PVEM)
+323,Yucatán,Otro partido político
+324,Zacatecas,Nueva Alianza Zacatecas
+325,Zacatecas,Partido Encuentro Solidario Zacatecas 
+326,Zacatecas,Movimiento de Regeneración Nacional (MORENA)
+327,Zacatecas,Partido Acción Nacional (PAN)
+328,Zacatecas,Partido de la Revolución Democrática (PRD)
+329,Zacatecas,Partido del Trabajo (PT)
+330,Zacatecas,Movimiento Ciudadano (MC)
+331,Zacatecas,Partido Revolucionario Institucional (PRI)
+332,Zacatecas,Partido Verde Ecologista de México (PVEM)
+333,Zacatecas,Otro partido político

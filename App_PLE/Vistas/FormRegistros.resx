@@ -233,39 +233,9 @@
   <metadata name="otro_tema_comision_legislativa_especifique.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn13.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="partido_politico_candidatura_coalicion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn14.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn15.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn16.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        VAAAAFQBo63EFQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACGSURBVDhPY/ji
-        ZB77xdnsLRD/JxED9ZhGM0AYWBUQg9+ADMAmQTSmjQFffeyJEgNhDAO++jr8//X9+//vU3rhYiA2SAyb
-        IVhd8H1Kz/9fv379/z5zMgobm1qcYQC29edPMEZ2DTqmjQEUeYEqgUhRNJKKqWIApZnJNBrEQJMgBr/5
-        4mIWBQD9VYZbwXtg2gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button23.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEySURBVDhPhZI9
-        TsNQEIRHIKCmDCWiIqRInBSA4BbchwuACCDHNuICuQI/l3C4SKAIklGYsdeWn/2crPQpsnd2/PZl0Kwg
-        xoBMyYL8GIsgwsN4hjOTtevkEQcUhuSPrDvIxjGe+3Ps21hRNvzZEIuV4b6P8OGYBAlmLRGZJLjgsS99
-        vVGMp2K42Lnr2L3hK44870XGD/RloAvzCcQmA53iXgZfzUaNjQYklcHSHlajF1xNQhyX3Myxi1vsDEIc
-        lgwjnFP7azNLx0DNuljDMqmbUnNNrWPQuYIdv9d8X4MrMGGeRs5WgwR3UDz5kLWaZItBxnVO8ywonh7B
-        WiHqChKZ5sMqxZIm7x6RLqu8sAr+/2/83bPxomSieLLhXcdQT8Fzh+uleCphFKXk20h1YdXOVQH/B6BZ
-        Vc6ZxncAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="lengua_ind_persona_legisladora.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

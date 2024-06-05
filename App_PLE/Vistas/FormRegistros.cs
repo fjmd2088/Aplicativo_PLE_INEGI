@@ -126,11 +126,23 @@ namespace App_PLE.Vistas
             cmb_pueblo_ind_persona_legisladora_PL.Enabled = false; cmb_pueblo_ind_persona_legisladora_PL.BackColor = Color.LightGray;
             cmb_tipo_discapacidad_persona_legisladora.Enabled = false; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.LightGray;
             cmb_cond_pob_diversidad_sexual_persona_legisladora.Enabled = false; cmb_cond_pob_diversidad_sexual_persona_legisladora.BackColor = Color.LightGray;
-
+            cmb_distrito_electoral_mayoria_relativa.Enabled = false; cmb_distrito_electoral_mayoria_relativa.BackColor = Color.LightGray;
+            cmb_tipo_candidatura_persona_legisladora.Enabled = false; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.LightGray;
+            cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
+            cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
+            dgv_partido_coalicion.BackgroundColor = Color.LightGray;
+            cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.BackColor = Color.LightGray;
+            cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.BackColor = Color.LightGray;
+            txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.BackColor = Color.LightGray;
+            txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.BackColor = Color.LightGray;
+            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.BackColor = Color.LightGray;
+            txt_no_aplica_presentacion_declaracion_intereses_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_intereses_especifique.BackColor = Color.LightGray;
+            txt_no_aplica_presentacion_declaracion_fiscal_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_fiscal_especifique.BackColor = Color.LightGray;
 
             btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
             btnAgregarLenguaPL.Enabled = false;btnEliminarLenguaPL.Enabled = false;
             btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false;
+            btnAgregarCandidaturaPL.Enabled = false; btnEliminarCandidaturaPL.Enabled = false;
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
             dtp_fecha_nacimiento_persona_legisladora.Value = new DateTime(1970, 9, 9);
@@ -3007,7 +3019,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,4,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3048,7 +3060,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3,4)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3684,6 +3696,8 @@ namespace App_PLE.Vistas
                             cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
                             cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
 
+                            dgv_nivel_escolaridad_PL.Rows.Clear();
+
                             cmb_carrera_licenciatura_persona_legisladora_PL.Text = ""; cmb_carrera_maestria_persona_legisladora_PL.Text = "";
                             cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
 
@@ -3888,6 +3902,867 @@ namespace App_PLE.Vistas
             {
                 MessageBox.Show("Debe especificar la condición de la persona legisladora de formar parte de algún grupo de la diversidad sexual.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmb_cond_pob_diversidad_sexual_persona_legisladora.Focus();
+            }
+        }
+        private void cmb_forma_eleccion_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_forma_eleccion_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Mayoría relativa")
+            {
+                cmb_distrito_electoral_mayoria_relativa.Enabled = true; cmb_distrito_electoral_mayoria_relativa.BackColor = Color.Honeydew;
+                cmb_distrito_electoral_mayoria_relativa.Focus();
+
+                cmb_tipo_candidatura_persona_legisladora.Enabled = true; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.Honeydew;
+
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+                int distritos_uni;
+
+                distritos_uni = int.Parse(Txt_distritos_uninominales.Text);
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_NUM_LEGISLATURA WHERE id_numero_legislatura BETWEEN 1 AND @distritos_uni";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        cmd.Parameters.AddWithValue("@distritos_uni", distritos_uni);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_distrito_electoral_mayoria_relativa.DataSource = dataTable;
+                        cmb_distrito_electoral_mayoria_relativa.DisplayMember = "descripcion";
+
+                        cmb_distrito_electoral_mayoria_relativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_distrito_electoral_mayoria_relativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_distrito_electoral_mayoria_relativa.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_distrito_electoral_mayoria_relativa.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+            }
+            else
+            {
+                cmb_distrito_electoral_mayoria_relativa.Enabled = false; cmb_distrito_electoral_mayoria_relativa.BackColor = Color.LightGray;
+                cmb_tipo_candidatura_persona_legisladora.Enabled = false; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.LightGray;
+
+                cmb_tipo_candidatura_persona_legisladora.Text = "";
+                cmb_distrito_electoral_mayoria_relativa.Text = "";
+            }
+        }
+        private void cmb_tipo_candidatura_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_tipo_candidatura_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Candidatura por partido único")
+            {
+                cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
+                cmb_partido_politico_candidatura_partido_unico.Enabled = true; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.Honeydew;
+
+                btnAgregarCandidaturaPL.Enabled = false; btnEliminarCandidaturaPL.Enabled = false;
+                dgv_partido_coalicion.Rows.Clear(); dgv_partido_coalicion.BackgroundColor = Color.LightGray;
+
+                cmb_partido_politico_candidatura_coalicion.Text = "";
+                cmb_partido_politico_candidatura_partido_unico.Focus();
+
+                
+
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+                
+                // SE AGREGAN LOS PARTIDOS POLITICOS---------------------------------------------------
+                string ent_dg;
+                ent_dg = cmb_entidad_federativa.Text;
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_PARTIDOS_POLITICOS WHERE entidad =  @ent_dg";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_partido_politico_candidatura_partido_unico.DataSource = dataTable;
+                        cmb_partido_politico_candidatura_partido_unico.DisplayMember = "descripcion";
+
+                        cmb_partido_politico_candidatura_partido_unico.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_partido_politico_candidatura_partido_unico.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_partido_politico_candidatura_partido_unico.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_partido_politico_candidatura_partido_unico.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+                // SE AGREGAN TIPO DE ADSCRIPCION---------------------------------------------------
+                
+                //inicial
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_TIPO_ADSCRIPCION WHERE id_tip_adscripcion in  (1,3,9)";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        //cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(query,conexion);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // inicial
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DataSource = dataTable;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+                }
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_TIPO_ADSCRIPCION WHERE id_tip_adscripcion in  (1,3,9)";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        //cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+
+                        // final
+                        cmb_tipo_adscripcion_final_persona_legisladora.DataSource = dataTable;
+                        cmb_tipo_adscripcion_final_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_tipo_adscripcion_final_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_tipo_adscripcion_final_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_tipo_adscripcion_final_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_tipo_adscripcion_final_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+                }
+                }
+            else if (valorComboBox1 == "Candidatura por coalición")
+            {
+                cmb_partido_politico_candidatura_coalicion.Enabled = true; cmb_partido_politico_candidatura_coalicion.BackColor = Color.Honeydew;
+                cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
+                cmb_partido_politico_candidatura_partido_unico.Text = "";
+                dgv_partido_coalicion.BackgroundColor = Color.Honeydew;
+                btnAgregarCandidaturaPL.Enabled = true; btnEliminarCandidaturaPL.Enabled = true;
+                cmb_partido_politico_candidatura_coalicion.Focus();
+
+                //cmb_tipo_candidatura_persona_legisladora.Enabled = true; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.Honeydew;
+
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                // SE AGREGAN LOS PARTIDOS POLITICOS---------------------------------------------------
+                string ent_dg;
+                ent_dg = cmb_entidad_federativa.Text;
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_PARTIDOS_POLITICOS WHERE entidad =  @ent_dg";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        
+                        cmb_partido_politico_candidatura_coalicion.DataSource = dataTable;
+                        cmb_partido_politico_candidatura_coalicion.DisplayMember = "descripcion";
+
+                        cmb_partido_politico_candidatura_coalicion.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_partido_politico_candidatura_coalicion.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_partido_politico_candidatura_coalicion.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_partido_politico_candidatura_coalicion.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+                // SE AGREGAN TIPO DE ADSCRIPCION---------------------------------------------------
+
+                //inicial
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_TIPO_ADSCRIPCION WHERE id_tip_adscripcion in  (1,3,9)";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        //cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // inicial
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DataSource = dataTable;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+                //final
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_TIPO_ADSCRIPCION WHERE id_tip_adscripcion in  (1,3,9)";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        //cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // final
+                        cmb_tipo_adscripcion_final_persona_legisladora.DataSource = dataTable;
+                        cmb_tipo_adscripcion_final_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_tipo_adscripcion_final_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_tipo_adscripcion_final_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_tipo_adscripcion_final_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_tipo_adscripcion_final_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+            }
+            else
+            {
+                // SE AGREGAN TIPO DE ADSCRIPCION---------------------------------------------------
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_TIPO_ADSCRIPCION ";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        //cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DataSource = dataTable;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_tipo_adscripcion_inicial_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+                cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
+                cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
+                btnAgregarCandidaturaPL.Enabled = false; btnEliminarCandidaturaPL.Enabled = false;
+                dgv_partido_coalicion.Rows.Clear(); dgv_partido_coalicion.BackgroundColor = Color.LightGray;
+                cmb_partido_politico_candidatura_partido_unico.Text = "";
+                cmb_partido_politico_candidatura_coalicion.Text = "";
+
+            }
+        }
+        private void btnAgregarCandidaturaPL_Click(object sender, EventArgs e)
+        {
+            // se obtienen los valores
+            string partido_coalicion_pl = cmb_partido_politico_candidatura_coalicion.Text.Trim();
+
+
+            if (string.IsNullOrWhiteSpace(cmb_partido_politico_candidatura_coalicion.Text))
+            {
+                MessageBox.Show("Revisar datos vacios");
+            }
+            else
+            {
+
+                // Agregar una nueva fila al DataGridView
+                dgv_partido_coalicion.Rows.Add(partido_coalicion_pl);
+
+                cmb_partido_politico_candidatura_coalicion.Text = "";
+
+            }
+        }
+        private void btnEliminarCandidaturaPL_Click(object sender, EventArgs e)
+        {
+            if (dgv_partido_coalicion.SelectedRows.Count > 0)
+            {
+                dgv_partido_coalicion.Rows.RemoveAt(dgv_partido_coalicion.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private void cmb_tipo_adscripcion_inicial_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_tipo_adscripcion_inicial_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Grupo parlamentario")
+            {
+                cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Enabled = true; cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.BackColor = Color.Honeydew;
+                cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Focus();
+
+
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                // SE AGREGAN LOS PARTIDOS POLITICOS---------------------------------------------------
+                string ent_dg;
+                ent_dg = cmb_entidad_federativa.Text;
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_GRUPO_PARLAMENTARIO WHERE entidad =  @ent_dg";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.DataSource = dataTable;
+                        cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+            }
+            else
+            {
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.BackColor = Color.LightGray;
+                cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Enabled = true; cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.BackColor = Color.LightGray;
+                cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Text = "";
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text = "";
+
+            }
+        }
+        private void txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text = txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.SelectionStart = txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text.Length;
+        }
+        private void cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Otro grupo parlamentario (especifique)")
+            {
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Enabled = true; txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.BackColor = Color.Honeydew;
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Focus();
+
+            }
+            else
+            {
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.BackColor = Color.LightGray;
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text = "";
+
+            }
+        }
+        private void txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro grupo parlamentario de adscripción inicial de la persona legisladora.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Focus();
+            }
+        }
+        private void cmb_tipo_adscripcion_final_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_tipo_adscripcion_final_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Grupo parlamentario")
+            {
+                cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Enabled = true; cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.BackColor = Color.Honeydew;
+                cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Focus();
+
+
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                // SE AGREGAN LOS PARTIDOS POLITICOS---------------------------------------------------
+                string ent_dg;
+                ent_dg = cmb_entidad_federativa.Text;
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_GRUPO_PARLAMENTARIO WHERE entidad =  @ent_dg";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        cmd.Parameters.AddWithValue("@ent_dg", ent_dg);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.DataSource = dataTable;
+                        cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+            }
+            else
+            {
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.BackColor = Color.LightGray;
+                cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Enabled = true; cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.BackColor = Color.LightGray;
+                cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Text = "";
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text = "";
+            }
+        }
+        private void otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text = txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.SelectionStart = txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text.Length;
+        }
+        private void cmb_grupo_parlamentario_adscipcion_final_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Otro grupo parlamentario (especifique)")
+            {
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Enabled = true; txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.BackColor = Color.Honeydew;
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Focus();
+
+            }
+            else
+            {
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.BackColor = Color.LightGray;
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text = "";
+
+            }
+        }
+        private void txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro grupo parlamentario de adscripción inicial de la persona legisladora.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Focus();
+            }
+        }
+        private void cmb_empleo_anterior_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_empleo_anterior_persona_legisladora.Text.ToString();
+
+            if (valorComboBox1 == "Legislador federal" || valorComboBox1 == "Legislador estatal (reelección)" || valorComboBox1 == "Legislador estatal (de otra entidad federativa)"
+                ||  valorComboBox1 == "Gobierno federal" || valorComboBox1 == "Gobierno estatal" || valorComboBox1 == "Gobierno municipal" || valorComboBox1 == "Sindico(a)/ regidor(a)")
+            {
+                
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_ANTIGUEDAD WHERE id_antiguedad between 2 and 101 ";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_antigüedad_servicio_publico_persona_legisladora.DataSource = dataTable;
+                        cmb_antigüedad_servicio_publico_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_antigüedad_servicio_publico_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_antigüedad_servicio_publico_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_antigüedad_servicio_publico_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_antigüedad_servicio_publico_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+            }
+            else 
+            {
+                cmb_Antigüedad_servicio_publico_persona_legisladora(); 
+            }
+
+            if (valorComboBox1 == "Legislador federal" || valorComboBox1 == "Legislador estatal (reelección)" || valorComboBox1 == "Legislador estatal (de otra entidad federativa)")
+            {
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select descripcion from TC_ANTIGUEDAD WHERE id_antiguedad between 2 and 101 ";
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_antigüedad_persona_legisladora.DataSource = dataTable;
+                        cmb_antigüedad_persona_legisladora.DisplayMember = "descripcion";
+
+                        cmb_antigüedad_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_antigüedad_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_antigüedad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_antigüedad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+            }
+            else
+            {
+                cmb_Antigüedad_persona_legisladora();
+            }
+        }
+        private void cmb_antigüedad_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            string ant_pl;
+            ant_pl = cmb_antigüedad_persona_legisladora.Text;
+            
+            if (ant_pl != "No identificado " )
+            {
+                // se extrae antiguedad persona legisladora
+                int ant_pl2;
+                int.TryParse(ant_pl, out ant_pl2); // antiguedad como persona legisladora
+
+                if (ant_pl2 != 0)
+                {
+                    // se extrae la antiguedad como servidor publico
+                    string ant_sp_pl; int ant_sp_pl2;
+                    ant_sp_pl = cmb_antigüedad_servicio_publico_persona_legisladora.Text;
+                    int.TryParse(ant_sp_pl, out ant_sp_pl2); // antiguedad servidor publico
+
+                    if (ant_sp_pl2 != 0)
+                    {
+                        if (ant_pl2 > ant_sp_pl2)
+                        {
+
+                            MessageBox.Show("Debe ser igual o menor a la cantidad reportada en el campo antigüedad en el servicio público.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmb_antigüedad_persona_legisladora.SelectedIndex = -1; cmb_antigüedad_persona_legisladora.Focus();
+                        }
+                    }
+                }
+            }
+            /*
+            else
+            {
+                
+
+
+
+                    
+                    else
+                    {
+
+                    }
+                
+                
+
+            }
+            */
+        }
+        private void txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text = txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.SelectionStart = txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text.Length;
+        }
+        private void cmb_cond_presentacion_declaracion_situacion_patrimonial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_presentacion_declaracion_situacion_patrimonial.Text.ToString();
+
+            if (valorComboBox1 == "No aplica (especifique)")
+            {
+                txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Enabled = true; txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.BackColor = Color.Honeydew;
+                txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Focus();
+
+            }
+            else
+            {
+                txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.BackColor = Color.LightGray;
+                txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text = "";
+
+            }
+        }
+        private void txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el motivo por el cual no le es aplicable a la persona legisladora la presentación de la declaración de situación patrimonial.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Focus();
+            }
+        }
+        private void cmb_cond_presentacion_declaracion_intereses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_presentacion_declaracion_intereses.Text.ToString();
+
+            if (valorComboBox1 == "No aplica (especifique)")
+            {
+                txt_no_aplica_presentacion_declaracion_intereses_especifique.Enabled = true; txt_no_aplica_presentacion_declaracion_intereses_especifique.BackColor = Color.Honeydew;
+                txt_no_aplica_presentacion_declaracion_intereses_especifique.Focus();
+
+            }
+            else
+            {
+                txt_no_aplica_presentacion_declaracion_intereses_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_intereses_especifique.BackColor = Color.LightGray;
+                txt_no_aplica_presentacion_declaracion_intereses_especifique.Text = "";
+
+            }
+        }
+        private void txt_no_aplica_presentacion_declaracion_intereses_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_no_aplica_presentacion_declaracion_intereses_especifique.Text = txt_no_aplica_presentacion_declaracion_intereses_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_no_aplica_presentacion_declaracion_intereses_especifique.SelectionStart = txt_no_aplica_presentacion_declaracion_intereses_especifique.Text.Length;
+
+        }
+        private void txt_no_aplica_presentacion_declaracion_intereses_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_no_aplica_presentacion_declaracion_intereses_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el motivo por el cual no le es aplicable a la persona legisladora la presentación de la declaración de intereses.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_no_aplica_presentacion_declaracion_intereses_especifique.Focus();
             }
         }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
@@ -4906,6 +5781,43 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
