@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Resources.ResXFileRef;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using GMap.NET.WindowsForms.Markers;
 
 namespace App_PLE.Vistas
 {
@@ -3101,7 +3105,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3,4)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -4765,6 +4769,108 @@ namespace App_PLE.Vistas
                 txt_no_aplica_presentacion_declaracion_intereses_especifique.Focus();
             }
         }
+        private void cmb_cond_presentacion_declaracion_fiscal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_presentacion_declaracion_fiscal.Text.ToString();
+
+            if (valorComboBox1 == "No aplica (especifique)")
+            {
+                txt_no_aplica_presentacion_declaracion_fiscal_especifique.Enabled = true; txt_no_aplica_presentacion_declaracion_fiscal_especifique.BackColor = Color.Honeydew;
+                txt_no_aplica_presentacion_declaracion_fiscal_especifique.Focus();
+
+            }
+            else
+            {
+                txt_no_aplica_presentacion_declaracion_fiscal_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_fiscal_especifique.BackColor = Color.LightGray;
+                txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text = "";
+
+            }
+        }
+        private void txt_no_aplica_presentacion_declaracion_fiscal_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text = txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_no_aplica_presentacion_declaracion_fiscal_especifique.SelectionStart = txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text.Length;
+        }
+        private void txt_no_aplica_presentacion_declaracion_fiscal_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el motivo por el cual no le es aplicable a la persona legisladora la presentación de la declaración fiscal.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_no_aplica_presentacion_declaracion_fiscal_especifique.Focus();
+            }
+        }
+        private void txt_remuneracion_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_asistencia_legislativa_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+
+        private void txt_gestion_parlamentaria_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+
+        private void txt_atencion_ciudadana_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+
+        private void txt_otro_concepto_gasto_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void InitializeMap()
+        {
+            gMapControl.MapProvider = GMapProviders.GoogleMap;
+            gMapControl.Position = new PointLatLng(0, 0); // Centrar el mapa en el ecuador por defecto
+            gMapControl.MinZoom = 0;
+            gMapControl.MaxZoom = 18;
+            gMapControl.Zoom = 2;
+            gMapControl.MouseClick += new MouseEventHandler(gMapControl_MouseClick);
+
+            markersOverlay = new GMapOverlay("markers");
+            gMapControl.Overlays.Add(markersOverlay);
+        }
+        private void gMapControl_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                PointLatLng point = gMapControl.FromLocalToLatLng(e.X, e.Y);
+                textBoxLatitude.Text = point.Lat.ToString();
+                textBoxLongitude.Text = point.Lng.ToString();
+
+                markersOverlay.Markers.Clear();
+                GMarkerGoogle marker = new GMarkerGoogle(point, GMarkerGoogleType.red_dot);
+                markersOverlay.Markers.Add(marker);
+            }
+        }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
         private void cmb_Sexo_personal_apoyo()
@@ -5781,6 +5887,18 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
