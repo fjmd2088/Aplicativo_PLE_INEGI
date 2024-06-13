@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDG = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -151,59 +152,61 @@
             this.txt_ID_comision_legislativa = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.tabPagePL = new System.Windows.Forms.TabPage();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label94 = new System.Windows.Forms.Label();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label95 = new System.Windows.Forms.Label();
-            this.cmb_cargo_mesa_directiva_PL = new System.Windows.Forms.ComboBox();
-            this.cmb_cond_integrante_mesa_directiva = new System.Windows.Forms.ComboBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.cmb_cargo_jucopo = new System.Windows.Forms.ComboBox();
-            this.cmb_cond_integrante_jucopo = new System.Windows.Forms.ComboBox();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.label101 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label102 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.label103 = new System.Windows.Forms.Label();
-            this.cmb_cargo_comision_permanente = new System.Windows.Forms.ComboBox();
-            this.cmb_cond_integrante_comision_permanente = new System.Windows.Forms.ComboBox();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora = new System.Windows.Forms.TextBox();
+            this.label293 = new System.Windows.Forms.Label();
+            this.txt_asist_sesiones_plenarias_persona_legisladora = new System.Windows.Forms.TextBox();
             this.label108 = new System.Windows.Forms.Label();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.txt_cant_iniciativas_presentadas_persona_legisladora = new System.Windows.Forms.TextBox();
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora = new System.Windows.Forms.TextBox();
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora = new System.Windows.Forms.TextBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.dgv_participacion_comisiones = new System.Windows.Forms.DataGridView();
+            this.nombre_comision_legislativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_comision_legislativa_pc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo_comision_legislativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminarParticipacionCom = new System.Windows.Forms.Button();
+            this.btnAgregarParticipacionCom = new System.Windows.Forms.Button();
+            this.label94 = new System.Windows.Forms.Label();
+            this.cmb_cargo_comision_legislativa = new System.Windows.Forms.ComboBox();
+            this.txt_ID_comision_legislativa_pc = new System.Windows.Forms.TextBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.cmb_nombre_comision_legislativa = new System.Windows.Forms.ComboBox();
+            this.label82 = new System.Windows.Forms.Label();
             this.groupBox76 = new System.Windows.Forms.GroupBox();
             this.gMapControl = new GMap.NET.WindowsForms.GMapControl();
             this.cmb_cond_casa_atencion_ciudadana_movil = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.cmb_cond_casa_atencion_ciudadana = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txt_latitud_casa_atencion_ciudadana = new System.Windows.Forms.TextBox();
+            this.txt_longitud_casa_atencion_ciudadana = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.txt_otro_cargo_mesa_directiva_especifique = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.cmb_cargo_mesa_directiva_PL = new System.Windows.Forms.ComboBox();
+            this.cmb_cond_integrante_mesa_directiva = new System.Windows.Forms.ComboBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
             this.groupBox75 = new System.Windows.Forms.GroupBox();
             this.label84 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.cmb_cond_presentacion_declaracion_fiscal = new System.Windows.Forms.ComboBox();
             this.txt_no_aplica_presentacion_declaracion_fiscal_especifique = new System.Windows.Forms.TextBox();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.txt_otro_cargo_jucopo_especifique = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.cmb_cargo_jucopo = new System.Windows.Forms.ComboBox();
+            this.cmb_cond_integrante_jucopo = new System.Windows.Forms.ComboBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
             this.groupBox74 = new System.Windows.Forms.GroupBox();
             this.label291 = new System.Windows.Forms.Label();
             this.label292 = new System.Windows.Forms.Label();
@@ -214,6 +217,13 @@
             this.label86 = new System.Windows.Forms.Label();
             this.label87 = new System.Windows.Forms.Label();
             this.txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique = new System.Windows.Forms.TextBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.label104 = new System.Windows.Forms.Label();
+            this.cmb_cond_integrante_comision_permanente = new System.Windows.Forms.ComboBox();
+            this.label105 = new System.Windows.Forms.Label();
+            this.cmb_cargo_comision_permanente = new System.Windows.Forms.ComboBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.txt_otro_cargo_comision_permanente_especifique = new System.Windows.Forms.TextBox();
             this.groupBox72 = new System.Windows.Forms.GroupBox();
             this.btnEliminarCandidaturaPL = new System.Windows.Forms.Button();
             this.btnAgregarCandidaturaPL = new System.Windows.Forms.Button();
@@ -787,16 +797,17 @@
             this.groupBox70.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tema_comision_legislativa)).BeginInit();
             this.tabPagePL.SuspendLayout();
-            this.groupBox18.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox20.SuspendLayout();
             this.groupBox21.SuspendLayout();
-            this.groupBox22.SuspendLayout();
             this.groupBox14.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_participacion_comisiones)).BeginInit();
             this.groupBox76.SuspendLayout();
+            this.groupBox19.SuspendLayout();
             this.groupBox75.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.groupBox74.SuspendLayout();
             this.groupBox73.SuspendLayout();
+            this.groupBox22.SuspendLayout();
             this.groupBox72.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_partido_coalicion)).BeginInit();
             this.groupBox16.SuspendLayout();
@@ -1611,7 +1622,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(652, 5941);
+            this.btnGuardarCL.Location = new System.Drawing.Point(616, 6279);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1713,7 +1724,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(562, 8003);
+            this.button24.Location = new System.Drawing.Point(526, 8341);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -2272,11 +2283,7 @@
             // tabPagePL
             // 
             this.tabPagePL.AutoScroll = true;
-            this.tabPagePL.Controls.Add(this.groupBox18);
-            this.tabPagePL.Controls.Add(this.groupBox19);
-            this.tabPagePL.Controls.Add(this.groupBox20);
             this.tabPagePL.Controls.Add(this.groupBox21);
-            this.tabPagePL.Controls.Add(this.groupBox22);
             this.tabPagePL.Controls.Add(this.label59);
             this.tabPagePL.Controls.Add(this.groupBox14);
             this.tabPagePL.Controls.Add(this.groupBox15);
@@ -2292,446 +2299,141 @@
             this.tabPagePL.Text = "Personas legisladoras";
             this.tabPagePL.UseVisualStyleBackColor = true;
             // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.listView3);
-            this.groupBox18.Controls.Add(this.button7);
-            this.groupBox18.Controls.Add(this.label94);
-            this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox18.Location = new System.Drawing.Point(25, 2578);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(988, 294);
-            this.groupBox18.TabIndex = 75;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Comisiones legislativas integrantes";
-            // 
-            // listView3
-            // 
-            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView3.BackColor = System.Drawing.Color.Honeydew;
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView3.FullRowSelect = true;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(9, 66);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(966, 210);
-            this.listView3.TabIndex = 29;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(947, 33);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(28, 27);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label94.Location = new System.Drawing.Point(680, 38);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(261, 15);
-            this.label94.TabIndex = 6;
-            this.label94.Text = "Selecciona comisiones legislativas integrantes";
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.textBox30);
-            this.groupBox19.Controls.Add(this.label95);
-            this.groupBox19.Controls.Add(this.cmb_cargo_mesa_directiva_PL);
-            this.groupBox19.Controls.Add(this.cmb_cond_integrante_mesa_directiva);
-            this.groupBox19.Controls.Add(this.label96);
-            this.groupBox19.Controls.Add(this.label97);
-            this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox19.Location = new System.Drawing.Point(17, 2474);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(988, 88);
-            this.groupBox19.TabIndex = 79;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Mesa directiva";
-            this.groupBox19.UseWaitCursor = true;
-            // 
-            // textBox30
-            // 
-            this.textBox30.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(788, 40);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(184, 21);
-            this.textBox30.TabIndex = 68;
-            this.textBox30.UseWaitCursor = true;
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.ForeColor = System.Drawing.Color.Black;
-            this.label95.Location = new System.Drawing.Point(802, 22);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(146, 15);
-            this.label95.TabIndex = 67;
-            this.label95.Text = "Otro cargo mesa directiva";
-            this.label95.UseWaitCursor = true;
-            // 
-            // cmb_cargo_mesa_directiva_PL
-            // 
-            this.cmb_cargo_mesa_directiva_PL.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cargo_mesa_directiva_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cargo_mesa_directiva_PL.FormattingEnabled = true;
-            this.cmb_cargo_mesa_directiva_PL.Location = new System.Drawing.Point(509, 40);
-            this.cmb_cargo_mesa_directiva_PL.Name = "cmb_cargo_mesa_directiva_PL";
-            this.cmb_cargo_mesa_directiva_PL.Size = new System.Drawing.Size(219, 23);
-            this.cmb_cargo_mesa_directiva_PL.TabIndex = 66;
-            this.cmb_cargo_mesa_directiva_PL.UseWaitCursor = true;
-            // 
-            // cmb_cond_integrante_mesa_directiva
-            // 
-            this.cmb_cond_integrante_mesa_directiva.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_integrante_mesa_directiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_integrante_mesa_directiva.FormattingEnabled = true;
-            this.cmb_cond_integrante_mesa_directiva.Location = new System.Drawing.Point(188, 40);
-            this.cmb_cond_integrante_mesa_directiva.Name = "cmb_cond_integrante_mesa_directiva";
-            this.cmb_cond_integrante_mesa_directiva.Size = new System.Drawing.Size(138, 23);
-            this.cmb_cond_integrante_mesa_directiva.TabIndex = 47;
-            this.cmb_cond_integrante_mesa_directiva.UseWaitCursor = true;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label96.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label96.Location = new System.Drawing.Point(6, 43);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(176, 15);
-            this.label96.TabIndex = 46;
-            this.label96.Text = "Cond integrante mesa directiva";
-            this.label96.UseWaitCursor = true;
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.ForeColor = System.Drawing.Color.Black;
-            this.label97.Location = new System.Drawing.Point(385, 43);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(122, 15);
-            this.label97.TabIndex = 44;
-            this.label97.Text = "Cargo mesa directiva";
-            this.label97.UseWaitCursor = true;
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.textBox31);
-            this.groupBox20.Controls.Add(this.label98);
-            this.groupBox20.Controls.Add(this.cmb_cargo_jucopo);
-            this.groupBox20.Controls.Add(this.cmb_cond_integrante_jucopo);
-            this.groupBox20.Controls.Add(this.label99);
-            this.groupBox20.Controls.Add(this.label100);
-            this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox20.Location = new System.Drawing.Point(17, 2380);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(988, 88);
-            this.groupBox20.TabIndex = 78;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Jucopo";
-            this.groupBox20.UseWaitCursor = true;
-            // 
-            // textBox31
-            // 
-            this.textBox31.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(788, 40);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(184, 21);
-            this.textBox31.TabIndex = 68;
-            this.textBox31.UseWaitCursor = true;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.ForeColor = System.Drawing.Color.Black;
-            this.label98.Location = new System.Drawing.Point(678, 43);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(104, 15);
-            this.label98.TabIndex = 67;
-            this.label98.Text = "Otro cargo jucopo";
-            this.label98.UseWaitCursor = true;
-            // 
-            // cmb_cargo_jucopo
-            // 
-            this.cmb_cargo_jucopo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cargo_jucopo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cargo_jucopo.FormattingEnabled = true;
-            this.cmb_cargo_jucopo.Location = new System.Drawing.Point(425, 40);
-            this.cmb_cargo_jucopo.Name = "cmb_cargo_jucopo";
-            this.cmb_cargo_jucopo.Size = new System.Drawing.Size(219, 23);
-            this.cmb_cargo_jucopo.TabIndex = 66;
-            this.cmb_cargo_jucopo.UseWaitCursor = true;
-            // 
-            // cmb_cond_integrante_jucopo
-            // 
-            this.cmb_cond_integrante_jucopo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_integrante_jucopo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_integrante_jucopo.FormattingEnabled = true;
-            this.cmb_cond_integrante_jucopo.Location = new System.Drawing.Point(141, 40);
-            this.cmb_cond_integrante_jucopo.Name = "cmb_cond_integrante_jucopo";
-            this.cmb_cond_integrante_jucopo.Size = new System.Drawing.Size(138, 23);
-            this.cmb_cond_integrante_jucopo.TabIndex = 47;
-            this.cmb_cond_integrante_jucopo.UseWaitCursor = true;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label99.Location = new System.Drawing.Point(6, 43);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(134, 15);
-            this.label99.TabIndex = 46;
-            this.label99.Text = "Cond integrante jucopo";
-            this.label99.UseWaitCursor = true;
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label100.ForeColor = System.Drawing.Color.Black;
-            this.label100.Location = new System.Drawing.Point(340, 43);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(80, 15);
-            this.label100.TabIndex = 44;
-            this.label100.Text = "Cargo jucopo";
-            this.label100.UseWaitCursor = true;
-            // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.textBox32);
+            this.groupBox21.Controls.Add(this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora);
+            this.groupBox21.Controls.Add(this.label293);
+            this.groupBox21.Controls.Add(this.txt_asist_sesiones_plenarias_persona_legisladora);
+            this.groupBox21.Controls.Add(this.label108);
+            this.groupBox21.Controls.Add(this.txt_cant_iniciativas_presentadas_persona_legisladora);
+            this.groupBox21.Controls.Add(this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora);
+            this.groupBox21.Controls.Add(this.txt_asist_sesiones_comision_permanente_persona_legisladora);
+            this.groupBox21.Controls.Add(this.label107);
             this.groupBox21.Controls.Add(this.label101);
-            this.groupBox21.Controls.Add(this.textBox33);
             this.groupBox21.Controls.Add(this.label102);
-            this.groupBox21.Controls.Add(this.textBox34);
-            this.groupBox21.Controls.Add(this.label103);
-            this.groupBox21.Controls.Add(this.cmb_cargo_comision_permanente);
-            this.groupBox21.Controls.Add(this.cmb_cond_integrante_comision_permanente);
-            this.groupBox21.Controls.Add(this.label104);
-            this.groupBox21.Controls.Add(this.label105);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox21.Location = new System.Drawing.Point(16, 2208);
+            this.groupBox21.Location = new System.Drawing.Point(7, 2817);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(988, 166);
+            this.groupBox21.Size = new System.Drawing.Size(1211, 166);
             this.groupBox21.TabIndex = 77;
             this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Comision permanente";
+            this.groupBox21.Text = "Trabajo legislativo";
             this.groupBox21.UseWaitCursor = true;
             // 
-            // textBox32
+            // txt_cant_intervenciones_sesiones_plenarias_persona_legisladora
             // 
-            this.textBox32.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(712, 92);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(261, 21);
-            this.textBox32.TabIndex = 72;
-            this.textBox32.UseWaitCursor = true;
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Location = new System.Drawing.Point(455, 74);
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Name = "txt_cant_intervenciones_sesiones_plenarias_persona_legisladora";
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Size = new System.Drawing.Size(91, 21);
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.TabIndex = 75;
+            this.txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.UseWaitCursor = true;
             // 
-            // label101
+            // label293
             // 
-            this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.ForeColor = System.Drawing.Color.Black;
-            this.label101.Location = new System.Drawing.Point(502, 95);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(206, 15);
-            this.label101.TabIndex = 71;
-            this.label101.Text = "Cant interv sesiones dip permanente";
-            this.label101.UseWaitCursor = true;
+            this.label293.AutoSize = true;
+            this.label293.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label293.ForeColor = System.Drawing.Color.Black;
+            this.label293.Location = new System.Drawing.Point(597, 35);
+            this.label293.Name = "label293";
+            this.label293.Size = new System.Drawing.Size(453, 15);
+            this.label293.TabIndex = 74;
+            this.label293.Text = "Cantidad de sesiones plenarias asistidas por la persona legisladora*:";
+            this.label293.UseWaitCursor = true;
             // 
-            // textBox33
+            // txt_asist_sesiones_plenarias_persona_legisladora
             // 
-            this.textBox33.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(229, 92);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(230, 21);
-            this.textBox33.TabIndex = 70;
-            this.textBox33.UseWaitCursor = true;
+            this.txt_asist_sesiones_plenarias_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_asist_sesiones_plenarias_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_asist_sesiones_plenarias_persona_legisladora.Location = new System.Drawing.Point(1062, 29);
+            this.txt_asist_sesiones_plenarias_persona_legisladora.Name = "txt_asist_sesiones_plenarias_persona_legisladora";
+            this.txt_asist_sesiones_plenarias_persona_legisladora.Size = new System.Drawing.Size(91, 21);
+            this.txt_asist_sesiones_plenarias_persona_legisladora.TabIndex = 73;
+            this.txt_asist_sesiones_plenarias_persona_legisladora.UseWaitCursor = true;
+            this.txt_asist_sesiones_plenarias_persona_legisladora.TextChanged += new System.EventHandler(this.txt_asist_sesiones_plenarias_persona_legisladora_TextChanged);
             // 
-            // label102
+            // label108
             // 
-            this.label102.AutoSize = true;
-            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label102.ForeColor = System.Drawing.Color.Black;
-            this.label102.Location = new System.Drawing.Point(11, 95);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(214, 15);
-            this.label102.TabIndex = 69;
-            this.label102.Text = "Asist sesiones comisioón permanente";
-            this.label102.UseWaitCursor = true;
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.ForeColor = System.Drawing.Color.Black;
+            this.label108.Location = new System.Drawing.Point(7, 35);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(418, 15);
+            this.label108.TabIndex = 30;
+            this.label108.Text = "Cantidad de iniciativas presentadas por la persona legisladora*:";
+            this.label108.UseWaitCursor = true;
             // 
-            // textBox34
+            // txt_cant_iniciativas_presentadas_persona_legisladora
             // 
-            this.textBox34.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(788, 40);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(184, 21);
-            this.textBox34.TabIndex = 68;
-            this.textBox34.UseWaitCursor = true;
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.Location = new System.Drawing.Point(437, 29);
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.Name = "txt_cant_iniciativas_presentadas_persona_legisladora";
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.Size = new System.Drawing.Size(91, 21);
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.TabIndex = 28;
+            this.txt_cant_iniciativas_presentadas_persona_legisladora.UseWaitCursor = true;
             // 
-            // label103
+            // txt_cant_interv_sesiones_dip_permanente_persona_legisladora
             // 
-            this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.ForeColor = System.Drawing.Color.Black;
-            this.label103.Location = new System.Drawing.Point(785, 18);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(187, 15);
-            this.label103.TabIndex = 67;
-            this.label103.Text = "Otro cargo comisión permanente";
-            this.label103.UseWaitCursor = true;
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Location = new System.Drawing.Point(700, 117);
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Name = "txt_cant_interv_sesiones_dip_permanente_persona_legisladora";
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Size = new System.Drawing.Size(123, 21);
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.TabIndex = 65;
+            this.txt_cant_interv_sesiones_dip_permanente_persona_legisladora.UseWaitCursor = true;
             // 
-            // cmb_cargo_comision_permanente
+            // txt_asist_sesiones_comision_permanente_persona_legisladora
             // 
-            this.cmb_cargo_comision_permanente.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cargo_comision_permanente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cargo_comision_permanente.FormattingEnabled = true;
-            this.cmb_cargo_comision_permanente.Location = new System.Drawing.Point(544, 40);
-            this.cmb_cargo_comision_permanente.Name = "cmb_cargo_comision_permanente";
-            this.cmb_cargo_comision_permanente.Size = new System.Drawing.Size(194, 23);
-            this.cmb_cargo_comision_permanente.TabIndex = 66;
-            this.cmb_cargo_comision_permanente.UseWaitCursor = true;
-            // 
-            // cmb_cond_integrante_comision_permanente
-            // 
-            this.cmb_cond_integrante_comision_permanente.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_integrante_comision_permanente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_integrante_comision_permanente.FormattingEnabled = true;
-            this.cmb_cond_integrante_comision_permanente.Location = new System.Drawing.Point(223, 40);
-            this.cmb_cond_integrante_comision_permanente.Name = "cmb_cond_integrante_comision_permanente";
-            this.cmb_cond_integrante_comision_permanente.Size = new System.Drawing.Size(141, 23);
-            this.cmb_cond_integrante_comision_permanente.TabIndex = 47;
-            this.cmb_cond_integrante_comision_permanente.UseWaitCursor = true;
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label104.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label104.Location = new System.Drawing.Point(6, 43);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(217, 15);
-            this.label104.TabIndex = 46;
-            this.label104.Text = "Cond integrante comisión permanente";
-            this.label104.UseWaitCursor = true;
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.ForeColor = System.Drawing.Color.Black;
-            this.label105.Location = new System.Drawing.Point(379, 43);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(163, 15);
-            this.label105.TabIndex = 44;
-            this.label105.Text = "Cargo comisión permanente";
-            this.label105.UseWaitCursor = true;
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.Controls.Add(this.textBox36);
-            this.groupBox22.Controls.Add(this.textBox35);
-            this.groupBox22.Controls.Add(this.label106);
-            this.groupBox22.Controls.Add(this.label107);
-            this.groupBox22.Controls.Add(this.label108);
-            this.groupBox22.Controls.Add(this.textBox37);
-            this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox22.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox22.Location = new System.Drawing.Point(12, 2133);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(988, 69);
-            this.groupBox22.TabIndex = 76;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Comisiones TL";
-            this.groupBox22.UseWaitCursor = true;
-            // 
-            // textBox36
-            // 
-            this.textBox36.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(892, 27);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(80, 21);
-            this.textBox36.TabIndex = 65;
-            this.textBox36.UseWaitCursor = true;
-            // 
-            // textBox35
-            // 
-            this.textBox35.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(521, 27);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(80, 21);
-            this.textBox35.TabIndex = 64;
-            this.textBox35.UseWaitCursor = true;
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label106.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label106.Location = new System.Drawing.Point(377, 30);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(138, 15);
-            this.label106.TabIndex = 42;
-            this.label106.Text = "Asist sesiones plenarias";
-            this.label106.UseWaitCursor = true;
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.Location = new System.Drawing.Point(1065, 77);
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.Name = "txt_asist_sesiones_comision_permanente_persona_legisladora";
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.Size = new System.Drawing.Size(102, 21);
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.TabIndex = 72;
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.UseWaitCursor = true;
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.TextChanged += new System.EventHandler(this.txt_asist_sesiones_comision_permanente_persona_legisladora_TextChanged);
             // 
             // label107
             // 
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label107.ForeColor = System.Drawing.Color.Black;
-            this.label107.Location = new System.Drawing.Point(659, 30);
+            this.label107.Location = new System.Drawing.Point(150, 123);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(227, 15);
+            this.label107.Size = new System.Drawing.Size(544, 15);
             this.label107.TabIndex = 40;
-            this.label107.Text = "Cant intervencioones sesiones plenarias";
+            this.label107.Text = "Cantidad de intervenciones de la persona legisladora en las sesiones de la Comisi" +
+    "ón Permanente:";
             this.label107.UseWaitCursor = true;
             // 
-            // label108
+            // label101
             // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label108.Location = new System.Drawing.Point(6, 30);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(200, 15);
-            this.label108.TabIndex = 30;
-            this.label108.Text = "Cantidad de iniciativas presentadas";
-            this.label108.UseWaitCursor = true;
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.Black;
+            this.label101.Location = new System.Drawing.Point(578, 77);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(481, 15);
+            this.label101.TabIndex = 71;
+            this.label101.Text = "Cantidad de sesiones de la Comisión Permanente asistidas por la persona legislado" +
+    "ra:";
+            this.label101.UseWaitCursor = true;
             // 
-            // textBox37
+            // label102
             // 
-            this.textBox37.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(212, 27);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(80, 21);
-            this.textBox37.TabIndex = 28;
-            this.textBox37.UseWaitCursor = true;
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.Black;
+            this.label102.Location = new System.Drawing.Point(7, 77);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(442, 15);
+            this.label102.TabIndex = 69;
+            this.label102.Text = "Cantidad de intervenciones de la persona legisladora en las sesiones plenarias:";
+            this.label102.UseWaitCursor = true;
             // 
             // label59
             // 
@@ -2747,10 +2449,14 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.groupBox18);
             this.groupBox14.Controls.Add(this.groupBox76);
+            this.groupBox14.Controls.Add(this.groupBox19);
             this.groupBox14.Controls.Add(this.groupBox75);
+            this.groupBox14.Controls.Add(this.groupBox20);
             this.groupBox14.Controls.Add(this.groupBox74);
             this.groupBox14.Controls.Add(this.groupBox73);
+            this.groupBox14.Controls.Add(this.groupBox22);
             this.groupBox14.Controls.Add(this.groupBox72);
             this.groupBox14.Controls.Add(this.label67);
             this.groupBox14.Controls.Add(this.groupBox16);
@@ -2764,11 +2470,172 @@
             this.groupBox14.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox14.Location = new System.Drawing.Point(7, 1086);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(1211, 1041);
+            this.groupBox14.Size = new System.Drawing.Size(1211, 1725);
             this.groupBox14.TabIndex = 60;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Caraterísticas del cargo";
             this.groupBox14.UseWaitCursor = true;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.dgv_participacion_comisiones);
+            this.groupBox18.Controls.Add(this.btnEliminarParticipacionCom);
+            this.groupBox18.Controls.Add(this.btnAgregarParticipacionCom);
+            this.groupBox18.Controls.Add(this.label94);
+            this.groupBox18.Controls.Add(this.cmb_cargo_comision_legislativa);
+            this.groupBox18.Controls.Add(this.txt_ID_comision_legislativa_pc);
+            this.groupBox18.Controls.Add(this.label83);
+            this.groupBox18.Controls.Add(this.cmb_nombre_comision_legislativa);
+            this.groupBox18.Controls.Add(this.label82);
+            this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox18.Location = new System.Drawing.Point(18, 1417);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(1181, 294);
+            this.groupBox18.TabIndex = 75;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Participación en comisiones";
+            this.groupBox18.UseWaitCursor = true;
+            // 
+            // dgv_participacion_comisiones
+            // 
+            this.dgv_participacion_comisiones.AllowUserToAddRows = false;
+            this.dgv_participacion_comisiones.AllowUserToDeleteRows = false;
+            this.dgv_participacion_comisiones.AllowUserToResizeRows = false;
+            this.dgv_participacion_comisiones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_participacion_comisiones.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_participacion_comisiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_participacion_comisiones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre_comision_legislativa,
+            this.ID_comision_legislativa_pc,
+            this.cargo_comision_legislativa});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_participacion_comisiones.Location = new System.Drawing.Point(9, 97);
+            this.dgv_participacion_comisiones.Name = "dgv_participacion_comisiones";
+            this.dgv_participacion_comisiones.ReadOnly = true;
+            this.dgv_participacion_comisiones.RowHeadersVisible = false;
+            this.dgv_participacion_comisiones.RowHeadersWidth = 51;
+            this.dgv_participacion_comisiones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_participacion_comisiones.Size = new System.Drawing.Size(1032, 184);
+            this.dgv_participacion_comisiones.TabIndex = 76;
+            this.dgv_participacion_comisiones.UseWaitCursor = true;
+            // 
+            // nombre_comision_legislativa
+            // 
+            this.nombre_comision_legislativa.HeaderText = "Nombre comisión legislativa";
+            this.nombre_comision_legislativa.MinimumWidth = 6;
+            this.nombre_comision_legislativa.Name = "nombre_comision_legislativa";
+            this.nombre_comision_legislativa.ReadOnly = true;
+            // 
+            // ID_comision_legislativa_pc
+            // 
+            this.ID_comision_legislativa_pc.HeaderText = "ID comisión legislativa";
+            this.ID_comision_legislativa_pc.Name = "ID_comision_legislativa_pc";
+            this.ID_comision_legislativa_pc.ReadOnly = true;
+            // 
+            // cargo_comision_legislativa
+            // 
+            this.cargo_comision_legislativa.HeaderText = "Cargo";
+            this.cargo_comision_legislativa.Name = "cargo_comision_legislativa";
+            this.cargo_comision_legislativa.ReadOnly = true;
+            // 
+            // btnEliminarParticipacionCom
+            // 
+            this.btnEliminarParticipacionCom.Location = new System.Drawing.Point(1055, 200);
+            this.btnEliminarParticipacionCom.Name = "btnEliminarParticipacionCom";
+            this.btnEliminarParticipacionCom.Size = new System.Drawing.Size(110, 27);
+            this.btnEliminarParticipacionCom.TabIndex = 75;
+            this.btnEliminarParticipacionCom.Text = "Eliminar";
+            this.btnEliminarParticipacionCom.UseVisualStyleBackColor = true;
+            this.btnEliminarParticipacionCom.UseWaitCursor = true;
+            this.btnEliminarParticipacionCom.Click += new System.EventHandler(this.btnEliminarParticipacionCom_Click);
+            // 
+            // btnAgregarParticipacionCom
+            // 
+            this.btnAgregarParticipacionCom.Location = new System.Drawing.Point(1055, 134);
+            this.btnAgregarParticipacionCom.Name = "btnAgregarParticipacionCom";
+            this.btnAgregarParticipacionCom.Size = new System.Drawing.Size(110, 27);
+            this.btnAgregarParticipacionCom.TabIndex = 74;
+            this.btnAgregarParticipacionCom.Text = "Agregar";
+            this.btnAgregarParticipacionCom.UseVisualStyleBackColor = true;
+            this.btnAgregarParticipacionCom.UseWaitCursor = true;
+            this.btnAgregarParticipacionCom.Click += new System.EventHandler(this.btnAgregarParticipacionCom_Click);
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.Color.Black;
+            this.label94.Location = new System.Drawing.Point(914, 50);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(217, 15);
+            this.label94.TabIndex = 73;
+            this.label94.Text = "Identificador de la comisión legislativa:";
+            this.label94.UseWaitCursor = true;
+            // 
+            // cmb_cargo_comision_legislativa
+            // 
+            this.cmb_cargo_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cargo_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cargo_comision_legislativa.FormattingEnabled = true;
+            this.cmb_cargo_comision_legislativa.Location = new System.Drawing.Point(345, 63);
+            this.cmb_cargo_comision_legislativa.Name = "cmb_cargo_comision_legislativa";
+            this.cmb_cargo_comision_legislativa.Size = new System.Drawing.Size(248, 23);
+            this.cmb_cargo_comision_legislativa.TabIndex = 72;
+            this.cmb_cargo_comision_legislativa.UseWaitCursor = true;
+            // 
+            // txt_ID_comision_legislativa_pc
+            // 
+            this.txt_ID_comision_legislativa_pc.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_comision_legislativa_pc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ID_comision_legislativa_pc.Location = new System.Drawing.Point(917, 69);
+            this.txt_ID_comision_legislativa_pc.Name = "txt_ID_comision_legislativa_pc";
+            this.txt_ID_comision_legislativa_pc.Size = new System.Drawing.Size(209, 21);
+            this.txt_ID_comision_legislativa_pc.TabIndex = 71;
+            this.txt_ID_comision_legislativa_pc.UseWaitCursor = true;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.Black;
+            this.label83.Location = new System.Drawing.Point(11, 66);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(328, 15);
+            this.label83.TabIndex = 70;
+            this.label83.Text = "Cargo de la persona legisladora en la comisión legislativa :";
+            this.label83.UseWaitCursor = true;
+            // 
+            // cmb_nombre_comision_legislativa
+            // 
+            this.cmb_nombre_comision_legislativa.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_nombre_comision_legislativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_nombre_comision_legislativa.FormattingEnabled = true;
+            this.cmb_nombre_comision_legislativa.Location = new System.Drawing.Point(401, 20);
+            this.cmb_nombre_comision_legislativa.Name = "cmb_nombre_comision_legislativa";
+            this.cmb_nombre_comision_legislativa.Size = new System.Drawing.Size(773, 23);
+            this.cmb_nombre_comision_legislativa.TabIndex = 69;
+            this.cmb_nombre_comision_legislativa.UseWaitCursor = true;
+            this.cmb_nombre_comision_legislativa.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_comision_legislativa_SelectedIndexChanged);
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.Black;
+            this.label82.Location = new System.Drawing.Point(10, 23);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(385, 15);
+            this.label82.TabIndex = 68;
+            this.label82.Text = "Nombre de la comisión legislativa que integra la persona legisladora:";
+            this.label82.UseWaitCursor = true;
             // 
             // groupBox76
             // 
@@ -2777,15 +2644,15 @@
             this.groupBox76.Controls.Add(this.label38);
             this.groupBox76.Controls.Add(this.cmb_cond_casa_atencion_ciudadana);
             this.groupBox76.Controls.Add(this.label75);
-            this.groupBox76.Controls.Add(this.textBox18);
-            this.groupBox76.Controls.Add(this.textBox17);
+            this.groupBox76.Controls.Add(this.txt_latitud_casa_atencion_ciudadana);
+            this.groupBox76.Controls.Add(this.txt_longitud_casa_atencion_ciudadana);
             this.groupBox76.Controls.Add(this.label76);
             this.groupBox76.Controls.Add(this.label74);
             this.groupBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox76.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox76.Location = new System.Drawing.Point(17, 833);
             this.groupBox76.Name = "groupBox76";
-            this.groupBox76.Size = new System.Drawing.Size(1181, 202);
+            this.groupBox76.Size = new System.Drawing.Size(788, 377);
             this.groupBox76.TabIndex = 72;
             this.groupBox76.TabStop = false;
             this.groupBox76.Text = "Casa de atención ciudadana";
@@ -2799,7 +2666,7 @@
             this.gMapControl.GrayScaleMode = false;
             this.gMapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl.LevelsKeepInMemmory = 5;
-            this.gMapControl.Location = new System.Drawing.Point(861, 21);
+            this.gMapControl.Location = new System.Drawing.Point(277, 18);
             this.gMapControl.MarkersEnabled = true;
             this.gMapControl.MaxZoom = 18;
             this.gMapControl.MinZoom = 0;
@@ -2813,7 +2680,7 @@
             this.gMapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl.ShowTileGridLines = false;
-            this.gMapControl.Size = new System.Drawing.Size(150, 150);
+            this.gMapControl.Size = new System.Drawing.Size(492, 350);
             this.gMapControl.TabIndex = 67;
             this.gMapControl.UseWaitCursor = true;
             this.gMapControl.Zoom = 0D;
@@ -2824,9 +2691,9 @@
             this.cmb_cond_casa_atencion_ciudadana_movil.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_casa_atencion_ciudadana_movil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_casa_atencion_ciudadana_movil.FormattingEnabled = true;
-            this.cmb_cond_casa_atencion_ciudadana_movil.Location = new System.Drawing.Point(271, 83);
+            this.cmb_cond_casa_atencion_ciudadana_movil.Location = new System.Drawing.Point(10, 159);
             this.cmb_cond_casa_atencion_ciudadana_movil.Name = "cmb_cond_casa_atencion_ciudadana_movil";
-            this.cmb_cond_casa_atencion_ciudadana_movil.Size = new System.Drawing.Size(141, 23);
+            this.cmb_cond_casa_atencion_ciudadana_movil.Size = new System.Drawing.Size(162, 23);
             this.cmb_cond_casa_atencion_ciudadana_movil.TabIndex = 66;
             this.cmb_cond_casa_atencion_ciudadana_movil.UseWaitCursor = true;
             // 
@@ -2835,7 +2702,7 @@
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(12, 91);
+            this.label38.Location = new System.Drawing.Point(7, 131);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(243, 15);
             this.label38.TabIndex = 65;
@@ -2847,43 +2714,44 @@
             this.cmb_cond_casa_atencion_ciudadana.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_casa_atencion_ciudadana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_casa_atencion_ciudadana.FormattingEnabled = true;
-            this.cmb_cond_casa_atencion_ciudadana.Location = new System.Drawing.Point(349, 38);
+            this.cmb_cond_casa_atencion_ciudadana.Location = new System.Drawing.Point(14, 89);
             this.cmb_cond_casa_atencion_ciudadana.Name = "cmb_cond_casa_atencion_ciudadana";
-            this.cmb_cond_casa_atencion_ciudadana.Size = new System.Drawing.Size(141, 23);
+            this.cmb_cond_casa_atencion_ciudadana.Size = new System.Drawing.Size(158, 23);
             this.cmb_cond_casa_atencion_ciudadana.TabIndex = 64;
             this.cmb_cond_casa_atencion_ciudadana.UseWaitCursor = true;
+            this.cmb_cond_casa_atencion_ciudadana.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_casa_atencion_ciudadana_SelectedIndexChanged);
             // 
             // label75
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.ForeColor = System.Drawing.Color.Black;
-            this.label75.Location = new System.Drawing.Point(517, 21);
+            this.label75.Location = new System.Drawing.Point(8, 212);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(184, 15);
+            this.label75.Size = new System.Drawing.Size(231, 15);
             this.label75.TabIndex = 60;
-            this.label75.Text = "Latitud casa atención ciudadana";
+            this.label75.Text = "Latitud de la casa de atención ciudadana";
             this.label75.UseWaitCursor = true;
             // 
-            // textBox18
+            // txt_latitud_casa_atencion_ciudadana
             // 
-            this.textBox18.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(564, 39);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(160, 21);
-            this.textBox18.TabIndex = 62;
-            this.textBox18.UseWaitCursor = true;
+            this.txt_latitud_casa_atencion_ciudadana.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_latitud_casa_atencion_ciudadana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_latitud_casa_atencion_ciudadana.Location = new System.Drawing.Point(11, 245);
+            this.txt_latitud_casa_atencion_ciudadana.Name = "txt_latitud_casa_atencion_ciudadana";
+            this.txt_latitud_casa_atencion_ciudadana.Size = new System.Drawing.Size(160, 21);
+            this.txt_latitud_casa_atencion_ciudadana.TabIndex = 62;
+            this.txt_latitud_casa_atencion_ciudadana.UseWaitCursor = true;
             // 
-            // textBox17
+            // txt_longitud_casa_atencion_ciudadana
             // 
-            this.textBox17.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(589, 91);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(160, 21);
-            this.textBox17.TabIndex = 63;
-            this.textBox17.UseWaitCursor = true;
+            this.txt_longitud_casa_atencion_ciudadana.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_longitud_casa_atencion_ciudadana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_longitud_casa_atencion_ciudadana.Location = new System.Drawing.Point(12, 316);
+            this.txt_longitud_casa_atencion_ciudadana.Name = "txt_longitud_casa_atencion_ciudadana";
+            this.txt_longitud_casa_atencion_ciudadana.Size = new System.Drawing.Size(160, 21);
+            this.txt_longitud_casa_atencion_ciudadana.TabIndex = 63;
+            this.txt_longitud_casa_atencion_ciudadana.UseWaitCursor = true;
             // 
             // label76
             // 
@@ -2892,10 +2760,10 @@
             this.label76.ForeColor = System.Drawing.Color.Black;
             this.label76.Location = new System.Drawing.Point(9, 31);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(334, 30);
+            this.label76.Size = new System.Drawing.Size(243, 45);
             this.label76.TabIndex = 58;
-            this.label76.Text = "Condición de la persona legisladora de contar con \r\nuna casa de atención ciudadan" +
-    "a*:";
+            this.label76.Text = "Condición de la persona legisladora \r\nde contar con una casa de \r\natención ciudad" +
+    "ana*:";
             this.label76.UseWaitCursor = true;
             // 
             // label74
@@ -2903,12 +2771,102 @@
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(535, 73);
+            this.label74.Location = new System.Drawing.Point(8, 286);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(195, 15);
+            this.label74.Size = new System.Drawing.Size(242, 15);
             this.label74.TabIndex = 61;
-            this.label74.Text = "Longitud casa atención ciudadana";
+            this.label74.Text = "Longitud de la casa de atención ciudadana";
             this.label74.UseWaitCursor = true;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.txt_otro_cargo_mesa_directiva_especifique);
+            this.groupBox19.Controls.Add(this.label95);
+            this.groupBox19.Controls.Add(this.cmb_cargo_mesa_directiva_PL);
+            this.groupBox19.Controls.Add(this.cmb_cond_integrante_mesa_directiva);
+            this.groupBox19.Controls.Add(this.label96);
+            this.groupBox19.Controls.Add(this.label97);
+            this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox19.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox19.Location = new System.Drawing.Point(18, 1322);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(1181, 88);
+            this.groupBox19.TabIndex = 79;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Integración de la Mesa Directiva";
+            this.groupBox19.UseWaitCursor = true;
+            // 
+            // txt_otro_cargo_mesa_directiva_especifique
+            // 
+            this.txt_otro_cargo_mesa_directiva_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_cargo_mesa_directiva_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_otro_cargo_mesa_directiva_especifique.Location = new System.Drawing.Point(698, 52);
+            this.txt_otro_cargo_mesa_directiva_especifique.Name = "txt_otro_cargo_mesa_directiva_especifique";
+            this.txt_otro_cargo_mesa_directiva_especifique.Size = new System.Drawing.Size(478, 21);
+            this.txt_otro_cargo_mesa_directiva_especifique.TabIndex = 68;
+            this.txt_otro_cargo_mesa_directiva_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_mesa_directiva_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_mesa_directiva_especifique_TextChanged);
+            this.txt_otro_cargo_mesa_directiva_especifique.Leave += new System.EventHandler(this.txt_otro_cargo_mesa_directiva_especifique_Leave);
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.ForeColor = System.Drawing.Color.Black;
+            this.label95.Location = new System.Drawing.Point(372, 55);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(323, 15);
+            this.label95.TabIndex = 67;
+            this.label95.Text = "Otro cargo de la persona legisladora en la Mesa Directiva:";
+            this.label95.UseWaitCursor = true;
+            // 
+            // cmb_cargo_mesa_directiva_PL
+            // 
+            this.cmb_cargo_mesa_directiva_PL.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cargo_mesa_directiva_PL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cargo_mesa_directiva_PL.FormattingEnabled = true;
+            this.cmb_cargo_mesa_directiva_PL.Location = new System.Drawing.Point(862, 19);
+            this.cmb_cargo_mesa_directiva_PL.Name = "cmb_cargo_mesa_directiva_PL";
+            this.cmb_cargo_mesa_directiva_PL.Size = new System.Drawing.Size(312, 23);
+            this.cmb_cargo_mesa_directiva_PL.TabIndex = 66;
+            this.cmb_cargo_mesa_directiva_PL.UseWaitCursor = true;
+            this.cmb_cargo_mesa_directiva_PL.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_mesa_directiva_PL_SelectedIndexChanged);
+            // 
+            // cmb_cond_integrante_mesa_directiva
+            // 
+            this.cmb_cond_integrante_mesa_directiva.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_integrante_mesa_directiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_integrante_mesa_directiva.FormattingEnabled = true;
+            this.cmb_cond_integrante_mesa_directiva.Location = new System.Drawing.Point(65, 55);
+            this.cmb_cond_integrante_mesa_directiva.Name = "cmb_cond_integrante_mesa_directiva";
+            this.cmb_cond_integrante_mesa_directiva.Size = new System.Drawing.Size(192, 23);
+            this.cmb_cond_integrante_mesa_directiva.TabIndex = 47;
+            this.cmb_cond_integrante_mesa_directiva.UseWaitCursor = true;
+            this.cmb_cond_integrante_mesa_directiva.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_integrante_mesa_directiva_SelectedIndexChanged);
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.ForeColor = System.Drawing.Color.Black;
+            this.label96.Location = new System.Drawing.Point(6, 22);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(317, 30);
+            this.label96.TabIndex = 46;
+            this.label96.Text = "Condición de la persona legisladora de integrar \r\nla Mesa Directiva*:";
+            this.label96.UseWaitCursor = true;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.ForeColor = System.Drawing.Color.Black;
+            this.label97.Location = new System.Drawing.Point(548, 27);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(299, 15);
+            this.label97.TabIndex = 44;
+            this.label97.Text = "Cargo de la persona legisladora en la Mesa Directiva:";
+            this.label97.UseWaitCursor = true;
             // 
             // groupBox75
             // 
@@ -2975,6 +2933,97 @@
             this.txt_no_aplica_presentacion_declaracion_fiscal_especifique.UseWaitCursor = true;
             this.txt_no_aplica_presentacion_declaracion_fiscal_especifique.TextChanged += new System.EventHandler(this.txt_no_aplica_presentacion_declaracion_fiscal_especifique_TextChanged);
             this.txt_no_aplica_presentacion_declaracion_fiscal_especifique.Leave += new System.EventHandler(this.txt_no_aplica_presentacion_declaracion_fiscal_especifique_Leave);
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.txt_otro_cargo_jucopo_especifique);
+            this.groupBox20.Controls.Add(this.label98);
+            this.groupBox20.Controls.Add(this.cmb_cargo_jucopo);
+            this.groupBox20.Controls.Add(this.cmb_cond_integrante_jucopo);
+            this.groupBox20.Controls.Add(this.label99);
+            this.groupBox20.Controls.Add(this.label100);
+            this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox20.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox20.Location = new System.Drawing.Point(18, 1216);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(1180, 100);
+            this.groupBox20.TabIndex = 78;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Integración de la Junta de Coordinación Política";
+            this.groupBox20.UseWaitCursor = true;
+            // 
+            // txt_otro_cargo_jucopo_especifique
+            // 
+            this.txt_otro_cargo_jucopo_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_cargo_jucopo_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_otro_cargo_jucopo_especifique.Location = new System.Drawing.Point(515, 69);
+            this.txt_otro_cargo_jucopo_especifique.Name = "txt_otro_cargo_jucopo_especifique";
+            this.txt_otro_cargo_jucopo_especifique.Size = new System.Drawing.Size(661, 21);
+            this.txt_otro_cargo_jucopo_especifique.TabIndex = 68;
+            this.txt_otro_cargo_jucopo_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_jucopo_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_jucopo_especifique_TextChanged);
+            this.txt_otro_cargo_jucopo_especifique.Leave += new System.EventHandler(this.txt_otro_cargo_jucopo_especifique_Leave);
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.ForeColor = System.Drawing.Color.Black;
+            this.label98.Location = new System.Drawing.Point(102, 72);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(408, 15);
+            this.label98.TabIndex = 67;
+            this.label98.Text = "Otro cargo de la persona legisladora en la Junta de Coordinación Política:";
+            this.label98.UseWaitCursor = true;
+            // 
+            // cmb_cargo_jucopo
+            // 
+            this.cmb_cargo_jucopo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cargo_jucopo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cargo_jucopo.FormattingEnabled = true;
+            this.cmb_cargo_jucopo.Location = new System.Drawing.Point(957, 33);
+            this.cmb_cargo_jucopo.Name = "cmb_cargo_jucopo";
+            this.cmb_cargo_jucopo.Size = new System.Drawing.Size(219, 23);
+            this.cmb_cargo_jucopo.TabIndex = 66;
+            this.cmb_cargo_jucopo.UseWaitCursor = true;
+            this.cmb_cargo_jucopo.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_jucopo_SelectedIndexChanged);
+            // 
+            // cmb_cond_integrante_jucopo
+            // 
+            this.cmb_cond_integrante_jucopo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_integrante_jucopo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_integrante_jucopo.FormattingEnabled = true;
+            this.cmb_cond_integrante_jucopo.Location = new System.Drawing.Point(362, 37);
+            this.cmb_cond_integrante_jucopo.Name = "cmb_cond_integrante_jucopo";
+            this.cmb_cond_integrante_jucopo.Size = new System.Drawing.Size(148, 23);
+            this.cmb_cond_integrante_jucopo.TabIndex = 47;
+            this.cmb_cond_integrante_jucopo.UseWaitCursor = true;
+            this.cmb_cond_integrante_jucopo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_integrante_jucopo_SelectedIndexChanged);
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.Black;
+            this.label99.Location = new System.Drawing.Point(6, 28);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(333, 30);
+            this.label99.TabIndex = 46;
+            this.label99.Text = "Condición de la persona legisladora de integrar la \r\nJunta de Coordinación Políti" +
+    "ca*:";
+            this.label99.UseWaitCursor = true;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.Black;
+            this.label100.Location = new System.Drawing.Point(525, 36);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(420, 15);
+            this.label100.TabIndex = 44;
+            this.label100.Text = "Cargo Cargo de la persona legisladora en la Junta de Coordinación Política:";
+            this.label100.UseWaitCursor = true;
             // 
             // groupBox74
             // 
@@ -3111,6 +3160,96 @@
             this.txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.TextChanged += new System.EventHandler(this.txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique_TextChanged);
             this.txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Leave += new System.EventHandler(this.txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique_Leave);
             // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.label104);
+            this.groupBox22.Controls.Add(this.cmb_cond_integrante_comision_permanente);
+            this.groupBox22.Controls.Add(this.label105);
+            this.groupBox22.Controls.Add(this.cmb_cargo_comision_permanente);
+            this.groupBox22.Controls.Add(this.label103);
+            this.groupBox22.Controls.Add(this.txt_otro_cargo_comision_permanente_especifique);
+            this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox22.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox22.Location = new System.Drawing.Point(824, 833);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(373, 377);
+            this.groupBox22.TabIndex = 76;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Integración de la Comisión Permanente";
+            this.groupBox22.UseWaitCursor = true;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.ForeColor = System.Drawing.Color.Black;
+            this.label104.Location = new System.Drawing.Point(29, 42);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(317, 30);
+            this.label104.TabIndex = 46;
+            this.label104.Text = "Condición de la persona legisladora de integrar \r\nla Comisión Permanente*:\r\n";
+            this.label104.UseWaitCursor = true;
+            // 
+            // cmb_cond_integrante_comision_permanente
+            // 
+            this.cmb_cond_integrante_comision_permanente.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_integrante_comision_permanente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_integrante_comision_permanente.FormattingEnabled = true;
+            this.cmb_cond_integrante_comision_permanente.Location = new System.Drawing.Point(102, 89);
+            this.cmb_cond_integrante_comision_permanente.Name = "cmb_cond_integrante_comision_permanente";
+            this.cmb_cond_integrante_comision_permanente.Size = new System.Drawing.Size(141, 23);
+            this.cmb_cond_integrante_comision_permanente.TabIndex = 47;
+            this.cmb_cond_integrante_comision_permanente.UseWaitCursor = true;
+            this.cmb_cond_integrante_comision_permanente.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_integrante_comision_permanente_SelectedIndexChanged);
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.ForeColor = System.Drawing.Color.Black;
+            this.label105.Location = new System.Drawing.Point(33, 140);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(202, 30);
+            this.label105.TabIndex = 44;
+            this.label105.Text = "Cargo de la persona legisladora en \r\nla Comisión Permanente:";
+            this.label105.UseWaitCursor = true;
+            // 
+            // cmb_cargo_comision_permanente
+            // 
+            this.cmb_cargo_comision_permanente.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cargo_comision_permanente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cargo_comision_permanente.FormattingEnabled = true;
+            this.cmb_cargo_comision_permanente.Location = new System.Drawing.Point(36, 183);
+            this.cmb_cargo_comision_permanente.Name = "cmb_cargo_comision_permanente";
+            this.cmb_cargo_comision_permanente.Size = new System.Drawing.Size(304, 23);
+            this.cmb_cargo_comision_permanente.TabIndex = 66;
+            this.cmb_cargo_comision_permanente.UseWaitCursor = true;
+            this.cmb_cargo_comision_permanente.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_comision_permanente_SelectedIndexChanged);
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.ForeColor = System.Drawing.Color.Black;
+            this.label103.Location = new System.Drawing.Point(38, 245);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(239, 30);
+            this.label103.TabIndex = 67;
+            this.label103.Text = "Otro cargo de la persona legisladora en la \r\nComisión permanente";
+            this.label103.UseWaitCursor = true;
+            // 
+            // txt_otro_cargo_comision_permanente_especifique
+            // 
+            this.txt_otro_cargo_comision_permanente_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_cargo_comision_permanente_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_otro_cargo_comision_permanente_especifique.Location = new System.Drawing.Point(41, 297);
+            this.txt_otro_cargo_comision_permanente_especifique.Name = "txt_otro_cargo_comision_permanente_especifique";
+            this.txt_otro_cargo_comision_permanente_especifique.Size = new System.Drawing.Size(299, 21);
+            this.txt_otro_cargo_comision_permanente_especifique.TabIndex = 68;
+            this.txt_otro_cargo_comision_permanente_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_comision_permanente_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_comision_permanente_especifique_TextChanged);
+            this.txt_otro_cargo_comision_permanente_especifique.Leave += new System.EventHandler(this.txt_otro_cargo_comision_permanente_especifique_Leave);
+            // 
             // groupBox72
             // 
             this.groupBox72.Controls.Add(this.btnEliminarCandidaturaPL);
@@ -3199,14 +3338,14 @@
             this.dgv_partido_coalicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_partido_coalicion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partido_politico_candidatura_coalicion});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_partido_coalicion.Location = new System.Drawing.Point(626, 68);
             this.dgv_partido_coalicion.Name = "dgv_partido_coalicion";
             this.dgv_partido_coalicion.ReadOnly = true;
@@ -3773,14 +3912,14 @@
             this.dgv_lengua_PL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lengua_PL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lengua_ind_persona_legisladora});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_lengua_PL.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_lengua_PL.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_lengua_PL.Location = new System.Drawing.Point(17, 63);
             this.dgv_lengua_PL.Name = "dgv_lengua_PL";
             this.dgv_lengua_PL.ReadOnly = true;
@@ -3943,14 +4082,14 @@
             this.dgv_tipo_discapacidad_PL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tipo_discapacidad_PL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo_discapacidad_persona_legisladora});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tipo_discapacidad_PL.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tipo_discapacidad_PL.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_tipo_discapacidad_PL.Location = new System.Drawing.Point(13, 102);
             this.dgv_tipo_discapacidad_PL.Name = "dgv_tipo_discapacidad_PL";
             this.dgv_tipo_discapacidad_PL.ReadOnly = true;
@@ -4082,14 +4221,14 @@
             this.lic_pl,
             this.mae_pl,
             this.doc_pl});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_nivel_escolaridad_PL.Location = new System.Drawing.Point(28, 70);
             this.dgv_nivel_escolaridad_PL.Name = "dgv_nivel_escolaridad_PL";
             this.dgv_nivel_escolaridad_PL.ReadOnly = true;
@@ -4621,6 +4760,7 @@
             this.dtp_fecha_nacimiento_persona_legisladora.TabIndex = 30;
             this.dtp_fecha_nacimiento_persona_legisladora.UseWaitCursor = true;
             this.dtp_fecha_nacimiento_persona_legisladora.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_nacimiento_persona_legisladora.ValueChanged += new System.EventHandler(this.dtp_fecha_nacimiento_persona_legisladora_ValueChanged);
             // 
             // txt_apellido_3_persona_legisladora
             // 
@@ -10028,26 +10168,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tema_comision_legislativa)).EndInit();
             this.tabPagePL.ResumeLayout(false);
             this.tabPagePL.PerformLayout();
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
-            this.groupBox22.ResumeLayout(false);
-            this.groupBox22.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_participacion_comisiones)).EndInit();
             this.groupBox76.ResumeLayout(false);
             this.groupBox76.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.groupBox75.ResumeLayout(false);
             this.groupBox75.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.groupBox74.ResumeLayout(false);
             this.groupBox74.PerformLayout();
             this.groupBox73.ResumeLayout(false);
             this.groupBox73.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
             this.groupBox72.ResumeLayout(false);
             this.groupBox72.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_partido_coalicion)).EndInit();
@@ -10338,8 +10479,8 @@
         private System.Windows.Forms.ComboBox cmb_cond_pob_diversidad_sexual_persona_legisladora;
         private System.Windows.Forms.ComboBox cmb_cond_pob_afromexicana_persona_legisladora_PL;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txt_longitud_casa_atencion_ciudadana;
+        private System.Windows.Forms.TextBox txt_latitud_casa_atencion_ciudadana;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label76;
@@ -10375,41 +10516,35 @@
         private System.Windows.Forms.ComboBox cmb_tipo_adscripcion_inicial_persona_legisladora;
         private System.Windows.Forms.ComboBox cmb_tipo_adscripcion_final_persona_legisladora;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label94;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.TextBox txt_otro_cargo_mesa_directiva_especifique;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.ComboBox cmb_cargo_mesa_directiva_PL;
         private System.Windows.Forms.ComboBox cmb_cond_integrante_mesa_directiva;
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.TextBox txt_otro_cargo_jucopo_especifique;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.ComboBox cmb_cargo_jucopo;
         private System.Windows.Forms.ComboBox cmb_cond_integrante_jucopo;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox txt_asist_sesiones_comision_permanente_persona_legisladora;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.TextBox textBox33;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox txt_otro_cargo_comision_permanente_especifique;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.ComboBox cmb_cargo_comision_permanente;
         private System.Windows.Forms.ComboBox cmb_cond_integrante_comision_permanente;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.TextBox txt_cant_interv_sesiones_dip_permanente_persona_legisladora;
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox txt_cant_iniciativas_presentadas_persona_legisladora;
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.ComboBox cmb_tipo_promovente_iniciativa;
         private System.Windows.Forms.TextBox textBox38;
@@ -10912,5 +11047,20 @@
         private System.Windows.Forms.GroupBox groupBox76;
         private System.Windows.Forms.ComboBox cmb_cond_casa_atencion_ciudadana_movil;
         private GMap.NET.WindowsForms.GMapControl gMapControl;
+        private System.Windows.Forms.ComboBox cmb_nombre_comision_legislativa;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Button btnEliminarParticipacionCom;
+        private System.Windows.Forms.Button btnAgregarParticipacionCom;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.ComboBox cmb_cargo_comision_legislativa;
+        private System.Windows.Forms.TextBox txt_ID_comision_legislativa_pc;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.DataGridView dgv_participacion_comisiones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_comision_legislativa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_comision_legislativa_pc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargo_comision_legislativa;
+        private System.Windows.Forms.Label label293;
+        private System.Windows.Forms.TextBox txt_asist_sesiones_plenarias_persona_legisladora;
+        private System.Windows.Forms.TextBox txt_cant_intervenciones_sesiones_plenarias_persona_legisladora;
     }
 }

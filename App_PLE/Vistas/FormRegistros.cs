@@ -21,9 +21,13 @@ namespace App_PLE.Vistas
 {
     public partial class FormRegistros : Form
     {
+        private GMapOverlay markersOverlay;
+
+
         public FormRegistros()
         {
             InitializeComponent();
+            InitializeMap();
         }
         
         //-------------------------------------------------- CARGA INICIAL DE FORMULARIO ----------------------------------------------------
@@ -106,12 +110,15 @@ namespace App_PLE.Vistas
             cmb_Cond_presentacion_declaracion_intereses();
             cmb_Cond_presentacion_declaracion_fiscal();
             cmb_Cond_casa_atencion_ciudadana();
+            cmb_Cond_casa_atencion_ciudadana_movil();
             cmb_Cond_integrante_comision_permanente();
             cmb_Cargo_comision_permanente();
+            cmb_Cargo_comision_legislativa();
             cmb_Cond_integrante_jucopo();
             cmb_Cond_integrante_mesa_directiva();
             cmb_Cargo_mesa_directiva_PL();
             cmb_Cargo_jucopo();
+            cmb_Nombre_comision_legislativa();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_nombre_2_persona_legisladora.Enabled = false; txt_nombre_2_persona_legisladora.BackColor = Color.LightGray;
@@ -135,6 +142,9 @@ namespace App_PLE.Vistas
             cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
             dgv_partido_coalicion.BackgroundColor = Color.LightGray;
+            dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
+            dgv_lengua_PL.BackgroundColor= Color.LightGray;
+            dgv_tipo_discapacidad_PL.BackgroundColor = Color.LightGray;
             cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.BackColor = Color.LightGray;
             cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.BackColor = Color.LightGray;
             txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.BackColor = Color.LightGray;
@@ -142,6 +152,20 @@ namespace App_PLE.Vistas
             txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.BackColor = Color.LightGray;
             txt_no_aplica_presentacion_declaracion_intereses_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_intereses_especifique.BackColor = Color.LightGray;
             txt_no_aplica_presentacion_declaracion_fiscal_especifique.Enabled = false; txt_no_aplica_presentacion_declaracion_fiscal_especifique.BackColor = Color.LightGray;
+            cmb_cond_casa_atencion_ciudadana_movil.Enabled = false; cmb_cond_casa_atencion_ciudadana_movil.BackColor = Color.LightGray;
+            txt_latitud_casa_atencion_ciudadana.Enabled = false; txt_latitud_casa_atencion_ciudadana.BackColor = Color.LightGray;
+            txt_longitud_casa_atencion_ciudadana.Enabled = false; txt_longitud_casa_atencion_ciudadana.BackColor = Color.LightGray;
+            cmb_cargo_comision_permanente.Enabled = false; cmb_cargo_comision_permanente.BackColor = Color.LightGray;
+            txt_otro_cargo_comision_permanente_especifique.Enabled = false; txt_otro_cargo_comision_permanente_especifique.BackColor = Color.LightGray;
+            cmb_cargo_jucopo.Enabled = false; cmb_cargo_jucopo.BackColor = Color.LightGray;
+            txt_otro_cargo_jucopo_especifique.Enabled = false; txt_otro_cargo_jucopo_especifique.BackColor = Color.LightGray;
+            cmb_cargo_mesa_directiva_PL.Enabled = false; cmb_cargo_mesa_directiva_PL.BackColor = Color.LightGray;
+            txt_otro_cargo_mesa_directiva_especifique.Enabled = false; txt_otro_cargo_mesa_directiva_especifique.BackColor = Color.LightGray;
+            txt_ID_comision_legislativa_pc.Enabled = false; txt_ID_comision_legislativa_pc.BackColor = Color.LightGray;
+            txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Enabled = false; txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.BackColor = Color.LightGray;
+            txt_asist_sesiones_comision_permanente_persona_legisladora.Enabled = false; txt_asist_sesiones_comision_permanente_persona_legisladora.BackColor = Color.LightGray;
+            txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Enabled = false; txt_cant_interv_sesiones_dip_permanente_persona_legisladora.BackColor = Color.LightGray;
+            gMapControl.Enabled = false;
 
             btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
             btnAgregarLenguaPL.Enabled = false;btnEliminarLenguaPL.Enabled = false;
@@ -3146,7 +3170,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3175,6 +3199,47 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_Cond_casa_atencion_ciudadana_movil()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cond_casa_atencion_ciudadana_movil.DataSource = dataTable;
+                    cmb_cond_casa_atencion_ciudadana_movil.DisplayMember = "descripcion";
+
+                    cmb_cond_casa_atencion_ciudadana_movil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cond_casa_atencion_ciudadana_movil.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cond_casa_atencion_ciudadana_movil.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cond_casa_atencion_ciudadana_movil.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
         private void cmb_Cond_integrante_comision_permanente()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3187,7 +3252,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3257,6 +3322,88 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_Nombre_comision_legislativa()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select nombre_comision_legislativa from TR_COMISIONES_LEGISLATIVAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_nombre_comision_legislativa.DataSource = dataTable;
+                    cmb_nombre_comision_legislativa.DisplayMember = "nombre_comision_legislativa";
+
+                    cmb_nombre_comision_legislativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_comision_legislativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_nombre_comision_legislativa.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_comision_legislativa.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_Cargo_comision_legislativa()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_CARGO";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cargo_comision_legislativa.DataSource = dataTable;
+                    cmb_cargo_comision_legislativa.DisplayMember = "descripcion";
+
+                    cmb_cargo_comision_legislativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cargo_comision_legislativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cargo_comision_legislativa.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cargo_comision_legislativa.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
         private void cmb_Cond_integrante_jucopo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3269,7 +3416,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3351,7 +3498,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -3438,10 +3585,53 @@ namespace App_PLE.Vistas
             }
             else
             {
-                txt_nombre_2_persona_legisladora.Visible = false;
-                //txt_nombre_2_persona_legisladora.Enabled = true; txt_nombre_2_persona_legisladora.BackColor = Color.Honeydew;
+                //txt_nombre_2_persona_legisladora.Visible = false;
+                txt_nombre_2_persona_legisladora.Enabled = true; txt_nombre_2_persona_legisladora.BackColor = Color.Honeydew;
+
+                // CONSTRUCCION ID
+                string primerNombre = txt_nombre_1_persona_legisladora.Text;
+                string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+                string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+                string primerApellido = txt_apellido_1_persona_legisladora.Text;
+                string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+                string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+                string sexo1 = cmb_sexo_persona_legisladora.Text;
+                char sexo = sexo1[0];
+                DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                    primerApellido, segundoApellido, tercerApellido,
+                    sexo, fechaNacimiento);
+                txt_ID_persona_legisladora.Text = uniqueID;
             }
 
+        }
+        public static string GenerateUniqueID(string primerNombre, string segundoNombre, string tercerNombre,
+            string primerApellido, string segundoApellido, string tercerApellido,
+            char sexo, DateTime fechaNacimiento)
+        {
+            // Concatenar los datos en un string
+            string dataToHash = $"{primerNombre}{primerApellido}{sexo}{fechaNacimiento.ToString("yyyyMMdd")}";
+
+            // Generar el hash SHA-256
+            string uniqueID = CalculateSHA256(dataToHash);
+
+            return uniqueID.Substring(0, 12); // Tomamos solo los primeros 12 caracteres del hash
+        }
+        private static string CalculateSHA256(string input)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(input);
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hash.Length; i++)
+                {
+                    sb.Append(hash[i].ToString("x2")); // Convierte cada byte a su representación hexadecimal
+                }
+                return sb.ToString();
+            }
         }
         private void txt_nombre_2_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
@@ -3461,7 +3651,25 @@ namespace App_PLE.Vistas
             else
             {
                 txt_nombre_3_persona_legisladora.Enabled = true; txt_nombre_3_persona_legisladora.BackColor = Color.Honeydew;
+                
             }
+
+            // CONSTRUCCION ID
+            string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+            string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+            string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+            string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+            string sexo1 = cmb_sexo_persona_legisladora.Text;
+            char sexo = sexo1[0];
+            DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                primerApellido, segundoApellido, tercerApellido,
+                sexo, fechaNacimiento);
+            txt_ID_persona_legisladora.Text = uniqueID;
+
         }
         private void txt_nombre_3_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
@@ -3470,6 +3678,22 @@ namespace App_PLE.Vistas
 
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_nombre_3_persona_legisladora.SelectionStart = txt_nombre_3_persona_legisladora.Text.Length;
+
+            // CONSTRUCCION ID
+            string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+            string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+            string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+            string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+            string sexo1 = cmb_sexo_persona_legisladora.Text;
+            char sexo = sexo1[0];
+            DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                primerApellido, segundoApellido, tercerApellido,
+                sexo, fechaNacimiento);
+            txt_ID_persona_legisladora.Text = uniqueID;
         }
         private void txt_apellido_1_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
@@ -3489,6 +3713,22 @@ namespace App_PLE.Vistas
             else
             {
                 txt_apellido_2_persona_legisladora.Enabled = true; txt_apellido_2_persona_legisladora.BackColor = Color.Honeydew;
+
+                // CONSTRUCCION ID
+                string primerNombre = txt_nombre_1_persona_legisladora.Text;
+                string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+                string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+                string primerApellido = txt_apellido_1_persona_legisladora.Text;
+                string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+                string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+                string sexo1 = cmb_sexo_persona_legisladora.Text;
+                char sexo = sexo1[0];
+                DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                    primerApellido, segundoApellido, tercerApellido,
+                    sexo, fechaNacimiento);
+                txt_ID_persona_legisladora.Text = uniqueID;
             }
         }
         private void txt_apellido_2_persona_legisladora_TextChanged(object sender, EventArgs e)
@@ -3509,6 +3749,22 @@ namespace App_PLE.Vistas
             else
             {
                 txt_apellido_3_persona_legisladora.Enabled = true; txt_apellido_3_persona_legisladora.BackColor = Color.Honeydew;
+
+                // CONSTRUCCION ID
+                string primerNombre = txt_nombre_1_persona_legisladora.Text;
+                string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+                string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+                string primerApellido = txt_apellido_1_persona_legisladora.Text;
+                string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+                string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+                string sexo1 = cmb_sexo_persona_legisladora.Text;
+                char sexo = sexo1[0];
+                DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                    primerApellido, segundoApellido, tercerApellido,
+                    sexo, fechaNacimiento);
+                txt_ID_persona_legisladora.Text = uniqueID;
             }
         }
         private void txt_apellido_3_persona_legisladora_TextChanged(object sender, EventArgs e)
@@ -3518,6 +3774,22 @@ namespace App_PLE.Vistas
 
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_apellido_3_persona_legisladora.SelectionStart = txt_apellido_3_persona_legisladora.Text.Length;
+
+            // CONSTRUCCION ID
+            string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+            string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+            string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+            string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+            string sexo1 = cmb_sexo_persona_legisladora.Text;
+            char sexo = sexo1[0];
+            DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                primerApellido, segundoApellido, tercerApellido,
+                sexo, fechaNacimiento);
+            txt_ID_persona_legisladora.Text = uniqueID;
         }
         private void txt_otro_estatus_persona_legisladora_especifique_TextChanged(object sender, EventArgs e)
         {
@@ -3666,6 +3938,7 @@ namespace App_PLE.Vistas
                             cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = true; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.Honeydew;
                             cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
                             cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+                            dgv_nivel_escolaridad_PL.BackgroundColor = Color.Honeydew;
 
                             cmb_carrera_licenciatura_persona_legisladora_PL.Focus();
                             btnAgregarNivelEscPL.Enabled = true; btnEliminarNivelEscPL.Enabled = true;
@@ -3678,6 +3951,7 @@ namespace App_PLE.Vistas
                             cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = true; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.Honeydew;
                             cmb_carrera_maestria_persona_legisladora_PL.Enabled = true; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.Honeydew;
                             cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
+                            dgv_nivel_escolaridad_PL.BackgroundColor = Color.Honeydew;
                             cmb_carrera_licenciatura_persona_legisladora_PL.Focus();
 
                             btnAgregarNivelEscPL.Enabled = true; btnEliminarNivelEscPL.Enabled = true;
@@ -3689,6 +3963,7 @@ namespace App_PLE.Vistas
                             cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = true; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.Honeydew;
                             cmb_carrera_maestria_persona_legisladora_PL.Enabled = true; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.Honeydew;
                             cmb_carrera_doctorado_persona_legisladora_PL.Enabled = true; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.Honeydew;
+                            dgv_nivel_escolaridad_PL.BackgroundColor = Color.Honeydew;
 
                             btnAgregarNivelEscPL.Enabled = true; btnEliminarNivelEscPL.Enabled = true;
 
@@ -3699,7 +3974,7 @@ namespace App_PLE.Vistas
                             cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
                             cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
                             cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
-
+                            dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
                             dgv_nivel_escolaridad_PL.Rows.Clear();
 
                             cmb_carrera_licenciatura_persona_legisladora_PL.Text = ""; cmb_carrera_maestria_persona_legisladora_PL.Text = "";
@@ -3776,12 +4051,13 @@ namespace App_PLE.Vistas
             {
                 cmb_lengua_ind_persona_legisladora.Enabled = true; cmb_lengua_ind_persona_legisladora.BackColor = Color.Honeydew;
                 btnAgregarLenguaPL.Enabled = true; btnEliminarLenguaPL.Enabled = true;
+                dgv_lengua_PL.BackgroundColor = Color.Honeydew;
                 cmb_lengua_ind_persona_legisladora.Focus();
             }
             else
             {
                 cmb_lengua_ind_persona_legisladora.Enabled = false; cmb_lengua_ind_persona_legisladora.BackColor = Color.LightGray;
-                dgv_lengua_PL.Rows.Clear();
+                dgv_lengua_PL.Rows.Clear(); dgv_lengua_PL.BackgroundColor = Color.LightGray;
                 btnAgregarLenguaPL.Enabled = false; btnEliminarLenguaPL.Enabled = false;
                 
                 cmb_lengua_ind_persona_legisladora.Text = "";
@@ -3843,12 +4119,13 @@ namespace App_PLE.Vistas
             {
                 cmb_tipo_discapacidad_persona_legisladora.Enabled = true; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.Honeydew;
                 btnAgregarDiscapacidadPL.Enabled = true; btnEliminarDiscapacidadPL.Enabled = true;
+                dgv_tipo_discapacidad_PL.BackgroundColor = Color.Honeydew;
                 cmb_tipo_discapacidad_persona_legisladora.Focus();
             }
             else
             {
                 cmb_tipo_discapacidad_persona_legisladora.Enabled = false; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.LightGray;
-                dgv_tipo_discapacidad_PL.Rows.Clear();
+                dgv_tipo_discapacidad_PL.Rows.Clear(); dgv_tipo_discapacidad_PL.BackgroundColor = Color.LightGray;
                 btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false; 
                 cmb_tipo_discapacidad_persona_legisladora.Text = "";
             }
@@ -3899,6 +4176,34 @@ namespace App_PLE.Vistas
                 cmb_cond_pob_diversidad_sexual_persona_legisladora.Enabled = false; cmb_cond_pob_diversidad_sexual_persona_legisladora.BackColor = Color.LightGray;
                 cmb_cond_pob_diversidad_sexual_persona_legisladora.Text = "";
             }
+
+            // CONSTRUCCION ID
+            string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+            string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+            string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+            string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+            string sexo1 = cmb_sexo_persona_legisladora.Text;
+            char sexo = sexo1[0];
+            DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                primerApellido, segundoApellido, tercerApellido,
+                sexo, fechaNacimiento);
+            txt_ID_persona_legisladora.Text = uniqueID;
+        }
+        private void dtp_fecha_nacimiento_persona_legisladora_ValueChanged(object sender, EventArgs e)
+        {
+            // CONSTRUCCION ID
+            //string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            //string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            //string sexo1 = cmb_sexo_persona_legisladora.Text;
+            //char sexo = sexo1[0];
+            //DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+            //string uniqueID = GenerateUniqueID(primerNombre, primerApellido, sexo, fechaNacimiento);
+            //txt_ID_persona_legisladora.Text = uniqueID;
         }
         private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Leave(object sender, EventArgs e)
         {
@@ -4819,7 +5124,6 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
-
         private void txt_gestion_parlamentaria_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
@@ -4828,7 +5132,6 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
-
         private void txt_atencion_ciudadana_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
@@ -4837,7 +5140,6 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
-
         private void txt_otro_concepto_gasto_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
@@ -4849,26 +5151,383 @@ namespace App_PLE.Vistas
         private void InitializeMap()
         {
             gMapControl.MapProvider = GMapProviders.GoogleMap;
-            gMapControl.Position = new PointLatLng(0, 0); // Centrar el mapa en el ecuador por defecto
+            gMapControl.Position = new PointLatLng(19.42847, -99.12766); // Centrar el mapa en el ecuador por defecto
             gMapControl.MinZoom = 0;
             gMapControl.MaxZoom = 18;
-            gMapControl.Zoom = 2;
+            gMapControl.Zoom = 6;
+
             gMapControl.MouseClick += new MouseEventHandler(gMapControl_MouseClick);
+            gMapControl.MouseWheel += new MouseEventHandler(gMapControl_MouseWheel); // Añadir manejador de evento MouseWheel
+
+            gMapControl.DragButton = MouseButtons.Left; // Permitir arrastrar con el botón izquierdo del ratón
+            gMapControl.CanDragMap = true; // Habilitar el arrastre del mapa
+            gMapControl.ShowCenter = false; // Ocultar el cursor central por defecto
+            gMapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter; // Configurar el zoom con la rueda del ratón
+            gMapControl.IgnoreMarkerOnMouseWheel = true; // Ignorar los marcadores al hacer zoom con la rueda del ratón
+
 
             markersOverlay = new GMapOverlay("markers");
             gMapControl.Overlays.Add(markersOverlay);
         }
+
+        private void gMapControl_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (gMapControl.Bounds.Contains(PointToClient(Cursor.Position)))
+            {
+                // Maneja el evento de zoom en el mapa
+                if (e.Delta > 0)
+                {
+                    if (gMapControl.Zoom < gMapControl.MaxZoom)
+                    {
+                        gMapControl.Zoom++;
+                    }
+                }
+                else if (e.Delta < 0)
+                {
+                    if (gMapControl.Zoom > gMapControl.MinZoom)
+                    {
+                        gMapControl.Zoom--;
+                    }
+                }
+        // Marca el evento como manejado para que no se propague
+        ((HandledMouseEventArgs)e).Handled = true;
+            }
+        }
+
+        protected override void OnMouseWheel(MouseEventArgs e)
+        {
+            if (gMapControl.Bounds.Contains(PointToClient(Cursor.Position)))
+            {
+                ((HandledMouseEventArgs)e).Handled = true;
+            }
+            else
+            {
+                base.OnMouseWheel(e);
+            }
+        }
+
         private void gMapControl_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 PointLatLng point = gMapControl.FromLocalToLatLng(e.X, e.Y);
-                textBoxLatitude.Text = point.Lat.ToString();
-                textBoxLongitude.Text = point.Lng.ToString();
+                txt_latitud_casa_atencion_ciudadana.Text = point.Lat.ToString();
+                txt_longitud_casa_atencion_ciudadana.Text = point.Lng.ToString();
 
                 markersOverlay.Markers.Clear();
                 GMarkerGoogle marker = new GMarkerGoogle(point, GMarkerGoogleType.red_dot);
                 markersOverlay.Markers.Add(marker);
+            }
+        }
+        private void cmb_cond_casa_atencion_ciudadana_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_casa_atencion_ciudadana.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_cond_casa_atencion_ciudadana_movil.Enabled = true; cmb_cond_casa_atencion_ciudadana_movil.BackColor = Color.Honeydew;
+                txt_latitud_casa_atencion_ciudadana.Enabled = true; txt_latitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
+                txt_longitud_casa_atencion_ciudadana.Enabled = true; txt_longitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
+                gMapControl.Enabled = true;
+                cmb_cond_casa_atencion_ciudadana_movil.Focus();
+
+            }
+            else
+            {
+                cmb_cond_casa_atencion_ciudadana_movil.Enabled = false; cmb_cond_casa_atencion_ciudadana_movil.BackColor = Color.LightGray;
+                txt_latitud_casa_atencion_ciudadana.Enabled = false; txt_latitud_casa_atencion_ciudadana.BackColor = Color.LightGray;
+                txt_longitud_casa_atencion_ciudadana.Enabled = false; txt_longitud_casa_atencion_ciudadana.BackColor = Color.LightGray;
+                txt_otro_cargo_comision_permanente_especifique.Enabled = false; txt_otro_cargo_comision_permanente_especifique.BackColor = Color.LightGray;
+                gMapControl.Enabled = false;
+                cmb_cond_casa_atencion_ciudadana_movil.Text = "";
+                txt_latitud_casa_atencion_ciudadana.Text = "";
+                txt_longitud_casa_atencion_ciudadana.Text = "";
+                txt_otro_cargo_comision_permanente_especifique.Text = "";
+            }
+        }
+        private void cmb_cond_integrante_comision_permanente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_integrante_comision_permanente.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_cargo_comision_permanente.Enabled = true; cmb_cargo_comision_permanente.BackColor = Color.Honeydew;
+                txt_asist_sesiones_comision_permanente_persona_legisladora.Enabled = true; txt_asist_sesiones_comision_permanente_persona_legisladora.BackColor = Color.Honeydew;
+                cmb_cargo_comision_permanente.Focus();
+
+            }
+            else
+            {
+                cmb_cargo_comision_permanente.Enabled = false; cmb_cargo_comision_permanente.BackColor = Color.LightGray;
+                txt_asist_sesiones_comision_permanente_persona_legisladora.Enabled = false; txt_asist_sesiones_comision_permanente_persona_legisladora.BackColor = Color.LightGray;
+                cmb_cargo_comision_permanente.Focus();
+                cmb_cargo_comision_permanente.Text = "";
+            }
+        }
+        private void cmb_cargo_comision_permanente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cargo_comision_permanente.Text.ToString();
+
+            if (valorComboBox1 == "Otro cargo (especifique)")
+            {
+                txt_otro_cargo_comision_permanente_especifique.Enabled = true; txt_otro_cargo_comision_permanente_especifique.BackColor = Color.Honeydew;
+                txt_otro_cargo_comision_permanente_especifique.Focus();
+
+            }
+            else
+            {
+                txt_otro_cargo_comision_permanente_especifique.Enabled = false; txt_otro_cargo_comision_permanente_especifique.BackColor = Color.LightGray;
+                txt_otro_cargo_comision_permanente_especifique.Text = "";
+            }
+           
+        }
+        private void txt_otro_cargo_comision_permanente_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_cargo_comision_permanente_especifique.Text = txt_otro_cargo_comision_permanente_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_cargo_comision_permanente_especifique.SelectionStart = txt_otro_cargo_comision_permanente_especifique.Text.Length;
+        }
+        private void txt_otro_cargo_comision_permanente_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_cargo_comision_permanente_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro cargo desempeñado por la persona legisladora en la Comisión Permanente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_cargo_comision_permanente_especifique.Focus();
+            }
+        }
+        private void cmb_cond_integrante_jucopo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_integrante_jucopo.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_cargo_jucopo.Enabled = true; cmb_cargo_jucopo.BackColor = Color.Honeydew;
+                
+                //txt_latitud_casa_atencion_ciudadana.Enabled = true; txt_latitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
+                //txt_longitud_casa_atencion_ciudadana.Enabled = true; txt_longitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
+                //gMapControl.Enabled = true;
+                cmb_cargo_jucopo.Focus();
+
+            }
+            else
+            {
+                cmb_cargo_jucopo.Enabled = false; cmb_cargo_jucopo.BackColor = Color.LightGray;
+                txt_otro_cargo_jucopo_especifique.Enabled = false; txt_otro_cargo_jucopo_especifique.BackColor = Color.LightGray;
+                cmb_cargo_jucopo.Text = "";
+                txt_otro_cargo_jucopo_especifique.Text = "";
+            }
+        }
+        private void cmb_cargo_jucopo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cargo_jucopo.Text.ToString();
+
+            if (valorComboBox1 == "Otro cargo (especifique)")
+            {
+                txt_otro_cargo_jucopo_especifique.Enabled = true; txt_otro_cargo_jucopo_especifique.BackColor = Color.Honeydew;
+                txt_otro_cargo_jucopo_especifique.Focus();
+
+            }
+            else
+            {
+                txt_otro_cargo_jucopo_especifique.Enabled = false; txt_otro_cargo_jucopo_especifique.BackColor = Color.LightGray;
+                txt_otro_cargo_jucopo_especifique.Text = "";
+            }
+        }
+        private void txt_otro_cargo_jucopo_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_cargo_jucopo_especifique.Text = txt_otro_cargo_jucopo_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_cargo_jucopo_especifique.SelectionStart = txt_otro_cargo_jucopo_especifique.Text.Length;
+        }
+        private void txt_otro_cargo_jucopo_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_cargo_jucopo_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro cargo desempeñado por la persona legisladora en la Junta de Coordinación Política.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_cargo_jucopo_especifique.Focus();
+            }
+        }
+        private void cmb_cond_integrante_mesa_directiva_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_integrante_mesa_directiva.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_cargo_mesa_directiva_PL.Enabled = true; cmb_cargo_mesa_directiva_PL.BackColor = Color.Honeydew;
+                cmb_cargo_mesa_directiva_PL.Focus();
+
+            }
+            else
+            {
+                cmb_cargo_mesa_directiva_PL.Enabled = false; cmb_cargo_mesa_directiva_PL.BackColor = Color.LightGray;
+                txt_otro_cargo_mesa_directiva_especifique.Enabled = false; txt_otro_cargo_mesa_directiva_especifique.BackColor = Color.LightGray;
+                cmb_cargo_mesa_directiva_PL.Text = "";
+                txt_otro_cargo_mesa_directiva_especifique.Text = "";
+            }
+        }
+        private void cmb_cargo_mesa_directiva_PL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cargo_mesa_directiva_PL.Text.ToString();
+
+            if (valorComboBox1 == "Otro cargo (especifique)")
+            {
+                txt_otro_cargo_mesa_directiva_especifique.Enabled = true; txt_otro_cargo_mesa_directiva_especifique.BackColor = Color.Honeydew;
+                txt_otro_cargo_mesa_directiva_especifique.Focus();
+
+            }
+            else
+            {
+                txt_otro_cargo_mesa_directiva_especifique.Enabled = false; txt_otro_cargo_mesa_directiva_especifique.BackColor = Color.LightGray;
+                txt_otro_cargo_mesa_directiva_especifique.Text = "";
+            }
+        }
+        private void txt_otro_cargo_mesa_directiva_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_otro_cargo_mesa_directiva_especifique.Text = txt_otro_cargo_mesa_directiva_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_otro_cargo_mesa_directiva_especifique.SelectionStart = txt_otro_cargo_mesa_directiva_especifique.Text.Length;
+        }
+        private void txt_otro_cargo_mesa_directiva_especifique_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_otro_cargo_mesa_directiva_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el otro cargo desempeñado por la persona legisladora en la Mesa Directiva.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_otro_cargo_mesa_directiva_especifique.Focus();
+            }
+        }
+        private void cmb_nombre_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_nombre_comision_legislativa.SelectedItem != null)
+            {
+                string valor_cmb = cmb_nombre_comision_legislativa.Text;
+                string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        // comando de sql
+                        string query = "select ID_comision_legislativa from TR_COMISIONES_LEGISLATIVAS where nombre_comision_legislativa = @valor_cmb";
+                        
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Agregar parámetro al comando
+                        cmd.Parameters.AddWithValue("@valor_cmb", valor_cmb);
+                        txt_ID_comision_legislativa_pc.Text = cmd.ExecuteScalar()?.ToString();
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ID: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+            }
+            else { 
+
+            }
+                
+        }
+        private void btnAgregarParticipacionCom_Click(object sender, EventArgs e)
+        {
+            // se obtienen los valores
+            string nom_com = cmb_nombre_comision_legislativa.Text.Trim();
+            string id_com = txt_ID_comision_legislativa_pc.Text.Trim();
+            string cargo_com = cmb_cargo_comision_legislativa.Text.Trim();
+
+
+            if (string.IsNullOrWhiteSpace(cmb_nombre_comision_legislativa.Text) || string.IsNullOrWhiteSpace(cmb_cargo_comision_legislativa.Text))
+            {
+                MessageBox.Show("Revisar datos vacios");
+            }
+            else
+            {
+
+                // Agregar una nueva fila al DataGridView
+                dgv_participacion_comisiones.Rows.Add(nom_com,id_com,cargo_com);
+
+                cmb_nombre_comision_legislativa.Text = "";
+                txt_ID_comision_legislativa_pc.Text = "";
+                cmb_cargo_comision_legislativa.Text = "";
+            }
+        }
+        private void btnEliminarParticipacionCom_Click(object sender, EventArgs e)
+        {
+            if (dgv_participacion_comisiones.SelectedRows.Count > 0)
+            {
+                dgv_participacion_comisiones.Rows.RemoveAt(dgv_participacion_comisiones.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private void txt_asist_sesiones_plenarias_persona_legisladora_TextChanged(object sender, EventArgs e)
+        {
+            string valor_txt = txt_asist_sesiones_plenarias_persona_legisladora.Text;
+
+            string sesiones_per_ord = Txt_sesiones_celebradas_po.Text;
+            string sesiones_per_ext = Txt_sesiones_celebradas_pe.Text;
+
+            int.TryParse(sesiones_per_ord, out int v1);
+            int.TryParse(sesiones_per_ext, out int v2);
+            int.TryParse(valor_txt, out int v3);
+
+            if (!string.IsNullOrEmpty(valor_txt) && int.TryParse(valor_txt, out int valor) && valor > 0)
+            {
+                txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Enabled = true;
+                txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Enabled = false;
+                txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.BackColor = Color.LightGray;
+            }
+
+            int suma = v1 + v2;
+            if (v3 > suma)
+            {
+                MessageBox.Show("Debe ser igual o menor a la suma de las sesiones registradas en periodo ordinario y extraordinarias.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_asist_sesiones_plenarias_persona_legisladora.Clear();
+            }
+            else
+            {
+
+            }
+        }
+        private void txt_asist_sesiones_comision_permanente_persona_legisladora_TextChanged(object sender, EventArgs e)
+        {
+            string valor_txt = txt_asist_sesiones_comision_permanente_persona_legisladora.Text;
+
+            if (!string.IsNullOrEmpty(valor_txt) && int.TryParse(valor_txt, out int valor) && valor > 0)
+            {
+                txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Enabled = true;
+                txt_cant_interv_sesiones_dip_permanente_persona_legisladora.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Enabled = false;
+                txt_cant_interv_sesiones_dip_permanente_persona_legisladora.BackColor = Color.LightGray;
             }
         }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
@@ -5861,7 +6520,7 @@ namespace App_PLE.Vistas
 
             }
         }
-
+        
         // OTROS-----------------------------------------------------------------------------------------------------------------
         public void CargarDatos(string id_registro)
         {
@@ -5887,6 +6546,35 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
