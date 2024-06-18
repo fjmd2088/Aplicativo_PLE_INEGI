@@ -43,11 +43,15 @@ namespace App_PLE.Vistas
             cmb_Entidad();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
-            txt_agee.Enabled = false; dtp_inicio_funciones_legislatura.Enabled = false; dtp_termino_funciones_legislatura.Enabled = false;
-            dtp_fecha_inicio_informacion_reportada.Enabled = false; dtp_fecha_termino_informacion_reportada.Enabled = false;
-            dtp_fecha_inicio_po.Enabled = false; dtp_fecha_termino_po.Enabled = false;
+            txt_agee.Enabled = false; txt_agee.BackColor = Color.LightGray;
+
+            //dtp_inicio_funciones_legislatura.Enabled = false; dtp_termino_funciones_legislatura.Enabled = false;
+            //dtp_fecha_inicio_informacion_reportada.Enabled = false; dtp_fecha_termino_informacion_reportada.Enabled = false;
+            //dtp_fecha_inicio_po.Enabled = false; dtp_fecha_termino_po.Enabled = false; dtp_fecha_termino_pe.Enabled = false;
+            //dtp_fecha_inicio_pe.Enabled = false;
+
             txt_id_legislatura.Enabled = false; dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
-            dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
+            Txt_sesiones_celebradas_pe.Enabled = false;
             btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
             chbPE.Enabled = false;
 
@@ -772,13 +776,12 @@ namespace App_PLE.Vistas
                                 }
                             }
 
-
-
-
                             // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la periodo reportado------------------------------
 
 
-                            string query4 = "select  distinct periodos_reportar from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec AND entidad = @ent";
+                            string query4 = "select  distinct periodos_reportar from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec " +
+                                "AND entidad = @ent " +
+                                "AND abr_pr in ('1O','2O')";
                             using (SQLiteCommand cmd4 = new SQLiteCommand(query4, conexion))
                             {
                                 cmd4.Parameters.AddWithValue("@ec", ec);
@@ -795,6 +798,7 @@ namespace App_PLE.Vistas
                                 cmb_periodo_reportado_po.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                                 cmb_periodo_reportado_po.AutoCompleteSource = AutoCompleteSource.ListItems;
                                 cmb_periodo_reportado_po.DropDownStyle = ComboBoxStyle.DropDown;
+                                
                             }
                             conexion.Close();
                         }
@@ -3587,31 +3591,30 @@ namespace App_PLE.Vistas
             {
                 //txt_nombre_2_persona_legisladora.Visible = false;
                 txt_nombre_2_persona_legisladora.Enabled = true; txt_nombre_2_persona_legisladora.BackColor = Color.Honeydew;
-
-                // CONSTRUCCION ID
-                string primerNombre = txt_nombre_1_persona_legisladora.Text;
-                string segundoNombre = txt_nombre_2_persona_legisladora.Text;
-                string tercerNombre = txt_nombre_3_persona_legisladora.Text;
-                string primerApellido = txt_apellido_1_persona_legisladora.Text;
-                string segundoApellido = txt_apellido_2_persona_legisladora.Text;
-                string tercerApellido = txt_apellido_3_persona_legisladora.Text;
-                string sexo1 = cmb_sexo_persona_legisladora.Text;
-                char sexo = sexo1[0];
-                DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
-
-                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
-                    primerApellido, segundoApellido, tercerApellido,
-                    sexo, fechaNacimiento);
-                txt_ID_persona_legisladora.Text = uniqueID;
             }
 
+            // CONSTRUCCION ID
+            string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+            string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+            string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+            string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+            string sexo1 = cmb_sexo_persona_legisladora.Text;
+            char sexo = sexo1[0];
+            DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+
+            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                primerApellido, segundoApellido, tercerApellido,
+                sexo, fechaNacimiento);
+            txt_ID_persona_legisladora.Text = uniqueID;
         }
         public static string GenerateUniqueID(string primerNombre, string segundoNombre, string tercerNombre,
             string primerApellido, string segundoApellido, string tercerApellido,
             char sexo, DateTime fechaNacimiento)
         {
             // Concatenar los datos en un string
-            string dataToHash = $"{primerNombre}{primerApellido}{sexo}{fechaNacimiento.ToString("yyyyMMdd")}";
+            string dataToHash = $"{primerNombre}{segundoNombre}{tercerNombre}{primerApellido}{segundoApellido}{tercerApellido}{sexo}{fechaNacimiento.ToString("yyyyMMdd")}";
 
             // Generar el hash SHA-256
             string uniqueID = CalculateSHA256(dataToHash);
@@ -3651,7 +3654,6 @@ namespace App_PLE.Vistas
             else
             {
                 txt_nombre_3_persona_legisladora.Enabled = true; txt_nombre_3_persona_legisladora.BackColor = Color.Honeydew;
-                
             }
 
             // CONSTRUCCION ID
@@ -6546,6 +6548,8 @@ namespace App_PLE.Vistas
         }
 
         
+
+
 
 
 
