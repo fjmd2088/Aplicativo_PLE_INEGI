@@ -29,9 +29,9 @@ namespace App_PLE.Vistas
             InitializeComponent();
             InitializeMap();
         }
-        
+
         //-------------------------------------------------- CARGA INICIAL DE FORMULARIO ----------------------------------------------------
-         
+
         private void FormRegistros_Load(object sender, EventArgs e)
         {
             // ajustar el tamaño del formulario
@@ -53,20 +53,30 @@ namespace App_PLE.Vistas
             txt_id_legislatura.Enabled = false; dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
             Txt_sesiones_celebradas_pe.Enabled = false;
             btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
-            chbPE.Enabled = false;
 
+            txt_periodo_reportado_rec.Enabled = false; txt_periodo_reportado_rec.BackColor = Color.LightGray;
             //tabPageCL.Enabled = false; tabPagePL.Enabled = false; tabPagePA.Enabled = false; tabPageIni.Enabled = false;
             //tabPageIniUO.Enabled = false; tabPageJP.Enabled = false; tabPageDP.Enabled = false; tabPageCom.Enabled = false;
 
+            dgvPE.Enabled = false; 
+            cmb_periodo_extraordinario_reportado.Enabled = false;
+            dtp_fecha_inicio_pe.Enabled = false; 
+            dtp_fecha_termino_pe.Enabled = false; 
+            Txt_sesiones_celebradas_pe.Enabled = false;
+            btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; 
+            txt_periodos_extraordinarios_celebrados.Enabled = false;
+            chbPE.Checked = false; 
+            
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
             txt_id_legislatura.Text = string.Empty; txt_agee.Text = string.Empty; cmb_numero_legislatura.Text = "";
             dtp_inicio_funciones_legislatura.Value = new DateTime(1899, 9, 9); dtp_termino_funciones_legislatura.Value = new DateTime(1899, 9, 9);
             cmb_ejercicio_constitucional_informacion_reportada.Text = "";
             dtp_fecha_inicio_informacion_reportada.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_informacion_reportada.Value = new DateTime(1899, 9, 9);
-            cmb_periodo_reportado_po.Text = "";
+            cmb_periodo_reportado_po.Text = ""; txt_periodo_reportado_rec.Text = "";
             dtp_fecha_inicio_po.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_po.Value = new DateTime(1899, 9, 9);
             dtp_fecha_inicio_pe.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_pe.Value = new DateTime(1899, 9, 9);
+            dtp_fecha_inicio_p_rec.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_p_rec.Value = new DateTime(1899, 9, 9);
 
             // ---------------------------------------------- COMISIONES LEGISLATIVAS ---------------------------------------------------------------
             cmb_Tipo_CL();
@@ -82,7 +92,7 @@ namespace App_PLE.Vistas
             txt_cant_reuniones_celebradas_comision_legislativa.Enabled = false; txt_cant_reuniones_celebradas_comision_legislativa.BackColor = Color.LightGray;
             cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Enabled = false; cmb_cond_transmision_reuniones_celebradas_comision_legislativa.BackColor = Color.LightGray;
             txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Enabled = false; txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.BackColor = Color.LightGray;
-            
+
 
             // ---------------------------------------------- PERSONAS LEGISLADORAS ---------------------------------------------------------------
             cmb_Sexo_Persona_Legisladora();
@@ -147,7 +157,7 @@ namespace App_PLE.Vistas
             cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
             dgv_partido_coalicion.BackgroundColor = Color.LightGray;
             dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
-            dgv_lengua_PL.BackgroundColor= Color.LightGray;
+            dgv_lengua_PL.BackgroundColor = Color.LightGray;
             dgv_tipo_discapacidad_PL.BackgroundColor = Color.LightGray;
             cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.BackColor = Color.LightGray;
             cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.BackColor = Color.LightGray;
@@ -172,7 +182,7 @@ namespace App_PLE.Vistas
             gMapControl.Enabled = false;
 
             btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
-            btnAgregarLenguaPL.Enabled = false;btnEliminarLenguaPL.Enabled = false;
+            btnAgregarLenguaPL.Enabled = false; btnEliminarLenguaPL.Enabled = false;
             btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false;
             btnAgregarCandidaturaPL.Enabled = false; btnEliminarCandidaturaPL.Enabled = false;
 
@@ -209,7 +219,7 @@ namespace App_PLE.Vistas
 
 
 
-            
+
 
 
 
@@ -217,14 +227,14 @@ namespace App_PLE.Vistas
             txt_otro_tema_comision_legislativa_especifique.Enabled = false;
 
 
-           
 
-            txt_ID_comision_legislativa.Text =  string.Empty;
+
+            txt_ID_comision_legislativa.Text = string.Empty;
             cmb_tema_comision_legislativa.Text = "";
             cmb_tipo_comision_legislativa.Text = "";
-            
+
         }
-        
+
         //-------------------------------------------------- DATOS GENERALES ----------------------------------------------------
         private void cmb_Entidad()
         {
@@ -692,6 +702,54 @@ namespace App_PLE.Vistas
                                 cmb_ejercicio_constitucional_informacion_reportada.DropDownStyle = ComboBoxStyle.DropDown;
                             }
 
+         
+                            // fecha del periodo de receso inicio y fin
+                            string ejerc_const = cmb_ejercicio_constitucional_informacion_reportada.Text;
+                            string periodo_receso = txt_periodo_reportado_rec.Text;
+                          
+                                string query5 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa " +
+                                    "AND ejercicio_constitucional = @ejerc_const " +
+                                    "AND periodos_reportar = @periodo_receso;";
+
+                                using (SQLiteCommand cmd5 = new SQLiteCommand(query5, conexion))
+                                {
+                                    cmd5.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+                                    cmd5.Parameters.AddWithValue("@ejerc_const", ejerc_const);
+                                    cmd5.Parameters.AddWithValue("@periodo_receso", periodo_receso);
+
+                                    object resultado = cmd5.ExecuteScalar();
+
+                                    if (resultado != null && DateTime.TryParse(resultado.ToString(), out DateTime inicioReceso))
+                                    {
+                                        dtp_fecha_inicio_p_rec.Value = inicioReceso;
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                }
+
+                            string query6 = "select distinct fin_pr from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa " +
+                                "AND ejercicio_constitucional = @ejerc_const " +
+                                "AND periodos_reportar = @periodo_receso;";
+
+                            using (SQLiteCommand cmd6 = new SQLiteCommand(query6, conexion))
+                            {
+                                cmd6.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+                                cmd6.Parameters.AddWithValue("@ejerc_const", ejerc_const);
+                                cmd6.Parameters.AddWithValue("@periodo_receso", periodo_receso);
+
+                                object resultado = cmd6.ExecuteScalar();
+
+                                if (resultado != null && DateTime.TryParse(resultado.ToString(), out DateTime inicioReceso))
+                                {
+                                    dtp_fecha_termino_p_rec.Value = inicioReceso;
+                                }
+                                else
+                                {
+
+                                }
+                            }
                             conexion.Close();
                         }
                     }
@@ -781,7 +839,7 @@ namespace App_PLE.Vistas
 
                             string query4 = "select  distinct periodos_reportar from TC_CALENDARIO_SESIONES WHERE ejercicio_constitucional = @ec " +
                                 "AND entidad = @ent " +
-                                "AND abr_pr in ('1O','2O')";
+                                "AND abr_pr in ('1O','2O','3O')";
                             using (SQLiteCommand cmd4 = new SQLiteCommand(query4, conexion))
                             {
                                 cmd4.Parameters.AddWithValue("@ec", ec);
@@ -798,8 +856,57 @@ namespace App_PLE.Vistas
                                 cmb_periodo_reportado_po.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                                 cmb_periodo_reportado_po.AutoCompleteSource = AutoCompleteSource.ListItems;
                                 cmb_periodo_reportado_po.DropDownStyle = ComboBoxStyle.DropDown;
-                                
+
                             }
+
+                            // fecha del periodo de receso inicio y fin
+                            string ejerc_const = cmb_ejercicio_constitucional_informacion_reportada.Text;
+                            string periodo_receso = txt_periodo_reportado_rec.Text;
+
+                            string query5 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES WHERE entidad = @ent " +
+                                "AND ejercicio_constitucional = @ejerc_const " +
+                                "AND periodos_reportar = @periodo_receso;";
+
+                            using (SQLiteCommand cmd5 = new SQLiteCommand(query5, conexion))
+                            {
+                                cmd5.Parameters.AddWithValue("@ent", ent);
+                                cmd5.Parameters.AddWithValue("@ejerc_const", ejerc_const);
+                                cmd5.Parameters.AddWithValue("@periodo_receso", periodo_receso);
+
+                                object resultado = cmd5.ExecuteScalar();
+
+                                if (resultado != null && DateTime.TryParse(resultado.ToString(), out DateTime inicioReceso))
+                                {
+                                    dtp_fecha_inicio_p_rec.Value = inicioReceso;
+                                }
+                                else
+                                {
+
+                                }
+                            }
+
+                            string query6 = "select distinct fin_pr from TC_CALENDARIO_SESIONES WHERE entidad = @ent " +
+                                "AND ejercicio_constitucional = @ejerc_const " +
+                                "AND periodos_reportar = @periodo_receso;";
+
+                            using (SQLiteCommand cmd6 = new SQLiteCommand(query6, conexion))
+                            {
+                                cmd6.Parameters.AddWithValue("@ent", ent);
+                                cmd6.Parameters.AddWithValue("@ejerc_const", ejerc_const);
+                                cmd6.Parameters.AddWithValue("@periodo_receso", periodo_receso);
+
+                                object resultado = cmd6.ExecuteScalar();
+
+                                if (resultado != null && DateTime.TryParse(resultado.ToString(), out DateTime inicioReceso))
+                                {
+                                    dtp_fecha_termino_p_rec.Value = inicioReceso;
+                                }
+                                else
+                                {
+
+                                }
+                            }
+
                             conexion.Close();
                         }
                     }
@@ -891,22 +998,20 @@ namespace App_PLE.Vistas
 
                             conexion.Close();
 
-                            // SE ACTIVA EL CHECKBOX DEPENDIENDO SI HAY RECESO
-                            if (cmb_periodo_reportado_po.Text.ToString() == "Primer periodo de receso" ||
-                                cmb_periodo_reportado_po.Text.ToString() == "Segundo periodo de receso" ||
-                                cmb_periodo_reportado_po.Text.ToString() == "Tercer periodo de receso")
-                            {
-                                chbPE.Enabled = true;
-                            }
-                            else
-                            {
-                                dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
-                                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
-                                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
-                                dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Text = ""; txt_periodos_extraordinarios_celebrados.Clear();
-                                Txt_sesiones_celebradas_pe.Clear();
-                                chbPE.Checked = false; chbPE.Enabled = false;
+                            // Se asigna en el txt periodo de receso dependiendo del periodo reportado
+                            string per_ord = cmb_periodo_reportado_po.Text;
 
+                            if (per_ord == "Primer periodo ordinario")
+                            {
+                                txt_periodo_reportado_rec.Text = "Primer periodo de receso";
+                            }
+                            else if(per_ord == "Segundo periodo ordinario")
+                            {
+                                txt_periodo_reportado_rec.Text = "Segundo periodo de receso";
+                            }
+                            else if (per_ord == "Tercer periodo ordinario")
+                            {
+                                txt_periodo_reportado_rec.Text = "Tercer periodo de receso";
                             }
                         }
                     }
@@ -982,7 +1087,7 @@ namespace App_PLE.Vistas
                 // Si el valor del TextBox no es un número válido, mostrar un mensaje de error
                 //MessageBox.Show("Ingrese un número válido");
             }
-        }   
+        }
         private bool IsDuplicateRecord(string periodo_reportado_pe)
         {
             foreach (DataGridViewRow row in dgvPE.Rows)
@@ -1066,17 +1171,6 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void Dtp_inicio_funciones_legislatura_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_inicio_funciones_legislatura.Value >= dtp_termino_funciones_legislatura.Value)
-            {
-                MessageBox.Show("La fecha de inicio debe ser menor que la fecha de término.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_inicio_funciones_legislatura.Value = dtp_termino_funciones_legislatura.Value.AddDays(-1);
-                dtp_inicio_funciones_legislatura.Focus();
-            }
-            */
-        }
         private void Dtp_fecha_inicio_informacion_reportada_ValueChanged_1(object sender, EventArgs e)
         {
             /*
@@ -1090,41 +1184,13 @@ namespace App_PLE.Vistas
             }
             */
         }
-        private void Dtp_fecha_termino_informacion_reportada_ValueChanged_1(object sender, EventArgs e)
-        {
-            /*
-            if (dtp_fecha_termino_informacion_reportada.Value > dtp_termino_funciones_legislatura.Value ||
-               dtp_fecha_termino_informacion_reportada.Value < dtp_fecha_inicio_informacion_reportada.Value)
-            {
-                MessageBox.Show("La fecha debe estar entre el inicio y término de funciones", "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-
-                dtp_fecha_termino_informacion_reportada.Value = dtp_termino_funciones_legislatura.Value.AddDays(-1);
-                dtp_fecha_termino_informacion_reportada.Focus();
-            }
-            */
-        }
         private void dtp_fecha_inicio_po_ValueChanged_1(object sender, EventArgs e)
         {
 
 
 
         }
-        private void dtp_fecha_inicio_pe_ValueChanged(object sender, EventArgs e)
-        {
-            if (dtp_fecha_inicio_pe.Value <= dtp_fecha_termino_po.Value
-                 && dtp_fecha_inicio_pe.Value >= dtp_fecha_inicio_po.Value)
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value;
-                dtp_fecha_inicio_pe.Focus();
-            }
-
-        }
+        
         private void dtp_fecha_termino_pe_ValueChanged(object sender, EventArgs e)
         {
             if (dtp_fecha_termino_pe.Value <= dtp_fecha_termino_po.Value
@@ -1164,6 +1230,261 @@ namespace App_PLE.Vistas
             }
         }
 
+        // fecha inicio funciones legislatura
+        private DateTime f1;
+        private void dtp_inicio_funciones_legislatura_DropDown(object sender, EventArgs e)
+        {
+            f1 = dtp_inicio_funciones_legislatura.Value;
+        }
+        private void dtp_inicio_funciones_legislatura_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_inicio_funciones_legislatura.Value = f1;
+            }
+            
+        }
+        
+        // fecha termino_funciones_legislatura
+        private DateTime f2;
+        private void dtp_termino_funciones_legislatura_DropDown(object sender, EventArgs e)
+        {
+            f2 = dtp_termino_funciones_legislatura.Value;
+
+        }
+        private void dtp_termino_funciones_legislatura_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_termino_funciones_legislatura.Value = f2;
+            }
+        }
+
+        // fecha fecha_inicio_informacion_reportada
+        private DateTime f3;
+        private void dtp_fecha_inicio_informacion_reportada_DropDown(object sender, EventArgs e)
+        {
+            f3 = dtp_fecha_inicio_informacion_reportada.Value;
+        }
+        private void dtp_fecha_inicio_informacion_reportada_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_inicio_informacion_reportada.Value = f3;
+            }
+        }
+
+        // fecha fecha_termino_informacion_reportada
+        private DateTime f4;
+        private void dtp_fecha_termino_informacion_reportada_DropDown(object sender, EventArgs e)
+        {
+            f4 = dtp_fecha_termino_informacion_reportada.Value;
+        }
+        private void dtp_fecha_termino_informacion_reportada_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_termino_informacion_reportada.Value = f4;
+            }
+        }
+
+        // fecha fecha_inicio_po
+        private DateTime f5;
+        private void dtp_fecha_inicio_po_DropDown(object sender, EventArgs e)
+        {
+            f5 = dtp_fecha_inicio_po.Value;
+        }
+        private void dtp_fecha_inicio_po_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_inicio_po.Value = f5;
+            }
+        }
+
+        // fecha fecha_termino_po
+        private DateTime f6;
+        private void dtp_fecha_termino_po_DropDown(object sender, EventArgs e)
+        {
+            f6 = dtp_fecha_termino_po.Value;
+        }
+        private void dtp_fecha_termino_po_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_termino_po.Value = f6;
+            }
+        }
+
+        // fecha fecha_inicio_p_rec
+        private DateTime f7;
+        private void dtp_fecha_inicio_p_rec_DropDown(object sender, EventArgs e)
+        {
+            f7 = dtp_fecha_inicio_p_rec.Value;
+        }
+        private void dtp_fecha_inicio_p_rec_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_inicio_p_rec.Value = f7;
+            }
+        }
+
+        // fecha fecha_termino_p_rec
+        private DateTime f8;
+        private void dtp_fecha_termino_p_rec_DropDown(object sender, EventArgs e)
+        {
+            f8 = dtp_fecha_termino_p_rec.Value;
+        }
+        private void dtp_fecha_termino_p_rec_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_termino_p_rec.Value = f8;
+            }
+        }
+
+        // fecha fecha_inicio_pe
+        private DateTime f9;
+        private void dtp_fecha_inicio_pe_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_fecha_inicio_pe.Value <= dtp_fecha_termino_po.Value
+                 && dtp_fecha_inicio_pe.Value >= dtp_fecha_inicio_po.Value)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value;
+                dtp_fecha_inicio_pe.Focus();
+            }
+
+        }
+        private void dtp_fecha_inicio_pe_DropDown(object sender, EventArgs e)
+        {
+            f9 = dtp_fecha_inicio_pe.Value;
+        }
+        private void dtp_fecha_inicio_pe_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_inicio_pe.Value = f9;
+            }
+        }
+
+        private void txt_periodo_reportado_rec_TextChanged(object sender, EventArgs e)
+        {
+            
+            string entidad_federativa = cmb_entidad_federativa.Text;
+            string ejerc_const = cmb_ejercicio_constitucional_informacion_reportada.Text;
+            string periodo_receso = txt_periodo_reportado_rec.Text;
+
+
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                string query2 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa " +
+                    "AND ejercicio_constitucional = @ejerc_const " +
+                    "AND periodos_reportar = @periodo_receso;";
+
+                string query3 = "select distinct fin_pr from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa " +
+                    "AND ejercicio_constitucional = @ejerc_const " +
+                    "AND periodos_reportar = @periodo_receso;";
+
+                conexion.Open();
+
+                using (SQLiteCommand cmd2 = new SQLiteCommand(query2, conexion))
+                {
+                    
+
+                    cmd2.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+                    cmd2.Parameters.AddWithValue("@ejerc_const", ejerc_const);
+                    cmd2.Parameters.AddWithValue("@periodo_receso", periodo_receso);
+
+                    object resultado = cmd2.ExecuteScalar();
+
+                    if (resultado != null &&  DateTime.TryParse(resultado.ToString(), out DateTime inicioReceso))
+                    {
+                        dtp_fecha_inicio_p_rec.Value = inicioReceso;
+                    }
+                    else
+                    {
+                       
+                    }
+                }
+
+                using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
+                {
+
+                    cmd3.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+                    cmd3.Parameters.AddWithValue("@ejerc_const", ejerc_const);
+                    cmd3.Parameters.AddWithValue("@periodo_receso", periodo_receso);
+
+                    object resultado = cmd3.ExecuteScalar();
+
+                    if (resultado != null && DateTime.TryParse(resultado.ToString(), out DateTime finReceso))
+                    {
+                        dtp_fecha_termino_p_rec.Value = finReceso;
+                    }
+                    else
+                    {
+
+                    }
+                }
+
+                conexion.Close();
+            }
+
+            
+
+            /*
+            if (cmb_periodo_reportado_po.Text.ToString() == "Primer periodo de receso" ||
+                cmb_periodo_reportado_po.Text.ToString() == "Segundo periodo de receso" ||
+                cmb_periodo_reportado_po.Text.ToString() == "Tercer periodo de receso")
+            {
+                chbPE.Enabled = true;
+            }
+            else
+            {
+                dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
+                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
+                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
+                dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Text = ""; txt_periodos_extraordinarios_celebrados.Clear();
+                Txt_sesiones_celebradas_pe.Clear();
+                chbPE.Checked = false; chbPE.Enabled = false;
+
+            }
+            */
+        }
         //-------------------------------------------------- COMISIONES LEGISLATIVAS ----------------------------------------------------
 
         private void cmb_Tipo_CL()
@@ -6548,6 +6869,34 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
