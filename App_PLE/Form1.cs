@@ -113,6 +113,21 @@ namespace App_PLE
             AbrirFormInPanel(new Resumen());
         }
 
-        
+        // Se carga el formulario de descarga de información
+        private void btnDecargarInformacion_Click(object sender, EventArgs e)
+        {
+            DescargarInformacion frmRegistros = new DescargarInformacion();
+
+            // Crear instancias de los formularios secundarios
+            frmRegistros.ShowDialog();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            FormDashboard frmRegistros = new FormDashboard();
+
+            // Crear instancias de los formularios secundarios
+            frmRegistros.ShowDialog();
+        }
     }
 }

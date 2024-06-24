@@ -45,11 +45,6 @@ namespace App_PLE.Vistas
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_agee.Enabled = false; txt_agee.BackColor = Color.LightGray;
 
-            //dtp_inicio_funciones_legislatura.Enabled = false; dtp_termino_funciones_legislatura.Enabled = false;
-            //dtp_fecha_inicio_informacion_reportada.Enabled = false; dtp_fecha_termino_informacion_reportada.Enabled = false;
-            //dtp_fecha_inicio_po.Enabled = false; dtp_fecha_termino_po.Enabled = false; dtp_fecha_termino_pe.Enabled = false;
-            //dtp_fecha_inicio_pe.Enabled = false;
-
             txt_id_legislatura.Enabled = false; dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
             Txt_sesiones_celebradas_pe.Enabled = false;
             btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
@@ -58,13 +53,16 @@ namespace App_PLE.Vistas
             //tabPageCL.Enabled = false; tabPagePL.Enabled = false; tabPagePA.Enabled = false; tabPageIni.Enabled = false;
             //tabPageIniUO.Enabled = false; tabPageJP.Enabled = false; tabPageDP.Enabled = false; tabPageCom.Enabled = false;
 
-            dgvPE.Enabled = false; 
-            cmb_periodo_extraordinario_reportado.Enabled = false;
+            dgvPE.Enabled = false;
+            txt_periodos_extraordinarios_celebrados.Enabled = false; txt_periodos_extraordinarios_celebrados.BackColor = Color.LightGray;
+            Txt_sesiones_celebradas_pe.Enabled = false; Txt_sesiones_celebradas_pe.BackColor = Color.LightGray;
+            cmb_periodo_extraordinario_reportado.Enabled = false; cmb_periodo_extraordinario_reportado.BackColor = Color.LightGray;
+            dgvPE.Enabled = false; dgvPE.BackgroundColor = Color.LightGray;
             dtp_fecha_inicio_pe.Enabled = false; 
             dtp_fecha_termino_pe.Enabled = false; 
-            Txt_sesiones_celebradas_pe.Enabled = false;
+            
             btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; 
-            txt_periodos_extraordinarios_celebrados.Enabled = false;
+            
             chbPE.Checked = false; 
             
 
@@ -155,6 +153,7 @@ namespace App_PLE.Vistas
             cmb_tipo_candidatura_persona_legisladora.Enabled = false; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
+            txt_ID_persona_legisladora.Enabled = false; txt_ID_persona_legisladora.BackColor = Color.LightGray;
             dgv_partido_coalicion.BackgroundColor = Color.LightGray;
             dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
             dgv_lengua_PL.BackgroundColor = Color.LightGray;
@@ -567,7 +566,23 @@ namespace App_PLE.Vistas
 
             // se obtiene periodo reportado
             string valorComboBox3 = cmb_periodo_reportado_po.Text.ToString();
+            string valortxt = txt_periodo_reportado_rec.Text;
             string PR = "";
+
+            if (valorComboBox3 == "Primer periodo ordinario" & valortxt == "Primer periodo de receso")
+            {
+                PR = "1_1";
+            }
+            else if (valorComboBox3 == "Segundo periodo ordinario" & valortxt == "Segundo periodo de receso") 
+            {
+                PR = "2_2";
+            }
+            else if(valorComboBox3 == "Tercer periodo ordinario" & valortxt == "Tercer periodo de receso")
+            {
+                PR = "3_3";
+            }
+            
+            /*
             using (SQLiteConnection con = new SQLiteConnection(cadena))
             {
                 con.Open();
@@ -577,6 +592,7 @@ namespace App_PLE.Vistas
                 PR = cmd.ExecuteScalar()?.ToString();
                 con.Close();
             }
+            */
 
             // se obtiene numero de legislatura
             string NL = cmb_numero_legislatura.Text.ToString();
@@ -1191,20 +1207,7 @@ namespace App_PLE.Vistas
 
         }
         
-        private void dtp_fecha_termino_pe_ValueChanged(object sender, EventArgs e)
-        {
-            if (dtp_fecha_termino_pe.Value <= dtp_fecha_termino_po.Value
-                 && dtp_fecha_termino_pe.Value >= dtp_fecha_inicio_po.Value)
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
-                dtp_fecha_termino_pe.Focus();
-            }
-        }
+        
         private void chbPE_CheckedChanged_1(object sender, EventArgs e)
         {
             // Cuando el estado del CheckBox cambia, se ejecutará este código
@@ -1213,20 +1216,32 @@ namespace App_PLE.Vistas
             {
 
                 // Si el CheckBox está marcado
-                dgvPE.Enabled = true; cmb_periodo_extraordinario_reportado.Enabled = true;
-                dtp_fecha_inicio_pe.Enabled = true; dtp_fecha_termino_pe.Enabled = true; Txt_sesiones_celebradas_pe.Enabled = true;
-                btnAgregarPE.Enabled = true; BtnEliminarPE.Enabled = true; txt_periodos_extraordinarios_celebrados.Enabled = true;
-                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+                dgvPE.Enabled = true; dgvPE.BackgroundColor = Color.Honeydew;
+                cmb_periodo_extraordinario_reportado.Enabled = true; cmb_periodo_extraordinario_reportado.BackColor = Color.Honeydew;
+                txt_periodos_extraordinarios_celebrados.Enabled = true; txt_periodos_extraordinarios_celebrados.BackColor = Color.Honeydew;
+                Txt_sesiones_celebradas_pe.Enabled = true; Txt_sesiones_celebradas_pe.BackColor = Color.Honeydew;
+                dtp_fecha_inicio_pe.Enabled = true; dtp_fecha_termino_pe.Enabled = true; 
+                btnAgregarPE.Enabled = true; BtnEliminarPE.Enabled = true; 
+
+                // se ajustan las fechas
+                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
 
 
             }
             else
             {
                 // Si el CheckBox está desmarcado
-                dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
-                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; Txt_sesiones_celebradas_pe.Enabled = false;
-                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; txt_periodos_extraordinarios_celebrados.Enabled = false;
+                dgvPE.Enabled = false; dgvPE.BackgroundColor = Color.LightGray;
+                cmb_periodo_extraordinario_reportado.Enabled = false; cmb_periodo_extraordinario_reportado.BackColor = Color.LightGray;
+                Txt_sesiones_celebradas_pe.Enabled = false; Txt_sesiones_celebradas_pe.BackColor= Color.LightGray;
+                txt_periodos_extraordinarios_celebrados.Enabled = false; txt_periodos_extraordinarios_celebrados.BackColor = Color.LightGray;
+                dtp_fecha_inicio_pe.Enabled = false; dtp_fecha_termino_pe.Enabled = false; 
+                btnAgregarPE.Enabled = false; BtnEliminarPE.Enabled = false; 
                 dgvPE.Rows.Clear(); cmb_periodo_extraordinario_reportado.Items.Clear();
+
+                // se ajustan las fechas
+                dtp_fecha_inicio_pe.Value = new DateTime(1899, 9, 9); dtp_fecha_termino_pe.Value = new DateTime(1899, 9, 9);
+
             }
         }
 
@@ -1370,21 +1385,6 @@ namespace App_PLE.Vistas
 
         // fecha fecha_inicio_pe
         private DateTime f9;
-        private void dtp_fecha_inicio_pe_ValueChanged(object sender, EventArgs e)
-        {
-            if (dtp_fecha_inicio_pe.Value <= dtp_fecha_termino_po.Value
-                 && dtp_fecha_inicio_pe.Value >= dtp_fecha_inicio_po.Value)
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value;
-                dtp_fecha_inicio_pe.Focus();
-            }
-
-        }
         private void dtp_fecha_inicio_pe_DropDown(object sender, EventArgs e)
         {
             f9 = dtp_fecha_inicio_pe.Value;
@@ -1397,6 +1397,51 @@ namespace App_PLE.Vistas
             if (respuesta == DialogResult.No)
             {
                 dtp_fecha_inicio_pe.Value = f9;
+            }
+            else
+            {
+                if (dtp_fecha_inicio_pe.Value <= dtp_fecha_termino_p_rec.Value
+                 && dtp_fecha_inicio_pe.Value >= dtp_fecha_inicio_p_rec.Value)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value;
+                    dtp_fecha_inicio_pe.Focus();
+                }
+            }
+        }
+
+        // fecha fecha_termino_pe
+        private DateTime f10;
+        private void dtp_fecha_termino_pe_DropDown(object sender, EventArgs e)
+        {
+            f10 = dtp_fecha_termino_pe.Value;
+        }
+        private void dtp_fecha_termino_pe_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_termino_pe.Value = f9;
+            }
+            else
+            {
+                if (dtp_fecha_termino_pe.Value <= dtp_fecha_termino_p_rec.Value
+                 && dtp_fecha_termino_pe.Value >= dtp_fecha_inicio_p_rec.Value)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
+                    dtp_fecha_termino_pe.Focus();
+                }
             }
         }
 
@@ -6869,6 +6914,8 @@ namespace App_PLE.Vistas
         }
 
         
+
+
 
 
 

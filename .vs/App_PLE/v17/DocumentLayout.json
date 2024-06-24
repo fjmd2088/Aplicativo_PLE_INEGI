@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|c:\\users\\jmleo\\documents\\01_programacion_fjmd\\02_c#\\aplicativo_ple_inegi\\app_ple\\vistas\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|c:\\users\\jmleo\\documents\\01_programacion_fjmd\\02_c#\\aplicativo_ple_inegi\\app_ple\\vistas\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|c:\\users\\jmleo\\documents\\01_programacion_fjmd\\02_c#\\aplicativo_ple_inegi\\app_ple\\vistas\\formregistros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\formregistros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\vistas\\formregistros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\formregistros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\vistas\\formregistros.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\formregistros.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\vistas\\resumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\resumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\vistas\\resumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\resumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\app_ple\\vistas\\resumen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{069DB5E2-F2AE-45FC-99A4-8B34CBD0F208}|App_PLE\\App_PLE.csproj|solutionrelative:app_ple\\vistas\\resumen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,78 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Resumen.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\Resumen.Designer.cs",
-              "RelativeDocumentMoniker": "App_PLE\\Vistas\\Resumen.Designer.cs",
-              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\Resumen.Designer.cs",
-              "RelativeToolTip": "App_PLE\\Vistas\\Resumen.Designer.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAswFQAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormDashboard.cs",
+              "RelativeDocumentMoniker": "App_PLE\\Vistas\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormDashboard.cs",
+              "RelativeToolTip": "App_PLE\\Vistas\\FormDashboard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T00:30:37.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Resumen.cs",
-              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\Resumen.cs",
-              "RelativeDocumentMoniker": "App_PLE\\Vistas\\Resumen.cs",
-              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\Resumen.cs",
-              "RelativeToolTip": "App_PLE\\Vistas\\Resumen.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA8wB8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:50:38.641Z"
+              "WhenOpened": "2024-06-22T12:27:27.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Resumen.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\Resumen.cs",
-              "RelativeDocumentMoniker": "App_PLE\\Vistas\\Resumen.cs",
-              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\Resumen.cs [Dise\u00F1o]",
-              "RelativeToolTip": "App_PLE\\Vistas\\Resumen.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:50:38.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormRegistros.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormRegistros.Designer.cs",
-              "RelativeDocumentMoniker": "App_PLE\\Vistas\\FormRegistros.Designer.cs",
-              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormRegistros.Designer.cs",
-              "RelativeToolTip": "App_PLE\\Vistas\\FormRegistros.Designer.cs",
-              "ViewState": "AQIAAHEDAAAAAAAAAAAswIUDAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:50:38.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "FormRegistros.cs",
               "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormRegistros.cs",
               "RelativeDocumentMoniker": "App_PLE\\Vistas\\FormRegistros.cs",
               "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormRegistros.cs",
               "RelativeToolTip": "App_PLE\\Vistas\\FormRegistros.cs",
-              "ViewState": "AQIAAFYDAAAAAAAAAADwv2gDAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUCAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T08:50:38.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Form1.cs",
+              "RelativeDocumentMoniker": "App_PLE\\Form1.cs",
+              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "App_PLE\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T16:40:59.822Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Form1.cs",
+              "RelativeDocumentMoniker": "App_PLE\\Form1.cs",
+              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Form1.cs",
+              "RelativeToolTip": "App_PLE\\Form1.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAswIEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T16:50:33.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormDashboard.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormDashboard.cs",
+              "RelativeDocumentMoniker": "App_PLE\\Vistas\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormDashboard.cs [Dise\u00F1o]",
+              "RelativeToolTip": "App_PLE\\Vistas\\FormDashboard.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T12:24:27.663Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FormRegistros.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormRegistros.cs",
               "RelativeDocumentMoniker": "App_PLE\\Vistas\\FormRegistros.cs",
               "ToolTip": "C:\\Users\\jmleo\\Documents\\01_Programacion_FJMD\\02_C#\\Aplicativo_PLE_INEGI\\App_PLE\\Vistas\\FormRegistros.cs [Dise\u00F1o]",
               "RelativeToolTip": "App_PLE\\Vistas\\FormRegistros.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:50:39.646Z"
+              "WhenOpened": "2024-05-24T08:50:39.646Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

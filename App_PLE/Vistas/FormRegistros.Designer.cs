@@ -1090,7 +1090,8 @@
             this.dtp_fecha_termino_pe.Size = new System.Drawing.Size(87, 20);
             this.dtp_fecha_termino_pe.TabIndex = 33;
             this.dtp_fecha_termino_pe.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
-            this.dtp_fecha_termino_pe.ValueChanged += new System.EventHandler(this.dtp_fecha_termino_pe_ValueChanged);
+            this.dtp_fecha_termino_pe.CloseUp += new System.EventHandler(this.dtp_fecha_termino_pe_CloseUp);
+            this.dtp_fecha_termino_pe.DropDown += new System.EventHandler(this.dtp_fecha_termino_pe_DropDown);
             // 
             // label21
             // 
@@ -1114,7 +1115,6 @@
             this.dtp_fecha_inicio_pe.TabIndex = 31;
             this.dtp_fecha_inicio_pe.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_inicio_pe.CloseUp += new System.EventHandler(this.dtp_fecha_inicio_pe_CloseUp);
-            this.dtp_fecha_inicio_pe.ValueChanged += new System.EventHandler(this.dtp_fecha_inicio_pe_ValueChanged);
             this.dtp_fecha_inicio_pe.DropDown += new System.EventHandler(this.dtp_fecha_inicio_pe_DropDown);
             // 
             // label22
@@ -1757,7 +1757,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(547, 6951);
+            this.btnGuardarCL.Location = new System.Drawing.Point(538, 7035);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1859,7 +1859,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(457, 9013);
+            this.button24.Location = new System.Drawing.Point(448, 9097);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
