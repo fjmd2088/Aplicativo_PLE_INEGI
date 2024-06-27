@@ -81,6 +81,7 @@
             this.Controls.Add(this.clbFormatos);
             this.Controls.Add(this.clbTablasDB);
             this.Name = "DescargarInformacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DescargarInformacion";
             this.Load += new System.EventHandler(this.DescargarInformacion_Load);
             this.ResumeLayout(false);

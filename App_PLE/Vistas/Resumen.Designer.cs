@@ -75,19 +75,19 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvResumen.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvResumen.GridColor = System.Drawing.Color.Honeydew;
-            this.dgvResumen.Location = new System.Drawing.Point(12, 60);
+            this.dgvResumen.Location = new System.Drawing.Point(27, 60);
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.ReadOnly = true;
             this.dgvResumen.RowHeadersVisible = false;
             this.dgvResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResumen.Size = new System.Drawing.Size(990, 539);
+            this.dgvResumen.Size = new System.Drawing.Size(1032, 539);
             this.dgvResumen.TabIndex = 30;
             // 
             // btnEditarRegistro
             // 
             this.btnEditarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarRegistro.Image")));
             this.btnEditarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarRegistro.Location = new System.Drawing.Point(570, 605);
+            this.btnEditarRegistro.Location = new System.Drawing.Point(546, 605);
             this.btnEditarRegistro.Name = "btnEditarRegistro";
             this.btnEditarRegistro.Size = new System.Drawing.Size(184, 35);
             this.btnEditarRegistro.TabIndex = 40;
@@ -99,7 +99,7 @@
             // 
             this.btnAgregarNuevoRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarNuevoRegistro.Image")));
             this.btnAgregarNuevoRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarNuevoRegistro.Location = new System.Drawing.Point(213, 605);
+            this.btnAgregarNuevoRegistro.Location = new System.Drawing.Point(246, 605);
             this.btnAgregarNuevoRegistro.Name = "btnAgregarNuevoRegistro";
             this.btnAgregarNuevoRegistro.Size = new System.Drawing.Size(191, 35);
             this.btnAgregarNuevoRegistro.TabIndex = 39;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 664);
+            this.ClientSize = new System.Drawing.Size(1083, 664);
             this.Controls.Add(this.btnEditarRegistro);
             this.Controls.Add(this.btnAgregarNuevoRegistro);
             this.Controls.Add(this.dgvResumen);

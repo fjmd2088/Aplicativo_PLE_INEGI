@@ -93,6 +93,8 @@ namespace App_PLE.Vistas
 
 
             // ---------------------------------------------- PERSONAS LEGISLADORAS ---------------------------------------------------------------
+            DGV_REGISTROS_PL();
+
             cmb_Sexo_Persona_Legisladora();
             cmb_Estatus_persona_legisladora();
             cmb_Tipo_licencia_persona_legisladora();
@@ -216,17 +218,8 @@ namespace App_PLE.Vistas
             cmb_Tipo_promovente_iniciativa();
             tipo_Organo_constitucional_autonomo();
 
-
-
-
-
-
-
             Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; txt_ID_comision_legislativa.Enabled = false;
             txt_otro_tema_comision_legislativa_especifique.Enabled = false;
-
-
-
 
             txt_ID_comision_legislativa.Text = string.Empty;
             cmb_tema_comision_legislativa.Text = "";
@@ -354,7 +347,11 @@ namespace App_PLE.Vistas
                             //"cond_existencia_juicio_politico," +
                             //"cond_existencia_declaracion_procedencia," +
                             //"cond_existencia_comparecencia," +
-                            "fecha_actualizacion)" +
+                            "fecha_actualizacion," +
+                            "periodo_reportado_rec," +
+                            "fecha_inicio_p_rec," +
+                            "fecha_termino_p_rec," +
+                            "sesiones_celebradas_p_rec)" +
                      "VALUES" +
                             " (@id_legislatura," +
                             "@entidad_federativa," +
@@ -384,7 +381,11 @@ namespace App_PLE.Vistas
                             //"cond_existencia_juicio_politico," +
                             //"cond_existencia_declaracion_procedencia," +
                             //"cond_existencia_comparecencia," +
-                            "@fecha_actualizacion)";
+                            "@fecha_actualizacion," +
+                            "@periodo_reportado_rec," +
+                            "@fecha_inicio_p_rec," +
+                            "@fecha_termino_p_rec," +
+                            "@sesiones_celebradas_p_rec)" ;
 
                         using (SQLiteCommand command = new SQLiteCommand(query, connection))
                         {
@@ -406,6 +407,10 @@ namespace App_PLE.Vistas
                             command.Parameters.AddWithValue("@fecha_termino_p", dtp_fecha_termino_po.Text);
                             command.Parameters.AddWithValue("@sesiones_celebradas_p", Txt_sesiones_celebradas_po.Text);
                             command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+                            command.Parameters.AddWithValue("@periodo_reportado_rec", txt_periodo_reportado_rec.Text);
+                            command.Parameters.AddWithValue("@fecha_inicio_p_rec", dtp_fecha_inicio_p_rec.Text);
+                            command.Parameters.AddWithValue("@fecha_termino_p_rec", dtp_fecha_termino_p_rec.Text);
+                            command.Parameters.AddWithValue("@sesiones_celebradas_p_rec", txt_sesiones_celebradas_p_rec.Text);
 
 
 
@@ -450,7 +455,11 @@ namespace App_PLE.Vistas
                                     //"cond_existencia_juicio_politico," +
                                     //"cond_existencia_declaracion_procedencia," +
                                     //"cond_existencia_comparecencia," +
-                                    "fecha_actualizacion)" +
+                                    "fecha_actualizacion," +
+                                    "periodo_reportado_rec," +
+                                    "fecha_inicio_p_rec," +
+                                    "fecha_termino_p_rec," +
+                                    "sesiones_celebradas_p_rec)" +
                              "VALUES" +
                                     " (@id_legislatura," +
                                     "@entidad_federativa," +
@@ -480,7 +489,11 @@ namespace App_PLE.Vistas
                                     //"cond_existencia_juicio_politico," +
                                     //"cond_existencia_declaracion_procedencia," +
                                     //"cond_existencia_comparecencia," +
-                                    "@fecha_actualizacion)";
+                                    "@fecha_actualizacion," +
+                                    "@periodo_reportado_rec," +
+                            "@fecha_inicio_p_rec," +
+                            "@fecha_termino_p_rec," +
+                            "@sesiones_celebradas_p_rec)";
 
                                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                                 {
@@ -503,12 +516,17 @@ namespace App_PLE.Vistas
                                     command.Parameters.AddWithValue("@sesiones_celebradas_p", Txt_sesiones_celebradas_po.Text);
                                     command.Parameters.AddWithValue("@periodos_extraordinarios_celebrados", txt_periodos_extraordinarios_celebrados.Text);
                                     command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now);
+                                    command.Parameters.AddWithValue("@periodo_reportado_rec", txt_periodo_reportado_rec.Text);
+                                    command.Parameters.AddWithValue("@fecha_inicio_p_rec", dtp_fecha_inicio_p_rec.Text);
+                                    command.Parameters.AddWithValue("@fecha_termino_p_rec", dtp_fecha_termino_p_rec.Text);
+                                    command.Parameters.AddWithValue("@sesiones_celebradas_p_rec", txt_sesiones_celebradas_p_rec.Text);
 
                                     // Variables del dgv
                                     command.Parameters.AddWithValue("@periodo_extraordinario_reportado", row.Cells["periodo_reportado_pe"].Value);
                                     command.Parameters.AddWithValue("@fecha_inicio_pe", row.Cells["fecha_inicio_pe"].Value);
                                     command.Parameters.AddWithValue("@fecha_termino_pe", row.Cells["fecha_termino_pe"].Value);
                                     command.Parameters.AddWithValue("@sesiones_celebradas_pe", row.Cells["sesiones_celebradas_pe"].Value);
+                                    
 
                                     command.ExecuteNonQuery();
                                 }
@@ -522,8 +540,9 @@ namespace App_PLE.Vistas
                 // Se reinicion los botones
                 cmb_entidad_federativa.Enabled = false; cmb_numero_legislatura.Enabled = false;
                 txt_nombre_legislatura.Clear(); Txt_distritos_uninominales.Text = ""; Txt_diputaciones_plurinominales.Text = "";
-                cmb_ejercicio_constitucional_informacion_reportada.Text = "";
-                Txt_sesiones_celebradas_pe.Text = "";
+                cmb_ejercicio_constitucional_informacion_reportada.Text = ""; txt_periodo_reportado_rec.Text = "";
+                Txt_sesiones_celebradas_pe.Text = ""; txt_sesiones_celebradas_p_rec.Text = "";
+
                 dgvPE.Rows.Clear();
 
                 MessageBox.Show("Datos guardados correctamente");
@@ -1244,7 +1263,11 @@ namespace App_PLE.Vistas
 
             }
         }
-
+        private void cmb_periodo_extraordinario_reportado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // se ajustan las fechas
+            dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
+        }
         // fecha inicio funciones legislatura
         private DateTime f1;
         private void dtp_inicio_funciones_legislatura_DropDown(object sender, EventArgs e)
@@ -1447,7 +1470,9 @@ namespace App_PLE.Vistas
 
         private void txt_periodo_reportado_rec_TextChanged(object sender, EventArgs e)
         {
-            
+            // construccion id
+            construccion_id_legislatura();
+
             string entidad_federativa = cmb_entidad_federativa.Text;
             string ejerc_const = cmb_ejercicio_constitucional_informacion_reportada.Text;
             string periodo_receso = txt_periodo_reportado_rec.Text;
@@ -1564,7 +1589,7 @@ namespace App_PLE.Vistas
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    MessageBox.Show("Error al llenar el ComboBox cmb_Tipo_CL: " + ex.Message);
                 }
                 finally
                 {
@@ -2412,7 +2437,7 @@ namespace App_PLE.Vistas
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    MessageBox.Show("Error al llenar el ComboBox cmb_Sexo_Persona_Legisladora: " + ex.Message);
                 }
                 finally
                 {
@@ -2626,6 +2651,71 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_Persona_Legisladora_Propietaria()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "SELECT (nombre_1_persona_legisladora || ' ' || nombre_2_persona_legisladora || ' ' ||" +
+                        "nombre_3_persona_legisladora || ' ' || apellido_1_persona_legisladora || ' ' || apellido_2_persona_legisladora" +
+                        "|| ' ' || apellido_3_persona_legisladora || ' / ' || ID_persona_legisladora) AS descripcion FROM TR_PERSONAS_LEGISLADORAS";
+
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_nombre_persona_legisladora_propietaria.DataSource = dataTable;
+                    cmb_nombre_persona_legisladora_propietaria.DisplayMember = "descripcion";
+
+                    cmb_nombre_persona_legisladora_propietaria.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_persona_legisladora_propietaria.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_nombre_persona_legisladora_propietaria.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_persona_legisladora_propietaria.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox cmb_nombre_persona_legisladora_propietaria: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_nombre_persona_legisladora_propietaria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            string nombreCompleto = cmb_nombre_persona_legisladora_propietaria.Text;
+
+            // Verificar si el nombre completo es nulo o vacío
+            if (string.IsNullOrEmpty(nombreCompleto))
+            {
+                return;
+            }
+
+            // Eliminar espacios adicionales y separar el nombre completo en partes
+            string[] partes = nombreCompleto.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+
+            
+               
+            
+
+
+            
+        }
         private void cmb_Estatus_escolaridad_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2699,7 +2789,7 @@ namespace App_PLE.Vistas
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    MessageBox.Show("Error al llenar el ComboBox cmb_Carrera_licenciatura_persona_legisladora: " + ex.Message);
                 }
                 finally
                 {
@@ -3967,13 +4057,23 @@ namespace App_PLE.Vistas
             string segundoApellido = txt_apellido_2_persona_legisladora.Text;
             string tercerApellido = txt_apellido_3_persona_legisladora.Text;
             string sexo1 = cmb_sexo_persona_legisladora.Text;
-            char sexo = sexo1[0];
             DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+            if (sexo1 == "")
+            {
+
+            }
+            else
+            {
+                char sexo = sexo1[0];
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                 primerApellido, segundoApellido, tercerApellido,
                 sexo, fechaNacimiento);
-            txt_ID_persona_legisladora.Text = uniqueID;
+                txt_ID_persona_legisladora.Text = uniqueID;
+            }
+
+            
         }
         public static string GenerateUniqueID(string primerNombre, string segundoNombre, string tercerNombre,
             string primerApellido, string segundoApellido, string tercerApellido,
@@ -4030,13 +4130,21 @@ namespace App_PLE.Vistas
             string segundoApellido = txt_apellido_2_persona_legisladora.Text;
             string tercerApellido = txt_apellido_3_persona_legisladora.Text;
             string sexo1 = cmb_sexo_persona_legisladora.Text;
-            char sexo = sexo1[0];
             DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+            if (sexo1 == "")
+            {
+
+            }
+            else
+            {
+                char sexo = sexo1[0];
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                 primerApellido, segundoApellido, tercerApellido,
                 sexo, fechaNacimiento);
-            txt_ID_persona_legisladora.Text = uniqueID;
+                txt_ID_persona_legisladora.Text = uniqueID;
+            }
 
         }
         private void txt_nombre_3_persona_legisladora_TextChanged(object sender, EventArgs e)
@@ -4055,13 +4163,21 @@ namespace App_PLE.Vistas
             string segundoApellido = txt_apellido_2_persona_legisladora.Text;
             string tercerApellido = txt_apellido_3_persona_legisladora.Text;
             string sexo1 = cmb_sexo_persona_legisladora.Text;
-            char sexo = sexo1[0];
             DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+            if (sexo1 == "")
+            {
+
+            }
+            else
+            {
+                char sexo = sexo1[0];
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                 primerApellido, segundoApellido, tercerApellido,
                 sexo, fechaNacimiento);
-            txt_ID_persona_legisladora.Text = uniqueID;
+                txt_ID_persona_legisladora.Text = uniqueID;
+            }
         }
         private void txt_apellido_1_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
@@ -4090,13 +4206,21 @@ namespace App_PLE.Vistas
                 string segundoApellido = txt_apellido_2_persona_legisladora.Text;
                 string tercerApellido = txt_apellido_3_persona_legisladora.Text;
                 string sexo1 = cmb_sexo_persona_legisladora.Text;
-                char sexo = sexo1[0];
                 DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                if (sexo1 == "")
+                {
+
+                }
+                else
+                {
+                    char sexo = sexo1[0];
+
+                    string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                     primerApellido, segundoApellido, tercerApellido,
                     sexo, fechaNacimiento);
-                txt_ID_persona_legisladora.Text = uniqueID;
+                    txt_ID_persona_legisladora.Text = uniqueID;
+                }
             }
         }
         private void txt_apellido_2_persona_legisladora_TextChanged(object sender, EventArgs e)
@@ -4126,13 +4250,21 @@ namespace App_PLE.Vistas
                 string segundoApellido = txt_apellido_2_persona_legisladora.Text;
                 string tercerApellido = txt_apellido_3_persona_legisladora.Text;
                 string sexo1 = cmb_sexo_persona_legisladora.Text;
-                char sexo = sexo1[0];
                 DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                if (sexo1 == "")
+                {
+
+                }
+                else
+                {
+                    char sexo = sexo1[0];
+
+                    string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                     primerApellido, segundoApellido, tercerApellido,
                     sexo, fechaNacimiento);
-                txt_ID_persona_legisladora.Text = uniqueID;
+                    txt_ID_persona_legisladora.Text = uniqueID;
+                }
             }
         }
         private void txt_apellido_3_persona_legisladora_TextChanged(object sender, EventArgs e)
@@ -4151,13 +4283,21 @@ namespace App_PLE.Vistas
             string segundoApellido = txt_apellido_2_persona_legisladora.Text;
             string tercerApellido = txt_apellido_3_persona_legisladora.Text;
             string sexo1 = cmb_sexo_persona_legisladora.Text;
-            char sexo = sexo1[0];
             DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+            if (sexo1 == "")
+            {
+
+            }
+            else
+            {
+                char sexo = sexo1[0];
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                 primerApellido, segundoApellido, tercerApellido,
                 sexo, fechaNacimiento);
-            txt_ID_persona_legisladora.Text = uniqueID;
+                txt_ID_persona_legisladora.Text = uniqueID;
+            }
         }
         private void txt_otro_estatus_persona_legisladora_especifique_TextChanged(object sender, EventArgs e)
         {
@@ -4220,13 +4360,14 @@ namespace App_PLE.Vistas
 
             if (valorComboBox1 == "Suplente")
             {
+                cmb_Persona_Legisladora_Propietaria();
                 cmb_nombre_persona_legisladora_propietaria.Enabled = true; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.Honeydew;
                 cmb_nombre_persona_legisladora_propietaria.Focus();
             }
             else
             {
                 cmb_nombre_persona_legisladora_propietaria.Enabled = false; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.LightGray;
-                cmb_nombre_persona_legisladora_propietaria.Text = "";
+                cmb_nombre_persona_legisladora_propietaria.Items.Clear();
             }
         }
         private void cmb_escolaridad_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
@@ -4553,25 +4694,47 @@ namespace App_PLE.Vistas
             string segundoApellido = txt_apellido_2_persona_legisladora.Text;
             string tercerApellido = txt_apellido_3_persona_legisladora.Text;
             string sexo1 = cmb_sexo_persona_legisladora.Text;
-            char sexo = sexo1[0];
             DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-            string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+            if (sexo1 == "")
+            {
+
+            }
+            else
+            {
+                char sexo = sexo1[0];
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
                 primerApellido, segundoApellido, tercerApellido,
                 sexo, fechaNacimiento);
-            txt_ID_persona_legisladora.Text = uniqueID;
+                txt_ID_persona_legisladora.Text = uniqueID;
+            }
         }
         private void dtp_fecha_nacimiento_persona_legisladora_ValueChanged(object sender, EventArgs e)
         {
             // CONSTRUCCION ID
-            //string primerNombre = txt_nombre_1_persona_legisladora.Text;
-            //string primerApellido = txt_apellido_1_persona_legisladora.Text;
-            //string sexo1 = cmb_sexo_persona_legisladora.Text;
-            //char sexo = sexo1[0];
-            //DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
+            string primerNombre = txt_nombre_1_persona_legisladora.Text;
+            string segundoNombre = txt_nombre_2_persona_legisladora.Text;
+            string tercerNombre = txt_nombre_3_persona_legisladora.Text;
+            string primerApellido = txt_apellido_1_persona_legisladora.Text;
+            string segundoApellido = txt_apellido_2_persona_legisladora.Text;
+            string tercerApellido = txt_apellido_3_persona_legisladora.Text;
+            string sexo1 = cmb_sexo_persona_legisladora.Text;
+            DateTime fechaNacimiento = dtp_fecha_nacimiento_persona_legisladora.Value;
 
-            //string uniqueID = GenerateUniqueID(primerNombre, primerApellido, sexo, fechaNacimiento);
-            //txt_ID_persona_legisladora.Text = uniqueID;
+            if (sexo1 == "")
+            {
+
+            }
+            else
+            {
+                char sexo = sexo1[0];
+
+                string uniqueID = GenerateUniqueID(primerNombre, segundoNombre, tercerNombre,
+                primerApellido, segundoApellido, tercerApellido,
+                sexo, fechaNacimiento);
+                txt_ID_persona_legisladora.Text = uniqueID;
+            }
         }
         private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Leave(object sender, EventArgs e)
         {
@@ -4629,7 +4792,7 @@ namespace App_PLE.Vistas
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                        MessageBox.Show("Error al llenar el ComboBox cmb_forma_eleccion_persona_legisladora_SelectedIndexChanged: " + ex.Message);
                     }
                     finally
                     {
@@ -4703,7 +4866,7 @@ namespace App_PLE.Vistas
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                        MessageBox.Show("Error al llenar el ComboBox cmb_tipo_candidatura_persona_legisladora_SelectedIndexChanged: " + ex.Message);
                     }
                     finally
                     {
@@ -5264,7 +5427,7 @@ namespace App_PLE.Vistas
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                        MessageBox.Show("Error al llenar el ComboBox cmb_empleo_anterior_persona_legisladora_SelectedIndexChanged: " + ex.Message);
                     }
                     finally
                     {
@@ -5595,9 +5758,6 @@ namespace App_PLE.Vistas
             if (valorComboBox1 == "Si")
             {
                 cmb_cond_casa_atencion_ciudadana_movil.Enabled = true; cmb_cond_casa_atencion_ciudadana_movil.BackColor = Color.Honeydew;
-                txt_latitud_casa_atencion_ciudadana.Enabled = true; txt_latitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
-                txt_longitud_casa_atencion_ciudadana.Enabled = true; txt_longitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
-                gMapControl.Enabled = true;
                 cmb_cond_casa_atencion_ciudadana_movil.Focus();
 
             }
@@ -5898,6 +6058,244 @@ namespace App_PLE.Vistas
                 txt_cant_interv_sesiones_dip_permanente_persona_legisladora.BackColor = Color.LightGray;
             }
         }
+        private void cmb_cond_casa_atencion_ciudadana_movil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor_cmb = cmb_cond_casa_atencion_ciudadana_movil.Text;
+
+            if (valor_cmb == "Si")
+            {
+                txt_latitud_casa_atencion_ciudadana.Enabled = false; txt_latitud_casa_atencion_ciudadana.BackColor = Color.LightGray;
+                txt_longitud_casa_atencion_ciudadana.Enabled = false; txt_longitud_casa_atencion_ciudadana.BackColor = Color.LightGray;
+                txt_latitud_casa_atencion_ciudadana.Text = ""; txt_longitud_casa_atencion_ciudadana.Text = "";
+                gMapControl.Enabled = false;
+            }
+            else
+            {
+                txt_latitud_casa_atencion_ciudadana.Enabled = true; txt_latitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
+                txt_longitud_casa_atencion_ciudadana.Enabled = true; txt_longitud_casa_atencion_ciudadana.BackColor = Color.Honeydew;
+                gMapControl.Enabled = true;
+
+                
+            }
+        }
+        private void btnGuardarPL_Click(object sender, EventArgs e)
+        {
+            //bool cv = ValidarCampos_PL();
+            bool cv = true;
+
+            if (cv == true)
+            {
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    // Agregar una nueva fila al DataGridView
+                    bool duplicado = IsDuplicateRecord_RegistrosPL(txt_ID_persona_legisladora.Text.ToString());
+
+                    if (duplicado == true)
+                    {
+                        MessageBox.Show("El ID ya se encuentra registrado. Favor de verificar la información.", "Personas Legisladoras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                        using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                        {
+                            connection.Open();
+
+                            
+                                    // Variables individuales
+                                    string query = "INSERT INTO TR_PERSONAS_LEGISLADORAS (" +
+                                        "ID_persona_legisladora," +
+                                        "nombre_1_persona_legisladora," +
+                                        "nombre_2_persona_legisladora," +
+                                        "nombre_3_persona_legisladora," +
+                                        "apellido_1_persona_legisladora," +
+                                        "apellido_2_persona_legisladora," +
+                                        "apellido_3_persona_legisladora," +
+                                        "fecha_nacimiento_persona_legisladora," +
+                                        "sexo_persona_legisladora," +
+                                        "estatus_persona_legisladora," +
+                                        "otro_estatus_persona_legisladora_especifique," +
+                                        "causa_fallecimiento_persona_legisladora," +
+                                        "tipo_licencia_persona_legisladora," +
+                                        "caracter_cargo_persona_legisladora," +
+                                        "ID_persona_legisladora_propietaria," +
+                                        "nombre_persona_legisladora_propietaria" +
+                                        ")" +
+                                 "VALUES" +
+                                        " (" +
+                                        "@ID_persona_legisladora," +
+                                        "@nombre_1_persona_legisladora," +
+                                        "@nombre_2_persona_legisladora," +
+                                        "@nombre_3_persona_legisladora," +
+                                        "@apellido_1_persona_legisladora," +
+                                        "@apellido_2_persona_legisladora," +
+                                        "@apellido_3_persona_legisladora," +
+                                        "@fecha_nacimiento_persona_legisladora," +
+                                        "@sexo_persona_legisladora," +
+                                        "@estatus_persona_legisladora," +
+                                        "@otro_estatus_persona_legisladora_especifique," +
+                                        "@causa_fallecimiento_persona_legisladora," +
+                                        "@tipo_licencia_persona_legisladora," +
+                                        "@caracter_cargo_persona_legisladora," +
+                                        "@ID_persona_legisladora_propietaria," +
+                                        "@nombre_persona_legisladora_propietaria" +
+                                        ")";
+
+                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                            {
+                                // Variables individuales
+                                command.Parameters.AddWithValue("@ID_persona_legisladora", txt_ID_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@nombre_1_persona_legisladora", txt_nombre_1_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@nombre_2_persona_legisladora", txt_nombre_2_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@nombre_3_persona_legisladora", txt_nombre_3_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@apellido_1_persona_legisladora", txt_apellido_1_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@apellido_2_persona_legisladora", txt_apellido_2_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@apellido_3_persona_legisladora", txt_apellido_3_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@fecha_nacimiento_persona_legisladora", dtp_fecha_nacimiento_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@sexo_persona_legisladora", cmb_sexo_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@estatus_persona_legisladora", cmb_estatus_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@otro_estatus_persona_legisladora_especifique", txt_otro_estatus_persona_legisladora_especifique.Text);
+                                command.Parameters.AddWithValue("@causa_fallecimiento_persona_legisladora", cbm_causa_fallecimiento_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@tipo_licencia_persona_legisladora", cbm_tipo_licencia_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@caracter_cargo_persona_legisladora", cmb_caracter_cargo_persona_legisladora.Text);
+                                command.Parameters.AddWithValue("@ID_persona_legisladora_propietaria", txt_ID_persona_legisladora_propietaria.Text);
+                                command.Parameters.AddWithValue("@nombre_persona_legisladora_propietaria", cmb_nombre_persona_legisladora_propietaria.Text);
+
+                                command.ExecuteNonQuery();
+                            }
+                            connection.Close();
+                        }
+
+                        // Se reinicion los botones
+                        MessageBox.Show("Datos guardados correctamente");
+                        /*
+                        txt_nombre_comision_legislativa.Clear();
+                        cmb_tipo_comision_legislativa.Text = ""; Txt_otro_tipo_comision_legislativa_especifique.Clear();
+                        cmb_tema_comision_legislativa.Text = ""; txt_otro_tema_comision_legislativa_especifique.Clear();
+                        dgv_tema_comision_legislativa.Rows.Clear();
+                        txt_cant_integrantes_comision_legislativa.Clear(); cmb_cond_celebracion_reuniones_comision_legislativa.Text = "";
+                        txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Clear();
+                        txt_cant_reuniones_celebradas_comision_legislativa.Clear();
+                        cmb_cond_transmision_reuniones_celebradas_comision_legislativa.SelectedIndex = -1;
+                        txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Clear();
+                        txt_cant_iniciativas_turnadas_a_comision_legislativa.Clear();
+                        txt_cant_dictamenes_emitidos_por_comision_legislativa.Clear();
+                        txt_observaciones_cl.Clear();
+                        txt_consecutivo_comision_legislativa.Clear();
+                        Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; Txt_otro_tipo_comision_legislativa_especifique.BackColor = Color.LightGray;
+                        txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Enabled = false; txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.BackColor = Color.LightGray;
+                        DGV_REGISTROS_CL();
+                        txt_ID_comision_legislativa.Text = "";
+                        */
+
+                        DGV_REGISTROS_PL();
+                    }
+
+
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                //MessageBox.Show("El ID ya se encuentra registrado. Favor de verificar la información.", "Comisiones Legislativas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private bool ValidarCampos_PL()
+        {
+            // Array de controles a validar
+            Control[] controlesAValidar = { txt_nombre_1_persona_legisladora, txt_apellido_1_persona_legisladora, dtp_fecha_nacimiento_persona_legisladora,
+            cmb_sexo_persona_legisladora,cmb_estatus_persona_legisladora,cmb_caracter_cargo_persona_legisladora,cmb_escolaridad_persona_legisladora_PL,
+            cmb_estatus_escolaridad_persona_legisladora,dgv_lengua_PL,dgv_tipo_discapacidad_PL,cmb_cond_pueblo_ind_persona_legisladora_PL,
+            cmb_cond_pob_afromexicana_persona_legisladora_PL,cmb_forma_eleccion_persona_legisladora,cmb_tipo_adscripcion_inicial_persona_legisladora,
+            cmb_tipo_adscripcion_final_persona_legisladora,cmb_cond_presentacion_declaracion_situacion_patrimonial,cmb_cond_presentacion_declaracion_intereses,
+            cmb_cond_presentacion_declaracion_fiscal,txt_asistencia_legislativa_persona_legisladora,txt_gestion_parlamentaria_persona_legisladora,
+            txt_atencion_ciudadana_persona_legisladora,txt_otro_concepto_gasto_persona_legisladora,cmb_cond_casa_atencion_ciudadana,
+            cmb_cond_integrante_comision_permanente,cmb_cond_integrante_jucopo,cmb_cond_integrante_mesa_directiva,txt_cant_iniciativas_presentadas_persona_legisladora,
+            txt_asist_sesiones_plenarias_persona_legisladora };
+
+            foreach (Control control in controlesAValidar)
+            {
+                // Verificar si el control está vacío
+                if (string.IsNullOrWhiteSpace(control.Text))
+                {
+                    MessageBox.Show($"Existen campos vacíos.", "Campo vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    control.Focus(); // Enfocar el control vacío
+                    return false; // Salir del método después de encontrar el primer campo vacío
+                }
+            }
+
+            int ren_dg;
+            ren_dg = dgv_tema_comision_legislativa.Rows.Count;
+
+            if (ren_dg == 0)
+            {
+                MessageBox.Show($"Existen campos vacíos.", "Campo vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmb_tema_comision_legislativa.Focus();
+                return false;
+
+            }
+
+            return true;
+        }
+        private bool IsDuplicateRecord_RegistrosPL(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_registros_pl.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["ID_persona_legisladora"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private void DGV_REGISTROS_PL()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select distinct ID_persona_legisladora, nombre_1_persona_legisladora," +
+                        "fecha_nacimiento_persona_legisladora,estatus_persona_legisladora,caracter_cargo_persona_legisladora" +
+                        " from" +
+                        " TR_PERSONAS_LEGISLADORAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dgv_registros_pl.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar DGV personas legisladoras: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+        }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
         private void cmb_Sexo_personal_apoyo()
@@ -5932,7 +6330,7 @@ namespace App_PLE.Vistas
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    MessageBox.Show("Error al llenar el ComboBox cmb_Sexo_personal_apoyo: " + ex.Message);
                 }
                 finally
                 {
@@ -6913,7 +7311,24 @@ namespace App_PLE.Vistas
                 
         }
 
+        private void txt_ID_persona_legisladora_propietaria_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

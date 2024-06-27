@@ -127,7 +127,7 @@ namespace App_PLE
             FormDashboard frmRegistros = new FormDashboard();
 
             // Crear instancias de los formularios secundarios
-            frmRegistros.ShowDialog();
+            AbrirFormInPanel(new FormDashboard());
         }
     }
 }

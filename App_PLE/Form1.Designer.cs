@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.btnDecargarInformacion = new System.Windows.Forms.Button();
             this.btnResumen = new System.Windows.Forms.Button();
             this.btnDG = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.iconoCerrar = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.barraTitulo.SuspendLayout();
@@ -67,6 +67,20 @@
             this.menuVertical.Size = new System.Drawing.Size(195, 700);
             this.menuVertical.TabIndex = 0;
             // 
+            // btnDashboard
+            // 
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(12, 113);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(160, 37);
+            this.btnDashboard.TabIndex = 4;
+            this.btnDashboard.Text = "     Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
             // btnDecargarInformacion
             // 
             this.btnDecargarInformacion.FlatAppearance.BorderSize = 0;
@@ -77,7 +91,7 @@
             this.btnDecargarInformacion.Name = "btnDecargarInformacion";
             this.btnDecargarInformacion.Size = new System.Drawing.Size(160, 37);
             this.btnDecargarInformacion.TabIndex = 3;
-            this.btnDecargarInformacion.Text = "     Descargar información";
+            this.btnDecargarInformacion.Text = "        Descargar";
             this.btnDecargarInformacion.UseVisualStyleBackColor = true;
             this.btnDecargarInformacion.Click += new System.EventHandler(this.btnDecargarInformacion_Click);
             // 
@@ -218,20 +232,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1089, 650);
             this.panelContenedor.TabIndex = 2;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(12, 113);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(160, 37);
-            this.btnDashboard.TabIndex = 4;
-            this.btnDashboard.Text = "     Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // Form1
             // 
