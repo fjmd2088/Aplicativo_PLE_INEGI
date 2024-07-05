@@ -2665,7 +2665,7 @@ namespace App_PLE.Vistas
                     // comando de sql
                     string query = "SELECT (nombre_1_persona_legisladora || ' ' || nombre_2_persona_legisladora || ' ' ||" +
                         "nombre_3_persona_legisladora || ' ' || apellido_1_persona_legisladora || ' ' || apellido_2_persona_legisladora" +
-                        "|| ' ' || apellido_3_persona_legisladora || ' / ' || ID_persona_legisladora) AS descripcion FROM TR_PERSONAS_LEGISLADORAS";
+                        "|| ' ' || apellido_3_persona_legisladora || ' - ' || ID_persona_legisladora) AS descripcion FROM TR_PERSONAS_LEGISLADORAS";
 
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
@@ -2703,18 +2703,32 @@ namespace App_PLE.Vistas
             // Verificar si el nombre completo es nulo o vacío
             if (string.IsNullOrEmpty(nombreCompleto))
             {
+                txt_ID_persona_legisladora_propietaria.Text = "";
                 return;
             }
 
             // Eliminar espacios adicionales y separar el nombre completo en partes
-            string[] partes = nombreCompleto.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
-
             
-               
-            
+            // Separar el texto utilizando el delimitador '-'
+            string[] partes = nombreCompleto.Split('-');
+
+            // Verificar si la separación resultó en al menos dos partes
+            if (partes.Length < 2)
+            {
+                txt_ID_persona_legisladora_propietaria.Text = "";
+                return;
+            }
+
+            // Extraer la parte que contiene el número
+            string id = partes[1].Trim();
+
+            txt_ID_persona_legisladora_propietaria.Text = id;
 
 
-            
+
+
+
+
         }
         private void cmb_Estatus_escolaridad_persona_legisladora()
         {
@@ -4367,7 +4381,7 @@ namespace App_PLE.Vistas
             else
             {
                 cmb_nombre_persona_legisladora_propietaria.Enabled = false; cmb_nombre_persona_legisladora_propietaria.BackColor = Color.LightGray;
-                cmb_nombre_persona_legisladora_propietaria.Items.Clear();
+                cmb_nombre_persona_legisladora_propietaria.SelectedIndex = -1; ;
             }
         }
         private void cmb_escolaridad_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
@@ -6105,73 +6119,13 @@ namespace App_PLE.Vistas
                         {
                             connection.Open();
 
-                            
-                                    // Variables individuales
-                                    string query = "INSERT INTO TR_PERSONAS_LEGISLADORAS (" +
-                                        "ID_persona_legisladora," +
-                                        "nombre_1_persona_legisladora," +
-                                        "nombre_2_persona_legisladora," +
-                                        "nombre_3_persona_legisladora," +
-                                        "apellido_1_persona_legisladora," +
-                                        "apellido_2_persona_legisladora," +
-                                        "apellido_3_persona_legisladora," +
-                                        "fecha_nacimiento_persona_legisladora," +
-                                        "sexo_persona_legisladora," +
-                                        "estatus_persona_legisladora," +
-                                        "otro_estatus_persona_legisladora_especifique," +
-                                        "causa_fallecimiento_persona_legisladora," +
-                                        "tipo_licencia_persona_legisladora," +
-                                        "caracter_cargo_persona_legisladora," +
-                                        "ID_persona_legisladora_propietaria," +
-                                        "nombre_persona_legisladora_propietaria" +
-                                        ")" +
-                                 "VALUES" +
-                                        " (" +
-                                        "@ID_persona_legisladora," +
-                                        "@nombre_1_persona_legisladora," +
-                                        "@nombre_2_persona_legisladora," +
-                                        "@nombre_3_persona_legisladora," +
-                                        "@apellido_1_persona_legisladora," +
-                                        "@apellido_2_persona_legisladora," +
-                                        "@apellido_3_persona_legisladora," +
-                                        "@fecha_nacimiento_persona_legisladora," +
-                                        "@sexo_persona_legisladora," +
-                                        "@estatus_persona_legisladora," +
-                                        "@otro_estatus_persona_legisladora_especifique," +
-                                        "@causa_fallecimiento_persona_legisladora," +
-                                        "@tipo_licencia_persona_legisladora," +
-                                        "@caracter_cargo_persona_legisladora," +
-                                        "@ID_persona_legisladora_propietaria," +
-                                        "@nombre_persona_legisladora_propietaria" +
-                                        ")";
+                            saveVariableIndividuales_PL(connection);
+                            //Save_dgv_nivel_escolaridad_PL(connection,dgv_nivel_escolaridad_PL);
 
-                            using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                            {
-                                // Variables individuales
-                                command.Parameters.AddWithValue("@ID_persona_legisladora", txt_ID_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@nombre_1_persona_legisladora", txt_nombre_1_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@nombre_2_persona_legisladora", txt_nombre_2_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@nombre_3_persona_legisladora", txt_nombre_3_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@apellido_1_persona_legisladora", txt_apellido_1_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@apellido_2_persona_legisladora", txt_apellido_2_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@apellido_3_persona_legisladora", txt_apellido_3_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@fecha_nacimiento_persona_legisladora", dtp_fecha_nacimiento_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@sexo_persona_legisladora", cmb_sexo_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@estatus_persona_legisladora", cmb_estatus_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@otro_estatus_persona_legisladora_especifique", txt_otro_estatus_persona_legisladora_especifique.Text);
-                                command.Parameters.AddWithValue("@causa_fallecimiento_persona_legisladora", cbm_causa_fallecimiento_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@tipo_licencia_persona_legisladora", cbm_tipo_licencia_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@caracter_cargo_persona_legisladora", cmb_caracter_cargo_persona_legisladora.Text);
-                                command.Parameters.AddWithValue("@ID_persona_legisladora_propietaria", txt_ID_persona_legisladora_propietaria.Text);
-                                command.Parameters.AddWithValue("@nombre_persona_legisladora_propietaria", cmb_nombre_persona_legisladora_propietaria.Text);
-
-                                command.ExecuteNonQuery();
-                            }
                             connection.Close();
                         }
-
-                        // Se reinicion los botones
-                        MessageBox.Show("Datos guardados correctamente");
+                            // Se reinicion los botones
+                            MessageBox.Show("Datos guardados correctamente");
                         /*
                         txt_nombre_comision_legislativa.Clear();
                         cmb_tipo_comision_legislativa.Text = ""; Txt_otro_tipo_comision_legislativa_especifique.Clear();
@@ -6194,9 +6148,6 @@ namespace App_PLE.Vistas
 
                         DGV_REGISTROS_PL();
                     }
-
-
-
                 }
                 else
                 {
@@ -6295,6 +6246,306 @@ namespace App_PLE.Vistas
                     conexion.Close();
                 }
             }
+        }
+        private void Save_dgv_nivel_escolaridad_PL(SQLiteConnection conn, DataGridView dgv)
+        {
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    // Variables individuales
+                    string query = "INSERT INTO TR_PERSONAS_LEGISLADORAS (" +
+                        "ID_persona_legisladora," +
+                        "nombre_1_persona_legisladora," +
+                        "nombre_2_persona_legisladora," +
+                        "nombre_3_persona_legisladora," +
+                        "apellido_1_persona_legisladora," +
+                        "apellido_2_persona_legisladora," +
+                        "apellido_3_persona_legisladora," +
+                        "fecha_nacimiento_persona_legisladora," +
+                        "sexo_persona_legisladora," +
+                        "estatus_persona_legisladora," +
+                        "otro_estatus_persona_legisladora_especifique," +
+                        "causa_fallecimiento_persona_legisladora," +
+                        "tipo_licencia_persona_legisladora," +
+                        "caracter_cargo_persona_legisladora," +
+                        "ID_persona_legisladora_propietaria," +
+                        "nombre_persona_legisladora_propietaria," +
+                        "escolaridad_persona_legisladora_PL," +
+                        "estatus_escolaridad_persona_legisladora," +
+                        $"carrera_licenciatura_persona_legisladora_PL, " + //
+                        $"carrera_maestria_persona_legisladora_PL, " + //
+                        $"carrera_doctorado_persona_legisladora_PL" + //
+                        ")" +
+                 "VALUES" +
+                        " (" +
+                        "@ID_persona_legisladora," +
+                        "@nombre_1_persona_legisladora," +
+                        "@nombre_2_persona_legisladora," +
+                        "@nombre_3_persona_legisladora," +
+                        "@apellido_1_persona_legisladora," +
+                        "@apellido_2_persona_legisladora," +
+                        "@apellido_3_persona_legisladora," +
+                        "@fecha_nacimiento_persona_legisladora," +
+                        "@sexo_persona_legisladora," +
+                        "@estatus_persona_legisladora," +
+                        "@otro_estatus_persona_legisladora_especifique," +
+                        "@causa_fallecimiento_persona_legisladora," +
+                        "@tipo_licencia_persona_legisladora," +
+                        "@caracter_cargo_persona_legisladora," +
+                        "@ID_persona_legisladora_propietaria," +
+                        "@nombre_persona_legisladora_propietaria," +
+                        "@escolaridad_persona_legisladora_PL," +
+                        "@estatus_escolaridad_persona_legisladora," +
+                        $"@carrera_licenciatura_persona_legisladora_PL," + //
+                        $"@carrera_maestria_persona_legisladora_PL," + //
+                        $"@carrera_doctorado_persona_legisladora_PL" + //
+                        ")";
+
+                    using (SQLiteCommand command = new SQLiteCommand(query, conn))
+                    {
+                        // Variables individuales
+                        command.Parameters.AddWithValue("@ID_persona_legisladora", txt_ID_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@nombre_1_persona_legisladora", txt_nombre_1_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@nombre_2_persona_legisladora", txt_nombre_2_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@nombre_3_persona_legisladora", txt_nombre_3_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@apellido_1_persona_legisladora", txt_apellido_1_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@apellido_2_persona_legisladora", txt_apellido_2_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@apellido_3_persona_legisladora", txt_apellido_3_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@fecha_nacimiento_persona_legisladora", dtp_fecha_nacimiento_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@sexo_persona_legisladora", cmb_sexo_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@estatus_persona_legisladora", cmb_estatus_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@otro_estatus_persona_legisladora_especifique", txt_otro_estatus_persona_legisladora_especifique.Text);
+                        command.Parameters.AddWithValue("@causa_fallecimiento_persona_legisladora", cbm_causa_fallecimiento_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@tipo_licencia_persona_legisladora", cbm_tipo_licencia_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@caracter_cargo_persona_legisladora", cmb_caracter_cargo_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@ID_persona_legisladora_propietaria", txt_ID_persona_legisladora_propietaria.Text);
+                        command.Parameters.AddWithValue("@nombre_persona_legisladora_propietaria", cmb_nombre_persona_legisladora_propietaria.Text);
+                        command.Parameters.AddWithValue("@escolaridad_persona_legisladora_PL", cmb_escolaridad_persona_legisladora_PL.Text);
+                        command.Parameters.AddWithValue("@estatus_escolaridad_persona_legisladora", cmb_estatus_escolaridad_persona_legisladora.Text);
+
+                        // variables dgv
+                        command.Parameters.AddWithValue("@carrera_licenciatura_persona_legisladora_PL", row.Cells["lic_pl"].Value);
+                        command.Parameters.AddWithValue("@carrera_maestria_persona_legisladora_PL", row.Cells["mae_pl"].Value);
+                        command.Parameters.AddWithValue("@carrera_doctorado_persona_legisladora_PL", row.Cells["doc_pl"].Value);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                else
+                {
+                    saveVariableIndividuales_PL(conn);
+                }
+                
+            }
+        }
+        private void saveVariableIndividuales_PL(SQLiteConnection conn)
+        {
+                // Variables individuales
+                string query = "INSERT INTO TR_PERSONAS_LEGISLADORAS (" +
+                    "ID_persona_legisladora," +
+                    "nombre_1_persona_legisladora," +
+                    "nombre_2_persona_legisladora," +
+                    "nombre_3_persona_legisladora," +
+                    "apellido_1_persona_legisladora," +
+                    "apellido_2_persona_legisladora," +
+                    "apellido_3_persona_legisladora," +
+                    "fecha_nacimiento_persona_legisladora," +
+                    "sexo_persona_legisladora," +
+                    "estatus_persona_legisladora," +
+                    "otro_estatus_persona_legisladora_especifique," +
+                    "causa_fallecimiento_persona_legisladora," +
+                    "tipo_licencia_persona_legisladora," +
+                    "caracter_cargo_persona_legisladora," +
+                    "ID_persona_legisladora_propietaria," +
+                    "nombre_persona_legisladora_propietaria," +
+                    "escolaridad_persona_legisladora_PL," +
+                    "estatus_escolaridad_persona_legisladora," +
+                    "empleo_anterior_persona_legisladora," +
+                    "antigüedad_servicio_publico_persona_legisladora," +
+                    "antigüedad_persona_legisladora," +
+                    "cond_lengua_ind_persona_legisladora_PL," +
+                    "cond_pueblo_ind_persona_legisladora_PL," +
+                    "pueblo_ind_persona_legisladora_PL," +
+                    "cond_discapacidad_persona_legisladora," +
+                    "cond_pob_diversidad_sexual_persona_legisladora," +
+                    "cond_pob_afromexicana_persona_legisladora_PL," +
+                    "forma_eleccion_persona_legisladora," +
+                    "distrito_electoral_mayoria_relativa," +
+                    "tipo_candidatura_persona_legisladora," +
+                    "partido_politico_candidatura_partido_unico," +
+                    "tipo_adscripcion_inicial_persona_legisladora," +
+                    "grupo_parlamentario_adscipcion_inicial_persona_legisladora," +
+                    "otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique," +
+                    "tipo_adscripcion_final_persona_legisladora," +
+                    "grupo_parlamentario_adscipcion_final_persona_legisladora," +
+                    "otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique," +
+                    "cond_presentacion_declaracion_situacion_patrimonial," +
+                    "no_aplica_presentacion_declaracion_situacion_patrimonial_especifique," +
+                    "cond_presentacion_declaracion_intereses," +
+                    "no_aplica_presentacion_declaracion_intereses_especifique," +
+                    "cond_presentacion_declaracion_fiscal," +
+                    "no_aplica_presentacion_declaracion_fiscal_especifique," +
+                    "remuneracion_persona_legisladora," +
+                    "asistencia_legislativa_persona_legisladora," +
+                    "gestion_parlamentaria_persona_legisladora," +
+                    "atencion_ciudadana_persona_legisladora," +
+                    "otro_concepto_gasto_persona_legisladora," +
+
+                    "cond_casa_atencion_ciudadana," +
+                    "cond_casa_atencion_ciudadana_movil," +
+                    "latitud_casa_atencion_ciudadana," +
+                    "longitud_casa_atencion_ciudadana," +
+                    "cond_integrante_comision_permanente," +
+                    "cargo_comision_permanente," +
+                    "otro_cargo_comision_permanente_especifique," +
+                    "cond_integrante_jucopo," +
+                    "cargo_jucopo," +
+                    "otro_cargo_jucopo_especifique," +
+                    "cond_integrante_mesa_directiva," +
+                    "cargo_mesa_directiva_PL," +
+                    "otro_cargo_mesa_directiva_especifique," +
+                    "ID_comision_legislativa_pc," +
+                    "nombre_comision_legislativa" +
+                    ")" +
+             "VALUES" +
+                    " (" +
+                    "@ID_persona_legisladora," +
+                    "@nombre_1_persona_legisladora," +
+                    "@nombre_2_persona_legisladora," +
+                    "@nombre_3_persona_legisladora," +
+                    "@apellido_1_persona_legisladora," +
+                    "@apellido_2_persona_legisladora," +
+                    "@apellido_3_persona_legisladora," +
+                    "@fecha_nacimiento_persona_legisladora," +
+                    "@sexo_persona_legisladora," +
+                    "@estatus_persona_legisladora," +
+                    "@otro_estatus_persona_legisladora_especifique," +
+                    "@causa_fallecimiento_persona_legisladora," +
+                    "@tipo_licencia_persona_legisladora," +
+                    "@caracter_cargo_persona_legisladora," +
+                    "@ID_persona_legisladora_propietaria," +
+                    "@nombre_persona_legisladora_propietaria," +
+                    "@escolaridad_persona_legisladora_PL," +
+                    "@estatus_escolaridad_persona_legisladora," +
+                    "@empleo_anterior_persona_legisladora," +
+                    "@antigüedad_servicio_publico_persona_legisladora," +
+                    "@antigüedad_persona_legisladora," +
+                    "@cond_lengua_ind_persona_legisladora_PL," +
+                    "@cond_pueblo_ind_persona_legisladora_PL," +
+                    "@pueblo_ind_persona_legisladora_PL," +
+                    "@cond_discapacidad_persona_legisladora," +
+                    "@cond_pob_diversidad_sexual_persona_legisladora," +
+                    "@cond_pob_afromexicana_persona_legisladora_PL," +
+                    "@forma_eleccion_persona_legisladora," +
+                    "@distrito_electoral_mayoria_relativa," +
+                    "@tipo_candidatura_persona_legisladora," +
+                    "@partido_politico_candidatura_partido_unico," +
+                    "@tipo_adscripcion_inicial_persona_legisladora," +
+                    "@grupo_parlamentario_adscipcion_inicial_persona_legisladora," +
+                    "@otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique," +
+                    "@tipo_adscripcion_final_persona_legisladora," +
+                    "@grupo_parlamentario_adscipcion_final_persona_legisladora," +
+                    "@otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique," +
+                    "@cond_presentacion_declaracion_situacion_patrimonial," +
+                    "@no_aplica_presentacion_declaracion_situacion_patrimonial_especifique," +
+                    "@cond_presentacion_declaracion_intereses," +
+                    "@no_aplica_presentacion_declaracion_intereses_especifique," +
+                    "@cond_presentacion_declaracion_fiscal," +
+                    "@no_aplica_presentacion_declaracion_fiscal_especifique," +
+                    "@remuneracion_persona_legisladora," +
+                    "@asistencia_legislativa_persona_legisladora," +
+                    "@gestion_parlamentaria_persona_legisladora," +
+                    "@atencion_ciudadana_persona_legisladora," +
+                    "@otro_concepto_gasto_persona_legisladora," +
+
+                    "@cond_casa_atencion_ciudadana," +
+                    "@cond_casa_atencion_ciudadana_movil," +
+                    "@latitud_casa_atencion_ciudadana," +
+                    "@longitud_casa_atencion_ciudadana," +
+                    "@cond_integrante_comision_permanente," +
+                    "@cargo_comision_permanente," +
+                    "@otro_cargo_comision_permanente_especifique," +
+                    "@cond_integrante_jucopo," +
+                    "@cargo_jucopo," +
+                    "@otro_cargo_jucopo_especifique," +
+                    "@cond_integrante_mesa_directiva," +
+                    "@cargo_mesa_directiva_PL," +
+                    "@otro_cargo_mesa_directiva_especifique," +
+                    "@ID_comision_legislativa_pc," +
+                    "@nombre_comision_legislativa" +
+
+                    ")";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, conn))
+                {
+                    // Variables individuales
+                    command.Parameters.AddWithValue("@ID_persona_legisladora", txt_ID_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@nombre_1_persona_legisladora", txt_nombre_1_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@nombre_2_persona_legisladora", txt_nombre_2_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@nombre_3_persona_legisladora", txt_nombre_3_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@apellido_1_persona_legisladora", txt_apellido_1_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@apellido_2_persona_legisladora", txt_apellido_2_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@apellido_3_persona_legisladora", txt_apellido_3_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@fecha_nacimiento_persona_legisladora", dtp_fecha_nacimiento_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@sexo_persona_legisladora", cmb_sexo_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@estatus_persona_legisladora", cmb_estatus_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@otro_estatus_persona_legisladora_especifique", txt_otro_estatus_persona_legisladora_especifique.Text);
+                    command.Parameters.AddWithValue("@causa_fallecimiento_persona_legisladora", cbm_causa_fallecimiento_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@tipo_licencia_persona_legisladora", cbm_tipo_licencia_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@caracter_cargo_persona_legisladora", cmb_caracter_cargo_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@ID_persona_legisladora_propietaria", txt_ID_persona_legisladora_propietaria.Text);
+                    command.Parameters.AddWithValue("@nombre_persona_legisladora_propietaria", cmb_nombre_persona_legisladora_propietaria.Text);
+                    command.Parameters.AddWithValue("@escolaridad_persona_legisladora_PL", cmb_escolaridad_persona_legisladora_PL.Text);
+                    command.Parameters.AddWithValue("@estatus_escolaridad_persona_legisladora", cmb_estatus_escolaridad_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@empleo_anterior_persona_legisladora", cmb_empleo_anterior_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@antigüedad_servicio_publico_persona_legisladora", cmb_antigüedad_servicio_publico_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@antigüedad_persona_legisladora", cmb_antigüedad_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@cond_lengua_ind_persona_legisladora_PL", cmb_cond_lengua_ind_persona_legisladora_PL.Text);
+                    command.Parameters.AddWithValue("@cond_pueblo_ind_persona_legisladora_PL", cmb_cond_pueblo_ind_persona_legisladora_PL.Text);
+                    command.Parameters.AddWithValue("@pueblo_ind_persona_legisladora_PL", cmb_pueblo_ind_persona_legisladora_PL.Text);
+                    command.Parameters.AddWithValue("@cond_discapacidad_persona_legisladora", cmb_cond_discapacidad_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@cond_pob_diversidad_sexual_persona_legisladora", cmb_cond_pob_diversidad_sexual_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@cond_pob_afromexicana_persona_legisladora_PL", cmb_cond_pob_afromexicana_persona_legisladora_PL.Text);
+                    command.Parameters.AddWithValue("@forma_eleccion_persona_legisladora", cmb_forma_eleccion_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@distrito_electoral_mayoria_relativa", cmb_distrito_electoral_mayoria_relativa.Text);
+                    command.Parameters.AddWithValue("@tipo_candidatura_persona_legisladora", cmb_tipo_candidatura_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@partido_politico_candidatura_partido_unico", cmb_partido_politico_candidatura_partido_unico.Text);
+                    command.Parameters.AddWithValue("@tipo_adscripcion_inicial_persona_legisladora", cmb_tipo_adscripcion_inicial_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@grupo_parlamentario_adscipcion_inicial_persona_legisladora", cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique", txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text);
+                    command.Parameters.AddWithValue("@tipo_adscripcion_final_persona_legisladora", cmb_tipo_adscripcion_final_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@grupo_parlamentario_adscipcion_final_persona_legisladora", cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique", txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text);
+                    command.Parameters.AddWithValue("@cond_presentacion_declaracion_situacion_patrimonial", cmb_cond_presentacion_declaracion_situacion_patrimonial.Text);
+                    command.Parameters.AddWithValue("@no_aplica_presentacion_declaracion_situacion_patrimonial_especifique", txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text);
+                    command.Parameters.AddWithValue("@cond_presentacion_declaracion_intereses", cmb_cond_presentacion_declaracion_intereses.Text);
+                    command.Parameters.AddWithValue("@no_aplica_presentacion_declaracion_intereses_especifique", txt_no_aplica_presentacion_declaracion_intereses_especifique.Text);
+                    command.Parameters.AddWithValue("@cond_presentacion_declaracion_fiscal", cmb_cond_presentacion_declaracion_fiscal.Text);
+                    command.Parameters.AddWithValue("@no_aplica_presentacion_declaracion_fiscal_especifique", txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text);
+                    command.Parameters.AddWithValue("@remuneracion_persona_legisladora", txt_remuneracion_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@asistencia_legislativa_persona_legisladora", txt_asistencia_legislativa_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@gestion_parlamentaria_persona_legisladora", txt_gestion_parlamentaria_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@atencion_ciudadana_persona_legisladora", txt_atencion_ciudadana_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@otro_concepto_gasto_persona_legisladora", txt_otro_concepto_gasto_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@cond_casa_atencion_ciudadana", cmb_cond_casa_atencion_ciudadana.Text);
+                    command.Parameters.AddWithValue("@cond_casa_atencion_ciudadana_movil", cmb_cond_casa_atencion_ciudadana_movil.Text);
+                    command.Parameters.AddWithValue("@latitud_casa_atencion_ciudadana", txt_latitud_casa_atencion_ciudadana.Text);
+                    command.Parameters.AddWithValue("@longitud_casa_atencion_ciudadana", txt_longitud_casa_atencion_ciudadana.Text);
+                    command.Parameters.AddWithValue("@cond_integrante_comision_permanente", cmb_cond_integrante_comision_permanente.Text);
+                    command.Parameters.AddWithValue("@cargo_comision_permanente", cmb_cargo_comision_permanente.Text);
+                    command.Parameters.AddWithValue("@otro_cargo_comision_permanente_especifique", txt_otro_cargo_comision_permanente_especifique.Text);
+                    command.Parameters.AddWithValue("@cond_integrante_jucopo", cmb_cond_integrante_jucopo.Text);
+                    command.Parameters.AddWithValue("@cargo_jucopo", cmb_cargo_jucopo.Text);
+                    command.Parameters.AddWithValue("@otro_cargo_jucopo_especifique", txt_otro_cargo_jucopo_especifique.Text);
+                    command.Parameters.AddWithValue("@cond_integrante_mesa_directiva", cmb_cond_integrante_mesa_directiva.Text);
+                    command.Parameters.AddWithValue("@cargo_mesa_directiva_PL", cmb_cargo_mesa_directiva_PL.Text);
+                    command.Parameters.AddWithValue("@otro_cargo_mesa_directiva_especifique", txt_otro_cargo_mesa_directiva_especifique.Text);
+                    command.Parameters.AddWithValue("@ID_comision_legislativa_pc", txt_ID_comision_legislativa_pc.Text);
+                    command.Parameters.AddWithValue("@nombre_comision_legislativa", cmb_nombre_comision_legislativa.Text);
+
+                command.ExecuteNonQuery();
+                }         
         }
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
