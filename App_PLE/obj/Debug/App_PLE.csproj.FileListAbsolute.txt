@@ -236,7 +236,6 @@ C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CoreCompileInputs.cache
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.exe
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.pdb
-C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.Up2Date
 D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\GMap.NET.Core.dll
 D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\GMap.NET.WindowsForms.dll
 C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\GMap.NET.Core.dll
@@ -285,3 +284,5 @@ D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Nume
 D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Vistas.DescargarInformacion.resources
 D:\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.Vistas.FormDashboard.resources
+C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.SuggestedBindingRedirects.cache
+C:\Users\jmleo\Documents\01_Programacion_FJMD\02_C#\Aplicativo_PLE_INEGI\App_PLE\obj\Debug\App_PLE.csproj.CopyComplete

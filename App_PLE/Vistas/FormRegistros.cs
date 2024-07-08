@@ -6113,18 +6113,40 @@ namespace App_PLE.Vistas
                     }
                     else
                     {
-                        string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-                        using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                        GuardarDatos();
+                        // se encuentra la cantidad de datos que tiene los dgv
+                        //int numRegEscolaridad = dgv_nivel_escolaridad_PL.RowCount;
+                        /*
+                        if (numRegEscolaridad == 0)
                         {
-                            connection.Open();
+                            string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-                            saveVariableIndividuales_PL(connection);
-                            //Save_dgv_nivel_escolaridad_PL(connection,dgv_nivel_escolaridad_PL);
+                            using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                            {
+                                connection.Open();
 
-                            connection.Close();
+                                saveVariableIndividuales_PL(connection);
+
+                                connection.Close();
+                            }
+
                         }
-                            // Se reinicion los botones
+                        else
+                        {
+                            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+                            using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                            {
+                                connection.Open();
+
+                                Save_dgv_nivel_escolaridad_PL(connection,dgv_nivel_escolaridad_PL);
+
+                                connection.Close();
+                            }
+                        }
+                        */
+
+                        // Se reinicion los botones
                             MessageBox.Show("Datos guardados correctamente");
                         /*
                         txt_nombre_comision_legislativa.Clear();
@@ -6273,9 +6295,61 @@ namespace App_PLE.Vistas
                         "nombre_persona_legisladora_propietaria," +
                         "escolaridad_persona_legisladora_PL," +
                         "estatus_escolaridad_persona_legisladora," +
-                        $"carrera_licenciatura_persona_legisladora_PL, " + //
-                        $"carrera_maestria_persona_legisladora_PL, " + //
-                        $"carrera_doctorado_persona_legisladora_PL" + //
+                        "empleo_anterior_persona_legisladora," +
+                        "antigüedad_servicio_publico_persona_legisladora," +
+                        "antigüedad_persona_legisladora," +
+                        "cond_lengua_ind_persona_legisladora_PL," +
+                        "cond_pueblo_ind_persona_legisladora_PL," +
+                        "pueblo_ind_persona_legisladora_PL," +
+                        "cond_discapacidad_persona_legisladora," +
+                        "cond_pob_diversidad_sexual_persona_legisladora," +
+                        "cond_pob_afromexicana_persona_legisladora_PL," +
+                        "forma_eleccion_persona_legisladora," +
+                        "distrito_electoral_mayoria_relativa," +
+                        "tipo_candidatura_persona_legisladora," +
+                        "partido_politico_candidatura_partido_unico," +
+                        "tipo_adscripcion_inicial_persona_legisladora," +
+                        "grupo_parlamentario_adscipcion_inicial_persona_legisladora," +
+                        "otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique," +
+                        "tipo_adscripcion_final_persona_legisladora," +
+                        "grupo_parlamentario_adscipcion_final_persona_legisladora," +
+                        "otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique," +
+                        "cond_presentacion_declaracion_situacion_patrimonial," +
+                        "no_aplica_presentacion_declaracion_situacion_patrimonial_especifique," +
+                        "cond_presentacion_declaracion_intereses," +
+                        "no_aplica_presentacion_declaracion_intereses_especifique," +
+                        "cond_presentacion_declaracion_fiscal," +
+                        "no_aplica_presentacion_declaracion_fiscal_especifique," +
+                        "remuneracion_persona_legisladora," +
+                        "asistencia_legislativa_persona_legisladora," +
+                        "gestion_parlamentaria_persona_legisladora," +
+                        "atencion_ciudadana_persona_legisladora," +
+                        "otro_concepto_gasto_persona_legisladora," +
+                        "cond_casa_atencion_ciudadana," +
+                        "cond_casa_atencion_ciudadana_movil," +
+                        "latitud_casa_atencion_ciudadana," +
+                        "longitud_casa_atencion_ciudadana," +
+                        "cond_integrante_comision_permanente," +
+                        "cargo_comision_permanente," +
+                        "otro_cargo_comision_permanente_especifique," +
+                        "cond_integrante_jucopo," +
+                        "cargo_jucopo," +
+                        "otro_cargo_jucopo_especifique," +
+                        "cond_integrante_mesa_directiva," +
+                        "cargo_mesa_directiva_PL," +
+                        "otro_cargo_mesa_directiva_especifique," +
+                        "ID_comision_legislativa_pc," +
+                        "nombre_comision_legislativa," +
+                        "cant_iniciativas_presentadas_persona_legisladora," +
+                        "asist_sesiones_plenarias_persona_legisladora," +
+                        "cant_intervenciones_sesiones_plenarias_persona_legisladora," +
+                        "asist_sesiones_comision_permanente_persona_legisladora," +
+                        "cant_interv_sesiones_dip_permanente_persona_legisladora" +
+
+                        "carrera_licenciatura_persona_legisladora_PL, " +
+                        "carrera_maestria_persona_legisladora_PL, " +
+                        "carrera_doctorado_persona_legisladora_PL" +
+
                         ")" +
                  "VALUES" +
                         " (" +
@@ -6297,9 +6371,61 @@ namespace App_PLE.Vistas
                         "@nombre_persona_legisladora_propietaria," +
                         "@escolaridad_persona_legisladora_PL," +
                         "@estatus_escolaridad_persona_legisladora," +
-                        $"@carrera_licenciatura_persona_legisladora_PL," + //
-                        $"@carrera_maestria_persona_legisladora_PL," + //
-                        $"@carrera_doctorado_persona_legisladora_PL" + //
+                        "@empleo_anterior_persona_legisladora," +
+                        "@antigüedad_servicio_publico_persona_legisladora," +
+                        "@antigüedad_persona_legisladora," +
+                        "@cond_lengua_ind_persona_legisladora_PL," +
+                        "@cond_pueblo_ind_persona_legisladora_PL," +
+                        "@pueblo_ind_persona_legisladora_PL," +
+                        "@cond_discapacidad_persona_legisladora," +
+                        "@cond_pob_diversidad_sexual_persona_legisladora," +
+                        "@cond_pob_afromexicana_persona_legisladora_PL," +
+                        "@forma_eleccion_persona_legisladora," +
+                        "@distrito_electoral_mayoria_relativa," +
+                        "@tipo_candidatura_persona_legisladora," +
+                        "@partido_politico_candidatura_partido_unico," +
+                        "@tipo_adscripcion_inicial_persona_legisladora," +
+                        "@grupo_parlamentario_adscipcion_inicial_persona_legisladora," +
+                        "@otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique," +
+                        "@tipo_adscripcion_final_persona_legisladora," +
+                        "@grupo_parlamentario_adscipcion_final_persona_legisladora," +
+                        "@otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique," +
+                        "@cond_presentacion_declaracion_situacion_patrimonial," +
+                        "@no_aplica_presentacion_declaracion_situacion_patrimonial_especifique," +
+                        "@cond_presentacion_declaracion_intereses," +
+                        "@no_aplica_presentacion_declaracion_intereses_especifique," +
+                        "@cond_presentacion_declaracion_fiscal," +
+                        "@no_aplica_presentacion_declaracion_fiscal_especifique," +
+                        "@remuneracion_persona_legisladora," +
+                        "@asistencia_legislativa_persona_legisladora," +
+                        "@gestion_parlamentaria_persona_legisladora," +
+                        "@atencion_ciudadana_persona_legisladora," +
+                        "@otro_concepto_gasto_persona_legisladora," +
+                        "@cond_casa_atencion_ciudadana," +
+                        "@cond_casa_atencion_ciudadana_movil," +
+                        "@latitud_casa_atencion_ciudadana," +
+                        "@longitud_casa_atencion_ciudadana," +
+                        "@cond_integrante_comision_permanente," +
+                        "@cargo_comision_permanente," +
+                        "@otro_cargo_comision_permanente_especifique," +
+                        "@cond_integrante_jucopo," +
+                        "@cargo_jucopo," +
+                        "@otro_cargo_jucopo_especifique," +
+                        "@cond_integrante_mesa_directiva," +
+                        "@cargo_mesa_directiva_PL," +
+                        "@otro_cargo_mesa_directiva_especifique," +
+                        "@ID_comision_legislativa_pc," +
+                        "@nombre_comision_legislativa," +
+                        "@cant_iniciativas_presentadas_persona_legisladora," +
+                        "@asist_sesiones_plenarias_persona_legisladora," +
+                        "@cant_intervenciones_sesiones_plenarias_persona_legisladora," +
+                        "@asist_sesiones_comision_permanente_persona_legisladora," +
+                        "@cant_interv_sesiones_dip_permanente_persona_legisladora" +
+
+                        "@carrera_licenciatura_persona_legisladora_PL," +
+                        "@carrera_maestria_persona_legisladora_PL," +
+                        "@carrera_doctorado_persona_legisladora_PL" +
+
                         ")";
 
                     using (SQLiteCommand command = new SQLiteCommand(query, conn))
@@ -6323,6 +6449,56 @@ namespace App_PLE.Vistas
                         command.Parameters.AddWithValue("@nombre_persona_legisladora_propietaria", cmb_nombre_persona_legisladora_propietaria.Text);
                         command.Parameters.AddWithValue("@escolaridad_persona_legisladora_PL", cmb_escolaridad_persona_legisladora_PL.Text);
                         command.Parameters.AddWithValue("@estatus_escolaridad_persona_legisladora", cmb_estatus_escolaridad_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@empleo_anterior_persona_legisladora", cmb_empleo_anterior_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@antigüedad_servicio_publico_persona_legisladora", cmb_antigüedad_servicio_publico_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@antigüedad_persona_legisladora", cmb_antigüedad_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@cond_lengua_ind_persona_legisladora_PL", cmb_cond_lengua_ind_persona_legisladora_PL.Text);
+                        command.Parameters.AddWithValue("@cond_pueblo_ind_persona_legisladora_PL", cmb_cond_pueblo_ind_persona_legisladora_PL.Text);
+                        command.Parameters.AddWithValue("@pueblo_ind_persona_legisladora_PL", cmb_pueblo_ind_persona_legisladora_PL.Text);
+                        command.Parameters.AddWithValue("@cond_discapacidad_persona_legisladora", cmb_cond_discapacidad_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@cond_pob_diversidad_sexual_persona_legisladora", cmb_cond_pob_diversidad_sexual_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@cond_pob_afromexicana_persona_legisladora_PL", cmb_cond_pob_afromexicana_persona_legisladora_PL.Text);
+                        command.Parameters.AddWithValue("@forma_eleccion_persona_legisladora", cmb_forma_eleccion_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@distrito_electoral_mayoria_relativa", cmb_distrito_electoral_mayoria_relativa.Text);
+                        command.Parameters.AddWithValue("@tipo_candidatura_persona_legisladora", cmb_tipo_candidatura_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@partido_politico_candidatura_partido_unico", cmb_partido_politico_candidatura_partido_unico.Text);
+                        command.Parameters.AddWithValue("@tipo_adscripcion_inicial_persona_legisladora", cmb_tipo_adscripcion_inicial_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@grupo_parlamentario_adscipcion_inicial_persona_legisladora", cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique", txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text);
+                        command.Parameters.AddWithValue("@tipo_adscripcion_final_persona_legisladora", cmb_tipo_adscripcion_final_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@grupo_parlamentario_adscipcion_final_persona_legisladora", cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique", txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text);
+                        command.Parameters.AddWithValue("@cond_presentacion_declaracion_situacion_patrimonial", cmb_cond_presentacion_declaracion_situacion_patrimonial.Text);
+                        command.Parameters.AddWithValue("@no_aplica_presentacion_declaracion_situacion_patrimonial_especifique", txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text);
+                        command.Parameters.AddWithValue("@cond_presentacion_declaracion_intereses", cmb_cond_presentacion_declaracion_intereses.Text);
+                        command.Parameters.AddWithValue("@no_aplica_presentacion_declaracion_intereses_especifique", txt_no_aplica_presentacion_declaracion_intereses_especifique.Text);
+                        command.Parameters.AddWithValue("@cond_presentacion_declaracion_fiscal", cmb_cond_presentacion_declaracion_fiscal.Text);
+                        command.Parameters.AddWithValue("@no_aplica_presentacion_declaracion_fiscal_especifique", txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text);
+                        command.Parameters.AddWithValue("@remuneracion_persona_legisladora", txt_remuneracion_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@asistencia_legislativa_persona_legisladora", txt_asistencia_legislativa_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@gestion_parlamentaria_persona_legisladora", txt_gestion_parlamentaria_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@atencion_ciudadana_persona_legisladora", txt_atencion_ciudadana_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@otro_concepto_gasto_persona_legisladora", txt_otro_concepto_gasto_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@cond_casa_atencion_ciudadana", cmb_cond_casa_atencion_ciudadana.Text);
+                        command.Parameters.AddWithValue("@cond_casa_atencion_ciudadana_movil", cmb_cond_casa_atencion_ciudadana_movil.Text);
+                        command.Parameters.AddWithValue("@latitud_casa_atencion_ciudadana", txt_latitud_casa_atencion_ciudadana.Text);
+                        command.Parameters.AddWithValue("@longitud_casa_atencion_ciudadana", txt_longitud_casa_atencion_ciudadana.Text);
+                        command.Parameters.AddWithValue("@cond_integrante_comision_permanente", cmb_cond_integrante_comision_permanente.Text);
+                        command.Parameters.AddWithValue("@cargo_comision_permanente", cmb_cargo_comision_permanente.Text);
+                        command.Parameters.AddWithValue("@otro_cargo_comision_permanente_especifique", txt_otro_cargo_comision_permanente_especifique.Text);
+                        command.Parameters.AddWithValue("@cond_integrante_jucopo", cmb_cond_integrante_jucopo.Text);
+                        command.Parameters.AddWithValue("@cargo_jucopo", cmb_cargo_jucopo.Text);
+                        command.Parameters.AddWithValue("@otro_cargo_jucopo_especifique", txt_otro_cargo_jucopo_especifique.Text);
+                        command.Parameters.AddWithValue("@cond_integrante_mesa_directiva", cmb_cond_integrante_mesa_directiva.Text);
+                        command.Parameters.AddWithValue("@cargo_mesa_directiva_PL", cmb_cargo_mesa_directiva_PL.Text);
+                        command.Parameters.AddWithValue("@otro_cargo_mesa_directiva_especifique", txt_otro_cargo_mesa_directiva_especifique.Text);
+                        command.Parameters.AddWithValue("@ID_comision_legislativa_pc", txt_ID_comision_legislativa_pc.Text);
+                        command.Parameters.AddWithValue("@nombre_comision_legislativa", cmb_nombre_comision_legislativa.Text);
+                        command.Parameters.AddWithValue("@cant_iniciativas_presentadas_persona_legisladora", txt_cant_iniciativas_presentadas_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@asist_sesiones_plenarias_persona_legisladora", txt_asist_sesiones_plenarias_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@cant_intervenciones_sesiones_plenarias_persona_legisladora", txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@asist_sesiones_comision_permanente_persona_legisladora", txt_asist_sesiones_comision_permanente_persona_legisladora.Text);
+                        command.Parameters.AddWithValue("@cant_interv_sesiones_dip_permanente_persona_legisladora", txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Text);
 
                         // variables dgv
                         command.Parameters.AddWithValue("@carrera_licenciatura_persona_legisladora_PL", row.Cells["lic_pl"].Value);
@@ -6331,12 +6507,9 @@ namespace App_PLE.Vistas
 
                         command.ExecuteNonQuery();
                     }
+
+                    
                 }
-                else
-                {
-                    saveVariableIndividuales_PL(conn);
-                }
-                
             }
         }
         private void saveVariableIndividuales_PL(SQLiteConnection conn)
@@ -6391,7 +6564,6 @@ namespace App_PLE.Vistas
                     "gestion_parlamentaria_persona_legisladora," +
                     "atencion_ciudadana_persona_legisladora," +
                     "otro_concepto_gasto_persona_legisladora," +
-
                     "cond_casa_atencion_ciudadana," +
                     "cond_casa_atencion_ciudadana_movil," +
                     "latitud_casa_atencion_ciudadana," +
@@ -6406,7 +6578,14 @@ namespace App_PLE.Vistas
                     "cargo_mesa_directiva_PL," +
                     "otro_cargo_mesa_directiva_especifique," +
                     "ID_comision_legislativa_pc," +
-                    "nombre_comision_legislativa" +
+                    "nombre_comision_legislativa," +
+
+                    "cant_iniciativas_presentadas_persona_legisladora," +
+                    "asist_sesiones_plenarias_persona_legisladora," +
+                    "cant_intervenciones_sesiones_plenarias_persona_legisladora," +
+                    "asist_sesiones_comision_permanente_persona_legisladora," +
+                    "cant_interv_sesiones_dip_permanente_persona_legisladora" +
+
                     ")" +
              "VALUES" +
                     " (" +
@@ -6458,7 +6637,6 @@ namespace App_PLE.Vistas
                     "@gestion_parlamentaria_persona_legisladora," +
                     "@atencion_ciudadana_persona_legisladora," +
                     "@otro_concepto_gasto_persona_legisladora," +
-
                     "@cond_casa_atencion_ciudadana," +
                     "@cond_casa_atencion_ciudadana_movil," +
                     "@latitud_casa_atencion_ciudadana," +
@@ -6473,7 +6651,13 @@ namespace App_PLE.Vistas
                     "@cargo_mesa_directiva_PL," +
                     "@otro_cargo_mesa_directiva_especifique," +
                     "@ID_comision_legislativa_pc," +
-                    "@nombre_comision_legislativa" +
+                    "@nombre_comision_legislativa," +
+
+                    "@cant_iniciativas_presentadas_persona_legisladora," +
+                    "@asist_sesiones_plenarias_persona_legisladora," +
+                    "@cant_intervenciones_sesiones_plenarias_persona_legisladora," +
+                    "@asist_sesiones_comision_permanente_persona_legisladora," +
+                    "@cant_interv_sesiones_dip_permanente_persona_legisladora" +
 
                     ")";
 
@@ -6544,9 +6728,116 @@ namespace App_PLE.Vistas
                     command.Parameters.AddWithValue("@ID_comision_legislativa_pc", txt_ID_comision_legislativa_pc.Text);
                     command.Parameters.AddWithValue("@nombre_comision_legislativa", cmb_nombre_comision_legislativa.Text);
 
+                    command.Parameters.AddWithValue("@cant_iniciativas_presentadas_persona_legisladora", txt_cant_iniciativas_presentadas_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@asist_sesiones_plenarias_persona_legisladora", txt_asist_sesiones_plenarias_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@cant_intervenciones_sesiones_plenarias_persona_legisladora", txt_cant_intervenciones_sesiones_plenarias_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@asist_sesiones_comision_permanente_persona_legisladora", txt_asist_sesiones_comision_permanente_persona_legisladora.Text);
+                    command.Parameters.AddWithValue("@cant_interv_sesiones_dip_permanente_persona_legisladora", txt_cant_interv_sesiones_dip_permanente_persona_legisladora.Text);
+
                 command.ExecuteNonQuery();
                 }         
         }
+
+        private void GuardarDatos()
+        {
+            var data = new Dictionary<string, string>();
+
+            // Recorrer todos los controles y guardar datos no vacíos en el diccionario
+            RecorrerControles(tabPagePL, data);
+
+            if (data.Count == 0)
+            {
+                MessageBox.Show("No hay datos para guardar.");
+                return;
+            }
+
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            using (var connection = new SQLiteConnection(cadena))
+            {
+                connection.Open();
+                using (var transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // Construir dinámicamente la consulta SQL
+                        var columns = string.Join(", ", data.Keys);
+                        var parameters = string.Join(", ", data.Keys.Select(key => "@" + key));
+                        string query = $"INSERT INTO TR_PERSONAS_LEGISLADORAS ({columns}) VALUES ({parameters})";
+
+                        using (var command = new SQLiteCommand(query, connection, transaction))
+                        {
+                            // Agregar los parámetros al comando
+                            foreach (var kvp in data)
+                            {
+                                command.Parameters.AddWithValue($"@{kvp.Key}", kvp.Value);
+                            }
+
+                            // Registrar la consulta y los parámetros para depuración
+                            Console.WriteLine("Query: " + query);
+                            foreach (SQLiteParameter param in command.Parameters)
+                            {
+                                Console.WriteLine($"Parameter: {param.ParameterName} = {param.Value}");
+                            }
+
+                            command.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        MessageBox.Show("Datos guardados correctamente.");
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show($"Error al guardar los datos: {ex.Message}");
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
+            }
+        }
+
+        private void RecorrerControles(Control control, Dictionary<string, string> data)
+        {
+            // List of DataGridView names to exclude
+            var excludedDataGridViews = new List<string> { "dgv_registros_pl" };
+
+            foreach (Control c in control.Controls)
+            {
+                if (c is System.Windows.Forms.TextBox textBox && !string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    data.Add(textBox.Name, textBox.Text);
+                }
+                else if (c is System.Windows.Forms.ComboBox comboBox && comboBox.SelectedItem != null)
+                {
+                    data.Add(comboBox.Name, comboBox.Text);
+                }
+                else if (c is System.Windows.Forms.DateTimePicker dateTimePicker)
+                {
+                    data.Add(dateTimePicker.Name, dateTimePicker.Text);
+                }
+                else if (c is DataGridView dataGridView && !excludedDataGridViews.Contains(dataGridView.Name))
+                {
+                    for (int i = 0; i < dataGridView.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridView.Columns.Count; j++)
+                        {
+                            if (dataGridView.Rows[i].Cells[j].Value != null)
+                            {
+                                data.Add($"{dataGridView.Name}_Row{i}_Col{j}", dataGridView.Rows[i].Cells[j].Value.ToString());
+                            }
+                        }
+                    }
+                }
+
+                if (c.Controls.Count > 0)
+                {
+                    RecorrerControles(c, data);
+                }
+            }
+        }
+
+
+
         //-------------------------------------------------- PERSONAL DE APOYO ----------------------------------------------------
 
         private void cmb_Sexo_personal_apoyo()
