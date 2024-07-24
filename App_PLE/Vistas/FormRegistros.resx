@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="periodo_reportado_pe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -133,7 +136,7 @@
   <data name="btnActualizarDGV_CL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
         axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
         WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
         y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
@@ -252,20 +255,19 @@
   </metadata>
   <data name="btnActualizarDGV_PL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAACgUlEQVRYR+2VT2sTQRjG81U8ZK0IFVHEi3qwVfEL2A/iny8gNqlNgyComEO9C9aL1NpalNoWUTAI
-        2oNKd3aT7E5ML94d51nmXaa778ZJtgeFPvA7ZJI8zzv/3qkc6r/QnpRXB30ZaNSodHx/w9iML200Vjjw
-        f3wvXwRn7AoKSIoQYsvYjS7O2BUqoFQRnLErob+7v4hxtoMzLoOxdRdnUgZj6y7OpAzG1k1Vvz59vfNM
-        TQUP1KSYT5gOH6obemw5+sQG/A1jPVwT4R3PE7U3GjWMmXBRteU3NqgIE1Gsqqid1+Z72bAiTgVNtRZ/
-        ZsM4TAwvM/N94ZfDR6rZXVXPo4/qafxezfdW1IXgfrINAL85rYtwXQkTxcvza68peELUk2DZj1Uke+pd
-        /EVtyx0Vyygh6HfUatxOC72mt4MLzGKi8sKBIzOAcPyh1XubzJDGZ7vLqZldAHgZtdPvijBxeWmDFhlh
-        2TFzhNMYQTcA0BYQN7tLbKiNictLL/8OGWH2WHZ75i7ginKhNiYuL23wi4xw4Db1ntPnIuyDCE6IBhtq
-        Y+Ly0gZpAVnjIjbjr2op+pB+PhkssKE2Ji4vewtcOCOayW1o9F6lY5dKbYFff2wHYAWKDhtYjDb0QY2S
-        faexW+UO4eyUHYArRn+63XuRjmPmCMe4PXuw4vA+mDheXlBbIzMUgGaDZcaNQBPCnuMzZo5wNCv6Pd4F
-        LjCLieJ1dPfuEW3WhyEdRLRdtF+0YRy4BR2M15GCwYG1YsgTc+e06cAOGAbCD+wxIh0L5qr6VVznAm1m
-        wiejPsfCRLhJ34yLx0W9dTa493NSNH6j0eCqoeW6HLgMYiDlFWN9qH9Blcofm42mGGx3LYcAAAAASUVO
-        RK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
+        axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
+        WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
+        y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
+        bDn6xAb8DWM9XBPhHc8TtTcaNYyZcFG15Tc2qAgTUayqqJ3X5nvZsCJOBU21Fn9mwzhMDC8z833hl8NH
+        qtldVc+jj+pp/F7N91bUheB+sg0Avzmti3BdCRPFy/Nrryl4QtSTYNmPVSR76l38RW3LHRXLKCHod9Rq
+        3E4Lvaa3gwvMYqLywoEjM4Bw/KHVe5vMkMZnu8upmV0AeBm10++KMHF5aYMWGWHZMXOE0xhBNwDQFhA3
+        u0tsqI2Jy0sv/w4ZYfZYdnvmLuCKcqE2Ji4vbfCLjHDgNvWe0+ci7IMITogGG2pj4vLSBmkBWeMiNuOv
+        ain6kH4+GSywoTYmLi97C1w4I5rJbWj0XqVjl0ptgV9/bAdgBYoOG1iMNvRBjZJ9p7Fb5Q7h7JQdgCtG
+        f7rde5GOY+YIx7g9e7Di8D6YOF5eUFsjMxSAZoNlxo1AE8Ke4zNmjnA0K/o93gUuMIuJ4nV09+4RbdaH
+        IR1EtF20X7RhHLgFHYzXkYLBgbViyBNz57TpwA4YBsIP7DEiHQvmqvpVXOcCbWbCJ6M+x8JEuEnfjIvH
+        Rb11Nrj3c1I0fqPR4Kqh5bocuAxiIOUVY32of0GVyh+bjaYYbHcthwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="nombre_comision_legislativa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
