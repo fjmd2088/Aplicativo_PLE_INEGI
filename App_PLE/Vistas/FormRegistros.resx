@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="periodo_reportado_pe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -136,7 +133,7 @@
   <data name="btnActualizarDGV_CL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
         axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
         WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
         y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
@@ -256,7 +253,7 @@
   <data name="btnActualizarDGV_PL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
         axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
         WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
         y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
@@ -295,6 +292,9 @@
     <value>True</value>
   </metadata>
   <metadata name="tipo_discapacidad_persona_legisladora.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="BtnSalirDG.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1730,5 +1730,8 @@
   </metadata>
   <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>179, 17</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

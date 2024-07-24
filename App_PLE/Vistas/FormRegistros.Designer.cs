@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,7 +38,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDG = new System.Windows.Forms.TabPage();
             this.groupBox79 = new System.Windows.Forms.GroupBox();
@@ -369,6 +370,11 @@
             this.label63 = new System.Windows.Forms.Label();
             this.txt_nombre_3_persona_legisladora = new System.Windows.Forms.TextBox();
             this.tabPagePA = new System.Windows.Forms.TabPage();
+            this.label298 = new System.Windows.Forms.Label();
+            this.cmb_cond_pueblo_ind_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label271 = new System.Windows.Forms.Label();
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.txt_ID_personal_apoyo = new System.Windows.Forms.TextBox();
             this.groupBox66 = new System.Windows.Forms.GroupBox();
             this.label282 = new System.Windows.Forms.Label();
             this.textBox119 = new System.Windows.Forms.TextBox();
@@ -385,10 +391,6 @@
             this.label257 = new System.Windows.Forms.Label();
             this.cmb_regimen_contratacion_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label258 = new System.Windows.Forms.Label();
-            this.cmb_sexo_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label259 = new System.Windows.Forms.Label();
-            this.dtp_fecha_termino_p = new System.Windows.Forms.DateTimePicker();
-            this.label260 = new System.Windows.Forms.Label();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
             this.label261 = new System.Windows.Forms.Label();
             this.cmb_dinamico = new System.Windows.Forms.ComboBox();
@@ -412,34 +414,31 @@
             this.label267 = new System.Windows.Forms.Label();
             this.label268 = new System.Windows.Forms.Label();
             this.groupBox63 = new System.Windows.Forms.GroupBox();
-            this.label269 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.listView16 = new System.Windows.Forms.ListView();
             this.cmb_cond_discapacidad_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label270 = new System.Windows.Forms.Label();
-            this.groupBox64 = new System.Windows.Forms.GroupBox();
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label271 = new System.Windows.Forms.Label();
-            this.cmb_cond_pueblo_ind_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label272 = new System.Windows.Forms.Label();
-            this.label273 = new System.Windows.Forms.Label();
-            this.cmb_cond_lengua_ind_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label274 = new System.Windows.Forms.Label();
             this.groupBox65 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox113 = new System.Windows.Forms.TextBox();
-            this.label275 = new System.Windows.Forms.Label();
-            this.textBox114 = new System.Windows.Forms.TextBox();
-            this.textBox115 = new System.Windows.Forms.TextBox();
+            this.nombre_3_personal_apoyo = new System.Windows.Forms.TextBox();
+            this.label280 = new System.Windows.Forms.Label();
             this.label276 = new System.Windows.Forms.Label();
-            this.label277 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label275 = new System.Windows.Forms.Label();
             this.txt_nombre_2_personal_apoyo = new System.Windows.Forms.TextBox();
+            this.textBox115 = new System.Windows.Forms.TextBox();
             this.label278 = new System.Windows.Forms.Label();
+            this.textBox113 = new System.Windows.Forms.TextBox();
             this.txt_nombre_1_personal_apoyo = new System.Windows.Forms.TextBox();
             this.label279 = new System.Windows.Forms.Label();
-            this.label280 = new System.Windows.Forms.Label();
-            this.textBox118 = new System.Windows.Forms.TextBox();
+            this.textBox114 = new System.Windows.Forms.TextBox();
+            this.label277 = new System.Windows.Forms.Label();
+            this.dtp_fecha_termino_p = new System.Windows.Forms.DateTimePicker();
+            this.label260 = new System.Windows.Forms.Label();
+            this.cmb_sexo_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label259 = new System.Windows.Forms.Label();
+            this.groupBox64 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cmb_cond_lengua_ind_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label274 = new System.Windows.Forms.Label();
             this.label281 = new System.Windows.Forms.Label();
             this.tabPageIni = new System.Windows.Forms.TabPage();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
@@ -793,12 +792,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.label298 = new System.Windows.Forms.Label();
-            this.txt_ID_personal_apoyo = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label270 = new System.Windows.Forms.Label();
+            this.label269 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label273 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label299 = new System.Windows.Forms.Label();
+            this.label300 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDG.SuspendLayout();
             this.groupBox79.SuspendLayout();
@@ -855,10 +860,9 @@
             this.groupBox61.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox63.SuspendLayout();
-            this.groupBox64.SuspendLayout();
             this.groupBox65.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox64.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageIni.SuspendLayout();
             this.groupBox36.SuspendLayout();
             this.groupBox37.SuspendLayout();
@@ -902,7 +906,8 @@
             this.groupBox58.SuspendLayout();
             this.groupBox59.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1157,14 +1162,14 @@
             this.fecha_inicio_pe,
             this.fecha_termino_pe,
             this.sesiones_celebradas_pe});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvPE.Location = new System.Drawing.Point(18, 97);
             this.dgvPE.Name = "dgvPE";
             this.dgvPE.ReadOnly = true;
@@ -1773,7 +1778,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(466, 7688);
+            this.btnGuardarCL.Location = new System.Drawing.Point(448, 7856);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1863,23 +1868,23 @@
             this.dgv_registros_cl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_cl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_cl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_registros_cl.Location = new System.Drawing.Point(12, 21);
             this.dgv_registros_cl.MultiSelect = false;
             this.dgv_registros_cl.Name = "dgv_registros_cl";
             this.dgv_registros_cl.ReadOnly = true;
             this.dgv_registros_cl.RowHeadersVisible = false;
             this.dgv_registros_cl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_registros_cl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_registros_cl.Size = new System.Drawing.Size(1079, 126);
             this.dgv_registros_cl.TabIndex = 30;
@@ -1889,7 +1894,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(376, 9750);
+            this.button24.Location = new System.Drawing.Point(358, 9918);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -2283,14 +2288,14 @@
             this.dgv_tema_comision_legislativa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tema_comision_legislativa,
             this.otro_tema_comision_legislativa_especifique});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgv_tema_comision_legislativa.Location = new System.Drawing.Point(12, 63);
             this.dgv_tema_comision_legislativa.Name = "dgv_tema_comision_legislativa";
             this.dgv_tema_comision_legislativa.ReadOnly = true;
@@ -2512,14 +2517,14 @@
             this.dgv_registros_pl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_pl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_pl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_registros_pl.Location = new System.Drawing.Point(12, 31);
             this.dgv_registros_pl.Name = "dgv_registros_pl";
             this.dgv_registros_pl.ReadOnly = true;
@@ -2992,14 +2997,14 @@
             this.nombre_comision_legislativa,
             this.ID_comision_legislativa_pc,
             this.cargo_comision_legislativa});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_participacion_comisiones.Location = new System.Drawing.Point(13, 117);
             this.dgv_participacion_comisiones.Name = "dgv_participacion_comisiones";
             this.dgv_participacion_comisiones.ReadOnly = true;
@@ -3824,14 +3829,14 @@
             this.dgv_partido_coalicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_partido_coalicion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partido_politico_candidatura_coalicion});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgv_partido_coalicion.Location = new System.Drawing.Point(626, 68);
             this.dgv_partido_coalicion.Name = "dgv_partido_coalicion";
             this.dgv_partido_coalicion.ReadOnly = true;
@@ -4328,14 +4333,14 @@
             this.lic_pl,
             this.mae_pl,
             this.doc_pl});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgv_nivel_escolaridad_PL.Location = new System.Drawing.Point(28, 70);
             this.dgv_nivel_escolaridad_PL.Name = "dgv_nivel_escolaridad_PL";
             this.dgv_nivel_escolaridad_PL.ReadOnly = true;
@@ -4789,14 +4794,14 @@
             this.dgv_lengua_PL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lengua_PL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lengua_ind_persona_legisladora});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_lengua_PL.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_lengua_PL.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgv_lengua_PL.Location = new System.Drawing.Point(17, 63);
             this.dgv_lengua_PL.Name = "dgv_lengua_PL";
             this.dgv_lengua_PL.ReadOnly = true;
@@ -4948,14 +4953,14 @@
             this.dgv_tipo_discapacidad_PL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tipo_discapacidad_PL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo_discapacidad_persona_legisladora});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tipo_discapacidad_PL.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tipo_discapacidad_PL.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgv_tipo_discapacidad_PL.Location = new System.Drawing.Point(13, 102);
             this.dgv_tipo_discapacidad_PL.Name = "dgv_tipo_discapacidad_PL";
             this.dgv_tipo_discapacidad_PL.ReadOnly = true;
@@ -5139,16 +5144,12 @@
             // 
             this.tabPagePA.AutoScroll = true;
             this.tabPagePA.Controls.Add(this.label298);
-            this.tabPagePA.Controls.Add(this.cmb_cond_pueblo_ind_personal_apoyo);
             this.tabPagePA.Controls.Add(this.label271);
-            this.tabPagePA.Controls.Add(this.label272);
-            this.tabPagePA.Controls.Add(this.cmb_pueblo_ind_pertenencia_personal_apoyo);
             this.tabPagePA.Controls.Add(this.txt_ID_personal_apoyo);
             this.tabPagePA.Controls.Add(this.groupBox66);
             this.tabPagePA.Controls.Add(this.groupBox60);
             this.tabPagePA.Controls.Add(this.groupBox61);
             this.tabPagePA.Controls.Add(this.groupBox62);
-            this.tabPagePA.Controls.Add(this.groupBox63);
             this.tabPagePA.Controls.Add(this.groupBox65);
             this.tabPagePA.Controls.Add(this.label281);
             this.tabPagePA.Location = new System.Drawing.Point(4, 25);
@@ -5157,6 +5158,60 @@
             this.tabPagePA.TabIndex = 3;
             this.tabPagePA.Text = "Personal apoyo";
             this.tabPagePA.UseVisualStyleBackColor = true;
+            // 
+            // label298
+            // 
+            this.label298.AutoSize = true;
+            this.label298.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label298.ForeColor = System.Drawing.Color.Black;
+            this.label298.Location = new System.Drawing.Point(805, 14);
+            this.label298.Name = "label298";
+            this.label298.Size = new System.Drawing.Size(233, 15);
+            this.label298.TabIndex = 39;
+            this.label298.Text = "Identificador del personal de apoyo";
+            this.label298.UseWaitCursor = true;
+            // 
+            // cmb_cond_pueblo_ind_personal_apoyo
+            // 
+            this.cmb_cond_pueblo_ind_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_pueblo_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_pueblo_ind_personal_apoyo.FormattingEnabled = true;
+            this.cmb_cond_pueblo_ind_personal_apoyo.Location = new System.Drawing.Point(513, 21);
+            this.cmb_cond_pueblo_ind_personal_apoyo.Name = "cmb_cond_pueblo_ind_personal_apoyo";
+            this.cmb_cond_pueblo_ind_personal_apoyo.Size = new System.Drawing.Size(134, 24);
+            this.cmb_cond_pueblo_ind_personal_apoyo.TabIndex = 38;
+            // 
+            // label271
+            // 
+            this.label271.AutoSize = true;
+            this.label271.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label271.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label271.Location = new System.Drawing.Point(981, 527);
+            this.label271.Name = "label271";
+            this.label271.Size = new System.Drawing.Size(112, 45);
+            this.label271.TabIndex = 41;
+            this.label271.Text = "Pueblo indígena\r\nal que pertenece el\r\npersonal de apoyo";
+            this.label271.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cmb_pueblo_ind_pertenencia_personal_apoyo
+            // 
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.FormattingEnabled = true;
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Location = new System.Drawing.Point(377, 54);
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Name = "cmb_pueblo_ind_pertenencia_personal_apoyo";
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Size = new System.Drawing.Size(270, 24);
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.TabIndex = 42;
+            // 
+            // txt_ID_personal_apoyo
+            // 
+            this.txt_ID_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_personal_apoyo.Location = new System.Drawing.Point(1054, 11);
+            this.txt_ID_personal_apoyo.Name = "txt_ID_personal_apoyo";
+            this.txt_ID_personal_apoyo.Size = new System.Drawing.Size(163, 22);
+            this.txt_ID_personal_apoyo.TabIndex = 40;
+            this.txt_ID_personal_apoyo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_ID_personal_apoyo.UseWaitCursor = true;
             // 
             // groupBox66
             // 
@@ -5254,7 +5309,7 @@
             this.groupBox60.Controls.Add(this.label258);
             this.groupBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox60.ForeColor = System.Drawing.Color.Green;
-            this.groupBox60.Location = new System.Drawing.Point(909, 338);
+            this.groupBox60.Location = new System.Drawing.Point(923, 658);
             this.groupBox60.Name = "groupBox60";
             this.groupBox60.Size = new System.Drawing.Size(703, 113);
             this.groupBox60.TabIndex = 33;
@@ -5341,51 +5396,6 @@
             this.label258.TabIndex = 24;
             this.label258.Text = "Régimen de\r\ncontratación";
             this.label258.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmb_sexo_personal_apoyo
-            // 
-            this.cmb_sexo_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_sexo_personal_apoyo.DropDownWidth = 139;
-            this.cmb_sexo_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_sexo_personal_apoyo.FormattingEnabled = true;
-            this.cmb_sexo_personal_apoyo.ItemHeight = 16;
-            this.cmb_sexo_personal_apoyo.Location = new System.Drawing.Point(1008, 61);
-            this.cmb_sexo_personal_apoyo.Name = "cmb_sexo_personal_apoyo";
-            this.cmb_sexo_personal_apoyo.Size = new System.Drawing.Size(148, 24);
-            this.cmb_sexo_personal_apoyo.TabIndex = 23;
-            // 
-            // label259
-            // 
-            this.label259.AutoSize = true;
-            this.label259.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label259.ForeColor = System.Drawing.Color.Green;
-            this.label259.Location = new System.Drawing.Point(942, 70);
-            this.label259.Name = "label259";
-            this.label259.Size = new System.Drawing.Size(35, 15);
-            this.label259.TabIndex = 22;
-            this.label259.Text = "Sexo";
-            // 
-            // dtp_fecha_termino_p
-            // 
-            this.dtp_fecha_termino_p.CalendarTitleBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.dtp_fecha_termino_p.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_termino_p.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_termino_p.Location = new System.Drawing.Point(1053, 26);
-            this.dtp_fecha_termino_p.Name = "dtp_fecha_termino_p";
-            this.dtp_fecha_termino_p.Size = new System.Drawing.Size(84, 20);
-            this.dtp_fecha_termino_p.TabIndex = 21;
-            this.dtp_fecha_termino_p.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            // 
-            // label260
-            // 
-            this.label260.AutoSize = true;
-            this.label260.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label260.ForeColor = System.Drawing.Color.Green;
-            this.label260.Location = new System.Drawing.Point(900, 31);
-            this.label260.Name = "label260";
-            this.label260.Size = new System.Drawing.Size(122, 15);
-            this.label260.TabIndex = 20;
-            this.label260.Text = "Fecha de nacimiento";
             // 
             // groupBox61
             // 
@@ -5527,7 +5537,7 @@
             this.groupBox62.Controls.Add(this.label268);
             this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox62.ForeColor = System.Drawing.Color.Green;
-            this.groupBox62.Location = new System.Drawing.Point(3, 300);
+            this.groupBox62.Location = new System.Drawing.Point(15, 474);
             this.groupBox62.Name = "groupBox62";
             this.groupBox62.Size = new System.Drawing.Size(893, 156);
             this.groupBox62.TabIndex = 34;
@@ -5647,177 +5657,48 @@
             // 
             // groupBox63
             // 
+            this.groupBox63.Controls.Add(this.button5);
+            this.groupBox63.Controls.Add(this.button7);
+            this.groupBox63.Controls.Add(this.dataGridView2);
+            this.groupBox63.Controls.Add(this.comboBox1);
             this.groupBox63.Controls.Add(this.label269);
-            this.groupBox63.Controls.Add(this.button19);
-            this.groupBox63.Controls.Add(this.listView16);
-            this.groupBox63.Controls.Add(this.cmb_cond_discapacidad_personal_apoyo);
             this.groupBox63.Controls.Add(this.label270);
+            this.groupBox63.Controls.Add(this.cmb_cond_discapacidad_personal_apoyo);
             this.groupBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox63.ForeColor = System.Drawing.Color.Green;
-            this.groupBox63.Location = new System.Drawing.Point(8, 462);
+            this.groupBox63.Location = new System.Drawing.Point(599, 108);
             this.groupBox63.Name = "groupBox63";
-            this.groupBox63.Size = new System.Drawing.Size(880, 103);
+            this.groupBox63.Size = new System.Drawing.Size(604, 229);
             this.groupBox63.TabIndex = 36;
             this.groupBox63.TabStop = false;
             this.groupBox63.Text = "Discapacidad";
-            // 
-            // label269
-            // 
-            this.label269.AutoSize = true;
-            this.label269.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label269.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label269.Location = new System.Drawing.Point(311, 35);
-            this.label269.Name = "label269";
-            this.label269.Size = new System.Drawing.Size(124, 15);
-            this.label269.TabIndex = 36;
-            this.label269.Text = "Tipo de discapacidad";
-            this.label269.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button19
-            // 
-            this.button19.ForeColor = System.Drawing.Color.Black;
-            this.button19.Location = new System.Drawing.Point(435, 29);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(26, 23);
-            this.button19.TabIndex = 34;
-            this.button19.Text = "+";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // listView16
-            // 
-            this.listView16.BackColor = System.Drawing.Color.Honeydew;
-            this.listView16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView16.FullRowSelect = true;
-            this.listView16.HideSelection = false;
-            this.listView16.Location = new System.Drawing.Point(491, 21);
-            this.listView16.Name = "listView16";
-            this.listView16.Size = new System.Drawing.Size(383, 71);
-            this.listView16.TabIndex = 35;
-            this.listView16.UseCompatibleStateImageBehavior = false;
-            this.listView16.View = System.Windows.Forms.View.Details;
             // 
             // cmb_cond_discapacidad_personal_apoyo
             // 
             this.cmb_cond_discapacidad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_discapacidad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_discapacidad_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_discapacidad_personal_apoyo.Location = new System.Drawing.Point(136, 32);
+            this.cmb_cond_discapacidad_personal_apoyo.Location = new System.Drawing.Point(451, 20);
             this.cmb_cond_discapacidad_personal_apoyo.Name = "cmb_cond_discapacidad_personal_apoyo";
-            this.cmb_cond_discapacidad_personal_apoyo.Size = new System.Drawing.Size(84, 24);
+            this.cmb_cond_discapacidad_personal_apoyo.Size = new System.Drawing.Size(136, 24);
             this.cmb_cond_discapacidad_personal_apoyo.TabIndex = 32;
-            // 
-            // label270
-            // 
-            this.label270.AutoSize = true;
-            this.label270.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label270.ForeColor = System.Drawing.Color.Green;
-            this.label270.Location = new System.Drawing.Point(1, 28);
-            this.label270.Name = "label270";
-            this.label270.Size = new System.Drawing.Size(130, 30);
-            this.label270.TabIndex = 20;
-            this.label270.Text = "¿El personal presenta \r\nalguna discapacidad?";
-            this.label270.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // groupBox64
-            // 
-            this.groupBox64.Controls.Add(this.dataGridView1);
-            this.groupBox64.Controls.Add(this.button1);
-            this.groupBox64.Controls.Add(this.label273);
-            this.groupBox64.Controls.Add(this.button4);
-            this.groupBox64.Controls.Add(this.cmb_cond_lengua_ind_personal_apoyo);
-            this.groupBox64.Controls.Add(this.label274);
-            this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox64.ForeColor = System.Drawing.Color.Green;
-            this.groupBox64.Location = new System.Drawing.Point(10, 108);
-            this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Size = new System.Drawing.Size(879, 141);
-            this.groupBox64.TabIndex = 35;
-            this.groupBox64.TabStop = false;
-            this.groupBox64.Text = "Lengua indígena";
-            // 
-            // cmb_pueblo_ind_pertenencia_personal_apoyo
-            // 
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.FormattingEnabled = true;
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Location = new System.Drawing.Point(827, 579);
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Name = "cmb_pueblo_ind_pertenencia_personal_apoyo";
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Size = new System.Drawing.Size(382, 24);
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.TabIndex = 42;
-            // 
-            // label271
-            // 
-            this.label271.AutoSize = true;
-            this.label271.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label271.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label271.Location = new System.Drawing.Point(981, 527);
-            this.label271.Name = "label271";
-            this.label271.Size = new System.Drawing.Size(112, 45);
-            this.label271.TabIndex = 41;
-            this.label271.Text = "Pueblo indígena\r\nal que pertenece el\r\npersonal de apoyo";
-            this.label271.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmb_cond_pueblo_ind_personal_apoyo
-            // 
-            this.cmb_cond_pueblo_ind_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_pueblo_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_pueblo_ind_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_pueblo_ind_personal_apoyo.Location = new System.Drawing.Point(1077, 462);
-            this.cmb_cond_pueblo_ind_personal_apoyo.Name = "cmb_cond_pueblo_ind_personal_apoyo";
-            this.cmb_cond_pueblo_ind_personal_apoyo.Size = new System.Drawing.Size(85, 24);
-            this.cmb_cond_pueblo_ind_personal_apoyo.TabIndex = 38;
-            // 
-            // label272
-            // 
-            this.label272.AutoSize = true;
-            this.label272.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label272.ForeColor = System.Drawing.Color.Green;
-            this.label272.Location = new System.Drawing.Point(934, 455);
-            this.label272.Name = "label272";
-            this.label272.Size = new System.Drawing.Size(129, 45);
-            this.label272.TabIndex = 37;
-            this.label272.Text = "¿El personal de apoyo\r\npertenece a un\r\npueblo indígena?";
-            this.label272.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label273
-            // 
-            this.label273.AutoSize = true;
-            this.label273.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label273.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label273.Location = new System.Drawing.Point(360, 33);
-            this.label273.Name = "label273";
-            this.label273.Size = new System.Drawing.Size(69, 45);
-            this.label273.TabIndex = 36;
-            this.label273.Text = "Lengua(s)\r\nindígena(s)\r\nhablada(s)";
-            this.label273.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmb_cond_lengua_ind_personal_apoyo
-            // 
-            this.cmb_cond_lengua_ind_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_lengua_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_lengua_ind_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_lengua_ind_personal_apoyo.Location = new System.Drawing.Point(136, 43);
-            this.cmb_cond_lengua_ind_personal_apoyo.Name = "cmb_cond_lengua_ind_personal_apoyo";
-            this.cmb_cond_lengua_ind_personal_apoyo.Size = new System.Drawing.Size(85, 24);
-            this.cmb_cond_lengua_ind_personal_apoyo.TabIndex = 32;
-            // 
-            // label274
-            // 
-            this.label274.AutoSize = true;
-            this.label274.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label274.ForeColor = System.Drawing.Color.Green;
-            this.label274.Location = new System.Drawing.Point(1, 33);
-            this.label274.Name = "label274";
-            this.label274.Size = new System.Drawing.Size(129, 45);
-            this.label274.TabIndex = 20;
-            this.label274.Text = "¿El personal de apoyo\r\nhabla alguna\r\nlengua indígena?";
-            this.label274.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox65
             // 
-            this.groupBox65.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox65.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox65.Controls.Add(this.groupBox12);
+            this.groupBox65.Controls.Add(this.nombre_3_personal_apoyo);
+            this.groupBox65.Controls.Add(this.label280);
+            this.groupBox65.Controls.Add(this.label276);
+            this.groupBox65.Controls.Add(this.label275);
+            this.groupBox65.Controls.Add(this.txt_nombre_2_personal_apoyo);
+            this.groupBox65.Controls.Add(this.textBox115);
+            this.groupBox65.Controls.Add(this.label278);
+            this.groupBox65.Controls.Add(this.textBox113);
+            this.groupBox65.Controls.Add(this.txt_nombre_1_personal_apoyo);
+            this.groupBox65.Controls.Add(this.label279);
+            this.groupBox65.Controls.Add(this.groupBox63);
+            this.groupBox65.Controls.Add(this.textBox114);
+            this.groupBox65.Controls.Add(this.label277);
             this.groupBox65.Controls.Add(this.dtp_fecha_termino_p);
             this.groupBox65.Controls.Add(this.label260);
             this.groupBox65.Controls.Add(this.cmb_sexo_personal_apoyo);
@@ -5825,45 +5706,51 @@
             this.groupBox65.Controls.Add(this.groupBox64);
             this.groupBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox65.ForeColor = System.Drawing.Color.Green;
-            this.groupBox65.Location = new System.Drawing.Point(6, 39);
+            this.groupBox65.Location = new System.Drawing.Point(8, 39);
             this.groupBox65.Name = "groupBox65";
-            this.groupBox65.Size = new System.Drawing.Size(1226, 255);
+            this.groupBox65.Size = new System.Drawing.Size(1209, 437);
             this.groupBox65.TabIndex = 32;
             this.groupBox65.TabStop = false;
             this.groupBox65.Text = "Características sociodemográficas";
             // 
-            // tableLayoutPanel2
+            // nombre_3_personal_apoyo
             // 
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.textBox113, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label275, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox114, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox115, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label276, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label277, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 64);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(870, 26);
-            this.tableLayoutPanel2.TabIndex = 27;
-            // 
-            // textBox113
-            // 
-            this.textBox113.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.nombre_3_personal_apoyo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox113.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox113.Location = new System.Drawing.Point(386, 3);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(170, 22);
-            this.textBox113.TabIndex = 23;
+            this.nombre_3_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.nombre_3_personal_apoyo.Location = new System.Drawing.Point(719, 28);
+            this.nombre_3_personal_apoyo.Name = "nombre_3_personal_apoyo";
+            this.nombre_3_personal_apoyo.Size = new System.Drawing.Size(169, 22);
+            this.nombre_3_personal_apoyo.TabIndex = 25;
+            // 
+            // label280
+            // 
+            this.label280.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label280.AutoSize = true;
+            this.label280.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label280.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label280.Location = new System.Drawing.Point(609, 31);
+            this.label280.Name = "label280";
+            this.label280.Size = new System.Drawing.Size(91, 15);
+            this.label280.TabIndex = 24;
+            this.label280.Text = "Tercer nombre:";
+            // 
+            // label276
+            // 
+            this.label276.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label276.AutoSize = true;
+            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label276.ForeColor = System.Drawing.Color.Black;
+            this.label276.Location = new System.Drawing.Point(10, 64);
+            this.label276.Name = "label276";
+            this.label276.Size = new System.Drawing.Size(116, 15);
+            this.label276.TabIndex = 19;
+            this.label276.Text = "Primer apellido*:";
             // 
             // label275
             // 
@@ -5873,83 +5760,11 @@
             this.label275.AutoSize = true;
             this.label275.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label275.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label275.Location = new System.Drawing.Point(276, 0);
+            this.label275.Location = new System.Drawing.Point(609, 67);
             this.label275.Name = "label275";
-            this.label275.Size = new System.Drawing.Size(104, 26);
+            this.label275.Size = new System.Drawing.Size(107, 15);
             this.label275.TabIndex = 22;
-            this.label275.Text = "Segundo apellido";
-            // 
-            // textBox114
-            // 
-            this.textBox114.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox114.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox114.Location = new System.Drawing.Point(657, 3);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(284, 22);
-            this.textBox114.TabIndex = 25;
-            // 
-            // textBox115
-            // 
-            this.textBox115.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox115.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox115.Location = new System.Drawing.Point(100, 3);
-            this.textBox115.Name = "textBox115";
-            this.textBox115.Size = new System.Drawing.Size(170, 22);
-            this.textBox115.TabIndex = 21;
-            // 
-            // label276
-            // 
-            this.label276.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label276.AutoSize = true;
-            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.ForeColor = System.Drawing.Color.Green;
-            this.label276.Location = new System.Drawing.Point(3, 0);
-            this.label276.Name = "label276";
-            this.label276.Size = new System.Drawing.Size(91, 26);
-            this.label276.TabIndex = 19;
-            this.label276.Text = "Primer apellido";
-            // 
-            // label277
-            // 
-            this.label277.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label277.AutoSize = true;
-            this.label277.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label277.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label277.Location = new System.Drawing.Point(562, 0);
-            this.label277.Name = "label277";
-            this.label277.Size = new System.Drawing.Size(89, 26);
-            this.label277.TabIndex = 24;
-            this.label277.Text = "Tercer apellido";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.label280, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox118, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txt_nombre_2_personal_apoyo, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label278, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label279, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txt_nombre_1_personal_apoyo, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 21);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(869, 26);
-            this.tableLayoutPanel1.TabIndex = 26;
+            this.label275.Text = "Segundo apellido:";
             // 
             // txt_nombre_2_personal_apoyo
             // 
@@ -5957,10 +5772,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombre_2_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_nombre_2_personal_apoyo.Location = new System.Drawing.Point(412, 3);
+            this.txt_nombre_2_personal_apoyo.Location = new System.Drawing.Point(423, 28);
             this.txt_nombre_2_personal_apoyo.Name = "txt_nombre_2_personal_apoyo";
             this.txt_nombre_2_personal_apoyo.Size = new System.Drawing.Size(170, 22);
             this.txt_nombre_2_personal_apoyo.TabIndex = 23;
+            // 
+            // textBox115
+            // 
+            this.textBox115.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox115.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox115.Location = new System.Drawing.Point(131, 64);
+            this.textBox115.Name = "textBox115";
+            this.textBox115.Size = new System.Drawing.Size(170, 22);
+            this.textBox115.TabIndex = 21;
             // 
             // label278
             // 
@@ -5970,11 +5796,22 @@
             this.label278.AutoSize = true;
             this.label278.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label278.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label278.Location = new System.Drawing.Point(300, 0);
+            this.label278.Location = new System.Drawing.Point(311, 28);
             this.label278.Name = "label278";
-            this.label278.Size = new System.Drawing.Size(106, 26);
+            this.label278.Size = new System.Drawing.Size(106, 15);
             this.label278.TabIndex = 22;
             this.label278.Text = "Segundo nombre:";
+            // 
+            // textBox113
+            // 
+            this.textBox113.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox113.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox113.Location = new System.Drawing.Point(719, 64);
+            this.textBox113.Name = "textBox113";
+            this.textBox113.Size = new System.Drawing.Size(170, 22);
+            this.textBox113.TabIndex = 23;
             // 
             // txt_nombre_1_personal_apoyo
             // 
@@ -5982,7 +5819,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombre_1_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_nombre_1_personal_apoyo.Location = new System.Drawing.Point(124, 3);
+            this.txt_nombre_1_personal_apoyo.Location = new System.Drawing.Point(131, 28);
             this.txt_nombre_1_personal_apoyo.Name = "txt_nombre_1_personal_apoyo";
             this.txt_nombre_1_personal_apoyo.Size = new System.Drawing.Size(170, 22);
             this.txt_nombre_1_personal_apoyo.TabIndex = 21;
@@ -5995,36 +5832,178 @@
             this.label279.AutoSize = true;
             this.label279.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label279.ForeColor = System.Drawing.Color.Black;
-            this.label279.Location = new System.Drawing.Point(3, 0);
+            this.label279.Location = new System.Drawing.Point(10, 28);
             this.label279.Name = "label279";
-            this.label279.Size = new System.Drawing.Size(115, 26);
+            this.label279.Size = new System.Drawing.Size(115, 15);
             this.label279.TabIndex = 19;
             this.label279.Text = "Primer Nombre*:";
             // 
-            // label280
+            // textBox114
             // 
-            this.label280.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBox114.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label280.AutoSize = true;
-            this.label280.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label280.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label280.Location = new System.Drawing.Point(588, 0);
-            this.label280.Name = "label280";
-            this.label280.Size = new System.Drawing.Size(88, 26);
-            this.label280.TabIndex = 24;
-            this.label280.Text = "Tercer nombre";
+            this.textBox114.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox114.Location = new System.Drawing.Point(420, 64);
+            this.textBox114.Name = "textBox114";
+            this.textBox114.Size = new System.Drawing.Size(170, 22);
+            this.textBox114.TabIndex = 25;
             // 
-            // textBox118
+            // label277
             // 
-            this.textBox118.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label277.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox118.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox118.Location = new System.Drawing.Point(682, 3);
-            this.textBox118.Name = "textBox118";
-            this.textBox118.Size = new System.Drawing.Size(284, 22);
-            this.textBox118.TabIndex = 25;
+            this.label277.AutoSize = true;
+            this.label277.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label277.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label277.Location = new System.Drawing.Point(311, 67);
+            this.label277.Name = "label277";
+            this.label277.Size = new System.Drawing.Size(92, 15);
+            this.label277.TabIndex = 24;
+            this.label277.Text = "Tercer apellido:";
+            // 
+            // dtp_fecha_termino_p
+            // 
+            this.dtp_fecha_termino_p.CalendarTitleBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.dtp_fecha_termino_p.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_termino_p.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_termino_p.Location = new System.Drawing.Point(1090, 27);
+            this.dtp_fecha_termino_p.Name = "dtp_fecha_termino_p";
+            this.dtp_fecha_termino_p.Size = new System.Drawing.Size(93, 20);
+            this.dtp_fecha_termino_p.TabIndex = 21;
+            this.dtp_fecha_termino_p.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            // 
+            // label260
+            // 
+            this.label260.AutoSize = true;
+            this.label260.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label260.ForeColor = System.Drawing.Color.Black;
+            this.label260.Location = new System.Drawing.Point(933, 31);
+            this.label260.Name = "label260";
+            this.label260.Size = new System.Drawing.Size(151, 15);
+            this.label260.TabIndex = 20;
+            this.label260.Text = "Fecha de nacimiento*:";
+            // 
+            // cmb_sexo_personal_apoyo
+            // 
+            this.cmb_sexo_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_sexo_personal_apoyo.DropDownWidth = 139;
+            this.cmb_sexo_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sexo_personal_apoyo.FormattingEnabled = true;
+            this.cmb_sexo_personal_apoyo.ItemHeight = 16;
+            this.cmb_sexo_personal_apoyo.Location = new System.Drawing.Point(996, 64);
+            this.cmb_sexo_personal_apoyo.Name = "cmb_sexo_personal_apoyo";
+            this.cmb_sexo_personal_apoyo.Size = new System.Drawing.Size(103, 24);
+            this.cmb_sexo_personal_apoyo.TabIndex = 23;
+            // 
+            // label259
+            // 
+            this.label259.AutoSize = true;
+            this.label259.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label259.ForeColor = System.Drawing.Color.Black;
+            this.label259.Location = new System.Drawing.Point(933, 67);
+            this.label259.Name = "label259";
+            this.label259.Size = new System.Drawing.Size(49, 15);
+            this.label259.TabIndex = 22;
+            this.label259.Text = "Sexo*:";
+            // 
+            // groupBox64
+            // 
+            this.groupBox64.Controls.Add(this.comboBox2);
+            this.groupBox64.Controls.Add(this.label273);
+            this.groupBox64.Controls.Add(this.dataGridView1);
+            this.groupBox64.Controls.Add(this.button1);
+            this.groupBox64.Controls.Add(this.button4);
+            this.groupBox64.Controls.Add(this.cmb_cond_lengua_ind_personal_apoyo);
+            this.groupBox64.Controls.Add(this.label274);
+            this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox64.ForeColor = System.Drawing.Color.Green;
+            this.groupBox64.Location = new System.Drawing.Point(10, 108);
+            this.groupBox64.Name = "groupBox64";
+            this.groupBox64.Size = new System.Drawing.Size(580, 229);
+            this.groupBox64.TabIndex = 35;
+            this.groupBox64.TabStop = false;
+            this.groupBox64.Text = "Lengua";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 97);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(435, 125);
+            this.dataGridView1.TabIndex = 56;
+            this.dataGridView1.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Lengua Indígena";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(450, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 27);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseWaitCursor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(450, 124);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(110, 27);
+            this.button4.TabIndex = 54;
+            this.button4.Text = "Agregar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseWaitCursor = true;
+            // 
+            // cmb_cond_lengua_ind_personal_apoyo
+            // 
+            this.cmb_cond_lengua_ind_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_lengua_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_lengua_ind_personal_apoyo.FormattingEnabled = true;
+            this.cmb_cond_lengua_ind_personal_apoyo.Location = new System.Drawing.Point(430, 27);
+            this.cmb_cond_lengua_ind_personal_apoyo.Name = "cmb_cond_lengua_ind_personal_apoyo";
+            this.cmb_cond_lengua_ind_personal_apoyo.Size = new System.Drawing.Size(130, 24);
+            this.cmb_cond_lengua_ind_personal_apoyo.TabIndex = 32;
+            // 
+            // label274
+            // 
+            this.label274.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label274.ForeColor = System.Drawing.Color.Black;
+            this.label274.Location = new System.Drawing.Point(6, 18);
+            this.label274.Name = "label274";
+            this.label274.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label274.Size = new System.Drawing.Size(418, 60);
+            this.label274.TabIndex = 20;
+            this.label274.Text = "Condición de la persona de apoyo a las y los legisladores de hablar alguna lengua" +
+    " indígena*:";
             // 
             // label281
             // 
@@ -10360,84 +10339,157 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // label298
+            // label270
             // 
-            this.label298.AutoSize = true;
-            this.label298.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label298.ForeColor = System.Drawing.Color.Black;
-            this.label298.Location = new System.Drawing.Point(791, 14);
-            this.label298.Name = "label298";
-            this.label298.Size = new System.Drawing.Size(233, 15);
-            this.label298.TabIndex = 39;
-            this.label298.Text = "Identificador del personal de apoyo";
-            this.label298.UseWaitCursor = true;
+            this.label270.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label270.ForeColor = System.Drawing.Color.Black;
+            this.label270.Location = new System.Drawing.Point(18, 21);
+            this.label270.Name = "label270";
+            this.label270.Size = new System.Drawing.Size(427, 30);
+            this.label270.TabIndex = 50;
+            this.label270.Text = "Condición de la persona de apoyo a las y los legisladores de presentar algún tipo" +
+    " de discapacidad*:";
+            this.label270.UseWaitCursor = true;
             // 
-            // txt_ID_personal_apoyo
+            // label269
             // 
-            this.txt_ID_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_ID_personal_apoyo.Location = new System.Drawing.Point(1040, 11);
-            this.txt_ID_personal_apoyo.Name = "txt_ID_personal_apoyo";
-            this.txt_ID_personal_apoyo.Size = new System.Drawing.Size(163, 22);
-            this.txt_ID_personal_apoyo.TabIndex = 40;
-            this.txt_ID_personal_apoyo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_ID_personal_apoyo.UseWaitCursor = true;
+            this.label269.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label269.ForeColor = System.Drawing.Color.Black;
+            this.label269.Location = new System.Drawing.Point(19, 55);
+            this.label269.Name = "label269";
+            this.label269.Size = new System.Drawing.Size(384, 30);
+            this.label269.TabIndex = 60;
+            this.label269.Text = "Primer tipo de discapacidad que presenta la persona de apoyo a las y los legislad" +
+    "ores:";
+            this.label269.UseWaitCursor = true;
             // 
-            // button1
+            // comboBox1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(738, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 27);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
+            this.comboBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(410, 60);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(177, 23);
+            this.comboBox1.TabIndex = 61;
+            this.comboBox1.UseWaitCursor = true;
             // 
-            // button4
+            // button5
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(738, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 27);
-            this.button4.TabIndex = 54;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.UseWaitCursor = true;
+            this.button5.Location = new System.Drawing.Point(475, 173);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(110, 27);
+            this.button5.TabIndex = 63;
+            this.button5.Text = "Eliminar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseWaitCursor = true;
             // 
-            // dataGridView1
+            // button7
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView1.Location = new System.Drawing.Point(446, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(256, 90);
-            this.dataGridView1.TabIndex = 56;
-            this.dataGridView1.UseWaitCursor = true;
+            this.button7.Location = new System.Drawing.Point(475, 124);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(110, 27);
+            this.button7.TabIndex = 62;
+            this.button7.Text = "Agregar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridView2
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Lengua Indígena";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dataGridView2.Location = new System.Drawing.Point(18, 94);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(445, 128);
+            this.dataGridView2.TabIndex = 64;
+            this.dataGridView2.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo de discapacidad";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // label273
+            // 
+            this.label273.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label273.ForeColor = System.Drawing.Color.Black;
+            this.label273.Location = new System.Drawing.Point(5, 55);
+            this.label273.Name = "label273";
+            this.label273.Size = new System.Drawing.Size(388, 37);
+            this.label273.TabIndex = 57;
+            this.label273.Text = "Selecciona lengua indígena que habla la persona de apoyo a las y los legisladores" +
+    ".:";
+            this.label273.UseWaitCursor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(398, 61);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(162, 23);
+            this.comboBox2.TabIndex = 58;
+            this.comboBox2.UseWaitCursor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.label299);
+            this.groupBox12.Controls.Add(this.cmb_cond_pueblo_ind_personal_apoyo);
+            this.groupBox12.Controls.Add(this.cmb_pueblo_ind_pertenencia_personal_apoyo);
+            this.groupBox12.Controls.Add(this.label300);
+            this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox12.Location = new System.Drawing.Point(8, 343);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(656, 88);
+            this.groupBox12.TabIndex = 59;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Pueblo indígena";
+            this.groupBox12.UseWaitCursor = true;
+            // 
+            // label299
+            // 
+            this.label299.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label299.ForeColor = System.Drawing.Color.Black;
+            this.label299.Location = new System.Drawing.Point(7, 48);
+            this.label299.Name = "label299";
+            this.label299.Size = new System.Drawing.Size(370, 34);
+            this.label299.TabIndex = 48;
+            this.label299.Text = "Pueblo indígena al que pertenece la persona de apoyo a las y los legisladores: ";
+            this.label299.UseWaitCursor = true;
+            // 
+            // label300
+            // 
+            this.label300.AutoSize = true;
+            this.label300.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label300.ForeColor = System.Drawing.Color.Black;
+            this.label300.Location = new System.Drawing.Point(5, 26);
+            this.label300.Name = "label300";
+            this.label300.Size = new System.Drawing.Size(502, 15);
+            this.label300.TabIndex = 49;
+            this.label300.Text = "Condición de la persona legisladora de pertenecer a algún pueblo indígena*:";
+            this.label300.UseWaitCursor = true;
             // 
             // FormRegistros
             // 
@@ -10547,15 +10599,10 @@
             this.groupBox62.ResumeLayout(false);
             this.groupBox62.PerformLayout();
             this.groupBox63.ResumeLayout(false);
-            this.groupBox63.PerformLayout();
-            this.groupBox64.ResumeLayout(false);
-            this.groupBox64.PerformLayout();
             this.groupBox65.ResumeLayout(false);
             this.groupBox65.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.groupBox64.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageIni.ResumeLayout(false);
             this.groupBox36.ResumeLayout(false);
             this.groupBox36.PerformLayout();
@@ -10636,7 +10683,9 @@
             this.groupBox59.ResumeLayout(false);
             this.groupBox59.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -11234,34 +11283,26 @@
         private System.Windows.Forms.Label label267;
         private System.Windows.Forms.Label label268;
         private System.Windows.Forms.GroupBox groupBox63;
-        private System.Windows.Forms.Label label269;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.ListView listView16;
         private System.Windows.Forms.ComboBox cmb_cond_discapacidad_personal_apoyo;
-        private System.Windows.Forms.Label label270;
         private System.Windows.Forms.GroupBox groupBox64;
         private System.Windows.Forms.ComboBox cmb_pueblo_ind_pertenencia_personal_apoyo;
         private System.Windows.Forms.Label label271;
         private System.Windows.Forms.ComboBox cmb_cond_pueblo_ind_personal_apoyo;
-        private System.Windows.Forms.Label label272;
-        private System.Windows.Forms.Label label273;
         private System.Windows.Forms.ComboBox cmb_cond_lengua_ind_personal_apoyo;
         private System.Windows.Forms.Label label274;
         private System.Windows.Forms.GroupBox groupBox65;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox textBox113;
         private System.Windows.Forms.Label label275;
         private System.Windows.Forms.TextBox textBox114;
         private System.Windows.Forms.TextBox textBox115;
         private System.Windows.Forms.Label label276;
         private System.Windows.Forms.Label label277;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txt_nombre_2_personal_apoyo;
         private System.Windows.Forms.Label label278;
         private System.Windows.Forms.TextBox txt_nombre_1_personal_apoyo;
         private System.Windows.Forms.Label label279;
         private System.Windows.Forms.Label label280;
-        private System.Windows.Forms.TextBox textBox118;
+        private System.Windows.Forms.TextBox nombre_3_personal_apoyo;
         private System.Windows.Forms.Label label281;
         private System.Windows.Forms.GroupBox groupBox66;
         private System.Windows.Forms.Label label282;
@@ -11403,5 +11444,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label269;
+        private System.Windows.Forms.Label label270;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label273;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Label label299;
+        private System.Windows.Forms.Label label300;
     }
 }
