@@ -28,6 +28,8 @@ namespace App_PLE
         {
             AbrirFormInPanel(new Resumen());
 
+            iconoMaximizar.Enabled = false;
+
             // ajustar el tamaño del formulario
             this.Size = new System.Drawing.Size(1300, 720); // ancho, alto
             // ajustar posicion del formulario

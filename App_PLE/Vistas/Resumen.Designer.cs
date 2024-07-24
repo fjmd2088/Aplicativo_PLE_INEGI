@@ -41,6 +41,8 @@
             // label1
             // 
             this.label1.AllowDrop = true;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
@@ -55,6 +57,9 @@
             this.dgvResumen.AllowUserToAddRows = false;
             this.dgvResumen.AllowUserToDeleteRows = false;
             this.dgvResumen.AllowUserToResizeRows = false;
+            this.dgvResumen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvResumen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResumen.BackgroundColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -85,9 +90,10 @@
             // 
             // btnEditarRegistro
             // 
+            this.btnEditarRegistro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarRegistro.Image")));
             this.btnEditarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarRegistro.Location = new System.Drawing.Point(546, 605);
+            this.btnEditarRegistro.Location = new System.Drawing.Point(581, 605);
             this.btnEditarRegistro.Name = "btnEditarRegistro";
             this.btnEditarRegistro.Size = new System.Drawing.Size(184, 35);
             this.btnEditarRegistro.TabIndex = 40;
@@ -97,9 +103,10 @@
             // 
             // btnAgregarNuevoRegistro
             // 
+            this.btnAgregarNuevoRegistro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregarNuevoRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarNuevoRegistro.Image")));
             this.btnAgregarNuevoRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarNuevoRegistro.Location = new System.Drawing.Point(246, 605);
+            this.btnAgregarNuevoRegistro.Location = new System.Drawing.Point(267, 605);
             this.btnAgregarNuevoRegistro.Name = "btnAgregarNuevoRegistro";
             this.btnAgregarNuevoRegistro.Size = new System.Drawing.Size(191, 35);
             this.btnAgregarNuevoRegistro.TabIndex = 39;
