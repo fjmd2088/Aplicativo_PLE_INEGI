@@ -166,8 +166,8 @@ namespace App_PLE.Vistas
             txt_ID_persona_legisladora.Enabled = false; txt_ID_persona_legisladora.BackColor = Color.LightGray;
             dgv_partido_coalicion.BackgroundColor = Color.LightGray;
             dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
-            dgv_lengua_PL.BackgroundColor = Color.LightGray;
-            dgv_tipo_discapacidad_PL.BackgroundColor = Color.LightGray;
+            dgv_lengua_PA.BackgroundColor = Color.LightGray;
+            dgv_tipo_discapacidad_PA.BackgroundColor = Color.LightGray;
             cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora.BackColor = Color.LightGray;
             cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.Enabled = false; cmb_grupo_parlamentario_adscipcion_final_persona_legisladora.BackColor = Color.LightGray;
             txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Enabled = false; txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.BackColor = Color.LightGray;
@@ -191,8 +191,8 @@ namespace App_PLE.Vistas
             gMapControl.Enabled = false;
 
             btnAgregarNivelEscPL.Enabled = false; btnEliminarNivelEscPL.Enabled = false;
-            btnAgregarLenguaPL.Enabled = false; btnEliminarLenguaPL.Enabled = false;
-            btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false;
+            btnAgregarLenguaPA.Enabled = false; btnEliminarLenguaPA.Enabled = false;
+            btnAgregarDiscapacidadPA.Enabled = false; btnEliminarDiscapacidadPA.Enabled = false;
             btnAgregarCandidaturaPL.Enabled = false; btnEliminarCandidaturaPL.Enabled = false;
 
             // CAMPOS VACIOS O CON VALOR PREDETERMINADO
@@ -4730,15 +4730,15 @@ namespace App_PLE.Vistas
             if (valorComboBox1 == "Si")
             {
                 cmb_lengua_ind_persona_legisladora.Enabled = true; cmb_lengua_ind_persona_legisladora.BackColor = Color.Honeydew;
-                btnAgregarLenguaPL.Enabled = true; btnEliminarLenguaPL.Enabled = true;
-                dgv_lengua_PL.BackgroundColor = Color.Honeydew;
+                btnAgregarLenguaPA.Enabled = true; btnEliminarLenguaPA.Enabled = true;
+                dgv_lengua_PA.BackgroundColor = Color.Honeydew;
                 cmb_lengua_ind_persona_legisladora.Focus();
             }
             else
             {
                 cmb_lengua_ind_persona_legisladora.Enabled = false; cmb_lengua_ind_persona_legisladora.BackColor = Color.LightGray;
-                dgv_lengua_PL.Rows.Clear(); dgv_lengua_PL.BackgroundColor = Color.LightGray;
-                btnAgregarLenguaPL.Enabled = false; btnEliminarLenguaPL.Enabled = false;
+                dgv_lengua_PA.Rows.Clear(); dgv_lengua_PA.BackgroundColor = Color.LightGray;
+                btnAgregarLenguaPA.Enabled = false; btnEliminarLenguaPA.Enabled = false;
                 
                 cmb_lengua_ind_persona_legisladora.Text = "";
             }
@@ -4757,7 +4757,7 @@ namespace App_PLE.Vistas
             {
 
             // Agregar una nueva fila al DataGridView
-            dgv_lengua_PL.Rows.Add(lengua_pl);
+            dgv_lengua_PA.Rows.Add(lengua_pl);
 
             cmb_lengua_ind_persona_legisladora.Text = "";
             
@@ -4765,9 +4765,9 @@ namespace App_PLE.Vistas
         }
         private void btnEliminarLenguaPL_Click(object sender, EventArgs e)
         {
-            if (dgv_lengua_PL.SelectedRows.Count > 0)
+            if (dgv_lengua_PA.SelectedRows.Count > 0)
             {
-                dgv_lengua_PL.Rows.RemoveAt(dgv_lengua_PL.SelectedRows[0].Index);
+                dgv_lengua_PA.Rows.RemoveAt(dgv_lengua_PA.SelectedRows[0].Index);
             }
             else
             {
@@ -4798,15 +4798,15 @@ namespace App_PLE.Vistas
             if (valorComboBox1 == "Si")
             {
                 cmb_tipo_discapacidad_persona_legisladora.Enabled = true; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.Honeydew;
-                btnAgregarDiscapacidadPL.Enabled = true; btnEliminarDiscapacidadPL.Enabled = true;
-                dgv_tipo_discapacidad_PL.BackgroundColor = Color.Honeydew;
+                btnAgregarDiscapacidadPA.Enabled = true; btnEliminarDiscapacidadPA.Enabled = true;
+                dgv_tipo_discapacidad_PA.BackgroundColor = Color.Honeydew;
                 cmb_tipo_discapacidad_persona_legisladora.Focus();
             }
             else
             {
                 cmb_tipo_discapacidad_persona_legisladora.Enabled = false; cmb_tipo_discapacidad_persona_legisladora.BackColor = Color.LightGray;
-                dgv_tipo_discapacidad_PL.Rows.Clear(); dgv_tipo_discapacidad_PL.BackgroundColor = Color.LightGray;
-                btnAgregarDiscapacidadPL.Enabled = false; btnEliminarDiscapacidadPL.Enabled = false; 
+                dgv_tipo_discapacidad_PA.Rows.Clear(); dgv_tipo_discapacidad_PA.BackgroundColor = Color.LightGray;
+                btnAgregarDiscapacidadPA.Enabled = false; btnEliminarDiscapacidadPA.Enabled = false; 
                 cmb_tipo_discapacidad_persona_legisladora.Text = "";
             }
         }
@@ -4824,7 +4824,7 @@ namespace App_PLE.Vistas
             {
 
                 // Agregar una nueva fila al DataGridView
-                dgv_tipo_discapacidad_PL.Rows.Add(tipo_discapacidad_pl);
+                dgv_tipo_discapacidad_PA.Rows.Add(tipo_discapacidad_pl);
 
                 cmb_tipo_discapacidad_persona_legisladora.Text = "";
 
@@ -4832,9 +4832,9 @@ namespace App_PLE.Vistas
         }
         private void btnEliminarDiscapacidadPL_Click(object sender, EventArgs e)
         {
-            if (dgv_tipo_discapacidad_PL.SelectedRows.Count > 0)
+            if (dgv_tipo_discapacidad_PA.SelectedRows.Count > 0)
             {
-                dgv_tipo_discapacidad_PL.Rows.RemoveAt(dgv_tipo_discapacidad_PL.SelectedRows[0].Index);
+                dgv_tipo_discapacidad_PA.Rows.RemoveAt(dgv_tipo_discapacidad_PA.SelectedRows[0].Index);
             }
             else
             {
@@ -6275,7 +6275,7 @@ namespace App_PLE.Vistas
             // Array de controles a validar
             Control[] controlesAValidar = { txt_nombre_1_persona_legisladora, txt_apellido_1_persona_legisladora, dtp_fecha_nacimiento_persona_legisladora,
             cmb_sexo_persona_legisladora,cmb_estatus_persona_legisladora,cmb_caracter_cargo_persona_legisladora,cmb_escolaridad_persona_legisladora_PL,
-            cmb_estatus_escolaridad_persona_legisladora,dgv_lengua_PL,dgv_tipo_discapacidad_PL,cmb_cond_pueblo_ind_persona_legisladora_PL,
+            cmb_estatus_escolaridad_persona_legisladora,dgv_lengua_PA,dgv_tipo_discapacidad_PA,cmb_cond_pueblo_ind_persona_legisladora_PL,
             cmb_cond_pob_afromexicana_persona_legisladora_PL,cmb_forma_eleccion_persona_legisladora,cmb_tipo_adscripcion_inicial_persona_legisladora,
             cmb_tipo_adscripcion_final_persona_legisladora,cmb_cond_presentacion_declaracion_situacion_patrimonial,cmb_cond_presentacion_declaracion_intereses,
             cmb_cond_presentacion_declaracion_fiscal,txt_asistencia_legislativa_persona_legisladora,txt_gestion_parlamentaria_persona_legisladora,
@@ -6318,7 +6318,7 @@ namespace App_PLE.Vistas
         txt_nombre_1_persona_legisladora, txt_apellido_1_persona_legisladora, dtp_fecha_nacimiento_persona_legisladora,
         cmb_sexo_persona_legisladora, cmb_estatus_persona_legisladora, cmb_caracter_cargo_persona_legisladora,
         cmb_escolaridad_persona_legisladora_PL, cmb_estatus_escolaridad_persona_legisladora,
-        dgv_lengua_PL, dgv_tipo_discapacidad_PL, cmb_cond_pueblo_ind_persona_legisladora_PL,
+        dgv_lengua_PA, dgv_tipo_discapacidad_PA, cmb_cond_pueblo_ind_persona_legisladora_PL,
         cmb_cond_pob_afromexicana_persona_legisladora_PL, cmb_forma_eleccion_persona_legisladora,
         cmb_tipo_adscripcion_inicial_persona_legisladora, cmb_tipo_adscripcion_final_persona_legisladora,
         cmb_cond_presentacion_declaracion_situacion_patrimonial, cmb_cond_presentacion_declaracion_intereses,
@@ -7794,7 +7794,9 @@ namespace App_PLE.Vistas
 
         }
 
-        
+       
+
+
 
 
 

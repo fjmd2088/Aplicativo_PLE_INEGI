@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnActualizarDGV_PL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
+        axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
+        WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
+        y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
+        bDn6xAb8DWM9XBPhHc8TtTcaNYyZcFG15Tc2qAgTUayqqJ3X5nvZsCJOBU21Fn9mwzhMDC8z833hl8NH
+        qtldVc+jj+pp/F7N91bUheB+sg0Avzmti3BdCRPFy/Nrryl4QtSTYNmPVSR76l38RW3LHRXLKCHod9Rq
+        3E4Lvaa3gwvMYqLywoEjM4Bw/KHVe5vMkMZnu8upmV0AeBm10++KMHF5aYMWGWHZMXOE0xhBNwDQFhA3
+        u0tsqI2Jy0sv/w4ZYfZYdnvmLuCKcqE2Ji4vbfCLjHDgNvWe0+ci7IMITogGG2pj4vLSBmkBWeMiNuOv
+        ain6kH4+GSywoTYmLi97C1w4I5rJbWj0XqVjl0ptgV9/bAdgBYoOG1iMNvRBjZJ9p7Fb5Q7h7JQdgCtG
+        f7rde5GOY+YIx7g9e7Di8D6YOF5eUFsjMxSAZoNlxo1AE8Ke4zNmjnA0K/o93gUuMIuJ4nV09+4RbdaH
+        IR1EtF20X7RhHLgFHYzXkYLBgbViyBNz57TpwA4YBsIP7DEiHQvmqvpVXOcCbWbCJ6M+x8JEuEnfjIvH
+        Rb11Nrj3c1I0fqPR4Kqh5bocuAxiIOUVY32of0GVyh+bjaYYbHcthwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="periodo_reportado_pe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -129,11 +147,10 @@
   <metadata name="sesiones_celebradas_pe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnActualizarDGV_CL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
         axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
         WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
         y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
@@ -250,23 +267,6 @@
   <metadata name="otro_tema_comision_legislativa_especifique.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnActualizarDGV_PL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKBSURBVFhH7ZVP
-        axNBGMbzVTxkrQgVUcSLerBV8QvYD+KfLyA2qU2DIKiYQ70L1ovU2lqU2hZRMAjag0p3dpPsTkwv3h3n
-        WeZdprvvxkm2B4U+8DtkkjzPO//eqRzqv9CelFcHfRlo1Kh0fH/D2IwvbTRWOPB/fC9fBGfsCgpIihBi
-        y9iNLs7YFSqgVBGcsSuhv7u/iHG2gzMug7F1F2dSBmPrLs6kDMbWTVW/Pn2980xNBQ/UpJhPmA4fqht6
-        bDn6xAb8DWM9XBPhHc8TtTcaNYyZcFG15Tc2qAgTUayqqJ3X5nvZsCJOBU21Fn9mwzhMDC8z833hl8NH
-        qtldVc+jj+pp/F7N91bUheB+sg0Avzmti3BdCRPFy/Nrryl4QtSTYNmPVSR76l38RW3LHRXLKCHod9Rq
-        3E4Lvaa3gwvMYqLywoEjM4Bw/KHVe5vMkMZnu8upmV0AeBm10++KMHF5aYMWGWHZMXOE0xhBNwDQFhA3
-        u0tsqI2Jy0sv/w4ZYfZYdnvmLuCKcqE2Ji4vbfCLjHDgNvWe0+ci7IMITogGG2pj4vLSBmkBWeMiNuOv
-        ain6kH4+GSywoTYmLi97C1w4I5rJbWj0XqVjl0ptgV9/bAdgBYoOG1iMNvRBjZJ9p7Fb5Q7h7JQdgCtG
-        f7rde5GOY+YIx7g9e7Di8D6YOF5eUFsjMxSAZoNlxo1AE8Ke4zNmjnA0K/o93gUuMIuJ4nV09+4RbdaH
-        IR1EtF20X7RhHLgFHYzXkYLBgbViyBNz57TpwA4YBsIP7DEiHQvmqvpVXOcCbWbCJ6M+x8JEuEnfjIvH
-        Rb11Nrj3c1I0fqPR4Kqh5bocuAxiIOUVY32of0GVyh+bjaYYbHcthwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="nombre_comision_legislativa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -292,6 +292,9 @@
     <value>True</value>
   </metadata>
   <metadata name="tipo_discapacidad_persona_legisladora.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1730,8 +1733,5 @@
   </metadata>
   <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>179, 17</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
   </metadata>
 </root>
