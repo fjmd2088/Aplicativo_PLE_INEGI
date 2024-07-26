@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDG = new System.Windows.Forms.TabPage();
             this.groupBox79 = new System.Windows.Forms.GroupBox();
@@ -370,6 +370,7 @@
             this.label63 = new System.Windows.Forms.Label();
             this.txt_nombre_3_persona_legisladora = new System.Windows.Forms.TextBox();
             this.tabPagePA = new System.Windows.Forms.TabPage();
+            this.groupBox80 = new System.Windows.Forms.GroupBox();
             this.groupBox62 = new System.Windows.Forms.GroupBox();
             this.cmb_carrera_doctorado_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -392,26 +393,26 @@
             this.label257 = new System.Windows.Forms.Label();
             this.cmb_regimen_contratacion_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label258 = new System.Windows.Forms.Label();
-            this.label298 = new System.Windows.Forms.Label();
-            this.txt_ID_personal_apoyo = new System.Windows.Forms.TextBox();
-            this.groupBox66 = new System.Windows.Forms.GroupBox();
-            this.label282 = new System.Windows.Forms.Label();
-            this.textBox119 = new System.Windows.Forms.TextBox();
-            this.comboBox101 = new System.Windows.Forms.ComboBox();
-            this.label283 = new System.Windows.Forms.Label();
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.label284 = new System.Windows.Forms.Label();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
             this.label261 = new System.Windows.Forms.Label();
-            this.cmb_dinamico = new System.Windows.Forms.ComboBox();
+            this.cmb_grupo_parlamentario_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label262 = new System.Windows.Forms.Label();
-            this.textBox111 = new System.Windows.Forms.TextBox();
-            this.comboBox92 = new System.Windows.Forms.ComboBox();
+            this.txt_ID_persona_legisladora_personal_apoyo = new System.Windows.Forms.TextBox();
+            this.cmb_nombre_persona_legisladora_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label263 = new System.Windows.Forms.Label();
             this.txt_otro_tipo_adscripcion_personal_apoyo_especifique = new System.Windows.Forms.TextBox();
             this.label264 = new System.Windows.Forms.Label();
             this.cmb_tipo_adscripcion_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label265 = new System.Windows.Forms.Label();
+            this.groupBox66 = new System.Windows.Forms.GroupBox();
+            this.label282 = new System.Windows.Forms.Label();
+            this.txt_ID_comision_legislativa_personal_apoyo = new System.Windows.Forms.TextBox();
+            this.cmb_nombre_comision_legislativa_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label283 = new System.Windows.Forms.Label();
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label284 = new System.Windows.Forms.Label();
+            this.label298 = new System.Windows.Forms.Label();
+            this.txt_ID_personal_apoyo = new System.Windows.Forms.TextBox();
             this.groupBox65 = new System.Windows.Forms.GroupBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label299 = new System.Windows.Forms.Label();
@@ -805,6 +806,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageDG.SuspendLayout();
             this.groupBox79.SuspendLayout();
@@ -856,12 +859,13 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tipo_discapacidad_PA)).BeginInit();
             this.tabPagePA.SuspendLayout();
+            this.groupBox80.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox78.SuspendLayout();
             this.groupBox60.SuspendLayout();
-            this.groupBox66.SuspendLayout();
             this.groupBox61.SuspendLayout();
+            this.groupBox66.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox63.SuspendLayout();
@@ -1184,14 +1188,14 @@
             this.fecha_inicio_pe,
             this.fecha_termino_pe,
             this.sesiones_celebradas_pe});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPE.Location = new System.Drawing.Point(27, 149);
             this.dgvPE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPE.Name = "dgvPE";
@@ -1852,7 +1856,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(628, 12708);
+            this.btnGuardarCL.Location = new System.Drawing.Point(589, 13089);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(168, 54);
@@ -1950,14 +1954,14 @@
             this.dgv_registros_cl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_cl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_cl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_registros_cl.Location = new System.Drawing.Point(18, 32);
             this.dgv_registros_cl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_registros_cl.MultiSelect = false;
@@ -1965,9 +1969,9 @@
             this.dgv_registros_cl.ReadOnly = true;
             this.dgv_registros_cl.RowHeadersVisible = false;
             this.dgv_registros_cl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_registros_cl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_registros_cl.Size = new System.Drawing.Size(1619, 194);
             this.dgv_registros_cl.TabIndex = 30;
@@ -1977,7 +1981,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(493, 15880);
+            this.button24.Location = new System.Drawing.Point(454, 16261);
             this.button24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(168, 54);
@@ -2405,14 +2409,14 @@
             this.dgv_tema_comision_legislativa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tema_comision_legislativa,
             this.otro_tema_comision_legislativa_especifique});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_tema_comision_legislativa.Location = new System.Drawing.Point(18, 98);
             this.dgv_tema_comision_legislativa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_tema_comision_legislativa.Name = "dgv_tema_comision_legislativa";
@@ -2652,14 +2656,14 @@
             this.dgv_registros_pl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_pl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_pl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_registros_pl.Location = new System.Drawing.Point(18, 48);
             this.dgv_registros_pl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_registros_pl.Name = "dgv_registros_pl";
@@ -3172,14 +3176,14 @@
             this.nombre_comision_legislativa,
             this.ID_comision_legislativa_pc,
             this.cargo_comision_legislativa});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_participacion_comisiones.Location = new System.Drawing.Point(19, 180);
             this.dgv_participacion_comisiones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_participacion_comisiones.Name = "dgv_participacion_comisiones";
@@ -4073,14 +4077,14 @@
             this.dgv_partido_coalicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_partido_coalicion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partido_politico_candidatura_coalicion});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_partido_coalicion.Location = new System.Drawing.Point(939, 105);
             this.dgv_partido_coalicion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_partido_coalicion.Name = "dgv_partido_coalicion";
@@ -4616,14 +4620,14 @@
             this.lic_pl,
             this.mae_pl,
             this.doc_pl});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_nivel_escolaridad_PL.Location = new System.Drawing.Point(42, 108);
             this.dgv_nivel_escolaridad_PL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_nivel_escolaridad_PL.Name = "dgv_nivel_escolaridad_PL";
@@ -5113,14 +5117,14 @@
             this.dgv_lengua_PA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lengua_PA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lengua_ind_persona_legisladora});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_lengua_PA.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_lengua_PA.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_lengua_PA.Location = new System.Drawing.Point(26, 98);
             this.dgv_lengua_PA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_lengua_PA.Name = "dgv_lengua_PA";
@@ -5284,14 +5288,14 @@
             this.dgv_tipo_discapacidad_PA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tipo_discapacidad_PA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo_discapacidad_persona_legisladora});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tipo_discapacidad_PA.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tipo_discapacidad_PA.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_tipo_discapacidad_PA.Location = new System.Drawing.Point(19, 158);
             this.dgv_tipo_discapacidad_PA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_tipo_discapacidad_PA.Name = "dgv_tipo_discapacidad_PA";
@@ -5489,11 +5493,10 @@
             // tabPagePA
             // 
             this.tabPagePA.AutoScroll = true;
-            this.tabPagePA.Controls.Add(this.groupBox62);
+            this.tabPagePA.Controls.Add(this.groupBox80);
             this.tabPagePA.Controls.Add(this.groupBox15);
             this.tabPagePA.Controls.Add(this.label298);
             this.tabPagePA.Controls.Add(this.txt_ID_personal_apoyo);
-            this.tabPagePA.Controls.Add(this.groupBox66);
             this.tabPagePA.Controls.Add(this.groupBox65);
             this.tabPagePA.Controls.Add(this.label281);
             this.tabPagePA.Location = new System.Drawing.Point(4, 34);
@@ -5503,6 +5506,20 @@
             this.tabPagePA.TabIndex = 3;
             this.tabPagePA.Text = "Personal apoyo";
             this.tabPagePA.UseVisualStyleBackColor = true;
+            // 
+            // groupBox80
+            // 
+            this.groupBox80.Controls.Add(this.groupBox62);
+            this.groupBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox80.ForeColor = System.Drawing.Color.Green;
+            this.groupBox80.Location = new System.Drawing.Point(12, 1254);
+            this.groupBox80.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox80.Name = "groupBox80";
+            this.groupBox80.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox80.Size = new System.Drawing.Size(1814, 247);
+            this.groupBox80.TabIndex = 38;
+            this.groupBox80.TabStop = false;
+            this.groupBox80.Text = "Perfil profesional";
             // 
             // groupBox62
             // 
@@ -5518,21 +5535,21 @@
             this.groupBox62.Controls.Add(this.label268);
             this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox62.ForeColor = System.Drawing.Color.Green;
-            this.groupBox62.Location = new System.Drawing.Point(1395, 1240);
+            this.groupBox62.Location = new System.Drawing.Point(13, 33);
             this.groupBox62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox62.Name = "groupBox62";
             this.groupBox62.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox62.Size = new System.Drawing.Size(1340, 240);
+            this.groupBox62.Size = new System.Drawing.Size(1792, 196);
             this.groupBox62.TabIndex = 34;
             this.groupBox62.TabStop = false;
-            this.groupBox62.Text = "Escolaridad";
+            this.groupBox62.Text = "Nivel de escolaridad";
             // 
             // cmb_carrera_doctorado_personal_apoyo
             // 
             this.cmb_carrera_doctorado_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_carrera_doctorado_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_doctorado_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(261, 182);
+            this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(1332, 132);
             this.cmb_carrera_doctorado_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_carrera_doctorado_personal_apoyo.Name = "cmb_carrera_doctorado_personal_apoyo";
             this.cmb_carrera_doctorado_personal_apoyo.Size = new System.Drawing.Size(256, 33);
@@ -5543,12 +5560,12 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label54.Location = new System.Drawing.Point(81, 188);
+            this.label54.Location = new System.Drawing.Point(954, 137);
             this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(161, 22);
+            this.label54.Size = new System.Drawing.Size(370, 22);
             this.label54.TabIndex = 36;
-            this.label54.Text = "Nombre Doctorado";
+            this.label54.Text = "Doctorado cursado por el personal de apoyo:";
             this.label54.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cmb_carrera_maestria_personal_apoyo
@@ -5556,7 +5573,7 @@
             this.cmb_carrera_maestria_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_carrera_maestria_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_maestria_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_maestria_personal_apoyo.Location = new System.Drawing.Point(261, 138);
+            this.cmb_carrera_maestria_personal_apoyo.Location = new System.Drawing.Point(612, 132);
             this.cmb_carrera_maestria_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_carrera_maestria_personal_apoyo.Name = "cmb_carrera_maestria_personal_apoyo";
             this.cmb_carrera_maestria_personal_apoyo.Size = new System.Drawing.Size(256, 33);
@@ -5567,12 +5584,12 @@
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label42.Location = new System.Drawing.Point(81, 141);
+            this.label42.Location = new System.Drawing.Point(249, 137);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(146, 22);
+            this.label42.Size = new System.Drawing.Size(355, 22);
             this.label42.TabIndex = 34;
-            this.label42.Text = "Nombre Maestria";
+            this.label42.Text = "Maestría cursada por el personal de apoyo:";
             this.label42.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cmb_carrera_licenciatura_personal_apoyo
@@ -5580,7 +5597,7 @@
             this.cmb_carrera_licenciatura_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_carrera_licenciatura_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_carrera_licenciatura_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_licenciatura_personal_apoyo.Location = new System.Drawing.Point(1080, 42);
+            this.cmb_carrera_licenciatura_personal_apoyo.Location = new System.Drawing.Point(1540, 50);
             this.cmb_carrera_licenciatura_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_carrera_licenciatura_personal_apoyo.Name = "cmb_carrera_licenciatura_personal_apoyo";
             this.cmb_carrera_licenciatura_personal_apoyo.Size = new System.Drawing.Size(224, 33);
@@ -5592,7 +5609,7 @@
             this.cmb_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_escolaridad_personal_apoyo.FormattingEnabled = true;
             this.cmb_escolaridad_personal_apoyo.ItemHeight = 25;
-            this.cmb_escolaridad_personal_apoyo.Location = new System.Drawing.Point(156, 42);
+            this.cmb_escolaridad_personal_apoyo.Location = new System.Drawing.Point(266, 50);
             this.cmb_escolaridad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_escolaridad_personal_apoyo.Name = "cmb_escolaridad_personal_apoyo";
             this.cmb_escolaridad_personal_apoyo.Size = new System.Drawing.Size(224, 33);
@@ -5600,23 +5617,22 @@
             // 
             // label266
             // 
-            this.label266.AutoSize = true;
             this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label266.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label266.Location = new System.Drawing.Point(847, 28);
+            this.label266.Location = new System.Drawing.Point(1147, 33);
             this.label266.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label266.Name = "label266";
-            this.label266.Size = new System.Drawing.Size(200, 66);
+            this.label266.Size = new System.Drawing.Size(385, 66);
             this.label266.TabIndex = 26;
-            this.label266.Text = "Nombre licenciatura\r\no posgrado cursado por\r\nel personal de apoyo";
-            this.label266.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label266.Text = "Licenciatura cursada por el personal de apoyo:";
+            this.label266.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmb_estatus_escolaridad_personal_apoyo
             // 
             this.cmb_estatus_escolaridad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_estatus_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_estatus_escolaridad_personal_apoyo.FormattingEnabled = true;
-            this.cmb_estatus_escolaridad_personal_apoyo.Location = new System.Drawing.Point(594, 42);
+            this.cmb_estatus_escolaridad_personal_apoyo.Location = new System.Drawing.Point(882, 50);
             this.cmb_estatus_escolaridad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_estatus_escolaridad_personal_apoyo.Name = "cmb_estatus_escolaridad_personal_apoyo";
             this.cmb_estatus_escolaridad_personal_apoyo.Size = new System.Drawing.Size(224, 33);
@@ -5624,42 +5640,42 @@
             // 
             // label267
             // 
-            this.label267.AutoSize = true;
-            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label267.ForeColor = System.Drawing.Color.Green;
-            this.label267.Location = new System.Drawing.Point(410, 39);
+            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label267.ForeColor = System.Drawing.Color.Black;
+            this.label267.Location = new System.Drawing.Point(529, 44);
             this.label267.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label267.Name = "label267";
-            this.label267.Size = new System.Drawing.Size(153, 44);
+            this.label267.Size = new System.Drawing.Size(359, 44);
             this.label267.TabIndex = 22;
-            this.label267.Text = "Estatus del último\r\ngrado de estudios";
-            this.label267.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label267.Text = "Estatus del último grado de estudios*:";
+            this.label267.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label268
             // 
             this.label268.AutoSize = true;
-            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label268.ForeColor = System.Drawing.Color.Green;
-            this.label268.Location = new System.Drawing.Point(12, 39);
+            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label268.ForeColor = System.Drawing.Color.Black;
+            this.label268.Location = new System.Drawing.Point(12, 55);
             this.label268.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label268.Name = "label268";
-            this.label268.Size = new System.Drawing.Size(111, 44);
+            this.label268.Size = new System.Drawing.Size(246, 22);
             this.label268.TabIndex = 20;
-            this.label268.Text = "Último grado\r\nde estudios";
-            this.label268.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label268.Text = "Último grado de estudios*:";
+            this.label268.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.groupBox78);
             this.groupBox15.Controls.Add(this.groupBox60);
             this.groupBox15.Controls.Add(this.groupBox61);
+            this.groupBox15.Controls.Add(this.groupBox66);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.ForeColor = System.Drawing.Color.Green;
             this.groupBox15.Location = new System.Drawing.Point(12, 711);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox15.Size = new System.Drawing.Size(1814, 469);
+            this.groupBox15.Size = new System.Drawing.Size(1814, 533);
             this.groupBox15.TabIndex = 34;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Caraterísticas del cargo";
@@ -5786,6 +5802,233 @@
             this.label258.Text = "Régimen de contratación*:";
             this.label258.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // groupBox61
+            // 
+            this.groupBox61.Controls.Add(this.label261);
+            this.groupBox61.Controls.Add(this.cmb_grupo_parlamentario_personal_apoyo);
+            this.groupBox61.Controls.Add(this.label262);
+            this.groupBox61.Controls.Add(this.txt_ID_persona_legisladora_personal_apoyo);
+            this.groupBox61.Controls.Add(this.cmb_nombre_persona_legisladora_personal_apoyo);
+            this.groupBox61.Controls.Add(this.label263);
+            this.groupBox61.Controls.Add(this.txt_otro_tipo_adscripcion_personal_apoyo_especifique);
+            this.groupBox61.Controls.Add(this.label264);
+            this.groupBox61.Controls.Add(this.cmb_tipo_adscripcion_personal_apoyo);
+            this.groupBox61.Controls.Add(this.label265);
+            this.groupBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox61.ForeColor = System.Drawing.Color.Green;
+            this.groupBox61.Location = new System.Drawing.Point(12, 154);
+            this.groupBox61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox61.Name = "groupBox61";
+            this.groupBox61.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox61.Size = new System.Drawing.Size(1793, 178);
+            this.groupBox61.TabIndex = 37;
+            this.groupBox61.TabStop = false;
+            this.groupBox61.Text = "Adscripción laboral";
+            // 
+            // label261
+            // 
+            this.label261.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label261.ForeColor = System.Drawing.Color.Black;
+            this.label261.Location = new System.Drawing.Point(711, 97);
+            this.label261.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label261.Name = "label261";
+            this.label261.Size = new System.Drawing.Size(187, 44);
+            this.label261.TabIndex = 40;
+            this.label261.Text = "Grupo parlamentario\r\nde adscripción:";
+            this.label261.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmb_grupo_parlamentario_personal_apoyo
+            // 
+            this.cmb_grupo_parlamentario_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_grupo_parlamentario_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_grupo_parlamentario_personal_apoyo.FormattingEnabled = true;
+            this.cmb_grupo_parlamentario_personal_apoyo.Location = new System.Drawing.Point(906, 108);
+            this.cmb_grupo_parlamentario_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_grupo_parlamentario_personal_apoyo.Name = "cmb_grupo_parlamentario_personal_apoyo";
+            this.cmb_grupo_parlamentario_personal_apoyo.Size = new System.Drawing.Size(585, 33);
+            this.cmb_grupo_parlamentario_personal_apoyo.TabIndex = 39;
+            // 
+            // label262
+            // 
+            this.label262.AutoSize = true;
+            this.label262.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label262.ForeColor = System.Drawing.Color.Black;
+            this.label262.Location = new System.Drawing.Point(13, 97);
+            this.label262.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label262.Name = "label262";
+            this.label262.Size = new System.Drawing.Size(223, 44);
+            this.label262.TabIndex = 38;
+            this.label262.Text = "Nombre persona \r\nlegisladora de adscripción:";
+            this.label262.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_ID_persona_legisladora_personal_apoyo
+            // 
+            this.txt_ID_persona_legisladora_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_persona_legisladora_personal_apoyo.Location = new System.Drawing.Point(1523, 44);
+            this.txt_ID_persona_legisladora_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_ID_persona_legisladora_personal_apoyo.Name = "txt_ID_persona_legisladora_personal_apoyo";
+            this.txt_ID_persona_legisladora_personal_apoyo.Size = new System.Drawing.Size(262, 30);
+            this.txt_ID_persona_legisladora_personal_apoyo.TabIndex = 37;
+            // 
+            // cmb_nombre_persona_legisladora_personal_apoyo
+            // 
+            this.cmb_nombre_persona_legisladora_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_nombre_persona_legisladora_personal_apoyo.FormattingEnabled = true;
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Location = new System.Drawing.Point(244, 108);
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Name = "cmb_nombre_persona_legisladora_personal_apoyo";
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Size = new System.Drawing.Size(420, 33);
+            this.cmb_nombre_persona_legisladora_personal_apoyo.TabIndex = 36;
+            // 
+            // label263
+            // 
+            this.label263.AutoSize = true;
+            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label263.ForeColor = System.Drawing.Color.Black;
+            this.label263.Location = new System.Drawing.Point(1321, 30);
+            this.label263.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label263.Name = "label263";
+            this.label263.Size = new System.Drawing.Size(194, 44);
+            this.label263.TabIndex = 35;
+            this.label263.Text = "ID persona legisladora \r\nde adscripción:";
+            this.label263.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_otro_tipo_adscripcion_personal_apoyo_especifique
+            // 
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Location = new System.Drawing.Point(924, 44);
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Name = "txt_otro_tipo_adscripcion_personal_apoyo_especifique";
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Size = new System.Drawing.Size(324, 30);
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.TabIndex = 34;
+            // 
+            // label264
+            // 
+            this.label264.AutoSize = true;
+            this.label264.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label264.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label264.Location = new System.Drawing.Point(711, 46);
+            this.label264.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label264.Name = "label264";
+            this.label264.Size = new System.Drawing.Size(205, 22);
+            this.label264.TabIndex = 33;
+            this.label264.Text = "Otro tipo de adscripción:";
+            // 
+            // cmb_tipo_adscripcion_personal_apoyo
+            // 
+            this.cmb_tipo_adscripcion_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_tipo_adscripcion_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tipo_adscripcion_personal_apoyo.FormattingEnabled = true;
+            this.cmb_tipo_adscripcion_personal_apoyo.Location = new System.Drawing.Point(216, 41);
+            this.cmb_tipo_adscripcion_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_tipo_adscripcion_personal_apoyo.Name = "cmb_tipo_adscripcion_personal_apoyo";
+            this.cmb_tipo_adscripcion_personal_apoyo.Size = new System.Drawing.Size(463, 33);
+            this.cmb_tipo_adscripcion_personal_apoyo.TabIndex = 32;
+            // 
+            // label265
+            // 
+            this.label265.AutoSize = true;
+            this.label265.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label265.ForeColor = System.Drawing.Color.Black;
+            this.label265.Location = new System.Drawing.Point(13, 46);
+            this.label265.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label265.Name = "label265";
+            this.label265.Size = new System.Drawing.Size(200, 22);
+            this.label265.TabIndex = 20;
+            this.label265.Text = "Tipo de adscripción*:";
+            this.label265.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // groupBox66
+            // 
+            this.groupBox66.Controls.Add(this.label282);
+            this.groupBox66.Controls.Add(this.txt_ID_comision_legislativa_personal_apoyo);
+            this.groupBox66.Controls.Add(this.cmb_nombre_comision_legislativa_personal_apoyo);
+            this.groupBox66.Controls.Add(this.label283);
+            this.groupBox66.Controls.Add(this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo);
+            this.groupBox66.Controls.Add(this.label284);
+            this.groupBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox66.ForeColor = System.Drawing.Color.Green;
+            this.groupBox66.Location = new System.Drawing.Point(13, 342);
+            this.groupBox66.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox66.Name = "groupBox66";
+            this.groupBox66.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox66.Size = new System.Drawing.Size(1792, 174);
+            this.groupBox66.TabIndex = 38;
+            this.groupBox66.TabStop = false;
+            this.groupBox66.Text = "Titularidad de la Secretaría Técnica de determinada comisión legislativa";
+            // 
+            // label282
+            // 
+            this.label282.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label282.ForeColor = System.Drawing.Color.Black;
+            this.label282.Location = new System.Drawing.Point(809, 94);
+            this.label282.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label282.Name = "label282";
+            this.label282.Size = new System.Drawing.Size(495, 66);
+            this.label282.TabIndex = 42;
+            this.label282.Text = "Nombre de la comisión legislativa en la que el personal de apoyo se desempeña com" +
+    "o persona secretaria técnica:";
+            this.label282.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_ID_comision_legislativa_personal_apoyo
+            // 
+            this.txt_ID_comision_legislativa_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(502, 121);
+            this.txt_ID_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_ID_comision_legislativa_personal_apoyo.Name = "txt_ID_comision_legislativa_personal_apoyo";
+            this.txt_ID_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(239, 30);
+            this.txt_ID_comision_legislativa_personal_apoyo.TabIndex = 41;
+            // 
+            // cmb_nombre_comision_legislativa_personal_apoyo
+            // 
+            this.cmb_nombre_comision_legislativa_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_nombre_comision_legislativa_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_nombre_comision_legislativa_personal_apoyo.FormattingEnabled = true;
+            this.cmb_nombre_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1315, 118);
+            this.cmb_nombre_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_nombre_comision_legislativa_personal_apoyo.Name = "cmb_nombre_comision_legislativa_personal_apoyo";
+            this.cmb_nombre_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(469, 33);
+            this.cmb_nombre_comision_legislativa_personal_apoyo.TabIndex = 40;
+            // 
+            // label283
+            // 
+            this.label283.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label283.ForeColor = System.Drawing.Color.Black;
+            this.label283.Location = new System.Drawing.Point(8, 94);
+            this.label283.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label283.Name = "label283";
+            this.label283.Size = new System.Drawing.Size(501, 66);
+            this.label283.TabIndex = 39;
+            this.label283.Text = "Identificador de la comisión legislativa en la que el personal de apoyo se desemp" +
+    "eña como persona secretaria técnica:";
+            this.label283.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo
+            // 
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.FormattingEnabled = true;
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1074, 33);
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Name = "cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo";
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(198, 33);
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.TabIndex = 32;
+            // 
+            // label284
+            // 
+            this.label284.AutoSize = true;
+            this.label284.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label284.ForeColor = System.Drawing.Color.Black;
+            this.label284.Location = new System.Drawing.Point(4, 38);
+            this.label284.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label284.Name = "label284";
+            this.label284.Size = new System.Drawing.Size(1062, 22);
+            this.label284.TabIndex = 20;
+            this.label284.Text = "Condición del persona lde apoyo de desempeñarse como persona secretaria técnica d" +
+    "e alguna copmisión legislativa*:";
+            this.label284.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label298
             // 
             this.label298.AutoSize = true;
@@ -5809,236 +6052,6 @@
             this.txt_ID_personal_apoyo.TabIndex = 40;
             this.txt_ID_personal_apoyo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_ID_personal_apoyo.UseWaitCursor = true;
-            // 
-            // groupBox66
-            // 
-            this.groupBox66.Controls.Add(this.label282);
-            this.groupBox66.Controls.Add(this.textBox119);
-            this.groupBox66.Controls.Add(this.comboBox101);
-            this.groupBox66.Controls.Add(this.label283);
-            this.groupBox66.Controls.Add(this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo);
-            this.groupBox66.Controls.Add(this.label284);
-            this.groupBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox66.ForeColor = System.Drawing.Color.Green;
-            this.groupBox66.Location = new System.Drawing.Point(24, 1190);
-            this.groupBox66.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox66.Name = "groupBox66";
-            this.groupBox66.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox66.Size = new System.Drawing.Size(1318, 195);
-            this.groupBox66.TabIndex = 38;
-            this.groupBox66.TabStop = false;
-            this.groupBox66.Text = "Persona secretaria técnica";
-            // 
-            // label282
-            // 
-            this.label282.AutoSize = true;
-            this.label282.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label282.ForeColor = System.Drawing.Color.Black;
-            this.label282.Location = new System.Drawing.Point(597, 94);
-            this.label282.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label282.Name = "label282";
-            this.label282.Size = new System.Drawing.Size(269, 66);
-            this.label282.TabIndex = 42;
-            this.label282.Text = "ID de la comisión legislativa\r\nen la que se desempeña \r\ncomo persona secretaria t" +
-    "écnica";
-            this.label282.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox119
-            // 
-            this.textBox119.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox119.Location = new System.Drawing.Point(276, 102);
-            this.textBox119.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox119.Name = "textBox119";
-            this.textBox119.Size = new System.Drawing.Size(216, 30);
-            this.textBox119.TabIndex = 41;
-            // 
-            // comboBox101
-            // 
-            this.comboBox101.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox101.FormattingEnabled = true;
-            this.comboBox101.Location = new System.Drawing.Point(883, 102);
-            this.comboBox101.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox101.Name = "comboBox101";
-            this.comboBox101.Size = new System.Drawing.Size(421, 33);
-            this.comboBox101.TabIndex = 40;
-            // 
-            // label283
-            // 
-            this.label283.AutoSize = true;
-            this.label283.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label283.ForeColor = System.Drawing.Color.Black;
-            this.label283.Location = new System.Drawing.Point(8, 94);
-            this.label283.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label283.Name = "label283";
-            this.label283.Size = new System.Drawing.Size(269, 66);
-            this.label283.TabIndex = 39;
-            this.label283.Text = "ID de la comisión legislativa\r\nen la que se desempeña \r\ncomo persona secretaria t" +
-    "écnica";
-            this.label283.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo
-            // 
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1169, 38);
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Name = "cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo";
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(127, 33);
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.TabIndex = 32;
-            // 
-            // label284
-            // 
-            this.label284.AutoSize = true;
-            this.label284.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label284.ForeColor = System.Drawing.Color.Green;
-            this.label284.Location = new System.Drawing.Point(4, 38);
-            this.label284.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label284.Name = "label284";
-            this.label284.Size = new System.Drawing.Size(937, 22);
-            this.label284.TabIndex = 20;
-            this.label284.Text = "Condición del persona lde apoyo de desempeñarse como persona secretaria técnica d" +
-    "e alguna copmisión legislativa";
-            this.label284.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // groupBox61
-            // 
-            this.groupBox61.Controls.Add(this.label261);
-            this.groupBox61.Controls.Add(this.cmb_dinamico);
-            this.groupBox61.Controls.Add(this.label262);
-            this.groupBox61.Controls.Add(this.textBox111);
-            this.groupBox61.Controls.Add(this.comboBox92);
-            this.groupBox61.Controls.Add(this.label263);
-            this.groupBox61.Controls.Add(this.txt_otro_tipo_adscripcion_personal_apoyo_especifique);
-            this.groupBox61.Controls.Add(this.label264);
-            this.groupBox61.Controls.Add(this.cmb_tipo_adscripcion_personal_apoyo);
-            this.groupBox61.Controls.Add(this.label265);
-            this.groupBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox61.ForeColor = System.Drawing.Color.Green;
-            this.groupBox61.Location = new System.Drawing.Point(12, 154);
-            this.groupBox61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox61.Size = new System.Drawing.Size(1793, 249);
-            this.groupBox61.TabIndex = 37;
-            this.groupBox61.TabStop = false;
-            this.groupBox61.Text = "Adscripción laboral";
-            // 
-            // label261
-            // 
-            this.label261.AutoSize = true;
-            this.label261.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label261.ForeColor = System.Drawing.Color.Black;
-            this.label261.Location = new System.Drawing.Point(4, 161);
-            this.label261.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label261.Name = "label261";
-            this.label261.Size = new System.Drawing.Size(339, 44);
-            this.label261.TabIndex = 40;
-            this.label261.Text = "Grupo parlamentario\r\nde adscripción por confirmar nombre cmb";
-            this.label261.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmb_dinamico
-            // 
-            this.cmb_dinamico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_dinamico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_dinamico.FormattingEnabled = true;
-            this.cmb_dinamico.Location = new System.Drawing.Point(399, 171);
-            this.cmb_dinamico.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmb_dinamico.Name = "cmb_dinamico";
-            this.cmb_dinamico.Size = new System.Drawing.Size(790, 33);
-            this.cmb_dinamico.TabIndex = 39;
-            // 
-            // label262
-            // 
-            this.label262.AutoSize = true;
-            this.label262.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label262.ForeColor = System.Drawing.Color.Black;
-            this.label262.Location = new System.Drawing.Point(498, 92);
-            this.label262.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label262.Name = "label262";
-            this.label262.Size = new System.Drawing.Size(218, 44);
-            this.label262.TabIndex = 38;
-            this.label262.Text = "Nombre persona \r\nlegisladora de adscripción";
-            this.label262.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox111
-            // 
-            this.textBox111.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox111.Location = new System.Drawing.Point(216, 99);
-            this.textBox111.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(262, 30);
-            this.textBox111.TabIndex = 37;
-            // 
-            // comboBox92
-            // 
-            this.comboBox92.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox92.FormattingEnabled = true;
-            this.comboBox92.Location = new System.Drawing.Point(747, 98);
-            this.comboBox92.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox92.Name = "comboBox92";
-            this.comboBox92.Size = new System.Drawing.Size(561, 33);
-            this.comboBox92.TabIndex = 36;
-            // 
-            // label263
-            // 
-            this.label263.AutoSize = true;
-            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label263.ForeColor = System.Drawing.Color.Black;
-            this.label263.Location = new System.Drawing.Point(8, 92);
-            this.label263.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label263.Name = "label263";
-            this.label263.Size = new System.Drawing.Size(194, 44);
-            this.label263.TabIndex = 35;
-            this.label263.Text = "ID persona legisladora \r\nde adscripción";
-            this.label263.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txt_otro_tipo_adscripcion_personal_apoyo_especifique
-            // 
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Location = new System.Drawing.Point(809, 33);
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Name = "txt_otro_tipo_adscripcion_personal_apoyo_especifique";
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Size = new System.Drawing.Size(324, 30);
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.TabIndex = 34;
-            // 
-            // label264
-            // 
-            this.label264.AutoSize = true;
-            this.label264.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label264.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label264.Location = new System.Drawing.Point(698, 38);
-            this.label264.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label264.Name = "label264";
-            this.label264.Size = new System.Drawing.Size(108, 22);
-            this.label264.TabIndex = 33;
-            this.label264.Text = "Especifique:";
-            // 
-            // cmb_tipo_adscripcion_personal_apoyo
-            // 
-            this.cmb_tipo_adscripcion_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_tipo_adscripcion_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_tipo_adscripcion_personal_apoyo.FormattingEnabled = true;
-            this.cmb_tipo_adscripcion_personal_apoyo.Location = new System.Drawing.Point(216, 29);
-            this.cmb_tipo_adscripcion_personal_apoyo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmb_tipo_adscripcion_personal_apoyo.Name = "cmb_tipo_adscripcion_personal_apoyo";
-            this.cmb_tipo_adscripcion_personal_apoyo.Size = new System.Drawing.Size(463, 33);
-            this.cmb_tipo_adscripcion_personal_apoyo.TabIndex = 32;
-            // 
-            // label265
-            // 
-            this.label265.AutoSize = true;
-            this.label265.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label265.ForeColor = System.Drawing.Color.Black;
-            this.label265.Location = new System.Drawing.Point(4, 38);
-            this.label265.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label265.Name = "label265";
-            this.label265.Size = new System.Drawing.Size(200, 22);
-            this.label265.TabIndex = 20;
-            this.label265.Text = "Tipo de adscripción*:";
-            this.label265.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox65
             // 
@@ -6275,6 +6288,7 @@
             // 
             // groupBox63
             // 
+            this.groupBox63.Controls.Add(this.button20);
             this.groupBox63.Controls.Add(this.button5);
             this.groupBox63.Controls.Add(this.button7);
             this.groupBox63.Controls.Add(this.dataGridView2);
@@ -6295,7 +6309,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(712, 266);
+            this.button5.Location = new System.Drawing.Point(709, 290);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(165, 41);
@@ -6306,7 +6320,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(712, 191);
+            this.button7.Location = new System.Drawing.Point(713, 227);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(165, 41);
@@ -6325,14 +6339,14 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView2.Location = new System.Drawing.Point(27, 145);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
@@ -6478,6 +6492,7 @@
             // 
             // groupBox64
             // 
+            this.groupBox64.Controls.Add(this.button19);
             this.groupBox64.Controls.Add(this.cmb_lengua_ind_1_personal_apoyo);
             this.groupBox64.Controls.Add(this.label273);
             this.groupBox64.Controls.Add(this.dataGridView1);
@@ -6531,14 +6546,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.Location = new System.Drawing.Point(14, 149);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
@@ -6560,7 +6575,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(675, 266);
+            this.button1.Location = new System.Drawing.Point(675, 290);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 41);
@@ -6572,7 +6587,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(675, 191);
+            this.button4.Location = new System.Drawing.Point(675, 227);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(165, 41);
@@ -11327,6 +11342,32 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
+            this.button19.Location = new System.Drawing.Point(732, 145);
+            this.button19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(71, 72);
+            this.button19.TabIndex = 81;
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.UseWaitCursor = true;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
+            this.button20.Location = new System.Drawing.Point(760, 145);
+            this.button20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(71, 72);
+            this.button20.TabIndex = 81;
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.UseWaitCursor = true;
+            // 
             // FormRegistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -11427,6 +11468,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tipo_discapacidad_PA)).EndInit();
             this.tabPagePA.ResumeLayout(false);
             this.tabPagePA.PerformLayout();
+            this.groupBox80.ResumeLayout(false);
             this.groupBox62.ResumeLayout(false);
             this.groupBox62.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -11434,10 +11476,10 @@
             this.groupBox78.PerformLayout();
             this.groupBox60.ResumeLayout(false);
             this.groupBox60.PerformLayout();
-            this.groupBox66.ResumeLayout(false);
-            this.groupBox66.PerformLayout();
             this.groupBox61.ResumeLayout(false);
             this.groupBox61.PerformLayout();
+            this.groupBox66.ResumeLayout(false);
+            this.groupBox66.PerformLayout();
             this.groupBox65.ResumeLayout(false);
             this.groupBox65.PerformLayout();
             this.groupBox12.ResumeLayout(false);
@@ -12105,10 +12147,10 @@
         private System.Windows.Forms.Label label260;
         private System.Windows.Forms.GroupBox groupBox61;
         private System.Windows.Forms.Label label261;
-        private System.Windows.Forms.ComboBox cmb_dinamico;
+        private System.Windows.Forms.ComboBox cmb_grupo_parlamentario_personal_apoyo;
         private System.Windows.Forms.Label label262;
-        private System.Windows.Forms.TextBox textBox111;
-        private System.Windows.Forms.ComboBox comboBox92;
+        private System.Windows.Forms.TextBox txt_ID_persona_legisladora_personal_apoyo;
+        private System.Windows.Forms.ComboBox cmb_nombre_persona_legisladora_personal_apoyo;
         private System.Windows.Forms.Label label263;
         private System.Windows.Forms.TextBox txt_otro_tipo_adscripcion_personal_apoyo_especifique;
         private System.Windows.Forms.Label label264;
@@ -12144,8 +12186,8 @@
         private System.Windows.Forms.Label label281;
         private System.Windows.Forms.GroupBox groupBox66;
         private System.Windows.Forms.Label label282;
-        private System.Windows.Forms.TextBox textBox119;
-        private System.Windows.Forms.ComboBox comboBox101;
+        private System.Windows.Forms.TextBox txt_ID_comision_legislativa_personal_apoyo;
+        private System.Windows.Forms.ComboBox cmb_nombre_comision_legislativa_personal_apoyo;
         private System.Windows.Forms.Label label283;
         private System.Windows.Forms.ComboBox cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo;
         private System.Windows.Forms.Label label284;
@@ -12296,5 +12338,8 @@
         private System.Windows.Forms.Label label299;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.GroupBox groupBox78;
+        private System.Windows.Forms.GroupBox groupBox80;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button19;
     }
 }
