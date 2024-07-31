@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,8 +48,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDG = new System.Windows.Forms.TabPage();
             this.groupBox79 = new System.Windows.Forms.GroupBox();
@@ -380,6 +383,24 @@
             this.label63 = new System.Windows.Forms.Label();
             this.txt_nombre_3_persona_legisladora = new System.Windows.Forms.TextBox();
             this.tabPagePA = new System.Windows.Forms.TabPage();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.cmb_carrera_doctorado_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.cmb_carrera_maestria_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmb_carrera_licenciatura_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label304 = new System.Windows.Forms.Label();
+            this.label305 = new System.Windows.Forms.Label();
+            this.label307 = new System.Windows.Forms.Label();
+            this.label308 = new System.Windows.Forms.Label();
+            this.cmb_escolaridad_personal_apoyo = new System.Windows.Forms.ComboBox();
+            this.cmb_estatus_escolaridad_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.btnGuardarDB_PA = new System.Windows.Forms.Button();
             this.groupBox81 = new System.Windows.Forms.GroupBox();
             this.button19 = new System.Windows.Forms.Button();
@@ -388,11 +409,6 @@
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.cmb_carrera_doctorado_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.cmb_carrera_maestria_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.cmb_carrera_licenciatura_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.cmb_escolaridad_personal_apoyo = new System.Windows.Forms.ComboBox();
-            this.cmb_estatus_escolaridad_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.groupBox78 = new System.Windows.Forms.GroupBox();
             this.txt_ingreso_mensual_personal_apoyo = new System.Windows.Forms.TextBox();
@@ -466,6 +482,57 @@
             this.label274 = new System.Windows.Forms.Label();
             this.label281 = new System.Windows.Forms.Label();
             this.tabPageIni = new System.Windows.Forms.TabPage();
+            this.groupBox80 = new System.Windows.Forms.GroupBox();
+            this.groupBox85 = new System.Windows.Forms.GroupBox();
+            this.label137 = new System.Windows.Forms.Label();
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa = new System.Windows.Forms.DateTimePicker();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.label138 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa = new System.Windows.Forms.ComboBox();
+            this.label139 = new System.Windows.Forms.Label();
+            this.button37 = new System.Windows.Forms.Button();
+            this.groupBox62 = new System.Windows.Forms.GroupBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.groupBox87 = new System.Windows.Forms.GroupBox();
+            this.txt_votaciones_pleno_abstencion_iniciativa = new System.Windows.Forms.TextBox();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.label144 = new System.Windows.Forms.Label();
+            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.txt_total_votaciones_pleno_iniciativa = new System.Windows.Forms.TextBox();
+            this.label142 = new System.Windows.Forms.Label();
+            this.txt_votaciones_pleno_a_favor_iniciativa = new System.Windows.Forms.TextBox();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.label143 = new System.Windows.Forms.Label();
+            this.dtp_fecha_resolucion_pleno_iniciativa = new System.Windows.Forms.DateTimePicker();
+            this.cmb_sentido_resolucion_pleno_iniciativa = new System.Windows.Forms.ComboBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.cmb_tipo_primer_dictamen = new System.Windows.Forms.GroupBox();
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique = new System.Windows.Forms.TextBox();
+            this.cmb_sentido_resolucion_primer_dictamen = new System.Windows.Forms.ComboBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.label147 = new System.Windows.Forms.Label();
+            this.txt_otro_tipo_primer_dictamen_especifique = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique = new System.Windows.Forms.TextBox();
+            this.cmb_sentido_resolucion_segundo_dictamen = new System.Windows.Forms.ComboBox();
+            this.label266 = new System.Windows.Forms.Label();
+            this.label267 = new System.Windows.Forms.Label();
+            this.txt_otro_tipo_segundo_dictamen_especifique = new System.Windows.Forms.TextBox();
+            this.label268 = new System.Windows.Forms.Label();
+            this.cmb_tipo_segundo_dictamen = new System.Windows.Forms.ComboBox();
+            this.label306 = new System.Windows.Forms.Label();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.label124 = new System.Windows.Forms.Label();
@@ -485,6 +552,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label115 = new System.Windows.Forms.Label();
             this.txt_ID_comision_legislativa_1_primer_estudio = new System.Windows.Forms.TextBox();
+            this.label135 = new System.Windows.Forms.Label();
+            this.txt_ID_iniciativa = new System.Windows.Forms.TextBox();
             this.groupBox83 = new System.Windows.Forms.GroupBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.cmb_cond_adhesion_iniciativa = new System.Windows.Forms.ComboBox();
@@ -548,8 +617,6 @@
             this.label134 = new System.Windows.Forms.Label();
             this.cmb_cond_presentacion_iniciativa_legislatura_actual = new System.Windows.Forms.ComboBox();
             this.label136 = new System.Windows.Forms.Label();
-            this.label135 = new System.Windows.Forms.Label();
-            this.txt_ID_iniciativa = new System.Windows.Forms.TextBox();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.txt_otro_estatus_iniciativa_especifique = new System.Windows.Forms.TextBox();
             this.cmb_etapa_procesal_iniciativa = new System.Windows.Forms.ComboBox();
@@ -561,35 +628,7 @@
             this.cmb_cond_modificacion_informacion_ingreso_periodo = new System.Windows.Forms.ComboBox();
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo = new System.Windows.Forms.ComboBox();
             this.label131 = new System.Windows.Forms.Label();
-            this.groupBox36 = new System.Windows.Forms.GroupBox();
-            this.cmb_tipo_primer_dictamen = new System.Windows.Forms.GroupBox();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa = new System.Windows.Forms.DateTimePicker();
-            this.label137 = new System.Windows.Forms.Label();
-            this.label138 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa = new System.Windows.Forms.ComboBox();
-            this.label139 = new System.Windows.Forms.Label();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.txt_votaciones_pleno_abstencion_iniciativa = new System.Windows.Forms.TextBox();
-            this.label140 = new System.Windows.Forms.Label();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.label141 = new System.Windows.Forms.Label();
-            this.txt_votaciones_pleno_a_favor_iniciativa = new System.Windows.Forms.TextBox();
-            this.label142 = new System.Windows.Forms.Label();
-            this.txt_total_votaciones_pleno_iniciativa = new System.Windows.Forms.TextBox();
-            this.label143 = new System.Windows.Forms.Label();
-            this.dtp_fecha_resolucion_pleno_iniciativa = new System.Windows.Forms.DateTimePicker();
-            this.label144 = new System.Windows.Forms.Label();
-            this.cmb_sentido_resolucion_pleno_iniciativa = new System.Windows.Forms.ComboBox();
-            this.label145 = new System.Windows.Forms.Label();
             this.tabPageIniUO = new System.Windows.Forms.TabPage();
-            this.groupBox38 = new System.Windows.Forms.GroupBox();
-            this.label148 = new System.Windows.Forms.Label();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.label149 = new System.Windows.Forms.Label();
-            this.textBox50 = new System.Windows.Forms.TextBox();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.textBox51 = new System.Windows.Forms.TextBox();
             this.label150 = new System.Windows.Forms.Label();
@@ -600,37 +639,21 @@
             this.label152 = new System.Windows.Forms.Label();
             this.comboBox57 = new System.Windows.Forms.ComboBox();
             this.label153 = new System.Windows.Forms.Label();
-            this.groupBox42 = new System.Windows.Forms.GroupBox();
-            this.listView11 = new System.Windows.Forms.ListView();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label154 = new System.Windows.Forms.Label();
-            this.groupBox43 = new System.Windows.Forms.GroupBox();
-            this.listView12 = new System.Windows.Forms.ListView();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label155 = new System.Windows.Forms.Label();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.listView13 = new System.Windows.Forms.ListView();
-            this.button16 = new System.Windows.Forms.Button();
-            this.label156 = new System.Windows.Forms.Label();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
-            this.comboBox58 = new System.Windows.Forms.ComboBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.label157 = new System.Windows.Forms.Label();
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique = new System.Windows.Forms.TextBox();
             this.label158 = new System.Windows.Forms.Label();
-            this.comboBox59 = new System.Windows.Forms.ComboBox();
+            this.cmb_tipo_iniciativa_urgente_obvia = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia = new System.Windows.Forms.DateTimePicker();
             this.label160 = new System.Windows.Forms.Label();
-            this.textBox54 = new System.Windows.Forms.TextBox();
+            this.txt_nombre_iniciativa_urgente_obvia = new System.Windows.Forms.TextBox();
             this.label161 = new System.Windows.Forms.Label();
             this.label162 = new System.Windows.Forms.Label();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes = new System.Windows.Forms.DateTimePicker();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.comboBox60 = new System.Windows.Forms.ComboBox();
+            this.txt_turno_iniciativa_urgente_obvia = new System.Windows.Forms.TextBox();
+            this.cmb_estatus_iniciativa_urgente_obvia = new System.Windows.Forms.ComboBox();
             this.label163 = new System.Windows.Forms.Label();
-            this.label164 = new System.Windows.Forms.Label();
-            this.textBox56 = new System.Windows.Forms.TextBox();
             this.label165 = new System.Windows.Forms.Label();
             this.tabPageJP = new System.Windows.Forms.TabPage();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
@@ -834,48 +857,60 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label126 = new System.Windows.Forms.Label();
-            this.label304 = new System.Windows.Forms.Label();
-            this.label305 = new System.Windows.Forms.Label();
-            this.label307 = new System.Windows.Forms.Label();
-            this.label308 = new System.Windows.Forms.Label();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.txt_otro_tipo_primer_dictamen_especifique = new System.Windows.Forms.TextBox();
-            this.label146 = new System.Windows.Forms.Label();
-            this.label147 = new System.Windows.Forms.Label();
-            this.cmb_sentido_resolucion_primer_dictamen = new System.Windows.Forms.ComboBox();
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique = new System.Windows.Forms.TextBox();
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique = new System.Windows.Forms.TextBox();
-            this.cmb_sentido_resolucion_segundo_dictamen = new System.Windows.Forms.ComboBox();
-            this.label266 = new System.Windows.Forms.Label();
-            this.label267 = new System.Windows.Forms.Label();
-            this.txt_otro_tipo_segundo_dictamen_especifique = new System.Windows.Forms.TextBox();
-            this.label268 = new System.Windows.Forms.Label();
-            this.cmb_tipo_segundo_dictamen = new System.Windows.Forms.ComboBox();
-            this.label306 = new System.Windows.Forms.Label();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.groupBox62 = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.button37 = new System.Windows.Forms.Button();
-            this.groupBox80 = new System.Windows.Forms.GroupBox();
-            this.groupBox85 = new System.Windows.Forms.GroupBox();
-            this.groupBox87 = new System.Windows.Forms.GroupBox();
+            this.groupBox86 = new System.Windows.Forms.GroupBox();
+            this.groupBox88 = new System.Windows.Forms.GroupBox();
+            this.groupBox89 = new System.Windows.Forms.GroupBox();
+            this.groupBox90 = new System.Windows.Forms.GroupBox();
+            this.label309 = new System.Windows.Forms.Label();
+            this.txt_ID_iniciativa_urgente_obvia = new System.Windows.Forms.TextBox();
+            this.groupBox91 = new System.Windows.Forms.GroupBox();
+            this.groupBox92 = new System.Windows.Forms.GroupBox();
+            this.groupBox93 = new System.Windows.Forms.GroupBox();
+            this.groupBox94 = new System.Windows.Forms.GroupBox();
+            this.groupBox95 = new System.Windows.Forms.GroupBox();
+            this.groupBox96 = new System.Windows.Forms.GroupBox();
+            this.label164 = new System.Windows.Forms.Label();
+            this.label310 = new System.Windows.Forms.Label();
+            this.label311 = new System.Windows.Forms.Label();
+            this.label312 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique = new System.Windows.Forms.TextBox();
+            this.label313 = new System.Windows.Forms.Label();
+            this.groupBox97 = new System.Windows.Forms.GroupBox();
+            this.label314 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.label315 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.groupBox98 = new System.Windows.Forms.GroupBox();
+            this.label316 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.dataGridView12 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.groupBox99 = new System.Windows.Forms.GroupBox();
+            this.label317 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.dataGridView13 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button42 = new System.Windows.Forms.Button();
+            this.button43 = new System.Windows.Forms.Button();
+            this.label318 = new System.Windows.Forms.Label();
+            this.txt_ = new System.Windows.Forms.TextBox();
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia = new System.Windows.Forms.ComboBox();
+            this.label319 = new System.Windows.Forms.Label();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.label154 = new System.Windows.Forms.Label();
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia = new System.Windows.Forms.ComboBox();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPageDG.SuspendLayout();
             this.groupBox79.SuspendLayout();
@@ -927,6 +962,9 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tipo_discapacidad_PA)).BeginInit();
             this.tabPagePA.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.groupBox81.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox15.SuspendLayout();
@@ -941,6 +979,17 @@
             this.groupBox64.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageIni.SuspendLayout();
+            this.groupBox80.SuspendLayout();
+            this.groupBox85.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox62.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            this.groupBox37.SuspendLayout();
+            this.groupBox87.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.cmb_tipo_primer_dictamen.SuspendLayout();
+            this.groupBox36.SuspendLayout();
             this.groupBox28.SuspendLayout();
             this.groupBox25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
@@ -957,18 +1006,9 @@
             this.groupBox82.SuspendLayout();
             this.groupBox33.SuspendLayout();
             this.groupBox32.SuspendLayout();
-            this.groupBox36.SuspendLayout();
-            this.cmb_tipo_primer_dictamen.SuspendLayout();
-            this.groupBox34.SuspendLayout();
-            this.groupBox35.SuspendLayout();
             this.tabPageIniUO.SuspendLayout();
-            this.groupBox38.SuspendLayout();
-            this.groupBox39.SuspendLayout();
             this.groupBox40.SuspendLayout();
             this.groupBox41.SuspendLayout();
-            this.groupBox42.SuspendLayout();
-            this.groupBox43.SuspendLayout();
-            this.groupBox44.SuspendLayout();
             this.groupBox45.SuspendLayout();
             this.groupBox46.SuspendLayout();
             this.tabPageJP.SuspendLayout();
@@ -988,16 +1028,24 @@
             this.groupBox58.SuspendLayout();
             this.groupBox59.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox29.SuspendLayout();
-            this.groupBox30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            this.groupBox31.SuspendLayout();
-            this.groupBox37.SuspendLayout();
-            this.groupBox62.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            this.groupBox80.SuspendLayout();
-            this.groupBox85.SuspendLayout();
-            this.groupBox87.SuspendLayout();
+            this.groupBox86.SuspendLayout();
+            this.groupBox88.SuspendLayout();
+            this.groupBox89.SuspendLayout();
+            this.groupBox90.SuspendLayout();
+            this.groupBox91.SuspendLayout();
+            this.groupBox92.SuspendLayout();
+            this.groupBox93.SuspendLayout();
+            this.groupBox94.SuspendLayout();
+            this.groupBox95.SuspendLayout();
+            this.groupBox96.SuspendLayout();
+            this.groupBox97.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            this.groupBox98.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
+            this.groupBox99.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
+            this.groupBox38.SuspendLayout();
+            this.groupBox39.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1252,14 +1300,14 @@
             this.fecha_inicio_pe,
             this.fecha_termino_pe,
             this.sesiones_celebradas_pe});
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvPE.Location = new System.Drawing.Point(18, 97);
             this.dgvPE.Name = "dgvPE";
             this.dgvPE.ReadOnly = true;
@@ -1868,7 +1916,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(361, 8627);
+            this.btnGuardarCL.Location = new System.Drawing.Point(343, 8797);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -1958,23 +2006,23 @@
             this.dgv_registros_cl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_cl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_cl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgv_registros_cl.Location = new System.Drawing.Point(12, 21);
             this.dgv_registros_cl.MultiSelect = false;
             this.dgv_registros_cl.Name = "dgv_registros_cl";
             this.dgv_registros_cl.ReadOnly = true;
             this.dgv_registros_cl.RowHeadersVisible = false;
             this.dgv_registros_cl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dgv_registros_cl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_registros_cl.Size = new System.Drawing.Size(1079, 126);
             this.dgv_registros_cl.TabIndex = 30;
@@ -1984,7 +2032,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(271, 10688);
+            this.button24.Location = new System.Drawing.Point(253, 10858);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -2378,14 +2426,14 @@
             this.dgv_tema_comision_legislativa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tema_comision_legislativa,
             this.otro_tema_comision_legislativa_especifique});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgv_tema_comision_legislativa.Location = new System.Drawing.Point(12, 64);
             this.dgv_tema_comision_legislativa.Name = "dgv_tema_comision_legislativa";
             this.dgv_tema_comision_legislativa.ReadOnly = true;
@@ -2607,14 +2655,14 @@
             this.dgv_registros_pl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_pl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_pl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle30;
             this.dgv_registros_pl.Location = new System.Drawing.Point(12, 31);
             this.dgv_registros_pl.Name = "dgv_registros_pl";
             this.dgv_registros_pl.ReadOnly = true;
@@ -3087,14 +3135,14 @@
             this.nombre_comision_legislativa,
             this.ID_comision_legislativa_pc,
             this.cargo_comision_legislativa});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle31;
             this.dgv_participacion_comisiones.Location = new System.Drawing.Point(13, 117);
             this.dgv_participacion_comisiones.Name = "dgv_participacion_comisiones";
             this.dgv_participacion_comisiones.ReadOnly = true;
@@ -3919,14 +3967,14 @@
             this.dgv_partido_coalicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_partido_coalicion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partido_politico_candidatura_coalicion});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgv_partido_coalicion.Location = new System.Drawing.Point(626, 68);
             this.dgv_partido_coalicion.Name = "dgv_partido_coalicion";
             this.dgv_partido_coalicion.ReadOnly = true;
@@ -4423,14 +4471,14 @@
             this.lic_pl,
             this.mae_pl,
             this.doc_pl});
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle33;
             this.dgv_nivel_escolaridad_PL.Location = new System.Drawing.Point(28, 70);
             this.dgv_nivel_escolaridad_PL.Name = "dgv_nivel_escolaridad_PL";
             this.dgv_nivel_escolaridad_PL.ReadOnly = true;
@@ -4884,14 +4932,14 @@
             this.dgv_lengua_PA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lengua_PA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lengua_ind_persona_legisladora});
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_lengua_PA.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_lengua_PA.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgv_lengua_PA.Location = new System.Drawing.Point(17, 64);
             this.dgv_lengua_PA.Name = "dgv_lengua_PA";
             this.dgv_lengua_PA.ReadOnly = true;
@@ -5043,14 +5091,14 @@
             this.dgv_tipo_discapacidad_PA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tipo_discapacidad_PA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo_discapacidad_persona_legisladora});
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tipo_discapacidad_PA.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tipo_discapacidad_PA.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgv_tipo_discapacidad_PA.Location = new System.Drawing.Point(13, 103);
             this.dgv_tipo_discapacidad_PA.Name = "dgv_tipo_discapacidad_PA";
             this.dgv_tipo_discapacidad_PA.ReadOnly = true;
@@ -5248,6 +5296,233 @@
             this.tabPagePA.Text = "Personal apoyo";
             this.tabPagePA.UseVisualStyleBackColor = true;
             // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.groupBox30);
+            this.groupBox29.Controls.Add(this.label307);
+            this.groupBox29.Controls.Add(this.label308);
+            this.groupBox29.Controls.Add(this.cmb_escolaridad_personal_apoyo);
+            this.groupBox29.Controls.Add(this.cmb_estatus_escolaridad_personal_apoyo);
+            this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox29.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox29.Location = new System.Drawing.Point(6, 862);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(1211, 310);
+            this.groupBox29.TabIndex = 57;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Perfil profesional";
+            this.groupBox29.UseWaitCursor = true;
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.cmb_carrera_doctorado_personal_apoyo);
+            this.groupBox30.Controls.Add(this.button11);
+            this.groupBox30.Controls.Add(this.button33);
+            this.groupBox30.Controls.Add(this.cmb_carrera_maestria_personal_apoyo);
+            this.groupBox30.Controls.Add(this.dataGridView9);
+            this.groupBox30.Controls.Add(this.cmb_carrera_licenciatura_personal_apoyo);
+            this.groupBox30.Controls.Add(this.label126);
+            this.groupBox30.Controls.Add(this.label304);
+            this.groupBox30.Controls.Add(this.label305);
+            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox30.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox30.Location = new System.Drawing.Point(17, 65);
+            this.groupBox30.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBox30.Size = new System.Drawing.Size(1181, 235);
+            this.groupBox30.TabIndex = 49;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Nivel de escolaridad";
+            this.groupBox30.UseWaitCursor = true;
+            // 
+            // cmb_carrera_doctorado_personal_apoyo
+            // 
+            this.cmb_carrera_doctorado_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_carrera_doctorado_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_carrera_doctorado_personal_apoyo.FormattingEnabled = true;
+            this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(913, 33);
+            this.cmb_carrera_doctorado_personal_apoyo.Name = "cmb_carrera_doctorado_personal_apoyo";
+            this.cmb_carrera_doctorado_personal_apoyo.Size = new System.Drawing.Size(258, 24);
+            this.cmb_carrera_doctorado_personal_apoyo.TabIndex = 37;
+            this.cmb_carrera_doctorado_personal_apoyo.UseWaitCursor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(1062, 152);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(104, 32);
+            this.button11.TabIndex = 58;
+            this.button11.Text = "Eliminar";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseWaitCursor = true;
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(1062, 100);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(104, 32);
+            this.button33.TabIndex = 57;
+            this.button33.Text = "Agregar";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.UseWaitCursor = true;
+            // 
+            // cmb_carrera_maestria_personal_apoyo
+            // 
+            this.cmb_carrera_maestria_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_carrera_maestria_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_carrera_maestria_personal_apoyo.FormattingEnabled = true;
+            this.cmb_carrera_maestria_personal_apoyo.Location = new System.Drawing.Point(489, 33);
+            this.cmb_carrera_maestria_personal_apoyo.Name = "cmb_carrera_maestria_personal_apoyo";
+            this.cmb_carrera_maestria_personal_apoyo.Size = new System.Drawing.Size(332, 24);
+            this.cmb_carrera_maestria_personal_apoyo.TabIndex = 35;
+            this.cmb_carrera_maestria_personal_apoyo.UseWaitCursor = true;
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.AllowUserToAddRows = false;
+            this.dataGridView9.AllowUserToDeleteRows = false;
+            this.dataGridView9.AllowUserToResizeRows = false;
+            this.dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView9.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle36;
+            this.dataGridView9.Location = new System.Drawing.Point(28, 78);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.ReadOnly = true;
+            this.dataGridView9.RowHeadersVisible = false;
+            this.dataGridView9.RowHeadersWidth = 51;
+            this.dataGridView9.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView9.Size = new System.Drawing.Size(1005, 149);
+            this.dataGridView9.TabIndex = 55;
+            this.dataGridView9.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Licenciatura";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Maestría";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Doctorado";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // cmb_carrera_licenciatura_personal_apoyo
+            // 
+            this.cmb_carrera_licenciatura_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_carrera_licenciatura_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_carrera_licenciatura_personal_apoyo.FormattingEnabled = true;
+            this.cmb_carrera_licenciatura_personal_apoyo.Location = new System.Drawing.Point(91, 33);
+            this.cmb_carrera_licenciatura_personal_apoyo.Name = "cmb_carrera_licenciatura_personal_apoyo";
+            this.cmb_carrera_licenciatura_personal_apoyo.Size = new System.Drawing.Size(312, 24);
+            this.cmb_carrera_licenciatura_personal_apoyo.TabIndex = 33;
+            this.cmb_carrera_licenciatura_personal_apoyo.UseWaitCursor = true;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label126.ForeColor = System.Drawing.Color.Black;
+            this.label126.Location = new System.Drawing.Point(840, 36);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(67, 15);
+            this.label126.TabIndex = 37;
+            this.label126.Text = "Doctorado:";
+            this.label126.UseWaitCursor = true;
+            // 
+            // label304
+            // 
+            this.label304.AutoSize = true;
+            this.label304.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label304.ForeColor = System.Drawing.Color.Black;
+            this.label304.Location = new System.Drawing.Point(8, 36);
+            this.label304.Name = "label304";
+            this.label304.Size = new System.Drawing.Size(77, 15);
+            this.label304.TabIndex = 42;
+            this.label304.Text = "Licenciatura:";
+            this.label304.UseWaitCursor = true;
+            // 
+            // label305
+            // 
+            this.label305.AutoSize = true;
+            this.label305.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label305.ForeColor = System.Drawing.Color.Black;
+            this.label305.Location = new System.Drawing.Point(425, 36);
+            this.label305.Name = "label305";
+            this.label305.Size = new System.Drawing.Size(58, 15);
+            this.label305.TabIndex = 44;
+            this.label305.Text = "Maestria:";
+            this.label305.UseWaitCursor = true;
+            // 
+            // label307
+            // 
+            this.label307.AutoSize = true;
+            this.label307.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label307.ForeColor = System.Drawing.Color.Black;
+            this.label307.Location = new System.Drawing.Point(637, 31);
+            this.label307.Name = "label307";
+            this.label307.Size = new System.Drawing.Size(251, 15);
+            this.label307.TabIndex = 47;
+            this.label307.Text = "Estatus del último grado de estudios*:";
+            this.label307.UseWaitCursor = true;
+            // 
+            // label308
+            // 
+            this.label308.AutoSize = true;
+            this.label308.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label308.ForeColor = System.Drawing.Color.Black;
+            this.label308.Location = new System.Drawing.Point(18, 27);
+            this.label308.Name = "label308";
+            this.label308.Size = new System.Drawing.Size(178, 15);
+            this.label308.TabIndex = 46;
+            this.label308.Text = "Último grado de estudios*:";
+            this.label308.UseWaitCursor = true;
+            // 
+            // cmb_escolaridad_personal_apoyo
+            // 
+            this.cmb_escolaridad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_escolaridad_personal_apoyo.FormattingEnabled = true;
+            this.cmb_escolaridad_personal_apoyo.ItemHeight = 16;
+            this.cmb_escolaridad_personal_apoyo.Location = new System.Drawing.Point(202, 24);
+            this.cmb_escolaridad_personal_apoyo.Name = "cmb_escolaridad_personal_apoyo";
+            this.cmb_escolaridad_personal_apoyo.Size = new System.Drawing.Size(260, 24);
+            this.cmb_escolaridad_personal_apoyo.TabIndex = 32;
+            this.cmb_escolaridad_personal_apoyo.UseWaitCursor = true;
+            // 
+            // cmb_estatus_escolaridad_personal_apoyo
+            // 
+            this.cmb_estatus_escolaridad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_estatus_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_estatus_escolaridad_personal_apoyo.FormattingEnabled = true;
+            this.cmb_estatus_escolaridad_personal_apoyo.Location = new System.Drawing.Point(899, 28);
+            this.cmb_estatus_escolaridad_personal_apoyo.Name = "cmb_estatus_escolaridad_personal_apoyo";
+            this.cmb_estatus_escolaridad_personal_apoyo.Size = new System.Drawing.Size(249, 24);
+            this.cmb_estatus_escolaridad_personal_apoyo.TabIndex = 23;
+            this.cmb_estatus_escolaridad_personal_apoyo.UseWaitCursor = true;
+            // 
             // btnGuardarDB_PA
             // 
             this.btnGuardarDB_PA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5342,77 +5617,26 @@
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridView3.Location = new System.Drawing.Point(12, 21);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(1079, 154);
             this.dataGridView3.TabIndex = 30;
-            // 
-            // cmb_carrera_doctorado_personal_apoyo
-            // 
-            this.cmb_carrera_doctorado_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_carrera_doctorado_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_carrera_doctorado_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_doctorado_personal_apoyo.Location = new System.Drawing.Point(913, 33);
-            this.cmb_carrera_doctorado_personal_apoyo.Name = "cmb_carrera_doctorado_personal_apoyo";
-            this.cmb_carrera_doctorado_personal_apoyo.Size = new System.Drawing.Size(258, 24);
-            this.cmb_carrera_doctorado_personal_apoyo.TabIndex = 37;
-            // 
-            // cmb_carrera_maestria_personal_apoyo
-            // 
-            this.cmb_carrera_maestria_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_carrera_maestria_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_carrera_maestria_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_maestria_personal_apoyo.Location = new System.Drawing.Point(489, 33);
-            this.cmb_carrera_maestria_personal_apoyo.Name = "cmb_carrera_maestria_personal_apoyo";
-            this.cmb_carrera_maestria_personal_apoyo.Size = new System.Drawing.Size(332, 24);
-            this.cmb_carrera_maestria_personal_apoyo.TabIndex = 35;
-            // 
-            // cmb_carrera_licenciatura_personal_apoyo
-            // 
-            this.cmb_carrera_licenciatura_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_carrera_licenciatura_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_carrera_licenciatura_personal_apoyo.FormattingEnabled = true;
-            this.cmb_carrera_licenciatura_personal_apoyo.Location = new System.Drawing.Point(91, 33);
-            this.cmb_carrera_licenciatura_personal_apoyo.Name = "cmb_carrera_licenciatura_personal_apoyo";
-            this.cmb_carrera_licenciatura_personal_apoyo.Size = new System.Drawing.Size(312, 24);
-            this.cmb_carrera_licenciatura_personal_apoyo.TabIndex = 33;
-            // 
-            // cmb_escolaridad_personal_apoyo
-            // 
-            this.cmb_escolaridad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_escolaridad_personal_apoyo.FormattingEnabled = true;
-            this.cmb_escolaridad_personal_apoyo.ItemHeight = 16;
-            this.cmb_escolaridad_personal_apoyo.Location = new System.Drawing.Point(202, 24);
-            this.cmb_escolaridad_personal_apoyo.Name = "cmb_escolaridad_personal_apoyo";
-            this.cmb_escolaridad_personal_apoyo.Size = new System.Drawing.Size(260, 24);
-            this.cmb_escolaridad_personal_apoyo.TabIndex = 32;
-            // 
-            // cmb_estatus_escolaridad_personal_apoyo
-            // 
-            this.cmb_estatus_escolaridad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_estatus_escolaridad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_estatus_escolaridad_personal_apoyo.FormattingEnabled = true;
-            this.cmb_estatus_escolaridad_personal_apoyo.Location = new System.Drawing.Point(899, 28);
-            this.cmb_estatus_escolaridad_personal_apoyo.Name = "cmb_estatus_escolaridad_personal_apoyo";
-            this.cmb_estatus_escolaridad_personal_apoyo.Size = new System.Drawing.Size(249, 24);
-            this.cmb_estatus_escolaridad_personal_apoyo.TabIndex = 23;
             // 
             // groupBox15
             // 
@@ -6030,14 +6254,14 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridView2.Location = new System.Drawing.Point(18, 94);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -6221,14 +6445,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridView1.Location = new System.Drawing.Point(9, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -6320,6 +6544,657 @@
             this.tabPageIni.Text = "Iniciativas";
             this.tabPageIni.UseVisualStyleBackColor = true;
             // 
+            // groupBox80
+            // 
+            this.groupBox80.Controls.Add(this.groupBox85);
+            this.groupBox80.Controls.Add(this.groupBox34);
+            this.groupBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox80.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox80.Location = new System.Drawing.Point(3, 1832);
+            this.groupBox80.Name = "groupBox80";
+            this.groupBox80.Size = new System.Drawing.Size(1235, 118);
+            this.groupBox80.TabIndex = 86;
+            this.groupBox80.TabStop = false;
+            this.groupBox80.Text = "Publicación";
+            this.groupBox80.UseWaitCursor = true;
+            // 
+            // groupBox85
+            // 
+            this.groupBox85.Controls.Add(this.label137);
+            this.groupBox85.Controls.Add(this.dtp_fecha_publicacion_gaceta_oficial_iniciativa);
+            this.groupBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox85.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox85.Location = new System.Drawing.Point(901, 21);
+            this.groupBox85.Name = "groupBox85";
+            this.groupBox85.Size = new System.Drawing.Size(325, 82);
+            this.groupBox85.TabIndex = 94;
+            this.groupBox85.TabStop = false;
+            this.groupBox85.Text = "Gaceta o Periódico Oficial";
+            this.groupBox85.UseWaitCursor = true;
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label137.ForeColor = System.Drawing.Color.Black;
+            this.label137.Location = new System.Drawing.Point(66, 39);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(127, 15);
+            this.label137.TabIndex = 63;
+            this.label137.Text = "Fecha de publicación:";
+            this.label137.UseWaitCursor = true;
+            // 
+            // dtp_fecha_publicacion_gaceta_oficial_iniciativa
+            // 
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Location = new System.Drawing.Point(206, 36);
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Name = "dtp_fecha_publicacion_gaceta_oficial_iniciativa";
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.TabIndex = 64;
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.UseWaitCursor = true;
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Controls.Add(this.label138);
+            this.groupBox34.Controls.Add(this.dateTimePicker3);
+            this.groupBox34.Controls.Add(this.cmb_sentido_resolucion_ejecutivo_iniciativa);
+            this.groupBox34.Controls.Add(this.label139);
+            this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox34.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox34.Location = new System.Drawing.Point(9, 21);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(879, 82);
+            this.groupBox34.TabIndex = 85;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "Poder Ejecutivo";
+            this.groupBox34.UseWaitCursor = true;
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label138.ForeColor = System.Drawing.Color.Black;
+            this.label138.Location = new System.Drawing.Point(335, 40);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(250, 15);
+            this.label138.TabIndex = 62;
+            this.label138.Text = "Sentido de la resolución del Poder Ejecutivo:";
+            this.label138.UseWaitCursor = true;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(229, 40);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(79, 20);
+            this.dateTimePicker3.TabIndex = 61;
+            this.dateTimePicker3.UseWaitCursor = true;
+            this.dateTimePicker3.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // cmb_sentido_resolucion_ejecutivo_iniciativa
+            // 
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.FormattingEnabled = true;
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Location = new System.Drawing.Point(592, 36);
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Name = "cmb_sentido_resolucion_ejecutivo_iniciativa";
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Size = new System.Drawing.Size(279, 23);
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.TabIndex = 41;
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.UseWaitCursor = true;
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label139.ForeColor = System.Drawing.Color.Black;
+            this.label139.Location = new System.Drawing.Point(10, 40);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(213, 15);
+            this.label139.TabIndex = 19;
+            this.label139.Text = "Fecha de remisión al Poder Ejecutivo:";
+            this.label139.UseWaitCursor = true;
+            // 
+            // button37
+            // 
+            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button37.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button37.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button37.Location = new System.Drawing.Point(559, 1968);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(148, 27);
+            this.button37.TabIndex = 93;
+            this.button37.Text = "Guardar información";
+            this.button37.UseVisualStyleBackColor = true;
+            // 
+            // groupBox62
+            // 
+            this.groupBox62.Controls.Add(this.button12);
+            this.groupBox62.Controls.Add(this.button13);
+            this.groupBox62.Controls.Add(this.button34);
+            this.groupBox62.Controls.Add(this.button35);
+            this.groupBox62.Controls.Add(this.button36);
+            this.groupBox62.Controls.Add(this.dataGridView10);
+            this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox62.ForeColor = System.Drawing.Color.Green;
+            this.groupBox62.Location = new System.Drawing.Point(3, 2011);
+            this.groupBox62.Name = "groupBox62";
+            this.groupBox62.Size = new System.Drawing.Size(1235, 213);
+            this.groupBox62.TabIndex = 92;
+            this.groupBox62.TabStop = false;
+            this.groupBox62.Text = "Registros Iniciativas";
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.Location = new System.Drawing.Point(1136, 37);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(47, 47);
+            this.button12.TabIndex = 81;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.UseWaitCursor = true;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.Location = new System.Drawing.Point(1118, 145);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(97, 27);
+            this.button13.TabIndex = 44;
+            this.button13.Text = "Eliminar";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button34.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button34.Location = new System.Drawing.Point(1118, 99);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(97, 27);
+            this.button34.TabIndex = 43;
+            this.button34.Text = "Editar";
+            this.button34.UseVisualStyleBackColor = true;
+            // 
+            // button35
+            // 
+            this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button35.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button35.Location = new System.Drawing.Point(734, 228);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(90, 27);
+            this.button35.TabIndex = 40;
+            this.button35.Text = "     Eliminar";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // button36
+            // 
+            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button36.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button36.Location = new System.Drawing.Point(371, 228);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(81, 27);
+            this.button36.TabIndex = 39;
+            this.button36.Text = "     Agregar";
+            this.button36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button36.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView10
+            // 
+            this.dataGridView10.AllowUserToAddRows = false;
+            this.dataGridView10.AllowUserToDeleteRows = false;
+            this.dataGridView10.AllowUserToResizeRows = false;
+            this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView10.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle41;
+            this.dataGridView10.Location = new System.Drawing.Point(12, 21);
+            this.dataGridView10.MultiSelect = false;
+            this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.ReadOnly = true;
+            this.dataGridView10.RowHeadersVisible = false;
+            this.dataGridView10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView10.RowsDefaultCellStyle = dataGridViewCellStyle42;
+            this.dataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView10.Size = new System.Drawing.Size(1079, 186);
+            this.dataGridView10.TabIndex = 30;
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.Controls.Add(this.groupBox87);
+            this.groupBox37.Controls.Add(this.groupBox35);
+            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox37.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox37.Location = new System.Drawing.Point(3, 1646);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Size = new System.Drawing.Size(1235, 168);
+            this.groupBox37.TabIndex = 91;
+            this.groupBox37.TabStop = false;
+            this.groupBox37.Text = "Pleno";
+            this.groupBox37.UseWaitCursor = true;
+            // 
+            // groupBox87
+            // 
+            this.groupBox87.Controls.Add(this.txt_votaciones_pleno_abstencion_iniciativa);
+            this.groupBox87.Controls.Add(this.label141);
+            this.groupBox87.Controls.Add(this.label140);
+            this.groupBox87.Controls.Add(this.label144);
+            this.groupBox87.Controls.Add(this.textBox46);
+            this.groupBox87.Controls.Add(this.txt_total_votaciones_pleno_iniciativa);
+            this.groupBox87.Controls.Add(this.label142);
+            this.groupBox87.Controls.Add(this.txt_votaciones_pleno_a_favor_iniciativa);
+            this.groupBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox87.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox87.Location = new System.Drawing.Point(599, 22);
+            this.groupBox87.Name = "groupBox87";
+            this.groupBox87.Size = new System.Drawing.Size(628, 133);
+            this.groupBox87.TabIndex = 84;
+            this.groupBox87.TabStop = false;
+            this.groupBox87.Text = "Votaciones plenarias";
+            this.groupBox87.UseWaitCursor = true;
+            // 
+            // txt_votaciones_pleno_abstencion_iniciativa
+            // 
+            this.txt_votaciones_pleno_abstencion_iniciativa.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_votaciones_pleno_abstencion_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_votaciones_pleno_abstencion_iniciativa.Location = new System.Drawing.Point(234, 101);
+            this.txt_votaciones_pleno_abstencion_iniciativa.Name = "txt_votaciones_pleno_abstencion_iniciativa";
+            this.txt_votaciones_pleno_abstencion_iniciativa.Size = new System.Drawing.Size(83, 21);
+            this.txt_votaciones_pleno_abstencion_iniciativa.TabIndex = 69;
+            this.txt_votaciones_pleno_abstencion_iniciativa.UseWaitCursor = true;
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label141.ForeColor = System.Drawing.Color.Black;
+            this.label141.Location = new System.Drawing.Point(14, 65);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(178, 15);
+            this.label141.TabIndex = 66;
+            this.label141.Text = "Votaciones plenarias en contra:";
+            this.label141.UseWaitCursor = true;
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label140.ForeColor = System.Drawing.Color.Black;
+            this.label140.Location = new System.Drawing.Point(14, 101);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(204, 15);
+            this.label140.TabIndex = 68;
+            this.label140.Text = "Votaciones plenarias de abstención:";
+            this.label140.UseWaitCursor = true;
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label144.ForeColor = System.Drawing.Color.Black;
+            this.label144.Location = new System.Drawing.Point(440, 45);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(169, 15);
+            this.label144.TabIndex = 42;
+            this.label144.Text = "Total de votaciones plenarias:";
+            this.label144.UseWaitCursor = true;
+            // 
+            // textBox46
+            // 
+            this.textBox46.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox46.Location = new System.Drawing.Point(234, 62);
+            this.textBox46.Name = "textBox46";
+            this.textBox46.Size = new System.Drawing.Size(83, 21);
+            this.textBox46.TabIndex = 67;
+            this.textBox46.UseWaitCursor = true;
+            // 
+            // txt_total_votaciones_pleno_iniciativa
+            // 
+            this.txt_total_votaciones_pleno_iniciativa.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_total_votaciones_pleno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_votaciones_pleno_iniciativa.Location = new System.Drawing.Point(463, 63);
+            this.txt_total_votaciones_pleno_iniciativa.Name = "txt_total_votaciones_pleno_iniciativa";
+            this.txt_total_votaciones_pleno_iniciativa.Size = new System.Drawing.Size(121, 21);
+            this.txt_total_votaciones_pleno_iniciativa.TabIndex = 63;
+            this.txt_total_votaciones_pleno_iniciativa.UseWaitCursor = true;
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label142.ForeColor = System.Drawing.Color.Black;
+            this.label142.Location = new System.Drawing.Point(14, 25);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(163, 15);
+            this.label142.TabIndex = 64;
+            this.label142.Text = "Votaciones plenarias a favor:";
+            this.label142.UseWaitCursor = true;
+            // 
+            // txt_votaciones_pleno_a_favor_iniciativa
+            // 
+            this.txt_votaciones_pleno_a_favor_iniciativa.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_votaciones_pleno_a_favor_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_votaciones_pleno_a_favor_iniciativa.Location = new System.Drawing.Point(234, 22);
+            this.txt_votaciones_pleno_a_favor_iniciativa.Name = "txt_votaciones_pleno_a_favor_iniciativa";
+            this.txt_votaciones_pleno_a_favor_iniciativa.Size = new System.Drawing.Size(83, 21);
+            this.txt_votaciones_pleno_a_favor_iniciativa.TabIndex = 65;
+            this.txt_votaciones_pleno_a_favor_iniciativa.UseWaitCursor = true;
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.Controls.Add(this.label143);
+            this.groupBox35.Controls.Add(this.dtp_fecha_resolucion_pleno_iniciativa);
+            this.groupBox35.Controls.Add(this.cmb_sentido_resolucion_pleno_iniciativa);
+            this.groupBox35.Controls.Add(this.label145);
+            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox35.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox35.Location = new System.Drawing.Point(7, 21);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(570, 133);
+            this.groupBox35.TabIndex = 84;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "Resolución";
+            this.groupBox35.UseWaitCursor = true;
+            // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label143.ForeColor = System.Drawing.Color.Black;
+            this.label143.Location = new System.Drawing.Point(10, 73);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(197, 15);
+            this.label143.TabIndex = 62;
+            this.label143.Text = "Sentido de la resolución del Pleno:";
+            this.label143.UseWaitCursor = true;
+            // 
+            // dtp_fecha_resolucion_pleno_iniciativa
+            // 
+            this.dtp_fecha_resolucion_pleno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_resolucion_pleno_iniciativa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_resolucion_pleno_iniciativa.Location = new System.Drawing.Point(213, 33);
+            this.dtp_fecha_resolucion_pleno_iniciativa.Name = "dtp_fecha_resolucion_pleno_iniciativa";
+            this.dtp_fecha_resolucion_pleno_iniciativa.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_resolucion_pleno_iniciativa.TabIndex = 61;
+            this.dtp_fecha_resolucion_pleno_iniciativa.UseWaitCursor = true;
+            this.dtp_fecha_resolucion_pleno_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // cmb_sentido_resolucion_pleno_iniciativa
+            // 
+            this.cmb_sentido_resolucion_pleno_iniciativa.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_sentido_resolucion_pleno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sentido_resolucion_pleno_iniciativa.FormattingEnabled = true;
+            this.cmb_sentido_resolucion_pleno_iniciativa.Location = new System.Drawing.Point(213, 70);
+            this.cmb_sentido_resolucion_pleno_iniciativa.Name = "cmb_sentido_resolucion_pleno_iniciativa";
+            this.cmb_sentido_resolucion_pleno_iniciativa.Size = new System.Drawing.Size(279, 23);
+            this.cmb_sentido_resolucion_pleno_iniciativa.TabIndex = 41;
+            this.cmb_sentido_resolucion_pleno_iniciativa.UseWaitCursor = true;
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label145.ForeColor = System.Drawing.Color.Black;
+            this.label145.Location = new System.Drawing.Point(10, 34);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(189, 15);
+            this.label145.TabIndex = 19;
+            this.label145.Text = "Fecha de la resolución del Pleno:";
+            this.label145.UseWaitCursor = true;
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.cmb_tipo_primer_dictamen);
+            this.groupBox31.Controls.Add(this.groupBox36);
+            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox31.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox31.Location = new System.Drawing.Point(3, 1412);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(1235, 217);
+            this.groupBox31.TabIndex = 87;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Dictamen";
+            // 
+            // cmb_tipo_primer_dictamen
+            // 
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.txt_otro_sentido_resolucion_primer_dictamen_especifique);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.cmb_sentido_resolucion_primer_dictamen);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.label146);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.label147);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.txt_otro_tipo_primer_dictamen_especifique);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.label54);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.comboBox1);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.label42);
+            this.cmb_tipo_primer_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tipo_primer_dictamen.ForeColor = System.Drawing.Color.ForestGreen;
+            this.cmb_tipo_primer_dictamen.Location = new System.Drawing.Point(9, 21);
+            this.cmb_tipo_primer_dictamen.Name = "cmb_tipo_primer_dictamen";
+            this.cmb_tipo_primer_dictamen.Size = new System.Drawing.Size(603, 186);
+            this.cmb_tipo_primer_dictamen.TabIndex = 86;
+            this.cmb_tipo_primer_dictamen.TabStop = false;
+            this.cmb_tipo_primer_dictamen.Text = "Primer dictamen";
+            // 
+            // txt_otro_sentido_resolucion_primer_dictamen_especifique
+            // 
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Location = new System.Drawing.Point(377, 138);
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Name = "txt_otro_sentido_resolucion_primer_dictamen_especifique";
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Size = new System.Drawing.Size(185, 22);
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.TabIndex = 87;
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.UseWaitCursor = true;
+            // 
+            // cmb_sentido_resolucion_primer_dictamen
+            // 
+            this.cmb_sentido_resolucion_primer_dictamen.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_sentido_resolucion_primer_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sentido_resolucion_primer_dictamen.FormattingEnabled = true;
+            this.cmb_sentido_resolucion_primer_dictamen.Location = new System.Drawing.Point(144, 133);
+            this.cmb_sentido_resolucion_primer_dictamen.Name = "cmb_sentido_resolucion_primer_dictamen";
+            this.cmb_sentido_resolucion_primer_dictamen.Size = new System.Drawing.Size(169, 23);
+            this.cmb_sentido_resolucion_primer_dictamen.TabIndex = 86;
+            this.cmb_sentido_resolucion_primer_dictamen.UseWaitCursor = true;
+            // 
+            // label146
+            // 
+            this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label146.ForeColor = System.Drawing.Color.Black;
+            this.label146.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label146.Location = new System.Drawing.Point(358, 110);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(237, 25);
+            this.label146.TabIndex = 85;
+            this.label146.Text = "Otro sentido de resolución del dictamen:";
+            this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label146.UseWaitCursor = true;
+            // 
+            // label147
+            // 
+            this.label147.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label147.ForeColor = System.Drawing.Color.Black;
+            this.label147.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label147.Location = new System.Drawing.Point(8, 121);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(130, 41);
+            this.label147.TabIndex = 84;
+            this.label147.Text = "Sentido de resolución del dictamen:";
+            this.label147.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label147.UseWaitCursor = true;
+            // 
+            // txt_otro_tipo_primer_dictamen_especifique
+            // 
+            this.txt_otro_tipo_primer_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_tipo_primer_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_otro_tipo_primer_dictamen_especifique.Location = new System.Drawing.Point(144, 78);
+            this.txt_otro_tipo_primer_dictamen_especifique.Name = "txt_otro_tipo_primer_dictamen_especifique";
+            this.txt_otro_tipo_primer_dictamen_especifique.Size = new System.Drawing.Size(442, 22);
+            this.txt_otro_tipo_primer_dictamen_especifique.TabIndex = 83;
+            this.txt_otro_tipo_primer_dictamen_especifique.UseWaitCursor = true;
+            // 
+            // label54
+            // 
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.Black;
+            this.label54.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label54.Location = new System.Drawing.Point(9, 74);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(129, 26);
+            this.label54.TabIndex = 82;
+            this.label54.Text = "Otro tipo de dictamen:";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label54.UseWaitCursor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(125, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(460, 23);
+            this.comboBox1.TabIndex = 80;
+            this.comboBox1.UseWaitCursor = true;
+            // 
+            // label42
+            // 
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label42.Location = new System.Drawing.Point(9, 30);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(110, 26);
+            this.label42.TabIndex = 81;
+            this.label42.Text = "Tipo de dictamen:";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label42.UseWaitCursor = true;
+            // 
+            // groupBox36
+            // 
+            this.groupBox36.Controls.Add(this.txt_otro_sentido_resolucion_segundo_dictamen_especifique);
+            this.groupBox36.Controls.Add(this.cmb_sentido_resolucion_segundo_dictamen);
+            this.groupBox36.Controls.Add(this.label266);
+            this.groupBox36.Controls.Add(this.label267);
+            this.groupBox36.Controls.Add(this.txt_otro_tipo_segundo_dictamen_especifique);
+            this.groupBox36.Controls.Add(this.label268);
+            this.groupBox36.Controls.Add(this.cmb_tipo_segundo_dictamen);
+            this.groupBox36.Controls.Add(this.label306);
+            this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox36.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox36.Location = new System.Drawing.Point(630, 21);
+            this.groupBox36.Name = "groupBox36";
+            this.groupBox36.Size = new System.Drawing.Size(596, 186);
+            this.groupBox36.TabIndex = 87;
+            this.groupBox36.TabStop = false;
+            this.groupBox36.Text = "Segundo dictamen";
+            // 
+            // txt_otro_sentido_resolucion_segundo_dictamen_especifique
+            // 
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Location = new System.Drawing.Point(380, 138);
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Name = "txt_otro_sentido_resolucion_segundo_dictamen_especifique";
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Size = new System.Drawing.Size(185, 22);
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.TabIndex = 95;
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.UseWaitCursor = true;
+            // 
+            // cmb_sentido_resolucion_segundo_dictamen
+            // 
+            this.cmb_sentido_resolucion_segundo_dictamen.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_sentido_resolucion_segundo_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sentido_resolucion_segundo_dictamen.FormattingEnabled = true;
+            this.cmb_sentido_resolucion_segundo_dictamen.Location = new System.Drawing.Point(147, 133);
+            this.cmb_sentido_resolucion_segundo_dictamen.Name = "cmb_sentido_resolucion_segundo_dictamen";
+            this.cmb_sentido_resolucion_segundo_dictamen.Size = new System.Drawing.Size(169, 23);
+            this.cmb_sentido_resolucion_segundo_dictamen.TabIndex = 94;
+            this.cmb_sentido_resolucion_segundo_dictamen.UseWaitCursor = true;
+            // 
+            // label266
+            // 
+            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label266.ForeColor = System.Drawing.Color.Black;
+            this.label266.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label266.Location = new System.Drawing.Point(361, 110);
+            this.label266.Name = "label266";
+            this.label266.Size = new System.Drawing.Size(237, 25);
+            this.label266.TabIndex = 93;
+            this.label266.Text = "Otro sentido de resolución del dictamen:";
+            this.label266.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label266.UseWaitCursor = true;
+            // 
+            // label267
+            // 
+            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label267.ForeColor = System.Drawing.Color.Black;
+            this.label267.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label267.Location = new System.Drawing.Point(11, 121);
+            this.label267.Name = "label267";
+            this.label267.Size = new System.Drawing.Size(130, 41);
+            this.label267.TabIndex = 92;
+            this.label267.Text = "Sentido de resolución del dictamen:";
+            this.label267.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label267.UseWaitCursor = true;
+            // 
+            // txt_otro_tipo_segundo_dictamen_especifique
+            // 
+            this.txt_otro_tipo_segundo_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_tipo_segundo_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_otro_tipo_segundo_dictamen_especifique.Location = new System.Drawing.Point(147, 78);
+            this.txt_otro_tipo_segundo_dictamen_especifique.Name = "txt_otro_tipo_segundo_dictamen_especifique";
+            this.txt_otro_tipo_segundo_dictamen_especifique.Size = new System.Drawing.Size(442, 22);
+            this.txt_otro_tipo_segundo_dictamen_especifique.TabIndex = 91;
+            this.txt_otro_tipo_segundo_dictamen_especifique.UseWaitCursor = true;
+            // 
+            // label268
+            // 
+            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label268.ForeColor = System.Drawing.Color.Black;
+            this.label268.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label268.Location = new System.Drawing.Point(12, 74);
+            this.label268.Name = "label268";
+            this.label268.Size = new System.Drawing.Size(129, 26);
+            this.label268.TabIndex = 90;
+            this.label268.Text = "Otro tipo de dictamen:";
+            this.label268.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label268.UseWaitCursor = true;
+            // 
+            // cmb_tipo_segundo_dictamen
+            // 
+            this.cmb_tipo_segundo_dictamen.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_tipo_segundo_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tipo_segundo_dictamen.FormattingEnabled = true;
+            this.cmb_tipo_segundo_dictamen.Location = new System.Drawing.Point(128, 33);
+            this.cmb_tipo_segundo_dictamen.Name = "cmb_tipo_segundo_dictamen";
+            this.cmb_tipo_segundo_dictamen.Size = new System.Drawing.Size(460, 23);
+            this.cmb_tipo_segundo_dictamen.TabIndex = 88;
+            this.cmb_tipo_segundo_dictamen.UseWaitCursor = true;
+            // 
+            // label306
+            // 
+            this.label306.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label306.ForeColor = System.Drawing.Color.Black;
+            this.label306.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label306.Location = new System.Drawing.Point(12, 30);
+            this.label306.Name = "label306";
+            this.label306.Size = new System.Drawing.Size(110, 26);
+            this.label306.TabIndex = 89;
+            this.label306.Text = "Tipo de dictamen:";
+            this.label306.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label306.UseWaitCursor = true;
+            // 
             // groupBox28
             // 
             this.groupBox28.Controls.Add(this.groupBox25);
@@ -6384,14 +7259,14 @@
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7});
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle43;
             this.dataGridView8.Location = new System.Drawing.Point(14, 108);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.ReadOnly = true;
@@ -6504,14 +7379,14 @@
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle44;
             this.dataGridView7.Location = new System.Drawing.Point(14, 108);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.ReadOnly = true;
@@ -6573,6 +7448,28 @@
             this.txt_ID_comision_legislativa_1_primer_estudio.Size = new System.Drawing.Size(204, 22);
             this.txt_ID_comision_legislativa_1_primer_estudio.TabIndex = 77;
             this.txt_ID_comision_legislativa_1_primer_estudio.UseWaitCursor = true;
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.ForeColor = System.Drawing.Color.Black;
+            this.label135.Location = new System.Drawing.Point(853, 19);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(188, 15);
+            this.label135.TabIndex = 15;
+            this.label135.Text = "Identificador de la iniciativa:";
+            this.label135.UseWaitCursor = true;
+            // 
+            // txt_ID_iniciativa
+            // 
+            this.txt_ID_iniciativa.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_iniciativa.Location = new System.Drawing.Point(1057, 16);
+            this.txt_ID_iniciativa.Name = "txt_ID_iniciativa";
+            this.txt_ID_iniciativa.Size = new System.Drawing.Size(181, 22);
+            this.txt_ID_iniciativa.TabIndex = 16;
+            this.txt_ID_iniciativa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_ID_iniciativa.UseWaitCursor = true;
             // 
             // groupBox83
             // 
@@ -6730,35 +7627,10 @@
             // 
             // groupBox23
             // 
-            this.groupBox23.Controls.Add(this.txt_otro_tipo_organo_constitucional_autonomo_especifique);
-            this.groupBox23.Controls.Add(this.cmb_ayuntamiento);
-            this.groupBox23.Controls.Add(this.txt_otro_tipo_promovente_iniciativa_especifique);
-            this.groupBox23.Controls.Add(this.label120);
-            this.groupBox23.Controls.Add(this.textBox42);
-            this.groupBox23.Controls.Add(this.cmb_tipo_organo_constitucional_autonomo);
-            this.groupBox23.Controls.Add(this.label119);
-            this.groupBox23.Controls.Add(this.label123);
-            this.groupBox23.Controls.Add(this.label121);
-            this.groupBox23.Controls.Add(this.txt_ID_comision_legislativa_1);
-            this.groupBox23.Controls.Add(this.label122);
-            this.groupBox23.Controls.Add(this.label302);
-            this.groupBox23.Controls.Add(this.button31);
-            this.groupBox23.Controls.Add(this.button32);
-            this.groupBox23.Controls.Add(this.dataGridView6);
-            this.groupBox23.Controls.Add(this.cmb_nombre_comision_legislativa_1);
-            this.groupBox23.Controls.Add(this.label303);
-            this.groupBox23.Controls.Add(this.button29);
-            this.groupBox23.Controls.Add(this.button30);
-            this.groupBox23.Controls.Add(this.dataGridView5);
-            this.groupBox23.Controls.Add(this.cmb_grupo_parlamentario);
-            this.groupBox23.Controls.Add(this.label271);
-            this.groupBox23.Controls.Add(this.txt_ID_persona_legisladora_1);
-            this.groupBox23.Controls.Add(this.label111);
-            this.groupBox23.Controls.Add(this.button25);
-            this.groupBox23.Controls.Add(this.button28);
-            this.groupBox23.Controls.Add(this.dataGridView4);
-            this.groupBox23.Controls.Add(this.cmb_nombre_persona_legisladora_1);
-            this.groupBox23.Controls.Add(this.label110);
+            this.groupBox23.Controls.Add(this.groupBox90);
+            this.groupBox23.Controls.Add(this.groupBox89);
+            this.groupBox23.Controls.Add(this.groupBox88);
+            this.groupBox23.Controls.Add(this.groupBox86);
             this.groupBox23.Controls.Add(this.cmb_tipo_promovente_iniciativa);
             this.groupBox23.Controls.Add(this.label109);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -6774,9 +7646,9 @@
             // txt_otro_tipo_organo_constitucional_autonomo_especifique
             // 
             this.txt_otro_tipo_organo_constitucional_autonomo_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_tipo_organo_constitucional_autonomo_especifique.Location = new System.Drawing.Point(833, 456);
+            this.txt_otro_tipo_organo_constitucional_autonomo_especifique.Location = new System.Drawing.Point(829, 63);
             this.txt_otro_tipo_organo_constitucional_autonomo_especifique.Name = "txt_otro_tipo_organo_constitucional_autonomo_especifique";
-            this.txt_otro_tipo_organo_constitucional_autonomo_especifique.Size = new System.Drawing.Size(376, 22);
+            this.txt_otro_tipo_organo_constitucional_autonomo_especifique.Size = new System.Drawing.Size(364, 22);
             this.txt_otro_tipo_organo_constitucional_autonomo_especifique.TabIndex = 60;
             this.txt_otro_tipo_organo_constitucional_autonomo_especifique.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_otro_tipo_organo_constitucional_autonomo_especifique.UseWaitCursor = true;
@@ -6786,7 +7658,7 @@
             this.cmb_ayuntamiento.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_ayuntamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_ayuntamiento.FormattingEnabled = true;
-            this.cmb_ayuntamiento.Location = new System.Drawing.Point(101, 456);
+            this.cmb_ayuntamiento.Location = new System.Drawing.Point(98, 91);
             this.cmb_ayuntamiento.Name = "cmb_ayuntamiento";
             this.cmb_ayuntamiento.Size = new System.Drawing.Size(279, 23);
             this.cmb_ayuntamiento.TabIndex = 41;
@@ -6795,9 +7667,9 @@
             // txt_otro_tipo_promovente_iniciativa_especifique
             // 
             this.txt_otro_tipo_promovente_iniciativa_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_tipo_promovente_iniciativa_especifique.Location = new System.Drawing.Point(833, 504);
+            this.txt_otro_tipo_promovente_iniciativa_especifique.Location = new System.Drawing.Point(829, 106);
             this.txt_otro_tipo_promovente_iniciativa_especifique.Name = "txt_otro_tipo_promovente_iniciativa_especifique";
-            this.txt_otro_tipo_promovente_iniciativa_especifique.Size = new System.Drawing.Size(376, 22);
+            this.txt_otro_tipo_promovente_iniciativa_especifique.Size = new System.Drawing.Size(364, 22);
             this.txt_otro_tipo_promovente_iniciativa_especifique.TabIndex = 60;
             this.txt_otro_tipo_promovente_iniciativa_especifique.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_otro_tipo_promovente_iniciativa_especifique.UseWaitCursor = true;
@@ -6807,7 +7679,7 @@
             this.label120.AutoSize = true;
             this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Black;
-            this.label120.Location = new System.Drawing.Point(424, 459);
+            this.label120.Location = new System.Drawing.Point(420, 66);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(400, 15);
             this.label120.TabIndex = 42;
@@ -6817,7 +7689,7 @@
             // textBox42
             // 
             this.textBox42.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox42.Location = new System.Drawing.Point(256, 409);
+            this.textBox42.Location = new System.Drawing.Point(253, 46);
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(124, 22);
             this.textBox42.TabIndex = 60;
@@ -6829,9 +7701,9 @@
             this.cmb_tipo_organo_constitucional_autonomo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_tipo_organo_constitucional_autonomo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_organo_constitucional_autonomo.FormattingEnabled = true;
-            this.cmb_tipo_organo_constitucional_autonomo.Location = new System.Drawing.Point(808, 408);
+            this.cmb_tipo_organo_constitucional_autonomo.Location = new System.Drawing.Point(804, 21);
             this.cmb_tipo_organo_constitucional_autonomo.Name = "cmb_tipo_organo_constitucional_autonomo";
-            this.cmb_tipo_organo_constitucional_autonomo.Size = new System.Drawing.Size(401, 23);
+            this.cmb_tipo_organo_constitucional_autonomo.Size = new System.Drawing.Size(389, 23);
             this.cmb_tipo_organo_constitucional_autonomo.TabIndex = 41;
             this.cmb_tipo_organo_constitucional_autonomo.UseWaitCursor = true;
             // 
@@ -6840,7 +7712,7 @@
             this.label119.AutoSize = true;
             this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label119.ForeColor = System.Drawing.Color.Black;
-            this.label119.Location = new System.Drawing.Point(603, 504);
+            this.label119.Location = new System.Drawing.Point(599, 106);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(221, 15);
             this.label119.TabIndex = 19;
@@ -6852,7 +7724,7 @@
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.ForeColor = System.Drawing.Color.Black;
-            this.label123.Location = new System.Drawing.Point(14, 460);
+            this.label123.Location = new System.Drawing.Point(11, 95);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(84, 15);
             this.label123.TabIndex = 19;
@@ -6864,7 +7736,7 @@
             this.label121.AutoSize = true;
             this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label121.ForeColor = System.Drawing.Color.Black;
-            this.label121.Location = new System.Drawing.Point(424, 412);
+            this.label121.Location = new System.Drawing.Point(420, 25);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(378, 15);
             this.label121.TabIndex = 19;
@@ -6875,7 +7747,7 @@
             // 
             this.txt_ID_comision_legislativa_1.BackColor = System.Drawing.Color.Honeydew;
             this.txt_ID_comision_legislativa_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ID_comision_legislativa_1.Location = new System.Drawing.Point(1005, 217);
+            this.txt_ID_comision_legislativa_1.Location = new System.Drawing.Point(388, 50);
             this.txt_ID_comision_legislativa_1.Name = "txt_ID_comision_legislativa_1";
             this.txt_ID_comision_legislativa_1.Size = new System.Drawing.Size(204, 22);
             this.txt_ID_comision_legislativa_1.TabIndex = 70;
@@ -6885,7 +7757,7 @@
             // 
             this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label122.ForeColor = System.Drawing.Color.Black;
-            this.label122.Location = new System.Drawing.Point(14, 396);
+            this.label122.Location = new System.Drawing.Point(11, 33);
             this.label122.Name = "label122";
             this.label122.Size = new System.Drawing.Size(242, 38);
             this.label122.TabIndex = 42;
@@ -6896,7 +7768,7 @@
             // 
             this.label302.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label302.ForeColor = System.Drawing.Color.Black;
-            this.label302.Location = new System.Drawing.Point(623, 217);
+            this.label302.Location = new System.Drawing.Point(6, 50);
             this.label302.Name = "label302";
             this.label302.Size = new System.Drawing.Size(376, 39);
             this.label302.TabIndex = 72;
@@ -6906,7 +7778,7 @@
             // button31
             // 
             this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.Location = new System.Drawing.Point(1090, 318);
+            this.button31.Location = new System.Drawing.Point(473, 151);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(110, 27);
             this.button31.TabIndex = 67;
@@ -6917,7 +7789,7 @@
             // button32
             // 
             this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(1089, 271);
+            this.button32.Location = new System.Drawing.Point(472, 104);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(110, 27);
             this.button32.TabIndex = 66;
@@ -6935,21 +7807,21 @@
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5});
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle41;
-            this.dataGridView6.Location = new System.Drawing.Point(626, 259);
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle45;
+            this.dataGridView6.Location = new System.Drawing.Point(9, 92);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
             this.dataGridView6.RowHeadersVisible = false;
             this.dataGridView6.RowHeadersWidth = 51;
             this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView6.Size = new System.Drawing.Size(436, 111);
+            this.dataGridView6.Size = new System.Drawing.Size(455, 111);
             this.dataGridView6.TabIndex = 68;
             this.dataGridView6.UseWaitCursor = true;
             // 
@@ -6965,7 +7837,7 @@
             this.cmb_nombre_comision_legislativa_1.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_nombre_comision_legislativa_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_nombre_comision_legislativa_1.FormattingEnabled = true;
-            this.cmb_nombre_comision_legislativa_1.Location = new System.Drawing.Point(976, 186);
+            this.cmb_nombre_comision_legislativa_1.Location = new System.Drawing.Point(359, 19);
             this.cmb_nombre_comision_legislativa_1.Name = "cmb_nombre_comision_legislativa_1";
             this.cmb_nombre_comision_legislativa_1.Size = new System.Drawing.Size(233, 23);
             this.cmb_nombre_comision_legislativa_1.TabIndex = 71;
@@ -6975,7 +7847,7 @@
             // 
             this.label303.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label303.ForeColor = System.Drawing.Color.Black;
-            this.label303.Location = new System.Drawing.Point(623, 186);
+            this.label303.Location = new System.Drawing.Point(6, 19);
             this.label303.Name = "label303";
             this.label303.Size = new System.Drawing.Size(353, 23);
             this.label303.TabIndex = 69;
@@ -6985,7 +7857,7 @@
             // button29
             // 
             this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(1090, 117);
+            this.button29.Location = new System.Drawing.Point(477, 111);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(110, 27);
             this.button29.TabIndex = 64;
@@ -6996,7 +7868,7 @@
             // button30
             // 
             this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(1089, 70);
+            this.button30.Location = new System.Drawing.Point(476, 64);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(110, 27);
             this.button30.TabIndex = 63;
@@ -7014,21 +7886,21 @@
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle42;
-            this.dataGridView5.Location = new System.Drawing.Point(626, 59);
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle46;
+            this.dataGridView5.Location = new System.Drawing.Point(13, 48);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(436, 100);
+            this.dataGridView5.Size = new System.Drawing.Size(451, 105);
             this.dataGridView5.TabIndex = 65;
             this.dataGridView5.UseWaitCursor = true;
             // 
@@ -7044,7 +7916,7 @@
             this.cmb_grupo_parlamentario.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_grupo_parlamentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_grupo_parlamentario.FormattingEnabled = true;
-            this.cmb_grupo_parlamentario.Location = new System.Drawing.Point(916, 25);
+            this.cmb_grupo_parlamentario.Location = new System.Drawing.Point(303, 19);
             this.cmb_grupo_parlamentario.Name = "cmb_grupo_parlamentario";
             this.cmb_grupo_parlamentario.Size = new System.Drawing.Size(293, 23);
             this.cmb_grupo_parlamentario.TabIndex = 62;
@@ -7054,7 +7926,7 @@
             // 
             this.label271.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label271.ForeColor = System.Drawing.Color.Black;
-            this.label271.Location = new System.Drawing.Point(623, 25);
+            this.label271.Location = new System.Drawing.Point(10, 19);
             this.label271.Name = "label271";
             this.label271.Size = new System.Drawing.Size(293, 23);
             this.label271.TabIndex = 61;
@@ -7065,7 +7937,7 @@
             // 
             this.txt_ID_persona_legisladora_1.BackColor = System.Drawing.Color.Honeydew;
             this.txt_ID_persona_legisladora_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ID_persona_legisladora_1.Location = new System.Drawing.Point(396, 107);
+            this.txt_ID_persona_legisladora_1.Location = new System.Drawing.Point(399, 49);
             this.txt_ID_persona_legisladora_1.Name = "txt_ID_persona_legisladora_1";
             this.txt_ID_persona_legisladora_1.Size = new System.Drawing.Size(174, 22);
             this.txt_ID_persona_legisladora_1.TabIndex = 58;
@@ -7075,7 +7947,7 @@
             // 
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label111.ForeColor = System.Drawing.Color.Black;
-            this.label111.Location = new System.Drawing.Point(14, 107);
+            this.label111.Location = new System.Drawing.Point(17, 49);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(376, 39);
             this.label111.TabIndex = 60;
@@ -7085,7 +7957,7 @@
             // button25
             // 
             this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(460, 271);
+            this.button25.Location = new System.Drawing.Point(463, 213);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(110, 27);
             this.button25.TabIndex = 55;
@@ -7096,7 +7968,7 @@
             // button28
             // 
             this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.Location = new System.Drawing.Point(459, 224);
+            this.button28.Location = new System.Drawing.Point(462, 166);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(110, 27);
             this.button28.TabIndex = 54;
@@ -7114,15 +7986,15 @@
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle43;
-            this.dataGridView4.Location = new System.Drawing.Point(17, 149);
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle47;
+            this.dataGridView4.Location = new System.Drawing.Point(20, 91);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowHeadersVisible = false;
@@ -7144,7 +8016,7 @@
             this.cmb_nombre_persona_legisladora_1.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_nombre_persona_legisladora_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_nombre_persona_legisladora_1.FormattingEnabled = true;
-            this.cmb_nombre_persona_legisladora_1.Location = new System.Drawing.Point(367, 76);
+            this.cmb_nombre_persona_legisladora_1.Location = new System.Drawing.Point(370, 18);
             this.cmb_nombre_persona_legisladora_1.Name = "cmb_nombre_persona_legisladora_1";
             this.cmb_nombre_persona_legisladora_1.Size = new System.Drawing.Size(203, 23);
             this.cmb_nombre_persona_legisladora_1.TabIndex = 58;
@@ -7154,7 +8026,7 @@
             // 
             this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.ForeColor = System.Drawing.Color.Black;
-            this.label110.Location = new System.Drawing.Point(14, 76);
+            this.label110.Location = new System.Drawing.Point(17, 18);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(353, 23);
             this.label110.TabIndex = 57;
@@ -7375,28 +8247,6 @@
             this.label136.Text = "Condición de la iniciativa de haber sido presentada en el periodo reportado:";
             this.label136.UseWaitCursor = true;
             // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label135.ForeColor = System.Drawing.Color.Black;
-            this.label135.Location = new System.Drawing.Point(853, 19);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(188, 15);
-            this.label135.TabIndex = 15;
-            this.label135.Text = "Identificador de la iniciativa:";
-            this.label135.UseWaitCursor = true;
-            // 
-            // txt_ID_iniciativa
-            // 
-            this.txt_ID_iniciativa.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_ID_iniciativa.Location = new System.Drawing.Point(1057, 16);
-            this.txt_ID_iniciativa.Name = "txt_ID_iniciativa";
-            this.txt_ID_iniciativa.Size = new System.Drawing.Size(181, 22);
-            this.txt_ID_iniciativa.TabIndex = 16;
-            this.txt_ID_iniciativa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_ID_iniciativa.UseWaitCursor = true;
-            // 
             // groupBox32
             // 
             this.groupBox32.Controls.Add(this.txt_otro_estatus_iniciativa_especifique);
@@ -7534,369 +8384,22 @@
             this.label131.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label131.UseWaitCursor = true;
             // 
-            // groupBox36
-            // 
-            this.groupBox36.Controls.Add(this.txt_otro_sentido_resolucion_segundo_dictamen_especifique);
-            this.groupBox36.Controls.Add(this.cmb_sentido_resolucion_segundo_dictamen);
-            this.groupBox36.Controls.Add(this.label266);
-            this.groupBox36.Controls.Add(this.label267);
-            this.groupBox36.Controls.Add(this.txt_otro_tipo_segundo_dictamen_especifique);
-            this.groupBox36.Controls.Add(this.label268);
-            this.groupBox36.Controls.Add(this.cmb_tipo_segundo_dictamen);
-            this.groupBox36.Controls.Add(this.label306);
-            this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox36.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox36.Location = new System.Drawing.Point(630, 21);
-            this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Size = new System.Drawing.Size(596, 186);
-            this.groupBox36.TabIndex = 87;
-            this.groupBox36.TabStop = false;
-            this.groupBox36.Text = "Segundo dictamen";
-            // 
-            // cmb_tipo_primer_dictamen
-            // 
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.txt_otro_sentido_resolucion_primer_dictamen_especifique);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.cmb_sentido_resolucion_primer_dictamen);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.label146);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.label147);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.txt_otro_tipo_primer_dictamen_especifique);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.label54);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.comboBox1);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.label42);
-            this.cmb_tipo_primer_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_tipo_primer_dictamen.ForeColor = System.Drawing.Color.ForestGreen;
-            this.cmb_tipo_primer_dictamen.Location = new System.Drawing.Point(9, 21);
-            this.cmb_tipo_primer_dictamen.Name = "cmb_tipo_primer_dictamen";
-            this.cmb_tipo_primer_dictamen.Size = new System.Drawing.Size(603, 186);
-            this.cmb_tipo_primer_dictamen.TabIndex = 86;
-            this.cmb_tipo_primer_dictamen.TabStop = false;
-            this.cmb_tipo_primer_dictamen.Text = "Primer dictamen";
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.Controls.Add(this.label138);
-            this.groupBox34.Controls.Add(this.dateTimePicker3);
-            this.groupBox34.Controls.Add(this.cmb_sentido_resolucion_ejecutivo_iniciativa);
-            this.groupBox34.Controls.Add(this.label139);
-            this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox34.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox34.Location = new System.Drawing.Point(9, 21);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(879, 82);
-            this.groupBox34.TabIndex = 85;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "Poder Ejecutivo";
-            this.groupBox34.UseWaitCursor = true;
-            // 
-            // dtp_fecha_publicacion_gaceta_oficial_iniciativa
-            // 
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Location = new System.Drawing.Point(206, 36);
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Name = "dtp_fecha_publicacion_gaceta_oficial_iniciativa";
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Size = new System.Drawing.Size(79, 20);
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.TabIndex = 64;
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.UseWaitCursor = true;
-            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label137.ForeColor = System.Drawing.Color.Black;
-            this.label137.Location = new System.Drawing.Point(66, 39);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(127, 15);
-            this.label137.TabIndex = 63;
-            this.label137.Text = "Fecha de publicación:";
-            this.label137.UseWaitCursor = true;
-            // 
-            // label138
-            // 
-            this.label138.AutoSize = true;
-            this.label138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label138.ForeColor = System.Drawing.Color.Black;
-            this.label138.Location = new System.Drawing.Point(335, 40);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(250, 15);
-            this.label138.TabIndex = 62;
-            this.label138.Text = "Sentido de la resolución del Poder Ejecutivo:";
-            this.label138.UseWaitCursor = true;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(229, 40);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(79, 20);
-            this.dateTimePicker3.TabIndex = 61;
-            this.dateTimePicker3.UseWaitCursor = true;
-            this.dateTimePicker3.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // cmb_sentido_resolucion_ejecutivo_iniciativa
-            // 
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Location = new System.Drawing.Point(592, 36);
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Name = "cmb_sentido_resolucion_ejecutivo_iniciativa";
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Size = new System.Drawing.Size(279, 23);
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.TabIndex = 41;
-            this.cmb_sentido_resolucion_ejecutivo_iniciativa.UseWaitCursor = true;
-            // 
-            // label139
-            // 
-            this.label139.AutoSize = true;
-            this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label139.ForeColor = System.Drawing.Color.Black;
-            this.label139.Location = new System.Drawing.Point(10, 40);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(213, 15);
-            this.label139.TabIndex = 19;
-            this.label139.Text = "Fecha de remisión al Poder Ejecutivo:";
-            this.label139.UseWaitCursor = true;
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Controls.Add(this.label143);
-            this.groupBox35.Controls.Add(this.dtp_fecha_resolucion_pleno_iniciativa);
-            this.groupBox35.Controls.Add(this.cmb_sentido_resolucion_pleno_iniciativa);
-            this.groupBox35.Controls.Add(this.label145);
-            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox35.Location = new System.Drawing.Point(7, 21);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(570, 133);
-            this.groupBox35.TabIndex = 84;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "Resolución";
-            this.groupBox35.UseWaitCursor = true;
-            // 
-            // txt_votaciones_pleno_abstencion_iniciativa
-            // 
-            this.txt_votaciones_pleno_abstencion_iniciativa.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_votaciones_pleno_abstencion_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_votaciones_pleno_abstencion_iniciativa.Location = new System.Drawing.Point(234, 101);
-            this.txt_votaciones_pleno_abstencion_iniciativa.Name = "txt_votaciones_pleno_abstencion_iniciativa";
-            this.txt_votaciones_pleno_abstencion_iniciativa.Size = new System.Drawing.Size(83, 21);
-            this.txt_votaciones_pleno_abstencion_iniciativa.TabIndex = 69;
-            this.txt_votaciones_pleno_abstencion_iniciativa.UseWaitCursor = true;
-            // 
-            // label140
-            // 
-            this.label140.AutoSize = true;
-            this.label140.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label140.ForeColor = System.Drawing.Color.Black;
-            this.label140.Location = new System.Drawing.Point(14, 101);
-            this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(204, 15);
-            this.label140.TabIndex = 68;
-            this.label140.Text = "Votaciones plenarias de abstención:";
-            this.label140.UseWaitCursor = true;
-            // 
-            // textBox46
-            // 
-            this.textBox46.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox46.Location = new System.Drawing.Point(234, 62);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(83, 21);
-            this.textBox46.TabIndex = 67;
-            this.textBox46.UseWaitCursor = true;
-            // 
-            // label141
-            // 
-            this.label141.AutoSize = true;
-            this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label141.ForeColor = System.Drawing.Color.Black;
-            this.label141.Location = new System.Drawing.Point(14, 65);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(178, 15);
-            this.label141.TabIndex = 66;
-            this.label141.Text = "Votaciones plenarias en contra:";
-            this.label141.UseWaitCursor = true;
-            // 
-            // txt_votaciones_pleno_a_favor_iniciativa
-            // 
-            this.txt_votaciones_pleno_a_favor_iniciativa.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_votaciones_pleno_a_favor_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_votaciones_pleno_a_favor_iniciativa.Location = new System.Drawing.Point(234, 22);
-            this.txt_votaciones_pleno_a_favor_iniciativa.Name = "txt_votaciones_pleno_a_favor_iniciativa";
-            this.txt_votaciones_pleno_a_favor_iniciativa.Size = new System.Drawing.Size(83, 21);
-            this.txt_votaciones_pleno_a_favor_iniciativa.TabIndex = 65;
-            this.txt_votaciones_pleno_a_favor_iniciativa.UseWaitCursor = true;
-            // 
-            // label142
-            // 
-            this.label142.AutoSize = true;
-            this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label142.ForeColor = System.Drawing.Color.Black;
-            this.label142.Location = new System.Drawing.Point(14, 25);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(163, 15);
-            this.label142.TabIndex = 64;
-            this.label142.Text = "Votaciones plenarias a favor:";
-            this.label142.UseWaitCursor = true;
-            // 
-            // txt_total_votaciones_pleno_iniciativa
-            // 
-            this.txt_total_votaciones_pleno_iniciativa.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_total_votaciones_pleno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_votaciones_pleno_iniciativa.Location = new System.Drawing.Point(463, 63);
-            this.txt_total_votaciones_pleno_iniciativa.Name = "txt_total_votaciones_pleno_iniciativa";
-            this.txt_total_votaciones_pleno_iniciativa.Size = new System.Drawing.Size(121, 21);
-            this.txt_total_votaciones_pleno_iniciativa.TabIndex = 63;
-            this.txt_total_votaciones_pleno_iniciativa.UseWaitCursor = true;
-            // 
-            // label143
-            // 
-            this.label143.AutoSize = true;
-            this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label143.ForeColor = System.Drawing.Color.Black;
-            this.label143.Location = new System.Drawing.Point(10, 73);
-            this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(197, 15);
-            this.label143.TabIndex = 62;
-            this.label143.Text = "Sentido de la resolución del Pleno:";
-            this.label143.UseWaitCursor = true;
-            // 
-            // dtp_fecha_resolucion_pleno_iniciativa
-            // 
-            this.dtp_fecha_resolucion_pleno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_resolucion_pleno_iniciativa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_resolucion_pleno_iniciativa.Location = new System.Drawing.Point(213, 33);
-            this.dtp_fecha_resolucion_pleno_iniciativa.Name = "dtp_fecha_resolucion_pleno_iniciativa";
-            this.dtp_fecha_resolucion_pleno_iniciativa.Size = new System.Drawing.Size(79, 20);
-            this.dtp_fecha_resolucion_pleno_iniciativa.TabIndex = 61;
-            this.dtp_fecha_resolucion_pleno_iniciativa.UseWaitCursor = true;
-            this.dtp_fecha_resolucion_pleno_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // label144
-            // 
-            this.label144.AutoSize = true;
-            this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label144.ForeColor = System.Drawing.Color.Black;
-            this.label144.Location = new System.Drawing.Point(440, 45);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(169, 15);
-            this.label144.TabIndex = 42;
-            this.label144.Text = "Total de votaciones plenarias:";
-            this.label144.UseWaitCursor = true;
-            // 
-            // cmb_sentido_resolucion_pleno_iniciativa
-            // 
-            this.cmb_sentido_resolucion_pleno_iniciativa.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_sentido_resolucion_pleno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_sentido_resolucion_pleno_iniciativa.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_pleno_iniciativa.Location = new System.Drawing.Point(213, 70);
-            this.cmb_sentido_resolucion_pleno_iniciativa.Name = "cmb_sentido_resolucion_pleno_iniciativa";
-            this.cmb_sentido_resolucion_pleno_iniciativa.Size = new System.Drawing.Size(279, 23);
-            this.cmb_sentido_resolucion_pleno_iniciativa.TabIndex = 41;
-            this.cmb_sentido_resolucion_pleno_iniciativa.UseWaitCursor = true;
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label145.ForeColor = System.Drawing.Color.Black;
-            this.label145.Location = new System.Drawing.Point(10, 34);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(189, 15);
-            this.label145.TabIndex = 19;
-            this.label145.Text = "Fecha de la resolución del Pleno:";
-            this.label145.UseWaitCursor = true;
-            // 
             // tabPageIniUO
             // 
             this.tabPageIniUO.AutoScroll = true;
-            this.tabPageIniUO.Controls.Add(this.groupBox38);
             this.tabPageIniUO.Controls.Add(this.groupBox39);
+            this.tabPageIniUO.Controls.Add(this.groupBox93);
+            this.tabPageIniUO.Controls.Add(this.groupBox91);
+            this.tabPageIniUO.Controls.Add(this.label309);
+            this.tabPageIniUO.Controls.Add(this.txt_ID_iniciativa_urgente_obvia);
             this.tabPageIniUO.Controls.Add(this.groupBox40);
             this.tabPageIniUO.Controls.Add(this.groupBox41);
-            this.tabPageIniUO.Controls.Add(this.groupBox42);
-            this.tabPageIniUO.Controls.Add(this.groupBox43);
-            this.tabPageIniUO.Controls.Add(this.groupBox44);
-            this.tabPageIniUO.Controls.Add(this.groupBox45);
-            this.tabPageIniUO.Controls.Add(this.groupBox46);
             this.tabPageIniUO.Location = new System.Drawing.Point(4, 25);
             this.tabPageIniUO.Name = "tabPageIniUO";
             this.tabPageIniUO.Size = new System.Drawing.Size(1258, 628);
             this.tabPageIniUO.TabIndex = 5;
             this.tabPageIniUO.Text = "Iniciativas UO";
             this.tabPageIniUO.UseVisualStyleBackColor = true;
-            // 
-            // groupBox38
-            // 
-            this.groupBox38.Controls.Add(this.label148);
-            this.groupBox38.Controls.Add(this.textBox49);
-            this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox38.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox38.Location = new System.Drawing.Point(3, 657);
-            this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Size = new System.Drawing.Size(988, 51);
-            this.groupBox38.TabIndex = 75;
-            this.groupBox38.TabStop = false;
-            this.groupBox38.Text = "Promovente";
-            this.groupBox38.UseWaitCursor = true;
-            // 
-            // label148
-            // 
-            this.label148.AutoSize = true;
-            this.label148.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label148.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label148.Location = new System.Drawing.Point(6, 18);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(336, 15);
-            this.label148.TabIndex = 30;
-            this.label148.Text = "otro_tipo_promovente_iniciativa_urgente_obvia_especifique";
-            this.label148.UseWaitCursor = true;
-            // 
-            // textBox49
-            // 
-            this.textBox49.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox49.Location = new System.Drawing.Point(348, 14);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(291, 22);
-            this.textBox49.TabIndex = 61;
-            this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox49.UseWaitCursor = true;
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.Controls.Add(this.label149);
-            this.groupBox39.Controls.Add(this.textBox50);
-            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox39.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox39.Location = new System.Drawing.Point(3, 714);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(988, 51);
-            this.groupBox39.TabIndex = 73;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "Publicación";
-            this.groupBox39.UseWaitCursor = true;
-            // 
-            // label149
-            // 
-            this.label149.AutoSize = true;
-            this.label149.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label149.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label149.Location = new System.Drawing.Point(6, 18);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(336, 15);
-            this.label149.TabIndex = 30;
-            this.label149.Text = "otro_tipo_promovente_iniciativa_urgente_obvia_especifique";
-            this.label149.UseWaitCursor = true;
-            // 
-            // textBox50
-            // 
-            this.textBox50.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox50.Location = new System.Drawing.Point(348, 14);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(291, 22);
-            this.textBox50.TabIndex = 61;
-            this.textBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox50.UseWaitCursor = true;
             // 
             // groupBox40
             // 
@@ -7906,7 +8409,7 @@
             this.groupBox40.Controls.Add(this.label151);
             this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox40.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox40.Location = new System.Drawing.Point(401, 537);
+            this.groupBox40.Location = new System.Drawing.Point(398, 1683);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Size = new System.Drawing.Size(590, 112);
             this.groupBox40.TabIndex = 74;
@@ -7967,7 +8470,7 @@
             this.groupBox41.Controls.Add(this.label153);
             this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox41.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox41.Location = new System.Drawing.Point(3, 537);
+            this.groupBox41.Location = new System.Drawing.Point(0, 1683);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Size = new System.Drawing.Size(392, 112);
             this.groupBox41.TabIndex = 72;
@@ -8020,402 +8523,194 @@
             this.label153.Text = "Ayuntamiento";
             this.label153.UseWaitCursor = true;
             // 
-            // groupBox42
-            // 
-            this.groupBox42.Controls.Add(this.listView11);
-            this.groupBox42.Controls.Add(this.button14);
-            this.groupBox42.Controls.Add(this.label154);
-            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox42.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox42.Location = new System.Drawing.Point(652, 266);
-            this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Size = new System.Drawing.Size(339, 264);
-            this.groupBox42.TabIndex = 68;
-            this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "Comisiones legislativas promoventes";
-            // 
-            // listView11
-            // 
-            this.listView11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView11.BackColor = System.Drawing.Color.Honeydew;
-            this.listView11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView11.FullRowSelect = true;
-            this.listView11.HideSelection = false;
-            this.listView11.Location = new System.Drawing.Point(9, 66);
-            this.listView11.Name = "listView11";
-            this.listView11.Size = new System.Drawing.Size(317, 180);
-            this.listView11.TabIndex = 29;
-            this.listView11.UseCompatibleStateImageBehavior = false;
-            this.listView11.View = System.Windows.Forms.View.Details;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(265, 33);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(28, 27);
-            this.button14.TabIndex = 7;
-            this.button14.Text = "+";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label154.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label154.Location = new System.Drawing.Point(51, 38);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(208, 15);
-            this.label154.TabIndex = 6;
-            this.label154.Text = "Selecciona comisiones promoventes";
-            // 
-            // groupBox43
-            // 
-            this.groupBox43.Controls.Add(this.listView12);
-            this.groupBox43.Controls.Add(this.button15);
-            this.groupBox43.Controls.Add(this.label155);
-            this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox43.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox43.Location = new System.Drawing.Point(332, 266);
-            this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Size = new System.Drawing.Size(312, 265);
-            this.groupBox43.TabIndex = 71;
-            this.groupBox43.TabStop = false;
-            this.groupBox43.Text = "Grupos parlamentarios iniciativas urgentes obvias";
-            // 
-            // listView12
-            // 
-            this.listView12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView12.BackColor = System.Drawing.Color.Honeydew;
-            this.listView12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView12.FullRowSelect = true;
-            this.listView12.HideSelection = false;
-            this.listView12.Location = new System.Drawing.Point(9, 66);
-            this.listView12.Name = "listView12";
-            this.listView12.Size = new System.Drawing.Size(297, 181);
-            this.listView12.TabIndex = 29;
-            this.listView12.UseCompatibleStateImageBehavior = false;
-            this.listView12.View = System.Windows.Forms.View.Details;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(205, 33);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(28, 27);
-            this.button15.TabIndex = 7;
-            this.button15.Text = "+";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // label155
-            // 
-            this.label155.AutoSize = true;
-            this.label155.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label155.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label155.Location = new System.Drawing.Point(6, 38);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(193, 15);
-            this.label155.TabIndex = 6;
-            this.label155.Text = "Selecciona rl grupo parlamentario";
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.Controls.Add(this.listView13);
-            this.groupBox44.Controls.Add(this.button16);
-            this.groupBox44.Controls.Add(this.label156);
-            this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox44.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox44.Location = new System.Drawing.Point(3, 266);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Size = new System.Drawing.Size(323, 265);
-            this.groupBox44.TabIndex = 70;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "Personas legisladoras promoventes iniciativas urgentes obvias";
-            // 
-            // listView13
-            // 
-            this.listView13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView13.BackColor = System.Drawing.Color.Honeydew;
-            this.listView13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView13.FullRowSelect = true;
-            this.listView13.HideSelection = false;
-            this.listView13.Location = new System.Drawing.Point(9, 66);
-            this.listView13.Name = "listView13";
-            this.listView13.Size = new System.Drawing.Size(308, 181);
-            this.listView13.TabIndex = 29;
-            this.listView13.UseCompatibleStateImageBehavior = false;
-            this.listView13.View = System.Windows.Forms.View.Details;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(282, 38);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(28, 27);
-            this.button16.TabIndex = 7;
-            this.button16.Text = "+";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // label156
-            // 
-            this.label156.AutoSize = true;
-            this.label156.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label156.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label156.Location = new System.Drawing.Point(10, 45);
-            this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(266, 15);
-            this.label156.TabIndex = 6;
-            this.label156.Text = "Selecciona personas legisladoras promoventes";
-            // 
             // groupBox45
             // 
-            this.groupBox45.Controls.Add(this.comboBox58);
-            this.groupBox45.Controls.Add(this.textBox53);
-            this.groupBox45.Controls.Add(this.label157);
-            this.groupBox45.Controls.Add(this.label158);
-            this.groupBox45.Controls.Add(this.comboBox59);
-            this.groupBox45.Controls.Add(this.label159);
-            this.groupBox45.Controls.Add(this.dateTimePicker7);
+            this.groupBox45.Controls.Add(this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia);
             this.groupBox45.Controls.Add(this.label160);
-            this.groupBox45.Controls.Add(this.textBox54);
+            this.groupBox45.Controls.Add(this.txt_nombre_iniciativa_urgente_obvia);
             this.groupBox45.Controls.Add(this.label161);
             this.groupBox45.Controls.Add(this.label162);
-            this.groupBox45.Controls.Add(this.dateTimePicker8);
-            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox45.Controls.Add(this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes);
+            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox45.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox45.Location = new System.Drawing.Point(3, 103);
+            this.groupBox45.Location = new System.Drawing.Point(11, 21);
             this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Size = new System.Drawing.Size(988, 157);
+            this.groupBox45.Size = new System.Drawing.Size(732, 168);
             this.groupBox45.TabIndex = 69;
             this.groupBox45.TabStop = false;
-            this.groupBox45.Text = "Ingreso";
+            this.groupBox45.Text = "Nombe";
             this.groupBox45.UseWaitCursor = true;
             // 
-            // comboBox58
+            // txt_otro_tipo_iniciativa_urgente_obvia_especifique
             // 
-            this.comboBox58.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox58.FormattingEnabled = true;
-            this.comboBox58.Location = new System.Drawing.Point(173, 108);
-            this.comboBox58.Name = "comboBox58";
-            this.comboBox58.Size = new System.Drawing.Size(281, 23);
-            this.comboBox58.TabIndex = 59;
-            this.comboBox58.UseWaitCursor = true;
-            // 
-            // textBox53
-            // 
-            this.textBox53.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox53.Location = new System.Drawing.Point(788, 73);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(176, 22);
-            this.textBox53.TabIndex = 57;
-            this.textBox53.UseWaitCursor = true;
-            // 
-            // label157
-            // 
-            this.label157.AutoSize = true;
-            this.label157.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label157.ForeColor = System.Drawing.Color.Black;
-            this.label157.Location = new System.Drawing.Point(10, 111);
-            this.label157.Name = "label157";
-            this.label157.Size = new System.Drawing.Size(157, 15);
-            this.label157.TabIndex = 58;
-            this.label157.Text = "Tipo_promovente_iniciativa";
-            this.label157.UseWaitCursor = true;
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.Location = new System.Drawing.Point(251, 99);
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.Name = "txt_otro_tipo_iniciativa_urgente_obvia_especifique";
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.Size = new System.Drawing.Size(178, 22);
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.TabIndex = 57;
+            this.txt_otro_tipo_iniciativa_urgente_obvia_especifique.UseWaitCursor = true;
             // 
             // label158
             // 
             this.label158.AutoSize = true;
             this.label158.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label158.ForeColor = System.Drawing.Color.Black;
-            this.label158.Location = new System.Drawing.Point(776, 55);
+            this.label158.Location = new System.Drawing.Point(22, 99);
             this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(197, 15);
+            this.label158.Size = new System.Drawing.Size(200, 15);
             this.label158.TabIndex = 56;
-            this.label158.Text = "Otro tipo de iniciativa urgente obvia";
+            this.label158.Text = "Otro tipo de iniciativa urgente obvia;";
             this.label158.UseWaitCursor = true;
             // 
-            // comboBox59
+            // cmb_tipo_iniciativa_urgente_obvia
             // 
-            this.comboBox59.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox59.FormattingEnabled = true;
-            this.comboBox59.Location = new System.Drawing.Point(524, 66);
-            this.comboBox59.Name = "comboBox59";
-            this.comboBox59.Size = new System.Drawing.Size(234, 23);
-            this.comboBox59.TabIndex = 55;
-            this.comboBox59.UseWaitCursor = true;
+            this.cmb_tipo_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_tipo_iniciativa_urgente_obvia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tipo_iniciativa_urgente_obvia.FormattingEnabled = true;
+            this.cmb_tipo_iniciativa_urgente_obvia.Location = new System.Drawing.Point(251, 51);
+            this.cmb_tipo_iniciativa_urgente_obvia.Name = "cmb_tipo_iniciativa_urgente_obvia";
+            this.cmb_tipo_iniciativa_urgente_obvia.Size = new System.Drawing.Size(178, 23);
+            this.cmb_tipo_iniciativa_urgente_obvia.TabIndex = 55;
+            this.cmb_tipo_iniciativa_urgente_obvia.UseWaitCursor = true;
             // 
             // label159
             // 
             this.label159.AutoSize = true;
-            this.label159.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label159.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label159.ForeColor = System.Drawing.Color.Black;
-            this.label159.Location = new System.Drawing.Point(345, 70);
+            this.label159.Location = new System.Drawing.Point(15, 54);
             this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(175, 15);
+            this.label159.Size = new System.Drawing.Size(217, 15);
             this.label159.TabIndex = 54;
-            this.label159.Text = "Tipo de iniciativa urgente obvia";
+            this.label159.Text = "Tipo de iniciativa urgente obvia*:";
             this.label159.UseWaitCursor = true;
             // 
-            // dateTimePicker7
+            // dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia
             // 
-            this.dateTimePicker7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker7.Location = new System.Drawing.Point(244, 70);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(93, 20);
-            this.dateTimePicker7.TabIndex = 53;
-            this.dateTimePicker7.UseWaitCursor = true;
-            this.dateTimePicker7.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Location = new System.Drawing.Point(138, 131);
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Name = "dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia";
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.TabIndex = 53;
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.UseWaitCursor = true;
+            this.dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
             // 
             // label160
             // 
-            this.label160.AutoSize = true;
-            this.label160.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label160.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label160.ForeColor = System.Drawing.Color.Black;
-            this.label160.Location = new System.Drawing.Point(7, 70);
+            this.label160.Location = new System.Drawing.Point(33, 80);
             this.label160.Name = "label160";
-            this.label160.Size = new System.Drawing.Size(237, 15);
+            this.label160.Size = new System.Drawing.Size(301, 37);
             this.label160.TabIndex = 52;
-            this.label160.Text = "Fecha_sesión_presentación_iniciativa_uo";
+            this.label160.Text = "Fecha de la sesión en que se presentó la iniciativa de urgente y obvia resolución" +
+    "*:";
             this.label160.UseWaitCursor = true;
             // 
-            // textBox54
+            // txt_nombre_iniciativa_urgente_obvia
             // 
-            this.textBox54.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox54.Location = new System.Drawing.Point(470, 26);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(508, 22);
-            this.textBox54.TabIndex = 51;
-            this.textBox54.UseWaitCursor = true;
+            this.txt_nombre_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_iniciativa_urgente_obvia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_nombre_iniciativa_urgente_obvia.Location = new System.Drawing.Point(7, 45);
+            this.txt_nombre_iniciativa_urgente_obvia.Name = "txt_nombre_iniciativa_urgente_obvia";
+            this.txt_nombre_iniciativa_urgente_obvia.Size = new System.Drawing.Size(714, 22);
+            this.txt_nombre_iniciativa_urgente_obvia.TabIndex = 51;
+            this.txt_nombre_iniciativa_urgente_obvia.UseWaitCursor = true;
             // 
             // label161
             // 
             this.label161.AutoSize = true;
-            this.label161.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label161.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label161.ForeColor = System.Drawing.Color.Black;
-            this.label161.Location = new System.Drawing.Point(345, 29);
+            this.label161.Location = new System.Drawing.Point(264, 18);
             this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(119, 15);
+            this.label161.Size = new System.Drawing.Size(149, 15);
             this.label161.TabIndex = 50;
-            this.label161.Text = "Nombre de iniciativa";
+            this.label161.Text = "Nombre de iniciativa*:";
             this.label161.UseWaitCursor = true;
             // 
             // label162
             // 
-            this.label162.AutoSize = true;
-            this.label162.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label162.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label162.ForeColor = System.Drawing.Color.Black;
-            this.label162.Location = new System.Drawing.Point(10, 29);
+            this.label162.Location = new System.Drawing.Point(395, 80);
             this.label162.Name = "label162";
-            this.label162.Size = new System.Drawing.Size(233, 15);
+            this.label162.Size = new System.Drawing.Size(298, 41);
             this.label162.TabIndex = 49;
-            this.label162.Text = "Fecha_ingreso_iniciativa_oficialia_partes";
+            this.label162.Text = "Fecha de ingreso de la iniciativa de urgente y obvia resolución a oficialía de pa" +
+    "rtes*:";
             this.label162.UseWaitCursor = true;
             // 
-            // dateTimePicker8
+            // dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes
             // 
-            this.dateTimePicker8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker8.Location = new System.Drawing.Point(244, 27);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(79, 20);
-            this.dateTimePicker8.TabIndex = 43;
-            this.dateTimePicker8.UseWaitCursor = true;
-            this.dateTimePicker8.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Location = new System.Drawing.Point(515, 131);
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Name = "dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes";
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.TabIndex = 43;
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.UseWaitCursor = true;
+            this.dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
             // 
             // groupBox46
             // 
-            this.groupBox46.Controls.Add(this.textBox55);
-            this.groupBox46.Controls.Add(this.comboBox60);
-            this.groupBox46.Controls.Add(this.label163);
-            this.groupBox46.Controls.Add(this.label164);
-            this.groupBox46.Controls.Add(this.textBox56);
+            this.groupBox46.Controls.Add(this.cmb_estatus_iniciativa_urgente_obvia);
             this.groupBox46.Controls.Add(this.label165);
-            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox46.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox46.Location = new System.Drawing.Point(3, 3);
+            this.groupBox46.Location = new System.Drawing.Point(611, 21);
             this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Size = new System.Drawing.Size(988, 94);
+            this.groupBox46.Size = new System.Drawing.Size(603, 76);
             this.groupBox46.TabIndex = 67;
             this.groupBox46.TabStop = false;
-            this.groupBox46.Text = "Caracterización inicial";
+            this.groupBox46.Text = "Estatus";
             this.groupBox46.UseWaitCursor = true;
             // 
-            // textBox55
+            // txt_turno_iniciativa_urgente_obvia
             // 
-            this.textBox55.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox55.Location = new System.Drawing.Point(190, 55);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(282, 21);
-            this.textBox55.TabIndex = 40;
-            this.textBox55.UseWaitCursor = true;
+            this.txt_turno_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_turno_iniciativa_urgente_obvia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_turno_iniciativa_urgente_obvia.Location = new System.Drawing.Point(436, 35);
+            this.txt_turno_iniciativa_urgente_obvia.Name = "txt_turno_iniciativa_urgente_obvia";
+            this.txt_turno_iniciativa_urgente_obvia.Size = new System.Drawing.Size(123, 21);
+            this.txt_turno_iniciativa_urgente_obvia.TabIndex = 40;
+            this.txt_turno_iniciativa_urgente_obvia.UseWaitCursor = true;
             // 
-            // comboBox60
+            // cmb_estatus_iniciativa_urgente_obvia
             // 
-            this.comboBox60.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox60.FormattingEnabled = true;
-            this.comboBox60.Location = new System.Drawing.Point(713, 55);
-            this.comboBox60.Name = "comboBox60";
-            this.comboBox60.Size = new System.Drawing.Size(262, 23);
-            this.comboBox60.TabIndex = 39;
-            this.comboBox60.UseWaitCursor = true;
+            this.cmb_estatus_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_estatus_iniciativa_urgente_obvia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_estatus_iniciativa_urgente_obvia.FormattingEnabled = true;
+            this.cmb_estatus_iniciativa_urgente_obvia.Location = new System.Drawing.Point(403, 35);
+            this.cmb_estatus_iniciativa_urgente_obvia.Name = "cmb_estatus_iniciativa_urgente_obvia";
+            this.cmb_estatus_iniciativa_urgente_obvia.Size = new System.Drawing.Size(173, 23);
+            this.cmb_estatus_iniciativa_urgente_obvia.TabIndex = 39;
+            this.cmb_estatus_iniciativa_urgente_obvia.UseWaitCursor = true;
             // 
             // label163
             // 
             this.label163.AutoSize = true;
-            this.label163.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label163.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label163.Location = new System.Drawing.Point(6, 58);
+            this.label163.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label163.ForeColor = System.Drawing.Color.Black;
+            this.label163.Location = new System.Drawing.Point(19, 38);
             this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(178, 15);
+            this.label163.Size = new System.Drawing.Size(398, 15);
             this.label163.TabIndex = 30;
-            this.label163.Text = "Turno_iniciativa_urgente_obvia";
+            this.label163.Text = "Turno asignado a la iniciativa de urgente y obvia resolución*:";
             this.label163.UseWaitCursor = true;
-            // 
-            // label164
-            // 
-            this.label164.AutoSize = true;
-            this.label164.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label164.ForeColor = System.Drawing.Color.Black;
-            this.label164.Location = new System.Drawing.Point(686, 25);
-            this.label164.Name = "label164";
-            this.label164.Size = new System.Drawing.Size(146, 15);
-            this.label164.TabIndex = 15;
-            this.label164.Text = "ID Iniciativa urgente obvia";
-            this.label164.UseWaitCursor = true;
-            // 
-            // textBox56
-            // 
-            this.textBox56.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox56.Location = new System.Drawing.Point(838, 21);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(137, 22);
-            this.textBox56.TabIndex = 16;
-            this.textBox56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox56.UseWaitCursor = true;
             // 
             // label165
             // 
             this.label165.AutoSize = true;
-            this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label165.ForeColor = System.Drawing.Color.Black;
-            this.label165.Location = new System.Drawing.Point(521, 58);
+            this.label165.Location = new System.Drawing.Point(35, 38);
             this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(186, 15);
+            this.label165.Size = new System.Drawing.Size(353, 15);
             this.label165.TabIndex = 19;
-            this.label165.Text = "Estatus_iniciativa_urgente_obvia";
+            this.label165.Text = "Estatus de la iniciativa de urgente y obvia resolución*:";
             this.label165.UseWaitCursor = true;
             // 
             // tabPageJP
@@ -10865,554 +11160,709 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // groupBox29
-            // 
-            this.groupBox29.Controls.Add(this.groupBox30);
-            this.groupBox29.Controls.Add(this.label307);
-            this.groupBox29.Controls.Add(this.label308);
-            this.groupBox29.Controls.Add(this.cmb_escolaridad_personal_apoyo);
-            this.groupBox29.Controls.Add(this.cmb_estatus_escolaridad_personal_apoyo);
-            this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox29.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox29.Location = new System.Drawing.Point(6, 862);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(1211, 310);
-            this.groupBox29.TabIndex = 57;
-            this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Perfil profesional";
-            this.groupBox29.UseWaitCursor = true;
-            // 
-            // groupBox30
-            // 
-            this.groupBox30.Controls.Add(this.cmb_carrera_doctorado_personal_apoyo);
-            this.groupBox30.Controls.Add(this.button11);
-            this.groupBox30.Controls.Add(this.button33);
-            this.groupBox30.Controls.Add(this.cmb_carrera_maestria_personal_apoyo);
-            this.groupBox30.Controls.Add(this.dataGridView9);
-            this.groupBox30.Controls.Add(this.cmb_carrera_licenciatura_personal_apoyo);
-            this.groupBox30.Controls.Add(this.label126);
-            this.groupBox30.Controls.Add(this.label304);
-            this.groupBox30.Controls.Add(this.label305);
-            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox30.Location = new System.Drawing.Point(17, 65);
-            this.groupBox30.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.groupBox30.Size = new System.Drawing.Size(1181, 235);
-            this.groupBox30.TabIndex = 49;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Nivel de escolaridad";
-            this.groupBox30.UseWaitCursor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(1062, 152);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(104, 32);
-            this.button11.TabIndex = 58;
-            this.button11.Text = "Eliminar";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.UseWaitCursor = true;
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(1062, 100);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(104, 32);
-            this.button33.TabIndex = 57;
-            this.button33.Text = "Agregar";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.UseWaitCursor = true;
-            // 
-            // dataGridView9
-            // 
-            this.dataGridView9.AllowUserToAddRows = false;
-            this.dataGridView9.AllowUserToDeleteRows = false;
-            this.dataGridView9.AllowUserToResizeRows = false;
-            this.dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView9.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle44;
-            this.dataGridView9.Location = new System.Drawing.Point(28, 78);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.ReadOnly = true;
-            this.dataGridView9.RowHeadersVisible = false;
-            this.dataGridView9.RowHeadersWidth = 51;
-            this.dataGridView9.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView9.Size = new System.Drawing.Size(1005, 149);
-            this.dataGridView9.TabIndex = 55;
-            this.dataGridView9.UseWaitCursor = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Licenciatura";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Maestría";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Doctorado";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label126.ForeColor = System.Drawing.Color.Black;
-            this.label126.Location = new System.Drawing.Point(840, 36);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(67, 15);
-            this.label126.TabIndex = 37;
-            this.label126.Text = "Doctorado:";
-            this.label126.UseWaitCursor = true;
-            // 
-            // label304
-            // 
-            this.label304.AutoSize = true;
-            this.label304.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label304.ForeColor = System.Drawing.Color.Black;
-            this.label304.Location = new System.Drawing.Point(8, 36);
-            this.label304.Name = "label304";
-            this.label304.Size = new System.Drawing.Size(77, 15);
-            this.label304.TabIndex = 42;
-            this.label304.Text = "Licenciatura:";
-            this.label304.UseWaitCursor = true;
-            // 
-            // label305
-            // 
-            this.label305.AutoSize = true;
-            this.label305.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label305.ForeColor = System.Drawing.Color.Black;
-            this.label305.Location = new System.Drawing.Point(425, 36);
-            this.label305.Name = "label305";
-            this.label305.Size = new System.Drawing.Size(58, 15);
-            this.label305.TabIndex = 44;
-            this.label305.Text = "Maestria:";
-            this.label305.UseWaitCursor = true;
-            // 
-            // label307
-            // 
-            this.label307.AutoSize = true;
-            this.label307.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label307.ForeColor = System.Drawing.Color.Black;
-            this.label307.Location = new System.Drawing.Point(637, 31);
-            this.label307.Name = "label307";
-            this.label307.Size = new System.Drawing.Size(251, 15);
-            this.label307.TabIndex = 47;
-            this.label307.Text = "Estatus del último grado de estudios*:";
-            this.label307.UseWaitCursor = true;
-            // 
-            // label308
-            // 
-            this.label308.AutoSize = true;
-            this.label308.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label308.ForeColor = System.Drawing.Color.Black;
-            this.label308.Location = new System.Drawing.Point(18, 27);
-            this.label308.Name = "label308";
-            this.label308.Size = new System.Drawing.Size(178, 15);
-            this.label308.TabIndex = 46;
-            this.label308.Text = "Último grado de estudios*:";
-            this.label308.UseWaitCursor = true;
-            // 
-            // groupBox31
-            // 
-            this.groupBox31.Controls.Add(this.cmb_tipo_primer_dictamen);
-            this.groupBox31.Controls.Add(this.groupBox36);
-            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox31.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox31.Location = new System.Drawing.Point(3, 1412);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(1235, 217);
-            this.groupBox31.TabIndex = 87;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "Dictamen";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(460, 23);
-            this.comboBox1.TabIndex = 80;
-            this.comboBox1.UseWaitCursor = true;
-            // 
-            // label42
-            // 
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label42.Location = new System.Drawing.Point(9, 30);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(110, 26);
-            this.label42.TabIndex = 81;
-            this.label42.Text = "Tipo de dictamen:";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label42.UseWaitCursor = true;
-            // 
-            // label54
-            // 
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label54.Location = new System.Drawing.Point(9, 74);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(129, 26);
-            this.label54.TabIndex = 82;
-            this.label54.Text = "Otro tipo de dictamen:";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label54.UseWaitCursor = true;
-            // 
-            // txt_otro_tipo_primer_dictamen_especifique
-            // 
-            this.txt_otro_tipo_primer_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_tipo_primer_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_otro_tipo_primer_dictamen_especifique.Location = new System.Drawing.Point(144, 78);
-            this.txt_otro_tipo_primer_dictamen_especifique.Name = "txt_otro_tipo_primer_dictamen_especifique";
-            this.txt_otro_tipo_primer_dictamen_especifique.Size = new System.Drawing.Size(442, 22);
-            this.txt_otro_tipo_primer_dictamen_especifique.TabIndex = 83;
-            this.txt_otro_tipo_primer_dictamen_especifique.UseWaitCursor = true;
-            // 
-            // label146
-            // 
-            this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label146.ForeColor = System.Drawing.Color.Black;
-            this.label146.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label146.Location = new System.Drawing.Point(358, 110);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(237, 25);
-            this.label146.TabIndex = 85;
-            this.label146.Text = "Otro sentido de resolución del dictamen:";
-            this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label146.UseWaitCursor = true;
-            // 
-            // label147
-            // 
-            this.label147.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label147.ForeColor = System.Drawing.Color.Black;
-            this.label147.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label147.Location = new System.Drawing.Point(8, 121);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(130, 41);
-            this.label147.TabIndex = 84;
-            this.label147.Text = "Sentido de resolución del dictamen:";
-            this.label147.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label147.UseWaitCursor = true;
-            // 
-            // cmb_sentido_resolucion_primer_dictamen
-            // 
-            this.cmb_sentido_resolucion_primer_dictamen.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_sentido_resolucion_primer_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_sentido_resolucion_primer_dictamen.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_primer_dictamen.Location = new System.Drawing.Point(144, 133);
-            this.cmb_sentido_resolucion_primer_dictamen.Name = "cmb_sentido_resolucion_primer_dictamen";
-            this.cmb_sentido_resolucion_primer_dictamen.Size = new System.Drawing.Size(169, 23);
-            this.cmb_sentido_resolucion_primer_dictamen.TabIndex = 86;
-            this.cmb_sentido_resolucion_primer_dictamen.UseWaitCursor = true;
-            // 
-            // txt_otro_sentido_resolucion_primer_dictamen_especifique
-            // 
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Location = new System.Drawing.Point(377, 138);
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Name = "txt_otro_sentido_resolucion_primer_dictamen_especifique";
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Size = new System.Drawing.Size(185, 22);
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.TabIndex = 87;
-            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.UseWaitCursor = true;
-            // 
-            // txt_otro_sentido_resolucion_segundo_dictamen_especifique
-            // 
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Location = new System.Drawing.Point(380, 138);
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Name = "txt_otro_sentido_resolucion_segundo_dictamen_especifique";
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Size = new System.Drawing.Size(185, 22);
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.TabIndex = 95;
-            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.UseWaitCursor = true;
-            // 
-            // cmb_sentido_resolucion_segundo_dictamen
-            // 
-            this.cmb_sentido_resolucion_segundo_dictamen.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_sentido_resolucion_segundo_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_sentido_resolucion_segundo_dictamen.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_segundo_dictamen.Location = new System.Drawing.Point(147, 133);
-            this.cmb_sentido_resolucion_segundo_dictamen.Name = "cmb_sentido_resolucion_segundo_dictamen";
-            this.cmb_sentido_resolucion_segundo_dictamen.Size = new System.Drawing.Size(169, 23);
-            this.cmb_sentido_resolucion_segundo_dictamen.TabIndex = 94;
-            this.cmb_sentido_resolucion_segundo_dictamen.UseWaitCursor = true;
-            // 
-            // label266
-            // 
-            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label266.ForeColor = System.Drawing.Color.Black;
-            this.label266.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label266.Location = new System.Drawing.Point(361, 110);
-            this.label266.Name = "label266";
-            this.label266.Size = new System.Drawing.Size(237, 25);
-            this.label266.TabIndex = 93;
-            this.label266.Text = "Otro sentido de resolución del dictamen:";
-            this.label266.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label266.UseWaitCursor = true;
-            // 
-            // label267
-            // 
-            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label267.ForeColor = System.Drawing.Color.Black;
-            this.label267.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label267.Location = new System.Drawing.Point(11, 121);
-            this.label267.Name = "label267";
-            this.label267.Size = new System.Drawing.Size(130, 41);
-            this.label267.TabIndex = 92;
-            this.label267.Text = "Sentido de resolución del dictamen:";
-            this.label267.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label267.UseWaitCursor = true;
-            // 
-            // txt_otro_tipo_segundo_dictamen_especifique
-            // 
-            this.txt_otro_tipo_segundo_dictamen_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_tipo_segundo_dictamen_especifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_otro_tipo_segundo_dictamen_especifique.Location = new System.Drawing.Point(147, 78);
-            this.txt_otro_tipo_segundo_dictamen_especifique.Name = "txt_otro_tipo_segundo_dictamen_especifique";
-            this.txt_otro_tipo_segundo_dictamen_especifique.Size = new System.Drawing.Size(442, 22);
-            this.txt_otro_tipo_segundo_dictamen_especifique.TabIndex = 91;
-            this.txt_otro_tipo_segundo_dictamen_especifique.UseWaitCursor = true;
-            // 
-            // label268
-            // 
-            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label268.ForeColor = System.Drawing.Color.Black;
-            this.label268.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label268.Location = new System.Drawing.Point(12, 74);
-            this.label268.Name = "label268";
-            this.label268.Size = new System.Drawing.Size(129, 26);
-            this.label268.TabIndex = 90;
-            this.label268.Text = "Otro tipo de dictamen:";
-            this.label268.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label268.UseWaitCursor = true;
-            // 
-            // cmb_tipo_segundo_dictamen
-            // 
-            this.cmb_tipo_segundo_dictamen.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_tipo_segundo_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_tipo_segundo_dictamen.FormattingEnabled = true;
-            this.cmb_tipo_segundo_dictamen.Location = new System.Drawing.Point(128, 33);
-            this.cmb_tipo_segundo_dictamen.Name = "cmb_tipo_segundo_dictamen";
-            this.cmb_tipo_segundo_dictamen.Size = new System.Drawing.Size(460, 23);
-            this.cmb_tipo_segundo_dictamen.TabIndex = 88;
-            this.cmb_tipo_segundo_dictamen.UseWaitCursor = true;
-            // 
-            // label306
-            // 
-            this.label306.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label306.ForeColor = System.Drawing.Color.Black;
-            this.label306.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label306.Location = new System.Drawing.Point(12, 30);
-            this.label306.Name = "label306";
-            this.label306.Size = new System.Drawing.Size(110, 26);
-            this.label306.TabIndex = 89;
-            this.label306.Text = "Tipo de dictamen:";
-            this.label306.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label306.UseWaitCursor = true;
-            // 
-            // groupBox37
-            // 
-            this.groupBox37.Controls.Add(this.groupBox87);
-            this.groupBox37.Controls.Add(this.groupBox35);
-            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox37.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox37.Location = new System.Drawing.Point(3, 1646);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Size = new System.Drawing.Size(1235, 168);
-            this.groupBox37.TabIndex = 91;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "Pleno";
-            this.groupBox37.UseWaitCursor = true;
-            // 
-            // groupBox62
-            // 
-            this.groupBox62.Controls.Add(this.button12);
-            this.groupBox62.Controls.Add(this.button13);
-            this.groupBox62.Controls.Add(this.button34);
-            this.groupBox62.Controls.Add(this.button35);
-            this.groupBox62.Controls.Add(this.button36);
-            this.groupBox62.Controls.Add(this.dataGridView10);
-            this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox62.ForeColor = System.Drawing.Color.Green;
-            this.groupBox62.Location = new System.Drawing.Point(3, 2043);
-            this.groupBox62.Name = "groupBox62";
-            this.groupBox62.Size = new System.Drawing.Size(1235, 181);
-            this.groupBox62.TabIndex = 92;
-            this.groupBox62.TabStop = false;
-            this.groupBox62.Text = "Registros Iniciativas";
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(1140, 17);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(47, 47);
-            this.button12.TabIndex = 81;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.UseWaitCursor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(1122, 125);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(97, 27);
-            this.button13.TabIndex = 44;
-            this.button13.Text = "Eliminar";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button34.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button34.Location = new System.Drawing.Point(1122, 79);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(97, 27);
-            this.button34.TabIndex = 43;
-            this.button34.Text = "Editar";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button35.Location = new System.Drawing.Point(734, 228);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(90, 27);
-            this.button35.TabIndex = 40;
-            this.button35.Text = "     Eliminar";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button36
-            // 
-            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button36.Location = new System.Drawing.Point(371, 228);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(81, 27);
-            this.button36.TabIndex = 39;
-            this.button36.Text = "     Agregar";
-            this.button36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button36.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView10
-            // 
-            this.dataGridView10.AllowUserToAddRows = false;
-            this.dataGridView10.AllowUserToDeleteRows = false;
-            this.dataGridView10.AllowUserToResizeRows = false;
-            this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView10.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridView10.Location = new System.Drawing.Point(12, 21);
-            this.dataGridView10.MultiSelect = false;
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.ReadOnly = true;
-            this.dataGridView10.RowHeadersVisible = false;
-            this.dataGridView10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView10.RowsDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView10.Size = new System.Drawing.Size(1079, 154);
-            this.dataGridView10.TabIndex = 30;
-            // 
-            // button37
-            // 
-            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button37.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button37.Location = new System.Drawing.Point(559, 1982);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(148, 27);
-            this.button37.TabIndex = 93;
-            this.button37.Text = "Guardar información";
-            this.button37.UseVisualStyleBackColor = true;
-            // 
-            // groupBox80
-            // 
-            this.groupBox80.Controls.Add(this.groupBox85);
-            this.groupBox80.Controls.Add(this.groupBox34);
-            this.groupBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox80.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox80.Location = new System.Drawing.Point(3, 1832);
-            this.groupBox80.Name = "groupBox80";
-            this.groupBox80.Size = new System.Drawing.Size(1235, 118);
-            this.groupBox80.TabIndex = 86;
-            this.groupBox80.TabStop = false;
-            this.groupBox80.Text = "Publicación";
-            this.groupBox80.UseWaitCursor = true;
-            // 
-            // groupBox85
-            // 
-            this.groupBox85.Controls.Add(this.label137);
-            this.groupBox85.Controls.Add(this.dtp_fecha_publicacion_gaceta_oficial_iniciativa);
-            this.groupBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox85.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox85.Location = new System.Drawing.Point(901, 21);
-            this.groupBox85.Name = "groupBox85";
-            this.groupBox85.Size = new System.Drawing.Size(325, 82);
-            this.groupBox85.TabIndex = 94;
-            this.groupBox85.TabStop = false;
-            this.groupBox85.Text = "Gaceta o Periódico Oficial";
-            this.groupBox85.UseWaitCursor = true;
-            // 
-            // groupBox87
-            // 
-            this.groupBox87.Controls.Add(this.txt_votaciones_pleno_abstencion_iniciativa);
-            this.groupBox87.Controls.Add(this.label141);
-            this.groupBox87.Controls.Add(this.label140);
-            this.groupBox87.Controls.Add(this.label144);
-            this.groupBox87.Controls.Add(this.textBox46);
-            this.groupBox87.Controls.Add(this.txt_total_votaciones_pleno_iniciativa);
-            this.groupBox87.Controls.Add(this.label142);
-            this.groupBox87.Controls.Add(this.txt_votaciones_pleno_a_favor_iniciativa);
-            this.groupBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox87.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox87.Location = new System.Drawing.Point(599, 22);
-            this.groupBox87.Name = "groupBox87";
-            this.groupBox87.Size = new System.Drawing.Size(628, 133);
-            this.groupBox87.TabIndex = 84;
-            this.groupBox87.TabStop = false;
-            this.groupBox87.Text = "Votaciones plenarias";
-            this.groupBox87.UseWaitCursor = true;
+            // groupBox86
+            // 
+            this.groupBox86.Controls.Add(this.label110);
+            this.groupBox86.Controls.Add(this.cmb_nombre_persona_legisladora_1);
+            this.groupBox86.Controls.Add(this.dataGridView4);
+            this.groupBox86.Controls.Add(this.button28);
+            this.groupBox86.Controls.Add(this.button25);
+            this.groupBox86.Controls.Add(this.label111);
+            this.groupBox86.Controls.Add(this.txt_ID_persona_legisladora_1);
+            this.groupBox86.Location = new System.Drawing.Point(6, 59);
+            this.groupBox86.Name = "groupBox86";
+            this.groupBox86.Size = new System.Drawing.Size(586, 334);
+            this.groupBox86.TabIndex = 73;
+            this.groupBox86.TabStop = false;
+            // 
+            // groupBox88
+            // 
+            this.groupBox88.Controls.Add(this.label271);
+            this.groupBox88.Controls.Add(this.cmb_grupo_parlamentario);
+            this.groupBox88.Controls.Add(this.dataGridView5);
+            this.groupBox88.Controls.Add(this.button30);
+            this.groupBox88.Controls.Add(this.button29);
+            this.groupBox88.Location = new System.Drawing.Point(598, 14);
+            this.groupBox88.Name = "groupBox88";
+            this.groupBox88.Size = new System.Drawing.Size(610, 159);
+            this.groupBox88.TabIndex = 74;
+            this.groupBox88.TabStop = false;
+            // 
+            // groupBox89
+            // 
+            this.groupBox89.Controls.Add(this.label303);
+            this.groupBox89.Controls.Add(this.cmb_nombre_comision_legislativa_1);
+            this.groupBox89.Controls.Add(this.dataGridView6);
+            this.groupBox89.Controls.Add(this.button32);
+            this.groupBox89.Controls.Add(this.button31);
+            this.groupBox89.Controls.Add(this.label302);
+            this.groupBox89.Controls.Add(this.txt_ID_comision_legislativa_1);
+            this.groupBox89.Location = new System.Drawing.Point(598, 179);
+            this.groupBox89.Name = "groupBox89";
+            this.groupBox89.Size = new System.Drawing.Size(610, 214);
+            this.groupBox89.TabIndex = 75;
+            this.groupBox89.TabStop = false;
+            // 
+            // groupBox90
+            // 
+            this.groupBox90.Controls.Add(this.label122);
+            this.groupBox90.Controls.Add(this.label121);
+            this.groupBox90.Controls.Add(this.label123);
+            this.groupBox90.Controls.Add(this.label119);
+            this.groupBox90.Controls.Add(this.txt_otro_tipo_organo_constitucional_autonomo_especifique);
+            this.groupBox90.Controls.Add(this.cmb_tipo_organo_constitucional_autonomo);
+            this.groupBox90.Controls.Add(this.cmb_ayuntamiento);
+            this.groupBox90.Controls.Add(this.textBox42);
+            this.groupBox90.Controls.Add(this.txt_otro_tipo_promovente_iniciativa_especifique);
+            this.groupBox90.Controls.Add(this.label120);
+            this.groupBox90.Location = new System.Drawing.Point(7, 393);
+            this.groupBox90.Name = "groupBox90";
+            this.groupBox90.Size = new System.Drawing.Size(1201, 141);
+            this.groupBox90.TabIndex = 76;
+            this.groupBox90.TabStop = false;
+            // 
+            // label309
+            // 
+            this.label309.AutoSize = true;
+            this.label309.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label309.ForeColor = System.Drawing.Color.Black;
+            this.label309.Location = new System.Drawing.Point(655, 19);
+            this.label309.Name = "label309";
+            this.label309.Size = new System.Drawing.Size(380, 15);
+            this.label309.TabIndex = 76;
+            this.label309.Text = "Identificador de la iniciativa de urgente y obvia resolución:";
+            this.label309.UseWaitCursor = true;
+            // 
+            // txt_ID_iniciativa_urgente_obvia
+            // 
+            this.txt_ID_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_iniciativa_urgente_obvia.Location = new System.Drawing.Point(1048, 16);
+            this.txt_ID_iniciativa_urgente_obvia.Name = "txt_ID_iniciativa_urgente_obvia";
+            this.txt_ID_iniciativa_urgente_obvia.Size = new System.Drawing.Size(181, 22);
+            this.txt_ID_iniciativa_urgente_obvia.TabIndex = 77;
+            this.txt_ID_iniciativa_urgente_obvia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_ID_iniciativa_urgente_obvia.UseWaitCursor = true;
+            // 
+            // groupBox91
+            // 
+            this.groupBox91.Controls.Add(this.groupBox92);
+            this.groupBox91.Controls.Add(this.groupBox46);
+            this.groupBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox91.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox91.Location = new System.Drawing.Point(9, 50);
+            this.groupBox91.Name = "groupBox91";
+            this.groupBox91.Size = new System.Drawing.Size(1220, 110);
+            this.groupBox91.TabIndex = 78;
+            this.groupBox91.TabStop = false;
+            this.groupBox91.Text = "Caracterización inicial";
+            this.groupBox91.UseWaitCursor = true;
+            // 
+            // groupBox92
+            // 
+            this.groupBox92.Controls.Add(this.txt_turno_iniciativa_urgente_obvia);
+            this.groupBox92.Controls.Add(this.label163);
+            this.groupBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox92.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox92.Location = new System.Drawing.Point(7, 21);
+            this.groupBox92.Name = "groupBox92";
+            this.groupBox92.Size = new System.Drawing.Size(598, 76);
+            this.groupBox92.TabIndex = 68;
+            this.groupBox92.TabStop = false;
+            this.groupBox92.Text = "Presentación";
+            this.groupBox92.UseWaitCursor = true;
+            // 
+            // groupBox93
+            // 
+            this.groupBox93.Controls.Add(this.groupBox38);
+            this.groupBox93.Controls.Add(this.groupBox95);
+            this.groupBox93.Controls.Add(this.groupBox94);
+            this.groupBox93.Controls.Add(this.groupBox45);
+            this.groupBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox93.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox93.Location = new System.Drawing.Point(9, 168);
+            this.groupBox93.Name = "groupBox93";
+            this.groupBox93.Size = new System.Drawing.Size(1220, 832);
+            this.groupBox93.TabIndex = 70;
+            this.groupBox93.TabStop = false;
+            this.groupBox93.Text = "Ingreso";
+            this.groupBox93.UseWaitCursor = true;
+            // 
+            // groupBox94
+            // 
+            this.groupBox94.Controls.Add(this.txt_otro_tipo_iniciativa_urgente_obvia_especifique);
+            this.groupBox94.Controls.Add(this.label159);
+            this.groupBox94.Controls.Add(this.label158);
+            this.groupBox94.Controls.Add(this.cmb_tipo_iniciativa_urgente_obvia);
+            this.groupBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox94.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox94.Location = new System.Drawing.Point(758, 24);
+            this.groupBox94.Name = "groupBox94";
+            this.groupBox94.Size = new System.Drawing.Size(456, 165);
+            this.groupBox94.TabIndex = 70;
+            this.groupBox94.TabStop = false;
+            this.groupBox94.Text = "Tipo";
+            this.groupBox94.UseWaitCursor = true;
+            // 
+            // groupBox95
+            // 
+            this.groupBox95.Controls.Add(this.groupBox96);
+            this.groupBox95.Controls.Add(this.groupBox97);
+            this.groupBox95.Controls.Add(this.groupBox98);
+            this.groupBox95.Controls.Add(this.groupBox99);
+            this.groupBox95.Controls.Add(this.cmb_tipo_promovente_iniciativa_urgente_obvia);
+            this.groupBox95.Controls.Add(this.label319);
+            this.groupBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox95.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox95.Location = new System.Drawing.Point(11, 195);
+            this.groupBox95.Name = "groupBox95";
+            this.groupBox95.Size = new System.Drawing.Size(1203, 546);
+            this.groupBox95.TabIndex = 82;
+            this.groupBox95.TabStop = false;
+            this.groupBox95.Text = "Promovente";
+            this.groupBox95.UseWaitCursor = true;
+            // 
+            // groupBox96
+            // 
+            this.groupBox96.Controls.Add(this.label164);
+            this.groupBox96.Controls.Add(this.label310);
+            this.groupBox96.Controls.Add(this.label311);
+            this.groupBox96.Controls.Add(this.label312);
+            this.groupBox96.Controls.Add(this.textBox1);
+            this.groupBox96.Controls.Add(this.comboBox2);
+            this.groupBox96.Controls.Add(this.comboBox3);
+            this.groupBox96.Controls.Add(this.textBox2);
+            this.groupBox96.Controls.Add(this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique);
+            this.groupBox96.Controls.Add(this.label313);
+            this.groupBox96.Location = new System.Drawing.Point(7, 392);
+            this.groupBox96.Name = "groupBox96";
+            this.groupBox96.Size = new System.Drawing.Size(1187, 141);
+            this.groupBox96.TabIndex = 76;
+            this.groupBox96.TabStop = false;
+            this.groupBox96.UseWaitCursor = true;
+            // 
+            // label164
+            // 
+            this.label164.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label164.ForeColor = System.Drawing.Color.Black;
+            this.label164.Location = new System.Drawing.Point(11, 33);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(242, 38);
+            this.label164.TabIndex = 42;
+            this.label164.Text = "Clave AGEM correspondiente al Ayuntamiento promovente de la iniciativa:";
+            this.label164.UseWaitCursor = true;
+            // 
+            // label310
+            // 
+            this.label310.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label310.ForeColor = System.Drawing.Color.Black;
+            this.label310.Location = new System.Drawing.Point(395, 16);
+            this.label310.Name = "label310";
+            this.label310.Size = new System.Drawing.Size(378, 33);
+            this.label310.TabIndex = 19;
+            this.label310.Text = "Tipo de órgano constitucional autónomo promovente de la iniciativa de urgente y o" +
+    "bvia resolución:";
+            this.label310.UseWaitCursor = true;
+            // 
+            // label311
+            // 
+            this.label311.AutoSize = true;
+            this.label311.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label311.ForeColor = System.Drawing.Color.Black;
+            this.label311.Location = new System.Drawing.Point(11, 95);
+            this.label311.Name = "label311";
+            this.label311.Size = new System.Drawing.Size(84, 15);
+            this.label311.TabIndex = 19;
+            this.label311.Text = "Ayuntamiento:";
+            this.label311.UseWaitCursor = true;
+            // 
+            // label312
+            // 
+            this.label312.AutoSize = true;
+            this.label312.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label312.ForeColor = System.Drawing.Color.Black;
+            this.label312.Location = new System.Drawing.Point(412, 102);
+            this.label312.Name = "label312";
+            this.label312.Size = new System.Drawing.Size(383, 15);
+            this.label312.TabIndex = 19;
+            this.label312.Text = "Otro tipo de promovente de la iniciativa de urgente y obvia resolución:";
+            this.label312.UseWaitCursor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox1.Location = new System.Drawing.Point(804, 56);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(364, 22);
+            this.textBox1.TabIndex = 60;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.UseWaitCursor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(779, 14);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(389, 23);
+            this.comboBox2.TabIndex = 41;
+            this.comboBox2.UseWaitCursor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(98, 91);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(279, 23);
+            this.comboBox3.TabIndex = 41;
+            this.comboBox3.UseWaitCursor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox2.Location = new System.Drawing.Point(253, 46);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(124, 22);
+            this.textBox2.TabIndex = 60;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.UseWaitCursor = true;
+            // 
+            // txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique
+            // 
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.Location = new System.Drawing.Point(804, 99);
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.Name = "txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique";
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.Size = new System.Drawing.Size(364, 22);
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.TabIndex = 60;
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique.UseWaitCursor = true;
+            // 
+            // label313
+            // 
+            this.label313.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label313.ForeColor = System.Drawing.Color.Black;
+            this.label313.Location = new System.Drawing.Point(395, 56);
+            this.label313.Name = "label313";
+            this.label313.Size = new System.Drawing.Size(403, 43);
+            this.label313.TabIndex = 42;
+            this.label313.Text = "Otro tipo de órgano constitucional autónomo promovente de la iniciativa de urgent" +
+    "e y obvia resolución:";
+            this.label313.UseWaitCursor = true;
+            // 
+            // groupBox97
+            // 
+            this.groupBox97.Controls.Add(this.label314);
+            this.groupBox97.Controls.Add(this.comboBox4);
+            this.groupBox97.Controls.Add(this.dataGridView11);
+            this.groupBox97.Controls.Add(this.button38);
+            this.groupBox97.Controls.Add(this.button39);
+            this.groupBox97.Controls.Add(this.label315);
+            this.groupBox97.Controls.Add(this.textBox4);
+            this.groupBox97.Location = new System.Drawing.Point(586, 179);
+            this.groupBox97.Name = "groupBox97";
+            this.groupBox97.Size = new System.Drawing.Size(610, 214);
+            this.groupBox97.TabIndex = 75;
+            this.groupBox97.TabStop = false;
+            this.groupBox97.UseWaitCursor = true;
+            // 
+            // label314
+            // 
+            this.label314.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label314.ForeColor = System.Drawing.Color.Black;
+            this.label314.Location = new System.Drawing.Point(6, 19);
+            this.label314.Name = "label314";
+            this.label314.Size = new System.Drawing.Size(353, 39);
+            this.label314.TabIndex = 69;
+            this.label314.Text = "Nombre de la comisión legislativa promovente de la iniciativa de urgente y obvia " +
+    "resolución:";
+            this.label314.UseWaitCursor = true;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(360, 27);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(233, 23);
+            this.comboBox4.TabIndex = 71;
+            this.comboBox4.UseWaitCursor = true;
+            // 
+            // dataGridView11
+            // 
+            this.dataGridView11.AllowUserToAddRows = false;
+            this.dataGridView11.AllowUserToDeleteRows = false;
+            this.dataGridView11.AllowUserToResizeRows = false;
+            this.dataGridView11.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11});
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView11.DefaultCellStyle = dataGridViewCellStyle48;
+            this.dataGridView11.Location = new System.Drawing.Point(9, 96);
+            this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.ReadOnly = true;
+            this.dataGridView11.RowHeadersVisible = false;
+            this.dataGridView11.RowHeadersWidth = 51;
+            this.dataGridView11.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView11.Size = new System.Drawing.Size(455, 111);
+            this.dataGridView11.TabIndex = 68;
+            this.dataGridView11.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Comisión legislativa";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // button38
+            // 
+            this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button38.Location = new System.Drawing.Point(472, 108);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(110, 27);
+            this.button38.TabIndex = 66;
+            this.button38.Text = "Agregar";
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.UseWaitCursor = true;
+            // 
+            // button39
+            // 
+            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button39.Location = new System.Drawing.Point(473, 155);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(110, 27);
+            this.button39.TabIndex = 67;
+            this.button39.Text = "Eliminar";
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.UseWaitCursor = true;
+            // 
+            // label315
+            // 
+            this.label315.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label315.ForeColor = System.Drawing.Color.Black;
+            this.label315.Location = new System.Drawing.Point(6, 58);
+            this.label315.Name = "label315";
+            this.label315.Size = new System.Drawing.Size(376, 39);
+            this.label315.TabIndex = 72;
+            this.label315.Text = "Identificador de la comisión legislativa promovente de la iniciativa de urgente y" +
+    " obvia resolución:";
+            this.label315.UseWaitCursor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox4.Location = new System.Drawing.Point(390, 63);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(204, 22);
+            this.textBox4.TabIndex = 70;
+            this.textBox4.UseWaitCursor = true;
+            // 
+            // groupBox98
+            // 
+            this.groupBox98.Controls.Add(this.label316);
+            this.groupBox98.Controls.Add(this.comboBox5);
+            this.groupBox98.Controls.Add(this.dataGridView12);
+            this.groupBox98.Controls.Add(this.button40);
+            this.groupBox98.Controls.Add(this.button41);
+            this.groupBox98.Location = new System.Drawing.Point(583, 14);
+            this.groupBox98.Name = "groupBox98";
+            this.groupBox98.Size = new System.Drawing.Size(613, 166);
+            this.groupBox98.TabIndex = 74;
+            this.groupBox98.TabStop = false;
+            this.groupBox98.UseWaitCursor = true;
+            // 
+            // label316
+            // 
+            this.label316.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label316.ForeColor = System.Drawing.Color.Black;
+            this.label316.Location = new System.Drawing.Point(10, 13);
+            this.label316.Name = "label316";
+            this.label316.Size = new System.Drawing.Size(293, 37);
+            this.label316.TabIndex = 61;
+            this.label316.Text = "Grupo parlamentario promovente de la iniciativa de urgente y obvia resolución:";
+            this.label316.UseWaitCursor = true;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(303, 19);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(293, 23);
+            this.comboBox5.TabIndex = 62;
+            this.comboBox5.UseWaitCursor = true;
+            // 
+            // dataGridView12
+            // 
+            this.dataGridView12.AllowUserToAddRows = false;
+            this.dataGridView12.AllowUserToDeleteRows = false;
+            this.dataGridView12.AllowUserToResizeRows = false;
+            this.dataGridView12.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView12.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12});
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView12.DefaultCellStyle = dataGridViewCellStyle49;
+            this.dataGridView12.Location = new System.Drawing.Point(13, 53);
+            this.dataGridView12.Name = "dataGridView12";
+            this.dataGridView12.ReadOnly = true;
+            this.dataGridView12.RowHeadersVisible = false;
+            this.dataGridView12.RowHeadersWidth = 51;
+            this.dataGridView12.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView12.Size = new System.Drawing.Size(451, 105);
+            this.dataGridView12.TabIndex = 65;
+            this.dataGridView12.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Grupos parlamentarios";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // button40
+            // 
+            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.Location = new System.Drawing.Point(476, 69);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(110, 27);
+            this.button40.TabIndex = 63;
+            this.button40.Text = "Agregar";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.UseWaitCursor = true;
+            // 
+            // button41
+            // 
+            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button41.Location = new System.Drawing.Point(477, 116);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(110, 27);
+            this.button41.TabIndex = 64;
+            this.button41.Text = "Eliminar";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.UseWaitCursor = true;
+            // 
+            // groupBox99
+            // 
+            this.groupBox99.Controls.Add(this.label317);
+            this.groupBox99.Controls.Add(this.comboBox6);
+            this.groupBox99.Controls.Add(this.dataGridView13);
+            this.groupBox99.Controls.Add(this.button42);
+            this.groupBox99.Controls.Add(this.button43);
+            this.groupBox99.Controls.Add(this.label318);
+            this.groupBox99.Controls.Add(this.txt_);
+            this.groupBox99.Location = new System.Drawing.Point(6, 59);
+            this.groupBox99.Name = "groupBox99";
+            this.groupBox99.Size = new System.Drawing.Size(572, 334);
+            this.groupBox99.TabIndex = 73;
+            this.groupBox99.TabStop = false;
+            this.groupBox99.UseWaitCursor = true;
+            // 
+            // label317
+            // 
+            this.label317.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label317.ForeColor = System.Drawing.Color.Black;
+            this.label317.Location = new System.Drawing.Point(5, 18);
+            this.label317.Name = "label317";
+            this.label317.Size = new System.Drawing.Size(353, 41);
+            this.label317.TabIndex = 57;
+            this.label317.Text = "Nombre de la persona legisladora promovente de la iniciativa de urgente y obvia r" +
+    "esolución:";
+            this.label317.UseWaitCursor = true;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(358, 18);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(203, 23);
+            this.comboBox6.TabIndex = 58;
+            this.comboBox6.UseWaitCursor = true;
+            // 
+            // dataGridView13
+            // 
+            this.dataGridView13.AllowUserToAddRows = false;
+            this.dataGridView13.AllowUserToDeleteRows = false;
+            this.dataGridView13.AllowUserToResizeRows = false;
+            this.dataGridView13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView13.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13});
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView13.DefaultCellStyle = dataGridViewCellStyle50;
+            this.dataGridView13.Location = new System.Drawing.Point(8, 100);
+            this.dataGridView13.Name = "dataGridView13";
+            this.dataGridView13.ReadOnly = true;
+            this.dataGridView13.RowHeadersVisible = false;
+            this.dataGridView13.RowHeadersWidth = 51;
+            this.dataGridView13.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView13.Size = new System.Drawing.Size(436, 212);
+            this.dataGridView13.TabIndex = 56;
+            this.dataGridView13.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Personas legisladoras";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // button42
+            // 
+            this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button42.Location = new System.Drawing.Point(450, 166);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(110, 27);
+            this.button42.TabIndex = 54;
+            this.button42.Text = "Agregar";
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.UseWaitCursor = true;
+            // 
+            // button43
+            // 
+            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button43.Location = new System.Drawing.Point(451, 213);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(110, 27);
+            this.button43.TabIndex = 55;
+            this.button43.Text = "Eliminar";
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.UseWaitCursor = true;
+            // 
+            // label318
+            // 
+            this.label318.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label318.ForeColor = System.Drawing.Color.Black;
+            this.label318.Location = new System.Drawing.Point(5, 58);
+            this.label318.Name = "label318";
+            this.label318.Size = new System.Drawing.Size(439, 39);
+            this.label318.TabIndex = 60;
+            this.label318.Text = "Identificador de la persona legisladora promovente de la iniciativa de urgente y " +
+    "obvia resolución:";
+            this.label318.UseWaitCursor = true;
+            // 
+            // txt_
+            // 
+            this.txt_.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_.Location = new System.Drawing.Point(451, 62);
+            this.txt_.Name = "txt_";
+            this.txt_.Size = new System.Drawing.Size(110, 22);
+            this.txt_.TabIndex = 58;
+            this.txt_.UseWaitCursor = true;
+            // 
+            // cmb_tipo_promovente_iniciativa_urgente_obvia
+            // 
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.FormattingEnabled = true;
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.Location = new System.Drawing.Point(233, 25);
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.Name = "cmb_tipo_promovente_iniciativa_urgente_obvia";
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.Size = new System.Drawing.Size(337, 23);
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.TabIndex = 59;
+            this.cmb_tipo_promovente_iniciativa_urgente_obvia.UseWaitCursor = true;
+            // 
+            // label319
+            // 
+            this.label319.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label319.ForeColor = System.Drawing.Color.Black;
+            this.label319.Location = new System.Drawing.Point(11, 18);
+            this.label319.Name = "label319";
+            this.label319.Size = new System.Drawing.Size(216, 39);
+            this.label319.TabIndex = 58;
+            this.label319.Text = "Tipo de promovente de la iniciativa de urgente y obvia resolución:";
+            this.label319.UseWaitCursor = true;
+            // 
+            // groupBox38
+            // 
+            this.groupBox38.Controls.Add(this.label154);
+            this.groupBox38.Controls.Add(this.cmb_cond_adhesion_iniciativa_urgente_obvia);
+            this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox38.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox38.Location = new System.Drawing.Point(11, 747);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Size = new System.Drawing.Size(1203, 74);
+            this.groupBox38.TabIndex = 83;
+            this.groupBox38.TabStop = false;
+            this.groupBox38.Text = "Adhesión a la iniciativa de urgente y obvia resolución";
+            this.groupBox38.UseWaitCursor = true;
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label154.ForeColor = System.Drawing.Color.Black;
+            this.label154.Location = new System.Drawing.Point(323, 36);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(445, 15);
+            this.label154.TabIndex = 19;
+            this.label154.Text = "Condición de adhesión a la iniciativa de urgente y obvia resolución*:";
+            this.label154.UseWaitCursor = true;
+            // 
+            // cmb_cond_adhesion_iniciativa_urgente_obvia
+            // 
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.FormattingEnabled = true;
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.Location = new System.Drawing.Point(774, 33);
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.Name = "cmb_cond_adhesion_iniciativa_urgente_obvia";
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.Size = new System.Drawing.Size(72, 23);
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.TabIndex = 41;
+            this.cmb_cond_adhesion_iniciativa_urgente_obvia.UseWaitCursor = true;
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.Controls.Add(this.groupBox42);
+            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox39.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox39.Location = new System.Drawing.Point(9, 1006);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Size = new System.Drawing.Size(1220, 297);
+            this.groupBox39.TabIndex = 79;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "Pleno";
+            this.groupBox39.UseWaitCursor = true;
+            // 
+            // groupBox42
+            // 
+            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox42.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox42.Location = new System.Drawing.Point(11, 21);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.Size = new System.Drawing.Size(1203, 93);
+            this.groupBox42.TabIndex = 80;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "Resolución";
+            this.groupBox42.UseWaitCursor = true;
             // 
             // FormRegistros
             // 
@@ -11513,6 +11963,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tipo_discapacidad_PA)).EndInit();
             this.tabPagePA.ResumeLayout(false);
             this.tabPagePA.PerformLayout();
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox29.PerformLayout();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.groupBox81.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox15.ResumeLayout(false);
@@ -11533,6 +11988,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageIni.ResumeLayout(false);
             this.tabPageIni.PerformLayout();
+            this.groupBox80.ResumeLayout(false);
+            this.groupBox85.ResumeLayout(false);
+            this.groupBox85.PerformLayout();
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox34.PerformLayout();
+            this.groupBox62.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+            this.groupBox37.ResumeLayout(false);
+            this.groupBox87.ResumeLayout(false);
+            this.groupBox87.PerformLayout();
+            this.groupBox35.ResumeLayout(false);
+            this.groupBox35.PerformLayout();
+            this.groupBox31.ResumeLayout(false);
+            this.cmb_tipo_primer_dictamen.ResumeLayout(false);
+            this.cmb_tipo_primer_dictamen.PerformLayout();
+            this.groupBox36.ResumeLayout(false);
+            this.groupBox36.PerformLayout();
             this.groupBox28.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
@@ -11558,29 +12030,12 @@
             this.groupBox33.PerformLayout();
             this.groupBox32.ResumeLayout(false);
             this.groupBox32.PerformLayout();
-            this.groupBox36.ResumeLayout(false);
-            this.groupBox36.PerformLayout();
-            this.cmb_tipo_primer_dictamen.ResumeLayout(false);
-            this.cmb_tipo_primer_dictamen.PerformLayout();
-            this.groupBox34.ResumeLayout(false);
-            this.groupBox34.PerformLayout();
-            this.groupBox35.ResumeLayout(false);
-            this.groupBox35.PerformLayout();
             this.tabPageIniUO.ResumeLayout(false);
-            this.groupBox38.ResumeLayout(false);
-            this.groupBox38.PerformLayout();
-            this.groupBox39.ResumeLayout(false);
-            this.groupBox39.PerformLayout();
+            this.tabPageIniUO.PerformLayout();
             this.groupBox40.ResumeLayout(false);
             this.groupBox40.PerformLayout();
             this.groupBox41.ResumeLayout(false);
             this.groupBox41.PerformLayout();
-            this.groupBox42.ResumeLayout(false);
-            this.groupBox42.PerformLayout();
-            this.groupBox43.ResumeLayout(false);
-            this.groupBox43.PerformLayout();
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox44.PerformLayout();
             this.groupBox45.ResumeLayout(false);
             this.groupBox45.PerformLayout();
             this.groupBox46.ResumeLayout(false);
@@ -11615,20 +12070,33 @@
             this.groupBox59.ResumeLayout(false);
             this.groupBox59.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox29.ResumeLayout(false);
-            this.groupBox29.PerformLayout();
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            this.groupBox31.ResumeLayout(false);
-            this.groupBox37.ResumeLayout(false);
-            this.groupBox62.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            this.groupBox80.ResumeLayout(false);
-            this.groupBox85.ResumeLayout(false);
-            this.groupBox85.PerformLayout();
-            this.groupBox87.ResumeLayout(false);
-            this.groupBox87.PerformLayout();
+            this.groupBox86.ResumeLayout(false);
+            this.groupBox86.PerformLayout();
+            this.groupBox88.ResumeLayout(false);
+            this.groupBox89.ResumeLayout(false);
+            this.groupBox89.PerformLayout();
+            this.groupBox90.ResumeLayout(false);
+            this.groupBox90.PerformLayout();
+            this.groupBox91.ResumeLayout(false);
+            this.groupBox92.ResumeLayout(false);
+            this.groupBox92.PerformLayout();
+            this.groupBox93.ResumeLayout(false);
+            this.groupBox94.ResumeLayout(false);
+            this.groupBox94.PerformLayout();
+            this.groupBox95.ResumeLayout(false);
+            this.groupBox96.ResumeLayout(false);
+            this.groupBox96.PerformLayout();
+            this.groupBox97.ResumeLayout(false);
+            this.groupBox97.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            this.groupBox98.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
+            this.groupBox99.ResumeLayout(false);
+            this.groupBox99.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
+            this.groupBox38.ResumeLayout(false);
+            this.groupBox38.PerformLayout();
+            this.groupBox39.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -11922,12 +12390,6 @@
         private System.Windows.Forms.Label label145;
         private System.Windows.Forms.GroupBox groupBox36;
         private System.Windows.Forms.GroupBox cmb_tipo_primer_dictamen;
-        private System.Windows.Forms.GroupBox groupBox38;
-        private System.Windows.Forms.Label label148;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.GroupBox groupBox39;
-        private System.Windows.Forms.Label label149;
-        private System.Windows.Forms.TextBox textBox50;
         private System.Windows.Forms.GroupBox groupBox40;
         private System.Windows.Forms.TextBox textBox51;
         private System.Windows.Forms.Label label150;
@@ -11938,37 +12400,21 @@
         private System.Windows.Forms.Label label152;
         private System.Windows.Forms.ComboBox comboBox57;
         private System.Windows.Forms.Label label153;
-        private System.Windows.Forms.GroupBox groupBox42;
-        private System.Windows.Forms.ListView listView11;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Label label154;
-        private System.Windows.Forms.GroupBox groupBox43;
-        private System.Windows.Forms.ListView listView12;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Label label155;
-        private System.Windows.Forms.GroupBox groupBox44;
-        private System.Windows.Forms.ListView listView13;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label156;
         private System.Windows.Forms.GroupBox groupBox45;
-        private System.Windows.Forms.ComboBox comboBox58;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.TextBox txt_otro_tipo_iniciativa_urgente_obvia_especifique;
         private System.Windows.Forms.Label label158;
-        private System.Windows.Forms.ComboBox comboBox59;
+        private System.Windows.Forms.ComboBox cmb_tipo_iniciativa_urgente_obvia;
         private System.Windows.Forms.Label label159;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia;
         private System.Windows.Forms.Label label160;
-        private System.Windows.Forms.TextBox textBox54;
+        private System.Windows.Forms.TextBox txt_nombre_iniciativa_urgente_obvia;
         private System.Windows.Forms.Label label161;
         private System.Windows.Forms.Label label162;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes;
         private System.Windows.Forms.GroupBox groupBox46;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.ComboBox comboBox60;
+        private System.Windows.Forms.TextBox txt_turno_iniciativa_urgente_obvia;
+        private System.Windows.Forms.ComboBox cmb_estatus_iniciativa_urgente_obvia;
         private System.Windows.Forms.Label label163;
-        private System.Windows.Forms.Label label164;
-        private System.Windows.Forms.TextBox textBox56;
         private System.Windows.Forms.Label label165;
         private System.Windows.Forms.GroupBox groupBox47;
         private System.Windows.Forms.ComboBox comboBox61;
@@ -12461,5 +12907,59 @@
         private System.Windows.Forms.GroupBox groupBox80;
         private System.Windows.Forms.GroupBox groupBox87;
         private System.Windows.Forms.GroupBox groupBox85;
+        private System.Windows.Forms.GroupBox groupBox88;
+        private System.Windows.Forms.GroupBox groupBox86;
+        private System.Windows.Forms.GroupBox groupBox90;
+        private System.Windows.Forms.GroupBox groupBox89;
+        private System.Windows.Forms.Label label309;
+        private System.Windows.Forms.TextBox txt_ID_iniciativa_urgente_obvia;
+        private System.Windows.Forms.GroupBox groupBox91;
+        private System.Windows.Forms.GroupBox groupBox92;
+        private System.Windows.Forms.GroupBox groupBox93;
+        private System.Windows.Forms.GroupBox groupBox94;
+        private System.Windows.Forms.GroupBox groupBox95;
+        private System.Windows.Forms.GroupBox groupBox96;
+        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.Label label310;
+        private System.Windows.Forms.Label label311;
+        private System.Windows.Forms.Label label312;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_otro_tipo_promovente_iniciativa_urgente_obvia_especifique;
+        private System.Windows.Forms.Label label313;
+        private System.Windows.Forms.GroupBox groupBox97;
+        private System.Windows.Forms.Label label314;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.DataGridView dataGridView11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Label label315;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox groupBox98;
+        private System.Windows.Forms.Label label316;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.DataGridView dataGridView12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.GroupBox groupBox99;
+        private System.Windows.Forms.Label label317;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.DataGridView dataGridView13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.Button button43;
+        private System.Windows.Forms.Label label318;
+        private System.Windows.Forms.TextBox txt_;
+        private System.Windows.Forms.ComboBox cmb_tipo_promovente_iniciativa_urgente_obvia;
+        private System.Windows.Forms.Label label319;
+        private System.Windows.Forms.GroupBox groupBox38;
+        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.ComboBox cmb_cond_adhesion_iniciativa_urgente_obvia;
+        private System.Windows.Forms.GroupBox groupBox39;
+        private System.Windows.Forms.GroupBox groupBox42;
     }
 }
