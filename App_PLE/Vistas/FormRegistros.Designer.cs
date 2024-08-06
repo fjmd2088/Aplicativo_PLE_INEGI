@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle115 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle116 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle117 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle120 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDG = new System.Windows.Forms.TabPage();
             this.groupBox79 = new System.Windows.Forms.GroupBox();
@@ -735,45 +735,134 @@
             this.label309 = new System.Windows.Forms.Label();
             this.txt_ID_iniciativa_urgente_obvia = new System.Windows.Forms.TextBox();
             this.tabPageJP = new System.Windows.Forms.TabPage();
-            this.groupBox48 = new System.Windows.Forms.GroupBox();
-            this.label168 = new System.Windows.Forms.Label();
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1 = new System.Windows.Forms.TextBox();
-            this.label169 = new System.Windows.Forms.Label();
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique = new System.Windows.Forms.TextBox();
-            this.cmb_municipio_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.label170 = new System.Windows.Forms.Label();
-            this.txt_AGEM_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label172 = new System.Windows.Forms.Label();
+            this.button49 = new System.Windows.Forms.Button();
+            this.groupBox108 = new System.Windows.Forms.GroupBox();
+            this.button50 = new System.Windows.Forms.Button();
+            this.button51 = new System.Windows.Forms.Button();
+            this.button52 = new System.Windows.Forms.Button();
+            this.button53 = new System.Windows.Forms.Button();
+            this.button54 = new System.Windows.Forms.Button();
+            this.dataGridView16 = new System.Windows.Forms.DataGridView();
+            this.groupBox105 = new System.Windows.Forms.GroupBox();
+            this.dtp_fecha_procedencia_denuncia_juicio_politico = new System.Windows.Forms.DateTimePicker();
+            this.label196 = new System.Windows.Forms.Label();
             this.groupBox50 = new System.Windows.Forms.GroupBox();
-            this.txt_votaciones_pleno_abstencion_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label184 = new System.Windows.Forms.Label();
-            this.txt_votaciones_pleno_en_contra_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label185 = new System.Windows.Forms.Label();
-            this.txt_votaciones_pleno_a_favor_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label186 = new System.Windows.Forms.Label();
-            this.txt_total_votaciones_pleno_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label187 = new System.Windows.Forms.Label();
-            this.groupBox51 = new System.Windows.Forms.GroupBox();
-            this.dtp_fecha_resolucion_pleno_juicio_politico = new System.Windows.Forms.DateTimePicker();
-            this.label188 = new System.Windows.Forms.Label();
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique = new System.Windows.Forms.TextBox();
-            this.label189 = new System.Windows.Forms.Label();
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique = new System.Windows.Forms.TextBox();
-            this.label190 = new System.Windows.Forms.Label();
-            this.cmb_estatus_denuncia_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.label191 = new System.Windows.Forms.Label();
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo = new System.Windows.Forms.ComboBox();
-            this.label193 = new System.Windows.Forms.Label();
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo = new System.Windows.Forms.ComboBox();
-            this.dtp_sentido_resolucion_pleno_juicio_politico = new System.Windows.Forms.DateTimePicker();
-            this.txt_turno_denuncia_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label195 = new System.Windows.Forms.Label();
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1 = new System.Windows.Forms.TextBox();
+            this.label168 = new System.Windows.Forms.Label();
+            this.groupBox107 = new System.Windows.Forms.GroupBox();
+            this.label194 = new System.Windows.Forms.Label();
+            this.cmb_cargo_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.label331 = new System.Windows.Forms.Label();
+            this.label328 = new System.Windows.Forms.Label();
+            this.cmb_nombre_persona_legisladora_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.label329 = new System.Windows.Forms.Label();
+            this.label330 = new System.Windows.Forms.Label();
+            this.txt_ID_persona_legisladora_juicio_politico = new System.Windows.Forms.TextBox();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.label170 = new System.Windows.Forms.Label();
+            this.cmb_municipio_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.label172 = new System.Windows.Forms.Label();
+            this.txt_AGEM_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique = new System.Windows.Forms.TextBox();
+            this.label169 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
+            this.label197 = new System.Windows.Forms.Label();
+            this.label198 = new System.Windows.Forms.Label();
+            this.txt_sexo_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label324 = new System.Windows.Forms.Label();
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label325 = new System.Windows.Forms.Label();
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label326 = new System.Windows.Forms.Label();
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label327 = new System.Windows.Forms.Label();
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
+            this.groupBox104 = new System.Windows.Forms.GroupBox();
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes = new System.Windows.Forms.DateTimePicker();
+            this.label151 = new System.Windows.Forms.Label();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.label153 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
             this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual = new System.Windows.Forms.ComboBox();
             this.label200 = new System.Windows.Forms.Label();
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo = new System.Windows.Forms.ComboBox();
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.txt_turno_denuncia_juicio_politico = new System.Windows.Forms.TextBox();
+            this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.label193 = new System.Windows.Forms.Label();
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo = new System.Windows.Forms.ComboBox();
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique = new System.Windows.Forms.TextBox();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label189 = new System.Windows.Forms.Label();
+            this.cmb_estatus_denuncia_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique = new System.Windows.Forms.TextBox();
+            this.label190 = new System.Windows.Forms.Label();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique = new System.Windows.Forms.TextBox();
+            this.label173 = new System.Windows.Forms.Label();
+            this.label171 = new System.Windows.Forms.Label();
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView15 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.groupBox51 = new System.Windows.Forms.GroupBox();
+            this.groupBox106 = new System.Windows.Forms.GroupBox();
+            this.txt_votaciones_pleno_abstencion_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label188 = new System.Windows.Forms.Label();
+            this.label184 = new System.Windows.Forms.Label();
+            this.dtp_fecha_resolucion_pleno_juicio_politico = new System.Windows.Forms.DateTimePicker();
+            this.txt_votaciones_pleno_en_contra_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label195 = new System.Windows.Forms.Label();
+            this.label185 = new System.Windows.Forms.Label();
+            this.dtp_sentido_resolucion_pleno_juicio_politico = new System.Windows.Forms.DateTimePicker();
+            this.txt_votaciones_pleno_a_favor_juicio_politico = new System.Windows.Forms.TextBox();
+            this.label187 = new System.Windows.Forms.Label();
+            this.label186 = new System.Windows.Forms.Label();
+            this.txt_total_votaciones_pleno_juicio_politico = new System.Windows.Forms.TextBox();
             this.label199 = new System.Windows.Forms.Label();
             this.txt_ID_juicio_político = new System.Windows.Forms.TextBox();
             this.tabPageDP = new System.Windows.Forms.TabPage();
+            this.groupBox109 = new System.Windows.Forms.GroupBox();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.label332 = new System.Windows.Forms.Label();
+            this.label333 = new System.Windows.Forms.Label();
+            this.label334 = new System.Windows.Forms.Label();
+            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.label335 = new System.Windows.Forms.Label();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label166 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label167 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label174 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label175 = new System.Windows.Forms.Label();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label176 = new System.Windows.Forms.Label();
+            this.label177 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label178 = new System.Windows.Forms.Label();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label179 = new System.Windows.Forms.Label();
+            this.label180 = new System.Windows.Forms.Label();
+            this.label181 = new System.Windows.Forms.Label();
+            this.label182 = new System.Windows.Forms.Label();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.label183 = new System.Windows.Forms.Label();
             this.groupBox52 = new System.Windows.Forms.GroupBox();
             this.label201 = new System.Windows.Forms.Label();
             this.textBox76 = new System.Windows.Forms.TextBox();
@@ -841,9 +930,9 @@
             this.label230 = new System.Windows.Forms.Label();
             this.label231 = new System.Windows.Forms.Label();
             this.comboBox83 = new System.Windows.Forms.ComboBox();
+            this.label233 = new System.Windows.Forms.Label();
             this.label232 = new System.Windows.Forms.Label();
             this.txt_ID_declaracion_procedencia = new System.Windows.Forms.TextBox();
-            this.label233 = new System.Windows.Forms.Label();
             this.tabPageCom = new System.Windows.Forms.TabPage();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.label234 = new System.Windows.Forms.Label();
@@ -898,95 +987,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox40 = new System.Windows.Forms.GroupBox();
-            this.groupBox41 = new System.Windows.Forms.GroupBox();
-            this.label150 = new System.Windows.Forms.Label();
-            this.groupBox103 = new System.Windows.Forms.GroupBox();
-            this.label152 = new System.Windows.Forms.Label();
-            this.label153 = new System.Windows.Forms.Label();
-            this.groupBox104 = new System.Windows.Forms.GroupBox();
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes = new System.Windows.Forms.DateTimePicker();
-            this.label151 = new System.Windows.Forms.Label();
-            this.groupBox105 = new System.Windows.Forms.GroupBox();
-            this.dtp_fecha_procedencia_denuncia_juicio_politico = new System.Windows.Forms.DateTimePicker();
-            this.label196 = new System.Windows.Forms.Label();
-            this.groupBox106 = new System.Windows.Forms.GroupBox();
-            this.label192 = new System.Windows.Forms.Label();
-            this.label197 = new System.Windows.Forms.Label();
-            this.label198 = new System.Windows.Forms.Label();
-            this.txt_sexo_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label324 = new System.Windows.Forms.Label();
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label325 = new System.Windows.Forms.Label();
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label326 = new System.Windows.Forms.Label();
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label327 = new System.Windows.Forms.Label();
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label194 = new System.Windows.Forms.Label();
-            this.cmb_cargo_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.label328 = new System.Windows.Forms.Label();
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.label329 = new System.Windows.Forms.Label();
-            this.txt_ID_persona_legisladora_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label330 = new System.Windows.Forms.Label();
-            this.cmb_nombre_persona_legisladora_juicio_politico = new System.Windows.Forms.ComboBox();
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
-            this.label331 = new System.Windows.Forms.Label();
-            this.groupBox49 = new System.Windows.Forms.GroupBox();
-            this.groupBox107 = new System.Windows.Forms.GroupBox();
-            this.label171 = new System.Windows.Forms.Label();
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView15 = new System.Windows.Forms.DataGridView();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label173 = new System.Windows.Forms.Label();
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique = new System.Windows.Forms.TextBox();
-            this.button49 = new System.Windows.Forms.Button();
-            this.groupBox108 = new System.Windows.Forms.GroupBox();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.button52 = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
-            this.dataGridView16 = new System.Windows.Forms.DataGridView();
-            this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label166 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label167 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label174 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label175 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label176 = new System.Windows.Forms.Label();
-            this.label177 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label178 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label179 = new System.Windows.Forms.Label();
-            this.label180 = new System.Windows.Forms.Label();
-            this.label181 = new System.Windows.Forms.Label();
-            this.label182 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label183 = new System.Windows.Forms.Label();
-            this.groupBox109 = new System.Windows.Forms.GroupBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.label332 = new System.Windows.Forms.Label();
-            this.label333 = new System.Windows.Forms.Label();
-            this.label334 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.label335 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDG.SuspendLayout();
             this.groupBox79.SuspendLayout();
@@ -1111,10 +1111,23 @@
             this.groupBox92.SuspendLayout();
             this.groupBox46.SuspendLayout();
             this.tabPageJP.SuspendLayout();
-            this.groupBox48.SuspendLayout();
+            this.groupBox108.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
+            this.groupBox105.SuspendLayout();
             this.groupBox50.SuspendLayout();
+            this.groupBox107.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.groupBox104.SuspendLayout();
+            this.groupBox40.SuspendLayout();
+            this.groupBox41.SuspendLayout();
+            this.groupBox103.SuspendLayout();
+            this.groupBox48.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             this.groupBox51.SuspendLayout();
+            this.groupBox106.SuspendLayout();
             this.tabPageDP.SuspendLayout();
+            this.groupBox109.SuspendLayout();
+            this.groupBox47.SuspendLayout();
             this.groupBox52.SuspendLayout();
             this.groupBox53.SuspendLayout();
             this.groupBox54.SuspendLayout();
@@ -1125,19 +1138,6 @@
             this.groupBox58.SuspendLayout();
             this.groupBox59.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox40.SuspendLayout();
-            this.groupBox41.SuspendLayout();
-            this.groupBox103.SuspendLayout();
-            this.groupBox104.SuspendLayout();
-            this.groupBox105.SuspendLayout();
-            this.groupBox106.SuspendLayout();
-            this.groupBox49.SuspendLayout();
-            this.groupBox107.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
-            this.groupBox108.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
-            this.groupBox47.SuspendLayout();
-            this.groupBox109.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1167,7 +1167,7 @@
             this.tabPageDG.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPageDG.Location = new System.Drawing.Point(4, 25);
             this.tabPageDG.Name = "tabPageDG";
-            this.tabPageDG.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageDG.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDG.Size = new System.Drawing.Size(1258, 628);
             this.tabPageDG.TabIndex = 1;
             this.tabPageDG.Text = "Datos generales";
@@ -1343,6 +1343,7 @@
             this.dtp_fecha_termino_pe.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_termino_pe.CloseUp += new System.EventHandler(this.dtp_fecha_termino_pe_CloseUp);
             this.dtp_fecha_termino_pe.DropDown += new System.EventHandler(this.dtp_fecha_termino_pe_DropDown);
+            this.dtp_fecha_termino_pe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_termino_pe_KeyPress);
             // 
             // label21
             // 
@@ -1367,6 +1368,7 @@
             this.dtp_fecha_inicio_pe.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_inicio_pe.CloseUp += new System.EventHandler(this.dtp_fecha_inicio_pe_CloseUp);
             this.dtp_fecha_inicio_pe.DropDown += new System.EventHandler(this.dtp_fecha_inicio_pe_DropDown);
+            this.dtp_fecha_inicio_pe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_inicio_pe_KeyPress);
             // 
             // label22
             // 
@@ -1392,14 +1394,14 @@
             this.fecha_inicio_pe,
             this.fecha_termino_pe,
             this.sesiones_celebradas_pe});
-            dataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle91.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle91.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle91.SelectionBackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle91.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle91.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle91;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPE.DefaultCellStyle = dataGridViewCellStyle31;
             this.dgvPE.Location = new System.Drawing.Point(18, 97);
             this.dgvPE.Name = "dgvPE";
             this.dgvPE.ReadOnly = true;
@@ -1496,6 +1498,7 @@
             this.txt_sesiones_celebradas_p_rec.Name = "txt_sesiones_celebradas_p_rec";
             this.txt_sesiones_celebradas_p_rec.Size = new System.Drawing.Size(73, 21);
             this.txt_sesiones_celebradas_p_rec.TabIndex = 37;
+            this.txt_sesiones_celebradas_p_rec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sesiones_celebradas_p_rec_KeyPress);
             // 
             // label294
             // 
@@ -1532,6 +1535,7 @@
             this.dtp_fecha_termino_p_rec.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_termino_p_rec.CloseUp += new System.EventHandler(this.dtp_fecha_termino_p_rec_CloseUp);
             this.dtp_fecha_termino_p_rec.DropDown += new System.EventHandler(this.dtp_fecha_termino_p_rec_DropDown);
+            this.dtp_fecha_termino_p_rec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_termino_p_rec_KeyPress);
             // 
             // dtp_fecha_inicio_p_rec
             // 
@@ -1545,6 +1549,7 @@
             this.dtp_fecha_inicio_p_rec.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_inicio_p_rec.CloseUp += new System.EventHandler(this.dtp_fecha_inicio_p_rec_CloseUp);
             this.dtp_fecha_inicio_p_rec.DropDown += new System.EventHandler(this.dtp_fecha_inicio_p_rec_DropDown);
+            this.dtp_fecha_inicio_p_rec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_inicio_p_rec_KeyPress);
             // 
             // label296
             // 
@@ -1688,6 +1693,7 @@
             this.dtp_fecha_inicio_informacion_reportada.CloseUp += new System.EventHandler(this.dtp_fecha_inicio_informacion_reportada_CloseUp);
             this.dtp_fecha_inicio_informacion_reportada.ValueChanged += new System.EventHandler(this.Dtp_fecha_inicio_informacion_reportada_ValueChanged_1);
             this.dtp_fecha_inicio_informacion_reportada.DropDown += new System.EventHandler(this.dtp_fecha_inicio_informacion_reportada_DropDown);
+            this.dtp_fecha_inicio_informacion_reportada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_inicio_informacion_reportada_KeyPress);
             // 
             // label12
             // 
@@ -1711,6 +1717,7 @@
             this.dtp_fecha_termino_informacion_reportada.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_termino_informacion_reportada.CloseUp += new System.EventHandler(this.dtp_fecha_termino_informacion_reportada_CloseUp);
             this.dtp_fecha_termino_informacion_reportada.DropDown += new System.EventHandler(this.dtp_fecha_termino_informacion_reportada_DropDown);
+            this.dtp_fecha_termino_informacion_reportada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_termino_informacion_reportada_KeyPress);
             // 
             // groupBox5
             // 
@@ -1800,6 +1807,7 @@
             this.dtp_fecha_termino_po.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_fecha_termino_po.CloseUp += new System.EventHandler(this.dtp_fecha_termino_po_CloseUp);
             this.dtp_fecha_termino_po.DropDown += new System.EventHandler(this.dtp_fecha_termino_po_DropDown);
+            this.dtp_fecha_termino_po.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_termino_po_KeyPress);
             // 
             // dtp_fecha_inicio_po
             // 
@@ -1814,6 +1822,7 @@
             this.dtp_fecha_inicio_po.CloseUp += new System.EventHandler(this.dtp_fecha_inicio_po_CloseUp);
             this.dtp_fecha_inicio_po.ValueChanged += new System.EventHandler(this.dtp_fecha_inicio_po_ValueChanged_1);
             this.dtp_fecha_inicio_po.DropDown += new System.EventHandler(this.dtp_fecha_inicio_po_DropDown);
+            this.dtp_fecha_inicio_po.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_inicio_po_KeyPress);
             // 
             // label18
             // 
@@ -1923,6 +1932,7 @@
             this.dtp_termino_funciones_legislatura.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_termino_funciones_legislatura.CloseUp += new System.EventHandler(this.dtp_termino_funciones_legislatura_CloseUp);
             this.dtp_termino_funciones_legislatura.DropDown += new System.EventHandler(this.dtp_termino_funciones_legislatura_DropDown);
+            this.dtp_termino_funciones_legislatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_termino_funciones_legislatura_KeyPress);
             // 
             // dtp_inicio_funciones_legislatura
             // 
@@ -1935,6 +1945,7 @@
             this.dtp_inicio_funciones_legislatura.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dtp_inicio_funciones_legislatura.CloseUp += new System.EventHandler(this.dtp_inicio_funciones_legislatura_CloseUp);
             this.dtp_inicio_funciones_legislatura.DropDown += new System.EventHandler(this.dtp_inicio_funciones_legislatura_DropDown);
+            this.dtp_inicio_funciones_legislatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_inicio_funciones_legislatura_KeyPress);
             // 
             // label6
             // 
@@ -1964,7 +1975,7 @@
             this.tabPageCL.Controls.Add(this.label33);
             this.tabPageCL.Location = new System.Drawing.Point(4, 25);
             this.tabPageCL.Name = "tabPageCL";
-            this.tabPageCL.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageCL.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageCL.Size = new System.Drawing.Size(1258, 628);
             this.tabPageCL.TabIndex = 1;
             this.tabPageCL.Text = "Comisiones legislativas";
@@ -2008,7 +2019,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(316, 8972);
+            this.btnGuardarCL.Location = new System.Drawing.Point(262, 9482);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -2098,23 +2109,23 @@
             this.dgv_registros_cl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_cl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_cl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle92.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle92.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle92.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle92.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle92.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle92;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_cl.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgv_registros_cl.Location = new System.Drawing.Point(12, 21);
             this.dgv_registros_cl.MultiSelect = false;
             this.dgv_registros_cl.Name = "dgv_registros_cl";
             this.dgv_registros_cl.ReadOnly = true;
             this.dgv_registros_cl.RowHeadersVisible = false;
             this.dgv_registros_cl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle93.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle93;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_registros_cl.RowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dgv_registros_cl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_registros_cl.Size = new System.Drawing.Size(1079, 126);
             this.dgv_registros_cl.TabIndex = 30;
@@ -2124,7 +2135,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(226, 11033);
+            this.button24.Location = new System.Drawing.Point(172, 11543);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -2518,14 +2529,14 @@
             this.dgv_tema_comision_legislativa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tema_comision_legislativa,
             this.otro_tema_comision_legislativa_especifique});
-            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle94.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle94.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle94.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle94.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle94.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle94;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tema_comision_legislativa.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgv_tema_comision_legislativa.Location = new System.Drawing.Point(12, 64);
             this.dgv_tema_comision_legislativa.Name = "dgv_tema_comision_legislativa";
             this.dgv_tema_comision_legislativa.ReadOnly = true;
@@ -2693,7 +2704,7 @@
             this.tabPagePL.Controls.Add(this.groupBox13);
             this.tabPagePL.Location = new System.Drawing.Point(4, 25);
             this.tabPagePL.Name = "tabPagePL";
-            this.tabPagePL.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPagePL.Padding = new System.Windows.Forms.Padding(3);
             this.tabPagePL.Size = new System.Drawing.Size(1258, 628);
             this.tabPagePL.TabIndex = 2;
             this.tabPagePL.Text = "Personas legisladoras";
@@ -2747,14 +2758,14 @@
             this.dgv_registros_pl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_registros_pl.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_registros_pl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle95.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle95.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle95.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle95.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle95.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle95;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_registros_pl.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgv_registros_pl.Location = new System.Drawing.Point(12, 31);
             this.dgv_registros_pl.Name = "dgv_registros_pl";
             this.dgv_registros_pl.ReadOnly = true;
@@ -3227,14 +3238,14 @@
             this.nombre_comision_legislativa,
             this.ID_comision_legislativa_pc,
             this.cargo_comision_legislativa});
-            dataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle96.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle96.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle96.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle96.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle96.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle96;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_participacion_comisiones.DefaultCellStyle = dataGridViewCellStyle36;
             this.dgv_participacion_comisiones.Location = new System.Drawing.Point(13, 117);
             this.dgv_participacion_comisiones.Name = "dgv_participacion_comisiones";
             this.dgv_participacion_comisiones.ReadOnly = true;
@@ -4059,14 +4070,14 @@
             this.dgv_partido_coalicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_partido_coalicion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partido_politico_candidatura_coalicion});
-            dataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle97.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle97.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle97.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle97.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle97.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle97;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_partido_coalicion.DefaultCellStyle = dataGridViewCellStyle37;
             this.dgv_partido_coalicion.Location = new System.Drawing.Point(626, 68);
             this.dgv_partido_coalicion.Name = "dgv_partido_coalicion";
             this.dgv_partido_coalicion.ReadOnly = true;
@@ -4563,14 +4574,14 @@
             this.lic_pl,
             this.mae_pl,
             this.doc_pl});
-            dataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle98.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle98.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle98.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle98.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle98.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle98.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle98;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_nivel_escolaridad_PL.DefaultCellStyle = dataGridViewCellStyle38;
             this.dgv_nivel_escolaridad_PL.Location = new System.Drawing.Point(28, 70);
             this.dgv_nivel_escolaridad_PL.Name = "dgv_nivel_escolaridad_PL";
             this.dgv_nivel_escolaridad_PL.ReadOnly = true;
@@ -5024,14 +5035,14 @@
             this.dgv_lengua_PA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lengua_PA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lengua_ind_persona_legisladora});
-            dataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle99.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle99.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle99.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle99.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle99.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_lengua_PA.DefaultCellStyle = dataGridViewCellStyle99;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_lengua_PA.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgv_lengua_PA.Location = new System.Drawing.Point(17, 64);
             this.dgv_lengua_PA.Name = "dgv_lengua_PA";
             this.dgv_lengua_PA.ReadOnly = true;
@@ -5183,14 +5194,14 @@
             this.dgv_tipo_discapacidad_PA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tipo_discapacidad_PA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipo_discapacidad_persona_legisladora});
-            dataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle100.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle100.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle100.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle100.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle100.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tipo_discapacidad_PA.DefaultCellStyle = dataGridViewCellStyle100;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tipo_discapacidad_PA.DefaultCellStyle = dataGridViewCellStyle40;
             this.dgv_tipo_discapacidad_PA.Location = new System.Drawing.Point(13, 103);
             this.dgv_tipo_discapacidad_PA.Name = "dgv_tipo_discapacidad_PA";
             this.dgv_tipo_discapacidad_PA.ReadOnly = true;
@@ -5482,14 +5493,14 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
-            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle101.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle101.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle101.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle101.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle101;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridView9.Location = new System.Drawing.Point(28, 78);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.ReadOnly = true;
@@ -5709,23 +5720,23 @@
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle102.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle102.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle102;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridView3.Location = new System.Drawing.Point(12, 21);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle103.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle103.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle103;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(1079, 154);
             this.dataGridView3.TabIndex = 30;
@@ -6346,14 +6357,14 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle104.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle104.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle104.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle104;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle44;
             this.dataGridView2.Location = new System.Drawing.Point(18, 94);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -6537,14 +6548,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle105.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle105.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle105.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle105.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle105.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle105.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle105;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle45;
             this.dataGridView1.Location = new System.Drawing.Point(9, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -6843,23 +6854,23 @@
             this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView10.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle106.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle106.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle106.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle106.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle106.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle106;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle46;
             this.dataGridView10.Location = new System.Drawing.Point(12, 21);
             this.dataGridView10.MultiSelect = false;
             this.dataGridView10.Name = "dataGridView10";
             this.dataGridView10.ReadOnly = true;
             this.dataGridView10.RowHeadersVisible = false;
             this.dataGridView10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle107.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle107.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView10.RowsDefaultCellStyle = dataGridViewCellStyle107;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView10.RowsDefaultCellStyle = dataGridViewCellStyle47;
             this.dataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView10.Size = new System.Drawing.Size(1079, 186);
             this.dataGridView10.TabIndex = 30;
@@ -7351,14 +7362,14 @@
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7});
-            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle108.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle108.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle108;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle48;
             this.dataGridView8.Location = new System.Drawing.Point(14, 108);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.ReadOnly = true;
@@ -7471,14 +7482,14 @@
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle109.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle109.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle109.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle109.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle109.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle109;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle49;
             this.dataGridView7.Location = new System.Drawing.Point(14, 108);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.ReadOnly = true;
@@ -7913,14 +7924,14 @@
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5});
-            dataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle110.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle110.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle110.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle110.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle110.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle110;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle50;
             this.dataGridView6.Location = new System.Drawing.Point(9, 92);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
@@ -8027,14 +8038,14 @@
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle111.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle111.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle111.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle111.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle111.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle111;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle51;
             this.dataGridView5.Location = new System.Drawing.Point(13, 48);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
@@ -8122,14 +8133,14 @@
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle112.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle112.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle112.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle112.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle112.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle112.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle112;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle52;
             this.dataGridView4.Location = new System.Drawing.Point(20, 91);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
@@ -8653,23 +8664,23 @@
             this.dataGridView14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView14.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle113.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle113.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle113.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle113.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView14.DefaultCellStyle = dataGridViewCellStyle113;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView14.DefaultCellStyle = dataGridViewCellStyle53;
             this.dataGridView14.Location = new System.Drawing.Point(12, 21);
             this.dataGridView14.MultiSelect = false;
             this.dataGridView14.Name = "dataGridView14";
             this.dataGridView14.ReadOnly = true;
             this.dataGridView14.RowHeadersVisible = false;
             this.dataGridView14.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle114.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView14.RowsDefaultCellStyle = dataGridViewCellStyle114;
+            dataGridViewCellStyle54.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView14.RowsDefaultCellStyle = dataGridViewCellStyle54;
             this.dataGridView14.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView14.Size = new System.Drawing.Size(1079, 186);
             this.dataGridView14.TabIndex = 30;
@@ -9221,14 +9232,14 @@
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11});
-            dataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle115.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle115.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle115.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle115.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle115.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle115.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView11.DefaultCellStyle = dataGridViewCellStyle115;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle55.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle55.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView11.DefaultCellStyle = dataGridViewCellStyle55;
             this.dataGridView11.Location = new System.Drawing.Point(9, 96);
             this.dataGridView11.Name = "dataGridView11";
             this.dataGridView11.ReadOnly = true;
@@ -9336,14 +9347,14 @@
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn12});
-            dataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle116.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle116.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle116.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle116.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle116.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle116.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView12.DefaultCellStyle = dataGridViewCellStyle116;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle56.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView12.DefaultCellStyle = dataGridViewCellStyle56;
             this.dataGridView12.Location = new System.Drawing.Point(13, 53);
             this.dataGridView12.Name = "dataGridView12";
             this.dataGridView12.ReadOnly = true;
@@ -9432,14 +9443,14 @@
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn13});
-            dataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle117.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle117.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle117.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle117.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle117.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle117.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView13.DefaultCellStyle = dataGridViewCellStyle117;
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle57.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle57.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView13.DefaultCellStyle = dataGridViewCellStyle57;
             this.dataGridView13.Location = new System.Drawing.Point(8, 100);
             this.dataGridView13.Name = "dataGridView13";
             this.dataGridView13.ReadOnly = true;
@@ -9799,115 +9810,157 @@
             this.tabPageJP.Text = "Juicios políticos";
             this.tabPageJP.UseVisualStyleBackColor = true;
             // 
-            // groupBox48
+            // button49
             // 
-            this.groupBox48.Controls.Add(this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique);
-            this.groupBox48.Controls.Add(this.label173);
-            this.groupBox48.Controls.Add(this.label171);
-            this.groupBox48.Controls.Add(this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1);
-            this.groupBox48.Controls.Add(this.dataGridView15);
-            this.groupBox48.Controls.Add(this.button48);
-            this.groupBox48.Controls.Add(this.button47);
-            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox48.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox48.Location = new System.Drawing.Point(6, 1056);
-            this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Size = new System.Drawing.Size(1220, 197);
-            this.groupBox48.TabIndex = 74;
-            this.groupBox48.TabStop = false;
-            this.groupBox48.Text = "Perjuicio a los intereses públicos fundamentales y de su buen despachoPerjuicio a" +
-    " los intereses públicos fundamentales y de su buen despacho:";
-            this.groupBox48.UseWaitCursor = true;
+            this.button49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button49.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button49.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button49.Location = new System.Drawing.Point(555, 1276);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(148, 27);
+            this.button49.TabIndex = 97;
+            this.button49.Text = "Guardar información";
+            this.button49.UseVisualStyleBackColor = true;
             // 
-            // label168
+            // groupBox108
             // 
-            this.label168.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label168.ForeColor = System.Drawing.Color.Black;
-            this.label168.Location = new System.Drawing.Point(665, 364);
-            this.label168.Name = "label168";
-            this.label168.Size = new System.Drawing.Size(361, 31);
-            this.label168.TabIndex = 41;
-            this.label168.Text = "Otro cargo del ámbito municipal desempeñado por la persona servidora pública suje" +
-    "ta a procedimiento de juicio político:";
-            this.label168.UseWaitCursor = true;
+            this.groupBox108.Controls.Add(this.button50);
+            this.groupBox108.Controls.Add(this.button51);
+            this.groupBox108.Controls.Add(this.button52);
+            this.groupBox108.Controls.Add(this.button53);
+            this.groupBox108.Controls.Add(this.button54);
+            this.groupBox108.Controls.Add(this.dataGridView16);
+            this.groupBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox108.ForeColor = System.Drawing.Color.Green;
+            this.groupBox108.Location = new System.Drawing.Point(8, 1327);
+            this.groupBox108.Name = "groupBox108";
+            this.groupBox108.Size = new System.Drawing.Size(1220, 213);
+            this.groupBox108.TabIndex = 96;
+            this.groupBox108.TabStop = false;
+            this.groupBox108.Text = "Registros deJuicios politicos";
             // 
-            // txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1
+            // button50
             // 
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Location = new System.Drawing.Point(693, 414);
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Name = "txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1";
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Size = new System.Drawing.Size(304, 21);
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TabIndex = 42;
-            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.UseWaitCursor = true;
+            this.button50.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button50.Image = ((System.Drawing.Image)(resources.GetObject("button50.Image")));
+            this.button50.Location = new System.Drawing.Point(1135, 37);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(47, 47);
+            this.button50.TabIndex = 81;
+            this.button50.UseVisualStyleBackColor = false;
+            this.button50.UseWaitCursor = true;
             // 
-            // label169
+            // button51
             // 
-            this.label169.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label169.ForeColor = System.Drawing.Color.Black;
-            this.label169.Location = new System.Drawing.Point(156, 364);
-            this.label169.Name = "label169";
-            this.label169.Size = new System.Drawing.Size(355, 31);
-            this.label169.TabIndex = 39;
-            this.label169.Text = "Otro cargo del ámbito estatal desempeñado por la persona servidora pública sujeta" +
-    " a procedimiento de juicio político:";
-            this.label169.UseWaitCursor = true;
+            this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button51.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button51.Location = new System.Drawing.Point(1110, 145);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(97, 27);
+            this.button51.TabIndex = 44;
+            this.button51.Text = "Eliminar";
+            this.button51.UseVisualStyleBackColor = true;
             // 
-            // txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique
+            // button52
             // 
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Location = new System.Drawing.Point(177, 414);
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Name = "txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifiq" +
-    "ue";
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Size = new System.Drawing.Size(304, 21);
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.TabIndex = 40;
-            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.UseWaitCursor = true;
+            this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button52.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button52.Location = new System.Drawing.Point(1110, 99);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(97, 27);
+            this.button52.TabIndex = 43;
+            this.button52.Text = "Editar";
+            this.button52.UseVisualStyleBackColor = true;
             // 
-            // cmb_municipio_persona_servidora_publica_juicio_politico
+            // button53
             // 
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(270, 37);
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.Name = "cmb_municipio_persona_servidora_publica_juicio_politico";
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(238, 23);
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.TabIndex = 38;
-            this.cmb_municipio_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button53.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button53.Location = new System.Drawing.Point(734, 228);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(90, 27);
+            this.button53.TabIndex = 40;
+            this.button53.Text = "     Eliminar";
+            this.button53.UseVisualStyleBackColor = true;
             // 
-            // label170
+            // button54
             // 
-            this.label170.AutoSize = true;
-            this.label170.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label170.ForeColor = System.Drawing.Color.Black;
-            this.label170.Location = new System.Drawing.Point(12, 40);
-            this.label170.Name = "label170";
-            this.label170.Size = new System.Drawing.Size(236, 15);
-            this.label170.TabIndex = 37;
-            this.label170.Text = "Municipio en el cual desempeña el cargo:";
-            this.label170.UseWaitCursor = true;
+            this.button54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button54.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button54.Location = new System.Drawing.Point(371, 228);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(81, 27);
+            this.button54.TabIndex = 39;
+            this.button54.Text = "     Agregar";
+            this.button54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button54.UseVisualStyleBackColor = true;
             // 
-            // txt_AGEM_persona_servidora_publica_juicio_politico
+            // dataGridView16
             // 
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1011, 37);
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.Name = "txt_AGEM_persona_servidora_publica_juicio_politico";
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.TabIndex = 28;
-            this.txt_AGEM_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.dataGridView16.AllowUserToAddRows = false;
+            this.dataGridView16.AllowUserToDeleteRows = false;
+            this.dataGridView16.AllowUserToResizeRows = false;
+            this.dataGridView16.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView16.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView16.DefaultCellStyle = dataGridViewCellStyle58;
+            this.dataGridView16.Location = new System.Drawing.Point(12, 21);
+            this.dataGridView16.MultiSelect = false;
+            this.dataGridView16.Name = "dataGridView16";
+            this.dataGridView16.ReadOnly = true;
+            this.dataGridView16.RowHeadersVisible = false;
+            this.dataGridView16.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle59.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView16.RowsDefaultCellStyle = dataGridViewCellStyle59;
+            this.dataGridView16.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView16.Size = new System.Drawing.Size(1079, 186);
+            this.dataGridView16.TabIndex = 30;
             // 
-            // label172
+            // groupBox105
             // 
-            this.label172.AutoSize = true;
-            this.label172.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label172.ForeColor = System.Drawing.Color.Black;
-            this.label172.Location = new System.Drawing.Point(570, 39);
-            this.label172.Name = "label172";
-            this.label172.Size = new System.Drawing.Size(412, 15);
-            this.label172.TabIndex = 25;
-            this.label172.Text = "Clave AGEM correspondiente al municipio en el cual desempeña el cargo:";
-            this.label172.UseWaitCursor = true;
+            this.groupBox105.Controls.Add(this.dtp_fecha_procedencia_denuncia_juicio_politico);
+            this.groupBox105.Controls.Add(this.label196);
+            this.groupBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox105.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox105.Location = new System.Drawing.Point(626, 353);
+            this.groupBox105.Name = "groupBox105";
+            this.groupBox105.Size = new System.Drawing.Size(600, 56);
+            this.groupBox105.TabIndex = 81;
+            this.groupBox105.TabStop = false;
+            this.groupBox105.Text = "Procedencia";
+            this.groupBox105.UseWaitCursor = true;
+            // 
+            // dtp_fecha_procedencia_denuncia_juicio_politico
+            // 
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.Location = new System.Drawing.Point(487, 22);
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.Name = "dtp_fecha_procedencia_denuncia_juicio_politico";
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.TabIndex = 52;
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.UseWaitCursor = true;
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label196.ForeColor = System.Drawing.Color.Black;
+            this.label196.Location = new System.Drawing.Point(26, 26);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(432, 15);
+            this.label196.TabIndex = 51;
+            this.label196.Text = "Fecha en la que se determinó la procedencia de la denuncia de juicio político:";
+            this.label196.UseWaitCursor = true;
             // 
             // groupBox50
             // 
@@ -9942,274 +9995,507 @@
     "imiento de juicio político";
             this.groupBox50.UseWaitCursor = true;
             // 
-            // txt_votaciones_pleno_abstencion_juicio_politico
+            // txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1
             // 
-            this.txt_votaciones_pleno_abstencion_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_votaciones_pleno_abstencion_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_votaciones_pleno_abstencion_juicio_politico.Location = new System.Drawing.Point(1061, 75);
-            this.txt_votaciones_pleno_abstencion_juicio_politico.Name = "txt_votaciones_pleno_abstencion_juicio_politico";
-            this.txt_votaciones_pleno_abstencion_juicio_politico.Size = new System.Drawing.Size(85, 21);
-            this.txt_votaciones_pleno_abstencion_juicio_politico.TabIndex = 66;
-            this.txt_votaciones_pleno_abstencion_juicio_politico.UseWaitCursor = true;
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Location = new System.Drawing.Point(693, 414);
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Name = "txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1";
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Size = new System.Drawing.Size(304, 21);
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TabIndex = 42;
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.UseWaitCursor = true;
             // 
-            // label184
+            // label168
             // 
-            this.label184.AutoSize = true;
-            this.label184.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label184.ForeColor = System.Drawing.Color.Black;
-            this.label184.Location = new System.Drawing.Point(845, 78);
-            this.label184.Name = "label184";
-            this.label184.Size = new System.Drawing.Size(204, 15);
-            this.label184.TabIndex = 65;
-            this.label184.Text = "Votaciones plenarias de abstención:";
-            this.label184.UseWaitCursor = true;
+            this.label168.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label168.ForeColor = System.Drawing.Color.Black;
+            this.label168.Location = new System.Drawing.Point(665, 364);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(361, 31);
+            this.label168.TabIndex = 41;
+            this.label168.Text = "Otro cargo del ámbito municipal desempeñado por la persona servidora pública suje" +
+    "ta a procedimiento de juicio político:";
+            this.label168.UseWaitCursor = true;
             // 
-            // txt_votaciones_pleno_en_contra_juicio_politico
+            // groupBox107
             // 
-            this.txt_votaciones_pleno_en_contra_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_votaciones_pleno_en_contra_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_votaciones_pleno_en_contra_juicio_politico.Location = new System.Drawing.Point(634, 76);
-            this.txt_votaciones_pleno_en_contra_juicio_politico.Name = "txt_votaciones_pleno_en_contra_juicio_politico";
-            this.txt_votaciones_pleno_en_contra_juicio_politico.Size = new System.Drawing.Size(85, 21);
-            this.txt_votaciones_pleno_en_contra_juicio_politico.TabIndex = 64;
-            this.txt_votaciones_pleno_en_contra_juicio_politico.UseWaitCursor = true;
+            this.groupBox107.Controls.Add(this.label194);
+            this.groupBox107.Controls.Add(this.cmb_cargo_persona_servidora_publica_juicio_politico);
+            this.groupBox107.Controls.Add(this.txt_nombre_institucion_persona_servidora_publica_juicio_politico);
+            this.groupBox107.Controls.Add(this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico);
+            this.groupBox107.Controls.Add(this.label331);
+            this.groupBox107.Controls.Add(this.label328);
+            this.groupBox107.Controls.Add(this.cmb_nombre_persona_legisladora_juicio_politico);
+            this.groupBox107.Controls.Add(this.label329);
+            this.groupBox107.Controls.Add(this.label330);
+            this.groupBox107.Controls.Add(this.txt_ID_persona_legisladora_juicio_politico);
+            this.groupBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox107.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox107.Location = new System.Drawing.Point(7, 108);
+            this.groupBox107.Name = "groupBox107";
+            this.groupBox107.Size = new System.Drawing.Size(1207, 153);
+            this.groupBox107.TabIndex = 82;
+            this.groupBox107.TabStop = false;
+            this.groupBox107.Text = "Cargo";
+            this.groupBox107.UseWaitCursor = true;
             // 
-            // label185
+            // label194
             // 
-            this.label185.AutoSize = true;
-            this.label185.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label185.ForeColor = System.Drawing.Color.Black;
-            this.label185.Location = new System.Drawing.Point(446, 78);
-            this.label185.Name = "label185";
-            this.label185.Size = new System.Drawing.Size(178, 15);
-            this.label185.TabIndex = 63;
-            this.label185.Text = "Votaciones plenarias en contra:";
-            this.label185.UseWaitCursor = true;
+            this.label194.AutoSize = true;
+            this.label194.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label194.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label194.Location = new System.Drawing.Point(12, 35);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(126, 15);
+            this.label194.TabIndex = 62;
+            this.label194.Text = "Cargo desempeñado:";
+            this.label194.UseWaitCursor = true;
             // 
-            // txt_votaciones_pleno_a_favor_juicio_politico
+            // cmb_cargo_persona_servidora_publica_juicio_politico
             // 
-            this.txt_votaciones_pleno_a_favor_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_votaciones_pleno_a_favor_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_votaciones_pleno_a_favor_juicio_politico.Location = new System.Drawing.Point(222, 75);
-            this.txt_votaciones_pleno_a_favor_juicio_politico.Name = "txt_votaciones_pleno_a_favor_juicio_politico";
-            this.txt_votaciones_pleno_a_favor_juicio_politico.Size = new System.Drawing.Size(99, 21);
-            this.txt_votaciones_pleno_a_favor_juicio_politico.TabIndex = 62;
-            this.txt_votaciones_pleno_a_favor_juicio_politico.UseWaitCursor = true;
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(165, 32);
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.Name = "cmb_cargo_persona_servidora_publica_juicio_politico";
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(1014, 23);
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.TabIndex = 61;
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
             // 
-            // label186
+            // txt_nombre_institucion_persona_servidora_publica_juicio_politico
             // 
-            this.label186.AutoSize = true;
-            this.label186.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label186.ForeColor = System.Drawing.Color.Black;
-            this.label186.Location = new System.Drawing.Point(44, 78);
-            this.label186.Name = "label186";
-            this.label186.Size = new System.Drawing.Size(163, 15);
-            this.label186.TabIndex = 61;
-            this.label186.Text = "Votaciones plenarias a favor:";
-            this.label186.UseWaitCursor = true;
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(861, 114);
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Name = "txt_nombre_institucion_persona_servidora_publica_juicio_politico";
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(333, 21);
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.TabIndex = 71;
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
             // 
-            // txt_total_votaciones_pleno_juicio_politico
+            // cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico
             // 
-            this.txt_total_votaciones_pleno_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_total_votaciones_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_votaciones_pleno_juicio_politico.Location = new System.Drawing.Point(1106, 25);
-            this.txt_total_votaciones_pleno_juicio_politico.Name = "txt_total_votaciones_pleno_juicio_politico";
-            this.txt_total_votaciones_pleno_juicio_politico.Size = new System.Drawing.Size(88, 21);
-            this.txt_total_votaciones_pleno_juicio_politico.TabIndex = 60;
-            this.txt_total_votaciones_pleno_juicio_politico.UseWaitCursor = true;
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.FormattingEnabled = true;
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(22, 116);
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Name = "cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico";
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(102, 23);
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.TabIndex = 63;
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.UseWaitCursor = true;
             // 
-            // label187
+            // label331
             // 
-            this.label187.AutoSize = true;
-            this.label187.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label187.ForeColor = System.Drawing.Color.Black;
-            this.label187.Location = new System.Drawing.Point(921, 28);
-            this.label187.Name = "label187";
-            this.label187.Size = new System.Drawing.Size(169, 15);
-            this.label187.TabIndex = 59;
-            this.label187.Text = "Total de votaciones plenarias:";
-            this.label187.UseWaitCursor = true;
+            this.label331.AutoSize = true;
+            this.label331.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label331.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label331.Location = new System.Drawing.Point(883, 88);
+            this.label331.Name = "label331";
+            this.label331.Size = new System.Drawing.Size(291, 15);
+            this.label331.TabIndex = 70;
+            this.label331.Text = "Nombre de la institución pública a la que pertenece:";
+            this.label331.UseWaitCursor = true;
             // 
-            // groupBox51
+            // label328
             // 
-            this.groupBox51.Controls.Add(this.groupBox106);
-            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox51.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox51.Location = new System.Drawing.Point(6, 415);
-            this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Size = new System.Drawing.Size(1220, 149);
-            this.groupBox51.TabIndex = 70;
-            this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "Pleno";
-            this.groupBox51.UseWaitCursor = true;
+            this.label328.AutoSize = true;
+            this.label328.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label328.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label328.Location = new System.Drawing.Point(44, 88);
+            this.label328.Name = "label328";
+            this.label328.Size = new System.Drawing.Size(65, 15);
+            this.label328.TabIndex = 64;
+            this.label328.Text = "Condición:";
+            this.label328.UseWaitCursor = true;
             // 
-            // dtp_fecha_resolucion_pleno_juicio_politico
+            // cmb_nombre_persona_legisladora_juicio_politico
             // 
-            this.dtp_fecha_resolucion_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_resolucion_pleno_juicio_politico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_resolucion_pleno_juicio_politico.Location = new System.Drawing.Point(344, 24);
-            this.dtp_fecha_resolucion_pleno_juicio_politico.Name = "dtp_fecha_resolucion_pleno_juicio_politico";
-            this.dtp_fecha_resolucion_pleno_juicio_politico.Size = new System.Drawing.Size(79, 20);
-            this.dtp_fecha_resolucion_pleno_juicio_politico.TabIndex = 52;
-            this.dtp_fecha_resolucion_pleno_juicio_politico.UseWaitCursor = true;
-            this.dtp_fecha_resolucion_pleno_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.cmb_nombre_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_nombre_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_nombre_persona_legisladora_juicio_politico.FormattingEnabled = true;
+            this.cmb_nombre_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(530, 114);
+            this.cmb_nombre_persona_legisladora_juicio_politico.Name = "cmb_nombre_persona_legisladora_juicio_politico";
+            this.cmb_nombre_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(241, 23);
+            this.cmb_nombre_persona_legisladora_juicio_politico.TabIndex = 69;
+            this.cmb_nombre_persona_legisladora_juicio_politico.UseWaitCursor = true;
             // 
-            // label188
+            // label329
             // 
-            this.label188.AutoSize = true;
-            this.label188.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label188.ForeColor = System.Drawing.Color.Black;
-            this.label188.Location = new System.Drawing.Point(7, 28);
-            this.label188.Name = "label188";
-            this.label188.Size = new System.Drawing.Size(314, 15);
-            this.label188.TabIndex = 51;
-            this.label188.Text = "Fecha de resolución del procedimiento de juicio político:";
-            this.label188.UseWaitCursor = true;
+            this.label329.AutoSize = true;
+            this.label329.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label329.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label329.Location = new System.Drawing.Point(204, 88);
+            this.label329.Name = "label329";
+            this.label329.Size = new System.Drawing.Size(219, 15);
+            this.label329.TabIndex = 66;
+            this.label329.Text = "Identificador de la persona legisladora:";
+            this.label329.UseWaitCursor = true;
             // 
-            // txt_otro_estatus_denuncia_juicio_politico_especifique
+            // label330
             // 
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Location = new System.Drawing.Point(900, 93);
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Name = "txt_otro_estatus_denuncia_juicio_politico_especifique";
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Size = new System.Drawing.Size(301, 21);
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.TabIndex = 50;
-            this.txt_otro_estatus_denuncia_juicio_politico_especifique.UseWaitCursor = true;
+            this.label330.AutoSize = true;
+            this.label330.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label330.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label330.Location = new System.Drawing.Point(556, 88);
+            this.label330.Name = "label330";
+            this.label330.Size = new System.Drawing.Size(197, 15);
+            this.label330.TabIndex = 68;
+            this.label330.Text = "Nombre de la persona legisladora:";
+            this.label330.UseWaitCursor = true;
             // 
-            // label189
+            // txt_ID_persona_legisladora_juicio_politico
             // 
-            this.label189.AutoSize = true;
-            this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label189.ForeColor = System.Drawing.Color.Black;
-            this.label189.Location = new System.Drawing.Point(639, 96);
-            this.label189.Name = "label189";
-            this.label189.Size = new System.Drawing.Size(250, 15);
-            this.label189.TabIndex = 49;
-            this.label189.Text = "Otro estatus de la denuncia de juicio político:";
-            this.label189.UseWaitCursor = true;
+            this.txt_ID_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ID_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(270, 116);
+            this.txt_ID_persona_legisladora_juicio_politico.Name = "txt_ID_persona_legisladora_juicio_politico";
+            this.txt_ID_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(99, 21);
+            this.txt_ID_persona_legisladora_juicio_politico.TabIndex = 67;
+            this.txt_ID_persona_legisladora_juicio_politico.UseWaitCursor = true;
             // 
-            // txt_improcedente_estatus_denuncia_juicio_politico_especifique
+            // groupBox49
             // 
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Location = new System.Drawing.Point(351, 93);
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Name = "txt_improcedente_estatus_denuncia_juicio_politico_especifique";
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Size = new System.Drawing.Size(263, 21);
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.TabIndex = 48;
-            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.UseWaitCursor = true;
+            this.groupBox49.Controls.Add(this.label170);
+            this.groupBox49.Controls.Add(this.cmb_municipio_persona_servidora_publica_juicio_politico);
+            this.groupBox49.Controls.Add(this.label172);
+            this.groupBox49.Controls.Add(this.txt_AGEM_persona_servidora_publica_juicio_politico);
+            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox49.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox49.Location = new System.Drawing.Point(7, 267);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Size = new System.Drawing.Size(1207, 82);
+            this.groupBox49.TabIndex = 81;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Municipio donde se desempeña";
+            this.groupBox49.UseWaitCursor = true;
             // 
-            // label190
+            // label170
             // 
-            this.label190.AutoSize = true;
-            this.label190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label190.ForeColor = System.Drawing.Color.Black;
-            this.label190.Location = new System.Drawing.Point(14, 96);
-            this.label190.Name = "label190";
-            this.label190.Size = new System.Drawing.Size(322, 15);
-            this.label190.TabIndex = 47;
-            this.label190.Text = "Causa de improcedencia de la denuncia de juicio político:";
-            this.label190.UseWaitCursor = true;
+            this.label170.AutoSize = true;
+            this.label170.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label170.ForeColor = System.Drawing.Color.Black;
+            this.label170.Location = new System.Drawing.Point(12, 40);
+            this.label170.Name = "label170";
+            this.label170.Size = new System.Drawing.Size(236, 15);
+            this.label170.TabIndex = 37;
+            this.label170.Text = "Municipio en el cual desempeña el cargo:";
+            this.label170.UseWaitCursor = true;
             // 
-            // cmb_estatus_denuncia_juicio_politico
+            // cmb_municipio_persona_servidora_publica_juicio_politico
             // 
-            this.cmb_estatus_denuncia_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_estatus_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_estatus_denuncia_juicio_politico.FormattingEnabled = true;
-            this.cmb_estatus_denuncia_juicio_politico.Location = new System.Drawing.Point(729, 42);
-            this.cmb_estatus_denuncia_juicio_politico.Name = "cmb_estatus_denuncia_juicio_politico";
-            this.cmb_estatus_denuncia_juicio_politico.Size = new System.Drawing.Size(261, 23);
-            this.cmb_estatus_denuncia_juicio_politico.TabIndex = 46;
-            this.cmb_estatus_denuncia_juicio_politico.UseWaitCursor = true;
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(270, 37);
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.Name = "cmb_municipio_persona_servidora_publica_juicio_politico";
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(238, 23);
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.TabIndex = 38;
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
             // 
-            // label191
+            // label172
             // 
-            this.label191.AutoSize = true;
-            this.label191.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label191.ForeColor = System.Drawing.Color.Black;
-            this.label191.Location = new System.Drawing.Point(477, 45);
-            this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(225, 15);
-            this.label191.TabIndex = 45;
-            this.label191.Text = "Estatus de la denuncia de juicio político:";
-            this.label191.UseWaitCursor = true;
+            this.label172.AutoSize = true;
+            this.label172.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label172.ForeColor = System.Drawing.Color.Black;
+            this.label172.Location = new System.Drawing.Point(570, 39);
+            this.label172.Name = "label172";
+            this.label172.Size = new System.Drawing.Size(412, 15);
+            this.label172.TabIndex = 25;
+            this.label172.Text = "Clave AGEM correspondiente al municipio en el cual desempeña el cargo:";
+            this.label172.UseWaitCursor = true;
             // 
-            // cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo
+            // txt_AGEM_persona_servidora_publica_juicio_politico
             // 
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.FormattingEnabled = true;
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Location = new System.Drawing.Point(344, 42);
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Name = "cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo";
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(79, 23);
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.TabIndex = 44;
-            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1011, 37);
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.Name = "txt_AGEM_persona_servidora_publica_juicio_politico";
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.TabIndex = 28;
+            this.txt_AGEM_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
             // 
-            // label193
+            // txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique
             // 
-            this.label193.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label193.ForeColor = System.Drawing.Color.Black;
-            this.label193.Location = new System.Drawing.Point(14, 32);
-            this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(300, 33);
-            this.label193.TabIndex = 43;
-            this.label193.Text = "Condición de actualización del estatus de la denuncia de juicio político en el pe" +
-    "riodo reportado:";
-            this.label193.UseWaitCursor = true;
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Location = new System.Drawing.Point(177, 414);
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Name = "txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifiq" +
+    "ue";
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Size = new System.Drawing.Size(304, 21);
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.TabIndex = 40;
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.UseWaitCursor = true;
             // 
-            // cmb_numero_legislatura_presentacion_denuncia_juicio_politico
+            // label169
             // 
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.FormattingEnabled = true;
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Location = new System.Drawing.Point(1106, 45);
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Name = "cmb_numero_legislatura_presentacion_denuncia_juicio_politico";
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Size = new System.Drawing.Size(95, 23);
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.TabIndex = 42;
-            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.UseWaitCursor = true;
+            this.label169.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label169.ForeColor = System.Drawing.Color.Black;
+            this.label169.Location = new System.Drawing.Point(156, 364);
+            this.label169.Name = "label169";
+            this.label169.Size = new System.Drawing.Size(355, 31);
+            this.label169.TabIndex = 39;
+            this.label169.Text = "Otro cargo del ámbito estatal desempeñado por la persona servidora pública sujeta" +
+    " a procedimiento de juicio político:";
+            this.label169.UseWaitCursor = true;
             // 
-            // cmb_cond_presentacion_denuncia_juicio_politico_periodo
+            // label192
             // 
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.FormattingEnabled = true;
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Location = new System.Drawing.Point(767, 45);
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Name = "cmb_cond_presentacion_denuncia_juicio_politico_periodo";
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(79, 23);
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.TabIndex = 41;
-            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            this.label192.AutoSize = true;
+            this.label192.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label192.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label192.Location = new System.Drawing.Point(995, 49);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(38, 15);
+            this.label192.TabIndex = 60;
+            this.label192.Text = "Sexo:";
+            this.label192.UseWaitCursor = true;
             // 
-            // dtp_sentido_resolucion_pleno_juicio_politico
+            // label197
             // 
-            this.dtp_sentido_resolucion_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_sentido_resolucion_pleno_juicio_politico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_sentido_resolucion_pleno_juicio_politico.Location = new System.Drawing.Point(815, 26);
-            this.dtp_sentido_resolucion_pleno_juicio_politico.Name = "dtp_sentido_resolucion_pleno_juicio_politico";
-            this.dtp_sentido_resolucion_pleno_juicio_politico.Size = new System.Drawing.Size(79, 20);
-            this.dtp_sentido_resolucion_pleno_juicio_politico.TabIndex = 54;
-            this.dtp_sentido_resolucion_pleno_juicio_politico.UseWaitCursor = true;
-            this.dtp_sentido_resolucion_pleno_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.label197.AutoSize = true;
+            this.label197.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label197.ForeColor = System.Drawing.Color.Black;
+            this.label197.Location = new System.Drawing.Point(20, 64);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(94, 15);
+            this.label197.TabIndex = 58;
+            this.label197.Text = "Primer apellido:";
+            this.label197.UseWaitCursor = true;
             // 
-            // txt_turno_denuncia_juicio_politico
+            // label198
             // 
-            this.txt_turno_denuncia_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_turno_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_turno_denuncia_juicio_politico.Location = new System.Drawing.Point(720, 97);
-            this.txt_turno_denuncia_juicio_politico.Name = "txt_turno_denuncia_juicio_politico";
-            this.txt_turno_denuncia_juicio_politico.Size = new System.Drawing.Size(72, 21);
-            this.txt_turno_denuncia_juicio_politico.TabIndex = 40;
-            this.txt_turno_denuncia_juicio_politico.UseWaitCursor = true;
+            this.label198.AutoSize = true;
+            this.label198.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label198.ForeColor = System.Drawing.Color.Black;
+            this.label198.Location = new System.Drawing.Point(19, 33);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(93, 15);
+            this.label198.TabIndex = 55;
+            this.label198.Text = "Primer nombre:";
+            this.label198.UseWaitCursor = true;
             // 
-            // label195
+            // txt_sexo_persona_servidora_publica_juicio_politico
             // 
-            this.label195.AutoSize = true;
-            this.label195.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label195.ForeColor = System.Drawing.Color.Black;
-            this.label195.Location = new System.Drawing.Point(470, 28);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(322, 15);
-            this.label195.TabIndex = 53;
-            this.label195.Text = "Sentido de resolución del procedimiento de juicio político:";
-            this.label195.UseWaitCursor = true;
+            this.txt_sexo_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_sexo_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sexo_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
+            this.txt_sexo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1045, 44);
+            this.txt_sexo_persona_servidora_publica_juicio_politico.Name = "txt_sexo_persona_servidora_publica_juicio_politico";
+            this.txt_sexo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(93, 23);
+            this.txt_sexo_persona_servidora_publica_juicio_politico.TabIndex = 57;
+            this.txt_sexo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // txt_apellido_3_persona_servidora_publica_juicio_politico
+            // 
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(743, 65);
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Name = "txt_apellido_3_persona_servidora_publica_juicio_politico";
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.TabIndex = 54;
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // label324
+            // 
+            this.label324.AutoSize = true;
+            this.label324.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label324.ForeColor = System.Drawing.Color.Black;
+            this.label324.Location = new System.Drawing.Point(639, 66);
+            this.label324.Name = "label324";
+            this.label324.Size = new System.Drawing.Size(92, 15);
+            this.label324.TabIndex = 51;
+            this.label324.Text = "Tercer apellido:";
+            this.label324.UseWaitCursor = true;
+            // 
+            // txt_apellido_2_persona_servidora_publica_juicio_politico
+            // 
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(451, 62);
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Name = "txt_apellido_2_persona_servidora_publica_juicio_politico";
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.TabIndex = 53;
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // txt_apellido_1_persona_servidora_publica_juicio_politico
+            // 
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(135, 61);
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Name = "txt_apellido_1_persona_servidora_publica_juicio_politico";
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.TabIndex = 52;
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // label325
+            // 
+            this.label325.AutoSize = true;
+            this.label325.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label325.ForeColor = System.Drawing.Color.Black;
+            this.label325.Location = new System.Drawing.Point(335, 62);
+            this.label325.Name = "label325";
+            this.label325.Size = new System.Drawing.Size(107, 15);
+            this.label325.TabIndex = 50;
+            this.label325.Text = "Segundo apellido:";
+            this.label325.UseWaitCursor = true;
+            // 
+            // txt_nombre_1_persona_servidora_publica_juicio_politico
+            // 
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(135, 31);
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Name = "txt_nombre_1_persona_servidora_publica_juicio_politico";
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.TabIndex = 45;
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // label326
+            // 
+            this.label326.AutoSize = true;
+            this.label326.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label326.ForeColor = System.Drawing.Color.Black;
+            this.label326.Location = new System.Drawing.Point(336, 32);
+            this.label326.Name = "label326";
+            this.label326.Size = new System.Drawing.Size(106, 15);
+            this.label326.TabIndex = 46;
+            this.label326.Text = "Segundo nombre:";
+            this.label326.UseWaitCursor = true;
+            // 
+            // txt_nombre_2_persona_servidora_publica_juicio_politico
+            // 
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(452, 31);
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Name = "txt_nombre_2_persona_servidora_publica_juicio_politico";
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.TabIndex = 47;
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // label327
+            // 
+            this.label327.AutoSize = true;
+            this.label327.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label327.ForeColor = System.Drawing.Color.Black;
+            this.label327.Location = new System.Drawing.Point(639, 32);
+            this.label327.Name = "label327";
+            this.label327.Size = new System.Drawing.Size(91, 15);
+            this.label327.TabIndex = 48;
+            this.label327.Text = "Tercer nombre:";
+            this.label327.UseWaitCursor = true;
+            // 
+            // txt_nombre_3_persona_servidora_publica_juicio_politico
+            // 
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(743, 28);
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Name = "txt_nombre_3_persona_servidora_publica_juicio_politico";
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(172, 21);
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.TabIndex = 49;
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            // 
+            // groupBox104
+            // 
+            this.groupBox104.Controls.Add(this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes);
+            this.groupBox104.Controls.Add(this.label151);
+            this.groupBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox104.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox104.Location = new System.Drawing.Point(6, 353);
+            this.groupBox104.Name = "groupBox104";
+            this.groupBox104.Size = new System.Drawing.Size(614, 56);
+            this.groupBox104.TabIndex = 80;
+            this.groupBox104.TabStop = false;
+            this.groupBox104.Text = "Ingreso";
+            this.groupBox104.UseWaitCursor = true;
+            // 
+            // dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes
+            // 
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Location = new System.Drawing.Point(451, 23);
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Name = "dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes";
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.TabIndex = 52;
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.UseWaitCursor = true;
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label151.ForeColor = System.Drawing.Color.Black;
+            this.label151.Location = new System.Drawing.Point(41, 26);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(389, 15);
+            this.label151.TabIndex = 51;
+            this.label151.Text = "Fecha de ingreso de la denuncia de juicio político a oficialía de partes:";
+            this.label151.UseWaitCursor = true;
+            // 
+            // groupBox40
+            // 
+            this.groupBox40.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.groupBox40.Controls.Add(this.groupBox41);
+            this.groupBox40.Controls.Add(this.groupBox103);
+            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox40.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox40.Location = new System.Drawing.Point(6, 52);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.Size = new System.Drawing.Size(1220, 295);
+            this.groupBox40.TabIndex = 79;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "Caracterización inicial";
+            this.groupBox40.UseWaitCursor = true;
+            // 
+            // groupBox41
+            // 
+            this.groupBox41.Controls.Add(this.label153);
+            this.groupBox41.Controls.Add(this.label152);
+            this.groupBox41.Controls.Add(this.label150);
+            this.groupBox41.Controls.Add(this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual);
+            this.groupBox41.Controls.Add(this.label200);
+            this.groupBox41.Controls.Add(this.cmb_cond_presentacion_denuncia_juicio_politico_periodo);
+            this.groupBox41.Controls.Add(this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico);
+            this.groupBox41.Controls.Add(this.txt_turno_denuncia_juicio_politico);
+            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox41.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox41.Location = new System.Drawing.Point(7, 21);
+            this.groupBox41.Name = "groupBox41";
+            this.groupBox41.Size = new System.Drawing.Size(1207, 127);
+            this.groupBox41.TabIndex = 68;
+            this.groupBox41.TabStop = false;
+            this.groupBox41.Text = "Presentación";
+            this.groupBox41.UseWaitCursor = true;
+            // 
+            // label153
+            // 
+            this.label153.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label153.ForeColor = System.Drawing.Color.Black;
+            this.label153.Location = new System.Drawing.Point(378, 100);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(324, 17);
+            this.label153.TabIndex = 43;
+            this.label153.Text = "Turno asignado a la denuncia de juicio político*:";
+            this.label153.UseWaitCursor = true;
+            // 
+            // label152
+            // 
+            this.label152.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label152.ForeColor = System.Drawing.Color.Black;
+            this.label152.Location = new System.Drawing.Point(863, 38);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(227, 30);
+            this.label152.TabIndex = 42;
+            this.label152.Text = "Número de la legislatura en la que se presentó la denuncia de juicio político:";
+            this.label152.UseWaitCursor = true;
+            // 
+            // label150
+            // 
+            this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label150.ForeColor = System.Drawing.Color.Black;
+            this.label150.Location = new System.Drawing.Point(14, 38);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(324, 38);
+            this.label150.TabIndex = 30;
+            this.label150.Text = "Condición de la denuncia de juicio político de haber sido presentada en la legisl" +
+    "atura actual*:";
+            this.label150.UseWaitCursor = true;
             // 
             // cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual
             // 
@@ -10233,6 +10519,444 @@
             this.label200.Text = "Condición de la denuncia de juicio político de haber sido presentada en el period" +
     "o reportado:";
             this.label200.UseWaitCursor = true;
+            // 
+            // cmb_cond_presentacion_denuncia_juicio_politico_periodo
+            // 
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.FormattingEnabled = true;
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Location = new System.Drawing.Point(767, 45);
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Name = "cmb_cond_presentacion_denuncia_juicio_politico_periodo";
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(79, 23);
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.TabIndex = 41;
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            // 
+            // cmb_numero_legislatura_presentacion_denuncia_juicio_politico
+            // 
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.FormattingEnabled = true;
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Location = new System.Drawing.Point(1106, 45);
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Name = "cmb_numero_legislatura_presentacion_denuncia_juicio_politico";
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Size = new System.Drawing.Size(95, 23);
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.TabIndex = 42;
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.UseWaitCursor = true;
+            // 
+            // txt_turno_denuncia_juicio_politico
+            // 
+            this.txt_turno_denuncia_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_turno_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_turno_denuncia_juicio_politico.Location = new System.Drawing.Point(720, 97);
+            this.txt_turno_denuncia_juicio_politico.Name = "txt_turno_denuncia_juicio_politico";
+            this.txt_turno_denuncia_juicio_politico.Size = new System.Drawing.Size(72, 21);
+            this.txt_turno_denuncia_juicio_politico.TabIndex = 40;
+            this.txt_turno_denuncia_juicio_politico.UseWaitCursor = true;
+            // 
+            // groupBox103
+            // 
+            this.groupBox103.Controls.Add(this.label193);
+            this.groupBox103.Controls.Add(this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo);
+            this.groupBox103.Controls.Add(this.txt_otro_estatus_denuncia_juicio_politico_especifique);
+            this.groupBox103.Controls.Add(this.label191);
+            this.groupBox103.Controls.Add(this.label189);
+            this.groupBox103.Controls.Add(this.cmb_estatus_denuncia_juicio_politico);
+            this.groupBox103.Controls.Add(this.txt_improcedente_estatus_denuncia_juicio_politico_especifique);
+            this.groupBox103.Controls.Add(this.label190);
+            this.groupBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox103.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox103.Location = new System.Drawing.Point(7, 154);
+            this.groupBox103.Name = "groupBox103";
+            this.groupBox103.Size = new System.Drawing.Size(1207, 134);
+            this.groupBox103.TabIndex = 67;
+            this.groupBox103.TabStop = false;
+            this.groupBox103.Text = "Estatus";
+            this.groupBox103.UseWaitCursor = true;
+            // 
+            // label193
+            // 
+            this.label193.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label193.ForeColor = System.Drawing.Color.Black;
+            this.label193.Location = new System.Drawing.Point(14, 32);
+            this.label193.Name = "label193";
+            this.label193.Size = new System.Drawing.Size(300, 33);
+            this.label193.TabIndex = 43;
+            this.label193.Text = "Condición de actualización del estatus de la denuncia de juicio político en el pe" +
+    "riodo reportado:";
+            this.label193.UseWaitCursor = true;
+            // 
+            // cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo
+            // 
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.FormattingEnabled = true;
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Location = new System.Drawing.Point(344, 42);
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Name = "cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo";
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(79, 23);
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.TabIndex = 44;
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            // 
+            // txt_otro_estatus_denuncia_juicio_politico_especifique
+            // 
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Location = new System.Drawing.Point(900, 93);
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Name = "txt_otro_estatus_denuncia_juicio_politico_especifique";
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.Size = new System.Drawing.Size(301, 21);
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.TabIndex = 50;
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.UseWaitCursor = true;
+            // 
+            // label191
+            // 
+            this.label191.AutoSize = true;
+            this.label191.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label191.ForeColor = System.Drawing.Color.Black;
+            this.label191.Location = new System.Drawing.Point(477, 45);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(225, 15);
+            this.label191.TabIndex = 45;
+            this.label191.Text = "Estatus de la denuncia de juicio político:";
+            this.label191.UseWaitCursor = true;
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label189.ForeColor = System.Drawing.Color.Black;
+            this.label189.Location = new System.Drawing.Point(639, 96);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(250, 15);
+            this.label189.TabIndex = 49;
+            this.label189.Text = "Otro estatus de la denuncia de juicio político:";
+            this.label189.UseWaitCursor = true;
+            // 
+            // cmb_estatus_denuncia_juicio_politico
+            // 
+            this.cmb_estatus_denuncia_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_estatus_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_estatus_denuncia_juicio_politico.FormattingEnabled = true;
+            this.cmb_estatus_denuncia_juicio_politico.Location = new System.Drawing.Point(729, 42);
+            this.cmb_estatus_denuncia_juicio_politico.Name = "cmb_estatus_denuncia_juicio_politico";
+            this.cmb_estatus_denuncia_juicio_politico.Size = new System.Drawing.Size(261, 23);
+            this.cmb_estatus_denuncia_juicio_politico.TabIndex = 46;
+            this.cmb_estatus_denuncia_juicio_politico.UseWaitCursor = true;
+            // 
+            // txt_improcedente_estatus_denuncia_juicio_politico_especifique
+            // 
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Location = new System.Drawing.Point(351, 93);
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Name = "txt_improcedente_estatus_denuncia_juicio_politico_especifique";
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Size = new System.Drawing.Size(263, 21);
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.TabIndex = 48;
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.UseWaitCursor = true;
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label190.ForeColor = System.Drawing.Color.Black;
+            this.label190.Location = new System.Drawing.Point(14, 96);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(322, 15);
+            this.label190.TabIndex = 47;
+            this.label190.Text = "Causa de improcedencia de la denuncia de juicio político:";
+            this.label190.UseWaitCursor = true;
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Controls.Add(this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique);
+            this.groupBox48.Controls.Add(this.label173);
+            this.groupBox48.Controls.Add(this.label171);
+            this.groupBox48.Controls.Add(this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1);
+            this.groupBox48.Controls.Add(this.dataGridView15);
+            this.groupBox48.Controls.Add(this.button48);
+            this.groupBox48.Controls.Add(this.button47);
+            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox48.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox48.Location = new System.Drawing.Point(6, 1056);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Size = new System.Drawing.Size(1220, 197);
+            this.groupBox48.TabIndex = 74;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "Perjuicio a los intereses públicos fundamentales y de su buen despachoPerjuicio a" +
+    " los intereses públicos fundamentales y de su buen despacho:";
+            this.groupBox48.UseWaitCursor = true;
+            // 
+            // txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique
+            // 
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Location = new System.Drawing.Point(797, 139);
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Name = "txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_e" +
+    "specifique";
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Size = new System.Drawing.Size(389, 21);
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.TabIndex = 83;
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.UseWaitCursor = true;
+            // 
+            // label173
+            // 
+            this.label173.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label173.ForeColor = System.Drawing.Color.Black;
+            this.label173.Location = new System.Drawing.Point(797, 71);
+            this.label173.Name = "label173";
+            this.label173.Size = new System.Drawing.Size(389, 48);
+            this.label173.TabIndex = 66;
+            this.label173.Text = "Otro perjuicio a los intereses públicos fundamentales y de su buen despacho ocasi" +
+    "onado por la persona servidora pública sujeta a procedimiento de juicio político" +
+    ":";
+            this.label173.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label173.UseWaitCursor = true;
+            // 
+            // label171
+            // 
+            this.label171.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label171.ForeColor = System.Drawing.Color.Black;
+            this.label171.Location = new System.Drawing.Point(11, 29);
+            this.label171.Name = "label171";
+            this.label171.Size = new System.Drawing.Size(482, 37);
+            this.label171.TabIndex = 61;
+            this.label171.Text = "Perjuicio a los intereses públicos fundamentales y de su buen despacho ocasionado" +
+    "s por la persona servidora pública sujeta a procedimiento de juicio político:";
+            this.label171.UseWaitCursor = true;
+            // 
+            // cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1
+            // 
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.FormattingEnabled = true;
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Location = new System.Drawing.Point(512, 35);
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Name = "cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1";
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Size = new System.Drawing.Size(362, 23);
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TabIndex = 62;
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.UseWaitCursor = true;
+            // 
+            // dataGridView15
+            // 
+            this.dataGridView15.AllowUserToAddRows = false;
+            this.dataGridView15.AllowUserToDeleteRows = false;
+            this.dataGridView15.AllowUserToResizeRows = false;
+            this.dataGridView15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView15.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14});
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle60.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle60.ForeColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView15.DefaultCellStyle = dataGridViewCellStyle60;
+            this.dataGridView15.Location = new System.Drawing.Point(14, 69);
+            this.dataGridView15.Name = "dataGridView15";
+            this.dataGridView15.ReadOnly = true;
+            this.dataGridView15.RowHeadersVisible = false;
+            this.dataGridView15.RowHeadersWidth = 51;
+            this.dataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView15.Size = new System.Drawing.Size(558, 105);
+            this.dataGridView15.TabIndex = 65;
+            this.dataGridView15.UseWaitCursor = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Pejuicios a los interess púplicos";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // button48
+            // 
+            this.button48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button48.Location = new System.Drawing.Point(620, 132);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(110, 27);
+            this.button48.TabIndex = 64;
+            this.button48.Text = "Eliminar";
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.UseWaitCursor = true;
+            // 
+            // button47
+            // 
+            this.button47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button47.Location = new System.Drawing.Point(619, 85);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(110, 27);
+            this.button47.TabIndex = 63;
+            this.button47.Text = "Agregar";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.UseWaitCursor = true;
+            // 
+            // groupBox51
+            // 
+            this.groupBox51.Controls.Add(this.groupBox106);
+            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox51.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox51.Location = new System.Drawing.Point(6, 415);
+            this.groupBox51.Name = "groupBox51";
+            this.groupBox51.Size = new System.Drawing.Size(1220, 149);
+            this.groupBox51.TabIndex = 70;
+            this.groupBox51.TabStop = false;
+            this.groupBox51.Text = "Pleno";
+            this.groupBox51.UseWaitCursor = true;
+            // 
+            // groupBox106
+            // 
+            this.groupBox106.Controls.Add(this.txt_votaciones_pleno_abstencion_juicio_politico);
+            this.groupBox106.Controls.Add(this.label188);
+            this.groupBox106.Controls.Add(this.label184);
+            this.groupBox106.Controls.Add(this.dtp_fecha_resolucion_pleno_juicio_politico);
+            this.groupBox106.Controls.Add(this.txt_votaciones_pleno_en_contra_juicio_politico);
+            this.groupBox106.Controls.Add(this.label195);
+            this.groupBox106.Controls.Add(this.label185);
+            this.groupBox106.Controls.Add(this.dtp_sentido_resolucion_pleno_juicio_politico);
+            this.groupBox106.Controls.Add(this.txt_votaciones_pleno_a_favor_juicio_politico);
+            this.groupBox106.Controls.Add(this.label187);
+            this.groupBox106.Controls.Add(this.label186);
+            this.groupBox106.Controls.Add(this.txt_total_votaciones_pleno_juicio_politico);
+            this.groupBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox106.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox106.Location = new System.Drawing.Point(7, 21);
+            this.groupBox106.Name = "groupBox106";
+            this.groupBox106.Size = new System.Drawing.Size(1207, 114);
+            this.groupBox106.TabIndex = 68;
+            this.groupBox106.TabStop = false;
+            this.groupBox106.Text = "Votaciones plenarias";
+            this.groupBox106.UseWaitCursor = true;
+            // 
+            // txt_votaciones_pleno_abstencion_juicio_politico
+            // 
+            this.txt_votaciones_pleno_abstencion_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_votaciones_pleno_abstencion_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_votaciones_pleno_abstencion_juicio_politico.Location = new System.Drawing.Point(1061, 75);
+            this.txt_votaciones_pleno_abstencion_juicio_politico.Name = "txt_votaciones_pleno_abstencion_juicio_politico";
+            this.txt_votaciones_pleno_abstencion_juicio_politico.Size = new System.Drawing.Size(85, 21);
+            this.txt_votaciones_pleno_abstencion_juicio_politico.TabIndex = 66;
+            this.txt_votaciones_pleno_abstencion_juicio_politico.UseWaitCursor = true;
+            // 
+            // label188
+            // 
+            this.label188.AutoSize = true;
+            this.label188.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label188.ForeColor = System.Drawing.Color.Black;
+            this.label188.Location = new System.Drawing.Point(7, 28);
+            this.label188.Name = "label188";
+            this.label188.Size = new System.Drawing.Size(314, 15);
+            this.label188.TabIndex = 51;
+            this.label188.Text = "Fecha de resolución del procedimiento de juicio político:";
+            this.label188.UseWaitCursor = true;
+            // 
+            // label184
+            // 
+            this.label184.AutoSize = true;
+            this.label184.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label184.ForeColor = System.Drawing.Color.Black;
+            this.label184.Location = new System.Drawing.Point(845, 78);
+            this.label184.Name = "label184";
+            this.label184.Size = new System.Drawing.Size(204, 15);
+            this.label184.TabIndex = 65;
+            this.label184.Text = "Votaciones plenarias de abstención:";
+            this.label184.UseWaitCursor = true;
+            // 
+            // dtp_fecha_resolucion_pleno_juicio_politico
+            // 
+            this.dtp_fecha_resolucion_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_resolucion_pleno_juicio_politico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_resolucion_pleno_juicio_politico.Location = new System.Drawing.Point(344, 24);
+            this.dtp_fecha_resolucion_pleno_juicio_politico.Name = "dtp_fecha_resolucion_pleno_juicio_politico";
+            this.dtp_fecha_resolucion_pleno_juicio_politico.Size = new System.Drawing.Size(79, 20);
+            this.dtp_fecha_resolucion_pleno_juicio_politico.TabIndex = 52;
+            this.dtp_fecha_resolucion_pleno_juicio_politico.UseWaitCursor = true;
+            this.dtp_fecha_resolucion_pleno_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // txt_votaciones_pleno_en_contra_juicio_politico
+            // 
+            this.txt_votaciones_pleno_en_contra_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_votaciones_pleno_en_contra_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_votaciones_pleno_en_contra_juicio_politico.Location = new System.Drawing.Point(634, 76);
+            this.txt_votaciones_pleno_en_contra_juicio_politico.Name = "txt_votaciones_pleno_en_contra_juicio_politico";
+            this.txt_votaciones_pleno_en_contra_juicio_politico.Size = new System.Drawing.Size(85, 21);
+            this.txt_votaciones_pleno_en_contra_juicio_politico.TabIndex = 64;
+            this.txt_votaciones_pleno_en_contra_juicio_politico.UseWaitCursor = true;
+            // 
+            // label195
+            // 
+            this.label195.AutoSize = true;
+            this.label195.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label195.ForeColor = System.Drawing.Color.Black;
+            this.label195.Location = new System.Drawing.Point(470, 28);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(322, 15);
+            this.label195.TabIndex = 53;
+            this.label195.Text = "Sentido de resolución del procedimiento de juicio político:";
+            this.label195.UseWaitCursor = true;
+            // 
+            // label185
+            // 
+            this.label185.AutoSize = true;
+            this.label185.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label185.ForeColor = System.Drawing.Color.Black;
+            this.label185.Location = new System.Drawing.Point(446, 78);
+            this.label185.Name = "label185";
+            this.label185.Size = new System.Drawing.Size(178, 15);
+            this.label185.TabIndex = 63;
+            this.label185.Text = "Votaciones plenarias en contra:";
+            this.label185.UseWaitCursor = true;
+            // 
+            // dtp_sentido_resolucion_pleno_juicio_politico
+            // 
+            this.dtp_sentido_resolucion_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_sentido_resolucion_pleno_juicio_politico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_sentido_resolucion_pleno_juicio_politico.Location = new System.Drawing.Point(815, 26);
+            this.dtp_sentido_resolucion_pleno_juicio_politico.Name = "dtp_sentido_resolucion_pleno_juicio_politico";
+            this.dtp_sentido_resolucion_pleno_juicio_politico.Size = new System.Drawing.Size(79, 20);
+            this.dtp_sentido_resolucion_pleno_juicio_politico.TabIndex = 54;
+            this.dtp_sentido_resolucion_pleno_juicio_politico.UseWaitCursor = true;
+            this.dtp_sentido_resolucion_pleno_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // txt_votaciones_pleno_a_favor_juicio_politico
+            // 
+            this.txt_votaciones_pleno_a_favor_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_votaciones_pleno_a_favor_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_votaciones_pleno_a_favor_juicio_politico.Location = new System.Drawing.Point(222, 75);
+            this.txt_votaciones_pleno_a_favor_juicio_politico.Name = "txt_votaciones_pleno_a_favor_juicio_politico";
+            this.txt_votaciones_pleno_a_favor_juicio_politico.Size = new System.Drawing.Size(99, 21);
+            this.txt_votaciones_pleno_a_favor_juicio_politico.TabIndex = 62;
+            this.txt_votaciones_pleno_a_favor_juicio_politico.UseWaitCursor = true;
+            // 
+            // label187
+            // 
+            this.label187.AutoSize = true;
+            this.label187.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label187.ForeColor = System.Drawing.Color.Black;
+            this.label187.Location = new System.Drawing.Point(921, 28);
+            this.label187.Name = "label187";
+            this.label187.Size = new System.Drawing.Size(169, 15);
+            this.label187.TabIndex = 59;
+            this.label187.Text = "Total de votaciones plenarias:";
+            this.label187.UseWaitCursor = true;
+            // 
+            // label186
+            // 
+            this.label186.AutoSize = true;
+            this.label186.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label186.ForeColor = System.Drawing.Color.Black;
+            this.label186.Location = new System.Drawing.Point(44, 78);
+            this.label186.Name = "label186";
+            this.label186.Size = new System.Drawing.Size(163, 15);
+            this.label186.TabIndex = 61;
+            this.label186.Text = "Votaciones plenarias a favor:";
+            this.label186.UseWaitCursor = true;
+            // 
+            // txt_total_votaciones_pleno_juicio_politico
+            // 
+            this.txt_total_votaciones_pleno_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_total_votaciones_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_votaciones_pleno_juicio_politico.Location = new System.Drawing.Point(1106, 25);
+            this.txt_total_votaciones_pleno_juicio_politico.Name = "txt_total_votaciones_pleno_juicio_politico";
+            this.txt_total_votaciones_pleno_juicio_politico.Size = new System.Drawing.Size(88, 21);
+            this.txt_total_votaciones_pleno_juicio_politico.TabIndex = 60;
+            this.txt_total_votaciones_pleno_juicio_politico.UseWaitCursor = true;
             // 
             // label199
             // 
@@ -10273,6 +10997,423 @@
             this.tabPageDP.TabIndex = 7;
             this.tabPageDP.Text = "Declaraciones procedencia";
             this.tabPageDP.UseVisualStyleBackColor = true;
+            // 
+            // groupBox109
+            // 
+            this.groupBox109.Controls.Add(this.comboBox13);
+            this.groupBox109.Controls.Add(this.textBox7);
+            this.groupBox109.Controls.Add(this.comboBox14);
+            this.groupBox109.Controls.Add(this.label332);
+            this.groupBox109.Controls.Add(this.label333);
+            this.groupBox109.Controls.Add(this.label334);
+            this.groupBox109.Controls.Add(this.comboBox15);
+            this.groupBox109.Controls.Add(this.label335);
+            this.groupBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox109.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox109.Location = new System.Drawing.Point(17, 446);
+            this.groupBox109.Name = "groupBox109";
+            this.groupBox109.Size = new System.Drawing.Size(1206, 117);
+            this.groupBox109.TabIndex = 74;
+            this.groupBox109.TabStop = false;
+            this.groupBox109.Text = "Presentación";
+            this.groupBox109.UseWaitCursor = true;
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Location = new System.Drawing.Point(459, 76);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(176, 23);
+            this.comboBox13.TabIndex = 41;
+            this.comboBox13.UseWaitCursor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(1087, 31);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(64, 21);
+            this.textBox7.TabIndex = 40;
+            this.textBox7.UseWaitCursor = true;
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Location = new System.Drawing.Point(1037, 73);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(115, 23);
+            this.comboBox14.TabIndex = 39;
+            this.comboBox14.UseWaitCursor = true;
+            // 
+            // label332
+            // 
+            this.label332.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label332.ForeColor = System.Drawing.Color.Black;
+            this.label332.Location = new System.Drawing.Point(849, 31);
+            this.label332.Name = "label332";
+            this.label332.Size = new System.Drawing.Size(213, 23);
+            this.label332.TabIndex = 38;
+            this.label332.Text = "Turno asignado a la iniciativa*:";
+            this.label332.UseWaitCursor = true;
+            // 
+            // label333
+            // 
+            this.label333.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label333.ForeColor = System.Drawing.Color.Black;
+            this.label333.Location = new System.Drawing.Point(694, 76);
+            this.label333.Name = "label333";
+            this.label333.Size = new System.Drawing.Size(337, 19);
+            this.label333.TabIndex = 37;
+            this.label333.Text = "Número de la legislatura en la que se presentó la iniciativa:";
+            this.label333.UseWaitCursor = true;
+            // 
+            // label334
+            // 
+            this.label334.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label334.ForeColor = System.Drawing.Color.Black;
+            this.label334.Location = new System.Drawing.Point(28, 26);
+            this.label334.Name = "label334";
+            this.label334.Size = new System.Drawing.Size(509, 25);
+            this.label334.TabIndex = 30;
+            this.label334.Text = "Condición de la iniciativa de haber sido presentada en la legislatura actual*:";
+            this.label334.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label334.UseWaitCursor = true;
+            // 
+            // comboBox15
+            // 
+            this.comboBox15.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Location = new System.Drawing.Point(543, 28);
+            this.comboBox15.Name = "comboBox15";
+            this.comboBox15.Size = new System.Drawing.Size(154, 23);
+            this.comboBox15.TabIndex = 32;
+            this.comboBox15.UseWaitCursor = true;
+            // 
+            // label335
+            // 
+            this.label335.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label335.ForeColor = System.Drawing.Color.Black;
+            this.label335.Location = new System.Drawing.Point(28, 76);
+            this.label335.Name = "label335";
+            this.label335.Size = new System.Drawing.Size(425, 22);
+            this.label335.TabIndex = 19;
+            this.label335.Text = "Condición de la iniciativa de haber sido presentada en el periodo reportado:";
+            this.label335.UseWaitCursor = true;
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.dateTimePicker1);
+            this.groupBox47.Controls.Add(this.label166);
+            this.groupBox47.Controls.Add(this.textBox3);
+            this.groupBox47.Controls.Add(this.label167);
+            this.groupBox47.Controls.Add(this.textBox5);
+            this.groupBox47.Controls.Add(this.label174);
+            this.groupBox47.Controls.Add(this.comboBox7);
+            this.groupBox47.Controls.Add(this.label175);
+            this.groupBox47.Controls.Add(this.comboBox8);
+            this.groupBox47.Controls.Add(this.comboBox9);
+            this.groupBox47.Controls.Add(this.label176);
+            this.groupBox47.Controls.Add(this.label177);
+            this.groupBox47.Controls.Add(this.dateTimePicker2);
+            this.groupBox47.Controls.Add(this.comboBox10);
+            this.groupBox47.Controls.Add(this.label178);
+            this.groupBox47.Controls.Add(this.comboBox11);
+            this.groupBox47.Controls.Add(this.dateTimePicker4);
+            this.groupBox47.Controls.Add(this.textBox6);
+            this.groupBox47.Controls.Add(this.label179);
+            this.groupBox47.Controls.Add(this.label180);
+            this.groupBox47.Controls.Add(this.label181);
+            this.groupBox47.Controls.Add(this.label182);
+            this.groupBox47.Controls.Add(this.comboBox12);
+            this.groupBox47.Controls.Add(this.label183);
+            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox47.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox47.Location = new System.Drawing.Point(11, 61);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Size = new System.Drawing.Size(1218, 555);
+            this.groupBox47.TabIndex = 72;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "Caracterización inicial";
+            this.groupBox47.UseWaitCursor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(130, 277);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(79, 20);
+            this.dateTimePicker1.TabIndex = 52;
+            this.dateTimePicker1.UseWaitCursor = true;
+            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // label166
+            // 
+            this.label166.AutoSize = true;
+            this.label166.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label166.ForeColor = System.Drawing.Color.Black;
+            this.label166.Location = new System.Drawing.Point(6, 247);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(383, 15);
+            this.label166.TabIndex = 51;
+            this.label166.Text = "Fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes";
+            this.label166.UseWaitCursor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(713, 198);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(257, 21);
+            this.textBox3.TabIndex = 50;
+            this.textBox3.UseWaitCursor = true;
+            // 
+            // label167
+            // 
+            this.label167.AutoSize = true;
+            this.label167.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label167.ForeColor = System.Drawing.Color.Black;
+            this.label167.Location = new System.Drawing.Point(658, 181);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(350, 15);
+            this.label167.TabIndex = 49;
+            this.label167.Text = "Otro_estatus_denuncia_declaracion_procedencia_especifique";
+            this.label167.UseWaitCursor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(415, 190);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(227, 21);
+            this.textBox5.TabIndex = 48;
+            this.textBox5.UseWaitCursor = true;
+            // 
+            // label174
+            // 
+            this.label174.AutoSize = true;
+            this.label174.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label174.ForeColor = System.Drawing.Color.Black;
+            this.label174.Location = new System.Drawing.Point(6, 194);
+            this.label174.Name = "label174";
+            this.label174.Size = new System.Drawing.Size(403, 15);
+            this.label174.TabIndex = 47;
+            this.label174.Text = "Improcedente_estatus_denuncia_declaracion_procedencia_especifique";
+            this.label174.UseWaitCursor = true;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(824, 144);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(195, 23);
+            this.comboBox7.TabIndex = 46;
+            this.comboBox7.UseWaitCursor = true;
+            // 
+            // label175
+            // 
+            this.label175.AutoSize = true;
+            this.label175.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label175.ForeColor = System.Drawing.Color.Black;
+            this.label175.Location = new System.Drawing.Point(568, 148);
+            this.label175.Name = "label175";
+            this.label175.Size = new System.Drawing.Size(251, 15);
+            this.label175.TabIndex = 45;
+            this.label175.Text = "Estatus_denuncia_declaracion_procedencia";
+            this.label175.UseWaitCursor = true;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(309, 320);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(149, 23);
+            this.comboBox8.TabIndex = 58;
+            this.comboBox8.UseWaitCursor = true;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(434, 148);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(79, 23);
+            this.comboBox9.TabIndex = 44;
+            this.comboBox9.UseWaitCursor = true;
+            // 
+            // label176
+            // 
+            this.label176.AutoSize = true;
+            this.label176.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label176.ForeColor = System.Drawing.Color.Black;
+            this.label176.Location = new System.Drawing.Point(6, 324);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(297, 15);
+            this.label176.TabIndex = 57;
+            this.label176.Text = "Sentido_resolucion_pleno_declaracion_procedencia";
+            this.label176.UseWaitCursor = true;
+            // 
+            // label177
+            // 
+            this.label177.AutoSize = true;
+            this.label177.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label177.ForeColor = System.Drawing.Color.Black;
+            this.label177.Location = new System.Drawing.Point(6, 151);
+            this.label177.Name = "label177";
+            this.label177.Size = new System.Drawing.Size(414, 15);
+            this.label177.TabIndex = 43;
+            this.label177.Text = "Cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo";
+            this.label177.UseWaitCursor = true;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(837, 277);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(79, 20);
+            this.dateTimePicker2.TabIndex = 56;
+            this.dateTimePicker2.UseWaitCursor = true;
+            this.dateTimePicker2.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(434, 104);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(79, 23);
+            this.comboBox10.TabIndex = 42;
+            this.comboBox10.UseWaitCursor = true;
+            // 
+            // label178
+            // 
+            this.label178.AutoSize = true;
+            this.label178.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label178.ForeColor = System.Drawing.Color.Black;
+            this.label178.Location = new System.Drawing.Point(731, 247);
+            this.label178.Name = "label178";
+            this.label178.Size = new System.Drawing.Size(289, 15);
+            this.label178.TabIndex = 55;
+            this.label178.Text = "Fecha_resolucion_pleno_declaracion_procedencia";
+            this.label178.UseWaitCursor = true;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Location = new System.Drawing.Point(941, 58);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(79, 23);
+            this.comboBox11.TabIndex = 41;
+            this.comboBox11.UseWaitCursor = true;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker4.Location = new System.Drawing.Point(509, 277);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(79, 20);
+            this.dateTimePicker4.TabIndex = 54;
+            this.dateTimePicker4.UseWaitCursor = true;
+            this.dateTimePicker4.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Honeydew;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(817, 104);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(203, 21);
+            this.textBox6.TabIndex = 40;
+            this.textBox6.UseWaitCursor = true;
+            // 
+            // label179
+            // 
+            this.label179.AutoSize = true;
+            this.label179.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label179.ForeColor = System.Drawing.Color.Black;
+            this.label179.Location = new System.Drawing.Point(405, 247);
+            this.label179.Name = "label179";
+            this.label179.Size = new System.Drawing.Size(320, 15);
+            this.label179.TabIndex = 53;
+            this.label179.Text = "Fecha_procedencia_denuncia_declaracion_procedencia";
+            this.label179.UseWaitCursor = true;
+            // 
+            // label180
+            // 
+            this.label180.AutoSize = true;
+            this.label180.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label180.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label180.Location = new System.Drawing.Point(568, 104);
+            this.label180.Name = "label180";
+            this.label180.Size = new System.Drawing.Size(243, 15);
+            this.label180.TabIndex = 38;
+            this.label180.Text = "Turno_denuncia_declaracion_procedencia";
+            this.label180.UseWaitCursor = true;
+            // 
+            // label181
+            // 
+            this.label181.AutoSize = true;
+            this.label181.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label181.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label181.Location = new System.Drawing.Point(6, 107);
+            this.label181.Name = "label181";
+            this.label181.Size = new System.Drawing.Size(398, 15);
+            this.label181.TabIndex = 37;
+            this.label181.Text = "Numero_legislatura_presentacion_denuncia_declaracion_procedencia";
+            this.label181.UseWaitCursor = true;
+            // 
+            // label182
+            // 
+            this.label182.AutoSize = true;
+            this.label182.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label182.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label182.Location = new System.Drawing.Point(6, 64);
+            this.label182.Name = "label182";
+            this.label182.Size = new System.Drawing.Size(422, 15);
+            this.label182.TabIndex = 30;
+            this.label182.Text = "Cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual";
+            this.label182.UseWaitCursor = true;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.BackColor = System.Drawing.Color.Honeydew;
+            this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Location = new System.Drawing.Point(434, 61);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(79, 23);
+            this.comboBox12.TabIndex = 32;
+            this.comboBox12.UseWaitCursor = true;
+            // 
+            // label183
+            // 
+            this.label183.AutoSize = true;
+            this.label183.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label183.ForeColor = System.Drawing.Color.Black;
+            this.label183.Location = new System.Drawing.Point(568, 61);
+            this.label183.Name = "label183";
+            this.label183.Size = new System.Drawing.Size(367, 15);
+            this.label183.TabIndex = 19;
+            this.label183.Text = "Cond_presentacion_denuncia_declaracion_procedencia_periodo";
+            this.label183.UseWaitCursor = true;
             // 
             // groupBox52
             // 
@@ -11093,6 +12234,18 @@
             this.comboBox83.TabIndex = 32;
             this.comboBox83.UseWaitCursor = true;
             // 
+            // label233
+            // 
+            this.label233.AutoSize = true;
+            this.label233.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label233.ForeColor = System.Drawing.Color.Black;
+            this.label233.Location = new System.Drawing.Point(568, 61);
+            this.label233.Name = "label233";
+            this.label233.Size = new System.Drawing.Size(367, 15);
+            this.label233.TabIndex = 19;
+            this.label233.Text = "Cond_presentacion_denuncia_declaracion_procedencia_periodo";
+            this.label233.UseWaitCursor = true;
+            // 
             // label232
             // 
             this.label232.AutoSize = true;
@@ -11114,18 +12267,6 @@
             this.txt_ID_declaracion_procedencia.TabIndex = 16;
             this.txt_ID_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_ID_declaracion_procedencia.UseWaitCursor = true;
-            // 
-            // label233
-            // 
-            this.label233.AutoSize = true;
-            this.label233.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label233.ForeColor = System.Drawing.Color.Black;
-            this.label233.Location = new System.Drawing.Point(568, 61);
-            this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(367, 15);
-            this.label233.TabIndex = 19;
-            this.label233.Text = "Cond_presentacion_denuncia_declaracion_procedencia_periodo";
-            this.label233.UseWaitCursor = true;
             // 
             // tabPageCom
             // 
@@ -11758,1136 +12899,6 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // groupBox40
-            // 
-            this.groupBox40.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.groupBox40.Controls.Add(this.groupBox41);
-            this.groupBox40.Controls.Add(this.groupBox103);
-            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox40.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox40.Location = new System.Drawing.Point(6, 52);
-            this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Size = new System.Drawing.Size(1220, 295);
-            this.groupBox40.TabIndex = 79;
-            this.groupBox40.TabStop = false;
-            this.groupBox40.Text = "Caracterización inicial";
-            this.groupBox40.UseWaitCursor = true;
-            // 
-            // groupBox41
-            // 
-            this.groupBox41.Controls.Add(this.label153);
-            this.groupBox41.Controls.Add(this.label152);
-            this.groupBox41.Controls.Add(this.label150);
-            this.groupBox41.Controls.Add(this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual);
-            this.groupBox41.Controls.Add(this.label200);
-            this.groupBox41.Controls.Add(this.cmb_cond_presentacion_denuncia_juicio_politico_periodo);
-            this.groupBox41.Controls.Add(this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico);
-            this.groupBox41.Controls.Add(this.txt_turno_denuncia_juicio_politico);
-            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox41.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox41.Location = new System.Drawing.Point(7, 21);
-            this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(1207, 127);
-            this.groupBox41.TabIndex = 68;
-            this.groupBox41.TabStop = false;
-            this.groupBox41.Text = "Presentación";
-            this.groupBox41.UseWaitCursor = true;
-            // 
-            // label150
-            // 
-            this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label150.ForeColor = System.Drawing.Color.Black;
-            this.label150.Location = new System.Drawing.Point(14, 38);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(324, 38);
-            this.label150.TabIndex = 30;
-            this.label150.Text = "Condición de la denuncia de juicio político de haber sido presentada en la legisl" +
-    "atura actual*:";
-            this.label150.UseWaitCursor = true;
-            // 
-            // groupBox103
-            // 
-            this.groupBox103.Controls.Add(this.label193);
-            this.groupBox103.Controls.Add(this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo);
-            this.groupBox103.Controls.Add(this.txt_otro_estatus_denuncia_juicio_politico_especifique);
-            this.groupBox103.Controls.Add(this.label191);
-            this.groupBox103.Controls.Add(this.label189);
-            this.groupBox103.Controls.Add(this.cmb_estatus_denuncia_juicio_politico);
-            this.groupBox103.Controls.Add(this.txt_improcedente_estatus_denuncia_juicio_politico_especifique);
-            this.groupBox103.Controls.Add(this.label190);
-            this.groupBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox103.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox103.Location = new System.Drawing.Point(7, 154);
-            this.groupBox103.Name = "groupBox103";
-            this.groupBox103.Size = new System.Drawing.Size(1207, 134);
-            this.groupBox103.TabIndex = 67;
-            this.groupBox103.TabStop = false;
-            this.groupBox103.Text = "Estatus";
-            this.groupBox103.UseWaitCursor = true;
-            // 
-            // label152
-            // 
-            this.label152.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label152.ForeColor = System.Drawing.Color.Black;
-            this.label152.Location = new System.Drawing.Point(863, 38);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(227, 30);
-            this.label152.TabIndex = 42;
-            this.label152.Text = "Número de la legislatura en la que se presentó la denuncia de juicio político:";
-            this.label152.UseWaitCursor = true;
-            // 
-            // label153
-            // 
-            this.label153.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label153.ForeColor = System.Drawing.Color.Black;
-            this.label153.Location = new System.Drawing.Point(378, 100);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(324, 17);
-            this.label153.TabIndex = 43;
-            this.label153.Text = "Turno asignado a la denuncia de juicio político*:";
-            this.label153.UseWaitCursor = true;
-            // 
-            // groupBox104
-            // 
-            this.groupBox104.Controls.Add(this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes);
-            this.groupBox104.Controls.Add(this.label151);
-            this.groupBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox104.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox104.Location = new System.Drawing.Point(6, 353);
-            this.groupBox104.Name = "groupBox104";
-            this.groupBox104.Size = new System.Drawing.Size(614, 56);
-            this.groupBox104.TabIndex = 80;
-            this.groupBox104.TabStop = false;
-            this.groupBox104.Text = "Ingreso";
-            this.groupBox104.UseWaitCursor = true;
-            // 
-            // dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes
-            // 
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Location = new System.Drawing.Point(451, 23);
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Name = "dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes";
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Size = new System.Drawing.Size(79, 20);
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.TabIndex = 52;
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.UseWaitCursor = true;
-            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label151.ForeColor = System.Drawing.Color.Black;
-            this.label151.Location = new System.Drawing.Point(41, 26);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(389, 15);
-            this.label151.TabIndex = 51;
-            this.label151.Text = "Fecha de ingreso de la denuncia de juicio político a oficialía de partes:";
-            this.label151.UseWaitCursor = true;
-            // 
-            // groupBox105
-            // 
-            this.groupBox105.Controls.Add(this.dtp_fecha_procedencia_denuncia_juicio_politico);
-            this.groupBox105.Controls.Add(this.label196);
-            this.groupBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox105.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox105.Location = new System.Drawing.Point(626, 353);
-            this.groupBox105.Name = "groupBox105";
-            this.groupBox105.Size = new System.Drawing.Size(600, 56);
-            this.groupBox105.TabIndex = 81;
-            this.groupBox105.TabStop = false;
-            this.groupBox105.Text = "Procedencia";
-            this.groupBox105.UseWaitCursor = true;
-            // 
-            // dtp_fecha_procedencia_denuncia_juicio_politico
-            // 
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.Location = new System.Drawing.Point(487, 22);
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.Name = "dtp_fecha_procedencia_denuncia_juicio_politico";
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.Size = new System.Drawing.Size(79, 20);
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.TabIndex = 52;
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.UseWaitCursor = true;
-            this.dtp_fecha_procedencia_denuncia_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // label196
-            // 
-            this.label196.AutoSize = true;
-            this.label196.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label196.ForeColor = System.Drawing.Color.Black;
-            this.label196.Location = new System.Drawing.Point(26, 26);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(432, 15);
-            this.label196.TabIndex = 51;
-            this.label196.Text = "Fecha en la que se determinó la procedencia de la denuncia de juicio político:";
-            this.label196.UseWaitCursor = true;
-            // 
-            // groupBox106
-            // 
-            this.groupBox106.Controls.Add(this.txt_votaciones_pleno_abstencion_juicio_politico);
-            this.groupBox106.Controls.Add(this.label188);
-            this.groupBox106.Controls.Add(this.label184);
-            this.groupBox106.Controls.Add(this.dtp_fecha_resolucion_pleno_juicio_politico);
-            this.groupBox106.Controls.Add(this.txt_votaciones_pleno_en_contra_juicio_politico);
-            this.groupBox106.Controls.Add(this.label195);
-            this.groupBox106.Controls.Add(this.label185);
-            this.groupBox106.Controls.Add(this.dtp_sentido_resolucion_pleno_juicio_politico);
-            this.groupBox106.Controls.Add(this.txt_votaciones_pleno_a_favor_juicio_politico);
-            this.groupBox106.Controls.Add(this.label187);
-            this.groupBox106.Controls.Add(this.label186);
-            this.groupBox106.Controls.Add(this.txt_total_votaciones_pleno_juicio_politico);
-            this.groupBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox106.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox106.Location = new System.Drawing.Point(7, 21);
-            this.groupBox106.Name = "groupBox106";
-            this.groupBox106.Size = new System.Drawing.Size(1207, 114);
-            this.groupBox106.TabIndex = 68;
-            this.groupBox106.TabStop = false;
-            this.groupBox106.Text = "Votaciones plenarias";
-            this.groupBox106.UseWaitCursor = true;
-            // 
-            // label192
-            // 
-            this.label192.AutoSize = true;
-            this.label192.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label192.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label192.Location = new System.Drawing.Point(995, 49);
-            this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(38, 15);
-            this.label192.TabIndex = 60;
-            this.label192.Text = "Sexo:";
-            this.label192.UseWaitCursor = true;
-            // 
-            // label197
-            // 
-            this.label197.AutoSize = true;
-            this.label197.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label197.ForeColor = System.Drawing.Color.Black;
-            this.label197.Location = new System.Drawing.Point(20, 64);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(94, 15);
-            this.label197.TabIndex = 58;
-            this.label197.Text = "Primer apellido:";
-            this.label197.UseWaitCursor = true;
-            // 
-            // label198
-            // 
-            this.label198.AutoSize = true;
-            this.label198.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label198.ForeColor = System.Drawing.Color.Black;
-            this.label198.Location = new System.Drawing.Point(19, 33);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(93, 15);
-            this.label198.TabIndex = 55;
-            this.label198.Text = "Primer nombre:";
-            this.label198.UseWaitCursor = true;
-            // 
-            // txt_sexo_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_sexo_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sexo_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1045, 44);
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Name = "txt_sexo_persona_servidora_publica_juicio_politico";
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(93, 23);
-            this.txt_sexo_persona_servidora_publica_juicio_politico.TabIndex = 57;
-            this.txt_sexo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // txt_apellido_3_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(743, 65);
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Name = "txt_apellido_3_persona_servidora_publica_juicio_politico";
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.TabIndex = 54;
-            this.txt_apellido_3_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label324
-            // 
-            this.label324.AutoSize = true;
-            this.label324.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label324.ForeColor = System.Drawing.Color.Black;
-            this.label324.Location = new System.Drawing.Point(639, 66);
-            this.label324.Name = "label324";
-            this.label324.Size = new System.Drawing.Size(92, 15);
-            this.label324.TabIndex = 51;
-            this.label324.Text = "Tercer apellido:";
-            this.label324.UseWaitCursor = true;
-            // 
-            // txt_apellido_2_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(451, 62);
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Name = "txt_apellido_2_persona_servidora_publica_juicio_politico";
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.TabIndex = 53;
-            this.txt_apellido_2_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // txt_apellido_1_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(135, 61);
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Name = "txt_apellido_1_persona_servidora_publica_juicio_politico";
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.TabIndex = 52;
-            this.txt_apellido_1_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label325
-            // 
-            this.label325.AutoSize = true;
-            this.label325.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label325.ForeColor = System.Drawing.Color.Black;
-            this.label325.Location = new System.Drawing.Point(335, 62);
-            this.label325.Name = "label325";
-            this.label325.Size = new System.Drawing.Size(107, 15);
-            this.label325.TabIndex = 50;
-            this.label325.Text = "Segundo apellido:";
-            this.label325.UseWaitCursor = true;
-            // 
-            // txt_nombre_1_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(135, 31);
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Name = "txt_nombre_1_persona_servidora_publica_juicio_politico";
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.TabIndex = 45;
-            this.txt_nombre_1_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label326
-            // 
-            this.label326.AutoSize = true;
-            this.label326.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label326.ForeColor = System.Drawing.Color.Black;
-            this.label326.Location = new System.Drawing.Point(336, 32);
-            this.label326.Name = "label326";
-            this.label326.Size = new System.Drawing.Size(106, 15);
-            this.label326.TabIndex = 46;
-            this.label326.Text = "Segundo nombre:";
-            this.label326.UseWaitCursor = true;
-            // 
-            // txt_nombre_2_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(452, 31);
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Name = "txt_nombre_2_persona_servidora_publica_juicio_politico";
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.TabIndex = 47;
-            this.txt_nombre_2_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label327
-            // 
-            this.label327.AutoSize = true;
-            this.label327.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label327.ForeColor = System.Drawing.Color.Black;
-            this.label327.Location = new System.Drawing.Point(639, 32);
-            this.label327.Name = "label327";
-            this.label327.Size = new System.Drawing.Size(91, 15);
-            this.label327.TabIndex = 48;
-            this.label327.Text = "Tercer nombre:";
-            this.label327.UseWaitCursor = true;
-            // 
-            // txt_nombre_3_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(743, 28);
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Name = "txt_nombre_3_persona_servidora_publica_juicio_politico";
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(172, 21);
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.TabIndex = 49;
-            this.txt_nombre_3_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label194
-            // 
-            this.label194.AutoSize = true;
-            this.label194.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label194.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label194.Location = new System.Drawing.Point(12, 35);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(126, 15);
-            this.label194.TabIndex = 62;
-            this.label194.Text = "Cargo desempeñado:";
-            this.label194.UseWaitCursor = true;
-            // 
-            // cmb_cargo_persona_servidora_publica_juicio_politico
-            // 
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(165, 32);
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.Name = "cmb_cargo_persona_servidora_publica_juicio_politico";
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(1014, 23);
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.TabIndex = 61;
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label328
-            // 
-            this.label328.AutoSize = true;
-            this.label328.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label328.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label328.Location = new System.Drawing.Point(44, 88);
-            this.label328.Name = "label328";
-            this.label328.Size = new System.Drawing.Size(65, 15);
-            this.label328.TabIndex = 64;
-            this.label328.Text = "Condición:";
-            this.label328.UseWaitCursor = true;
-            // 
-            // cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico
-            // 
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.FormattingEnabled = true;
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(22, 116);
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Name = "cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico";
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(102, 23);
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.TabIndex = 63;
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.UseWaitCursor = true;
-            // 
-            // label329
-            // 
-            this.label329.AutoSize = true;
-            this.label329.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label329.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label329.Location = new System.Drawing.Point(204, 88);
-            this.label329.Name = "label329";
-            this.label329.Size = new System.Drawing.Size(219, 15);
-            this.label329.TabIndex = 66;
-            this.label329.Text = "Identificador de la persona legisladora:";
-            this.label329.UseWaitCursor = true;
-            // 
-            // txt_ID_persona_legisladora_juicio_politico
-            // 
-            this.txt_ID_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_ID_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ID_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(270, 116);
-            this.txt_ID_persona_legisladora_juicio_politico.Name = "txt_ID_persona_legisladora_juicio_politico";
-            this.txt_ID_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(99, 21);
-            this.txt_ID_persona_legisladora_juicio_politico.TabIndex = 67;
-            this.txt_ID_persona_legisladora_juicio_politico.UseWaitCursor = true;
-            // 
-            // label330
-            // 
-            this.label330.AutoSize = true;
-            this.label330.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label330.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label330.Location = new System.Drawing.Point(556, 88);
-            this.label330.Name = "label330";
-            this.label330.Size = new System.Drawing.Size(197, 15);
-            this.label330.TabIndex = 68;
-            this.label330.Text = "Nombre de la persona legisladora:";
-            this.label330.UseWaitCursor = true;
-            // 
-            // cmb_nombre_persona_legisladora_juicio_politico
-            // 
-            this.cmb_nombre_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_nombre_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_nombre_persona_legisladora_juicio_politico.FormattingEnabled = true;
-            this.cmb_nombre_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(530, 114);
-            this.cmb_nombre_persona_legisladora_juicio_politico.Name = "cmb_nombre_persona_legisladora_juicio_politico";
-            this.cmb_nombre_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(241, 23);
-            this.cmb_nombre_persona_legisladora_juicio_politico.TabIndex = 69;
-            this.cmb_nombre_persona_legisladora_juicio_politico.UseWaitCursor = true;
-            // 
-            // txt_nombre_institucion_persona_servidora_publica_juicio_politico
-            // 
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(861, 114);
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Name = "txt_nombre_institucion_persona_servidora_publica_juicio_politico";
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(333, 21);
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.TabIndex = 71;
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
-            // 
-            // label331
-            // 
-            this.label331.AutoSize = true;
-            this.label331.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label331.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label331.Location = new System.Drawing.Point(883, 88);
-            this.label331.Name = "label331";
-            this.label331.Size = new System.Drawing.Size(291, 15);
-            this.label331.TabIndex = 70;
-            this.label331.Text = "Nombre de la institución pública a la que pertenece:";
-            this.label331.UseWaitCursor = true;
-            // 
-            // groupBox49
-            // 
-            this.groupBox49.Controls.Add(this.label170);
-            this.groupBox49.Controls.Add(this.cmb_municipio_persona_servidora_publica_juicio_politico);
-            this.groupBox49.Controls.Add(this.label172);
-            this.groupBox49.Controls.Add(this.txt_AGEM_persona_servidora_publica_juicio_politico);
-            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox49.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox49.Location = new System.Drawing.Point(7, 267);
-            this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Size = new System.Drawing.Size(1207, 82);
-            this.groupBox49.TabIndex = 81;
-            this.groupBox49.TabStop = false;
-            this.groupBox49.Text = "Municipio donde se desempeña";
-            this.groupBox49.UseWaitCursor = true;
-            // 
-            // groupBox107
-            // 
-            this.groupBox107.Controls.Add(this.label194);
-            this.groupBox107.Controls.Add(this.cmb_cargo_persona_servidora_publica_juicio_politico);
-            this.groupBox107.Controls.Add(this.txt_nombre_institucion_persona_servidora_publica_juicio_politico);
-            this.groupBox107.Controls.Add(this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico);
-            this.groupBox107.Controls.Add(this.label331);
-            this.groupBox107.Controls.Add(this.label328);
-            this.groupBox107.Controls.Add(this.cmb_nombre_persona_legisladora_juicio_politico);
-            this.groupBox107.Controls.Add(this.label329);
-            this.groupBox107.Controls.Add(this.label330);
-            this.groupBox107.Controls.Add(this.txt_ID_persona_legisladora_juicio_politico);
-            this.groupBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox107.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox107.Location = new System.Drawing.Point(7, 108);
-            this.groupBox107.Name = "groupBox107";
-            this.groupBox107.Size = new System.Drawing.Size(1207, 153);
-            this.groupBox107.TabIndex = 82;
-            this.groupBox107.TabStop = false;
-            this.groupBox107.Text = "Cargo";
-            this.groupBox107.UseWaitCursor = true;
-            // 
-            // label171
-            // 
-            this.label171.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label171.ForeColor = System.Drawing.Color.Black;
-            this.label171.Location = new System.Drawing.Point(11, 29);
-            this.label171.Name = "label171";
-            this.label171.Size = new System.Drawing.Size(482, 37);
-            this.label171.TabIndex = 61;
-            this.label171.Text = "Perjuicio a los intereses públicos fundamentales y de su buen despacho ocasionado" +
-    "s por la persona servidora pública sujeta a procedimiento de juicio político:";
-            this.label171.UseWaitCursor = true;
-            // 
-            // cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1
-            // 
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.BackColor = System.Drawing.Color.Honeydew;
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.FormattingEnabled = true;
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Location = new System.Drawing.Point(512, 35);
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Name = "cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1";
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Size = new System.Drawing.Size(362, 23);
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TabIndex = 62;
-            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.UseWaitCursor = true;
-            // 
-            // dataGridView15
-            // 
-            this.dataGridView15.AllowUserToAddRows = false;
-            this.dataGridView15.AllowUserToDeleteRows = false;
-            this.dataGridView15.AllowUserToResizeRows = false;
-            this.dataGridView15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView15.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14});
-            dataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle118.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle118.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle118.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle118.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle118.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle118.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView15.DefaultCellStyle = dataGridViewCellStyle118;
-            this.dataGridView15.Location = new System.Drawing.Point(14, 69);
-            this.dataGridView15.Name = "dataGridView15";
-            this.dataGridView15.ReadOnly = true;
-            this.dataGridView15.RowHeadersVisible = false;
-            this.dataGridView15.RowHeadersWidth = 51;
-            this.dataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView15.Size = new System.Drawing.Size(558, 105);
-            this.dataGridView15.TabIndex = 65;
-            this.dataGridView15.UseWaitCursor = true;
-            // 
-            // button47
-            // 
-            this.button47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button47.Location = new System.Drawing.Point(619, 85);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(110, 27);
-            this.button47.TabIndex = 63;
-            this.button47.Text = "Agregar";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.UseWaitCursor = true;
-            // 
-            // button48
-            // 
-            this.button48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button48.Location = new System.Drawing.Point(620, 132);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(110, 27);
-            this.button48.TabIndex = 64;
-            this.button48.Text = "Eliminar";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.UseWaitCursor = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Pejuicios a los interess púplicos";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // label173
-            // 
-            this.label173.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label173.ForeColor = System.Drawing.Color.Black;
-            this.label173.Location = new System.Drawing.Point(797, 71);
-            this.label173.Name = "label173";
-            this.label173.Size = new System.Drawing.Size(389, 48);
-            this.label173.TabIndex = 66;
-            this.label173.Text = "Otro perjuicio a los intereses públicos fundamentales y de su buen despacho ocasi" +
-    "onado por la persona servidora pública sujeta a procedimiento de juicio político" +
-    ":";
-            this.label173.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label173.UseWaitCursor = true;
-            // 
-            // txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique
-            // 
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Location = new System.Drawing.Point(797, 139);
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Name = "txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_e" +
-    "specifique";
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Size = new System.Drawing.Size(389, 21);
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.TabIndex = 83;
-            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.UseWaitCursor = true;
-            // 
-            // button49
-            // 
-            this.button49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button49.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button49.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button49.Location = new System.Drawing.Point(555, 1276);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(148, 27);
-            this.button49.TabIndex = 97;
-            this.button49.Text = "Guardar información";
-            this.button49.UseVisualStyleBackColor = true;
-            // 
-            // groupBox108
-            // 
-            this.groupBox108.Controls.Add(this.button50);
-            this.groupBox108.Controls.Add(this.button51);
-            this.groupBox108.Controls.Add(this.button52);
-            this.groupBox108.Controls.Add(this.button53);
-            this.groupBox108.Controls.Add(this.button54);
-            this.groupBox108.Controls.Add(this.dataGridView16);
-            this.groupBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox108.ForeColor = System.Drawing.Color.Green;
-            this.groupBox108.Location = new System.Drawing.Point(8, 1327);
-            this.groupBox108.Name = "groupBox108";
-            this.groupBox108.Size = new System.Drawing.Size(1220, 213);
-            this.groupBox108.TabIndex = 96;
-            this.groupBox108.TabStop = false;
-            this.groupBox108.Text = "Registros deJuicios politicos";
-            // 
-            // button50
-            // 
-            this.button50.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button50.Image = ((System.Drawing.Image)(resources.GetObject("button50.Image")));
-            this.button50.Location = new System.Drawing.Point(1135, 37);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(47, 47);
-            this.button50.TabIndex = 81;
-            this.button50.UseVisualStyleBackColor = false;
-            this.button50.UseWaitCursor = true;
-            // 
-            // button51
-            // 
-            this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button51.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button51.Location = new System.Drawing.Point(1110, 145);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(97, 27);
-            this.button51.TabIndex = 44;
-            this.button51.Text = "Eliminar";
-            this.button51.UseVisualStyleBackColor = true;
-            // 
-            // button52
-            // 
-            this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button52.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button52.Location = new System.Drawing.Point(1110, 99);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(97, 27);
-            this.button52.TabIndex = 43;
-            this.button52.Text = "Editar";
-            this.button52.UseVisualStyleBackColor = true;
-            // 
-            // button53
-            // 
-            this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button53.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button53.Location = new System.Drawing.Point(734, 228);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(90, 27);
-            this.button53.TabIndex = 40;
-            this.button53.Text = "     Eliminar";
-            this.button53.UseVisualStyleBackColor = true;
-            // 
-            // button54
-            // 
-            this.button54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button54.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button54.Location = new System.Drawing.Point(371, 228);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(81, 27);
-            this.button54.TabIndex = 39;
-            this.button54.Text = "     Agregar";
-            this.button54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button54.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView16
-            // 
-            this.dataGridView16.AllowUserToAddRows = false;
-            this.dataGridView16.AllowUserToDeleteRows = false;
-            this.dataGridView16.AllowUserToResizeRows = false;
-            this.dataGridView16.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView16.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle119.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle119.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle119.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle119.SelectionForeColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView16.DefaultCellStyle = dataGridViewCellStyle119;
-            this.dataGridView16.Location = new System.Drawing.Point(12, 21);
-            this.dataGridView16.MultiSelect = false;
-            this.dataGridView16.Name = "dataGridView16";
-            this.dataGridView16.ReadOnly = true;
-            this.dataGridView16.RowHeadersVisible = false;
-            this.dataGridView16.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle120.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle120.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView16.RowsDefaultCellStyle = dataGridViewCellStyle120;
-            this.dataGridView16.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView16.Size = new System.Drawing.Size(1079, 186);
-            this.dataGridView16.TabIndex = 30;
-            // 
-            // groupBox47
-            // 
-            this.groupBox47.Controls.Add(this.dateTimePicker1);
-            this.groupBox47.Controls.Add(this.label166);
-            this.groupBox47.Controls.Add(this.textBox3);
-            this.groupBox47.Controls.Add(this.label167);
-            this.groupBox47.Controls.Add(this.textBox5);
-            this.groupBox47.Controls.Add(this.label174);
-            this.groupBox47.Controls.Add(this.comboBox7);
-            this.groupBox47.Controls.Add(this.label175);
-            this.groupBox47.Controls.Add(this.comboBox8);
-            this.groupBox47.Controls.Add(this.comboBox9);
-            this.groupBox47.Controls.Add(this.label176);
-            this.groupBox47.Controls.Add(this.label177);
-            this.groupBox47.Controls.Add(this.dateTimePicker2);
-            this.groupBox47.Controls.Add(this.comboBox10);
-            this.groupBox47.Controls.Add(this.label178);
-            this.groupBox47.Controls.Add(this.comboBox11);
-            this.groupBox47.Controls.Add(this.dateTimePicker4);
-            this.groupBox47.Controls.Add(this.textBox6);
-            this.groupBox47.Controls.Add(this.label179);
-            this.groupBox47.Controls.Add(this.label180);
-            this.groupBox47.Controls.Add(this.label181);
-            this.groupBox47.Controls.Add(this.label182);
-            this.groupBox47.Controls.Add(this.comboBox12);
-            this.groupBox47.Controls.Add(this.label183);
-            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox47.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox47.Location = new System.Drawing.Point(11, 61);
-            this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(1218, 555);
-            this.groupBox47.TabIndex = 72;
-            this.groupBox47.TabStop = false;
-            this.groupBox47.Text = "Caracterización inicial";
-            this.groupBox47.UseWaitCursor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 277);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(79, 20);
-            this.dateTimePicker1.TabIndex = 52;
-            this.dateTimePicker1.UseWaitCursor = true;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // label166
-            // 
-            this.label166.AutoSize = true;
-            this.label166.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label166.ForeColor = System.Drawing.Color.Black;
-            this.label166.Location = new System.Drawing.Point(6, 247);
-            this.label166.Name = "label166";
-            this.label166.Size = new System.Drawing.Size(383, 15);
-            this.label166.TabIndex = 51;
-            this.label166.Text = "Fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes";
-            this.label166.UseWaitCursor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(713, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(257, 21);
-            this.textBox3.TabIndex = 50;
-            this.textBox3.UseWaitCursor = true;
-            // 
-            // label167
-            // 
-            this.label167.AutoSize = true;
-            this.label167.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label167.ForeColor = System.Drawing.Color.Black;
-            this.label167.Location = new System.Drawing.Point(658, 181);
-            this.label167.Name = "label167";
-            this.label167.Size = new System.Drawing.Size(350, 15);
-            this.label167.TabIndex = 49;
-            this.label167.Text = "Otro_estatus_denuncia_declaracion_procedencia_especifique";
-            this.label167.UseWaitCursor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(415, 190);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 21);
-            this.textBox5.TabIndex = 48;
-            this.textBox5.UseWaitCursor = true;
-            // 
-            // label174
-            // 
-            this.label174.AutoSize = true;
-            this.label174.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label174.ForeColor = System.Drawing.Color.Black;
-            this.label174.Location = new System.Drawing.Point(6, 194);
-            this.label174.Name = "label174";
-            this.label174.Size = new System.Drawing.Size(403, 15);
-            this.label174.TabIndex = 47;
-            this.label174.Text = "Improcedente_estatus_denuncia_declaracion_procedencia_especifique";
-            this.label174.UseWaitCursor = true;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(824, 144);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(195, 23);
-            this.comboBox7.TabIndex = 46;
-            this.comboBox7.UseWaitCursor = true;
-            // 
-            // label175
-            // 
-            this.label175.AutoSize = true;
-            this.label175.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label175.ForeColor = System.Drawing.Color.Black;
-            this.label175.Location = new System.Drawing.Point(568, 148);
-            this.label175.Name = "label175";
-            this.label175.Size = new System.Drawing.Size(251, 15);
-            this.label175.TabIndex = 45;
-            this.label175.Text = "Estatus_denuncia_declaracion_procedencia";
-            this.label175.UseWaitCursor = true;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(309, 320);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(149, 23);
-            this.comboBox8.TabIndex = 58;
-            this.comboBox8.UseWaitCursor = true;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(434, 148);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(79, 23);
-            this.comboBox9.TabIndex = 44;
-            this.comboBox9.UseWaitCursor = true;
-            // 
-            // label176
-            // 
-            this.label176.AutoSize = true;
-            this.label176.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label176.ForeColor = System.Drawing.Color.Black;
-            this.label176.Location = new System.Drawing.Point(6, 324);
-            this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(297, 15);
-            this.label176.TabIndex = 57;
-            this.label176.Text = "Sentido_resolucion_pleno_declaracion_procedencia";
-            this.label176.UseWaitCursor = true;
-            // 
-            // label177
-            // 
-            this.label177.AutoSize = true;
-            this.label177.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label177.ForeColor = System.Drawing.Color.Black;
-            this.label177.Location = new System.Drawing.Point(6, 151);
-            this.label177.Name = "label177";
-            this.label177.Size = new System.Drawing.Size(414, 15);
-            this.label177.TabIndex = 43;
-            this.label177.Text = "Cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo";
-            this.label177.UseWaitCursor = true;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(837, 277);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(79, 20);
-            this.dateTimePicker2.TabIndex = 56;
-            this.dateTimePicker2.UseWaitCursor = true;
-            this.dateTimePicker2.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(434, 104);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(79, 23);
-            this.comboBox10.TabIndex = 42;
-            this.comboBox10.UseWaitCursor = true;
-            // 
-            // label178
-            // 
-            this.label178.AutoSize = true;
-            this.label178.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label178.ForeColor = System.Drawing.Color.Black;
-            this.label178.Location = new System.Drawing.Point(731, 247);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(289, 15);
-            this.label178.TabIndex = 55;
-            this.label178.Text = "Fecha_resolucion_pleno_declaracion_procedencia";
-            this.label178.UseWaitCursor = true;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(941, 58);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(79, 23);
-            this.comboBox11.TabIndex = 41;
-            this.comboBox11.UseWaitCursor = true;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(509, 277);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(79, 20);
-            this.dateTimePicker4.TabIndex = 54;
-            this.dateTimePicker4.UseWaitCursor = true;
-            this.dateTimePicker4.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(817, 104);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 21);
-            this.textBox6.TabIndex = 40;
-            this.textBox6.UseWaitCursor = true;
-            // 
-            // label179
-            // 
-            this.label179.AutoSize = true;
-            this.label179.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label179.ForeColor = System.Drawing.Color.Black;
-            this.label179.Location = new System.Drawing.Point(405, 247);
-            this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(320, 15);
-            this.label179.TabIndex = 53;
-            this.label179.Text = "Fecha_procedencia_denuncia_declaracion_procedencia";
-            this.label179.UseWaitCursor = true;
-            // 
-            // label180
-            // 
-            this.label180.AutoSize = true;
-            this.label180.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label180.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label180.Location = new System.Drawing.Point(568, 104);
-            this.label180.Name = "label180";
-            this.label180.Size = new System.Drawing.Size(243, 15);
-            this.label180.TabIndex = 38;
-            this.label180.Text = "Turno_denuncia_declaracion_procedencia";
-            this.label180.UseWaitCursor = true;
-            // 
-            // label181
-            // 
-            this.label181.AutoSize = true;
-            this.label181.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label181.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label181.Location = new System.Drawing.Point(6, 107);
-            this.label181.Name = "label181";
-            this.label181.Size = new System.Drawing.Size(398, 15);
-            this.label181.TabIndex = 37;
-            this.label181.Text = "Numero_legislatura_presentacion_denuncia_declaracion_procedencia";
-            this.label181.UseWaitCursor = true;
-            // 
-            // label182
-            // 
-            this.label182.AutoSize = true;
-            this.label182.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label182.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label182.Location = new System.Drawing.Point(6, 64);
-            this.label182.Name = "label182";
-            this.label182.Size = new System.Drawing.Size(422, 15);
-            this.label182.TabIndex = 30;
-            this.label182.Text = "Cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual";
-            this.label182.UseWaitCursor = true;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(434, 61);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(79, 23);
-            this.comboBox12.TabIndex = 32;
-            this.comboBox12.UseWaitCursor = true;
-            // 
-            // label183
-            // 
-            this.label183.AutoSize = true;
-            this.label183.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label183.ForeColor = System.Drawing.Color.Black;
-            this.label183.Location = new System.Drawing.Point(568, 61);
-            this.label183.Name = "label183";
-            this.label183.Size = new System.Drawing.Size(367, 15);
-            this.label183.TabIndex = 19;
-            this.label183.Text = "Cond_presentacion_denuncia_declaracion_procedencia_periodo";
-            this.label183.UseWaitCursor = true;
-            // 
-            // groupBox109
-            // 
-            this.groupBox109.Controls.Add(this.comboBox13);
-            this.groupBox109.Controls.Add(this.textBox7);
-            this.groupBox109.Controls.Add(this.comboBox14);
-            this.groupBox109.Controls.Add(this.label332);
-            this.groupBox109.Controls.Add(this.label333);
-            this.groupBox109.Controls.Add(this.label334);
-            this.groupBox109.Controls.Add(this.comboBox15);
-            this.groupBox109.Controls.Add(this.label335);
-            this.groupBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox109.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox109.Location = new System.Drawing.Point(17, 446);
-            this.groupBox109.Name = "groupBox109";
-            this.groupBox109.Size = new System.Drawing.Size(1206, 117);
-            this.groupBox109.TabIndex = 74;
-            this.groupBox109.TabStop = false;
-            this.groupBox109.Text = "Presentación";
-            this.groupBox109.UseWaitCursor = true;
-            // 
-            // comboBox13
-            // 
-            this.comboBox13.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(459, 76);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(176, 23);
-            this.comboBox13.TabIndex = 41;
-            this.comboBox13.UseWaitCursor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(1087, 31);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(64, 21);
-            this.textBox7.TabIndex = 40;
-            this.textBox7.UseWaitCursor = true;
-            // 
-            // comboBox14
-            // 
-            this.comboBox14.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(1037, 73);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(115, 23);
-            this.comboBox14.TabIndex = 39;
-            this.comboBox14.UseWaitCursor = true;
-            // 
-            // label332
-            // 
-            this.label332.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label332.ForeColor = System.Drawing.Color.Black;
-            this.label332.Location = new System.Drawing.Point(849, 31);
-            this.label332.Name = "label332";
-            this.label332.Size = new System.Drawing.Size(213, 23);
-            this.label332.TabIndex = 38;
-            this.label332.Text = "Turno asignado a la iniciativa*:";
-            this.label332.UseWaitCursor = true;
-            // 
-            // label333
-            // 
-            this.label333.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label333.ForeColor = System.Drawing.Color.Black;
-            this.label333.Location = new System.Drawing.Point(694, 76);
-            this.label333.Name = "label333";
-            this.label333.Size = new System.Drawing.Size(337, 19);
-            this.label333.TabIndex = 37;
-            this.label333.Text = "Número de la legislatura en la que se presentó la iniciativa:";
-            this.label333.UseWaitCursor = true;
-            // 
-            // label334
-            // 
-            this.label334.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label334.ForeColor = System.Drawing.Color.Black;
-            this.label334.Location = new System.Drawing.Point(28, 26);
-            this.label334.Name = "label334";
-            this.label334.Size = new System.Drawing.Size(509, 25);
-            this.label334.TabIndex = 30;
-            this.label334.Text = "Condición de la iniciativa de haber sido presentada en la legislatura actual*:";
-            this.label334.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label334.UseWaitCursor = true;
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(543, 28);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(154, 23);
-            this.comboBox15.TabIndex = 32;
-            this.comboBox15.UseWaitCursor = true;
-            // 
-            // label335
-            // 
-            this.label335.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label335.ForeColor = System.Drawing.Color.Black;
-            this.label335.Location = new System.Drawing.Point(28, 76);
-            this.label335.Name = "label335";
-            this.label335.Size = new System.Drawing.Size(425, 22);
-            this.label335.TabIndex = 19;
-            this.label335.Text = "Condición de la iniciativa de haber sido presentada en el periodo reportado:";
-            this.label335.UseWaitCursor = true;
-            // 
             // FormRegistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -13100,13 +13111,35 @@
             this.groupBox46.PerformLayout();
             this.tabPageJP.ResumeLayout(false);
             this.tabPageJP.PerformLayout();
-            this.groupBox48.ResumeLayout(false);
-            this.groupBox48.PerformLayout();
+            this.groupBox108.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
+            this.groupBox105.ResumeLayout(false);
+            this.groupBox105.PerformLayout();
             this.groupBox50.ResumeLayout(false);
             this.groupBox50.PerformLayout();
+            this.groupBox107.ResumeLayout(false);
+            this.groupBox107.PerformLayout();
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox49.PerformLayout();
+            this.groupBox104.ResumeLayout(false);
+            this.groupBox104.PerformLayout();
+            this.groupBox40.ResumeLayout(false);
+            this.groupBox41.ResumeLayout(false);
+            this.groupBox41.PerformLayout();
+            this.groupBox103.ResumeLayout(false);
+            this.groupBox103.PerformLayout();
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox48.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             this.groupBox51.ResumeLayout(false);
+            this.groupBox106.ResumeLayout(false);
+            this.groupBox106.PerformLayout();
             this.tabPageDP.ResumeLayout(false);
             this.tabPageDP.PerformLayout();
+            this.groupBox109.ResumeLayout(false);
+            this.groupBox109.PerformLayout();
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
             this.groupBox52.ResumeLayout(false);
             this.groupBox52.PerformLayout();
             this.groupBox53.ResumeLayout(false);
@@ -13125,28 +13158,6 @@
             this.groupBox59.ResumeLayout(false);
             this.groupBox59.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox40.ResumeLayout(false);
-            this.groupBox41.ResumeLayout(false);
-            this.groupBox41.PerformLayout();
-            this.groupBox103.ResumeLayout(false);
-            this.groupBox103.PerformLayout();
-            this.groupBox104.ResumeLayout(false);
-            this.groupBox104.PerformLayout();
-            this.groupBox105.ResumeLayout(false);
-            this.groupBox105.PerformLayout();
-            this.groupBox106.ResumeLayout(false);
-            this.groupBox106.PerformLayout();
-            this.groupBox49.ResumeLayout(false);
-            this.groupBox49.PerformLayout();
-            this.groupBox107.ResumeLayout(false);
-            this.groupBox107.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
-            this.groupBox108.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
-            this.groupBox47.ResumeLayout(false);
-            this.groupBox47.PerformLayout();
-            this.groupBox109.ResumeLayout(false);
-            this.groupBox109.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

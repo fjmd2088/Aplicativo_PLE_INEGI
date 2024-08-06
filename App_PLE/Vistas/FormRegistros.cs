@@ -319,7 +319,7 @@ namespace App_PLE.Vistas
                     dgvPE.Rows.Add(periodo_reportado_pe, fecha_inicio_pe, fecha_termino_pe, sesiones_celebradas_pe);
 
                     Txt_sesiones_celebradas_pe.Clear();
-                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
                 }
 
 
@@ -1140,45 +1140,45 @@ namespace App_PLE.Vistas
                                 }
                             }
 
-                            // Se asigna en el txt periodo de receso dependiendo del periodo reportado
+                            // Se asigna en el txt periodo de receso dependiendo del periodo reportado y se restringe dependiendo la entidad
                             string per_ord = cmb_periodo_reportado_po.Text;
+                            string ent_rep = cmb_entidad_federativa.Text;
 
-                            if (per_ord == "Primer periodo ordinario")
+                            if (ent_rep == "Baja California" || ent_rep == "Jalisco")
                             {
-                                txt_periodo_reportado_rec.Text = "Primer periodo de receso";
-                            }
-                            else if(per_ord == "Segundo periodo ordinario")
-                            {
-                                txt_periodo_reportado_rec.Text = "Segundo periodo de receso";
-                            }
-                            else if (per_ord == "Tercer periodo ordinario")
-                            {
-                                txt_periodo_reportado_rec.Text = "Tercer periodo de receso";
-                            }
-                            /*
-                            // Consulta SQL para obtener datos del cmb de periodos receso y extraer fecha------------------------------
-                            string valorcmb = txt_periodo_reportado_rec.Text;
-                            string query3 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES " +
-                                "WHERE periodos_reportar = @pr and entidad = @ent and ejercicio_constitucional = @ec";
-                            using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
-                            {
-                                cmd3.Parameters.AddWithValue("@pr", valorcmb);
-                                cmd3.Parameters.AddWithValue("@ent", ent);
-                                cmd3.Parameters.AddWithValue("@ec", ec);
+                                txt_periodo_reportado_rec.Text = "";
+                                dtp_fecha_inicio_p_rec.Enabled = false; dtp_fecha_inicio_p_rec.Value = new DateTime(1899, 9, 9);
+                                dtp_fecha_termino_p_rec.Enabled = false; dtp_fecha_termino_p_rec.Value = new DateTime(1899, 9, 9);
+                                txt_sesiones_celebradas_p_rec.Enabled = false; txt_sesiones_celebradas_p_rec.BackColor = Color.LightGray;
+                                txt_sesiones_celebradas_p_rec.Text = "";
+                                chbPE.Enabled = false;
 
-                                object resultado = cmd3.ExecuteScalar();
+                            }
+                            else
+                            {
+                                dtp_fecha_inicio_p_rec.Enabled = true; dtp_fecha_inicio_p_rec.Value = new DateTime(1899, 9, 9);
+                                dtp_fecha_termino_p_rec.Enabled = true; dtp_fecha_termino_p_rec.Value = new DateTime(1899, 9, 9);
+                                txt_sesiones_celebradas_p_rec.Enabled = true; txt_sesiones_celebradas_p_rec.BackColor = Color.Honeydew;
+                                txt_sesiones_celebradas_p_rec.Text = "";
+                                chbPE.Enabled = true;
 
-                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_pr))
+                                if (per_ord == "Primer periodo ordinario")
                                 {
-                                    dtp_fecha_inicio_p_rec.Value = inicio_pr;
+                                    txt_periodo_reportado_rec.Text = "Primer periodo de receso";
                                 }
-                                else
+                                else if (per_ord == "Segundo periodo ordinario")
                                 {
-                                    // Manejo de error si no se puede convertir el resultado a DateTime
-                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                    txt_periodo_reportado_rec.Text = "Segundo periodo de receso";
+                                }
+                                else if (per_ord == "Tercer periodo ordinario")
+                                {
+                                    txt_periodo_reportado_rec.Text = "Tercer periodo de receso";
                                 }
                             }
-                            */
+
+
+                            
+                            
                             conexion.Close();
                         }
                     }
@@ -1289,6 +1289,28 @@ namespace App_PLE.Vistas
                 // Muestra una ventana emergente informando al usuario que solo se permiten números
                 MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                // Si el carácter es un número, realizamos una validación adicional
+                System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
+
+                // Obtén el texto actual del TextBox y añádele el carácter presionado
+                string newText = textBox.Text.Insert(textBox.SelectionStart, e.KeyChar.ToString());
+
+                // Intenta convertir el nuevo texto a un número
+                if (int.TryParse(newText, out int result))
+                {
+                    // Verifica si el número es mayor que 1
+                    if (result < 1)
+                    {
+                        // Si el número es menor o igual a 1, cancela la entrada
+                        e.Handled = true;
+
+                        // Muestra una ventana emergente informando al usuario que solo se permiten valores mayores a 1
+                        MessageBox.Show("Solo se permiten valores mayores a 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
         private void Txt_diputaciones_plurinominales_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1315,6 +1337,18 @@ namespace App_PLE.Vistas
             }
         }
         private void Txt_sesiones_celebradas_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void txt_sesiones_celebradas_p_rec_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verifica si la tecla presionada es un número o una tecla de control
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -1362,20 +1396,46 @@ namespace App_PLE.Vistas
             // Array de controles a validar
             Control[] controlesAValidar;
 
+            string ent_rep = cmb_entidad_federativa.Text;
+
+
             if (chbPE.Checked)
             {
-                controlesAValidar = new Control[]  {
-                    txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
-                    Txt_distritos_uninominales,Txt_diputaciones_plurinominales,
-                    txt_periodos_extraordinarios_celebrados
-                };
+                if (ent_rep == "Baja California" || ent_rep == "Jalisco")
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales,
+                        txt_periodos_extraordinarios_celebrados
+                    };
+                }
+                else
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales,
+                        txt_periodos_extraordinarios_celebrados
+                    };
+                }
+                
             }
             else
             {
-                controlesAValidar = new Control[]  {
-                    txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
-                    Txt_distritos_uninominales,Txt_diputaciones_plurinominales
-                };
+                if (ent_rep == "Baja California" || ent_rep == "Jalisco")
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales
+                    };
+                }
+                else
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales
+                    };
+                }
+                
             }
 
             bool camposValidos = true;
@@ -1475,7 +1535,12 @@ namespace App_PLE.Vistas
             }
             
         }
-        
+        private void dtp_inicio_funciones_legislatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+
         // fecha termino_funciones_legislatura
         private DateTime f2;
         private void dtp_termino_funciones_legislatura_DropDown(object sender, EventArgs e)
@@ -1492,6 +1557,11 @@ namespace App_PLE.Vistas
             {
                 dtp_termino_funciones_legislatura.Value = f2;
             }
+        }
+        private void dtp_termino_funciones_legislatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_informacion_reportada
@@ -1510,6 +1580,11 @@ namespace App_PLE.Vistas
                 dtp_fecha_inicio_informacion_reportada.Value = f3;
             }
         }
+        private void dtp_fecha_inicio_informacion_reportada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
 
         // fecha fecha_termino_informacion_reportada
         private DateTime f4;
@@ -1526,6 +1601,11 @@ namespace App_PLE.Vistas
             {
                 dtp_fecha_termino_informacion_reportada.Value = f4;
             }
+        }
+        private void dtp_fecha_termino_informacion_reportada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_po
@@ -1544,6 +1624,11 @@ namespace App_PLE.Vistas
                 dtp_fecha_inicio_po.Value = f5;
             }
         }
+        private void dtp_fecha_inicio_po_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
 
         // fecha fecha_termino_po
         private DateTime f6;
@@ -1560,6 +1645,11 @@ namespace App_PLE.Vistas
             {
                 dtp_fecha_termino_po.Value = f6;
             }
+        }
+        private void dtp_fecha_termino_po_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_p_rec
@@ -1578,6 +1668,11 @@ namespace App_PLE.Vistas
                 dtp_fecha_inicio_p_rec.Value = f7;
             }
         }
+        private void dtp_fecha_inicio_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
 
         // fecha fecha_termino_p_rec
         private DateTime f8;
@@ -1594,6 +1689,11 @@ namespace App_PLE.Vistas
             {
                 dtp_fecha_termino_p_rec.Value = f8;
             }
+        }
+        private void dtp_fecha_termino_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_pe
@@ -1620,11 +1720,16 @@ namespace App_PLE.Vistas
                 }
                 else
                 {
-                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo de receso reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value;
                     dtp_fecha_inicio_pe.Focus();
                 }
             }
+        }
+        private void dtp_fecha_inicio_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_termino_pe
@@ -1651,11 +1756,16 @@ namespace App_PLE.Vistas
                 }
                 else
                 {
-                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo de receso reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
                     dtp_fecha_termino_pe.Focus();
                 }
             }
+        }
+        private void dtp_fecha_termino_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         private void txt_periodo_reportado_rec_TextChanged(object sender, EventArgs e)
@@ -7794,7 +7904,31 @@ namespace App_PLE.Vistas
 
         }
 
-        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
