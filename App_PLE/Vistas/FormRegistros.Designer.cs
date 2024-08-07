@@ -2024,7 +2024,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(253, 9567);
+            this.btnGuardarCL.Location = new System.Drawing.Point(244, 9652);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -2140,7 +2140,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(163, 11628);
+            this.button24.Location = new System.Drawing.Point(154, 11713);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -2197,6 +2197,7 @@
             this.cmb_cond_celebracion_reuniones_comision_legislativa.Size = new System.Drawing.Size(99, 23);
             this.cmb_cond_celebracion_reuniones_comision_legislativa.TabIndex = 41;
             this.cmb_cond_celebracion_reuniones_comision_legislativa.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_celebracion_reuniones_comision_legislativa_SelectedIndexChanged);
+            this.cmb_cond_celebracion_reuniones_comision_legislativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_celebracion_reuniones_comision_legislativa_Validating);
             // 
             // pbo_cant_dictamenes_emitidos_por_comision_legislativa
             // 
@@ -2368,6 +2369,7 @@
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Size = new System.Drawing.Size(184, 23);
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.TabIndex = 26;
             this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa_SelectedIndexChanged);
+            this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_transmision_reuniones_celebradas_comision_legislativa_Validating);
             // 
             // label26
             // 
@@ -2446,6 +2448,7 @@
             this.txt_cant_integrantes_comision_legislativa.Size = new System.Drawing.Size(79, 21);
             this.txt_cant_integrantes_comision_legislativa.TabIndex = 37;
             this.txt_cant_integrantes_comision_legislativa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cant_integrantes_comision_legislativa_KeyPress);
+            this.txt_cant_integrantes_comision_legislativa.Leave += new System.EventHandler(this.txt_cant_integrantes_comision_legislativa_Leave);
             // 
             // label285
             // 
@@ -2587,6 +2590,7 @@
             this.cmb_tema_comision_legislativa.Size = new System.Drawing.Size(415, 23);
             this.cmb_tema_comision_legislativa.TabIndex = 44;
             this.cmb_tema_comision_legislativa.SelectedIndexChanged += new System.EventHandler(this.cmb_tema_comision_legislativa_SelectedIndexChanged);
+            this.cmb_tema_comision_legislativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tema_comision_legislativa_Validating);
             // 
             // cmb_tipo_comision_legislativa
             // 
@@ -2598,6 +2602,7 @@
             this.cmb_tipo_comision_legislativa.Size = new System.Drawing.Size(253, 23);
             this.cmb_tipo_comision_legislativa.TabIndex = 18;
             this.cmb_tipo_comision_legislativa.SelectedIndexChanged += new System.EventHandler(this.cmb_tipo_comision_legislativa_SelectedIndexChanged);
+            this.cmb_tipo_comision_legislativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_comision_legislativa_Validating);
             // 
             // Txt_otro_tipo_comision_legislativa_especifique
             // 

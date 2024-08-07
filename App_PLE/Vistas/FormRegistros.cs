@@ -2304,6 +2304,8 @@ namespace App_PLE.Vistas
             txt_ID_comision_legislativa.Text = resultadoConcatenado;
 
         }
+
+        // cmb_tipo_comision_legislativa
         private void cmb_tipo_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -2350,6 +2352,41 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void cmb_tipo_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void btnAgregarCL_Click(object sender, EventArgs e)
         {
             // se obtienen los valores
@@ -2396,6 +2433,8 @@ namespace App_PLE.Vistas
             }
             return false;
         }
+
+        // cmb_tema_comision_legislativa
         private void cmb_tema_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -2413,6 +2452,41 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void cmb_tema_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void Txt_otro_tipo_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -2442,6 +2516,8 @@ namespace App_PLE.Vistas
             }
 
         }
+
+        // txt_cant_integrantes_comision_legislativa
         private void txt_cant_integrantes_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
@@ -2452,6 +2528,23 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void txt_cant_integrantes_comision_legislativa_Leave(object sender, EventArgs e)
+        {
+            int valor;
+            int.TryParse(txt_cant_integrantes_comision_legislativa.Text, out valor);
+            // Verificar si el valor está dentro del rango permitido
+            if (valor < -2)
+            {
+                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
+                txt_cant_integrantes_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+            }
+            if (valor == -1 || valor == -2)
+            {
+                MessageBox.Show("Justificar la elección en el apartado de observaciones");
+            }
+        }
+
+        // cmb_cond_celebracion_reuniones_comision_legislativa
         private void cmb_cond_celebracion_reuniones_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_cant_reuniones_celebradas_comision_legislativa.Clear();
@@ -2488,6 +2581,42 @@ namespace App_PLE.Vistas
                 cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text = "";
             }
         }
+        private void cmb_cond_celebracion_reuniones_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cmb_cond_transmision_reuniones_celebradas_comision_legislativa
         private void cmb_cond_transmision_reuniones_celebradas_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -2503,6 +2632,41 @@ namespace App_PLE.Vistas
                 txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = "";
             }
         }
+        private void cmb_cond_transmision_reuniones_celebradas_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void txt_observaciones_cl_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -2528,14 +2692,7 @@ namespace App_PLE.Vistas
                 txt_otro_tema_comision_legislativa_especifique.Focus();
             }
         }
-        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text))
-            {
-                MessageBox.Show("Debe especificar el motivo por el cual la comisión legislativa no se reunió durante el periodo reportado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
-            }
-        }
+        
         private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_TextChanged(object sender, EventArgs e)
         {
             int valor;
@@ -2572,6 +2729,8 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_nombre_comision_legislativa.SelectionStart = txt_nombre_comision_legislativa.Text.Length;
         }
+
+        // txt_no_cond_celebracion_reuniones_comision_legislativa_especifique
         private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -2580,34 +2739,19 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.SelectionStart = txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text.Length;
         }
+        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_Leave(object sender, EventArgs e)
+        {
+            /*
+            if (string.IsNullOrWhiteSpace(txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el motivo por el cual la comisión legislativa no se reunió durante el periodo reportado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
+            }
+            */
+        }
+
+        // txt_cant_reuniones_celebradas_comision_legislativa
         private void txt_cant_reuniones_celebradas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -2631,9 +2775,39 @@ namespace App_PLE.Vistas
             if (valor == -1 || valor == -2)
             {
                 MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
             }
         }
+
+        // txt_cant_reuniones_celebradas_transmitidas_comision_legislativa
+        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+
+        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        
         private void Txt_consecutivo_comision_legislativa_MouseHover(object sender, EventArgs e)
         {
             // Mostrar mensaje al pasar el ratón sobre el TextBox
@@ -8106,7 +8280,17 @@ namespace App_PLE.Vistas
 
         }
 
-        
+       
+
+
+
+
+
+
+
+
+
+
 
 
 
