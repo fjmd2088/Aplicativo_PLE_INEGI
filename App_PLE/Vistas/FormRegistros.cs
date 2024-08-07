@@ -43,8 +43,8 @@ namespace App_PLE.Vistas
             this.StartPosition = FormStartPosition.CenterScreen;
 
             // se desactivan las tabpages de manera inicial
-            DisableTab(tabPageCL);
-            DisableTab(tabPagePL);
+            //DisableTab(tabPageCL);
+            //DisableTab(tabPagePL);
 
 
             // ---------------------------------------------- DATOS GENERALES ---------------------------------------------------------------
@@ -115,7 +115,11 @@ namespace App_PLE.Vistas
             cmb_Carrera_doctorado_persona_legisladora();
             cmb_Cond_lengua_ind_persona_legisladora();
             cmb_Lengua_ind_persona_legisladora();
+
+            
             cmb_Cond_discapacidad_persona_legisladora();
+
+
             cmb_Tipo_discapacidad_persona_legisladora();
             cmb_Cond_pueblo_ind_persona_legisladora();
             cmb_Pueblo_ind_persona_legisladora();
@@ -319,7 +323,7 @@ namespace App_PLE.Vistas
                     dgvPE.Rows.Add(periodo_reportado_pe, fecha_inicio_pe, fecha_termino_pe, sesiones_celebradas_pe);
 
                     Txt_sesiones_celebradas_pe.Clear();
-                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_po.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_po.Value;
+                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
                 }
 
 
@@ -747,6 +751,8 @@ namespace App_PLE.Vistas
             txt_id_legislatura.Text = resultadoConcatenado;
             txt_agee.Text = CVE_ENT;
         }
+        
+        // cmb_entidad_federativa
         private void cmb_entidad_federativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             // CONSTRUCCION ID----------------------------------------------------------------------------------------------    
@@ -908,6 +914,88 @@ namespace App_PLE.Vistas
 
 
         }
+        private void cmb_entidad_federativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    string cleanedItem = item["nom_ent"].ToString().Trim().Replace(" ", string.Empty).ToLower(); // nom_ent: nombre de la columna de la tabla
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine("Current item: " + item["nom_ent"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine("Current item: " + item["nom_ent"]);
+                }
+
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show("Por favor, seleccione una opción válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cmb_numero_legislatura
+        private void cmb_numero_legislatura_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    string cleanedItem = item["legislatura"].ToString().Trim().Replace(" ", string.Empty).ToLower(); // nom_ent: nombre de la columna de la tabla
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine("Current item: " + item["legislatura"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine("Current item: " + item["legislatura"]);
+                }
+
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show("Por favor, seleccione una opción válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cmb_ejercicio_constitucional_informacion_reportada
         private void cmb_ejercicio_constitucional_informacion_reportada_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1063,6 +1151,47 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_ejercicio_constitucional_informacion_reportada_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    string cleanedItem = item["ejercicio_constitucional"].ToString().Trim().Replace(" ", string.Empty).ToLower(); // nom_ent: nombre de la columna de la tabla
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine("Current item: " + item["ejercicio_constitucional"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine("Current item: " + item["ejercicio_constitucional"]);
+                }
+
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show("Por favor, seleccione una opción válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cmb_periodo_reportado_po
         private void cmb_periodo_reportado_po_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -1140,45 +1269,45 @@ namespace App_PLE.Vistas
                                 }
                             }
 
-                            // Se asigna en el txt periodo de receso dependiendo del periodo reportado
+                            // Se asigna en el txt periodo de receso dependiendo del periodo reportado y se restringe dependiendo la entidad
                             string per_ord = cmb_periodo_reportado_po.Text;
+                            string ent_rep = cmb_entidad_federativa.Text;
 
-                            if (per_ord == "Primer periodo ordinario")
+                            if (ent_rep == "Baja California" || ent_rep == "Jalisco")
                             {
-                                txt_periodo_reportado_rec.Text = "Primer periodo de receso";
-                            }
-                            else if(per_ord == "Segundo periodo ordinario")
-                            {
-                                txt_periodo_reportado_rec.Text = "Segundo periodo de receso";
-                            }
-                            else if (per_ord == "Tercer periodo ordinario")
-                            {
-                                txt_periodo_reportado_rec.Text = "Tercer periodo de receso";
-                            }
-                            /*
-                            // Consulta SQL para obtener datos del cmb de periodos receso y extraer fecha------------------------------
-                            string valorcmb = txt_periodo_reportado_rec.Text;
-                            string query3 = "select distinct inicio_pr from TC_CALENDARIO_SESIONES " +
-                                "WHERE periodos_reportar = @pr and entidad = @ent and ejercicio_constitucional = @ec";
-                            using (SQLiteCommand cmd3 = new SQLiteCommand(query3, conexion))
-                            {
-                                cmd3.Parameters.AddWithValue("@pr", valorcmb);
-                                cmd3.Parameters.AddWithValue("@ent", ent);
-                                cmd3.Parameters.AddWithValue("@ec", ec);
+                                txt_periodo_reportado_rec.Text = "";
+                                dtp_fecha_inicio_p_rec.Enabled = false; dtp_fecha_inicio_p_rec.Value = new DateTime(1899, 9, 9);
+                                dtp_fecha_termino_p_rec.Enabled = false; dtp_fecha_termino_p_rec.Value = new DateTime(1899, 9, 9);
+                                txt_sesiones_celebradas_p_rec.Enabled = false; txt_sesiones_celebradas_p_rec.BackColor = Color.LightGray;
+                                txt_sesiones_celebradas_p_rec.Text = "";
+                                chbPE.Enabled = false;
 
-                                object resultado = cmd3.ExecuteScalar();
+                            }
+                            else
+                            {
+                                dtp_fecha_inicio_p_rec.Enabled = true; dtp_fecha_inicio_p_rec.Value = new DateTime(1899, 9, 9);
+                                dtp_fecha_termino_p_rec.Enabled = true; dtp_fecha_termino_p_rec.Value = new DateTime(1899, 9, 9);
+                                txt_sesiones_celebradas_p_rec.Enabled = true; txt_sesiones_celebradas_p_rec.BackColor = Color.Honeydew;
+                                txt_sesiones_celebradas_p_rec.Text = "";
+                                chbPE.Enabled = true;
 
-                                if (DateTime.TryParse(resultado.ToString(), out DateTime inicio_pr))
+                                if (per_ord == "Primer periodo ordinario")
                                 {
-                                    dtp_fecha_inicio_p_rec.Value = inicio_pr;
+                                    txt_periodo_reportado_rec.Text = "Primer periodo de receso";
                                 }
-                                else
+                                else if (per_ord == "Segundo periodo ordinario")
                                 {
-                                    // Manejo de error si no se puede convertir el resultado a DateTime
-                                    MessageBox.Show("No se pudo convertir el valor de inicio de legislatura a DateTime.");
+                                    txt_periodo_reportado_rec.Text = "Segundo periodo de receso";
+                                }
+                                else if (per_ord == "Tercer periodo ordinario")
+                                {
+                                    txt_periodo_reportado_rec.Text = "Tercer periodo de receso";
                                 }
                             }
-                            */
+
+
+                            
+                            
                             conexion.Close();
                         }
                     }
@@ -1191,6 +1320,46 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void cmb_periodo_reportado_po_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    string cleanedItem = item["periodos_reportar"].ToString().Trim().Replace(" ", string.Empty).ToLower(); // nom_ent: nombre de la columna de la tabla
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine("Current item: " + item["periodos_reportar"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine("Current item: " + item["periodos_reportar"]);
+                }
+
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show("Por favor, seleccione una opción válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void txt_periodos_extraordinarios_celebrados_TextChanged(object sender, EventArgs e)
         {
             int valorTextBox;
@@ -1289,6 +1458,28 @@ namespace App_PLE.Vistas
                 // Muestra una ventana emergente informando al usuario que solo se permiten números
                 MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                // Si el carácter es un número, realizamos una validación adicional
+                System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
+
+                // Obtén el texto actual del TextBox y añádele el carácter presionado
+                string newText = textBox.Text.Insert(textBox.SelectionStart, e.KeyChar.ToString());
+
+                // Intenta convertir el nuevo texto a un número
+                if (int.TryParse(newText, out int result))
+                {
+                    // Verifica si el número es mayor que 1
+                    if (result < 1)
+                    {
+                        // Si el número es menor o igual a 1, cancela la entrada
+                        e.Handled = true;
+
+                        // Muestra una ventana emergente informando al usuario que solo se permiten valores mayores a 1
+                        MessageBox.Show("Solo se permiten valores mayores a 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
         private void Txt_diputaciones_plurinominales_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1315,6 +1506,18 @@ namespace App_PLE.Vistas
             }
         }
         private void Txt_sesiones_celebradas_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void txt_sesiones_celebradas_p_rec_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verifica si la tecla presionada es un número o una tecla de control
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -1362,20 +1565,46 @@ namespace App_PLE.Vistas
             // Array de controles a validar
             Control[] controlesAValidar;
 
+            string ent_rep = cmb_entidad_federativa.Text;
+
+
             if (chbPE.Checked)
             {
-                controlesAValidar = new Control[]  {
-                    txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
-                    Txt_distritos_uninominales,Txt_diputaciones_plurinominales,
-                    txt_periodos_extraordinarios_celebrados
-                };
+                if (ent_rep == "Baja California" || ent_rep == "Jalisco")
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales,
+                        txt_periodos_extraordinarios_celebrados
+                    };
+                }
+                else
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales,
+                        txt_periodos_extraordinarios_celebrados
+                    };
+                }
+                
             }
             else
             {
-                controlesAValidar = new Control[]  {
-                    txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
-                    Txt_distritos_uninominales,Txt_diputaciones_plurinominales
-                };
+                if (ent_rep == "Baja California" || ent_rep == "Jalisco")
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales
+                    };
+                }
+                else
+                {
+                    controlesAValidar = new Control[]  {
+                        txt_nombre_legislatura, Txt_sesiones_celebradas_po, txt_sesiones_celebradas_p_rec,
+                        Txt_distritos_uninominales,Txt_diputaciones_plurinominales
+                    };
+                }
+                
             }
 
             bool camposValidos = true;
@@ -1453,11 +1682,48 @@ namespace App_PLE.Vistas
 
             }
         }
+
+        // cmb_periodo_extraordinario_reportado
         private void cmb_periodo_extraordinario_reportado_SelectedIndexChanged(object sender, EventArgs e)
         {
             // se ajustan las fechas
             dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
         }
+        private void cmb_periodo_extraordinario_reportado_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (var item in comboBox.Items)
+                {
+                    string cleanedItem = item.ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                }
+
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show("Por favor, seleccione una opción válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         // fecha inicio funciones legislatura
         private DateTime f1;
         private void dtp_inicio_funciones_legislatura_DropDown(object sender, EventArgs e)
@@ -1475,7 +1741,12 @@ namespace App_PLE.Vistas
             }
             
         }
-        
+        private void dtp_inicio_funciones_legislatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+
         // fecha termino_funciones_legislatura
         private DateTime f2;
         private void dtp_termino_funciones_legislatura_DropDown(object sender, EventArgs e)
@@ -1492,6 +1763,11 @@ namespace App_PLE.Vistas
             {
                 dtp_termino_funciones_legislatura.Value = f2;
             }
+        }
+        private void dtp_termino_funciones_legislatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_informacion_reportada
@@ -1510,6 +1786,11 @@ namespace App_PLE.Vistas
                 dtp_fecha_inicio_informacion_reportada.Value = f3;
             }
         }
+        private void dtp_fecha_inicio_informacion_reportada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
 
         // fecha fecha_termino_informacion_reportada
         private DateTime f4;
@@ -1526,6 +1807,11 @@ namespace App_PLE.Vistas
             {
                 dtp_fecha_termino_informacion_reportada.Value = f4;
             }
+        }
+        private void dtp_fecha_termino_informacion_reportada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_po
@@ -1544,6 +1830,11 @@ namespace App_PLE.Vistas
                 dtp_fecha_inicio_po.Value = f5;
             }
         }
+        private void dtp_fecha_inicio_po_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
 
         // fecha fecha_termino_po
         private DateTime f6;
@@ -1560,6 +1851,11 @@ namespace App_PLE.Vistas
             {
                 dtp_fecha_termino_po.Value = f6;
             }
+        }
+        private void dtp_fecha_termino_po_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_p_rec
@@ -1578,6 +1874,11 @@ namespace App_PLE.Vistas
                 dtp_fecha_inicio_p_rec.Value = f7;
             }
         }
+        private void dtp_fecha_inicio_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
 
         // fecha fecha_termino_p_rec
         private DateTime f8;
@@ -1594,6 +1895,11 @@ namespace App_PLE.Vistas
             {
                 dtp_fecha_termino_p_rec.Value = f8;
             }
+        }
+        private void dtp_fecha_termino_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_inicio_pe
@@ -1620,11 +1926,16 @@ namespace App_PLE.Vistas
                 }
                 else
                 {
-                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo de receso reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value;
                     dtp_fecha_inicio_pe.Focus();
                 }
             }
+        }
+        private void dtp_fecha_inicio_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         // fecha fecha_termino_pe
@@ -1651,11 +1962,16 @@ namespace App_PLE.Vistas
                 }
                 else
                 {
-                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La fecha debe estar contenida en el rango del periodo de receso reportado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
                     dtp_fecha_termino_pe.Focus();
                 }
             }
+        }
+        private void dtp_fecha_termino_pe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
         }
 
         private void txt_periodo_reportado_rec_TextChanged(object sender, EventArgs e)
@@ -1992,6 +2308,8 @@ namespace App_PLE.Vistas
             txt_ID_comision_legislativa.Text = resultadoConcatenado;
 
         }
+
+        // cmb_tipo_comision_legislativa
         private void cmb_tipo_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -2038,6 +2356,41 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void cmb_tipo_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void btnAgregarCL_Click(object sender, EventArgs e)
         {
             // se obtienen los valores
@@ -2084,6 +2437,8 @@ namespace App_PLE.Vistas
             }
             return false;
         }
+
+        // cmb_tema_comision_legislativa
         private void cmb_tema_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -2101,6 +2456,41 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void cmb_tema_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void Txt_otro_tipo_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -2130,6 +2520,8 @@ namespace App_PLE.Vistas
             }
 
         }
+
+        // txt_cant_integrantes_comision_legislativa
         private void txt_cant_integrantes_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
@@ -2140,6 +2532,23 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void txt_cant_integrantes_comision_legislativa_Leave(object sender, EventArgs e)
+        {
+            int valor;
+            int.TryParse(txt_cant_integrantes_comision_legislativa.Text, out valor);
+            // Verificar si el valor está dentro del rango permitido
+            if (valor < -2)
+            {
+                MessageBox.Show("Registrar el valor correcto, ver cuadro de ayuda.");
+                txt_cant_integrantes_comision_legislativa.Text = ""; // Limpiar el TextBox si está fuera del rango
+            }
+            if (valor == -1 || valor == -2)
+            {
+                MessageBox.Show("Justificar la elección en el apartado de observaciones");
+            }
+        }
+
+        // cmb_cond_celebracion_reuniones_comision_legislativa
         private void cmb_cond_celebracion_reuniones_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_cant_reuniones_celebradas_comision_legislativa.Clear();
@@ -2176,6 +2585,42 @@ namespace App_PLE.Vistas
                 cmb_cond_transmision_reuniones_celebradas_comision_legislativa.Text = "";
             }
         }
+        private void cmb_cond_celebracion_reuniones_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cmb_cond_transmision_reuniones_celebradas_comision_legislativa
         private void cmb_cond_transmision_reuniones_celebradas_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -2191,6 +2636,41 @@ namespace App_PLE.Vistas
                 txt_cant_reuniones_celebradas_transmitidas_comision_legislativa.Text = "";
             }
         }
+        private void cmb_cond_transmision_reuniones_celebradas_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void txt_observaciones_cl_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -2216,14 +2696,7 @@ namespace App_PLE.Vistas
                 txt_otro_tema_comision_legislativa_especifique.Focus();
             }
         }
-        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text))
-            {
-                MessageBox.Show("Debe especificar el motivo por el cual la comisión legislativa no se reunió durante el periodo reportado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
-            }
-        }
+        
         private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_TextChanged(object sender, EventArgs e)
         {
             int valor;
@@ -2260,6 +2733,8 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_nombre_comision_legislativa.SelectionStart = txt_nombre_comision_legislativa.Text.Length;
         }
+
+        // txt_no_cond_celebracion_reuniones_comision_legislativa_especifique
         private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
@@ -2268,34 +2743,19 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.SelectionStart = txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text.Length;
         }
+        private void txt_no_cond_celebracion_reuniones_comision_legislativa_especifique_Leave(object sender, EventArgs e)
+        {
+            /*
+            if (string.IsNullOrWhiteSpace(txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Text))
+            {
+                MessageBox.Show("Debe especificar el motivo por el cual la comisión legislativa no se reunió durante el periodo reportado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_no_cond_celebracion_reuniones_comision_legislativa_especifique.Focus();
+            }
+            */
+        }
+
+        // txt_cant_reuniones_celebradas_comision_legislativa
         private void txt_cant_reuniones_celebradas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
-        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -2319,9 +2779,39 @@ namespace App_PLE.Vistas
             if (valor == -1 || valor == -2)
             {
                 MessageBox.Show("Justificar la elección en el apartado de observaciones");
-                txt_observaciones_cl.Focus();
             }
         }
+
+        // txt_cant_reuniones_celebradas_transmitidas_comision_legislativa
+        private void txt_cant_reuniones_celebradas_transmitidas_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        private void txt_cant_iniciativas_turnadas_a_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+
+        private void txt_cant_dictamenes_emitidos_por_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '-') || (e.KeyChar == '-' && ((System.Windows.Forms.TextBox)sender).Text.Length != 0))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+        
         private void Txt_consecutivo_comision_legislativa_MouseHover(object sender, EventArgs e)
         {
             // Mostrar mensaje al pasar el ratón sobre el TextBox
@@ -2605,6 +3095,8 @@ namespace App_PLE.Vistas
             DGV_REGISTROS_CL();
         }
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
+
+        // sexo_persona_legisladora
         private void cmb_Sexo_Persona_Legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2646,6 +3138,41 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_sexo_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void cmb_Estatus_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2687,6 +3214,8 @@ namespace App_PLE.Vistas
 
             }
         }
+
+        // tipo_licencia_persona_legisladora
         private void cmb_Tipo_licencia_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2728,6 +3257,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cbm_tipo_licencia_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // causa_fallecimiento_persona_legisladora
         private void cmb_Causa_fallecimiento_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2769,6 +3334,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cbm_causa_fallecimiento_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // caracter_cargo_persona_legisladora
         private void cmb_Caracter_cargo_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2810,6 +3411,41 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_caracter_cargo_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void cmb_Escolaridad_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2908,6 +3544,8 @@ namespace App_PLE.Vistas
                 }
             }
         }
+
+        // nombre_persona_legisladora_propietaria
         private void cmb_nombre_persona_legisladora_propietaria_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -2938,6 +3576,47 @@ namespace App_PLE.Vistas
             txt_ID_persona_legisladora_propietaria.Text = id;
 
         }
+        private void cmb_nombre_persona_legisladora_propietaria_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Permitir campo vacío
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    return;
+                }
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // estatus_escolaridad_persona_legisladora
         private void cmb_Estatus_escolaridad_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -2979,6 +3658,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_estatus_escolaridad_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // carrera_licenciatura_persona_legisladora
         private void cmb_Carrera_licenciatura_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3020,6 +3735,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_carrera_licenciatura_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // carrera_maestria_persona_legisladora_PL
         private void cmb_Carrera_maestria_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3061,6 +3812,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_carrera_maestria_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // carrera_doctorado_persona_legisladora_PL
         private void cmb_Carrera_doctorado_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3102,6 +3889,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_carrera_doctorado_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // lengua_ind_persona_legisladora
         private void cmb_Cond_lengua_ind_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3184,6 +4007,49 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_lengua_ind_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir campo vacío
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_discapacidad_persona_legisladora
         private void cmb_Cond_discapacidad_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3225,6 +4091,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_discapacidad_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // tipo_discapacidad_persona_legisladora
         private void cmb_Tipo_discapacidad_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3266,6 +4168,47 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_discapacidad_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Permitir campo vacío
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    return;
+                }
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_pueblo_ind_persona_legisladora_PL
         private void cmb_Cond_pueblo_ind_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3307,6 +4250,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_pueblo_ind_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // pueblo_ind_persona_legisladora_PL
         private void cmb_Pueblo_ind_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3348,6 +4327,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_pueblo_ind_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // Cond_pob_diversidad_sexual_persona_legisladora
         private void cmb_Cond_pob_diversidad_sexual_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3389,6 +4404,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // Cond_pob_afromexicana_persona_legisladora
         private void cmb_Cond_pob_afromexicana_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3430,6 +4481,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_pob_afromexicana_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // empleo_anterior_persona_legisladora
         private void cmb_Empleo_anterior_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3471,6 +4558,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_empleo_anterior_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // antigüedad_servicio_publico_persona_legisladora
         private void cmb_Antigüedad_servicio_publico_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3512,6 +4635,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_antigüedad_servicio_publico_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // antigüedad_persona_legisladora
         private void cmb_Antigüedad_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3553,6 +4712,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_antigüedad_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // forma_eleccion_persona_legisladora
         private void cmb_Forma_eleccion_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3594,6 +4789,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_forma_eleccion_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // tipo_candidatura_persona_legisladora
         private void cmb_Tipo_candidatura_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3635,6 +4866,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_candidatura_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // tipo_adscripcion_inicial_persona_legisladora
         private void cmb_Tipo_adscripcion_inicial_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3676,6 +4943,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_adscripcion_inicial_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // tipo_adscripcion_final_persona_legisladora
         private void cmb_Tipo_adscripcion_final_persona_legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3717,6 +5020,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_adscripcion_final_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_presentacion_declaracion_situacion_patrimonial
         private void cmb_Cond_presentacion_declaracion_situacion_patrimonial()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3758,6 +5097,43 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_presentacion_declaracion_situacion_patrimonial_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
+        // cond_presentacion_declaracion_intereses
         private void cmb_Cond_presentacion_declaracion_intereses()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3799,6 +5175,43 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_presentacion_declaracion_intereses_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
+        // Cond_presentacion_declaracion_fiscal
         private void cmb_Cond_presentacion_declaracion_fiscal()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3840,6 +5253,78 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_presentacion_declaracion_fiscal_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // distrito_electoral_mayoria_relativa
+        private void cmb_distrito_electoral_mayoria_relativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_casa_atencion_ciudadana
         private void cmb_Cond_casa_atencion_ciudadana()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3881,6 +5366,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_casa_atencion_ciudadana_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_casa_atencion_ciudadana_movil
         private void cmb_Cond_casa_atencion_ciudadana_movil()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3922,6 +5443,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_casa_atencion_ciudadana_movil_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_integrante_comision_permanente
         private void cmb_Cond_integrante_comision_permanente()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3963,6 +5520,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_integrante_comision_permanente_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cargo_comision_permanente
         private void cmb_Cargo_comision_permanente()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4004,6 +5597,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cargo_comision_permanente_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // nombre_comision_legislativa
         private void cmb_Nombre_comision_legislativa()
         {
             string cadena = "Data Source=DB_PLE.db;Version=3;";
@@ -4049,6 +5678,42 @@ namespace App_PLE.Vistas
                 }
             }
         }
+        private void cmb_nombre_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cargo_comision_legislativa
         private void cmb_Cargo_comision_legislativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4090,6 +5755,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cargo_comision_legislativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_integrante_jucopo
         private void cmb_Cond_integrante_jucopo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4131,6 +5832,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_integrante_jucopo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // Cargo_jucopo
         private void cmb_Cargo_jucopo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4172,6 +5909,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cargo_jucopo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cond_integrante_mesa_directiva
         private void cmb_Cond_integrante_mesa_directiva()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4213,6 +5986,42 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_integrante_mesa_directiva_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // Cargo_mesa_directiva
         private void cmb_Cargo_mesa_directiva_PL()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4254,6 +6063,41 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cargo_mesa_directiva_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void txt_nombre_1_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             cmb_Nombre_comision_legislativa();
@@ -4478,6 +6322,8 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_otro_estatus_persona_legisladora_especifique.SelectionStart = txt_otro_estatus_persona_legisladora_especifique.Text.Length;
         }
+
+        // estatus_persona_legisladora
         private void cmb_estatus_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -4516,6 +6362,41 @@ namespace App_PLE.Vistas
                 cbm_tipo_licencia_persona_legisladora.SelectedIndex = -1;
             }
         }
+        private void cmb_estatus_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        
         private void txt_otro_estatus_persona_legisladora_especifique_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_otro_estatus_persona_legisladora_especifique.Text))
@@ -4541,6 +6422,8 @@ namespace App_PLE.Vistas
                 cmb_nombre_persona_legisladora_propietaria.SelectedIndex = -1; ;
             }
         }
+
+        // escolaridad_persona_legisladora_PL
         private void cmb_escolaridad_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -4683,6 +6566,41 @@ namespace App_PLE.Vistas
 
             
         }
+        private void cmb_escolaridad_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void btnAgregarNivelEscPL_Click(object sender, EventArgs e)
         {
             // se obtienen los valores
@@ -4722,6 +6640,8 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Seleccionar registro a eliminar");
             }
         }
+
+        // cond_lengua_ind_persona_legisladora_PL
         private void cmb_cond_lengua_ind_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -4743,6 +6663,42 @@ namespace App_PLE.Vistas
                 cmb_lengua_ind_persona_legisladora.Text = "";
             }
         }
+        private void cmb_cond_lengua_ind_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
         private void btnAgregarLenguaPL_Click(object sender, EventArgs e)
         {
             // se obtienen los valores
@@ -5419,6 +7375,80 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.SelectionStart = txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text.Length;
         }
+
+        // partido_politico_candidatura_coalicion
+        private void cmb_partido_politico_candidatura_coalicion_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // partido_politico_candidatura_partido_unico
+        private void cmb_partido_politico_candidatura_partido_unico_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // grupo_parlamentario_adscipcion_inicial_persona_legisladora
         private void cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5437,6 +7467,41 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_grupo_parlamentario_adscipcion_inicial_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text))
@@ -5519,6 +7584,8 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
             txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.SelectionStart = txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text.Length;
         }
+
+        // grupo_parlamentario_adscipcion_final_persona_legisladora
         private void cmb_grupo_parlamentario_adscipcion_final_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5537,6 +7604,41 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_grupo_parlamentario_adscipcion_final_persona_legisladora_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         private void txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text))
@@ -7795,6 +9897,140 @@ namespace App_PLE.Vistas
         }
 
         
+
+        
+
+        
+
+        
+
+        
+
+        
+
+       
+
+        
+
+        
+
+        
+
+       
+
+       
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+       
+
+        
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
