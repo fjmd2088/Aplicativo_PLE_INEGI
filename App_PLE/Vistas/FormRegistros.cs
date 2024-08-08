@@ -4685,31 +4685,22 @@ namespace App_PLE.Vistas
         }
         private void btnAgregarNivelEscPL_Click(object sender, EventArgs e)
         {
-            // se obtienen los valores
-            string lic_pl = cmb_carrera_licenciatura_persona_legisladora_PL.Text.Trim();
-            string mae_pl = cmb_carrera_maestria_persona_legisladora_PL.Text.Trim();
-            string doc_pl = cmb_carrera_doctorado_persona_legisladora_PL.Text.Trim();
+        // se obtienen los valores
+        string lic_pl = cmb_carrera_licenciatura_persona_legisladora_PL.Text.Trim();
+        string mae_pl = cmb_carrera_maestria_persona_legisladora_PL.Text.Trim();
+        string doc_pl = cmb_carrera_doctorado_persona_legisladora_PL.Text.Trim();
 
-            //if (string.IsNullOrWhiteSpace(cmb_carrera_licenciatura_persona_legisladora_PL.Text))
-            //{
-            //    MessageBox.Show("Revisar datos vacios");
-            //}
-            //else
-            //{
-                
-                    // Agregar una nueva fila al DataGridView
-                    dgv_nivel_escolaridad_PL.Rows.Add(lic_pl, mae_pl, doc_pl);
+                // Agregar una nueva fila al DataGridView
+                dgv_nivel_escolaridad_PL.Rows.Add(lic_pl, mae_pl, doc_pl);
 
-                    cmb_carrera_licenciatura_persona_legisladora_PL.Text = "";
-                    //cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
+                cmb_carrera_licenciatura_persona_legisladora_PL.Text = "";
+                //cmb_carrera_licenciatura_persona_legisladora_PL.Enabled = false; cmb_carrera_licenciatura_persona_legisladora_PL.BackColor = Color.LightGray;
 
-                cmb_carrera_maestria_persona_legisladora_PL.Text = "";
-                //cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
+            cmb_carrera_maestria_persona_legisladora_PL.Text = "";
+            //cmb_carrera_maestria_persona_legisladora_PL.Enabled = false; cmb_carrera_maestria_persona_legisladora_PL.BackColor = Color.LightGray;
 
-                cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
-                //cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
-
-            //}
+            cmb_carrera_doctorado_persona_legisladora_PL.Text = "";
+            //cmb_carrera_doctorado_persona_legisladora_PL.Enabled = false; cmb_carrera_doctorado_persona_legisladora_PL.BackColor = Color.LightGray;
         }
         private void btnEliminarNivelEscPL_Click(object sender, EventArgs e)
         {
