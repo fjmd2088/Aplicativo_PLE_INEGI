@@ -6822,6 +6822,8 @@ namespace App_PLE.Vistas
             txt_ID_persona_legisladora.Text = uniqueID;
 
         }
+  
+        // dtp_fecha_nacimiento_persona_legisladora
         private void dtp_fecha_nacimiento_persona_legisladora_ValueChanged(object sender, EventArgs e)
         {
             // CONSTRUCCION ID
@@ -6841,6 +6843,13 @@ namespace App_PLE.Vistas
             txt_ID_persona_legisladora.Text = uniqueID;
 
         }
+        private void dtp_fecha_nacimiento_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+
+
         private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(cmb_cond_pob_diversidad_sexual_persona_legisladora.Text))
