@@ -923,6 +923,13 @@ namespace App_PLE.Vistas
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
 
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
 
@@ -963,6 +970,13 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
 
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
@@ -1160,6 +1174,13 @@ namespace App_PLE.Vistas
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
 
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
 
@@ -1328,6 +1349,13 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
 
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
@@ -1697,6 +1725,13 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
 
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
@@ -2363,6 +2398,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -2463,6 +2506,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -2592,6 +2643,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -2643,6 +2702,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3145,6 +3212,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3264,6 +3339,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3341,6 +3424,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3418,6 +3509,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3583,6 +3682,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Permitir campo vacío
                 if (string.IsNullOrEmpty(cleanedText))
                 {
@@ -3665,6 +3772,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3742,6 +3857,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3819,6 +3942,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -3896,6 +4027,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4015,6 +4154,13 @@ namespace App_PLE.Vistas
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
 
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Permitir campo vacío
                 if (string.IsNullOrEmpty(cleanedText))
                 {
@@ -4098,6 +4244,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4175,6 +4329,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Permitir campo vacío
                 if (string.IsNullOrEmpty(cleanedText))
                 {
@@ -4257,6 +4419,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4334,6 +4504,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4411,6 +4589,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4488,6 +4674,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4565,6 +4759,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4642,6 +4844,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4719,6 +4929,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4796,6 +5014,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4873,6 +5099,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -4950,6 +5184,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5027,6 +5269,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5104,6 +5354,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5182,6 +5440,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5260,6 +5526,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5296,6 +5570,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5373,6 +5655,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5450,6 +5740,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5527,6 +5825,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5604,6 +5910,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5685,6 +5999,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5762,6 +6084,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5839,6 +6169,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5916,6 +6254,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -5993,6 +6339,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -6070,6 +6424,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -6369,6 +6731,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+                
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -6574,6 +6944,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -6662,6 +7040,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -7385,6 +7771,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -7421,6 +7815,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -7475,6 +7877,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
@@ -7612,6 +8022,14 @@ namespace App_PLE.Vistas
             {
                 // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
                 string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
                 // Verificar si el texto del ComboBox coincide con alguna de las opciones
                 bool isValid = false;
                 foreach (DataRowView item in comboBox.Items)
