@@ -2048,7 +2048,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(246, 9631);
+            this.btnGuardarCL.Location = new System.Drawing.Point(237, 9716);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -2164,7 +2164,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(156, 11692);
+            this.button24.Location = new System.Drawing.Point(147, 11777);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
@@ -13109,6 +13109,7 @@
             this.Name = "FormRegistros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistros";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRegistros_FormClosing);
             this.Load += new System.EventHandler(this.FormRegistros_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDG.ResumeLayout(false);

@@ -31,8 +31,26 @@ namespace App_PLE.Vistas
         {
             InitializeComponent();
             InitializeMap();
+
+            ConexionBasedatosSQLite(); // se hace la conexion a la base de datos de sqlite
         }
 
+        private void FormRegistros_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Cierra la conexión cuando se cierra el formulario
+            if (_connection != null)
+            {
+                try
+                {
+                    _connection.Close();
+                    MessageBox.Show("Conexión cerrada exitosamente.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cerrar la conexión: " + ex.Message);
+                }
+            }
+        }
         //-------------------------------------------------- CARGA INICIAL DE FORMULARIO ----------------------------------------------------
 
         private void FormRegistros_Load(object sender, EventArgs e)
@@ -1975,6 +1993,8 @@ namespace App_PLE.Vistas
 
         // fecha fecha_termino_pe
         private DateTime f10;
+        
+
         private void dtp_fecha_termino_pe_DropDown(object sender, EventArgs e)
         {
             f10 = dtp_fecha_termino_pe.Value;
@@ -3164,6 +3184,26 @@ namespace App_PLE.Vistas
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
 
         // sexo_persona_legisladora
+        private SQLiteConnection _connection; // variable para la conexion de datos
+        private void ConexionBasedatosSQLite()
+        {
+            // Crea la cadena de conexión
+            string connectionString = "Data Source=DB_PLE.db;Version=3;";
+
+            // Inicializa la conexión
+            _connection = new SQLiteConnection(connectionString);
+
+            try
+            {
+                // Abre la conexión
+                _connection.Open();
+                MessageBox.Show("Conexión abierta exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir la conexión: " + ex.Message);
+            }
+        }
         private void cmb_Sexo_Persona_Legisladora()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -10315,6 +10355,8 @@ namespace App_PLE.Vistas
         {
 
         }
+
+        
 
 
 
