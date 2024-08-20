@@ -1,4 +1,27 @@
-*.vsidx
-*.lock
+# Build results
 bin/
 obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet Packages
+packages/
+
+# Publish results
+*.Publish/
+installer/
+
+# Backup & temporary files
+*.tmp
+*.bak
+*.old
+
+# Visual Studio specific
+.vscode/
+*.pdb
+*.cache
+*.log
