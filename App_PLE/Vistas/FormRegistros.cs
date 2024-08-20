@@ -274,46 +274,9 @@ namespace App_PLE.Vistas
             }
         }
         //-------------------------------------------------- DATOS GENERALES ----------------------------------------------------
-        private void cmb_Entidad()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+        
+        
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select nom_ent from TC_AGEEM group by nom_ent";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_entidad_federativa.DataSource = dataTable;
-                    cmb_entidad_federativa.DisplayMember = "nom_ent";
-
-                    cmb_entidad_federativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_entidad_federativa.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_entidad_federativa.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_entidad_federativa.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-            }
-        }
         private void btnAgregarPE_Click_1(object sender, EventArgs e)
         {
             // se obtienen los valores
@@ -353,19 +316,13 @@ namespace App_PLE.Vistas
             // Obtener el ID desde el TextBox
             string id = txt_id_legislatura.Text.Trim(); // Asegúrate de reemplazar 'txt_id_legislatura' con el nombre real de tu TextBox
 
-            // Cadena de conexión a la base de datos SQLite
-            string cadena = "Data Source=DB_PLE.db;Version=3;"; // Asegúrate de que esta cadena de conexión es correcta
-
-            using (SQLiteConnection connection = new SQLiteConnection(cadena))
-            {
                 try
                 {
-                    connection.Open();
-
+                    
                     // Consulta SQL para verificar la existencia del ID
                     string query = "SELECT COUNT(*) FROM TR_DATOS_GENERALES WHERE id_legislatura = @id"; // Reemplaza 'TR_DATOS_GENERALES' con el nombre de tu tabla
 
-                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    using (SQLiteCommand command = new SQLiteCommand(query, _connection))
                     {
                         // Agregar el parámetro para la consulta SQL
                         command.Parameters.AddWithValue("@id", id);
@@ -388,7 +345,6 @@ namespace App_PLE.Vistas
                     MessageBox.Show($"Error al conectar a la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return 0; // Retorna 0 en caso de error para indicar fallo en la verificación
                 }
-            }
         }
 
         private void BtnGuardarDG_Click_1(object sender, EventArgs e)
@@ -3181,9 +3137,10 @@ namespace App_PLE.Vistas
         {
             DGV_REGISTROS_CL();
         }
+
         //-------------------------------------------------- PERSONAS LEGISLADORAS ----------------------------------------------------
 
-        // sexo_persona_legisladora
+
         private SQLiteConnection _connection; // variable para la conexion de datos
         private void ConexionBasedatosSQLite()
         {
@@ -3204,23 +3161,18 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Error al abrir la conexión: " + ex.Message);
             }
         }
+
+        // sexo_persona_legisladora
         private void cmb_Sexo_Persona_Legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SEXO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -3238,12 +3190,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox cmb_Sexo_Persona_Legisladora: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
 
-            }
         }
         private void cmb_sexo_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -3292,19 +3239,16 @@ namespace App_PLE.Vistas
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            //{
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_ESTATUS";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -3322,12 +3266,6 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
         }
 
         // tipo_licencia_persona_legisladora

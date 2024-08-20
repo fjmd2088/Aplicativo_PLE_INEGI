@@ -167,6 +167,9 @@
     <Compile Include="Vistas\FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormRegistro.DatosGenerales.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\FormRegistros.cs">
       <SubType>Form</SubType>
     </Compile>
