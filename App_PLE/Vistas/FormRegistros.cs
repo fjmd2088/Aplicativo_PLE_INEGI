@@ -277,39 +277,6 @@ namespace App_PLE.Vistas
         
         
 
-        private void btnAgregarPE_Click_1(object sender, EventArgs e)
-        {
-            // se obtienen los valores
-            string periodo_reportado_pe = cmb_periodo_extraordinario_reportado.Text.Trim();
-            string fecha_inicio_pe = dtp_fecha_inicio_pe.Text.Trim();
-            string fecha_termino_pe = dtp_fecha_termino_pe.Text.Trim();
-            string sesiones_celebradas_pe = Txt_sesiones_celebradas_pe.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(Txt_sesiones_celebradas_pe.Text) ||
-                string.IsNullOrWhiteSpace(cmb_periodo_extraordinario_reportado.Text))
-            {
-                MessageBox.Show("Revisar datos vacios");
-            }
-            else
-            {
-                bool respuesta = IsDuplicateRecord(cmb_periodo_extraordinario_reportado.Text.ToString());
-
-                if (respuesta == true)
-                {
-                    MessageBox.Show("Dato duplicado");
-                }
-                else
-                {
-                    // Agregar una nueva fila al DataGridView
-                    dgvPE.Rows.Add(periodo_reportado_pe, fecha_inicio_pe, fecha_termino_pe, sesiones_celebradas_pe);
-
-                    Txt_sesiones_celebradas_pe.Clear();
-                    dtp_fecha_inicio_pe.Value = dtp_fecha_inicio_p_rec.Value; dtp_fecha_termino_pe.Value = dtp_fecha_termino_p_rec.Value;
-                }
-
-
-            }
-        }
 
         private long VerificarID()
         {
@@ -2074,47 +2041,7 @@ namespace App_PLE.Vistas
         }
         //-------------------------------------------------- COMISIONES LEGISLATIVAS ----------------------------------------------------
 
-        private void cmb_Tipo_CL()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_TIPO_COMISION";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_tipo_comision_legislativa.DataSource = dataTable;
-                    cmb_tipo_comision_legislativa.DisplayMember = "descripcion";
-
-                    cmb_tipo_comision_legislativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_tipo_comision_legislativa.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_tipo_comision_legislativa.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_tipo_comision_legislativa.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox cmb_Tipo_CL: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
+       
         private void cmb_Tema_CL()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
