@@ -1,2 +1,4 @@
 *.vsidx
 *.lock
+bin/
+obj/
