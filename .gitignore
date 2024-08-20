@@ -26,3 +26,5 @@ installer/
 *.pdb
 *.cache
 *.log
+*.vsidx
+*.lock
