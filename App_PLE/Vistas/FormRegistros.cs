@@ -10216,12 +10216,12 @@ namespace App_PLE.Vistas
 
         }
 
-        private void txt_ID_persona_legisladora_propietaria_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
 
-        
+
+
+
 
 
 
