@@ -303,6 +303,12 @@ namespace App_PLE.Vistas
 
         }
 
+        
+
+
+
+
+
         /*
         // Clase para mostrar una ventana emergente de entrada de texto
         public static class Prompt

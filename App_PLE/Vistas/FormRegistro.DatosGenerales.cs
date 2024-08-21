@@ -13,6 +13,127 @@ namespace App_PLE.Vistas
 {
     public partial class FormRegistros : Form
     {
+
+    
+        // PERIODO ORDINARIO----------------------------------------------------------------------------------------------
+
+        private DateTime f5;
+        private void dtp_fecha_inicio_po_DropDown(object sender, EventArgs e)
+        {
+            f5 = dtp_fecha_inicio_po.Value;
+        }
+        private void dtp_fecha_inicio_po_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_inicio_po.Value = f5;
+            }
+        }
+        private void dtp_fecha_inicio_po_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+   
+        private DateTime f6;
+        private void dtp_fecha_termino_po_DropDown(object sender, EventArgs e)
+        {
+            f6 = dtp_fecha_termino_po.Value;
+        }
+        private void dtp_fecha_termino_po_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_termino_po.Value = f6;
+            }
+        }
+        private void dtp_fecha_termino_po_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+
+        private void Txt_sesiones_celebradas_po_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // PERIODO RECESO----------------------------------------------------------------------------------------------
+
+        private DateTime f7;
+        private void dtp_fecha_inicio_p_rec_DropDown(object sender, EventArgs e)
+        {
+            f7 = dtp_fecha_inicio_p_rec.Value;
+        }
+        private void dtp_fecha_inicio_p_rec_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_inicio_p_rec.Value = f7;
+            }
+        }
+        private void dtp_fecha_inicio_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+
+        private DateTime f8;
+        private void dtp_fecha_termino_p_rec_DropDown(object sender, EventArgs e)
+        {
+            f8 = dtp_fecha_termino_p_rec.Value;
+        }
+        private void dtp_fecha_termino_p_rec_CloseUp(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.No)
+            {
+                dtp_fecha_termino_p_rec.Value = f8;
+            }
+        }
+        private void dtp_fecha_termino_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cancelar cualquier entrada manual
+            e.Handled = true;
+        }
+
+        private void txt_sesiones_celebradas_p_rec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número o una tecla de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+
+                // Muestra una ventana emergente informando al usuario que solo se permiten números
+                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+
+
         private void cmb_Entidad()
         {
             try
@@ -1258,18 +1379,7 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void Txt_sesiones_celebradas_po_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
         private void Txt_sesiones_celebradas_pe_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verifica si la tecla presionada es un número o una tecla de control
@@ -1282,18 +1392,7 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void txt_sesiones_celebradas_p_rec_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla presionada es un número o una tecla de control
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                // Si no es un número ni una tecla de control, cancela la entrada
-                e.Handled = true;
-
-                // Muestra una ventana emergente informando al usuario que solo se permiten números
-                MessageBox.Show("Solo se permiten valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
         private void txt_periodos_extraordinarios_celebrados_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verifica si la tecla presionada es un número o una tecla de control
@@ -1586,93 +1685,9 @@ namespace App_PLE.Vistas
             e.Handled = true;
         }
 
-        // fecha fecha_inicio_po
-        private DateTime f5;
-        private void dtp_fecha_inicio_po_DropDown(object sender, EventArgs e)
-        {
-            f5 = dtp_fecha_inicio_po.Value;
-        }
-        private void dtp_fecha_inicio_po_CloseUp(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        
 
-            if (respuesta == DialogResult.No)
-            {
-                dtp_fecha_inicio_po.Value = f5;
-            }
-        }
-        private void dtp_fecha_inicio_po_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Cancelar cualquier entrada manual
-            e.Handled = true;
-        }
-
-        // fecha fecha_termino_po
-        private DateTime f6;
-        private void dtp_fecha_termino_po_DropDown(object sender, EventArgs e)
-        {
-            f6 = dtp_fecha_termino_po.Value;
-        }
-        private void dtp_fecha_termino_po_CloseUp(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.No)
-            {
-                dtp_fecha_termino_po.Value = f6;
-            }
-        }
-        private void dtp_fecha_termino_po_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Cancelar cualquier entrada manual
-            e.Handled = true;
-        }
-
-        // fecha fecha_inicio_p_rec
-        private DateTime f7;
-        private void dtp_fecha_inicio_p_rec_DropDown(object sender, EventArgs e)
-        {
-            f7 = dtp_fecha_inicio_p_rec.Value;
-        }
-        private void dtp_fecha_inicio_p_rec_CloseUp(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.No)
-            {
-                dtp_fecha_inicio_p_rec.Value = f7;
-            }
-        }
-        private void dtp_fecha_inicio_p_rec_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Cancelar cualquier entrada manual
-            e.Handled = true;
-        }
-
-        // fecha fecha_termino_p_rec
-        private DateTime f8;
-        private void dtp_fecha_termino_p_rec_DropDown(object sender, EventArgs e)
-        {
-            f8 = dtp_fecha_termino_p_rec.Value;
-        }
-        private void dtp_fecha_termino_p_rec_CloseUp(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.No)
-            {
-                dtp_fecha_termino_p_rec.Value = f8;
-            }
-        }
-        private void dtp_fecha_termino_p_rec_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Cancelar cualquier entrada manual
-            e.Handled = true;
-        }
+        
 
         // fecha fecha_inicio_pe
         private DateTime f9;

@@ -1524,6 +1524,7 @@
             this.txt_sesiones_celebradas_p_rec.Name = "txt_sesiones_celebradas_p_rec";
             this.txt_sesiones_celebradas_p_rec.Size = new System.Drawing.Size(73, 21);
             this.txt_sesiones_celebradas_p_rec.TabIndex = 37;
+            this.txt_sesiones_celebradas_p_rec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sesiones_celebradas_p_rec_KeyPress);
             // 
             // label294
             // 
@@ -2048,7 +2049,7 @@
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(237, 9716);
+            this.btnGuardarCL.Location = new System.Drawing.Point(210, 9971);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarCL.TabIndex = 44;
@@ -2164,7 +2165,7 @@
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(147, 11777);
+            this.button24.Location = new System.Drawing.Point(120, 12032);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
             this.button24.TabIndex = 42;
