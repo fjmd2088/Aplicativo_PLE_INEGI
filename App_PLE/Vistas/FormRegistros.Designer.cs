@@ -3167,7 +3167,6 @@
             this.txt_ID_persona_legisladora_propietaria.TabIndex = 35;
             this.txt_ID_persona_legisladora_propietaria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_ID_persona_legisladora_propietaria.UseWaitCursor = true;
-            this.txt_ID_persona_legisladora_propietaria.TextChanged += new System.EventHandler(this.txt_ID_persona_legisladora_propietaria_TextChanged);
             // 
             // cmb_caracter_cargo_persona_legisladora
             // 

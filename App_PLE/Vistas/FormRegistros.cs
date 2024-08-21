@@ -43,11 +43,11 @@ namespace App_PLE.Vistas
                 try
                 {
                     _connection.Close();
-                    MessageBox.Show("Conexión cerrada exitosamente.");
+                    //MessageBox.Show("Conexión cerrada exitosamente.");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al cerrar la conexión: " + ex.Message);
+                    //MessageBox.Show("Error al cerrar la conexión: " + ex.Message);
                 }
             }
         }
@@ -298,11 +298,7 @@ namespace App_PLE.Vistas
             }
 
         }
-        private void txt_ID_persona_legisladora_propietaria_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         
 
 
