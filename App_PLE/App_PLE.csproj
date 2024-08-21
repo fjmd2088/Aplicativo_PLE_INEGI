@@ -182,6 +182,9 @@
     <Compile Include="Vistas\FormRegistros.Iniciativas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\FormRegistros.IniciativasUO.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\FormRegistros.PersonalApoyo.cs">
       <SubType>Form</SubType>
     </Compile>
