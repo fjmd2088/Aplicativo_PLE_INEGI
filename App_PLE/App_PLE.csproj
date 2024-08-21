@@ -179,6 +179,15 @@
     <Compile Include="Vistas\FormRegistros.Designer.cs">
       <DependentUpon>FormRegistros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormRegistros.Iniciativas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormRegistros.PersonalApoyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormRegistros.PersonasLegisladoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\Resumen.cs">
       <SubType>Form</SubType>
     </Compile>
