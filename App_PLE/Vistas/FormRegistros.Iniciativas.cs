@@ -423,5 +423,142 @@ namespace App_PLE.Vistas
             }
         }
 
+        // txt_otro_estatus_iniciativa_especifique
+        private void txt_otro_estatus_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_estatus_iniciativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_estatus_iniciativa_especifique.Text = txt_otro_estatus_iniciativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_estatus_iniciativa_especifique.SelectionStart = txt_otro_estatus_iniciativa_especifique.Text.Length;
+
+        }
+
+        // txt_nombre_iniciativa
+        private void txt_nombre_iniciativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_nombre_iniciativa_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_nombre_iniciativa.Text = txt_nombre_iniciativa.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_nombre_iniciativa.SelectionStart = txt_nombre_iniciativa.Text.Length;
+
+        }
+
+        // txt_otro_tipo_iniciativa_especifique
+        private void txt_otro_tipo_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_iniciativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_iniciativa_especifique.Text = txt_otro_tipo_iniciativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_iniciativa_especifique.SelectionStart = txt_otro_tipo_iniciativa_especifique.Text.Length;
+
+        }
+
+        // txt_otro_tipo_promovente_iniciativa_especifique
+        private void txt_otro_tipo_promovente_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_promovente_iniciativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_promovente_iniciativa_especifique.Text = txt_otro_tipo_promovente_iniciativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_promovente_iniciativa_especifique.SelectionStart = txt_otro_tipo_promovente_iniciativa_especifique.Text.Length;
+
+        }
+
+        // txt_otro_tipo_primer_dictamen_especifique
+        private void txt_otro_tipo_primer_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_primer_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_primer_dictamen_especifique.Text = txt_otro_tipo_primer_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_primer_dictamen_especifique.SelectionStart = txt_otro_tipo_primer_dictamen_especifique.Text.Length;
+
+        }
+
+        // txt_otro_sentido_resolucion_primer_dictamen_especifique
+        private void txt_otro_sentido_resolucion_primer_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_sentido_resolucion_primer_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_sentido_resolucion_primer_dictamen_especifique.Text = txt_otro_sentido_resolucion_primer_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_sentido_resolucion_primer_dictamen_especifique.SelectionStart = txt_otro_sentido_resolucion_primer_dictamen_especifique.Text.Length;
+
+        }
+
+        // txt_otro_tipo_segundo_dictamen_especifique
+        private void txt_otro_tipo_segundo_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_segundo_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_segundo_dictamen_especifique.Text = txt_otro_tipo_segundo_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_segundo_dictamen_especifique.SelectionStart = txt_otro_tipo_segundo_dictamen_especifique.Text.Length;
+
+        }
+
+        // txt_otro_sentido_resolucion_segundo_dictamen_especifique
+        private void txt_otro_sentido_resolucion_segundo_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_sentido_resolucion_segundo_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text = txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_sentido_resolucion_segundo_dictamen_especifique.SelectionStart = txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text.Length;
+
+        }
+
     }
+
 }

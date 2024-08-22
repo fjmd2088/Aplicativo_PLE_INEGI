@@ -2120,7 +2120,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-34, 12219);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-210, 13867);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2245,7 +2245,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-125, 14280);
+            this.button24.Location = new System.Drawing.Point(-301, 15928);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -7695,6 +7695,8 @@ namespace App_PLE.Vistas
             this.txt_otro_sentido_resolucion_primer_dictamen_especifique.Size = new System.Drawing.Size(245, 26);
             this.txt_otro_sentido_resolucion_primer_dictamen_especifique.TabIndex = 87;
             this.txt_otro_sentido_resolucion_primer_dictamen_especifique.UseWaitCursor = true;
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.TextChanged += new System.EventHandler(this.txt_otro_sentido_resolucion_primer_dictamen_especifique_TextChanged);
+            this.txt_otro_sentido_resolucion_primer_dictamen_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_sentido_resolucion_primer_dictamen_especifique_KeyPress);
             // 
             // cmb_sentido_resolucion_primer_dictamen
             // 
@@ -7746,6 +7748,8 @@ namespace App_PLE.Vistas
             this.txt_otro_tipo_primer_dictamen_especifique.Size = new System.Drawing.Size(588, 26);
             this.txt_otro_tipo_primer_dictamen_especifique.TabIndex = 83;
             this.txt_otro_tipo_primer_dictamen_especifique.UseWaitCursor = true;
+            this.txt_otro_tipo_primer_dictamen_especifique.TextChanged += new System.EventHandler(this.txt_otro_tipo_primer_dictamen_especifique_TextChanged);
+            this.txt_otro_tipo_primer_dictamen_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_tipo_primer_dictamen_especifique_KeyPress);
             // 
             // label54
             // 
@@ -7818,6 +7822,8 @@ namespace App_PLE.Vistas
             this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.Size = new System.Drawing.Size(245, 26);
             this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.TabIndex = 95;
             this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.UseWaitCursor = true;
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.TextChanged += new System.EventHandler(this.txt_otro_sentido_resolucion_segundo_dictamen_especifique_TextChanged);
+            this.txt_otro_sentido_resolucion_segundo_dictamen_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_sentido_resolucion_segundo_dictamen_especifique_KeyPress);
             // 
             // cmb_sentido_resolucion_segundo_dictamen
             // 
@@ -7869,6 +7875,8 @@ namespace App_PLE.Vistas
             this.txt_otro_tipo_segundo_dictamen_especifique.Size = new System.Drawing.Size(588, 26);
             this.txt_otro_tipo_segundo_dictamen_especifique.TabIndex = 91;
             this.txt_otro_tipo_segundo_dictamen_especifique.UseWaitCursor = true;
+            this.txt_otro_tipo_segundo_dictamen_especifique.TextChanged += new System.EventHandler(this.txt_otro_tipo_segundo_dictamen_especifique_TextChanged);
+            this.txt_otro_tipo_segundo_dictamen_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_tipo_segundo_dictamen_especifique_KeyPress);
             // 
             // label268
             // 
@@ -8301,6 +8309,8 @@ namespace App_PLE.Vistas
             this.txt_otro_tipo_iniciativa_especifique.Size = new System.Drawing.Size(245, 26);
             this.txt_otro_tipo_iniciativa_especifique.TabIndex = 57;
             this.txt_otro_tipo_iniciativa_especifique.UseWaitCursor = true;
+            this.txt_otro_tipo_iniciativa_especifique.TextChanged += new System.EventHandler(this.txt_otro_tipo_iniciativa_especifique_TextChanged);
+            this.txt_otro_tipo_iniciativa_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_tipo_iniciativa_especifique_KeyPress);
             // 
             // label272
             // 
@@ -8451,6 +8461,8 @@ namespace App_PLE.Vistas
             this.txt_otro_tipo_promovente_iniciativa_especifique.TabIndex = 60;
             this.txt_otro_tipo_promovente_iniciativa_especifique.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_otro_tipo_promovente_iniciativa_especifique.UseWaitCursor = true;
+            this.txt_otro_tipo_promovente_iniciativa_especifique.TextChanged += new System.EventHandler(this.txt_otro_tipo_promovente_iniciativa_especifique_TextChanged);
+            this.txt_otro_tipo_promovente_iniciativa_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_tipo_promovente_iniciativa_especifique_KeyPress);
             // 
             // label119
             // 
@@ -8977,6 +8989,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_iniciativa.Size = new System.Drawing.Size(671, 26);
             this.txt_nombre_iniciativa.TabIndex = 51;
             this.txt_nombre_iniciativa.UseWaitCursor = true;
+            this.txt_nombre_iniciativa.TextChanged += new System.EventHandler(this.txt_nombre_iniciativa_TextChanged);
+            this.txt_nombre_iniciativa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_iniciativa_KeyPress);
             // 
             // label112
             // 
@@ -9170,6 +9184,8 @@ namespace App_PLE.Vistas
             this.txt_otro_estatus_iniciativa_especifique.Size = new System.Drawing.Size(283, 24);
             this.txt_otro_estatus_iniciativa_especifique.TabIndex = 42;
             this.txt_otro_estatus_iniciativa_especifique.UseWaitCursor = true;
+            this.txt_otro_estatus_iniciativa_especifique.TextChanged += new System.EventHandler(this.txt_otro_estatus_iniciativa_especifique_TextChanged);
+            this.txt_otro_estatus_iniciativa_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_estatus_iniciativa_especifique_KeyPress);
             // 
             // cmb_etapa_procesal_iniciativa
             // 
