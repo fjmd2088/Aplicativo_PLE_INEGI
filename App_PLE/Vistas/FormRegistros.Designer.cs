@@ -2049,7 +2049,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-292, 12671);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-544, 15051);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
@@ -2166,7 +2166,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-361, 14346);
+            this.button24.Location = new System.Drawing.Point(-613, 16726);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
@@ -10182,6 +10182,8 @@ namespace App_PLE.Vistas
             this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Size = new System.Drawing.Size(304, 21);
             this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TabIndex = 42;
             this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.UseWaitCursor = true;
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TextChanged += new System.EventHandler(this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1_TextChanged);
+            this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1_KeyPress);
             // 
             // label170
             // 
@@ -10241,6 +10243,8 @@ namespace App_PLE.Vistas
             this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.Size = new System.Drawing.Size(304, 21);
             this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.TabIndex = 40;
             this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique_TextChanged);
+            this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_cargo_persona_servidora_publica_juicio_politico_ambito_estatal_especifique_KeyPress);
             // 
             // label172
             // 
@@ -10297,6 +10301,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(333, 21);
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.TabIndex = 71;
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_nombre_institucion_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_institucion_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico
             // 
@@ -10434,6 +10440,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_3_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
             this.txt_apellido_3_persona_servidora_publica_juicio_politico.TabIndex = 54;
             this.txt_apellido_3_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_apellido_3_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_apellido_3_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_3_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // label324
             // 
@@ -10456,6 +10464,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_2_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(171, 21);
             this.txt_apellido_2_persona_servidora_publica_juicio_politico.TabIndex = 53;
             this.txt_apellido_2_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_apellido_2_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_apellido_2_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_2_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // txt_apellido_1_persona_servidora_publica_juicio_politico
             // 
@@ -10466,6 +10476,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_1_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
             this.txt_apellido_1_persona_servidora_publica_juicio_politico.TabIndex = 52;
             this.txt_apellido_1_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_apellido_1_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_apellido_1_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_1_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // label325
             // 
@@ -10488,6 +10500,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_1_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_1_persona_servidora_publica_juicio_politico.TabIndex = 45;
             this.txt_nombre_1_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_nombre_1_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_nombre_1_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_1_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // label326
             // 
@@ -10510,6 +10524,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_2_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_2_persona_servidora_publica_juicio_politico.TabIndex = 47;
             this.txt_nombre_2_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_nombre_2_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_nombre_2_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_2_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // label327
             // 
@@ -10532,6 +10548,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_3_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(172, 21);
             this.txt_nombre_3_persona_servidora_publica_juicio_politico.TabIndex = 49;
             this.txt_nombre_3_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_nombre_3_persona_servidora_publica_juicio_politico_TextChanged);
+            this.txt_nombre_3_persona_servidora_publica_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_3_persona_servidora_publica_juicio_politico_KeyPress);
             // 
             // groupBox104
             // 
@@ -10693,6 +10711,7 @@ namespace App_PLE.Vistas
             this.txt_turno_denuncia_juicio_politico.Size = new System.Drawing.Size(72, 21);
             this.txt_turno_denuncia_juicio_politico.TabIndex = 40;
             this.txt_turno_denuncia_juicio_politico.UseWaitCursor = true;
+            this.txt_turno_denuncia_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_turno_denuncia_juicio_politico_KeyPress);
             // 
             // groupBox103
             // 
@@ -10746,6 +10765,8 @@ namespace App_PLE.Vistas
             this.txt_otro_estatus_denuncia_juicio_politico_especifique.Size = new System.Drawing.Size(301, 21);
             this.txt_otro_estatus_denuncia_juicio_politico_especifique.TabIndex = 50;
             this.txt_otro_estatus_denuncia_juicio_politico_especifique.UseWaitCursor = true;
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.TextChanged += new System.EventHandler(this.txt_otro_estatus_denuncia_juicio_politico_especifique_TextChanged);
+            this.txt_otro_estatus_denuncia_juicio_politico_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_estatus_denuncia_juicio_politico_especifique_KeyPress);
             // 
             // label191
             // 
@@ -10791,6 +10812,8 @@ namespace App_PLE.Vistas
             this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.Size = new System.Drawing.Size(263, 21);
             this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.TabIndex = 48;
             this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.UseWaitCursor = true;
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.TextChanged += new System.EventHandler(this.txt_improcedente_estatus_denuncia_juicio_politico_especifique_TextChanged);
+            this.txt_improcedente_estatus_denuncia_juicio_politico_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_improcedente_estatus_denuncia_juicio_politico_especifique_KeyPress);
             // 
             // label190
             // 
@@ -10833,6 +10856,8 @@ namespace App_PLE.Vistas
             this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Size = new System.Drawing.Size(389, 21);
             this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.TabIndex = 83;
             this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.UseWaitCursor = true;
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.TextChanged += new System.EventHandler(this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique_TextChanged);
+            this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique_KeyPress);
             // 
             // label173
             // 
@@ -10971,6 +10996,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_abstencion_juicio_politico.Size = new System.Drawing.Size(85, 21);
             this.txt_votaciones_pleno_abstencion_juicio_politico.TabIndex = 66;
             this.txt_votaciones_pleno_abstencion_juicio_politico.UseWaitCursor = true;
+            this.txt_votaciones_pleno_abstencion_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_abstencion_juicio_politico_KeyPress);
             // 
             // label186
             // 
@@ -10993,6 +11019,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_a_favor_juicio_politico.Size = new System.Drawing.Size(99, 21);
             this.txt_votaciones_pleno_a_favor_juicio_politico.TabIndex = 62;
             this.txt_votaciones_pleno_a_favor_juicio_politico.UseWaitCursor = true;
+            this.txt_votaciones_pleno_a_favor_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_a_favor_juicio_politico_KeyPress);
             // 
             // label184
             // 
@@ -11049,6 +11076,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_en_contra_juicio_politico.Size = new System.Drawing.Size(85, 21);
             this.txt_votaciones_pleno_en_contra_juicio_politico.TabIndex = 64;
             this.txt_votaciones_pleno_en_contra_juicio_politico.UseWaitCursor = true;
+            this.txt_votaciones_pleno_en_contra_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_en_contra_juicio_politico_KeyPress);
             // 
             // groupBox106
             // 

@@ -173,7 +173,13 @@
     <Compile Include="Vistas\FormRegistros.ComisionesLegislativas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\FormRegistros.Comparecencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\FormRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormRegistros.DeclaracionesProcedencia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\FormRegistros.Designer.cs">
@@ -183,6 +189,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\FormRegistros.IniciativasUO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormRegistros.JuiciosPoliticos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\FormRegistros.PersonalApoyo.cs">
