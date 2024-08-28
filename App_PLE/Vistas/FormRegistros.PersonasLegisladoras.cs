@@ -2895,21 +2895,15 @@ namespace App_PLE.Vistas
         // cond_integrante_jucopo
         private void cmb_Cond_integrante_jucopo()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2927,12 +2921,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+                
         }
         private void cmb_cond_integrante_jucopo_Validating(object sender, CancelEventArgs e)
         {
@@ -2980,21 +2969,16 @@ namespace App_PLE.Vistas
         // Cargo_jucopo
         private void cmb_Cargo_jucopo()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_CARGO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -3012,12 +2996,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+               
         }
         private void cmb_cargo_jucopo_Validating(object sender, CancelEventArgs e)
         {
