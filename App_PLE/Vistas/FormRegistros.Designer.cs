@@ -2049,7 +2049,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-544, 15051);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-598, 15561);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
@@ -2166,7 +2166,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-613, 16726);
+            this.button24.Location = new System.Drawing.Point(-667, 17236);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
@@ -2475,6 +2475,7 @@ namespace App_PLE.Vistas
             this.txt_cant_integrantes_comision_legislativa.Size = new System.Drawing.Size(79, 21);
             this.txt_cant_integrantes_comision_legislativa.TabIndex = 37;
             this.txt_cant_integrantes_comision_legislativa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cant_integrantes_comision_legislativa_KeyPress);
+            this.txt_cant_integrantes_comision_legislativa.Leave += new System.EventHandler(this.txt_cant_integrantes_comision_legislativa_Leave);
             // 
             // label285
             // 
@@ -2931,6 +2932,7 @@ namespace App_PLE.Vistas
             this.txt_asist_sesiones_comision_permanente_persona_legisladora.TabIndex = 72;
             this.txt_asist_sesiones_comision_permanente_persona_legisladora.UseWaitCursor = true;
             this.txt_asist_sesiones_comision_permanente_persona_legisladora.TextChanged += new System.EventHandler(this.txt_asist_sesiones_comision_permanente_persona_legisladora_TextChanged);
+            this.txt_asist_sesiones_comision_permanente_persona_legisladora.Leave += new System.EventHandler(this.txt_asist_sesiones_comision_permanente_persona_legisladora_Leave);
             // 
             // label107
             // 
@@ -3265,6 +3267,7 @@ namespace App_PLE.Vistas
             this.txt_cant_reuniones_celebradas_comision_legislativa_asistidas.Size = new System.Drawing.Size(121, 21);
             this.txt_cant_reuniones_celebradas_comision_legislativa_asistidas.TabIndex = 77;
             this.txt_cant_reuniones_celebradas_comision_legislativa_asistidas.UseWaitCursor = true;
+            this.txt_cant_reuniones_celebradas_comision_legislativa_asistidas.Leave += new System.EventHandler(this.txt_cant_reuniones_celebradas_comision_legislativa_asistidas_Leave);
             // 
             // dgv_participacion_comisiones
             // 
@@ -3396,7 +3399,7 @@ namespace App_PLE.Vistas
             this.cmb_nombre_comision_legislativa.TabIndex = 69;
             this.cmb_nombre_comision_legislativa.UseWaitCursor = true;
             this.cmb_nombre_comision_legislativa.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_comision_legislativa_SelectedIndexChanged);
-            this.cmb_nombre_comision_legislativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cargo_comision_legislativa_Validating);
+            this.cmb_nombre_comision_legislativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_comision_legislativa_Validating);
             // 
             // label82
             // 
@@ -3801,9 +3804,9 @@ namespace App_PLE.Vistas
             this.label100.ForeColor = System.Drawing.Color.Black;
             this.label100.Location = new System.Drawing.Point(525, 36);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(420, 15);
+            this.label100.Size = new System.Drawing.Size(384, 15);
             this.label100.TabIndex = 44;
-            this.label100.Text = "Cargo Cargo de la persona legisladora en la Junta de Coordinación Política:";
+            this.label100.Text = "Cargo de la persona legisladora en la Junta de Coordinación Política:";
             this.label100.UseWaitCursor = true;
             // 
             // groupBox74

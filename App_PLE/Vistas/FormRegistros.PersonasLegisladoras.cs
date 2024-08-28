@@ -18,7 +18,7 @@ namespace App_PLE.Vistas
 {
     public partial class FormRegistros: Form
     {
-
+        // CONEXION BASE DE DATOS ----------------------------------------------------------------------------------
         private SQLiteConnection _connection; // variable para la conexion de datos
         private void ConexionBasedatosSQLite()
         {
@@ -32,15 +32,17 @@ namespace App_PLE.Vistas
             {
                 // Abre la conexión
                 _connection.Open();
-                MessageBox.Show("Conexión abierta exitosamente.");
+                //MessageBox.Show("Conexión abierta exitosamente.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al abrir la conexión: " + ex.Message);
+                //MessageBox.Show("Error al abrir la conexión: " + ex.Message);
             }
         }
 
-        // sexo_persona_legisladora
+        // CARACTERISTICAS SOCIODEMOGRAFICAS ------------------------------------------------------------------------
+
+      
         private void cmb_Sexo_Persona_Legisladora()
         {
             try
@@ -115,10 +117,6 @@ namespace App_PLE.Vistas
 
         private void cmb_Estatus_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            //{
             try
             {
 
@@ -149,21 +147,21 @@ namespace App_PLE.Vistas
         // tipo_licencia_persona_legisladora
         private void cmb_Tipo_licencia_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+           // string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+                   // conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_TIPO_LICENICIA";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -181,12 +179,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+               // finally
+               // {
+               //     conexion.Close();
+               //}
 
-            }
+           // }
         }
         private void cbm_tipo_licencia_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -234,21 +232,21 @@ namespace App_PLE.Vistas
         // causa_fallecimiento_persona_legisladora
         private void cmb_Causa_fallecimiento_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            //{
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_CAUSAS_FALLECIMIENTO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -266,12 +264,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+               // finally
+                //{
+                //    conexion.Close();
+              //  }
 
-            }
+            //}
         }
         private void cbm_causa_fallecimiento_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -319,21 +317,21 @@ namespace App_PLE.Vistas
         // caracter_cargo_persona_legisladora
         private void cmb_Caracter_cargo_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            //{
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_CARACTER_CARGO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -351,12 +349,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+                //finally
+                //{
+               //     conexion.Close();
+              //  }
 
-            }
+            //}
         }
         private void cmb_caracter_cargo_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -403,21 +401,21 @@ namespace App_PLE.Vistas
 
         private void cmb_Escolaridad_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+                   // conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_ESCOLARIDAD";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -435,24 +433,24 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+          //      finally
+          //      {
+          //          conexion.Close();
+          //      }
 
-            }
+           // }
         }
         private void cmb_Persona_Legisladora_Propietaria()
         {
-            string cadena = "Data Source=DB_PLE.db;Version=3;";
+            //string cadena = "Data Source=DB_PLE.db;Version=3;";
             string id_legis = txt_id_legislatura.Text;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // Abrir la conexión
-                    conexion.Open();
+            //        conexion.Open();
 
                     // Comando de SQL
                     string query = "SELECT " +
@@ -468,7 +466,7 @@ namespace App_PLE.Vistas
                                    "FROM TR_PERSONAS_LEGISLADORAS " +
                                    "WHERE cmb_caracter_cargo_persona_legisladora = 'Propietario' AND id_legislatura = @id_legis";
 
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, _connection))
                     {
                         // Asignar el parámetro
                         cmd.Parameters.AddWithValue("@id_legis", id_legis);
@@ -493,11 +491,11 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox cmb_nombre_persona_legisladora_propietaria: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-            }
+        //        finally
+         //       {
+        //            conexion.Close();
+         //       }
+         //   }
         }
 
         // nombre_persona_legisladora_propietaria
@@ -580,47 +578,7 @@ namespace App_PLE.Vistas
         }
 
         // estatus_escolaridad_persona_legisladora
-        private void cmb_Estatus_escolaridad_persona_legisladora()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_ESTATUS_ESCOLARIDAD";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_estatus_escolaridad_persona_legisladora.DataSource = dataTable;
-                    cmb_estatus_escolaridad_persona_legisladora.DisplayMember = "descripcion";
-
-                    cmb_estatus_escolaridad_persona_legisladora.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_estatus_escolaridad_persona_legisladora.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_estatus_escolaridad_persona_legisladora.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_estatus_escolaridad_persona_legisladora.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
+       
         private void cmb_estatus_escolaridad_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -667,21 +625,21 @@ namespace App_PLE.Vistas
         // carrera_licenciatura_persona_legisladora
         private void cmb_Carrera_licenciatura_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+                  //  conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_CARRERAS";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -699,12 +657,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox cmb_Carrera_licenciatura_persona_legisladora: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+           //     finally
+           //     {
+           //         conexion.Close();
+            //    }
 
-            }
+           // }
         }
         private void cmb_carrera_licenciatura_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
         {
@@ -752,21 +710,21 @@ namespace App_PLE.Vistas
         // carrera_maestria_persona_legisladora_PL
         private void cmb_Carrera_maestria_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+           // string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+          //  using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_CARRERAS";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -784,12 +742,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+              //  finally
+             //  {
+              //      conexion.Close();
+             //   }
 
-            }
+           // }
         }
         private void cmb_carrera_maestria_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
         {
@@ -837,21 +795,21 @@ namespace App_PLE.Vistas
         // carrera_doctorado_persona_legisladora_PL
         private void cmb_Carrera_doctorado_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            //{
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+              //      conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_CARRERAS";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -869,12 +827,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+               // finally
+                //{
+                 //   conexion.Close();
+               // }
 
-            }
+            //}
         }
         private void cmb_carrera_doctorado_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
         {
@@ -922,21 +880,21 @@ namespace App_PLE.Vistas
         // lengua_ind_persona_legisladora
         private void cmb_Cond_lengua_ind_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+           // string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+          //  using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+               //     conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -954,30 +912,30 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+            //    finally
+            //    {
+            //        conexion.Close();
+            //    }
 
-            }
+         //   }
         }
         private void cmb_Lengua_ind_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+          //  string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+          //  using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_LENGUA_INDIGENA";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -995,12 +953,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+              //  finally
+              //  {
+              //      conexion.Close();
+              //  }
 
-            }
+           // }
         }
         private void cmb_lengua_ind_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1054,21 +1012,21 @@ namespace App_PLE.Vistas
         // cond_discapacidad_persona_legisladora
         private void cmb_Cond_discapacidad_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+           //         conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1086,12 +1044,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+           //     finally
+           //     {
+           //         conexion.Close();
+            //    }
 
-            }
+          //  }
         }
         private void cmb_cond_discapacidad_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1139,21 +1097,21 @@ namespace App_PLE.Vistas
         // tipo_discapacidad_persona_legisladora
         private void cmb_Tipo_discapacidad_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+              //      conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_TIPO_DISCAPACIDAD";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1171,12 +1129,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+            //    finally
+             //   {
+            //       conexion.Close();
+             //   }
 
-            }
+          //  }
         }
         private void cmb_tipo_discapacidad_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1229,21 +1187,21 @@ namespace App_PLE.Vistas
         // cond_pueblo_ind_persona_legisladora_PL
         private void cmb_Cond_pueblo_ind_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+               //     conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1261,12 +1219,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+             //   finally
+             //   {
+              //      conexion.Close();
+              //  }
 
-            }
+           // }
         }
         private void cmb_cond_pueblo_ind_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
         {
@@ -1314,21 +1272,21 @@ namespace App_PLE.Vistas
         // pueblo_ind_persona_legisladora_PL
         private void cmb_Pueblo_ind_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+           // string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+         //   using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+            //        conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_PUEBLO_INDIGENA";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1346,12 +1304,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+           //     finally
+          //      {
+           //         conexion.Close();
+           //     }
 
-            }
+           // }
         }
         private void cmb_pueblo_ind_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
         {
@@ -1399,21 +1357,21 @@ namespace App_PLE.Vistas
         // Cond_pob_diversidad_sexual_persona_legisladora
         private void cmb_Cond_pob_diversidad_sexual_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+              //      conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1431,12 +1389,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+             //   finally
+            //    {
+             //       conexion.Close();
+             //   }
 
-            }
+           // }
         }
         private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1484,21 +1442,21 @@ namespace App_PLE.Vistas
         // Cond_pob_afromexicana_persona_legisladora
         private void cmb_Cond_pob_afromexicana_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+            //        conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1516,12 +1474,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+           //     finally
+            //    {
+            //        conexion.Close();
+           //     }
 
-            }
+          //  }
         }
         private void cmb_cond_pob_afromexicana_persona_legisladora_PL_Validating(object sender, CancelEventArgs e)
         {
@@ -1569,21 +1527,21 @@ namespace App_PLE.Vistas
         // empleo_anterior_persona_legisladora
         private void cmb_Empleo_anterior_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+           // string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+         //   using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+            //        conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_EMPLEO_ANT";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1601,12 +1559,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+         //       finally
+        //        {
+           //         conexion.Close();
+           //     }
 
-            }
+          //  }
         }
         private void cmb_empleo_anterior_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1654,21 +1612,21 @@ namespace App_PLE.Vistas
         // antigüedad_servicio_publico_persona_legisladora
         private void cmb_Antigüedad_servicio_publico_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_ANTIGUEDAD";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1686,12 +1644,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+            //    finally
+             //   {
+            //        conexion.Close();
+             //   }
 
-            }
+          //  }
         }
         private void cmb_antigüedad_servicio_publico_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1739,21 +1697,21 @@ namespace App_PLE.Vistas
         // antigüedad_persona_legisladora
         private void cmb_Antigüedad_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+           // {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_ANTIGUEDAD";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1771,12 +1729,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+           //     finally
+           //     {
+            //        conexion.Close();
+            //    }
 
-            }
+           // }
         }
         private void cmb_antigüedad_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1824,21 +1782,21 @@ namespace App_PLE.Vistas
         // forma_eleccion_persona_legisladora
         private void cmb_Forma_eleccion_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            //{
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+                  //  conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_FORMA_ELECCION";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1856,12 +1814,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+              //  finally
+            //    {
+             //       conexion.Close();
+              //  }
 
-            }
+           // }
         }
         private void cmb_forma_eleccion_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1909,21 +1867,21 @@ namespace App_PLE.Vistas
         // tipo_candidatura_persona_legisladora
         private void cmb_Tipo_candidatura_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            //string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            //using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            //{
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+                  //  conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_TIPO_CANDIDATURA";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -1941,12 +1899,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+              //  finally
+             //   {
+             //       conexion.Close();
+              //  }
 
-            }
+           // }
         }
         private void cmb_tipo_candidatura_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -1994,21 +1952,21 @@ namespace App_PLE.Vistas
         // tipo_adscripcion_inicial_persona_legisladora
         private void cmb_Tipo_adscripcion_inicial_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+           // string cadena = "Data Source = DB_PLE.db;Version=3;";
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           // using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+          //  {
                 try
                 {
                     // abrir la conexion
-                    conexion.Open();
+             //       conexion.Open();
 
                     // comando de sql
                     string query = "select descripcion from TC_TIPO_ADSCRIPCION";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2026,12 +1984,12 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
+           //     finally
+          //      {
+           //         conexion.Close();
+           //     }
 
-            }
+           // }
         }
         private void cmb_tipo_adscripcion_inicial_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -2079,21 +2037,17 @@ namespace App_PLE.Vistas
         // tipo_adscripcion_final_persona_legisladora
         private void cmb_Tipo_adscripcion_final_persona_legisladora()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                    
 
                     // comando de sql
                     string query = "select descripcion from TC_TIPO_ADSCRIPCION";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2111,12 +2065,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+                
         }
         private void cmb_tipo_adscripcion_final_persona_legisladora_Validating(object sender, CancelEventArgs e)
         {
@@ -2164,21 +2113,17 @@ namespace App_PLE.Vistas
         // cond_presentacion_declaracion_situacion_patrimonial
         private void cmb_Cond_presentacion_declaracion_situacion_patrimonial()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                   
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,4,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2196,12 +2141,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+                
         }
         private void cmb_cond_presentacion_declaracion_situacion_patrimonial_Validating(object sender, CancelEventArgs e)
         {
@@ -2250,21 +2190,17 @@ namespace App_PLE.Vistas
         // cond_presentacion_declaracion_intereses
         private void cmb_Cond_presentacion_declaracion_intereses()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                  
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3,4)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2282,12 +2218,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+               
         }
         private void cmb_cond_presentacion_declaracion_intereses_Validating(object sender, CancelEventArgs e)
         {
@@ -2336,21 +2267,17 @@ namespace App_PLE.Vistas
         // Cond_presentacion_declaracion_fiscal
         private void cmb_Cond_presentacion_declaracion_fiscal()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+            
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3,4)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2368,12 +2295,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+               
         }
         private void cmb_cond_presentacion_declaracion_fiscal_Validating(object sender, CancelEventArgs e)
         {
@@ -2465,21 +2387,17 @@ namespace App_PLE.Vistas
         // cond_casa_atencion_ciudadana
         private void cmb_Cond_casa_atencion_ciudadana()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                    
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2497,12 +2415,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+                
         }
         private void cmb_cond_casa_atencion_ciudadana_Validating(object sender, CancelEventArgs e)
         {
@@ -2550,21 +2463,17 @@ namespace App_PLE.Vistas
         // cond_casa_atencion_ciudadana_movil
         private void cmb_Cond_casa_atencion_ciudadana_movil()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2582,12 +2491,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+                
         }
         private void cmb_cond_casa_atencion_ciudadana_movil_Validating(object sender, CancelEventArgs e)
         {
@@ -2635,21 +2539,17 @@ namespace App_PLE.Vistas
         // cond_integrante_comision_permanente
         private void cmb_Cond_integrante_comision_permanente()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                    
 
                     // comando de sql
                     string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2667,12 +2567,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+               
         }
         private void cmb_cond_integrante_comision_permanente_Validating(object sender, CancelEventArgs e)
         {
@@ -2720,21 +2615,16 @@ namespace App_PLE.Vistas
         // cargo_comision_permanente
         private void cmb_Cargo_comision_permanente()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
-
+                    
                     // comando de sql
                     string query = "select descripcion from TC_CARGO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2752,12 +2642,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+               
         }
         private void cmb_cargo_comision_permanente_Validating(object sender, CancelEventArgs e)
         {
@@ -2802,22 +2687,21 @@ namespace App_PLE.Vistas
             }
         }
 
-        // nombre_comision_legislativa
+        
+
+        // participacion en comisiones--------------------------------------------------------------
         private void cmb_Nombre_comision_legislativa()
         {
-            string cadena = "Data Source=DB_PLE.db;Version=3;";
+            
             string id_legis = txt_id_legislatura.Text;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+           
                 try
                 {
-                    // Abrir la conexión
-                    conexion.Open();
 
                     // Comando de SQL
-                    string query = "SELECT nombre_comision_legislativa FROM TR_COMISIONES_LEGISLATIVAS WHERE id_legislatura = @id_legis";
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    string query = "SELECT DISTINCT nombre_comision_legislativa FROM TR_COMISIONES_LEGISLATIVAS WHERE id_legislatura = @id_legis";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, _connection))
                     {
                         // Asignar el parámetro
                         cmd.Parameters.AddWithValue("@id_legis", id_legis);
@@ -2842,11 +2726,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-            }
+                
         }
         private void cmb_nombre_comision_legislativa_Validating(object sender, CancelEventArgs e)
         {
@@ -2868,16 +2748,16 @@ namespace App_PLE.Vistas
                 foreach (DataRowView item in comboBox.Items)
                 {
                     // ajustar el nombre a la columna dependiendo el combobox
-                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    string cleanedItem = item["nombre_comision_legislativa"].ToString().Trim().Replace(" ", string.Empty).ToLower();
                     if (cleanedText == cleanedItem)
                     {
                         isValid = true;
                         break;
                     }
                     // Mostrar el valor actual de item (para depuración)
-                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    Console.WriteLine(" Current item : " + item["nombre_comision_legislativa"]);
                     // O usar Debug.WriteLine si estás depurando
-                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["nombre_comision_legislativa"]);
                 }
                 if (!isValid)
                 {
@@ -2890,25 +2770,19 @@ namespace App_PLE.Vistas
                 }
             }
         }
-
-        // cargo_comision_legislativa
         private void cmb_Cargo_comision_legislativa()
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            
                 try
                 {
-                    // abrir la conexion
-                    conexion.Open();
+                    
 
                     // comando de sql
                     string query = "select descripcion from TC_CARGO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, _connection);
 
                     // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
@@ -2926,12 +2800,7 @@ namespace App_PLE.Vistas
                 {
                     MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
                 }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
+               
         }
         private void cmb_cargo_comision_legislativa_Validating(object sender, CancelEventArgs e)
         {
@@ -2975,6 +2844,53 @@ namespace App_PLE.Vistas
                 }
             }
         }
+        private void txt_cant_reuniones_celebradas_comision_legislativa_asistidas_Leave(object sender, EventArgs e)
+        {
+            // ya se usa conexion a sqlite
+            try{
+                // se extraen las variables para el query y poder hacer el filtrado de informacion
+                string id_legislatura = txt_id_legislatura.Text;
+                string id_comision_legislativa = txt_ID_comision_legislativa_pc.Text;
+                int cant_reuniones_leg = Convert.ToInt32(txt_cant_reuniones_celebradas_comision_legislativa_asistidas.Text);
+
+                // comando de sql
+                string query = "select cant_reuniones_celebradas_comision_legislativa from TR_COMISIONES_LEGISLATIVAS" +
+                    " where id_legislatura = @id_legislatura and ID_comision_legislativa = @id_comision_legislativa";
+
+                // Utilizar un DataReader para obtener los datos
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@id_legislatura", id_legislatura);
+                adapter.SelectCommand.Parameters.AddWithValue("@id_comision_legislativa", id_comision_legislativa);
+
+                // Crear un DataTable para llenar con los resultados
+                DataTable dt = new DataTable();
+
+                // Llenar el DataTable
+                adapter.Fill(dt);
+
+                // Extraer la cantidad de reuniones desde el DataTable
+                int reuniones = Convert.ToInt32(dt.Rows[0]["cant_reuniones_celebradas_comision_legislativa"]);
+
+                // Comparar con la cantidad ingresada
+                if ( cant_reuniones_leg <= reuniones ) 
+                {
+                    // La cantidad coincide
+                }
+                else
+                {
+                    MessageBox.Show("La cantidad de reuniones asistidas debe ser menor a la registrada en comisiones");
+                    txt_cant_reuniones_celebradas_comision_legislativa_asistidas.Text = "";
+                }
+
+
+
+            }
+            catch(Exception ex){
+                MessageBox.Show("Error al llenar el ComboBox cmb_Sexo_Persona_Legisladora: " + ex.Message);
+            }
+        }
+
+
 
         // cond_integrante_jucopo
         private void cmb_Cond_integrante_jucopo()
@@ -3623,12 +3539,13 @@ namespace App_PLE.Vistas
             }
         }
 
+        // txt_otro_estatus_persona_legisladora_especifique
         private void txt_otro_estatus_persona_legisladora_especifique_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_otro_estatus_persona_legisladora_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el otro tipo de estatus.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_otro_estatus_persona_legisladora_especifique.Focus();
+                //txt_otro_estatus_persona_legisladora_especifique.Focus();
             }
         }
         private void cmb_caracter_cargo_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
@@ -3931,8 +3848,6 @@ namespace App_PLE.Vistas
                 }
             }
         }
-
-
         private void btnAgregarLenguaPL_Click(object sender, EventArgs e)
         {
             // se obtienen los valores
@@ -3945,12 +3860,20 @@ namespace App_PLE.Vistas
             }
             else
             {
-
                 // Agregar una nueva fila al DataGridView
-                dgv_lengua_PA.Rows.Add(lengua_pl);
+                bool respuesta = IsDuplicateRecord_Lengua(cmb_lengua_ind_persona_legisladora.Text.ToString());
 
-                cmb_lengua_ind_persona_legisladora.Text = "";
-
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Dato duplicado");
+                    cmb_lengua_ind_persona_legisladora.Text = "";
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_lengua_PA.Rows.Add(lengua_pl);
+                    cmb_lengua_ind_persona_legisladora.Text = "";
+                }
             }
         }
         private void btnEliminarLenguaPL_Click(object sender, EventArgs e)
@@ -3964,6 +3887,23 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Seleccionar registro a eliminar");
             }
         }
+        private bool IsDuplicateRecord_Lengua(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_lengua_PA.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["lengua_ind_persona_legisladora"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // cmb_cond_pueblo_ind_persona_legisladora_PL
         private void cmb_cond_pueblo_ind_persona_legisladora_PL_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -3980,6 +3920,8 @@ namespace App_PLE.Vistas
                 cmb_pueblo_ind_persona_legisladora_PL.Text = "";
             }
         }
+
+        // cmb_cond_discapacidad_persona_legisladora
         private void cmb_cond_discapacidad_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -4012,14 +3954,23 @@ namespace App_PLE.Vistas
             }
             else
             {
-
                 // Agregar una nueva fila al DataGridView
-                dgv_tipo_discapacidad_PA.Rows.Add(tipo_discapacidad_pl);
+                bool respuesta = IsDuplicateRecord_Discapacidad(cmb_tipo_discapacidad_persona_legisladora.Text.ToString());
 
-                cmb_tipo_discapacidad_persona_legisladora.Text = "";
-
+                if (respuesta == true)
+                {
+                    MessageBox.Show("Dato duplicado");
+                    cmb_tipo_discapacidad_persona_legisladora.Text = "";
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_tipo_discapacidad_PA.Rows.Add(tipo_discapacidad_pl);
+                    cmb_tipo_discapacidad_persona_legisladora.Text = "";
+                }
             }
         }
+
         private void btnEliminarDiscapacidadPL_Click(object sender, EventArgs e)
         {
             if (dgv_tipo_discapacidad_PA.SelectedRows.Count > 0)
@@ -4031,6 +3982,23 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Seleccionar registro a eliminar");
             }
         }
+        private bool IsDuplicateRecord_Discapacidad(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_tipo_discapacidad_PA.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["tipo_discapacidad_persona_legisladora"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // cmb_sexo_persona_legisladora
         private void cmb_sexo_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -4769,12 +4737,13 @@ namespace App_PLE.Vistas
             }
         }
 
+        // otro_grupo_parlamentario_adscipcion_inicial
         private void txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el otro grupo parlamentario de adscripción inicial de la persona legisladora.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Focus();
+                //txt_otro_grupo_parlamentario_adscipcion_inicial_persona_legisladora_especifique.Focus();
             }
         }
         private void cmb_tipo_adscripcion_final_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
@@ -4914,14 +4883,16 @@ namespace App_PLE.Vistas
             }
         }
 
+        // otro_grupo_parlamentario_adscipcion_final_persona_legisladora
         private void txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el otro grupo parlamentario de adscripción inicial de la persona legisladora.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Focus();
+                //txt_otro_grupo_parlamentario_adscipcion_final_persona_legisladora_especifique.Focus();
             }
         }
+
         private void cmb_empleo_anterior_persona_legisladora_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5070,14 +5041,9 @@ namespace App_PLE.Vistas
             }
             */
         }
-        private void txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text = txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text.ToUpper();
+        
 
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.SelectionStart = txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text.Length;
-        }
+        // cond_presentacion_declaracion_situacion_patrimonial
         private void cmb_cond_presentacion_declaracion_situacion_patrimonial_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5101,9 +5067,19 @@ namespace App_PLE.Vistas
             if (string.IsNullOrWhiteSpace(txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el motivo por el cual no le es aplicable a la persona legisladora la presentación de la declaración de situación patrimonial.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Focus();
+                //txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Focus();
             }
         }
+        private void txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text = txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+            txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.SelectionStart = txt_no_aplica_presentacion_declaracion_situacion_patrimonial_especifique.Text.Length;
+        }
+
+        // cond_presentacion_declaracion_intereses
         private void cmb_cond_presentacion_declaracion_intereses_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5136,9 +5112,11 @@ namespace App_PLE.Vistas
             if (string.IsNullOrWhiteSpace(txt_no_aplica_presentacion_declaracion_intereses_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el motivo por el cual no le es aplicable a la persona legisladora la presentación de la declaración de intereses.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_no_aplica_presentacion_declaracion_intereses_especifique.Focus();
+                //txt_no_aplica_presentacion_declaracion_intereses_especifique.Focus();
             }
         }
+
+        // cond_presentacion_declaracion_fiscal
         private void cmb_cond_presentacion_declaracion_fiscal_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5170,9 +5148,11 @@ namespace App_PLE.Vistas
             if (string.IsNullOrWhiteSpace(txt_no_aplica_presentacion_declaracion_fiscal_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el motivo por el cual no le es aplicable a la persona legisladora la presentación de la declaración fiscal.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_no_aplica_presentacion_declaracion_fiscal_especifique.Focus();
+                //txt_no_aplica_presentacion_declaracion_fiscal_especifique.Focus();
             }
         }
+
+
         private void txt_remuneracion_persona_legisladora_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir números, backspace, y el signo menos si está al principio
@@ -5325,6 +5305,8 @@ namespace App_PLE.Vistas
                 cmb_cargo_comision_permanente.Text = "";
             }
         }
+
+        // cargo_comision_permanente
         private void cmb_cargo_comision_permanente_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5356,9 +5338,11 @@ namespace App_PLE.Vistas
             if (string.IsNullOrWhiteSpace(txt_otro_cargo_comision_permanente_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el otro cargo desempeñado por la persona legisladora en la Comisión Permanente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_otro_cargo_comision_permanente_especifique.Focus();
+                //txt_otro_cargo_comision_permanente_especifique.Focus();
             }
         }
+
+        // cond_integrante_jucopo
         private void cmb_cond_integrante_jucopo_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5412,9 +5396,11 @@ namespace App_PLE.Vistas
             if (string.IsNullOrWhiteSpace(txt_otro_cargo_jucopo_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el otro cargo desempeñado por la persona legisladora en la Junta de Coordinación Política.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_otro_cargo_jucopo_especifique.Focus();
+                // txt_otro_cargo_jucopo_especifique.Focus();
             }
         }
+
+        // cond_integrante_mesa_directiva
         private void cmb_cond_integrante_mesa_directiva_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
@@ -5464,9 +5450,11 @@ namespace App_PLE.Vistas
             if (string.IsNullOrWhiteSpace(txt_otro_cargo_mesa_directiva_especifique.Text))
             {
                 MessageBox.Show("Debe especificar el otro cargo desempeñado por la persona legisladora en la Mesa Directiva.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_otro_cargo_mesa_directiva_especifique.Focus();
+                // txt_otro_cargo_mesa_directiva_especifique.Focus();
             }
         }
+
+        // nombre_comision_legislativa
         private void cmb_nombre_comision_legislativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_nombre_comision_legislativa.SelectedItem != null)
@@ -5542,6 +5530,8 @@ namespace App_PLE.Vistas
                 MessageBox.Show("Seleccionar registro a eliminar");
             }
         }
+
+        // TRABAJO LEGISLATIVO --------------------------------------------------------------
         private void txt_asist_sesiones_plenarias_persona_legisladora_TextChanged(object sender, EventArgs e)
         {
             string valor_txt = txt_asist_sesiones_plenarias_persona_legisladora.Text;
@@ -5590,6 +5580,54 @@ namespace App_PLE.Vistas
                 txt_cant_interv_sesiones_dip_permanente_persona_legisladora.BackColor = Color.LightGray;
             }
         }
+        private void txt_asist_sesiones_comision_permanente_persona_legisladora_Leave(object sender, EventArgs e)
+        {
+            // ya se usa conexion a sqlite
+            try
+            {
+                // se extraen las variables para el query y poder hacer el filtrado de informacion
+                string id_legislatura = txt_id_legislatura.Text;
+                int cant_sesiones_com_perm = Convert.ToInt32(txt_asist_sesiones_comision_permanente_persona_legisladora.Text);
+
+                // comando de sql
+                string query = "select sesiones_celebradas_p_rec from TR_DATOS_GENERALES" +
+                    " where id_legislatura = @id_legislatura";
+
+                // Utilizar un DataReader para obtener los datos
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, _connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@id_legislatura", id_legislatura);
+                
+
+                // Crear un DataTable para llenar con los resultados
+                DataTable dt = new DataTable();
+
+                // Llenar el DataTable
+                adapter.Fill(dt);
+
+                // Extraer la cantidad de reuniones desde el DataTable
+                int reuniones = Convert.ToInt32(dt.Rows[0]["sesiones_celebradas_p_rec"]);
+
+                // Comparar con la cantidad ingresada
+                if (cant_sesiones_com_perm <= reuniones)
+                {
+                    // La cantidad coincide
+                }
+                else
+                {
+                    MessageBox.Show("La cantidad debe ser menor o igual a la cantidad de sesiones celebradas durante el periodo de receso");
+                    txt_cant_reuniones_celebradas_comision_legislativa_asistidas.Text = "";
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar el ComboBox cmb_Sexo_Persona_Legisladora: " + ex.Message);
+            }
+        }
+
+
         private void cmb_cond_casa_atencion_ciudadana_movil_SelectedIndexChanged(object sender, EventArgs e)
         {
             string valor_cmb = cmb_cond_casa_atencion_ciudadana_movil.Text;
@@ -5747,7 +5785,7 @@ namespace App_PLE.Vistas
             }
         }
 
-
+        // REGISTROS PERSONAS LEGISLADORAS --------------------------------------------------------------
         private bool IsDuplicateRecord_RegistrosPL(string variable_cmb)
         {
             foreach (DataGridViewRow row in dgv_registros_pl.Rows)
@@ -5779,7 +5817,13 @@ namespace App_PLE.Vistas
                     string query = "SELECT DISTINCT txt_ID_persona_legisladora, txt_nombre_1_persona_legisladora, " +
                                    "dtp_fecha_nacimiento_persona_legisladora, cmb_estatus_persona_legisladora, cmb_caracter_cargo_persona_legisladora " +
                                    "FROM TR_PERSONAS_LEGISLADORAS " +
-                                   "WHERE id_legislatura = @id_legis";
+                                   "WHERE id_legislatura = @id_legis " +
+                                   "AND txt_ID_persona_legisladora IS NOT NULL AND txt_ID_persona_legisladora <> '' " +
+                                   "AND txt_nombre_1_persona_legisladora IS NOT NULL AND txt_nombre_1_persona_legisladora <> '' " +
+                                   "AND dtp_fecha_nacimiento_persona_legisladora IS NOT NULL " +
+                                   "AND cmb_estatus_persona_legisladora IS NOT NULL AND cmb_estatus_persona_legisladora <> '' " +
+                                   "AND cmb_caracter_cargo_persona_legisladora IS NOT NULL AND cmb_caracter_cargo_persona_legisladora <> ''";
+                    ;
 
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
                     {
