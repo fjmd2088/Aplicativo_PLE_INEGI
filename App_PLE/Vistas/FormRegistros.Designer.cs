@@ -2049,7 +2049,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-598, 15561);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-1066, 19981);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
@@ -2166,7 +2166,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-667, 17236);
+            this.button24.Location = new System.Drawing.Point(-1135, 21656);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
@@ -11383,6 +11383,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(171, 21);
             this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia.TabIndex = 54;
             this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_3_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // label231
             // 
@@ -11405,6 +11407,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(171, 21);
             this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia.TabIndex = 53;
             this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_2_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // txt_apellido_1_persona_servidora_publica_declaracion_procedencia
             // 
@@ -11415,6 +11419,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(170, 21);
             this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia.TabIndex = 52;
             this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_1_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // label233
             // 
@@ -11437,6 +11443,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia.TabIndex = 45;
             this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_1_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // label334
             // 
@@ -11459,6 +11467,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia.TabIndex = 47;
             this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_2_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // label335
             // 
@@ -11481,6 +11491,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(172, 21);
             this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia.TabIndex = 49;
             this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_3_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // groupBox113
             // 
@@ -11525,6 +11537,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.TabIndex = 67;
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_votaciones_pleno_abstencion_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_abstencion_declaracion_procedencia_KeyPress);
             // 
             // label167
             // 
@@ -11547,6 +11560,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.TabIndex = 65;
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_votaciones_pleno_en_contra_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_en_contra_declaracion_procedencia_KeyPress);
             // 
             // label174
             // 
@@ -11591,6 +11605,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.TabIndex = 63;
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_votaciones_pleno_a_favor_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_a_favor_declaracion_procedencia_KeyPress);
             // 
             // label218
             // 
@@ -11707,6 +11722,8 @@ namespace App_PLE.Vistas
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Size = new System.Drawing.Size(304, 21);
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.TabIndex = 42;
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique_TextChanged);
+            this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique_KeyPress);
             // 
             // label220
             // 
@@ -11764,6 +11781,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(786, 21);
             this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.TabIndex = 71;
             this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia_TextChanged);
+            this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia_KeyPress);
             // 
             // cmb_cargo_persona_servidora_publica_declaracion_procedencia
             // 
@@ -11867,6 +11886,8 @@ namespace App_PLE.Vistas
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Size = new System.Drawing.Size(304, 21);
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.TabIndex = 40;
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique_TextChanged);
+            this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique_KeyPress);
             // 
             // label223
             // 
@@ -12032,6 +12053,8 @@ namespace App_PLE.Vistas
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Size = new System.Drawing.Size(195, 21);
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.TabIndex = 49;
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.UseWaitCursor = true;
+            this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.TextChanged += new System.EventHandler(this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique_TextChanged);
+            this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique_KeyPress);
             // 
             // label180
             // 
@@ -12053,6 +12076,8 @@ namespace App_PLE.Vistas
             this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Size = new System.Drawing.Size(167, 21);
             this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.TabIndex = 47;
             this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.UseWaitCursor = true;
+            this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.TextChanged += new System.EventHandler(this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique_TextChanged);
+            this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique_KeyPress);
             // 
             // label177
             // 
@@ -12208,6 +12233,7 @@ namespace App_PLE.Vistas
             this.txt_turno_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(79, 21);
             this.txt_turno_denuncia_declaracion_procedencia.TabIndex = 40;
             this.txt_turno_denuncia_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_turno_denuncia_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_turno_denuncia_declaracion_procedencia_KeyPress);
             // 
             // label232
             // 
@@ -12419,6 +12445,8 @@ namespace App_PLE.Vistas
             this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.Size = new System.Drawing.Size(304, 21);
             this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.TabIndex = 42;
             this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique_TextChanged);
+            this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique_KeyPress);
             // 
             // label243
             // 
@@ -12477,6 +12505,8 @@ namespace App_PLE.Vistas
             this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.Size = new System.Drawing.Size(304, 21);
             this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.TabIndex = 40;
             this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.UseWaitCursor = true;
+            this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.TextChanged += new System.EventHandler(this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique_TextChanged);
+            this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique_KeyPress);
             // 
             // label244
             // 
@@ -12510,6 +12540,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(296, 21);
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.TabIndex = 71;
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_nombre_institucion_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_nombre_institucion_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_nombre_institucion_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_institucion_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // label221
             // 
@@ -12606,6 +12638,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_3_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(171, 21);
             this.txt_apellido_3_persona_servidora_publica_comparecencia.TabIndex = 54;
             this.txt_apellido_3_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_apellido_3_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_apellido_3_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_apellido_3_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_3_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // label337
             // 
@@ -12628,6 +12662,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_2_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(171, 21);
             this.txt_apellido_2_persona_servidora_publica_comparecencia.TabIndex = 53;
             this.txt_apellido_2_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_apellido_2_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_apellido_2_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_apellido_2_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_2_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // txt_apellido_1_persona_servidora_publica_comparecencia
             // 
@@ -12638,6 +12674,8 @@ namespace App_PLE.Vistas
             this.txt_apellido_1_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(170, 21);
             this.txt_apellido_1_persona_servidora_publica_comparecencia.TabIndex = 52;
             this.txt_apellido_1_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_apellido_1_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_apellido_1_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_apellido_1_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido_1_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // label338
             // 
@@ -12660,6 +12698,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_1_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_1_persona_servidora_publica_comparecencia.TabIndex = 45;
             this.txt_nombre_1_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_nombre_1_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_nombre_1_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_nombre_1_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_1_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // label339
             // 
@@ -12682,6 +12722,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_2_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(170, 21);
             this.txt_nombre_2_persona_servidora_publica_comparecencia.TabIndex = 47;
             this.txt_nombre_2_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_nombre_2_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_nombre_2_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_nombre_2_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_2_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // label340
             // 
@@ -12704,6 +12746,8 @@ namespace App_PLE.Vistas
             this.txt_nombre_3_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(172, 21);
             this.txt_nombre_3_persona_servidora_publica_comparecencia.TabIndex = 49;
             this.txt_nombre_3_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.txt_nombre_3_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_nombre_3_persona_servidora_publica_comparecencia_TextChanged);
+            this.txt_nombre_3_persona_servidora_publica_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_3_persona_servidora_publica_comparecencia_KeyPress);
             // 
             // groupBox52
             // 
@@ -12872,6 +12916,8 @@ namespace App_PLE.Vistas
             this.cmb_otra_modalidad_comparecencia_especifique.Size = new System.Drawing.Size(208, 21);
             this.cmb_otra_modalidad_comparecencia_especifique.TabIndex = 79;
             this.cmb_otra_modalidad_comparecencia_especifique.UseWaitCursor = true;
+            this.cmb_otra_modalidad_comparecencia_especifique.TextChanged += new System.EventHandler(this.cmb_otra_modalidad_comparecencia_especifique_TextChanged);
+            this.cmb_otra_modalidad_comparecencia_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_otra_modalidad_comparecencia_especifique_KeyPress);
             // 
             // label211
             // 
@@ -12973,6 +13019,7 @@ namespace App_PLE.Vistas
             this.txt_consecutivo_comparecencia.Size = new System.Drawing.Size(187, 21);
             this.txt_consecutivo_comparecencia.TabIndex = 48;
             this.txt_consecutivo_comparecencia.UseWaitCursor = true;
+            this.txt_consecutivo_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_consecutivo_comparecencia_KeyPress);
             // 
             // label251
             // 
@@ -13095,6 +13142,8 @@ namespace App_PLE.Vistas
             this.txt_otro_motivo_comparecencia_especifique.Size = new System.Drawing.Size(326, 21);
             this.txt_otro_motivo_comparecencia_especifique.TabIndex = 40;
             this.txt_otro_motivo_comparecencia_especifique.UseWaitCursor = true;
+            this.txt_otro_motivo_comparecencia_especifique.TextChanged += new System.EventHandler(this.txt_otro_motivo_comparecencia_especifique_TextChanged);
+            this.txt_otro_motivo_comparecencia_especifique.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_otro_motivo_comparecencia_especifique_KeyPress);
             // 
             // dtp_fecha_comparecencia
             // 
