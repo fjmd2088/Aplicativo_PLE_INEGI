@@ -2049,7 +2049,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-1066, 19981);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-1102, 20321);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(112, 35);
@@ -2166,7 +2166,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-1135, 21656);
+            this.button24.Location = new System.Drawing.Point(-1171, 21996);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(112, 35);
@@ -8472,6 +8472,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_iniciativa_periodo.Size = new System.Drawing.Size(176, 23);
             this.cmb_cond_presentacion_iniciativa_periodo.TabIndex = 41;
             this.cmb_cond_presentacion_iniciativa_periodo.UseWaitCursor = true;
+            this.cmb_cond_presentacion_iniciativa_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_iniciativa_periodo_Validating);
             // 
             // txt_turno_iniciativa
             // 
@@ -8538,6 +8539,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.Size = new System.Drawing.Size(154, 23);
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.TabIndex = 32;
             this.cmb_cond_presentacion_iniciativa_legislatura_actual.UseWaitCursor = true;
+            this.cmb_cond_presentacion_iniciativa_legislatura_actual.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_presentacion_iniciativa_legislatura_actual_SelectedIndexChanged);
+            this.cmb_cond_presentacion_iniciativa_legislatura_actual.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_iniciativa_legislatura_actual_Validating);
             // 
             // label136
             // 

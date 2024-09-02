@@ -239,6 +239,7 @@ namespace App_PLE.Vistas
 
             // ---------------------------------------------- INICIATIVAS ---------------------------------------------------------------
             cmb_Cond_presentacion_iniciativa_legislatura_actual();
+
             cmb_Cond_presentacion_iniciativa_periodo();
             cmb_Numero_legislatura_presentacion_iniciativa();
             cmb_Cond_actualizacion_estatus_iniciativa_periodo();
@@ -248,6 +249,11 @@ namespace App_PLE.Vistas
             cmb_Tipo_iniciativa();
             cmb_Tipo_promovente_iniciativa();
             tipo_Organo_constitucional_autonomo();
+
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
+            cmb_cond_presentacion_iniciativa_periodo.Enabled = true; cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.Honeydew;
+
 
             Txt_otro_tipo_comision_legislativa_especifique.Enabled = false; txt_ID_comision_legislativa.Enabled = false;
             txt_otro_tema_comision_legislativa_especifique.Enabled = false;
@@ -300,6 +306,13 @@ namespace App_PLE.Vistas
         }
 
        
+
+
+
+
+
+
+
 
 
 
