@@ -12,6 +12,124 @@ namespace App_PLE.Vistas
     public partial class FormRegistros : Form
     {
 
+        // METODOS GENERALES
+        private void met_no_permite_acentos(KeyPressEventArgs e)
+        {
+            // Lista de caracteres permitidos sin acentos
+            string allowedCharacters = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ";
+
+            // Verificar si el carácter presionado no está en la lista permitida
+            if (!allowedCharacters.Contains(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Cancelar la entrada del carácter
+            }
+        }
+
+
+        // CARACTERISTICAS DEMOGRÁFICAS -------------------------------------------------------------------------------------------------------------
+
+        // txt_nombre_1_personal_apoyo
+        private void txt_nombre_1_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_nombre_1_personal_apoyo_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_nombre_1_personal_apoyo.Text = txt_nombre_1_personal_apoyo.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_nombre_1_personal_apoyo.SelectionStart = txt_nombre_1_personal_apoyo.Text.Length;
+
+        }
+
+        // txt_nombre_2_personal_apoyo
+        private void txt_nombre_2_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_nombre_2_personal_apoyo_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_nombre_2_personal_apoyo.Text = txt_nombre_2_personal_apoyo.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_nombre_2_personal_apoyo.SelectionStart = txt_nombre_2_personal_apoyo.Text.Length;
+
+        }
+
+        // txt_nombre_3_personal_apoyo
+        private void txt_nombre_3_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_nombre_3_personal_apoyo_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_nombre_3_personal_apoyo.Text = txt_nombre_3_personal_apoyo.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_nombre_3_personal_apoyo.SelectionStart = txt_nombre_3_personal_apoyo.Text.Length;
+        }
+
+        // txt_apellido_1_personal_apoyo
+        private void txt_apellido_1_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_apellido_1_personal_apoyo_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_apellido_1_personal_apoyo.Text = txt_apellido_1_personal_apoyo.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_apellido_1_personal_apoyo.SelectionStart = txt_apellido_1_personal_apoyo.Text.Length;
+        }
+
+        // txt_apellido_2_personal_apoyo
+        private void txt_apellido_2_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_apellido_2_personal_apoyo_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_apellido_2_personal_apoyo.Text = txt_apellido_2_personal_apoyo.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_apellido_2_personal_apoyo.SelectionStart = txt_apellido_2_personal_apoyo.Text.Length;
+        }
+
+        // txt_apellido_3_personal_apoyo
+        private void txt_apellido_3_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_apellido_3_personal_apoyo_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_apellido_3_personal_apoyo.Text = txt_apellido_3_personal_apoyo.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_apellido_3_personal_apoyo.SelectionStart = txt_apellido_3_personal_apoyo.Text.Length;
+        }
+
+
+        // LENGUA INDIGENA --------------------------------------------------------------------------------------------------------------------------
+
+        // DISCAPACIDAD -----------------------------------------------------------------------------------------------------------------------------
         private void cmb_Sexo_personal_apoyo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -587,117 +705,8 @@ namespace App_PLE.Vistas
             }
         }
 
-        // METODOS GENERALES
-        private void met_no_permite_acentos(KeyPressEventArgs e)
-        {
-            // Lista de caracteres permitidos sin acentos
-            string allowedCharacters = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ";
-
-            // Verificar si el carácter presionado no está en la lista permitida
-            if (!allowedCharacters.Contains(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true; // Cancelar la entrada del carácter
-            }
-        }
-
-        // txt_nombre_1_personal_apoyo
-        private void txt_nombre_1_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_nombre_1_personal_apoyo_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_nombre_1_personal_apoyo.Text = txt_nombre_1_personal_apoyo.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_nombre_1_personal_apoyo.SelectionStart = txt_nombre_1_personal_apoyo.Text.Length;
-
-        }
-
-        // txt_nombre_2_personal_apoyo
-        private void txt_nombre_2_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_nombre_2_personal_apoyo_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_nombre_2_personal_apoyo.Text = txt_nombre_2_personal_apoyo.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_nombre_2_personal_apoyo.SelectionStart = txt_nombre_2_personal_apoyo.Text.Length;
-
-        }
-
-        // txt_nombre_3_personal_apoyo
-        private void txt_nombre_3_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_nombre_3_personal_apoyo_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_nombre_3_personal_apoyo.Text = txt_nombre_3_personal_apoyo.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_nombre_3_personal_apoyo.SelectionStart = txt_nombre_3_personal_apoyo.Text.Length;
-        }
-
-        // txt_apellido_1_personal_apoyo
-        private void txt_apellido_1_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_apellido_1_personal_apoyo_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_apellido_1_personal_apoyo.Text = txt_apellido_1_personal_apoyo.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_apellido_1_personal_apoyo.SelectionStart = txt_apellido_1_personal_apoyo.Text.Length;
-        }
-
-        // txt_apellido_2_personal_apoyo
-        private void txt_apellido_2_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_apellido_2_personal_apoyo_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_apellido_2_personal_apoyo.Text = txt_apellido_2_personal_apoyo.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_apellido_2_personal_apoyo.SelectionStart = txt_apellido_2_personal_apoyo.Text.Length;
-        }
-
-        // txt_apellido_3_personal_apoyo
-        private void txt_apellido_3_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_apellido_3_personal_apoyo_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_apellido_3_personal_apoyo.Text = txt_apellido_3_personal_apoyo.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_apellido_3_personal_apoyo.SelectionStart = txt_apellido_3_personal_apoyo.Text.Length;
-        }
-
+        
+        
         // txt_otro_regimen_contratacion_personal_apoyo_especifique
         private void txt_otro_regimen_contratacion_personal_apoyo_especifique_KeyPress(object sender, KeyPressEventArgs e)
         {

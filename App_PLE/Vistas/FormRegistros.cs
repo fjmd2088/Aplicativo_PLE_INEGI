@@ -237,6 +237,12 @@ namespace App_PLE.Vistas
             cmb_Cond_secretario_tecnico_comision_legislativa_personal_apoyo();
             cmb_Pueblo_ind_pertenencia_personal_apoyo();
 
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_nombre_2_personal_apoyo.Enabled = false; txt_nombre_2_personal_apoyo.BackColor = Color.LightGray;
+            txt_nombre_3_personal_apoyo.Enabled = false; txt_nombre_3_personal_apoyo.BackColor = Color.LightGray;
+            txt_apellido_2_personal_apoyo.Enabled = false; txt_apellido_2_personal_apoyo.BackColor = Color.LightGray;
+            txt_apellido_3_personal_apoyo.Enabled = false; txt_apellido_3_personal_apoyo.BackColor = Color.LightGray;
+
             // ---------------------------------------------- INICIATIVAS ---------------------------------------------------------------
             cmb_Cond_presentacion_iniciativa_legislatura_actual();
 
