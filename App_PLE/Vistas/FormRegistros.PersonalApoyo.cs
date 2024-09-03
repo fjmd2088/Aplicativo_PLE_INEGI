@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +28,9 @@ namespace App_PLE.Vistas
         }
 
 
-        // CARACTERISTICAS DEMOGRÁFICAS -------------------------------------------------------------------------------------------------------------
+        // CARACTERISTICAS DEMOGRÁFICAS-------------------------------------------------------------------------------------------------------------
 
-        // txt_nombre_1_personal_apoyo
+       
         private void txt_nombre_1_personal_apoyo_KeyPress(object sender, KeyPressEventArgs e)
         {
             met_no_permite_acentos(e);
@@ -42,6 +44,21 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_nombre_1_personal_apoyo.SelectionStart = txt_nombre_1_personal_apoyo.Text.Length;
+
+            // Desbloquear txt_nombre_2_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text))
+            {
+                txt_nombre_2_personal_apoyo.Enabled = true;
+                txt_nombre_2_personal_apoyo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_nombre_1_personal_apoyo está vacío, borrar y deshabilitar txt_nombre_2_personal_apoyo
+                txt_nombre_2_personal_apoyo.Text = string.Empty;
+                txt_nombre_2_personal_apoyo.Enabled = false;
+                txt_nombre_2_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
+
 
         }
 
@@ -59,6 +76,20 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_nombre_2_personal_apoyo.SelectionStart = txt_nombre_2_personal_apoyo.Text.Length;
+
+            // Desbloquear txt_nombre_3_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_nombre_2_personal_apoyo.Text))
+            {
+                txt_nombre_3_personal_apoyo.Enabled = true;
+                txt_nombre_3_personal_apoyo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_nombre_2_personal_apoyo está vacío, borrar y deshabilitar txt_nombre_3_personal_apoyo
+                txt_nombre_3_personal_apoyo.Text = string.Empty;
+                txt_nombre_3_personal_apoyo.Enabled = false;
+                txt_nombre_3_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
 
         }
 
@@ -92,6 +123,21 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_apellido_1_personal_apoyo.SelectionStart = txt_apellido_1_personal_apoyo.Text.Length;
+
+            // Desbloquear txt_apellido_2_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                txt_apellido_2_personal_apoyo.Enabled = true;
+                txt_apellido_2_personal_apoyo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_apellido_1_personal_apoyo está vacío, borrar y deshabilitar txt_apellido_2_personal_apoyo
+                txt_apellido_2_personal_apoyo.Text = string.Empty;
+                txt_apellido_2_personal_apoyo.Enabled = false;
+                txt_apellido_2_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
+
         }
 
         // txt_apellido_2_personal_apoyo
@@ -108,6 +154,21 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_apellido_2_personal_apoyo.SelectionStart = txt_apellido_2_personal_apoyo.Text.Length;
+
+            // Desbloquear txt_apellido_3_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_apellido_2_personal_apoyo.Text))
+            {
+                txt_apellido_3_personal_apoyo.Enabled = true;
+                txt_apellido_3_personal_apoyo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_apellido_2_personal_apoyo está vacío, borrar y deshabilitar txt_apellido_3_personal_apoyo
+                txt_apellido_3_personal_apoyo.Text = string.Empty;
+                txt_apellido_3_personal_apoyo.Enabled = false;
+                txt_apellido_3_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
+
         }
 
         // txt_apellido_3_personal_apoyo
@@ -126,10 +187,7 @@ namespace App_PLE.Vistas
             txt_apellido_3_personal_apoyo.SelectionStart = txt_apellido_3_personal_apoyo.Text.Length;
         }
 
-
-        // LENGUA INDIGENA --------------------------------------------------------------------------------------------------------------------------
-
-        // DISCAPACIDAD -----------------------------------------------------------------------------------------------------------------------------
+        // cmb_sexo_personal_apoyo
         private void cmb_Sexo_personal_apoyo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -171,6 +229,56 @@ namespace App_PLE.Vistas
 
             }
         }
+
+        private void cmb_sexo_personal_apoyo_Validating(object sender, CancelEventArgs e)
+        {
+
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+
+        }
+
+        // LENGUA INDIGENA --------------------------------------------------------------------------------------------------------------------------
+
+        // DISCAPACIDAD -----------------------------------------------------------------------------------------------------------------------------
+
         private void cmb_Institucion_seguridad_social_personal_apoyo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
