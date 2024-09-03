@@ -468,10 +468,10 @@ namespace App_PLE.Vistas
             this.txt_nombre_1_personal_apoyo = new System.Windows.Forms.TextBox();
             this.label279 = new System.Windows.Forms.Label();
             this.groupBox63 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_borr_discap = new System.Windows.Forms.Button();
+            this.btn_agreg_discap = new System.Windows.Forms.Button();
+            this.dgv_tip_discap = new System.Windows.Forms.DataGridView();
+            this.Tabla_discapacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_tipo_discapacidad_1_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label269 = new System.Windows.Forms.Label();
             this.label270 = new System.Windows.Forms.Label();
@@ -485,10 +485,10 @@ namespace App_PLE.Vistas
             this.groupBox64 = new System.Windows.Forms.GroupBox();
             this.cmb_lengua_ind_1_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label273 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dgv_leng_ind = new System.Windows.Forms.DataGridView();
+            this.Lengua_indigena_PA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_elim_leng_ind = new System.Windows.Forms.Button();
+            this.btn_agr_leng_ind = new System.Windows.Forms.Button();
             this.cmb_cond_lengua_ind_personal_apoyo = new System.Windows.Forms.ComboBox();
             this.label274 = new System.Windows.Forms.Label();
             this.label281 = new System.Windows.Forms.Label();
@@ -1063,9 +1063,9 @@ namespace App_PLE.Vistas
             this.groupBox65.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox63.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tip_discap)).BeginInit();
             this.groupBox64.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_leng_ind)).BeginInit();
             this.tabPageIni.SuspendLayout();
             this.groupBox80.SuspendLayout();
             this.groupBox85.SuspendLayout();
@@ -2120,7 +2120,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-1506, 25413);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-1649, 26752);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2245,7 +2245,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-1598, 27475);
+            this.button24.Location = new System.Drawing.Point(-1741, 28814);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -5490,7 +5490,7 @@ namespace App_PLE.Vistas
             this.btnAgregarLenguaPA.Text = "Agregar";
             this.btnAgregarLenguaPA.UseVisualStyleBackColor = true;
             this.btnAgregarLenguaPA.UseWaitCursor = true;
-            this.btnAgregarLenguaPA.Click += new System.EventHandler(this.btnAgregarLenguaPL_Click);
+            this.btnAgregarLenguaPA.Click += new System.EventHandler(this.btnAgregarLenguaPA_Click);
             // 
             // cmb_cond_lengua_ind_persona_legisladora_PL
             // 
@@ -6844,9 +6844,9 @@ namespace App_PLE.Vistas
             // 
             // groupBox63
             // 
-            this.groupBox63.Controls.Add(this.button5);
-            this.groupBox63.Controls.Add(this.button7);
-            this.groupBox63.Controls.Add(this.dataGridView2);
+            this.groupBox63.Controls.Add(this.btn_borr_discap);
+            this.groupBox63.Controls.Add(this.btn_agreg_discap);
+            this.groupBox63.Controls.Add(this.dgv_tip_discap);
             this.groupBox63.Controls.Add(this.cmb_tipo_discapacidad_1_personal_apoyo);
             this.groupBox63.Controls.Add(this.label269);
             this.groupBox63.Controls.Add(this.label270);
@@ -6862,38 +6862,38 @@ namespace App_PLE.Vistas
             this.groupBox63.TabStop = false;
             this.groupBox63.Text = "Discapacidad";
             // 
-            // button5
+            // btn_borr_discap
             // 
-            this.button5.Location = new System.Drawing.Point(635, 206);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 33);
-            this.button5.TabIndex = 63;
-            this.button5.Text = "Eliminar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.UseWaitCursor = true;
+            this.btn_borr_discap.Location = new System.Drawing.Point(630, 221);
+            this.btn_borr_discap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_borr_discap.Name = "btn_borr_discap";
+            this.btn_borr_discap.Size = new System.Drawing.Size(147, 33);
+            this.btn_borr_discap.TabIndex = 63;
+            this.btn_borr_discap.Text = "Eliminar";
+            this.btn_borr_discap.UseVisualStyleBackColor = true;
+            this.btn_borr_discap.UseWaitCursor = true;
             // 
-            // button7
+            // btn_agreg_discap
             // 
-            this.button7.Location = new System.Drawing.Point(633, 155);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(147, 33);
-            this.button7.TabIndex = 62;
-            this.button7.Text = "Agregar";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.UseWaitCursor = true;
+            this.btn_agreg_discap.Location = new System.Drawing.Point(628, 170);
+            this.btn_agreg_discap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agreg_discap.Name = "btn_agreg_discap";
+            this.btn_agreg_discap.Size = new System.Drawing.Size(147, 33);
+            this.btn_agreg_discap.TabIndex = 62;
+            this.btn_agreg_discap.Text = "Agregar";
+            this.btn_agreg_discap.UseVisualStyleBackColor = true;
+            this.btn_agreg_discap.UseWaitCursor = true;
             // 
-            // dataGridView2
+            // dgv_tip_discap
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2});
+            this.dgv_tip_discap.AllowUserToAddRows = false;
+            this.dgv_tip_discap.AllowUserToDeleteRows = false;
+            this.dgv_tip_discap.AllowUserToResizeRows = false;
+            this.dgv_tip_discap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tip_discap.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_tip_discap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tip_discap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Tabla_discapacidad});
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -6901,34 +6901,34 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView2.Location = new System.Drawing.Point(24, 116);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(593, 159);
-            this.dataGridView2.TabIndex = 64;
-            this.dataGridView2.UseWaitCursor = true;
+            this.dgv_tip_discap.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgv_tip_discap.Location = new System.Drawing.Point(24, 145);
+            this.dgv_tip_discap.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_tip_discap.Name = "dgv_tip_discap";
+            this.dgv_tip_discap.ReadOnly = true;
+            this.dgv_tip_discap.RowHeadersVisible = false;
+            this.dgv_tip_discap.RowHeadersWidth = 51;
+            this.dgv_tip_discap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_tip_discap.Size = new System.Drawing.Size(566, 130);
+            this.dgv_tip_discap.TabIndex = 64;
+            this.dgv_tip_discap.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // Tabla_discapacidad
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo de discapacidad";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.Tabla_discapacidad.HeaderText = "Tipo de discapacidad";
+            this.Tabla_discapacidad.MinimumWidth = 6;
+            this.Tabla_discapacidad.Name = "Tabla_discapacidad";
+            this.Tabla_discapacidad.ReadOnly = true;
             // 
             // cmb_tipo_discapacidad_1_personal_apoyo
             // 
             this.cmb_tipo_discapacidad_1_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_tipo_discapacidad_1_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_discapacidad_1_personal_apoyo.FormattingEnabled = true;
-            this.cmb_tipo_discapacidad_1_personal_apoyo.Location = new System.Drawing.Point(547, 74);
+            this.cmb_tipo_discapacidad_1_personal_apoyo.Location = new System.Drawing.Point(24, 105);
             this.cmb_tipo_discapacidad_1_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_tipo_discapacidad_1_personal_apoyo.Name = "cmb_tipo_discapacidad_1_personal_apoyo";
-            this.cmb_tipo_discapacidad_1_personal_apoyo.Size = new System.Drawing.Size(235, 26);
+            this.cmb_tipo_discapacidad_1_personal_apoyo.Size = new System.Drawing.Size(772, 26);
             this.cmb_tipo_discapacidad_1_personal_apoyo.TabIndex = 61;
             this.cmb_tipo_discapacidad_1_personal_apoyo.UseWaitCursor = true;
             // 
@@ -6936,12 +6936,13 @@ namespace App_PLE.Vistas
             // 
             this.label269.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label269.ForeColor = System.Drawing.Color.Black;
-            this.label269.Location = new System.Drawing.Point(21, 78);
+            this.label269.Location = new System.Drawing.Point(206, 71);
             this.label269.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label269.Name = "label269";
-            this.label269.Size = new System.Drawing.Size(512, 32);
+            this.label269.Size = new System.Drawing.Size(393, 32);
             this.label269.TabIndex = 60;
             this.label269.Text = "Tipo de discapacidad que presenta la persona de apoyo:";
+            this.label269.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label269.UseWaitCursor = true;
             // 
             // label270
@@ -6951,7 +6952,7 @@ namespace App_PLE.Vistas
             this.label270.Location = new System.Drawing.Point(24, 26);
             this.label270.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label270.Name = "label270";
-            this.label270.Size = new System.Drawing.Size(516, 37);
+            this.label270.Size = new System.Drawing.Size(479, 37);
             this.label270.TabIndex = 50;
             this.label270.Text = "Condición de la persona de apoyo de presentar algún tipo de discapacidad*:";
             this.label270.UseWaitCursor = true;
@@ -6961,11 +6962,12 @@ namespace App_PLE.Vistas
             this.cmb_cond_discapacidad_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_discapacidad_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_discapacidad_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_discapacidad_personal_apoyo.Location = new System.Drawing.Point(547, 25);
+            this.cmb_cond_discapacidad_personal_apoyo.Location = new System.Drawing.Point(511, 27);
             this.cmb_cond_discapacidad_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_discapacidad_personal_apoyo.Name = "cmb_cond_discapacidad_personal_apoyo";
-            this.cmb_cond_discapacidad_personal_apoyo.Size = new System.Drawing.Size(235, 28);
+            this.cmb_cond_discapacidad_personal_apoyo.Size = new System.Drawing.Size(285, 28);
             this.cmb_cond_discapacidad_personal_apoyo.TabIndex = 32;
+            this.cmb_cond_discapacidad_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_discapacidad_personal_apoyo_SelectedIndexChanged);
             // 
             // txt_apellido_2_personal_apoyo
             // 
@@ -7051,9 +7053,9 @@ namespace App_PLE.Vistas
             // 
             this.groupBox64.Controls.Add(this.cmb_lengua_ind_1_personal_apoyo);
             this.groupBox64.Controls.Add(this.label273);
-            this.groupBox64.Controls.Add(this.dataGridView1);
-            this.groupBox64.Controls.Add(this.button1);
-            this.groupBox64.Controls.Add(this.button4);
+            this.groupBox64.Controls.Add(this.dgv_leng_ind);
+            this.groupBox64.Controls.Add(this.btn_elim_leng_ind);
+            this.groupBox64.Controls.Add(this.btn_agr_leng_ind);
             this.groupBox64.Controls.Add(this.cmb_cond_lengua_ind_personal_apoyo);
             this.groupBox64.Controls.Add(this.label274);
             this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -7072,35 +7074,37 @@ namespace App_PLE.Vistas
             this.cmb_lengua_ind_1_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_lengua_ind_1_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_lengua_ind_1_personal_apoyo.FormattingEnabled = true;
-            this.cmb_lengua_ind_1_personal_apoyo.Location = new System.Drawing.Point(531, 75);
+            this.cmb_lengua_ind_1_personal_apoyo.Location = new System.Drawing.Point(482, 75);
             this.cmb_lengua_ind_1_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_lengua_ind_1_personal_apoyo.Name = "cmb_lengua_ind_1_personal_apoyo";
-            this.cmb_lengua_ind_1_personal_apoyo.Size = new System.Drawing.Size(215, 26);
+            this.cmb_lengua_ind_1_personal_apoyo.Size = new System.Drawing.Size(278, 26);
             this.cmb_lengua_ind_1_personal_apoyo.TabIndex = 58;
             this.cmb_lengua_ind_1_personal_apoyo.UseWaitCursor = true;
+            this.cmb_lengua_ind_1_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_lengua_ind_1_personal_apoyo_Validating);
             // 
             // label273
             // 
             this.label273.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label273.ForeColor = System.Drawing.Color.Black;
-            this.label273.Location = new System.Drawing.Point(5, 78);
+            this.label273.Location = new System.Drawing.Point(10, 69);
             this.label273.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label273.Name = "label273";
-            this.label273.Size = new System.Drawing.Size(517, 32);
+            this.label273.Size = new System.Drawing.Size(446, 37);
             this.label273.TabIndex = 57;
             this.label273.Text = "Lengua indígena que habla la persona de apoyo:";
+            this.label273.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label273.UseWaitCursor = true;
             // 
-            // dataGridView1
+            // dgv_leng_ind
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
+            this.dgv_leng_ind.AllowUserToAddRows = false;
+            this.dgv_leng_ind.AllowUserToDeleteRows = false;
+            this.dgv_leng_ind.AllowUserToResizeRows = false;
+            this.dgv_leng_ind.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_leng_ind.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_leng_ind.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_leng_ind.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Lengua_indigena_PA});
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -7108,59 +7112,63 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 119);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(580, 154);
-            this.dataGridView1.TabIndex = 56;
-            this.dataGridView1.UseWaitCursor = true;
+            this.dgv_leng_ind.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgv_leng_ind.Location = new System.Drawing.Point(12, 122);
+            this.dgv_leng_ind.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_leng_ind.Name = "dgv_leng_ind";
+            this.dgv_leng_ind.ReadOnly = true;
+            this.dgv_leng_ind.RowHeadersVisible = false;
+            this.dgv_leng_ind.RowHeadersWidth = 51;
+            this.dgv_leng_ind.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_leng_ind.Size = new System.Drawing.Size(560, 151);
+            this.dgv_leng_ind.TabIndex = 56;
+            this.dgv_leng_ind.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // Lengua_indigena_PA
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Lengua Indígena";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.Lengua_indigena_PA.HeaderText = "Lengua Indígena";
+            this.Lengua_indigena_PA.MinimumWidth = 6;
+            this.Lengua_indigena_PA.Name = "Lengua_indigena_PA";
+            this.Lengua_indigena_PA.ReadOnly = true;
             // 
-            // button1
+            // btn_elim_leng_ind
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(609, 206);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 33);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
+            this.btn_elim_leng_ind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_elim_leng_ind.Location = new System.Drawing.Point(603, 209);
+            this.btn_elim_leng_ind.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_elim_leng_ind.Name = "btn_elim_leng_ind";
+            this.btn_elim_leng_ind.Size = new System.Drawing.Size(147, 33);
+            this.btn_elim_leng_ind.TabIndex = 55;
+            this.btn_elim_leng_ind.Text = "Eliminar";
+            this.btn_elim_leng_ind.UseVisualStyleBackColor = true;
+            this.btn_elim_leng_ind.UseWaitCursor = true;
+            this.btn_elim_leng_ind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_elim_leng_ind_MouseClick);
             // 
-            // button4
+            // btn_agr_leng_ind
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(609, 155);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 33);
-            this.button4.TabIndex = 54;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.UseWaitCursor = true;
+            this.btn_agr_leng_ind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agr_leng_ind.Location = new System.Drawing.Point(603, 158);
+            this.btn_agr_leng_ind.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agr_leng_ind.Name = "btn_agr_leng_ind";
+            this.btn_agr_leng_ind.Size = new System.Drawing.Size(147, 33);
+            this.btn_agr_leng_ind.TabIndex = 54;
+            this.btn_agr_leng_ind.Text = "Agregar";
+            this.btn_agr_leng_ind.UseVisualStyleBackColor = true;
+            this.btn_agr_leng_ind.UseWaitCursor = true;
+            this.btn_agr_leng_ind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_agr_leng_ind_MouseClick);
             // 
             // cmb_cond_lengua_ind_personal_apoyo
             // 
             this.cmb_cond_lengua_ind_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_lengua_ind_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_lengua_ind_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_lengua_ind_personal_apoyo.Location = new System.Drawing.Point(531, 33);
+            this.cmb_cond_lengua_ind_personal_apoyo.Location = new System.Drawing.Point(525, 22);
             this.cmb_cond_lengua_ind_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_lengua_ind_personal_apoyo.Name = "cmb_cond_lengua_ind_personal_apoyo";
-            this.cmb_cond_lengua_ind_personal_apoyo.Size = new System.Drawing.Size(215, 28);
+            this.cmb_cond_lengua_ind_personal_apoyo.Size = new System.Drawing.Size(235, 28);
             this.cmb_cond_lengua_ind_personal_apoyo.TabIndex = 32;
+            this.cmb_cond_lengua_ind_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_lengua_ind_personal_apoyo_SelectedIndexChanged);
+            this.cmb_cond_lengua_ind_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_lengua_ind_personal_apoyo_Validating);
             // 
             // label274
             // 
@@ -7170,7 +7178,7 @@ namespace App_PLE.Vistas
             this.label274.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label274.Name = "label274";
             this.label274.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label274.Size = new System.Drawing.Size(505, 53);
+            this.label274.Size = new System.Drawing.Size(448, 53);
             this.label274.TabIndex = 20;
             this.label274.Text = "Condición de la persona de apoyo de hablar alguna lengua indígena*:";
             // 
@@ -14367,9 +14375,9 @@ namespace App_PLE.Vistas
             this.groupBox65.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox63.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tip_discap)).EndInit();
             this.groupBox64.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_leng_ind)).EndInit();
             this.tabPageIni.ResumeLayout(false);
             this.tabPageIni.PerformLayout();
             this.groupBox80.ResumeLayout(false);
@@ -15066,16 +15074,14 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Button btnActualizarDGV_CL;
         private System.Windows.Forms.Label label298;
         private System.Windows.Forms.TextBox txt_ID_personal_apoyo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dgv_leng_ind;
+        private System.Windows.Forms.Button btn_elim_leng_ind;
+        private System.Windows.Forms.Button btn_agr_leng_ind;
         private System.Windows.Forms.Label label269;
         private System.Windows.Forms.Label label270;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button btn_borr_discap;
+        private System.Windows.Forms.Button btn_agreg_discap;
+        private System.Windows.Forms.DataGridView dgv_tip_discap;
         private System.Windows.Forms.ComboBox cmb_tipo_discapacidad_1_personal_apoyo;
         private System.Windows.Forms.ComboBox cmb_lengua_ind_1_personal_apoyo;
         private System.Windows.Forms.Label label273;
@@ -15467,5 +15473,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label201;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lengua_indigena_PA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tabla_discapacidad;
     }
 }

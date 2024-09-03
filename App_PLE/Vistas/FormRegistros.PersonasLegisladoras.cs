@@ -3827,7 +3827,7 @@ namespace App_PLE.Vistas
                 }
             }
         }
-        private void btnAgregarLenguaPL_Click(object sender, EventArgs e)
+        private void btnAgregarLenguaPA_Click(object sender, EventArgs e)
         {
             // se obtienen los valores
             string lengua_pl = cmb_lengua_ind_persona_legisladora.Text.Trim();

@@ -236,12 +236,22 @@ namespace App_PLE.Vistas
             cmb_Tipo_adscripcion_personal_apoyo();
             cmb_Cond_secretario_tecnico_comision_legislativa_personal_apoyo();
             cmb_Pueblo_ind_pertenencia_personal_apoyo();
+            CMB_LENGUA_IND_1_PERSONAL_APOYO();
+            CMB_tipo_discapacidad_1_personal_apoyo();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_nombre_2_personal_apoyo.Enabled = false; txt_nombre_2_personal_apoyo.BackColor = Color.LightGray;
             txt_nombre_3_personal_apoyo.Enabled = false; txt_nombre_3_personal_apoyo.BackColor = Color.LightGray;
             txt_apellido_2_personal_apoyo.Enabled = false; txt_apellido_2_personal_apoyo.BackColor = Color.LightGray;
             txt_apellido_3_personal_apoyo.Enabled = false; txt_apellido_3_personal_apoyo.BackColor = Color.LightGray;
+            cmb_lengua_ind_1_personal_apoyo.Enabled = false; cmb_lengua_ind_1_personal_apoyo.BackColor = Color.LightGray;
+            cmb_tipo_discapacidad_1_personal_apoyo.Enabled = false; cmb_tipo_discapacidad_1_personal_apoyo.BackColor = Color.LightGray;
+            dgv_leng_ind.BackgroundColor = Color.LightGray;
+            dgv_tip_discap.BackgroundColor = Color.LightGray;
+
+            btn_agr_leng_ind.Enabled = false; btn_elim_leng_ind.Enabled = false;
+            btn_agreg_discap.Enabled = false; btn_borr_discap.Enabled = false;
+
 
             // ---------------------------------------------- INICIATIVAS ---------------------------------------------------------------
             cmb_Cond_presentacion_iniciativa_legislatura_actual();
@@ -312,6 +322,23 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
