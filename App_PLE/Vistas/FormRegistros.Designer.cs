@@ -2120,7 +2120,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-1649, 26752);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-1880, 28915);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2245,7 +2245,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-1741, 28814);
+            this.button24.Location = new System.Drawing.Point(-1972, 30977);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -6230,6 +6230,7 @@ namespace App_PLE.Vistas
             this.txt_ingreso_mensual_personal_apoyo.Name = "txt_ingreso_mensual_personal_apoyo";
             this.txt_ingreso_mensual_personal_apoyo.Size = new System.Drawing.Size(181, 26);
             this.txt_ingreso_mensual_personal_apoyo.TabIndex = 29;
+            this.txt_ingreso_mensual_personal_apoyo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ingreso_mensual_personal_apoyo_KeyPress);
             // 
             // label256
             // 
@@ -6268,6 +6269,7 @@ namespace App_PLE.Vistas
             this.cmb_institucion_seguridad_social_personal_apoyo.Name = "cmb_institucion_seguridad_social_personal_apoyo";
             this.cmb_institucion_seguridad_social_personal_apoyo.Size = new System.Drawing.Size(741, 28);
             this.cmb_institucion_seguridad_social_personal_apoyo.TabIndex = 31;
+            this.cmb_institucion_seguridad_social_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_institucion_seguridad_social_personal_apoyo_Validating);
             // 
             // label255
             // 
@@ -6329,6 +6331,8 @@ namespace App_PLE.Vistas
             this.cmb_regimen_contratacion_personal_apoyo.Name = "cmb_regimen_contratacion_personal_apoyo";
             this.cmb_regimen_contratacion_personal_apoyo.Size = new System.Drawing.Size(543, 28);
             this.cmb_regimen_contratacion_personal_apoyo.TabIndex = 25;
+            this.cmb_regimen_contratacion_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_regimen_contratacion_personal_apoyo_SelectedIndexChanged);
+            this.cmb_regimen_contratacion_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_regimen_contratacion_personal_apoyo_Validating);
             // 
             // label258
             // 
@@ -6369,12 +6373,12 @@ namespace App_PLE.Vistas
             // 
             this.label261.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label261.ForeColor = System.Drawing.Color.Black;
-            this.label261.Location = new System.Drawing.Point(632, 78);
+            this.label261.Location = new System.Drawing.Point(672, 28);
             this.label261.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label261.Name = "label261";
-            this.label261.Size = new System.Drawing.Size(167, 36);
+            this.label261.Size = new System.Drawing.Size(288, 36);
             this.label261.TabIndex = 40;
-            this.label261.Text = "Grupo parlamentario\r\nde adscripción:";
+            this.label261.Text = "Grupo parlamentario de adscripción:";
             this.label261.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmb_grupo_parlamentario_personal_apoyo
@@ -6382,20 +6386,21 @@ namespace App_PLE.Vistas
             this.cmb_grupo_parlamentario_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_grupo_parlamentario_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_grupo_parlamentario_personal_apoyo.FormattingEnabled = true;
-            this.cmb_grupo_parlamentario_personal_apoyo.Location = new System.Drawing.Point(805, 86);
+            this.cmb_grupo_parlamentario_personal_apoyo.Location = new System.Drawing.Point(968, 33);
             this.cmb_grupo_parlamentario_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_grupo_parlamentario_personal_apoyo.Name = "cmb_grupo_parlamentario_personal_apoyo";
-            this.cmb_grupo_parlamentario_personal_apoyo.Size = new System.Drawing.Size(520, 28);
+            this.cmb_grupo_parlamentario_personal_apoyo.Size = new System.Drawing.Size(616, 28);
             this.cmb_grupo_parlamentario_personal_apoyo.TabIndex = 39;
+            
             // 
             // label262
             // 
             this.label262.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label262.ForeColor = System.Drawing.Color.Black;
-            this.label262.Location = new System.Drawing.Point(12, 78);
+            this.label262.Location = new System.Drawing.Point(524, 81);
             this.label262.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label262.Name = "label262";
-            this.label262.Size = new System.Drawing.Size(183, 36);
+            this.label262.Size = new System.Drawing.Size(386, 51);
             this.label262.TabIndex = 38;
             this.label262.Text = "Nombre de la persona legisladora de adscripción:";
             this.label262.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6403,10 +6408,10 @@ namespace App_PLE.Vistas
             // txt_ID_persona_legisladora_personal_apoyo
             // 
             this.txt_ID_persona_legisladora_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_ID_persona_legisladora_personal_apoyo.Location = new System.Drawing.Point(1353, 36);
+            this.txt_ID_persona_legisladora_personal_apoyo.Location = new System.Drawing.Point(1440, 93);
             this.txt_ID_persona_legisladora_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID_persona_legisladora_personal_apoyo.Name = "txt_ID_persona_legisladora_personal_apoyo";
-            this.txt_ID_persona_legisladora_personal_apoyo.Size = new System.Drawing.Size(233, 27);
+            this.txt_ID_persona_legisladora_personal_apoyo.Size = new System.Drawing.Size(144, 27);
             this.txt_ID_persona_legisladora_personal_apoyo.TabIndex = 37;
             // 
             // cmb_nombre_persona_legisladora_personal_apoyo
@@ -6414,29 +6419,30 @@ namespace App_PLE.Vistas
             this.cmb_nombre_persona_legisladora_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_nombre_persona_legisladora_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_nombre_persona_legisladora_personal_apoyo.FormattingEnabled = true;
-            this.cmb_nombre_persona_legisladora_personal_apoyo.Location = new System.Drawing.Point(217, 86);
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Location = new System.Drawing.Point(918, 92);
             this.cmb_nombre_persona_legisladora_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_nombre_persona_legisladora_personal_apoyo.Name = "cmb_nombre_persona_legisladora_personal_apoyo";
-            this.cmb_nombre_persona_legisladora_personal_apoyo.Size = new System.Drawing.Size(373, 28);
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Size = new System.Drawing.Size(324, 28);
             this.cmb_nombre_persona_legisladora_personal_apoyo.TabIndex = 36;
+            this.cmb_nombre_persona_legisladora_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_persona_legisladora_personal_apoyo_SelectedIndexChanged);
+            this.cmb_nombre_persona_legisladora_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_persona_legisladora_personal_apoyo_Validating);
             // 
             // label263
             // 
-            this.label263.AutoSize = true;
             this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label263.ForeColor = System.Drawing.Color.Black;
-            this.label263.Location = new System.Drawing.Point(1175, 25);
+            this.label263.Location = new System.Drawing.Point(1258, 74);
             this.label263.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label263.Name = "label263";
-            this.label263.Size = new System.Drawing.Size(159, 36);
+            this.label263.Size = new System.Drawing.Size(195, 62);
             this.label263.TabIndex = 35;
-            this.label263.Text = "ID persona legisladora \r\nde adscripción:";
+            this.label263.Text = "ID persona legisladora:";
             this.label263.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_otro_tipo_adscripcion_personal_apoyo_especifique
             // 
             this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Location = new System.Drawing.Point(821, 36);
+            this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Location = new System.Drawing.Point(212, 92);
             this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Margin = new System.Windows.Forms.Padding(4);
             this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Name = "txt_otro_tipo_adscripcion_personal_apoyo_especifique";
             this.txt_otro_tipo_adscripcion_personal_apoyo_especifique.Size = new System.Drawing.Size(288, 27);
@@ -6449,7 +6455,7 @@ namespace App_PLE.Vistas
             this.label264.AutoSize = true;
             this.label264.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label264.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label264.Location = new System.Drawing.Point(632, 37);
+            this.label264.Location = new System.Drawing.Point(10, 96);
             this.label264.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label264.Name = "label264";
             this.label264.Size = new System.Drawing.Size(170, 18);
@@ -6466,6 +6472,8 @@ namespace App_PLE.Vistas
             this.cmb_tipo_adscripcion_personal_apoyo.Name = "cmb_tipo_adscripcion_personal_apoyo";
             this.cmb_tipo_adscripcion_personal_apoyo.Size = new System.Drawing.Size(392, 28);
             this.cmb_tipo_adscripcion_personal_apoyo.TabIndex = 32;
+            this.cmb_tipo_adscripcion_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_tipo_adscripcion_personal_apoyo_SelectedIndexChanged);
+            this.cmb_tipo_adscripcion_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_adscripcion_personal_apoyo_Validating);
             // 
             // label265
             // 
@@ -6515,7 +6523,7 @@ namespace App_PLE.Vistas
             // txt_ID_comision_legislativa_personal_apoyo
             // 
             this.txt_ID_comision_legislativa_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_ID_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1267, 82);
+            this.txt_ID_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1329, 83);
             this.txt_ID_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID_comision_legislativa_personal_apoyo.Name = "txt_ID_comision_legislativa_personal_apoyo";
             this.txt_ID_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(227, 27);
@@ -6529,20 +6537,19 @@ namespace App_PLE.Vistas
             this.cmb_nombre_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(767, 82);
             this.cmb_nombre_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_nombre_comision_legislativa_personal_apoyo.Name = "cmb_nombre_comision_legislativa_personal_apoyo";
-            this.cmb_nombre_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(417, 28);
+            this.cmb_nombre_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(445, 28);
             this.cmb_nombre_comision_legislativa_personal_apoyo.TabIndex = 40;
             // 
             // label283
             // 
             this.label283.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label283.ForeColor = System.Drawing.Color.Black;
-            this.label283.Location = new System.Drawing.Point(1177, 25);
+            this.label283.Location = new System.Drawing.Point(1314, 24);
             this.label283.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label283.Name = "label283";
-            this.label283.Size = new System.Drawing.Size(393, 53);
+            this.label283.Size = new System.Drawing.Size(258, 53);
             this.label283.TabIndex = 39;
-            this.label283.Text = "Identificador de la comisión legislativa en la que la persona de apoyo se desempe" +
-    "ña como secretaria técnica:";
+            this.label283.Text = "ID de la comisión legislativa:";
             this.label283.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo
@@ -6550,7 +6557,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.FormattingEnabled = true;
-            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(917, 27);
+            this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Location = new System.Drawing.Point(1007, 24);
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Name = "cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo";
             this.cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Size = new System.Drawing.Size(205, 28);
@@ -6651,7 +6658,7 @@ namespace App_PLE.Vistas
             this.label299.Location = new System.Drawing.Point(875, 36);
             this.label299.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label299.Name = "label299";
-            this.label299.Size = new System.Drawing.Size(451, 22);
+            this.label299.Size = new System.Drawing.Size(416, 22);
             this.label299.TabIndex = 48;
             this.label299.Text = "Pueblo indígena de pertenencia del personal de apoyo:";
             this.label299.UseWaitCursor = true;
@@ -6667,18 +6674,21 @@ namespace App_PLE.Vistas
             this.cmb_cond_pueblo_ind_personal_apoyo.Size = new System.Drawing.Size(208, 28);
             this.cmb_cond_pueblo_ind_personal_apoyo.TabIndex = 38;
             this.cmb_cond_pueblo_ind_personal_apoyo.UseWaitCursor = true;
+            this.cmb_cond_pueblo_ind_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_pueblo_ind_personal_apoyo_SelectedIndexChanged);
+            this.cmb_cond_pueblo_ind_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_pueblo_ind_personal_apoyo_Validating);
             // 
             // cmb_pueblo_ind_pertenencia_personal_apoyo
             // 
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.FormattingEnabled = true;
-            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Location = new System.Drawing.Point(1332, 33);
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Location = new System.Drawing.Point(1313, 33);
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Name = "cmb_pueblo_ind_pertenencia_personal_apoyo";
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.Size = new System.Drawing.Size(255, 28);
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.TabIndex = 42;
             this.cmb_pueblo_ind_pertenencia_personal_apoyo.UseWaitCursor = true;
+            this.cmb_pueblo_ind_pertenencia_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_pueblo_ind_pertenencia_personal_apoyo_Validating);
             // 
             // label300
             // 
@@ -6872,6 +6882,7 @@ namespace App_PLE.Vistas
             this.btn_borr_discap.Text = "Eliminar";
             this.btn_borr_discap.UseVisualStyleBackColor = true;
             this.btn_borr_discap.UseWaitCursor = true;
+            this.btn_borr_discap.Click += new System.EventHandler(this.btn_borr_discap_Click);
             // 
             // btn_agreg_discap
             // 
@@ -6883,6 +6894,7 @@ namespace App_PLE.Vistas
             this.btn_agreg_discap.Text = "Agregar";
             this.btn_agreg_discap.UseVisualStyleBackColor = true;
             this.btn_agreg_discap.UseWaitCursor = true;
+            this.btn_agreg_discap.Click += new System.EventHandler(this.btn_agreg_discap_Click);
             // 
             // dgv_tip_discap
             // 
@@ -6931,6 +6943,7 @@ namespace App_PLE.Vistas
             this.cmb_tipo_discapacidad_1_personal_apoyo.Size = new System.Drawing.Size(772, 26);
             this.cmb_tipo_discapacidad_1_personal_apoyo.TabIndex = 61;
             this.cmb_tipo_discapacidad_1_personal_apoyo.UseWaitCursor = true;
+            this.cmb_tipo_discapacidad_1_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_discapacidad_1_personal_apoyo_Validating);
             // 
             // label269
             // 
@@ -6968,6 +6981,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_discapacidad_personal_apoyo.Size = new System.Drawing.Size(285, 28);
             this.cmb_cond_discapacidad_personal_apoyo.TabIndex = 32;
             this.cmb_cond_discapacidad_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_discapacidad_personal_apoyo_SelectedIndexChanged);
+            this.cmb_cond_discapacidad_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_discapacidad_personal_apoyo_Validating);
             // 
             // txt_apellido_2_personal_apoyo
             // 
