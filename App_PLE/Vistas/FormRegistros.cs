@@ -240,6 +240,7 @@ namespace App_PLE.Vistas
             CMB_tipo_discapacidad_1_personal_apoyo();
             CMB_nombre_persona_legisladora_personal_apoyo();
             CMB_grupo_parlamentario_personal_apoyo();
+            cmb_Nombre_comision_legislativa_personal_apoyo();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_nombre_2_personal_apoyo.Enabled = false; txt_nombre_2_personal_apoyo.BackColor = Color.LightGray;
@@ -259,6 +260,8 @@ namespace App_PLE.Vistas
             cmb_nombre_persona_legisladora_personal_apoyo.Enabled = false;
             txt_ID_persona_legisladora_personal_apoyo.Enabled = false;
             cmb_grupo_parlamentario_personal_apoyo.Enabled = false;
+            cmb_nombre_comision_legislativa_personal_apoyo.Enabled = false;
+            txt_ID_comision_legislativa_personal_apoyo.Enabled = false;
 
 
             // ---------------------------------------------- INICIATIVAS ---------------------------------------------------------------
@@ -329,7 +332,31 @@ namespace App_PLE.Vistas
 
         }
 
-       
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

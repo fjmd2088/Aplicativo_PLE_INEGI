@@ -1051,6 +1051,22 @@ namespace App_PLE.Vistas
             }
         }
 
+        // txt_otro_regimen_contratacion_personal_apoyo_especifique
+        private void txt_otro_regimen_contratacion_personal_apoyo_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_regimen_contratacion_personal_apoyo_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_regimen_contratacion_personal_apoyo_especifique.Text = txt_otro_regimen_contratacion_personal_apoyo_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_regimen_contratacion_personal_apoyo_especifique.SelectionStart = txt_otro_regimen_contratacion_personal_apoyo_especifique.Text.Length;
+        }
+
         // SEGURIDAD SOCIAL ---------------------------------------------------------------------------------------------------------------------------
 
         private void cmb_Institucion_seguridad_social_personal_apoyo()
@@ -1487,10 +1503,244 @@ namespace App_PLE.Vistas
                 }
             }
         }
-        
+
+        // txt_otro_tipo_adscripcion_personal_apoyo_especifique
+        private void txt_otro_tipo_adscripcion_personal_apoyo_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_adscripcion_personal_apoyo_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_adscripcion_personal_apoyo_especifique.Text = txt_otro_tipo_adscripcion_personal_apoyo_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_adscripcion_personal_apoyo_especifique.SelectionStart = txt_otro_tipo_adscripcion_personal_apoyo_especifique.Text.Length;
+
+        }
+
 
         // TITULARIDAD DE LA SEECRETARIA TÉCNICA DE DETERMINADA COMISIÓN LEGISLATIVA ------------------------------------------------------------------
 
+        private void cmb_Cond_secretario_tecnico_comision_legislativa_personal_apoyo()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2,3)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.DataSource = dataTable;
+                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.DisplayMember = "descripcion";
+
+                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+            string valorComboBox1 = cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.Text.ToString();
+
+            if (valorComboBox1 == "Si")
+            {
+                cmb_nombre_comision_legislativa_personal_apoyo.Enabled = true;
+                cmb_nombre_comision_legislativa_personal_apoyo.BackColor = Color.Honeydew;
+
+                txt_ID_comision_legislativa_personal_apoyo.Enabled = false;
+                txt_ID_comision_legislativa_personal_apoyo.BackColor = Color.Honeydew;
+
+                // Enfocar el ComboBox
+                cmb_nombre_comision_legislativa_personal_apoyo.Focus();
+            }
+            else
+            {
+                // Si el valor es "No", deshabilitar el ComboBox y limpiar el TextBox
+                cmb_nombre_comision_legislativa_personal_apoyo.Enabled = false;
+                cmb_nombre_comision_legislativa_personal_apoyo.BackColor = Color.LightGray;
+                cmb_nombre_comision_legislativa_personal_apoyo.SelectedIndex = -1; // Limpiar selección del ComboBox
+
+                txt_ID_comision_legislativa_personal_apoyo.Enabled = false;
+                txt_ID_comision_legislativa_personal_apoyo.BackColor = Color.LightGray;
+                txt_ID_comision_legislativa_personal_apoyo.Text = ""; // Limpiar el contenido del TextBox
+            }
+        }
+
+        // cmb_nombre_comision_legislativa_personal_apoyo
+
+        private void cmb_Nombre_comision_legislativa_personal_apoyo()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Comando de SQL para seleccionar el nombre de la comisión legislativa y el ID
+                    string query = "SELECT ID_comision_legislativa, nombre_comision_legislativa FROM TR_COMISIONES_LEGISLATIVAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataAdapter para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Asignar el DataTable como fuente de datos para el ComboBox
+                    cmb_nombre_comision_legislativa_personal_apoyo.DataSource = dataTable;
+                    cmb_nombre_comision_legislativa_personal_apoyo.DisplayMember = "nombre_comision_legislativa";
+                    cmb_nombre_comision_legislativa_personal_apoyo.ValueMember = "ID_comision_legislativa"; // Asociar el ID
+
+                    // Configurar el ComboBox
+                    cmb_nombre_comision_legislativa_personal_apoyo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_comision_legislativa_personal_apoyo.AutoCompleteSource = AutoCompleteSource.ListItems;
+                    cmb_nombre_comision_legislativa_personal_apoyo.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_comision_legislativa_personal_apoyo.SelectedIndex = -1; // Dejar vacío al iniciar
+
+                    // Asignar evento para actualizar el TextBox cuando se selecciona una opción
+                    cmb_nombre_comision_legislativa_personal_apoyo.SelectedIndexChanged += cmb_nombre_comision_legislativa_personal_apoyo_SelectedIndexChanged;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+        }
+        private void cmb_nombre_comision_legislativa_personal_apoyo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Verificar si hay una selección válida
+            if (cmb_nombre_comision_legislativa_personal_apoyo.SelectedIndex != -1 && !string.IsNullOrEmpty(cmb_nombre_comision_legislativa_personal_apoyo.Text))
+            {
+                // Obtener el ID asociado a la comisión seleccionada
+                string idComisionLegislativa = cmb_nombre_comision_legislativa_personal_apoyo.SelectedValue.ToString();
+
+                // Mostrar el ID en el TextBox txt_ID_comision_legislativa_personal_apoyo
+                txt_ID_comision_legislativa_personal_apoyo.Text = idComisionLegislativa;
+            }
+            else
+            {
+                // Limpiar el TextBox si no hay selección válida o si se vacía el ComboBox
+                txt_ID_comision_legislativa_personal_apoyo.Text = string.Empty;
+            }
+        }
+        private void cmb_nombre_comision_legislativa_personal_apoyo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
 
 
         // PERFIL PROFECIONAL -------------------------------------------------------------------------------------------------------------------------
@@ -1536,6 +1786,260 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_escolaridad_personal_apoyo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_escolaridad_personal_apoyo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            if (cmb_escolaridad_personal_apoyo.SelectedItem != null)
+            {
+                // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
+                string valorComboBox = cmb_escolaridad_personal_apoyo.Text.ToString();
+
+
+                using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                {
+                    try
+                    {
+                        // abrir la conexion
+                        conexion.Open();
+
+                        string query;
+
+                        switch (valorComboBox)
+                        {
+                            case "Ninguno":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (8)";
+                                break;
+                            case "Preescolar o primaria":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,9)";
+                                break;
+                            case "Secundaria":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,9)";
+                                break;
+                            case "Preparatoria":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,9)";
+                                break;
+                            case "Carrera técnica o carrera comercial":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "Licenciatura":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "Maestría":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "Doctorado":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (1,2,3,4,9)";
+                                break;
+                            case "No identificado":
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (9)";
+                                break;
+
+                            default:
+                                query = "select descripcion from TC_ESTATUS_ESCOLARIDAD where id_estatus_escolaridad in (10)";
+                                break;
+                        }
+
+                        // comando de sql
+                        SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                        // Utilizar un DataReader para obtener los datos
+                        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        cmb_estatus_escolaridad_personal_apoyo.DataSource = dataTable;
+                        cmb_estatus_escolaridad_personal_apoyo.DisplayMember = "descripcion";
+
+                        cmb_estatus_escolaridad_personal_apoyo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                        cmb_estatus_escolaridad_personal_apoyo.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                        cmb_estatus_escolaridad_personal_apoyo.DropDownStyle = ComboBoxStyle.DropDown;
+                        cmb_estatus_escolaridad_personal_apoyo.SelectedIndex = -1; // Aquí se establece como vacío
+
+                        if (valorComboBox == "Licenciatura")
+                        {
+                            cmb_carrera_licenciatura_personal_apoyo.Enabled = true; cmb_carrera_licenciatura_personal_apoyo.BackColor = Color.Honeydew;
+                            cmb_carrera_maestria_personal_apoyo.Enabled = false; cmb_carrera_maestria_personal_apoyo.BackColor = Color.LightGray;
+                            cmb_carrera_doctorado_personal_apoyo.Enabled = false; cmb_carrera_doctorado_personal_apoyo.BackColor = Color.LightGray;
+                            dgv_nivel_escolaridad_PA.BackgroundColor = Color.Honeydew;
+
+                            cmb_carrera_licenciatura_personal_apoyo.Focus();
+                            btnAgregarNivelEscPA.Enabled = true; btnEliminarNivelEscPA.Enabled = true;
+
+                            cmb_carrera_maestria_personal_apoyo.Text = ""; cmb_carrera_doctorado_personal_apoyo.Text = "";
+                        }
+                        else if (valorComboBox == "Maestría")
+                        {
+
+                            cmb_carrera_licenciatura_personal_apoyo.Enabled = true; cmb_carrera_licenciatura_personal_apoyo.BackColor = Color.Honeydew;
+                            cmb_carrera_maestria_personal_apoyo.Enabled = true; cmb_carrera_maestria_personal_apoyo.BackColor = Color.Honeydew;
+                            cmb_carrera_doctorado_personal_apoyo.Enabled = false; cmb_carrera_doctorado_personal_apoyo.BackColor = Color.LightGray;
+                            dgv_nivel_escolaridad_PA.BackgroundColor = Color.Honeydew;
+                            cmb_carrera_licenciatura_personal_apoyo.Focus();
+
+                            btnAgregarNivelEscPA.Enabled = true; btnEliminarNivelEscPA.Enabled = true;
+
+                            cmb_carrera_doctorado_personal_apoyo.Text = "";
+                        }
+                        else if (valorComboBox == "Doctorado")
+                        {
+                            cmb_carrera_licenciatura_personal_apoyo.Enabled = true; cmb_carrera_licenciatura_personal_apoyo.BackColor = Color.Honeydew;
+                            cmb_carrera_maestria_personal_apoyo.Enabled = true; cmb_carrera_maestria_personal_apoyo.BackColor = Color.Honeydew;
+                            cmb_carrera_doctorado_personal_apoyo.Enabled = true; cmb_carrera_doctorado_personal_apoyo.BackColor = Color.Honeydew;
+                            dgv_nivel_escolaridad_PA.BackgroundColor = Color.Honeydew;
+
+                            btnAgregarNivelEscPA.Enabled = true; btnEliminarNivelEscPA.Enabled = true;
+
+                            cmb_carrera_licenciatura_personal_apoyo.Focus();
+                        }
+                        else
+                        {
+                            cmb_carrera_licenciatura_personal_apoyo.Enabled = false; cmb_carrera_licenciatura_personal_apoyo.BackColor = Color.LightGray;
+                            cmb_carrera_maestria_personal_apoyo.Enabled = false; cmb_carrera_maestria_personal_apoyo.BackColor = Color.LightGray;
+                            cmb_carrera_doctorado_personal_apoyo.Enabled = false; cmb_carrera_doctorado_personal_apoyo.BackColor = Color.LightGray;
+                            dgv_nivel_escolaridad_PA.BackgroundColor = Color.LightGray;
+                            dgv_nivel_escolaridad_PA.Rows.Clear();
+
+                            cmb_carrera_licenciatura_personal_apoyo.Text = ""; cmb_carrera_maestria_personal_apoyo.Text = "";
+                            cmb_carrera_doctorado_personal_apoyo.Text = "";
+
+                            btnAgregarNivelEscPA.Enabled = false; btnEliminarNivelEscPA.Enabled = false;
+                        }
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+
+                }
+
+            }
+            else
+            {
+            }
+        }
+
+        // btnAgregarNivelEscPA
+
+        private void btnAgregarNivelEscPA_Click(object sender, EventArgs e)
+        {
+            // Se obtienen los valores de los ComboBox
+            string lic_pa = cmb_carrera_licenciatura_personal_apoyo.Text.Trim();
+            string mae_pa = cmb_carrera_maestria_personal_apoyo.Text.Trim();
+            string doc_pa = cmb_carrera_doctorado_personal_apoyo.Text.Trim();
+
+            // Variable para controlar si hay duplicados
+            bool isDuplicate = false;
+
+            // Revisar si el valor ya existe en el DataGridView SOLO si el campo tiene un valor
+            foreach (DataGridViewRow row in dgv_nivel_escolaridad_PA.Rows)
+            {
+                // Comparar solo si el valor en licenciatura no es vacío
+                if (!string.IsNullOrEmpty(lic_pa) && row.Cells[0].Value != null && row.Cells[0].Value.ToString().Trim() == lic_pa)
+                {
+                    isDuplicate = true;
+                    break;
+                }
+
+                // Comparar solo si el valor en maestría no es vacío
+                if (!string.IsNullOrEmpty(mae_pa) && row.Cells[1].Value != null && row.Cells[1].Value.ToString().Trim() == mae_pa)
+                {
+                    isDuplicate = true;
+                    break;
+                }
+
+                // Comparar solo si el valor en doctorado no es vacío
+                if (!string.IsNullOrEmpty(doc_pa) && row.Cells[2].Value != null && row.Cells[2].Value.ToString().Trim() == doc_pa)
+                {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            // Si es duplicado, mostrar mensaje y salir
+            if (isDuplicate)
+            {
+                MessageBox.Show("Dato duplicado. No se puede agregar el mismo valor en licenciatura, maestría o doctorado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                // Si no es duplicado, agregar una nueva fila al DataGridView
+                dgv_nivel_escolaridad_PA.Rows.Add(lic_pa, mae_pa, doc_pa);
+            }
+
+            // Limpiar los ComboBox después de agregar o intentar agregar
+            cmb_carrera_licenciatura_personal_apoyo.Text = "";
+            cmb_carrera_maestria_personal_apoyo.Text = "";
+            cmb_carrera_doctorado_personal_apoyo.Text = "";
+        }
+
+        // btnEliminarNivelEscPA
+
+        private void btnEliminarNivelEscPA_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgv_nivel_escolaridad_PA.SelectedRows.Count > 0)
+            {
+                dgv_nivel_escolaridad_PA.Rows.RemoveAt(dgv_nivel_escolaridad_PA.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+
+        // filtros adicionales de perfil profecional
+
         private void cmb_Estatus_escolaridad_personal_apoyo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1701,87 +2205,11 @@ namespace App_PLE.Vistas
             }
         }
         
-        
-        
-        
-        private void cmb_Cond_secretario_tecnico_comision_legislativa_personal_apoyo()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.DataSource = dataTable;
-                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.DisplayMember = "descripcion";
-
-                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_cond_secretario_tecnico_comision_legislativa_personal_apoyo.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
-        
-
-        
-        
-        // txt_otro_regimen_contratacion_personal_apoyo_especifique
-        private void txt_otro_regimen_contratacion_personal_apoyo_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_regimen_contratacion_personal_apoyo_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_regimen_contratacion_personal_apoyo_especifique.Text = txt_otro_regimen_contratacion_personal_apoyo_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_regimen_contratacion_personal_apoyo_especifique.SelectionStart = txt_otro_regimen_contratacion_personal_apoyo_especifique.Text.Length;
-        }
+              
+       
     
 
-        // txt_otro_tipo_adscripcion_personal_apoyo_especifique
-        private void txt_otro_tipo_adscripcion_personal_apoyo_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_tipo_adscripcion_personal_apoyo_especifique_TextChanged(object sender, EventArgs e)
-        {
-             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-             txt_otro_tipo_adscripcion_personal_apoyo_especifique.Text = txt_otro_tipo_adscripcion_personal_apoyo_especifique.Text.ToUpper();
-
-             // Colocar el cursor al final del texto para mantener la posición del cursor
-
-             txt_otro_tipo_adscripcion_personal_apoyo_especifique.SelectionStart = txt_otro_tipo_adscripcion_personal_apoyo_especifique.Text.Length;
-            
-        }
+        
     
     }
 }
