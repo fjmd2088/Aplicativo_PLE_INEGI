@@ -101,26 +101,90 @@ namespace App_PLE.Vistas
         }
         private void cmb_cond_presentacion_iniciativa_legislatura_actual_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Obtener el valor seleccionado y eliminar espacios adicionales
+            string valorComboBox1 = cmb_cond_presentacion_iniciativa_legislatura_actual.Text.Trim();
 
-
-            // Cuando se selecciona un elemento en ComboBox1, realizar la búsqueda y la concatenación
-            string valorComboBox1 = cmb_cond_presentacion_iniciativa_legislatura_actual.Text.ToString();
-
-
-            if (valorComboBox1 == "Si")
+            // Desbloquear condición de iniciativa
+            if (valorComboBox1.Equals("Si", StringComparison.OrdinalIgnoreCase))
             {
-                cmb_cond_presentacion_iniciativa_periodo.Enabled = true; cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.Honeydew;
-
+                cmb_cond_presentacion_iniciativa_periodo.Enabled = true;
+                cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.Honeydew;
             }
             else
             {
-                cmb_cond_presentacion_iniciativa_periodo.Enabled = false; cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.LightGray;
+                cmb_cond_presentacion_iniciativa_periodo.Enabled = false;
+                cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.LightGray;
                 cmb_cond_presentacion_iniciativa_periodo.Text = "";
             }
 
-
-
+            // Desbloquear Número de legislatura
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_numero_legislatura_presentacion_iniciativa.Enabled = true;
+                cmb_numero_legislatura_presentacion_iniciativa.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_numero_legislatura_presentacion_iniciativa.Enabled = false;
+                cmb_numero_legislatura_presentacion_iniciativa.BackColor = Color.LightGray;
+                cmb_numero_legislatura_presentacion_iniciativa.Text = "";
+            }
         }
+
+        // txt_turno_iniciativa
+        private void txt_turno_iniciativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
+
+        // cmb_numero_legislatura_presentacion_iniciativa
+        private void cmb_numero_legislatura_presentacion_iniciativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
         // ----
         private void cmb_Cond_presentacion_iniciativa_periodo()
         {

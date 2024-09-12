@@ -289,6 +289,9 @@ namespace App_PLE.Vistas
             cmb_tema_comision_legislativa.Text = "";
             cmb_tipo_comision_legislativa.Text = "";
 
+            cmb_cond_presentacion_iniciativa_periodo.Enabled = false;
+            cmb_numero_legislatura_presentacion_iniciativa.Enabled = false;
+
         }
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
@@ -333,6 +336,10 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
 
 
 
