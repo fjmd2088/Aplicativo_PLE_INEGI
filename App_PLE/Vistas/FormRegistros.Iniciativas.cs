@@ -129,6 +129,30 @@ namespace App_PLE.Vistas
                 cmb_numero_legislatura_presentacion_iniciativa.BackColor = Color.LightGray;
                 cmb_numero_legislatura_presentacion_iniciativa.Text = "";
             }
+            // Desbloquear Condición de actualización del estatus de la iniciativa en el periodo reportado.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.Enabled = true;
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.Enabled = false;
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.BackColor = Color.LightGray;
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.Text = "";
+            }
+            // Descloquea Condición de modificación de la información de ingreso de la iniciativa en el periodo reportado.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cond_modificacion_informacion_ingreso_periodo.Enabled = true;
+                cmb_cond_modificacion_informacion_ingreso_periodo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_cond_modificacion_informacion_ingreso_periodo.Enabled = false;
+                cmb_cond_modificacion_informacion_ingreso_periodo.BackColor = Color.LightGray;
+                cmb_cond_modificacion_informacion_ingreso_periodo.Text = "";
+            }
         }
 
         // txt_turno_iniciativa
@@ -185,7 +209,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // ----
+        // cmb_Cond_presentacion_iniciativa_periodo
         private void cmb_Cond_presentacion_iniciativa_periodo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -269,49 +293,41 @@ namespace App_PLE.Vistas
                 }
             }
         }
-
-        // ESTATUS --------------------------------------------------------------------------------------------------------------------
-        private void cmb_Numero_legislatura_presentacion_iniciativa()
+        private void cmb_cond_presentacion_iniciativa_periodo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
+            // Obtener el valor seleccionado y eliminar espacios adicionales
+            string valorComboBox1 = cmb_cond_presentacion_iniciativa_periodo.Text.Trim();
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            // Desbloquear Condición de actualización del estatus de la iniciativa en el periodo reportado.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
             {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_NUM_LEGISLATURA";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_numero_legislatura_presentacion_iniciativa.DataSource = dataTable;
-                    cmb_numero_legislatura_presentacion_iniciativa.DisplayMember = "descripcion";
-
-                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_numero_legislatura_presentacion_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_numero_legislatura_presentacion_iniciativa.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.Enabled = true;
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.Enabled = false;
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.BackColor = Color.LightGray;
+                cmb_cond_actualizacion_estatus_iniciativa_periodo.Text = "";
+            }
+            // Descloquea Condición de modificación de la información de ingreso de la iniciativa en el periodo reportado.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cond_modificacion_informacion_ingreso_periodo.Enabled = true;
+                cmb_cond_modificacion_informacion_ingreso_periodo.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_cond_modificacion_informacion_ingreso_periodo.Enabled = false;
+                cmb_cond_modificacion_informacion_ingreso_periodo.BackColor = Color.LightGray;
+                cmb_cond_modificacion_informacion_ingreso_periodo.Text = "";
             }
         }
+
+
+
+        // ESTATUS --------------------------------------------------------------------------------------------------------------------
+
         private void cmb_Cond_actualizacion_estatus_iniciativa_periodo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -324,7 +340,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2) ";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -353,6 +369,68 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_actualizacion_estatus_iniciativa_periodo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_cond_actualizacion_estatus_iniciativa_periodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el valor seleccionado y eliminar espacios adicionales
+            string valorComboBox1 = cmb_cond_actualizacion_estatus_iniciativa_periodo.Text.Trim();
+
+            // Desbloquear Condición de actualización del estatus de la iniciativa en el periodo reportado.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_estatus_iniciativa.Enabled = false;
+                cmb_estatus_iniciativa.BackColor = Color.LightGray;
+            }
+            else
+            {
+                cmb_estatus_iniciativa.Enabled = true;
+                cmb_estatus_iniciativa.BackColor = Color.Honeydew;
+                cmb_estatus_iniciativa.Text = "";
+            }
+        }
+
+        // cmb_cond_modificacion_informacion_ingreso_periodo
         private void cmb_Cond_modificacion_informacion_ingreso_periodo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -365,7 +443,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select descripcion from TC_SI_NO";
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -394,6 +472,50 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_cond_modificacion_informacion_ingreso_periodo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // cmb_Estatus_iniciat
         private void cmb_Estatus_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -435,6 +557,95 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_estatus_iniciativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
+        //------------------------------------------------------------------
+        private void cmb_Numero_legislatura_presentacion_iniciativa()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_NUM_LEGISLATURA";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_numero_legislatura_presentacion_iniciativa.DataSource = dataTable;
+                    cmb_numero_legislatura_presentacion_iniciativa.DisplayMember = "descripcion";
+
+                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_numero_legislatura_presentacion_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_numero_legislatura_presentacion_iniciativa.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        
+       
+        
         private void cmb_Etapa_procesal_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";

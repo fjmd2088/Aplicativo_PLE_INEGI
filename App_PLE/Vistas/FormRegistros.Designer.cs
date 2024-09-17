@@ -2120,7 +2120,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-2035, 30250);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-2090, 30765);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2245,7 +2245,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-2127, 32312);
+            this.button24.Location = new System.Drawing.Point(-2182, 32767);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -9109,6 +9109,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_iniciativa_periodo.Size = new System.Drawing.Size(233, 26);
             this.cmb_cond_presentacion_iniciativa_periodo.TabIndex = 41;
             this.cmb_cond_presentacion_iniciativa_periodo.UseWaitCursor = true;
+            this.cmb_cond_presentacion_iniciativa_periodo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_presentacion_iniciativa_periodo_SelectedIndexChanged);
             this.cmb_cond_presentacion_iniciativa_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_iniciativa_periodo_Validating);
             // 
             // txt_turno_iniciativa
@@ -9285,6 +9286,7 @@ namespace App_PLE.Vistas
             this.cmb_estatus_iniciativa.Size = new System.Drawing.Size(283, 26);
             this.cmb_estatus_iniciativa.TabIndex = 44;
             this.cmb_estatus_iniciativa.UseWaitCursor = true;
+            this.cmb_estatus_iniciativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_estatus_iniciativa_Validating);
             // 
             // label129
             // 
@@ -9323,6 +9325,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_modificacion_informacion_ingreso_periodo.Size = new System.Drawing.Size(221, 26);
             this.cmb_cond_modificacion_informacion_ingreso_periodo.TabIndex = 41;
             this.cmb_cond_modificacion_informacion_ingreso_periodo.UseWaitCursor = true;
+            this.cmb_cond_modificacion_informacion_ingreso_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_modificacion_informacion_ingreso_periodo_Validating);
             // 
             // cmb_cond_actualizacion_estatus_iniciativa_periodo
             // 
@@ -9335,6 +9338,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Size = new System.Drawing.Size(221, 26);
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.TabIndex = 32;
             this.cmb_cond_actualizacion_estatus_iniciativa_periodo.UseWaitCursor = true;
+            this.cmb_cond_actualizacion_estatus_iniciativa_periodo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_actualizacion_estatus_iniciativa_periodo_SelectedIndexChanged);
+            this.cmb_cond_actualizacion_estatus_iniciativa_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_actualizacion_estatus_iniciativa_periodo_Validating);
             // 
             // label131
             // 
