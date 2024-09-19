@@ -324,7 +324,48 @@ namespace App_PLE.Vistas
             }
         }
 
+        // cmb_numero_legislatura_presentacion_iniciativa
+        private void cmb_Numero_legislatura_presentacion_iniciativa()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
 
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_NUM_LEGISLATURA";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_numero_legislatura_presentacion_iniciativa.DataSource = dataTable;
+                    cmb_numero_legislatura_presentacion_iniciativa.DisplayMember = "descripcion";
+
+                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_numero_legislatura_presentacion_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_numero_legislatura_presentacion_iniciativa.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
 
         // ESTATUS --------------------------------------------------------------------------------------------------------------------
 
@@ -514,8 +555,66 @@ namespace App_PLE.Vistas
                 }
             }
         }
+        private void cmb_cond_modificacion_informacion_ingreso_periodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el valor seleccionado y eliminar espacios adicionales
+            string valorComboBox1 = cmb_cond_modificacion_informacion_ingreso_periodo.Text.Trim();
 
-        // cmb_Estatus_iniciat
+            // Bloquea fecha de ingreso de la iniciativa a oficilia partes.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.Enabled = false;
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.BackColor = Color.LightGray;
+            }
+            else
+            {
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.Enabled = true;
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.BackColor = Color.Honeydew;
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.Text = "";
+            }
+
+            // Bloquea nombre de inicioativa por seleccionar No.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_nombre_iniciativa.Enabled = false;
+                txt_nombre_iniciativa.BackColor = Color.LightGray;
+            }
+            else
+            {
+                txt_nombre_iniciativa.Enabled = true;
+                txt_nombre_iniciativa.BackColor = Color.Honeydew;
+                txt_nombre_iniciativa.Text = "";
+            }
+
+
+            // Bloquea la fecha de sesión en que se presenta la iniciativa.
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                dtp_fecha_sesion_presentacion_iniciativa.Enabled = false;
+                dtp_fecha_sesion_presentacion_iniciativa.BackColor = Color.LightGray;
+            }
+            else
+            {
+                dtp_fecha_sesion_presentacion_iniciativa.Enabled = true;
+                dtp_fecha_sesion_presentacion_iniciativa.BackColor = Color.Honeydew;
+                dtp_fecha_sesion_presentacion_iniciativa.Text = "";
+            }
+
+            // Bloquea el tipo de iniciativa si se selecciona NO
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_tipo_iniciativa.Enabled = false;
+                cmb_tipo_iniciativa.BackColor = Color.LightGray;
+            }
+            else
+            {
+                cmb_tipo_iniciativa.Enabled = true;
+                cmb_tipo_iniciativa.BackColor = Color.Honeydew;
+                cmb_tipo_iniciativa.Text = "";
+            }
+        }
+
+        // cmb_Estatus_iniciativa
         private void cmb_Estatus_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -599,10 +698,48 @@ namespace App_PLE.Vistas
                 }
             }
         }
+        private void cmb_estatus_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_estatus_iniciativa.Text.Trim();
 
+            // Desbloquear Otro estatus de la iniciativa.
+            if (valorComboBox1.Equals("Otro estatus (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_estatus_iniciativa_especifique.Enabled = true;
+                txt_otro_estatus_iniciativa_especifique.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                txt_otro_estatus_iniciativa_especifique.Enabled = false;
+                txt_otro_estatus_iniciativa_especifique.BackColor = Color.LightGray;
+                txt_otro_estatus_iniciativa_especifique.Text = "";
+            }
 
-        //------------------------------------------------------------------
-        private void cmb_Numero_legislatura_presentacion_iniciativa()
+            // Desbloquear Etapa procesal de iniciativa para "Estudio" o "Dictamen"
+            if (valorComboBox1.Equals("Estudio", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Dictamen", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_etapa_procesal_iniciativa.Enabled = true;
+                cmb_etapa_procesal_iniciativa.BackColor = Color.Honeydew;
+
+                // Aquí agregamos la lógica específica para "Estudio" y "Dictamen"
+                if (valorComboBox1.Equals("Estudio", StringComparison.OrdinalIgnoreCase))
+                {
+                    CargarEtapaProcesal(1, 2); // Cargar etapas 1 y 2
+                }
+                else if (valorComboBox1.Equals("Dictamen", StringComparison.OrdinalIgnoreCase))
+                {
+                    CargarEtapaProcesal(3, 4); // Cargar etapas 3 y 4
+                }
+            }
+            else
+            {
+                cmb_etapa_procesal_iniciativa.Enabled = false;
+                cmb_etapa_procesal_iniciativa.BackColor = Color.LightGray;
+                cmb_etapa_procesal_iniciativa.Text = "";
+            }
+        }
+        private void CargarEtapaProcesal(int desde, int hasta)
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
 
@@ -610,27 +747,24 @@ namespace App_PLE.Vistas
             {
                 try
                 {
-                    // abrir la conexion
                     conexion.Open();
 
-                    // comando de sql
-                    string query = "select descripcion from TC_NUM_LEGISLATURA";
+                    string query = $"SELECT descripcion FROM TC_ETAPA_PROC WHERE id_etapa_proc BETWEEN {desde} AND {hasta}";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
 
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    cmb_numero_legislatura_presentacion_iniciativa.DataSource = dataTable;
-                    cmb_numero_legislatura_presentacion_iniciativa.DisplayMember = "descripcion";
+                    cmb_etapa_procesal_iniciativa.DataSource = dataTable;
+                    cmb_etapa_procesal_iniciativa.DisplayMember = "descripcion";
 
-                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_numero_legislatura_presentacion_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+                    cmb_etapa_procesal_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_etapa_procesal_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-                    cmb_numero_legislatura_presentacion_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_numero_legislatura_presentacion_iniciativa.SelectedIndex = -1; // Aquí se establece como vacío
+                    cmb_etapa_procesal_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_etapa_procesal_iniciativa.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -640,12 +774,27 @@ namespace App_PLE.Vistas
                 {
                     conexion.Close();
                 }
-
             }
         }
-        
-       
-        
+
+        // txt_otro_tipo_iniciativa_especifique
+        private void txt_otro_tipo_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_iniciativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_iniciativa_especifique.Text = txt_otro_tipo_iniciativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_iniciativa_especifique.SelectionStart = txt_otro_tipo_iniciativa_especifique.Text.Length;
+
+        }
+
+        // cmb_etapa_procesal_iniciativa
         private void cmb_Etapa_procesal_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -687,6 +836,31 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_etapa_procesal_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Ingreso -----------------------------------------------------------------------------------------------------------------------
+
+        private void txt_nombre_iniciativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_nombre_iniciativa_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_nombre_iniciativa.Text = txt_nombre_iniciativa.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_nombre_iniciativa.SelectionStart = txt_nombre_iniciativa.Text.Length;
+
+        }
+
+        // cmb_tipo_iniciativa
         private void cmb_Tipo_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -728,6 +902,58 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el valor seleccionado y eliminar espacios adicionales
+            string valorComboBox1 = cmb_tipo_iniciativa.Text.Trim();
+
+            // Bloquea fecha de ingreso de la iniciativa a oficilia partes.
+            if (valorComboBox1.Equals("Otro tipo (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_tipo_iniciativa_especifique.Enabled = true;
+                txt_otro_tipo_iniciativa_especifique.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                txt_otro_tipo_iniciativa_especifique.Enabled = false;
+                txt_otro_tipo_iniciativa_especifique.BackColor = Color.LightGray;
+                txt_otro_tipo_iniciativa_especifique.Text = "";
+            }
+        }
+
+        // txt_otro_estatus_iniciativa_especifique
+        private void txt_otro_estatus_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_estatus_iniciativa_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_estatus_iniciativa_especifique.Text = txt_otro_estatus_iniciativa_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_estatus_iniciativa_especifique.SelectionStart = txt_otro_estatus_iniciativa_especifique.Text.Length;
+
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //--------------------------------------
+
+
+
+
+
+
         private void cmb_Tipo_promovente_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -811,56 +1037,11 @@ namespace App_PLE.Vistas
             }
         }
 
-        // txt_otro_estatus_iniciativa_especifique
-        private void txt_otro_estatus_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_estatus_iniciativa_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+        
 
-            txt_otro_estatus_iniciativa_especifique.Text = txt_otro_estatus_iniciativa_especifique.Text.ToUpper();
+        
 
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_estatus_iniciativa_especifique.SelectionStart = txt_otro_estatus_iniciativa_especifique.Text.Length;
-
-        }
-
-        // txt_nombre_iniciativa
-        private void txt_nombre_iniciativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_nombre_iniciativa_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_nombre_iniciativa.Text = txt_nombre_iniciativa.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_nombre_iniciativa.SelectionStart = txt_nombre_iniciativa.Text.Length;
-
-        }
-
-        // txt_otro_tipo_iniciativa_especifique
-        private void txt_otro_tipo_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_tipo_iniciativa_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_tipo_iniciativa_especifique.Text = txt_otro_tipo_iniciativa_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_tipo_iniciativa_especifique.SelectionStart = txt_otro_tipo_iniciativa_especifique.Text.Length;
-
-        }
+        
 
         // txt_otro_tipo_promovente_iniciativa_especifique
         private void txt_otro_tipo_promovente_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)

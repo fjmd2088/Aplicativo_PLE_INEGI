@@ -293,6 +293,9 @@ namespace App_PLE.Vistas
             cmb_numero_legislatura_presentacion_iniciativa.Enabled = false;
             cmb_cond_actualizacion_estatus_iniciativa_periodo.Enabled = false;
             cmb_cond_modificacion_informacion_ingreso_periodo.Enabled = false;
+            txt_otro_estatus_iniciativa_especifique.Enabled = false;
+            cmb_etapa_procesal_iniciativa.Enabled = false;
+            txt_otro_tipo_iniciativa_especifique.Enabled = false;
 
         }
 
@@ -337,7 +340,14 @@ namespace App_PLE.Vistas
 
         }
 
-        
+       
+
+
+
+
+
+
+
 
 
 
