@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace App_PLE.Vistas
 {
-    public partial class FormRegistros: Form
+    public partial class FormRegistros : Form
     {
 
         // PRESENTACION --------------------------------------------------------------------------------------------------------------------
@@ -612,6 +612,19 @@ namespace App_PLE.Vistas
                 cmb_tipo_iniciativa.BackColor = Color.Honeydew;
                 cmb_tipo_iniciativa.Text = "";
             }
+
+            // Bloquea Tipo de promovente de iniciativa
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_tipo_promovente_iniciativa.Enabled = false;
+                cmb_tipo_promovente_iniciativa.BackColor = Color.LightGray;
+            }
+            else
+            {
+                cmb_tipo_promovente_iniciativa.Enabled = true;
+                cmb_tipo_promovente_iniciativa.BackColor = Color.Honeydew;
+                cmb_tipo_promovente_iniciativa.Text = "";
+            }
         }
 
         // cmb_Estatus_iniciativa
@@ -860,7 +873,7 @@ namespace App_PLE.Vistas
 
         }
 
-        // cmb_tipo_iniciativa
+        // TIPO ------------------ cmb_tipo_iniciativa
         private void cmb_Tipo_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -902,6 +915,48 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_iniciativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
         private void cmb_tipo_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtener el valor seleccionado y eliminar espacios adicionales
@@ -938,22 +993,8 @@ namespace App_PLE.Vistas
 
         }
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        //--------------------------------------
 
-
-
-
-
-
+        // PROMOVENTE ------------------------------ cmb_tipo_promovente_iniciativa
         private void cmb_Tipo_promovente_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -995,6 +1036,486 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_tipo_promovente_iniciativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_tipo_promovente_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_tipo_promovente_iniciativa.Text.Trim();
+
+            // Desbloquea ComboBox de nombre de la persona legisladora
+            if (valorComboBox1.Equals("Personas legisladoras", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_nombre_persona_legisladora_1.Enabled = true;
+                cmb_nombre_persona_legisladora_1.BackColor = Color.Honeydew;
+                btn_agregar_per_leg.Enabled = true; btn_eliminar_pers_legis.Enabled = true;
+                dgv_per_legis.BackgroundColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_nombre_persona_legisladora_1.Enabled = false;
+                cmb_nombre_persona_legisladora_1.BackColor = Color.LightGray;
+                cmb_nombre_persona_legisladora_1.Text = "";
+                btn_agregar_per_leg.Enabled = false; btn_eliminar_pers_legis.Enabled = false;
+                dgv_per_legis.BackgroundColor = Color.LightGray;
+            }
+
+            // Desbloquea el ID de personas legisladorasn 
+            if (valorComboBox1.Equals("Personas legisladoras", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_ID_persona_legisladora_1.Enabled = false;
+                txt_ID_persona_legisladora_1.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                txt_ID_persona_legisladora_1.Enabled = false;
+                txt_ID_persona_legisladora_1.BackColor = Color.LightGray;
+                txt_ID_persona_legisladora_1.Text = "";
+            }
+
+            // Desbloquea Grupo parlamentario tabla y botones
+            if (valorComboBox1.Equals("Grupo parlamentario", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_grupo_parlamentario.Enabled = true;
+                cmb_grupo_parlamentario.BackColor = Color.Honeydew;
+                btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
+                dgv_grupos_parla.BackgroundColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_grupo_parlamentario.Enabled = false;
+                cmb_grupo_parlamentario.BackColor = Color.LightGray;
+                cmb_grupo_parlamentario.Text = "";
+                btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
+                dgv_grupos_parla.BackgroundColor = Color.LightGray;
+            }
+
+            // Desbloquea Comisiones legislativas
+            if (valorComboBox1.Equals("Comisión legislativa", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_nombre_comision_legislativa_1.Enabled = true;
+                cmb_nombre_comision_legislativa_1.BackColor = Color.Honeydew;
+                btn_agregar_nom_com_leg.Enabled = true; btn_elimina_con_legisl.Enabled = true;
+                dgv_com_legis.BackgroundColor = Color.Honeydew;
+                txt_ID_comision_legislativa_1.Enabled = false;
+                txt_ID_comision_legislativa_1.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_nombre_comision_legislativa_1.Enabled = false;
+                cmb_nombre_comision_legislativa_1.BackColor = Color.LightGray;
+                cmb_nombre_comision_legislativa_1.Text = "";
+                btn_agregar_nom_com_leg.Enabled = false; btn_elimina_con_legisl.Enabled = false;
+                dgv_com_legis.BackgroundColor = Color.LightGray;
+                txt_ID_comision_legislativa_1.Enabled = false;
+                txt_ID_comision_legislativa_1.BackColor = Color.LightGray;
+                txt_ID_comision_legislativa_1.Text = "";
+            }
+            // Desbloquea Otro tipo de promovente
+            if (valorComboBox1.Equals("Otro tipo de promovente (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_tipo_promovente_iniciativa_especifique.Enabled = true;
+                txt_otro_tipo_promovente_iniciativa_especifique.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                txt_otro_tipo_promovente_iniciativa_especifique.Enabled = false;
+                txt_otro_tipo_promovente_iniciativa_especifique.BackColor = Color.LightGray;
+                txt_otro_tipo_promovente_iniciativa_especifique.Text = "";
+            }
+        }
+
+        // PERSONAS LEGISLADORAS ------- cmb_nombre_persona_legisladora_1
+        private void Cmb_nombre_persona_legisladora_1()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select txt_nombre_1_persona_legisladora from TR_PERSONAS_LEGISLADORAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_nombre_persona_legisladora_1.DataSource = dataTable;
+                    cmb_nombre_persona_legisladora_1.DisplayMember = "txt_nombre_1_persona_legisladora";
+
+                    cmb_nombre_persona_legisladora_1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_persona_legisladora_1.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_nombre_persona_legisladora_1.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_persona_legisladora_1.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_nombre_persona_legisladora_1_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["txt_nombre_1_persona_legisladora"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["txt_nombre_1_persona_legisladora"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["txt_nombre_1_persona_legisladora"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_nombre_persona_legisladora_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_persona_legisladora_1.Text;
+
+            // Verificar si el nombre seleccionado es nulo o vacío
+            if (string.IsNullOrEmpty(nombreSeleccionado))
+            {
+                txt_ID_persona_legisladora_1.Text = "";
+                return;
+            }
+
+            // Crear la cadena de conexión
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            // Usar la conexión a la base de datos
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Crear la consulta SQL para obtener el ID de la persona seleccionada
+                    string query = "SELECT txt_ID_persona_legisladora FROM TR_PERSONAS_LEGISLADORAS WHERE txt_nombre_1_persona_legisladora = @nombreSeleccionado";
+
+                    // Crear el comando SQL
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        // Asignar el valor del parámetro @nombreSeleccionado
+                        cmd.Parameters.AddWithValue("@nombreSeleccionado", nombreSeleccionado);
+
+                        // Ejecutar la consulta y obtener el resultado
+                        object resultado = cmd.ExecuteScalar();
+
+                        // Verificar si se obtuvo un resultado
+                        if (resultado != null)
+                        {
+                            txt_ID_persona_legisladora_1.Text = resultado.ToString();
+                        }
+                        else
+                        {
+                            txt_ID_persona_legisladora_1.Text = ""; // Limpiar el TextBox si no se encontró un ID
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el ID de la persona legisladora: " + ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión
+                    conexion.Close();
+                }
+            }
+        }
+
+        // Botones agregar y eliminar
+        private void btn_agregar_per_leg_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_persona_legisladora_1.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombreSeleccionado))
+            {
+                MessageBox.Show("Revisar datos vacíos");
+            }
+            else
+            {
+                // Verificar si el nombre ya existe en la tabla
+                bool respuesta = IsDuplicateRecord_PL(nombreSeleccionado);
+
+                if (respuesta)
+                {
+                    MessageBox.Show("Dato duplicado");
+                    cmb_nombre_persona_legisladora_1.Text = "";
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_per_legis.Rows.Add(nombreSeleccionado, txt_ID_persona_legisladora_1.Text);
+                    cmb_nombre_persona_legisladora_1.Text = "";
+
+                }
+            }
+        }
+        private void btn_eliminar_pers_legis_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgv_per_legis.SelectedRows.Count > 0)
+            {
+                dgv_per_legis.Rows.RemoveAt(dgv_per_legis.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private bool IsDuplicateRecord_PL(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_per_legis.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["Pesonas_legisladoras_ini"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // GRUPO PARLAMENTARIO -------- cmb_grupo_parlamentario
+        private void Cmb_grupo_parlamentario()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select entidad_federativa from TR_DATOS_GENERALES";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_grupo_parlamentario.DataSource = dataTable;
+                    cmb_grupo_parlamentario.DisplayMember = "entidad_federativa";
+
+                    cmb_grupo_parlamentario.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_grupo_parlamentario.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_grupo_parlamentario.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_grupo_parlamentario.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_grupo_parlamentario_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["entidad_federativa"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["entidad_federativa"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["entidad_federativa"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        // Botones agregar y eliminar
+        private void btn_agregar_grupo_parla_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_grupo_parlamentario.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombreSeleccionado))
+            {
+                MessageBox.Show("Revisar datos vacíos");
+            }
+            else
+            {
+                // Verificar si el nombre ya existe en la tabla
+                bool respuesta = IsDuplicateRecord_Par(nombreSeleccionado);
+
+                if (respuesta)
+                {
+                    MessageBox.Show("Dato duplicado");
+                    cmb_grupo_parlamentario.Text = "";
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_grupos_parla.Rows.Add(nombreSeleccionado);
+                    cmb_grupo_parlamentario.Text = "";
+
+                }
+            }
+
+        }
+        private void btn_eliminar_grupo_parla_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgv_grupos_parla.SelectedRows.Count > 0)
+            {
+                dgv_grupos_parla.Rows.RemoveAt(dgv_grupos_parla.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private bool IsDuplicateRecord_Par(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_grupos_parla.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["Grupos_palamentarios_ini"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+
+
+        //--------------------------------------
+
+
+
+
+
+
+
         private void tipo_Organo_constitucional_autonomo()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";

@@ -593,26 +593,28 @@ namespace App_PLE.Vistas
             this.groupBox89 = new System.Windows.Forms.GroupBox();
             this.label303 = new System.Windows.Forms.Label();
             this.cmb_nombre_comision_legislativa_1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
+            this.dgv_com_legis = new System.Windows.Forms.DataGridView();
+            this.Com_leg_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_COM_LEG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_agregar_nom_com_leg = new System.Windows.Forms.Button();
+            this.btn_elimina_con_legisl = new System.Windows.Forms.Button();
             this.label302 = new System.Windows.Forms.Label();
             this.txt_ID_comision_legislativa_1 = new System.Windows.Forms.TextBox();
             this.groupBox88 = new System.Windows.Forms.GroupBox();
             this.label271 = new System.Windows.Forms.Label();
             this.cmb_grupo_parlamentario = new System.Windows.Forms.ComboBox();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
+            this.dgv_grupos_parla = new System.Windows.Forms.DataGridView();
+            this.Grupos_palamentarios_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_agregar_grupo_parla = new System.Windows.Forms.Button();
+            this.btn_eliminar_grupo_parla = new System.Windows.Forms.Button();
             this.groupBox86 = new System.Windows.Forms.GroupBox();
             this.label110 = new System.Windows.Forms.Label();
             this.cmb_nombre_persona_legisladora_1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
+            this.dgv_per_legis = new System.Windows.Forms.DataGridView();
+            this.Pesonas_legisladoras_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_agregar_per_leg = new System.Windows.Forms.Button();
+            this.btn_eliminar_pers_legis = new System.Windows.Forms.Button();
             this.label111 = new System.Windows.Forms.Label();
             this.txt_ID_persona_legisladora_1 = new System.Windows.Forms.TextBox();
             this.cmb_tipo_promovente_iniciativa = new System.Windows.Forms.ComboBox();
@@ -1090,11 +1092,11 @@ namespace App_PLE.Vistas
             this.groupBox122.SuspendLayout();
             this.groupBox90.SuspendLayout();
             this.groupBox89.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_com_legis)).BeginInit();
             this.groupBox88.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_grupos_parla)).BeginInit();
             this.groupBox86.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_per_legis)).BeginInit();
             this.groupBox26.SuspendLayout();
             this.groupBox82.SuspendLayout();
             this.groupBox33.SuspendLayout();
@@ -2120,7 +2122,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-2134, 31177);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-2310, 32767);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2245,7 +2247,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-2226, 32767);
+            this.button24.Location = new System.Drawing.Point(-2402, 32767);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -8379,6 +8381,7 @@ namespace App_PLE.Vistas
             this.cmb_tipo_iniciativa.TabIndex = 55;
             this.cmb_tipo_iniciativa.UseWaitCursor = true;
             this.cmb_tipo_iniciativa.SelectedIndexChanged += new System.EventHandler(this.cmb_tipo_iniciativa_SelectedIndexChanged);
+            this.cmb_tipo_iniciativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_iniciativa_Validating);
             // 
             // label301
             // 
@@ -8612,9 +8615,9 @@ namespace App_PLE.Vistas
             // 
             this.groupBox89.Controls.Add(this.label303);
             this.groupBox89.Controls.Add(this.cmb_nombre_comision_legislativa_1);
-            this.groupBox89.Controls.Add(this.dataGridView6);
-            this.groupBox89.Controls.Add(this.button32);
-            this.groupBox89.Controls.Add(this.button31);
+            this.groupBox89.Controls.Add(this.dgv_com_legis);
+            this.groupBox89.Controls.Add(this.btn_agregar_nom_com_leg);
+            this.groupBox89.Controls.Add(this.btn_elimina_con_legisl);
             this.groupBox89.Controls.Add(this.label302);
             this.groupBox89.Controls.Add(this.txt_ID_comision_legislativa_1);
             this.groupBox89.Location = new System.Drawing.Point(797, 220);
@@ -8650,16 +8653,17 @@ namespace App_PLE.Vistas
             this.cmb_nombre_comision_legislativa_1.TabIndex = 71;
             this.cmb_nombre_comision_legislativa_1.UseWaitCursor = true;
             // 
-            // dataGridView6
+            // dgv_com_legis
             // 
-            this.dataGridView6.AllowUserToAddRows = false;
-            this.dataGridView6.AllowUserToDeleteRows = false;
-            this.dataGridView6.AllowUserToResizeRows = false;
-            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5});
+            this.dgv_com_legis.AllowUserToAddRows = false;
+            this.dgv_com_legis.AllowUserToDeleteRows = false;
+            this.dgv_com_legis.AllowUserToResizeRows = false;
+            this.dgv_com_legis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_com_legis.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_com_legis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_com_legis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Com_leg_ini,
+            this.ID_COM_LEG});
             dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8667,48 +8671,55 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridView6.Location = new System.Drawing.Point(12, 113);
-            this.dataGridView6.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.ReadOnly = true;
-            this.dataGridView6.RowHeadersVisible = false;
-            this.dataGridView6.RowHeadersWidth = 51;
-            this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView6.Size = new System.Drawing.Size(607, 137);
-            this.dataGridView6.TabIndex = 68;
-            this.dataGridView6.UseWaitCursor = true;
+            this.dgv_com_legis.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dgv_com_legis.Location = new System.Drawing.Point(12, 113);
+            this.dgv_com_legis.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_com_legis.Name = "dgv_com_legis";
+            this.dgv_com_legis.ReadOnly = true;
+            this.dgv_com_legis.RowHeadersVisible = false;
+            this.dgv_com_legis.RowHeadersWidth = 51;
+            this.dgv_com_legis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_com_legis.Size = new System.Drawing.Size(607, 137);
+            this.dgv_com_legis.TabIndex = 68;
+            this.dgv_com_legis.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // Com_leg_ini
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Comisiones legislativas";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.Com_leg_ini.HeaderText = "Comisiones legislativas";
+            this.Com_leg_ini.MinimumWidth = 6;
+            this.Com_leg_ini.Name = "Com_leg_ini";
+            this.Com_leg_ini.ReadOnly = true;
             // 
-            // button32
+            // ID_COM_LEG
             // 
-            this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(629, 128);
-            this.button32.Margin = new System.Windows.Forms.Padding(4);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(147, 33);
-            this.button32.TabIndex = 66;
-            this.button32.Text = "Agregar";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.UseWaitCursor = true;
+            this.ID_COM_LEG.HeaderText = "ID";
+            this.ID_COM_LEG.MinimumWidth = 6;
+            this.ID_COM_LEG.Name = "ID_COM_LEG";
+            this.ID_COM_LEG.ReadOnly = true;
             // 
-            // button31
+            // btn_agregar_nom_com_leg
             // 
-            this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.Location = new System.Drawing.Point(631, 186);
-            this.button31.Margin = new System.Windows.Forms.Padding(4);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(147, 33);
-            this.button31.TabIndex = 67;
-            this.button31.Text = "Eliminar";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.UseWaitCursor = true;
+            this.btn_agregar_nom_com_leg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_nom_com_leg.Location = new System.Drawing.Point(629, 128);
+            this.btn_agregar_nom_com_leg.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar_nom_com_leg.Name = "btn_agregar_nom_com_leg";
+            this.btn_agregar_nom_com_leg.Size = new System.Drawing.Size(147, 33);
+            this.btn_agregar_nom_com_leg.TabIndex = 66;
+            this.btn_agregar_nom_com_leg.Text = "Agregar";
+            this.btn_agregar_nom_com_leg.UseVisualStyleBackColor = true;
+            this.btn_agregar_nom_com_leg.UseWaitCursor = true;
+            // 
+            // btn_elimina_con_legisl
+            // 
+            this.btn_elimina_con_legisl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_elimina_con_legisl.Location = new System.Drawing.Point(631, 186);
+            this.btn_elimina_con_legisl.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_elimina_con_legisl.Name = "btn_elimina_con_legisl";
+            this.btn_elimina_con_legisl.Size = new System.Drawing.Size(147, 33);
+            this.btn_elimina_con_legisl.TabIndex = 67;
+            this.btn_elimina_con_legisl.Text = "Eliminar";
+            this.btn_elimina_con_legisl.UseVisualStyleBackColor = true;
+            this.btn_elimina_con_legisl.UseWaitCursor = true;
             // 
             // label302
             // 
@@ -8737,9 +8748,9 @@ namespace App_PLE.Vistas
             // 
             this.groupBox88.Controls.Add(this.label271);
             this.groupBox88.Controls.Add(this.cmb_grupo_parlamentario);
-            this.groupBox88.Controls.Add(this.dataGridView5);
-            this.groupBox88.Controls.Add(this.button30);
-            this.groupBox88.Controls.Add(this.button29);
+            this.groupBox88.Controls.Add(this.dgv_grupos_parla);
+            this.groupBox88.Controls.Add(this.btn_agregar_grupo_parla);
+            this.groupBox88.Controls.Add(this.btn_eliminar_grupo_parla);
             this.groupBox88.Location = new System.Drawing.Point(797, 17);
             this.groupBox88.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox88.Name = "groupBox88";
@@ -8772,17 +8783,18 @@ namespace App_PLE.Vistas
             this.cmb_grupo_parlamentario.Size = new System.Drawing.Size(389, 26);
             this.cmb_grupo_parlamentario.TabIndex = 62;
             this.cmb_grupo_parlamentario.UseWaitCursor = true;
+            this.cmb_grupo_parlamentario.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_grupo_parlamentario_Validating);
             // 
-            // dataGridView5
+            // dgv_grupos_parla
             // 
-            this.dataGridView5.AllowUserToAddRows = false;
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.AllowUserToResizeRows = false;
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4});
+            this.dgv_grupos_parla.AllowUserToAddRows = false;
+            this.dgv_grupos_parla.AllowUserToDeleteRows = false;
+            this.dgv_grupos_parla.AllowUserToResizeRows = false;
+            this.dgv_grupos_parla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_grupos_parla.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_grupos_parla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_grupos_parla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Grupos_palamentarios_ini});
             dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle21.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8790,63 +8802,65 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridView5.Location = new System.Drawing.Point(17, 59);
-            this.dataGridView5.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(601, 129);
-            this.dataGridView5.TabIndex = 65;
-            this.dataGridView5.UseWaitCursor = true;
+            this.dgv_grupos_parla.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgv_grupos_parla.Location = new System.Drawing.Point(17, 59);
+            this.dgv_grupos_parla.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_grupos_parla.Name = "dgv_grupos_parla";
+            this.dgv_grupos_parla.ReadOnly = true;
+            this.dgv_grupos_parla.RowHeadersVisible = false;
+            this.dgv_grupos_parla.RowHeadersWidth = 51;
+            this.dgv_grupos_parla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_grupos_parla.Size = new System.Drawing.Size(601, 129);
+            this.dgv_grupos_parla.TabIndex = 65;
+            this.dgv_grupos_parla.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // Grupos_palamentarios_ini
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Grupos parlamentarios";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.Grupos_palamentarios_ini.HeaderText = "Grupos parlamentarios";
+            this.Grupos_palamentarios_ini.MinimumWidth = 6;
+            this.Grupos_palamentarios_ini.Name = "Grupos_palamentarios_ini";
+            this.Grupos_palamentarios_ini.ReadOnly = true;
             // 
-            // button30
+            // btn_agregar_grupo_parla
             // 
-            this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(635, 79);
-            this.button30.Margin = new System.Windows.Forms.Padding(4);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(147, 33);
-            this.button30.TabIndex = 63;
-            this.button30.Text = "Agregar";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.UseWaitCursor = true;
+            this.btn_agregar_grupo_parla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_grupo_parla.Location = new System.Drawing.Point(635, 79);
+            this.btn_agregar_grupo_parla.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar_grupo_parla.Name = "btn_agregar_grupo_parla";
+            this.btn_agregar_grupo_parla.Size = new System.Drawing.Size(147, 33);
+            this.btn_agregar_grupo_parla.TabIndex = 63;
+            this.btn_agregar_grupo_parla.Text = "Agregar";
+            this.btn_agregar_grupo_parla.UseVisualStyleBackColor = true;
+            this.btn_agregar_grupo_parla.UseWaitCursor = true;
+            this.btn_agregar_grupo_parla.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_agregar_grupo_parla_MouseClick);
             // 
-            // button29
+            // btn_eliminar_grupo_parla
             // 
-            this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(636, 137);
-            this.button29.Margin = new System.Windows.Forms.Padding(4);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(147, 33);
-            this.button29.TabIndex = 64;
-            this.button29.Text = "Eliminar";
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.UseWaitCursor = true;
+            this.btn_eliminar_grupo_parla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_grupo_parla.Location = new System.Drawing.Point(636, 137);
+            this.btn_eliminar_grupo_parla.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar_grupo_parla.Name = "btn_eliminar_grupo_parla";
+            this.btn_eliminar_grupo_parla.Size = new System.Drawing.Size(147, 33);
+            this.btn_eliminar_grupo_parla.TabIndex = 64;
+            this.btn_eliminar_grupo_parla.Text = "Eliminar";
+            this.btn_eliminar_grupo_parla.UseVisualStyleBackColor = true;
+            this.btn_eliminar_grupo_parla.UseWaitCursor = true;
+            this.btn_eliminar_grupo_parla.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_eliminar_grupo_parla_MouseClick);
             // 
             // groupBox86
             // 
             this.groupBox86.Controls.Add(this.label110);
             this.groupBox86.Controls.Add(this.cmb_nombre_persona_legisladora_1);
-            this.groupBox86.Controls.Add(this.dataGridView4);
-            this.groupBox86.Controls.Add(this.button28);
-            this.groupBox86.Controls.Add(this.button25);
+            this.groupBox86.Controls.Add(this.dgv_per_legis);
+            this.groupBox86.Controls.Add(this.btn_agregar_per_leg);
+            this.groupBox86.Controls.Add(this.btn_eliminar_pers_legis);
             this.groupBox86.Controls.Add(this.label111);
             this.groupBox86.Controls.Add(this.txt_ID_persona_legisladora_1);
-            this.groupBox86.Location = new System.Drawing.Point(8, 73);
+            this.groupBox86.Location = new System.Drawing.Point(7, 76);
             this.groupBox86.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox86.Name = "groupBox86";
             this.groupBox86.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox86.Size = new System.Drawing.Size(781, 410);
+            this.groupBox86.Size = new System.Drawing.Size(781, 407);
             this.groupBox86.TabIndex = 73;
             this.groupBox86.TabStop = false;
             this.groupBox86.UseWaitCursor = true;
@@ -8874,17 +8888,20 @@ namespace App_PLE.Vistas
             this.cmb_nombre_persona_legisladora_1.Size = new System.Drawing.Size(269, 26);
             this.cmb_nombre_persona_legisladora_1.TabIndex = 58;
             this.cmb_nombre_persona_legisladora_1.UseWaitCursor = true;
+            this.cmb_nombre_persona_legisladora_1.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_persona_legisladora_1_SelectedIndexChanged);
+            this.cmb_nombre_persona_legisladora_1.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_persona_legisladora_1_Validating);
             // 
-            // dataGridView4
+            // dgv_per_legis
             // 
-            this.dataGridView4.AllowUserToAddRows = false;
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.AllowUserToResizeRows = false;
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3});
+            this.dgv_per_legis.AllowUserToAddRows = false;
+            this.dgv_per_legis.AllowUserToDeleteRows = false;
+            this.dgv_per_legis.AllowUserToResizeRows = false;
+            this.dgv_per_legis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_per_legis.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_per_legis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_per_legis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pesonas_legisladoras_ini,
+            this.ID});
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle22.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8892,48 +8909,57 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridView4.Location = new System.Drawing.Point(27, 112);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(581, 272);
-            this.dataGridView4.TabIndex = 56;
-            this.dataGridView4.UseWaitCursor = true;
+            this.dgv_per_legis.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dgv_per_legis.Location = new System.Drawing.Point(27, 112);
+            this.dgv_per_legis.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_per_legis.Name = "dgv_per_legis";
+            this.dgv_per_legis.ReadOnly = true;
+            this.dgv_per_legis.RowHeadersVisible = false;
+            this.dgv_per_legis.RowHeadersWidth = 51;
+            this.dgv_per_legis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_per_legis.Size = new System.Drawing.Size(581, 282);
+            this.dgv_per_legis.TabIndex = 56;
+            this.dgv_per_legis.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // Pesonas_legisladoras_ini
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Personas legisladoras";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.Pesonas_legisladoras_ini.HeaderText = "Personas legisladoras";
+            this.Pesonas_legisladoras_ini.MinimumWidth = 6;
+            this.Pesonas_legisladoras_ini.Name = "Pesonas_legisladoras_ini";
+            this.Pesonas_legisladoras_ini.ReadOnly = true;
             // 
-            // button28
+            // ID
             // 
-            this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.Location = new System.Drawing.Point(616, 204);
-            this.button28.Margin = new System.Windows.Forms.Padding(4);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(147, 33);
-            this.button28.TabIndex = 54;
-            this.button28.Text = "Agregar";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.UseWaitCursor = true;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
-            // button25
+            // btn_agregar_per_leg
             // 
-            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(617, 262);
-            this.button25.Margin = new System.Windows.Forms.Padding(4);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(147, 33);
-            this.button25.TabIndex = 55;
-            this.button25.Text = "Eliminar";
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.UseWaitCursor = true;
+            this.btn_agregar_per_leg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_per_leg.Location = new System.Drawing.Point(621, 199);
+            this.btn_agregar_per_leg.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar_per_leg.Name = "btn_agregar_per_leg";
+            this.btn_agregar_per_leg.Size = new System.Drawing.Size(147, 33);
+            this.btn_agregar_per_leg.TabIndex = 54;
+            this.btn_agregar_per_leg.Text = "Agregar";
+            this.btn_agregar_per_leg.UseVisualStyleBackColor = true;
+            this.btn_agregar_per_leg.UseWaitCursor = true;
+            this.btn_agregar_per_leg.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_agregar_per_leg_MouseClick);
+            // 
+            // btn_eliminar_pers_legis
+            // 
+            this.btn_eliminar_pers_legis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_pers_legis.Location = new System.Drawing.Point(622, 257);
+            this.btn_eliminar_pers_legis.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar_pers_legis.Name = "btn_eliminar_pers_legis";
+            this.btn_eliminar_pers_legis.Size = new System.Drawing.Size(147, 33);
+            this.btn_eliminar_pers_legis.TabIndex = 55;
+            this.btn_eliminar_pers_legis.Text = "Eliminar";
+            this.btn_eliminar_pers_legis.UseVisualStyleBackColor = true;
+            this.btn_eliminar_pers_legis.UseWaitCursor = true;
+            this.btn_eliminar_pers_legis.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_eliminar_pers_legis_MouseClick);
             // 
             // label111
             // 
@@ -8969,6 +8995,8 @@ namespace App_PLE.Vistas
             this.cmb_tipo_promovente_iniciativa.Size = new System.Drawing.Size(467, 26);
             this.cmb_tipo_promovente_iniciativa.TabIndex = 59;
             this.cmb_tipo_promovente_iniciativa.UseWaitCursor = true;
+            this.cmb_tipo_promovente_iniciativa.SelectedIndexChanged += new System.EventHandler(this.cmb_tipo_promovente_iniciativa_SelectedIndexChanged);
+            this.cmb_tipo_promovente_iniciativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_promovente_iniciativa_Validating);
             // 
             // label109
             // 
@@ -14452,12 +14480,12 @@ namespace App_PLE.Vistas
             this.groupBox90.PerformLayout();
             this.groupBox89.ResumeLayout(false);
             this.groupBox89.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_com_legis)).EndInit();
             this.groupBox88.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_grupos_parla)).EndInit();
             this.groupBox86.ResumeLayout(false);
             this.groupBox86.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_per_legis)).EndInit();
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             this.groupBox82.ResumeLayout(false);
@@ -15140,23 +15168,21 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label301;
         private System.Windows.Forms.ComboBox cmb_nombre_persona_legisladora_1;
         private System.Windows.Forms.Label label110;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.DataGridView dgv_per_legis;
+        private System.Windows.Forms.Button btn_eliminar_pers_legis;
+        private System.Windows.Forms.Button btn_agregar_per_leg;
         private System.Windows.Forms.TextBox txt_ID_persona_legisladora_1;
         private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button btn_eliminar_grupo_parla;
+        private System.Windows.Forms.Button btn_agregar_grupo_parla;
+        private System.Windows.Forms.DataGridView dgv_grupos_parla;
         private System.Windows.Forms.ComboBox cmb_grupo_parlamentario;
         private System.Windows.Forms.Label label271;
         private System.Windows.Forms.TextBox txt_ID_comision_legislativa_1;
         private System.Windows.Forms.Label label302;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Button btn_elimina_con_legisl;
+        private System.Windows.Forms.Button btn_agregar_nom_com_leg;
+        private System.Windows.Forms.DataGridView dgv_com_legis;
         private System.Windows.Forms.ComboBox cmb_nombre_comision_legislativa_1;
         private System.Windows.Forms.Label label303;
         private System.Windows.Forms.GroupBox groupBox27;
@@ -15499,7 +15525,6 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.GroupBox groupBox122;
         private System.Windows.Forms.GroupBox groupBox123;
         private System.Windows.Forms.ComboBox cmb_sentido_resolucion_pleno_juicio_politico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
@@ -15509,5 +15534,10 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lengua_indigena_PA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tabla_discapacidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pesonas_legisladoras_ini;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Com_leg_ini;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_COM_LEG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grupos_palamentarios_ini;
     }
 }

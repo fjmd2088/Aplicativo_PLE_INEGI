@@ -276,6 +276,8 @@ namespace App_PLE.Vistas
             cmb_Tipo_iniciativa();
             cmb_Tipo_promovente_iniciativa();
             tipo_Organo_constitucional_autonomo();
+            Cmb_nombre_persona_legisladora_1();
+            Cmb_grupo_parlamentario();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
@@ -296,7 +298,21 @@ namespace App_PLE.Vistas
             txt_otro_estatus_iniciativa_especifique.Enabled = false;
             cmb_etapa_procesal_iniciativa.Enabled = false;
             txt_otro_tipo_iniciativa_especifique.Enabled = false;
-
+            cmb_nombre_persona_legisladora_1.Enabled = false;
+            txt_ID_persona_legisladora_1.Enabled = false;
+            dgv_per_legis.BackgroundColor = Color.LightGray;
+            btn_agregar_per_leg.Enabled = false;
+            btn_eliminar_pers_legis.Enabled = false;
+            cmb_grupo_parlamentario.Enabled = false;
+            dgv_grupos_parla.BackgroundColor = Color.LightGray;
+            btn_agregar_grupo_parla.Enabled = false;
+            btn_eliminar_grupo_parla.Enabled = false;
+            cmb_nombre_comision_legislativa_1.Enabled = false;
+            txt_ID_comision_legislativa_1.Enabled = false;
+            dgv_com_legis.BackgroundColor = Color.LightGray;
+            btn_agregar_nom_com_leg.Enabled = false;
+            btn_elimina_con_legisl.Enabled = false;
+           
         }
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
@@ -340,7 +356,26 @@ namespace App_PLE.Vistas
 
         }
 
-       
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
