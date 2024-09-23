@@ -278,6 +278,12 @@ namespace App_PLE.Vistas
             tipo_Organo_constitucional_autonomo();
             Cmb_nombre_persona_legisladora_1();
             Cmb_grupo_parlamentario();
+            Cmb_nombre_comision_legislativa_1();
+            Cmb_ayuntamiento();
+            Cmb_tipo_organo_constitucional_autonomo();
+            Cmb_cond_iniciativa_preferente();
+            Cmb_cond_adhesion_iniciativa();
+
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
@@ -312,7 +318,24 @@ namespace App_PLE.Vistas
             dgv_com_legis.BackgroundColor = Color.LightGray;
             btn_agregar_nom_com_leg.Enabled = false;
             btn_elimina_con_legisl.Enabled = false;
-           
+            cmb_ayuntamiento.Enabled = false;
+            txt_ageem_ini.Enabled = false;
+            cmb_tipo_organo_constitucional_autonomo.Enabled = false;
+            txt_otro_tipo_organo_constitucional_autonomo_especifique.Enabled = false;
+            cmb_cond_iniciativa_preferente.Enabled = false;
+            cmb_cond_adhesion_iniciativa.Enabled = false;
+            cmb_nombre_comision_legislativa_1_primer_estudio.Enabled = false;
+            cmb_nombre_comision_legislativa_1_segundo_estudio.Enabled = false;
+            txt_ID_comision_legislativa_1_primer_estudio.Enabled = false; txt_ID_comision_legislativa_1_primer_estudio.BackColor = Color.LightGray;
+            txt_ID_comision_legislativa_1_segundo_estudio.Enabled = false; txt_ID_comision_legislativa_1_segundo_estudio.BackColor = Color.LightGray;
+            dgv_prim_est_CL.BackgroundColor = Color.LightGray;
+            dgv_segundo_est_CL.BackgroundColor = Color.LightGray;
+            btn_agreg_prim_est.Enabled = false;
+            btn_elim_prim_est.Enabled = false;
+            btn_agreg_seg_est.Enabled = false;
+            btn_elim_seg_est.Enabled = false;
+
+
         }
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
@@ -357,6 +380,26 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
