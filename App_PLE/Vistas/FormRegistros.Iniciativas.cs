@@ -475,13 +475,16 @@ namespace App_PLE.Vistas
             {
                 cmb_estatus_iniciativa.Enabled = false;
                 cmb_estatus_iniciativa.BackColor = Color.LightGray;
+                cmb_estatus_iniciativa.Text = "";
+                txt_otro_estatus_iniciativa_especifique.Text = "";
             }
             else
             {
                 cmb_estatus_iniciativa.Enabled = true;
                 cmb_estatus_iniciativa.BackColor = Color.Honeydew;
-                cmb_estatus_iniciativa.Text = "";
+                
             }
+            
         }
 
         // cmb_cond_modificacion_informacion_ingreso_periodo
@@ -756,7 +759,8 @@ namespace App_PLE.Vistas
             if (valorComboBox1.Equals("Otro estatus (especifique)", StringComparison.OrdinalIgnoreCase))
             {
                 txt_otro_estatus_iniciativa_especifique.Enabled = true;
-                txt_otro_estatus_iniciativa_especifique.BackColor = Color.Honeydew;
+                txt_otro_estatus_iniciativa_especifique.BackColor = Color.Honeydew; 
+                
             }
             else
             {
@@ -820,6 +824,7 @@ namespace App_PLE.Vistas
                 txt_ID_comision_legislativa_1_primer_estudio.Text = "";
                 // TABLA
                 dgv_prim_est_CL.BackgroundColor = Color.LightGray;
+                dgv_prim_est_CL.Rows.Clear();
                 // BOTONES
                 btn_agreg_prim_est.Enabled = false;
                 btn_agreg_prim_est.BackColor = Color.LightGray;
@@ -960,6 +965,7 @@ namespace App_PLE.Vistas
                 txt_ID_comision_legislativa_1_segundo_estudio.Text = "";
                 // TABLA
                 dgv_segundo_est_CL.BackgroundColor = Color.LightGray;
+                dgv_segundo_est_CL.Rows.Clear();
                 // BOTONES
                 btn_agreg_seg_est.Enabled = false;
                 btn_agreg_seg_est.BackColor = Color.LightGray;
@@ -1211,6 +1217,7 @@ namespace App_PLE.Vistas
                 cmb_nombre_persona_legisladora_1.Text = "";
                 btn_agregar_per_leg.Enabled = false; btn_eliminar_pers_legis.Enabled = false;
                 dgv_per_legis.BackgroundColor = Color.LightGray;
+                dgv_per_legis.Rows.Clear();
             }
 
             // Desbloquea el ID de personas legisladorasn 
@@ -1241,6 +1248,7 @@ namespace App_PLE.Vistas
                 cmb_grupo_parlamentario.Text = "";
                 btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
                 dgv_grupos_parla.BackgroundColor = Color.LightGray;
+                dgv_grupos_parla.Rows.Clear();
             }
 
             // Desbloquea Comisiones legislativas
@@ -1260,6 +1268,7 @@ namespace App_PLE.Vistas
                 cmb_nombre_comision_legislativa_1.Text = "";
                 btn_agregar_nom_com_leg.Enabled = false; btn_elimina_con_legisl.Enabled = false;
                 dgv_com_legis.BackgroundColor = Color.LightGray;
+                dgv_com_legis.Rows.Clear();
                 txt_ID_comision_legislativa_1.Enabled = false;
                 txt_ID_comision_legislativa_1.BackColor = Color.LightGray;
                 txt_ID_comision_legislativa_1.Text = "";
@@ -1290,6 +1299,7 @@ namespace App_PLE.Vistas
                 cmb_ayuntamiento.Text = "";
                 txt_ageem_ini.Enabled = false;
                 txt_ageem_ini.BackColor = Color.LightGray;
+                txt_ageem_ini.Text = "";
             }
             // Desbloquea el Tipo de organo constitucional aytónomo promovente de la iniciativa
             if (valorComboBox1.Equals("Órgano constitucional autónomo", StringComparison.OrdinalIgnoreCase))
@@ -1303,7 +1313,7 @@ namespace App_PLE.Vistas
                 cmb_tipo_organo_constitucional_autonomo.Enabled = false;
                 cmb_tipo_organo_constitucional_autonomo.BackColor = Color.LightGray;
                 cmb_tipo_organo_constitucional_autonomo.Text = "";
-                
+                txt_otro_tipo_organo_constitucional_autonomo_especifique.Text = "";
             }
             // Desbloquea Condición Condición de iniciativa preferente.
             if (valorComboBox1.Equals("Si", StringComparison.OrdinalIgnoreCase))
