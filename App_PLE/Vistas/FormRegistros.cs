@@ -283,6 +283,8 @@ namespace App_PLE.Vistas
             Cmb_tipo_organo_constitucional_autonomo();
             Cmb_cond_iniciativa_preferente();
             Cmb_cond_adhesion_iniciativa();
+            Cmb_nombre_comision_legislativa_1_primer_estudio();
+            Cmb_nombre_comision_legislativa_1_segundo_estudio();
 
 
             // CAMPOS DESHABILITADOS INICIALMENTE
@@ -380,6 +382,21 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -650,7 +651,7 @@ namespace App_PLE.Vistas
                 cmb_cond_iniciativa_preferente.Text = "";
             }
             // Desbloquea Condición Condición de iniciativa preferente.
-            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            if (valorComboBox1.Equals("Si", StringComparison.OrdinalIgnoreCase))
             {
                 cmb_cond_adhesion_iniciativa.Enabled = true;
                 cmb_cond_adhesion_iniciativa.BackColor = Color.Honeydew;
@@ -787,6 +788,44 @@ namespace App_PLE.Vistas
                 cmb_etapa_procesal_iniciativa.BackColor = Color.LightGray;
                 cmb_etapa_procesal_iniciativa.Text = "";
             }
+            // Desbloquear Primer estudio
+            if (valorComboBox1.Equals("Estudio", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Dictamen", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // CMB
+                cmb_nombre_comision_legislativa_1_primer_estudio.Enabled = true;
+                cmb_nombre_comision_legislativa_1_primer_estudio.BackColor = Color.Honeydew;
+                // TXT 
+                txt_ID_comision_legislativa_1_primer_estudio.Enabled = false;
+                txt_ID_comision_legislativa_1_primer_estudio.BackColor = Color.Honeydew;
+                // TABLA
+                dgv_prim_est_CL.BackgroundColor = Color.Honeydew;
+                // BOTONES
+                btn_agreg_prim_est.Enabled = true;
+                btn_agreg_prim_est.BackColor = Color.Honeydew;
+                btn_elim_prim_est.Enabled = true;
+                btn_elim_prim_est.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // CMB
+                cmb_nombre_comision_legislativa_1_primer_estudio.Enabled = false;
+                cmb_nombre_comision_legislativa_1_primer_estudio.BackColor = Color.LightGray;
+                cmb_nombre_comision_legislativa_1_primer_estudio.Text = "";
+                // TXT
+                txt_ID_comision_legislativa_1_primer_estudio.Enabled = false;
+                txt_ID_comision_legislativa_1_primer_estudio.BackColor = Color.LightGray;
+                txt_ID_comision_legislativa_1_primer_estudio.Text = "";
+                // TABLA
+                dgv_prim_est_CL.BackgroundColor = Color.LightGray;
+                // BOTONES
+                btn_agreg_prim_est.Enabled = false;
+                btn_agreg_prim_est.BackColor = Color.LightGray;
+                btn_elim_prim_est.Enabled = false;
+                btn_elim_prim_est.BackColor = Color.LightGray;
+            }
         }
         private void CargarEtapaProcesal(int desde, int hasta)
         {
@@ -887,7 +926,46 @@ namespace App_PLE.Vistas
         }
         private void cmb_etapa_procesal_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string valorComboBox1 = cmb_etapa_procesal_iniciativa.Text.Trim();
 
+            
+            // Desbloquear Primer estudio
+            if (valorComboBox1.Equals("Segundo estudio", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Segundo dictamen", StringComparison.OrdinalIgnoreCase)) 
+                
+            {
+                // CMB
+                cmb_nombre_comision_legislativa_1_segundo_estudio.Enabled = true;
+                cmb_nombre_comision_legislativa_1_segundo_estudio.BackColor = Color.Honeydew;
+                // TXT 
+                txt_ID_comision_legislativa_1_segundo_estudio.Enabled = false;
+                txt_ID_comision_legislativa_1_segundo_estudio.BackColor = Color.Honeydew;
+                // TABLA
+                dgv_segundo_est_CL.BackgroundColor = Color.Honeydew;
+                // BOTONES
+                btn_agreg_seg_est.Enabled = true;
+                btn_agreg_seg_est.BackColor = Color.Honeydew;
+                btn_elim_seg_est.Enabled = true;
+                btn_elim_seg_est.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // CMB
+                cmb_nombre_comision_legislativa_1_segundo_estudio.Enabled = false;
+                cmb_nombre_comision_legislativa_1_segundo_estudio.BackColor = Color.LightGray;
+                cmb_nombre_comision_legislativa_1_segundo_estudio.Text = "";
+                // TXT
+                txt_ID_comision_legislativa_1_segundo_estudio.Enabled = false;
+                txt_ID_comision_legislativa_1_segundo_estudio.BackColor = Color.LightGray;
+                txt_ID_comision_legislativa_1_segundo_estudio.Text = "";
+                // TABLA
+                dgv_segundo_est_CL.BackgroundColor = Color.LightGray;
+                // BOTONES
+                btn_agreg_seg_est.Enabled = false;
+                btn_agreg_seg_est.BackColor = Color.LightGray;
+                btn_elim_seg_est.Enabled = false;
+                btn_elim_seg_est.BackColor = Color.LightGray;
+            }
         }
 
 
@@ -909,7 +987,7 @@ namespace App_PLE.Vistas
 
         }
 
-        // TIPO ------------------ cmb_tipo_iniciativa
+        // Tipo 
         private void cmb_Tipo_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1030,7 +1108,7 @@ namespace App_PLE.Vistas
         }
 
 
-        // PROMOVENTE ------------------------------ cmb_tipo_promovente_iniciativa
+        // Promovente
         private void cmb_Tipo_promovente_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1253,7 +1331,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // PERSONAS LEGISLADORAS ------- cmb_nombre_persona_legisladora_1
+        // Tabla prsonas legisladoras
         private void Cmb_nombre_persona_legisladora_1()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1395,7 +1473,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // Botones agregar y eliminar
+        // Botones agregar y eliminar de la tabla personas legisladoras
         private void btn_agregar_per_leg_MouseClick(object sender, MouseEventArgs e)
         {
             // Obtener el nombre seleccionado en el ComboBox
@@ -1454,7 +1532,7 @@ namespace App_PLE.Vistas
             return false;
         }
 
-        // GRUPO PARLAMENTARIO -------- cmb_grupo_parlamentario
+        // Tabla grupo parrlamentario
         private void Cmb_grupo_parlamentario()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1539,7 +1617,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // Botones agregar y eliminar
+        // Botones agregar y eliminar de la tabla grupo parlamentario
         private void btn_agregar_grupo_parla_MouseClick(object sender, MouseEventArgs e)
         {
             // Obtener el nombre seleccionado en el ComboBox
@@ -1596,7 +1674,7 @@ namespace App_PLE.Vistas
             return false;
         }
 
-        // COMISIONES LEGISLATIVAAS ------------- cmb_nombre_comision_legislativa_1
+        // Tabla comisiones legislativas
 
         private void Cmb_nombre_comision_legislativa_1()
         {
@@ -1739,7 +1817,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // Botones agregar y eliminar
+        // Botones agregar y eliminar de la tabla d comisiones legislativas
 
         private void btn_agregar_nom_com_leg_Click(object sender, EventArgs e)
         {
@@ -1799,7 +1877,7 @@ namespace App_PLE.Vistas
             return false;
         }
 
-        // AYUNTAMIENTO -------------------------- cmb_ayuntamiento
+        // Ayuntamiento
 
         private void Cmb_ayuntamiento()
         {
@@ -1942,7 +2020,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // TIPO DE ORGANO ------------------------ cmb_tipo_organo_constitucional_autonomo
+        // Tipo de organo
 
         private void Cmb_tipo_organo_constitucional_autonomo()
         {
@@ -2063,7 +2141,7 @@ namespace App_PLE.Vistas
 
         }
 
-        // INICIATIVA PREFERENTE ---------------- cmb_cond_iniciativa_preferente
+        // Iniciativa preferente 
 
         private void Cmb_cond_iniciativa_preferente()
         {
@@ -2149,7 +2227,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // ADHESIÓN A LA INICIATIVA ------------- cmb_cond_adhesion_iniciativa
+        // Adheción a la iniciativa 
 
         private void Cmb_cond_adhesion_iniciativa()
         {
@@ -2235,9 +2313,407 @@ namespace App_PLE.Vistas
             }
         }
 
-        //ESTUDIOS ---------------------------------------------------------------------------------------------------------------------------------
+        // ESTUDIO ---------------------------------------------------------------------------------------------------------------------------------
 
+        // Primer estudio
 
+        private void Cmb_nombre_comision_legislativa_1_primer_estudio()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select nombre_comision_legislativa from TR_COMISIONES_LEGISLATIVAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_nombre_comision_legislativa_1_primer_estudio.DataSource = dataTable;
+                    cmb_nombre_comision_legislativa_1_primer_estudio.DisplayMember = "nombre_comision_legislativa";
+
+                    cmb_nombre_comision_legislativa_1_primer_estudio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_comision_legislativa_1_primer_estudio.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_nombre_comision_legislativa_1_primer_estudio.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_comision_legislativa_1_primer_estudio.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_nombre_comision_legislativa_1_primer_estudio_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["nombre_comision_legislativa"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["nombre_comision_legislativa"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["nombre_comision_legislativa"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_nombre_comision_legislativa_1_primer_estudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_comision_legislativa_1_primer_estudio.Text;
+
+            // Verificar si el nombre seleccionado es nulo o vacío
+            if (string.IsNullOrEmpty(nombreSeleccionado))
+            {
+                txt_ID_comision_legislativa_1_primer_estudio.Text = "";
+                return;
+            }
+
+            // Crear la cadena de conexión
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            // Usar la conexión a la base de datos
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Crear la consulta SQL para obtener el ID de la persona seleccionada
+                    string query = "SELECT ID_comision_legislativa FROM TR_COMISIONES_LEGISLATIVAS WHERE nombre_comision_legislativa = @nombreSeleccionado";
+
+                    // Crear el comando SQL
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        // Asignar el valor del parámetro @nombreSeleccionado
+                        cmd.Parameters.AddWithValue("@nombreSeleccionado", nombreSeleccionado);
+
+                        // Ejecutar la consulta y obtener el resultado
+                        object resultado = cmd.ExecuteScalar();
+
+                        // Verificar si se obtuvo un resultado
+                        if (resultado != null)
+                        {
+                            txt_ID_comision_legislativa_1_primer_estudio.Text = resultado.ToString();
+                        }
+                        else
+                        {
+                            txt_ID_comision_legislativa_1_primer_estudio.Text = ""; // Limpiar el TextBox si no se encontró un ID
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el ID de la persona legisladora: " + ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión
+                    conexion.Close();
+                }
+            }
+        }
+        private void btn_agreg_prim_est_Click(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_comision_legislativa_1_primer_estudio.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombreSeleccionado))
+            {
+                MessageBox.Show("Revisar datos vacíos");
+            }
+            else
+            {
+                // Verificar si el nombre ya existe en la tabla
+                bool respuesta = IsDuplicateRecord_PEST(nombreSeleccionado);
+
+                if (respuesta)
+                {
+                    MessageBox.Show("Dato duplicado");
+                    cmb_nombre_comision_legislativa_1_primer_estudio.Text = "";
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_prim_est_CL.Rows.Add(nombreSeleccionado, txt_ID_comision_legislativa_1_primer_estudio.Text);
+
+                    // Limpiar los campos
+                    cmb_nombre_comision_legislativa_1_primer_estudio.Text = "";
+                    txt_ID_comision_legislativa_1_primer_estudio.Text = "";  // Limpiar el campo txt_ID_comision_legislativa_1
+                }
+            }
+        }
+        private void btn_elim_prim_est_Click(object sender, EventArgs e)
+        {
+            if (dgv_prim_est_CL.SelectedRows.Count > 0)
+            {
+                dgv_prim_est_CL.Rows.RemoveAt(dgv_prim_est_CL.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private bool IsDuplicateRecord_PEST(string variable_cmb)
+
+        {
+            foreach (DataGridViewRow row in dgv_prim_est_CL.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["Tabla_prim_est"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Segundo estudio 
+
+        private void Cmb_nombre_comision_legislativa_1_segundo_estudio()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select nombre_comision_legislativa from TR_COMISIONES_LEGISLATIVAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.DataSource = dataTable;
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.DisplayMember = "nombre_comision_legislativa";
+
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_nombre_comision_legislativa_1_segundo_estudio_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["nombre_comision_legislativa"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["nombre_comision_legislativa"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["nombre_comision_legislativa"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_nombre_comision_legislativa_1_segundo_estudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_comision_legislativa_1_segundo_estudio.Text;
+
+            // Verificar si el nombre seleccionado es nulo o vacío
+            if (string.IsNullOrEmpty(nombreSeleccionado))
+            {
+                txt_ID_comision_legislativa_1_segundo_estudio.Text = "";
+                return;
+            }
+
+            // Crear la cadena de conexión
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            // Usar la conexión a la base de datos
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Crear la consulta SQL para obtener el ID de la persona seleccionada
+                    string query = "SELECT ID_comision_legislativa FROM TR_COMISIONES_LEGISLATIVAS WHERE nombre_comision_legislativa = @nombreSeleccionado";
+
+                    // Crear el comando SQL
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        // Asignar el valor del parámetro @nombreSeleccionado
+                        cmd.Parameters.AddWithValue("@nombreSeleccionado", nombreSeleccionado);
+
+                        // Ejecutar la consulta y obtener el resultado
+                        object resultado = cmd.ExecuteScalar();
+
+                        // Verificar si se obtuvo un resultado
+                        if (resultado != null)
+                        {
+                            txt_ID_comision_legislativa_1_segundo_estudio.Text = resultado.ToString();
+                        }
+                        else
+                        {
+                            txt_ID_comision_legislativa_1_segundo_estudio.Text = ""; // Limpiar el TextBox si no se encontró un ID
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el ID de la persona legisladora: " + ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión
+                    conexion.Close();
+                }
+            }
+        }
+        private void btn_agreg_seg_est_Click(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_comision_legislativa_1_segundo_estudio.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombreSeleccionado))
+            {
+                MessageBox.Show("Revisar datos vacíos");
+            }
+            else
+            {
+                // Verificar si el nombre ya existe en la tabla
+                bool respuesta = IsDuplicateRecord_SEST(nombreSeleccionado);
+
+                if (respuesta)
+                {
+                    MessageBox.Show("Dato duplicado");
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.Text = "";
+                }
+                else
+                {
+                    // Agregar una nueva fila al DataGridView
+                    dgv_segundo_est_CL.Rows.Add(nombreSeleccionado, txt_ID_comision_legislativa_1_segundo_estudio.Text);
+
+                    // Limpiar los campos
+                    cmb_nombre_comision_legislativa_1_segundo_estudio.Text = "";
+                    txt_ID_comision_legislativa_1_segundo_estudio.Text = "";  // Limpiar el campo txt_ID_comision_legislativa_1
+                }
+            }
+        }
+        private void btn_elim_seg_est_Click(object sender, EventArgs e)
+        {
+            if (dgv_segundo_est_CL.SelectedRows.Count > 0)
+            {
+                dgv_segundo_est_CL.Rows.RemoveAt(dgv_segundo_est_CL.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar registro a eliminar");
+            }
+        }
+        private bool IsDuplicateRecord_SEST(string variable_cmb)
+
+        {
+            foreach (DataGridViewRow row in dgv_segundo_est_CL.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["Tabla_seg_est"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
 
