@@ -1113,7 +1113,6 @@ namespace App_PLE.Vistas
 
         }
 
-
         // Promovente
         private void cmb_Tipo_promovente_iniciativa()
         {
@@ -1238,17 +1237,17 @@ namespace App_PLE.Vistas
             {
                 cmb_grupo_parlamentario.Enabled = true;
                 cmb_grupo_parlamentario.BackColor = Color.Honeydew;
-                btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
-                dgv_grupos_parla.BackgroundColor = Color.Honeydew;
+                //btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
+                //dgv_grupos_parla.BackgroundColor = Color.Honeydew;
             }
             else
             {
                 cmb_grupo_parlamentario.Enabled = false;
                 cmb_grupo_parlamentario.BackColor = Color.LightGray;
                 cmb_grupo_parlamentario.Text = "";
-                btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
-                dgv_grupos_parla.BackgroundColor = Color.LightGray;
-                dgv_grupos_parla.Rows.Clear();
+                //btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
+                //dgv_grupos_parla.BackgroundColor = Color.LightGray;
+                //dgv_grupos_parla.Rows.Clear();
             }
 
             // Desbloquea Comisiones legislativas
@@ -1532,7 +1531,7 @@ namespace App_PLE.Vistas
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
-                string existingId = row.Cells["Pesonas_legisladoras_ini"].Value.ToString();
+                string existingId = row.Cells["id_per_leg_agr"].Value.ToString();
 
                 if (existingId == variable_cmb)
                 {
@@ -1555,7 +1554,7 @@ namespace App_PLE.Vistas
                     conexion.Open();
 
                     // comando de sql
-                    string query = "select entidad_federativa from TR_DATOS_GENERALES";
+                    string query = "select descripcion from TC_GRAL_GPO_PARL_PORMOVENTE";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                     // Utilizar un DataReader para obtener los datos
@@ -1565,7 +1564,7 @@ namespace App_PLE.Vistas
                     adapter.Fill(dataTable);
 
                     cmb_grupo_parlamentario.DataSource = dataTable;
-                    cmb_grupo_parlamentario.DisplayMember = "entidad_federativa";
+                    cmb_grupo_parlamentario.DisplayMember = "descripcion";
 
                     cmb_grupo_parlamentario.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                     cmb_grupo_parlamentario.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -1604,16 +1603,84 @@ namespace App_PLE.Vistas
                 foreach (DataRowView item in comboBox.Items)
                 {
                     // ajustar el nombre a la columna dependiendo el combobox
-                    string cleanedItem = item["entidad_federativa"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
                     if (cleanedText == cleanedItem)
                     {
                         isValid = true;
                         break;
                     }
                     // Mostrar el valor actual de item (para depuración)
-                    Console.WriteLine(" Current item : " + item["entidad_federativa"]);
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
                     // O usar Debug.WriteLine si estás depurando
-                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["entidad_federativa"]);
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_grupo_parlamentario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_grupo_parlamentario.Text.Trim();
+
+            // Desbloquea Grupo parlamentario tabla y botones varios
+            if (valorComboBox1.Equals("Varios", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_varios_grupos_parlamentarios_especifique_1.Enabled = true;
+                cmb_varios_grupos_parlamentarios_especifique_1.BackColor = Color.Honeydew;
+                btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
+                dgv_grupos_parla.BackgroundColor = Color.Honeydew;
+            }
+            else
+            {
+                cmb_varios_grupos_parlamentarios_especifique_1.Enabled = false;
+                cmb_varios_grupos_parlamentarios_especifique_1.BackColor = Color.LightGray;
+                cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
+                btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
+                dgv_grupos_parla.BackgroundColor = Color.LightGray;
+                dgv_grupos_parla.Rows.Clear();
+            }
+
+           
+        }
+
+        // Varios grupos parlamentarios
+        private void cmb_varios_grupos_parlamentarios_especifique_1_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
                 }
                 if (!isValid)
                 {
@@ -1877,7 +1944,7 @@ namespace App_PLE.Vistas
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
-                string existingId = row.Cells["Com_leg_ini"].Value.ToString();
+                string existingId = row.Cells["ID_COM_LEG"].Value.ToString();
 
                 if (existingId == variable_cmb)
                 {

@@ -336,6 +336,7 @@ namespace App_PLE.Vistas
             btn_elim_prim_est.Enabled = false;
             btn_agreg_seg_est.Enabled = false;
             btn_elim_seg_est.Enabled = false;
+            cmb_varios_grupos_parlamentarios_especifique_1.Enabled = false;
 
 
         }
@@ -382,6 +383,11 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
 
 
 
