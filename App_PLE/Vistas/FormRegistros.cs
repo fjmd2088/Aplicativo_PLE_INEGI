@@ -277,9 +277,7 @@ namespace App_PLE.Vistas
             cmb_Tipo_promovente_iniciativa();
             tipo_Organo_constitucional_autonomo();
             Cmb_nombre_persona_legisladora_1();
-            Cmb_grupo_parlamentario();
-            Cmb_nombre_comision_legislativa_1();
-            Cmb_ayuntamiento();
+            Cmb_nombre_comision_legislativa_1();            
             Cmb_tipo_organo_constitucional_autonomo();
             Cmb_cond_iniciativa_preferente();
             Cmb_cond_adhesion_iniciativa();
@@ -312,6 +310,7 @@ namespace App_PLE.Vistas
             btn_agregar_per_leg.Enabled = false;
             btn_eliminar_pers_legis.Enabled = false;
             cmb_grupo_parlamentario.Enabled = false;
+            cmb_grupo_parlamentario.Text = "";
             dgv_grupos_parla.BackgroundColor = Color.LightGray;
             btn_agregar_grupo_parla.Enabled = false;
             btn_eliminar_grupo_parla.Enabled = false;
@@ -337,8 +336,8 @@ namespace App_PLE.Vistas
             btn_agreg_seg_est.Enabled = false;
             btn_elim_seg_est.Enabled = false;
             cmb_varios_grupos_parlamentarios_especifique_1.Enabled = false;
-
-
+            cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
+            
         }
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------

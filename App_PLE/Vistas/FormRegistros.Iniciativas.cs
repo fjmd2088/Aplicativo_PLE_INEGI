@@ -1247,7 +1247,7 @@ namespace App_PLE.Vistas
                 cmb_grupo_parlamentario.Text = "";
                 //btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
                 //dgv_grupos_parla.BackgroundColor = Color.LightGray;
-                //dgv_grupos_parla.Rows.Clear();
+                dgv_grupos_parla.Rows.Clear();
             }
 
             // Desbloquea Comisiones legislativas
@@ -1542,47 +1542,6 @@ namespace App_PLE.Vistas
         }
 
         // Tabla grupo parrlamentario
-        private void Cmb_grupo_parlamentario()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_GRAL_GPO_PARL_PORMOVENTE";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_grupo_parlamentario.DataSource = dataTable;
-                    cmb_grupo_parlamentario.DisplayMember = "descripcion";
-
-                    cmb_grupo_parlamentario.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_grupo_parlamentario.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_grupo_parlamentario.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_grupo_parlamentario.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
         private void cmb_grupo_parlamentario_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -1634,6 +1593,7 @@ namespace App_PLE.Vistas
             {
                 cmb_varios_grupos_parlamentarios_especifique_1.Enabled = true;
                 cmb_varios_grupos_parlamentarios_especifique_1.BackColor = Color.Honeydew;
+                cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
                 btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
                 dgv_grupos_parla.BackgroundColor = Color.Honeydew;
             }
@@ -1698,7 +1658,7 @@ namespace App_PLE.Vistas
         private void btn_agregar_grupo_parla_MouseClick(object sender, MouseEventArgs e)
         {
             // Obtener el nombre seleccionado en el ComboBox
-            string nombreSeleccionado = cmb_grupo_parlamentario.Text.Trim();
+            string nombreSeleccionado = cmb_varios_grupos_parlamentarios_especifique_1.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(nombreSeleccionado))
             {
@@ -1712,13 +1672,13 @@ namespace App_PLE.Vistas
                 if (respuesta)
                 {
                     MessageBox.Show("Dato duplicado");
-                    cmb_grupo_parlamentario.Text = "";
+                    cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
                 }
                 else
                 {
                     // Agregar una nueva fila al DataGridView
                     dgv_grupos_parla.Rows.Add(nombreSeleccionado);
-                    cmb_grupo_parlamentario.Text = "";
+                    cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
 
                 }
             }
@@ -1956,47 +1916,6 @@ namespace App_PLE.Vistas
 
         // Ayuntamiento
 
-        private void Cmb_ayuntamiento()
-        {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                try
-                {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select nom_mun from TC_AGEEM";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_ayuntamiento.DataSource = dataTable;
-                    cmb_ayuntamiento.DisplayMember = "nom_mun";
-
-                    cmb_ayuntamiento.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_ayuntamiento.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_ayuntamiento.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_ayuntamiento.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
-                }
-
-            }
-        }
         private void cmb_ayuntamiento_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -2792,7 +2711,11 @@ namespace App_PLE.Vistas
             return false;
         }
 
+        // DICTAMEN ---------------------------------------------------------------------------------------------------------------------------------
 
+        // Primer dictamen
+
+        // Segundo dictamen
 
 
         //--------------------------------------

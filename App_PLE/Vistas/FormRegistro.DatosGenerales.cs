@@ -635,6 +635,71 @@ namespace App_PLE.Vistas
 
                             conexion.Open();
 
+                            // NUEVA CONSULTA PARA LLENAR cmb_grupo_parlamentario DESDE TC_GRAL_GPO_PARL_PORMOVENTE ------------------
+                            string queryGrupoParlamentario = "SELECT descripcion FROM TC_GRAL_GPO_PARL_PORMOVENTE WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryGrupoParlamentario, conexion))
+                            {
+                                cmdGrupoParlamentario.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapterGrupoParlamentario = new SQLiteDataAdapter(cmdGrupoParlamentario);
+                                DataTable tableGrupoParlamentario = new DataTable();
+                                adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
+
+                                // Llenar el ComboBox "cmb_grupo_parlamentario" con los resultados de la consulta
+                                cmb_grupo_parlamentario.DisplayMember = "descripcion";
+                                cmb_grupo_parlamentario.ValueMember = "descripcion";  // Opcional si necesitas usar el valor en otro lugar
+                                cmb_grupo_parlamentario.DataSource = tableGrupoParlamentario;
+                                
+                                // Opcional: Configurar el modo de autocompletar y el estilo del ComboBox
+                                cmb_grupo_parlamentario.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_grupo_parlamentario.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_grupo_parlamentario.DropDownStyle = ComboBoxStyle.DropDown;
+                            }
+
+                            // NUEVA CONSULTA PARA LLENAR cmb_varios_grupos_parlamentarios_especifique_1 Varios ------------------
+                            string queryGrupoParlamentariovarios = "SELECT descripcion FROM TC_GRAL_GPO_PARL_PORMOVENTE WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryGrupoParlamentariovarios, conexion))
+                            {
+                                cmdGrupoParlamentario.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapterGrupoParlamentario = new SQLiteDataAdapter(cmdGrupoParlamentario);
+                                DataTable tableGrupoParlamentario = new DataTable();
+                                adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
+
+                                // Llenar el ComboBox "cmb_varios_grupos_parlamentarios_especifique_1" con los resultados de la consulta
+                                cmb_varios_grupos_parlamentarios_especifique_1.DisplayMember = "descripcion";
+                                cmb_varios_grupos_parlamentarios_especifique_1.ValueMember = "descripcion";  // Opcional si necesitas usar el valor en otro lugar
+                                cmb_varios_grupos_parlamentarios_especifique_1.DataSource = tableGrupoParlamentario;
+                                
+                                // Opcional: Configurar el modo de autocompletar y el estilo del ComboBox
+                                cmb_varios_grupos_parlamentarios_especifique_1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_varios_grupos_parlamentarios_especifique_1.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_varios_grupos_parlamentarios_especifique_1.DropDownStyle = ComboBoxStyle.DropDown;
+                                
+                            }
+
+                            // NUEVA CONSULTA PARA LLENAR Ayuntamiento ------------------------------------------------------------
+                            string queryAyuntamiento = "SELECT nom_mun FROM TC_AGEEM WHERE nom_ent = @ayuntamiento";
+                            using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryAyuntamiento, conexion))
+                            {
+                                cmdGrupoParlamentario.Parameters.AddWithValue("@ayuntamiento", entidad_federativa);
+
+                                SQLiteDataAdapter adapterGrupoParlamentario = new SQLiteDataAdapter(cmdGrupoParlamentario);
+                                DataTable tableGrupoParlamentario = new DataTable();
+                                adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
+
+                                // Llenar el ComboBox "cmb_varios_grupos_parlamentarios_especifique_1" con los resultados de la consulta
+                                cmb_ayuntamiento.DisplayMember = "nom_mun";
+                                cmb_ayuntamiento.ValueMember = "nom_mun";  // Opcional si necesitas usar el valor en otro lugar
+                                cmb_ayuntamiento.DataSource = tableGrupoParlamentario;
+
+                                // Opcional: Configurar el modo de autocompletar y el estilo del ComboBox
+                                cmb_ayuntamiento.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_ayuntamiento.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_ayuntamiento.DropDownStyle = ComboBoxStyle.DropDown;
+
+                            }
+
                             // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la legislatura------------------------------
                             string query = "select distinct legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
                             using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
