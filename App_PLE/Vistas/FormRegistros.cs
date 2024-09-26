@@ -283,7 +283,10 @@ namespace App_PLE.Vistas
             Cmb_cond_adhesion_iniciativa();
             Cmb_nombre_comision_legislativa_1_primer_estudio();
             Cmb_nombre_comision_legislativa_1_segundo_estudio();
-
+            Cmb_tipo_primer_dictamen1();
+            Cmb_sentido_resolucion_primer_dictamen();
+            Cmb_tipo_segundo_dictamen();
+            Cmb_sentido_resolucion_segundo_dictamen();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
@@ -337,7 +340,16 @@ namespace App_PLE.Vistas
             btn_elim_seg_est.Enabled = false;
             cmb_varios_grupos_parlamentarios_especifique_1.Enabled = false;
             cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
-            
+            cmb_tipo_primer_dictamen1.Enabled = false;
+            txt_otro_tipo_primer_dictamen_especifique.Enabled = false;
+            cmb_sentido_resolucion_primer_dictamen.Enabled = false;
+            txt_otro_sentido_resolucion_primer_dictamen_especifique.Enabled = false;
+            cmb_tipo_segundo_dictamen.Enabled = false;
+            txt_otro_tipo_segundo_dictamen_especifique.Enabled = false;
+            cmb_sentido_resolucion_segundo_dictamen.Enabled = false;
+            txt_otro_sentido_resolucion_segundo_dictamen_especifique.Enabled = false;
+
+
         }
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
@@ -382,6 +394,21 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

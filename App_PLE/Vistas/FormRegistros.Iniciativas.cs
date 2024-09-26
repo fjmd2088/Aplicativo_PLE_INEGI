@@ -831,6 +831,42 @@ namespace App_PLE.Vistas
                 btn_elim_prim_est.Enabled = false;
                 btn_elim_prim_est.BackColor = Color.LightGray;
             }
+            // Desbloquear Primer dictamen
+            if (valorComboBox1.Equals("Dictamen", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // CMB
+                cmb_tipo_primer_dictamen1.Enabled = true;
+                cmb_tipo_primer_dictamen1.BackColor = Color.Honeydew;
+                
+            }
+            else
+            {
+                // CMB
+                cmb_tipo_primer_dictamen1.Enabled = false;
+                cmb_tipo_primer_dictamen1.BackColor = Color.LightGray;
+                cmb_tipo_primer_dictamen1.Text = "";
+               
+            }
+            // Desbloquear Sentido de resolución
+            if (valorComboBox1.Equals("Dictamen", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // CMB
+                cmb_sentido_resolucion_primer_dictamen.Enabled = true;
+                cmb_sentido_resolucion_primer_dictamen.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                // CMB
+                cmb_sentido_resolucion_primer_dictamen.Enabled = false;
+                cmb_sentido_resolucion_primer_dictamen.BackColor = Color.LightGray;
+                cmb_sentido_resolucion_primer_dictamen.Text = "";
+
+            }
         }
         private void CargarEtapaProcesal(int desde, int hasta)
         {
@@ -971,6 +1007,40 @@ namespace App_PLE.Vistas
                 btn_agreg_seg_est.BackColor = Color.LightGray;
                 btn_elim_seg_est.Enabled = false;
                 btn_elim_seg_est.BackColor = Color.LightGray;
+            }
+            // Desbloquear Segundo estudio
+            if (valorComboBox1.Equals("Segundo dictamen", StringComparison.OrdinalIgnoreCase))
+
+            {
+                // CMB
+                cmb_tipo_segundo_dictamen.Enabled = true;
+                cmb_tipo_segundo_dictamen.BackColor = Color.Honeydew;
+                
+            }
+            else
+            {
+                // CMB
+                cmb_tipo_segundo_dictamen.Enabled = false;
+                cmb_tipo_segundo_dictamen.BackColor = Color.LightGray;
+                cmb_tipo_segundo_dictamen.Text = "";
+               
+            }
+            // Desbloquear Segundo estudio de resolución
+            if (valorComboBox1.Equals("Segundo dictamen", StringComparison.OrdinalIgnoreCase))
+
+            {
+                // CMB
+                cmb_sentido_resolucion_segundo_dictamen.Enabled = true;
+                cmb_sentido_resolucion_segundo_dictamen.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                // CMB
+                cmb_sentido_resolucion_segundo_dictamen.Enabled = false;
+                cmb_sentido_resolucion_segundo_dictamen.BackColor = Color.LightGray;
+                cmb_sentido_resolucion_segundo_dictamen.Text = "";
+
             }
         }
 
@@ -2715,7 +2785,484 @@ namespace App_PLE.Vistas
 
         // Primer dictamen
 
+        private void Cmb_tipo_primer_dictamen1()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_DICTAMEN";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_tipo_primer_dictamen1.DataSource = dataTable;
+                    cmb_tipo_primer_dictamen1.DisplayMember = "descripcion";
+
+                    cmb_tipo_primer_dictamen1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_tipo_primer_dictamen1.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_tipo_primer_dictamen1.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_tipo_primer_dictamen1.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_tipo_primer_dictamen1_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_tipo_primer_dictamen1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_tipo_primer_dictamen1.Text.Trim();
+
+            // Desbloquear Otro estatus de la iniciativa.
+            if (valorComboBox1.Equals("Otro tipo (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_tipo_primer_dictamen_especifique.Enabled = true;
+                txt_otro_tipo_primer_dictamen_especifique.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                txt_otro_tipo_primer_dictamen_especifique.Enabled = false;
+                txt_otro_tipo_primer_dictamen_especifique.BackColor = Color.LightGray;
+                txt_otro_tipo_primer_dictamen_especifique.Text = "";
+            }
+           
+        }
+        private void Cmb_sentido_resolucion_primer_dictamen()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_DICTAMEN";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_sentido_resolucion_primer_dictamen.DataSource = dataTable;
+                    cmb_sentido_resolucion_primer_dictamen.DisplayMember = "descripcion";
+
+                    cmb_sentido_resolucion_primer_dictamen.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_sentido_resolucion_primer_dictamen.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_sentido_resolucion_primer_dictamen.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_sentido_resolucion_primer_dictamen.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_sentido_resolucion_primer_dictamen_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_sentido_resolucion_primer_dictamen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_sentido_resolucion_primer_dictamen.Text.Trim();
+
+            // Desbloquear Otro estatus de la iniciativa.
+            if (valorComboBox1.Equals("Otro tipo (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_sentido_resolucion_primer_dictamen_especifique.Enabled = true;
+                txt_otro_sentido_resolucion_primer_dictamen_especifique.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                txt_otro_sentido_resolucion_primer_dictamen_especifique.Enabled = false;
+                txt_otro_sentido_resolucion_primer_dictamen_especifique.BackColor = Color.LightGray;
+                txt_otro_sentido_resolucion_primer_dictamen_especifique.Text = "";
+            }
+        }
+        // txt_otro_tipo_primer_dictamen_especifique
+        private void txt_otro_tipo_primer_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_primer_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_primer_dictamen_especifique.Text = txt_otro_tipo_primer_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_primer_dictamen_especifique.SelectionStart = txt_otro_tipo_primer_dictamen_especifique.Text.Length;
+
+        }
+        // txt_otro_sentido_resolucion_primer_dictamen_especifique
+        private void txt_otro_sentido_resolucion_primer_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_sentido_resolucion_primer_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_sentido_resolucion_primer_dictamen_especifique.Text = txt_otro_sentido_resolucion_primer_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_sentido_resolucion_primer_dictamen_especifique.SelectionStart = txt_otro_sentido_resolucion_primer_dictamen_especifique.Text.Length;
+
+        }
+
+
         // Segundo dictamen
+
+        private void Cmb_tipo_segundo_dictamen()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_DICTAMEN";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_tipo_segundo_dictamen.DataSource = dataTable;
+                    cmb_tipo_segundo_dictamen.DisplayMember = "descripcion";
+
+                    cmb_tipo_segundo_dictamen.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_tipo_segundo_dictamen.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_tipo_segundo_dictamen.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_tipo_segundo_dictamen.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_tipo_segundo_dictamen_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_tipo_segundo_dictamen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_tipo_segundo_dictamen.Text.Trim();
+
+            // Desbloquear Otro estatus de la iniciativa.
+            if (valorComboBox1.Equals("Otro tipo (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_tipo_segundo_dictamen_especifique.Enabled = true;
+                txt_otro_tipo_segundo_dictamen_especifique.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                txt_otro_tipo_segundo_dictamen_especifique.Enabled = false;
+                txt_otro_tipo_segundo_dictamen_especifique.BackColor = Color.LightGray;
+                txt_otro_tipo_segundo_dictamen_especifique.Text = "";
+            }
+
+        }
+        private void Cmb_sentido_resolucion_segundo_dictamen()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_DICTAMEN";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_sentido_resolucion_segundo_dictamen.DataSource = dataTable;
+                    cmb_sentido_resolucion_segundo_dictamen.DisplayMember = "descripcion";
+
+                    cmb_sentido_resolucion_segundo_dictamen.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_sentido_resolucion_segundo_dictamen.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_sentido_resolucion_segundo_dictamen.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_sentido_resolucion_segundo_dictamen.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_sentido_resolucion_segundo_dictamen_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_sentido_resolucion_segundo_dictamen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_sentido_resolucion_segundo_dictamen.Text.Trim();
+
+            // Desbloquear Otro estatus de la iniciativa.
+            if (valorComboBox1.Equals("Otro tipo (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_sentido_resolucion_segundo_dictamen_especifique.Enabled = true;
+                txt_otro_sentido_resolucion_segundo_dictamen_especifique.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                txt_otro_sentido_resolucion_segundo_dictamen_especifique.Enabled = false;
+                txt_otro_sentido_resolucion_segundo_dictamen_especifique.BackColor = Color.LightGray;
+                txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text = "";
+            }
+        }
+
+
+        // txt_otro_tipo_segundo_dictamen_especifique
+        private void txt_otro_tipo_segundo_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_segundo_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_segundo_dictamen_especifique.Text = txt_otro_tipo_segundo_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_segundo_dictamen_especifique.SelectionStart = txt_otro_tipo_segundo_dictamen_especifique.Text.Length;
+
+        }
+
+        // txt_otro_sentido_resolucion_segundo_dictamen_especifique
+        private void txt_otro_sentido_resolucion_segundo_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_sentido_resolucion_segundo_dictamen_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text = txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_sentido_resolucion_segundo_dictamen_especifique.SelectionStart = txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text.Length;
+
+        }
+
 
 
         //--------------------------------------
@@ -2764,30 +3311,7 @@ namespace App_PLE.Vistas
         }
         
 
-
-
-
-
-
        
-
-        // txt_otro_tipo_primer_dictamen_especifique
-        private void txt_otro_tipo_primer_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_tipo_primer_dictamen_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_tipo_primer_dictamen_especifique.Text = txt_otro_tipo_primer_dictamen_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_tipo_primer_dictamen_especifique.SelectionStart = txt_otro_tipo_primer_dictamen_especifique.Text.Length;
-
-        }
-
         // txt_otro_tipo_organo_constitucional_autonomo_especifique
         private void txt_otro_tipo_organo_constitucional_autonomo_especifique_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -2805,57 +3329,8 @@ namespace App_PLE.Vistas
 
         }
 
-        // txt_otro_sentido_resolucion_primer_dictamen_especifique
-        private void txt_otro_sentido_resolucion_primer_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_sentido_resolucion_primer_dictamen_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_sentido_resolucion_primer_dictamen_especifique.Text = txt_otro_sentido_resolucion_primer_dictamen_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_sentido_resolucion_primer_dictamen_especifique.SelectionStart = txt_otro_sentido_resolucion_primer_dictamen_especifique.Text.Length;
-
-        }
-
-        // txt_otro_tipo_segundo_dictamen_especifique
-        private void txt_otro_tipo_segundo_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_tipo_segundo_dictamen_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_tipo_segundo_dictamen_especifique.Text = txt_otro_tipo_segundo_dictamen_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_tipo_segundo_dictamen_especifique.SelectionStart = txt_otro_tipo_segundo_dictamen_especifique.Text.Length;
-
-        }
-
-        // txt_otro_sentido_resolucion_segundo_dictamen_especifique
-        private void txt_otro_sentido_resolucion_segundo_dictamen_especifique_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_sentido_resolucion_segundo_dictamen_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text = txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_sentido_resolucion_segundo_dictamen_especifique.SelectionStart = txt_otro_sentido_resolucion_segundo_dictamen_especifique.Text.Length;
-
-        }
-
+        
+       
         // txt_votaciones_pleno_a_favor_iniciativa
         private void txt_votaciones_pleno_a_favor_iniciativa_KeyPress(object sender, KeyPressEventArgs e)
         {

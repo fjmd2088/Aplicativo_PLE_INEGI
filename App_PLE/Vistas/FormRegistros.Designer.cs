@@ -534,7 +534,7 @@ namespace App_PLE.Vistas
             this.label147 = new System.Windows.Forms.Label();
             this.txt_otro_tipo_primer_dictamen_especifique = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_tipo_primer_dictamen1 = new System.Windows.Forms.ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
             this.txt_otro_sentido_resolucion_segundo_dictamen_especifique = new System.Windows.Forms.TextBox();
@@ -2127,7 +2127,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-2706, 32767);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-2816, 32767);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2252,7 +2252,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-2798, 32767);
+            this.button24.Location = new System.Drawing.Point(-2908, 32767);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -7739,7 +7739,7 @@ namespace App_PLE.Vistas
             this.cmb_tipo_primer_dictamen.Controls.Add(this.label147);
             this.cmb_tipo_primer_dictamen.Controls.Add(this.txt_otro_tipo_primer_dictamen_especifique);
             this.cmb_tipo_primer_dictamen.Controls.Add(this.label54);
-            this.cmb_tipo_primer_dictamen.Controls.Add(this.comboBox1);
+            this.cmb_tipo_primer_dictamen.Controls.Add(this.cmb_tipo_primer_dictamen1);
             this.cmb_tipo_primer_dictamen.Controls.Add(this.label42);
             this.cmb_tipo_primer_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_primer_dictamen.ForeColor = System.Drawing.Color.ForestGreen;
@@ -7770,12 +7770,14 @@ namespace App_PLE.Vistas
             this.cmb_sentido_resolucion_primer_dictamen.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_sentido_resolucion_primer_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sentido_resolucion_primer_dictamen.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_primer_dictamen.Location = new System.Drawing.Point(192, 164);
+            this.cmb_sentido_resolucion_primer_dictamen.Location = new System.Drawing.Point(15, 182);
             this.cmb_sentido_resolucion_primer_dictamen.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_sentido_resolucion_primer_dictamen.Name = "cmb_sentido_resolucion_primer_dictamen";
-            this.cmb_sentido_resolucion_primer_dictamen.Size = new System.Drawing.Size(224, 26);
+            this.cmb_sentido_resolucion_primer_dictamen.Size = new System.Drawing.Size(446, 26);
             this.cmb_sentido_resolucion_primer_dictamen.TabIndex = 86;
             this.cmb_sentido_resolucion_primer_dictamen.UseWaitCursor = true;
+            this.cmb_sentido_resolucion_primer_dictamen.SelectedIndexChanged += new System.EventHandler(this.cmb_sentido_resolucion_primer_dictamen_SelectedIndexChanged);
+            this.cmb_sentido_resolucion_primer_dictamen.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sentido_resolucion_primer_dictamen_Validating);
             // 
             // label146
             // 
@@ -7796,10 +7798,10 @@ namespace App_PLE.Vistas
             this.label147.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label147.ForeColor = System.Drawing.Color.Black;
             this.label147.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label147.Location = new System.Drawing.Point(11, 149);
+            this.label147.Location = new System.Drawing.Point(114, 149);
             this.label147.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(173, 50);
+            this.label147.Size = new System.Drawing.Size(271, 26);
             this.label147.TabIndex = 84;
             this.label147.Text = "Sentido de resolución del dictamen:";
             this.label147.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7832,17 +7834,19 @@ namespace App_PLE.Vistas
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label54.UseWaitCursor = true;
             // 
-            // comboBox1
+            // cmb_tipo_primer_dictamen1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 41);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(612, 26);
-            this.comboBox1.TabIndex = 80;
-            this.comboBox1.UseWaitCursor = true;
+            this.cmb_tipo_primer_dictamen1.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_tipo_primer_dictamen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_tipo_primer_dictamen1.FormattingEnabled = true;
+            this.cmb_tipo_primer_dictamen1.Location = new System.Drawing.Point(167, 41);
+            this.cmb_tipo_primer_dictamen1.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_tipo_primer_dictamen1.Name = "cmb_tipo_primer_dictamen1";
+            this.cmb_tipo_primer_dictamen1.Size = new System.Drawing.Size(612, 26);
+            this.cmb_tipo_primer_dictamen1.TabIndex = 80;
+            this.cmb_tipo_primer_dictamen1.UseWaitCursor = true;
+            this.cmb_tipo_primer_dictamen1.SelectedIndexChanged += new System.EventHandler(this.cmb_tipo_primer_dictamen1_SelectedIndexChanged);
+            this.cmb_tipo_primer_dictamen1.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_primer_dictamen1_Validating);
             // 
             // label42
             // 
@@ -7897,12 +7901,14 @@ namespace App_PLE.Vistas
             this.cmb_sentido_resolucion_segundo_dictamen.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_sentido_resolucion_segundo_dictamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sentido_resolucion_segundo_dictamen.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_segundo_dictamen.Location = new System.Drawing.Point(196, 164);
+            this.cmb_sentido_resolucion_segundo_dictamen.Location = new System.Drawing.Point(19, 182);
             this.cmb_sentido_resolucion_segundo_dictamen.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_sentido_resolucion_segundo_dictamen.Name = "cmb_sentido_resolucion_segundo_dictamen";
-            this.cmb_sentido_resolucion_segundo_dictamen.Size = new System.Drawing.Size(224, 26);
+            this.cmb_sentido_resolucion_segundo_dictamen.Size = new System.Drawing.Size(426, 26);
             this.cmb_sentido_resolucion_segundo_dictamen.TabIndex = 94;
             this.cmb_sentido_resolucion_segundo_dictamen.UseWaitCursor = true;
+            this.cmb_sentido_resolucion_segundo_dictamen.SelectedIndexChanged += new System.EventHandler(this.cmb_sentido_resolucion_segundo_dictamen_SelectedIndexChanged);
+            this.cmb_sentido_resolucion_segundo_dictamen.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sentido_resolucion_segundo_dictamen_Validating);
             // 
             // label266
             // 
@@ -7923,10 +7929,10 @@ namespace App_PLE.Vistas
             this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label267.ForeColor = System.Drawing.Color.Black;
             this.label267.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label267.Location = new System.Drawing.Point(15, 149);
+            this.label267.Location = new System.Drawing.Point(94, 149);
             this.label267.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label267.Name = "label267";
-            this.label267.Size = new System.Drawing.Size(173, 50);
+            this.label267.Size = new System.Drawing.Size(292, 26);
             this.label267.TabIndex = 92;
             this.label267.Text = "Sentido de resolución del dictamen:";
             this.label267.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -7970,6 +7976,8 @@ namespace App_PLE.Vistas
             this.cmb_tipo_segundo_dictamen.Size = new System.Drawing.Size(612, 26);
             this.cmb_tipo_segundo_dictamen.TabIndex = 88;
             this.cmb_tipo_segundo_dictamen.UseWaitCursor = true;
+            this.cmb_tipo_segundo_dictamen.SelectedIndexChanged += new System.EventHandler(this.cmb_tipo_segundo_dictamen_SelectedIndexChanged);
+            this.cmb_tipo_segundo_dictamen.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_tipo_segundo_dictamen_Validating);
             // 
             // label306
             // 
@@ -15303,7 +15311,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label307;
         private System.Windows.Forms.Label label308;
         private System.Windows.Forms.GroupBox groupBox31;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_tipo_primer_dictamen1;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox txt_otro_tipo_primer_dictamen_especifique;
         private System.Windows.Forms.Label label54;
