@@ -4012,7 +4012,7 @@ namespace App_PLE.Vistas
 
         }
 
-        // dtp_fecha_nacimiento_persona_legisladora
+        // cmb_escolaridad_persona_legisladora_PL
         private void dtp_fecha_nacimiento_persona_legisladora_ValueChanged(object sender, EventArgs e)
         {
             // CONSTRUCCION ID

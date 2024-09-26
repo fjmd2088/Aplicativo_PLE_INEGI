@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Office2010.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -866,6 +867,151 @@ namespace App_PLE.Vistas
                 cmb_sentido_resolucion_primer_dictamen.BackColor = Color.LightGray;
                 cmb_sentido_resolucion_primer_dictamen.Text = "";
 
+            }
+            // Desbloquear Fecha de resolucion Publicación
+            if (valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // DTP
+                dtp_fecha_resolucion_pleno_iniciativa.Enabled = true;
+                dtp_fecha_resolucion_pleno_iniciativa.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                // DTP
+                dtp_fecha_resolucion_pleno_iniciativa.Enabled = false;
+                dtp_fecha_resolucion_pleno_iniciativa.BackColor = Color.LightGray;
+                dtp_fecha_resolucion_pleno_iniciativa.Text = "";
+
+            }
+            // Desbloquear Sentido de resolución pleno
+            if (valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // DTP
+                cmb_sentido_resolucion_pleno_iniciativa.Enabled = true;
+                cmb_sentido_resolucion_pleno_iniciativa.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                // DTP
+                cmb_sentido_resolucion_pleno_iniciativa.Enabled = false;
+                cmb_sentido_resolucion_pleno_iniciativa.BackColor = Color.LightGray;
+                cmb_sentido_resolucion_pleno_iniciativa.Text = "";
+
+            }
+            // Desbloquear Votaciones plenarias
+            if (valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
+                valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // TXT Votaciones plenarias a favor
+                txt_votaciones_pleno_a_favor_iniciativa.Enabled = true;
+                txt_votaciones_pleno_a_favor_iniciativa.BackColor = Color.Honeydew;
+                // TXT Votaciones plenarias a en contra
+                txt_votaciones_pleno_en_contra_iniciativa_vp.Enabled = true;
+                txt_votaciones_pleno_en_contra_iniciativa_vp.BackColor = Color.Honeydew;
+                // TXT Votaciones plenarias a en abstención
+                txt_votaciones_pleno_abstencion_iniciativa.Enabled = true;
+                txt_votaciones_pleno_abstencion_iniciativa.BackColor = Color.Honeydew;
+                // TXT Votaciones plenarias a totales
+                txt_total_votaciones_pleno_iniciativa.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // TXT Votaciones plenarias a favor
+                txt_votaciones_pleno_a_favor_iniciativa.Enabled = false;
+                txt_votaciones_pleno_a_favor_iniciativa.BackColor = Color.LightGray;
+                txt_votaciones_pleno_a_favor_iniciativa.Text = "";
+                // TXT Votaciones plenarias a contra
+                txt_votaciones_pleno_en_contra_iniciativa_vp.Enabled = false;
+                txt_votaciones_pleno_en_contra_iniciativa_vp.BackColor = Color.LightGray;
+                txt_votaciones_pleno_en_contra_iniciativa_vp.Text = "";
+                // TXT Votaciones plenarias a abstención
+                txt_votaciones_pleno_abstencion_iniciativa.Enabled = false;
+                txt_votaciones_pleno_abstencion_iniciativa.BackColor = Color.LightGray;
+                txt_votaciones_pleno_abstencion_iniciativa.Text = "";
+                // TXT Votaciones plenarias a totales
+                txt_total_votaciones_pleno_iniciativa.BackColor = Color.LightGray;
+            }
+            // Desbloquear Publicacion del poder ejecutivo
+            if (valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+                // Desbloquea dtp fecha poder ejecutivo
+                dtp_fecha_remision_ejecutivo_iniciativa.Enabled = true;
+                dtp_fecha_remision_ejecutivo_iniciativa.BackColor = Color.Honeydew;
+                // Desbloquea cmb de sentido resolución
+                cmb_sentido_resolucion_ejecutivo_iniciativa.Enabled = true;
+                cmb_sentido_resolucion_ejecutivo_iniciativa.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Desbloquea dtp fecha poder ejecutivo
+                dtp_fecha_remision_ejecutivo_iniciativa.Enabled = false;
+                dtp_fecha_remision_ejecutivo_iniciativa.BackColor = Color.LightGray;
+                dtp_fecha_remision_ejecutivo_iniciativa.Text = "";
+                // Desbloquea cmb de sentido resolución
+                cmb_sentido_resolucion_ejecutivo_iniciativa.Enabled = false;
+                cmb_sentido_resolucion_ejecutivo_iniciativa.BackColor = Color.LightGray;
+                cmb_sentido_resolucion_ejecutivo_iniciativa.Text = "";
+            }
+            
+            // Combo box de Resolución Pleno
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            if (cmb_estatus_iniciativa.SelectedItem != null)
+            {
+                try
+                {
+                    string valorComboBox = cmb_estatus_iniciativa.Text.ToString();
+
+                    using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+                    {
+                        conexion.Open();
+
+                        string query;
+
+                        switch (valorComboBox)
+                        {
+                            case "Desechada o improcedente":
+                                query = "SELECT descripcion FROM TC_SENTIDO_RESOLUCION WHERE id_sentido_resolucion = 1";
+                                break;
+                            case "Aprobada o procedente":
+                                query = "SELECT descripcion FROM TC_SENTIDO_RESOLUCION WHERE id_sentido_resolucion = 2";
+                                break;
+                            default:
+                                query = "SELECT descripcion FROM TC_SENTIDO_RESOLUCION WHERE id_sentido_resolucion = 3";
+                                break;
+                        }
+
+                        using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                        {
+                            using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                            {
+                                DataTable dataTable = new DataTable();
+                                adapter.Fill(dataTable);
+
+                                cmb_sentido_resolucion_pleno_iniciativa.DataSource = dataTable;
+                                cmb_sentido_resolucion_pleno_iniciativa.DisplayMember = "descripcion";
+
+                                cmb_sentido_resolucion_pleno_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_sentido_resolucion_pleno_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                                cmb_sentido_resolucion_pleno_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
+                                cmb_sentido_resolucion_pleno_iniciativa.SelectedIndex = -1; // Establecer como vacío
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+            }
+            else
+            {
+                // No hay elemento seleccionado en cmb_estatus_iniciativa
             }
         }
         private void CargarEtapaProcesal(int desde, int hasta)
@@ -2129,6 +2275,47 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void tipo_Organo_constitucional_autonomo()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_ORG_CONST_AUT_PROMOVENTE";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_tipo_organo_constitucional_autonomo.DataSource = dataTable;
+                    cmb_tipo_organo_constitucional_autonomo.DisplayMember = "descripcion";
+
+                    cmb_tipo_organo_constitucional_autonomo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_tipo_organo_constitucional_autonomo.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_tipo_organo_constitucional_autonomo.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_tipo_organo_constitucional_autonomo.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
         private void cmb_tipo_organo_constitucional_autonomo_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -2189,6 +2376,24 @@ namespace App_PLE.Vistas
                 
             }  
         }
+
+        // txt_otro_tipo_organo_constitucional_autonomo_especifique
+        private void txt_otro_tipo_organo_constitucional_autonomo_especifique_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            met_no_permite_acentos(e);
+        }
+        private void txt_otro_tipo_organo_constitucional_autonomo_especifique_TextChanged(object sender, EventArgs e)
+        {
+            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
+
+            txt_otro_tipo_organo_constitucional_autonomo_especifique.Text = txt_otro_tipo_organo_constitucional_autonomo_especifique.Text.ToUpper();
+
+            // Colocar el cursor al final del texto para mantener la posición del cursor
+
+            txt_otro_tipo_organo_constitucional_autonomo_especifique.SelectionStart = txt_otro_tipo_organo_constitucional_autonomo_especifique.Text.Length;
+
+        }
+
 
         // txt_otro_tipo_promovente_iniciativa_especifique
         private void txt_otro_tipo_promovente_iniciativa_especifique_KeyPress(object sender, KeyPressEventArgs e)
@@ -3263,83 +3468,68 @@ namespace App_PLE.Vistas
 
         }
 
-
-
-        //--------------------------------------
-
-
-        private void tipo_Organo_constitucional_autonomo()
+        // PLENO --------------------------------------------------------------------------------------------------------------------------
+               
+        private void cmb_sentido_resolucion_pleno_iniciativa_Validating(object sender, CancelEventArgs e)
         {
-            string cadena = "Data Source = DB_PLE.db;Version=3;";
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
             {
-                try
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
                 {
-                    // abrir la conexion
-                    conexion.Open();
-
-                    // comando de sql
-                    string query = "select descripcion from TC_ORG_CONST_AUT_PROMOVENTE";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                    // Utilizar un DataReader para obtener los datos
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    cmb_tipo_organo_constitucional_autonomo.DataSource = dataTable;
-                    cmb_tipo_organo_constitucional_autonomo.DisplayMember = "descripcion";
-
-                    cmb_tipo_organo_constitucional_autonomo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    cmb_tipo_organo_constitucional_autonomo.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-                    cmb_tipo_organo_constitucional_autonomo.DropDownStyle = ComboBoxStyle.DropDown;
-                    cmb_tipo_organo_constitucional_autonomo.SelectedIndex = -1; // Aquí se establece como vacío
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
-                }
-                finally
-                {
-                    conexion.Close();
+                    e.Cancel = false;
+                    return;
                 }
 
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
             }
         }
-        
 
-       
-        // txt_otro_tipo_organo_constitucional_autonomo_especifique
-        private void txt_otro_tipo_organo_constitucional_autonomo_especifique_KeyPress(object sender, KeyPressEventArgs e)
+
+        // VOTACIONES PLENARIAS------------------------------------------------------------------------------------------------------------
+
+        private void txt_total_votaciones_pleno_iniciativa_TextChanged(object sender, EventArgs e)
         {
-            met_no_permite_acentos(e);
-        }
-        private void txt_otro_tipo_organo_constitucional_autonomo_especifique_TextChanged(object sender, EventArgs e)
-        {
-            // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
-            txt_otro_tipo_organo_constitucional_autonomo_especifique.Text = txt_otro_tipo_organo_constitucional_autonomo_especifique.Text.ToUpper();
-
-            // Colocar el cursor al final del texto para mantener la posición del cursor
-
-            txt_otro_tipo_organo_constitucional_autonomo_especifique.SelectionStart = txt_otro_tipo_organo_constitucional_autonomo_especifique.Text.Length;
 
         }
 
-        
-       
         // txt_votaciones_pleno_a_favor_iniciativa
         private void txt_votaciones_pleno_a_favor_iniciativa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true; // Ignorar el carácter
-            }
-        }
+                {
+                    // Permitir números, backspace, y el signo menos si está al principio
+                    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    {
+                        e.Handled = true; // Ignorar el carácter
+                    }
+                }
 
         // txt_votaciones_pleno_en_contra_iniciativa_vp
         private void txt_votaciones_pleno_en_contra_iniciativa_vp_KeyPress(object sender, KeyPressEventArgs e)
@@ -3360,6 +3550,123 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
+
+        // PODER EJECUTIVO --------------------------------------------------------------------------------------------------------------
+
+        private void Cmb_sentido_resolucion_ejecutivo_iniciativa()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SENT_RESOLUCION";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_sentido_resolucion_ejecutivo_iniciativa.DataSource = dataTable;
+                    cmb_sentido_resolucion_ejecutivo_iniciativa.DisplayMember = "descripcion";
+
+                    cmb_sentido_resolucion_ejecutivo_iniciativa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_sentido_resolucion_ejecutivo_iniciativa.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_sentido_resolucion_ejecutivo_iniciativa.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_sentido_resolucion_ejecutivo_iniciativa.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        
+        private void cmb_sentido_resolucion_ejecutivo_iniciativa_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_sentido_resolucion_ejecutivo_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_sentido_resolucion_ejecutivo_iniciativa.Text.Trim();
+
+            // Desbloquear Gaceta o periodico oficial
+            if (valorComboBox1.Equals("Aprobado", StringComparison.OrdinalIgnoreCase))
+            {
+                // Desbloquea dtp fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Enabled = true;
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                // Desbloquea dtp fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Enabled = false;
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.BackColor = Color.LightGray;
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Text = "";
+
+            }
+        }
+        //--------------------------------------
+
+
+
+
+
+
+
+
 
     }
 

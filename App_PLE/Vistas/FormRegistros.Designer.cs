@@ -500,7 +500,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_publicacion_gaceta_oficial_iniciativa = new System.Windows.Forms.DateTimePicker();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.label138 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha_remision_ejecutivo_iniciativa = new System.Windows.Forms.DateTimePicker();
             this.cmb_sentido_resolucion_ejecutivo_iniciativa = new System.Windows.Forms.ComboBox();
             this.label139 = new System.Windows.Forms.Label();
             this.button37 = new System.Windows.Forms.Button();
@@ -2127,7 +2127,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-2816, 32767);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-2926, 32767);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2252,7 +2252,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-2908, 32767);
+            this.button24.Location = new System.Drawing.Point(-3018, 32767);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -7322,7 +7322,7 @@ namespace App_PLE.Vistas
             // groupBox34
             // 
             this.groupBox34.Controls.Add(this.label138);
-            this.groupBox34.Controls.Add(this.dateTimePicker3);
+            this.groupBox34.Controls.Add(this.dtp_fecha_remision_ejecutivo_iniciativa);
             this.groupBox34.Controls.Add(this.cmb_sentido_resolucion_ejecutivo_iniciativa);
             this.groupBox34.Controls.Add(this.label139);
             this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -7350,17 +7350,17 @@ namespace App_PLE.Vistas
             this.label138.Text = "Sentido de la resolución del Poder Ejecutivo:";
             this.label138.UseWaitCursor = true;
             // 
-            // dateTimePicker3
+            // dtp_fecha_remision_ejecutivo_iniciativa
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(305, 49);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(104, 23);
-            this.dateTimePicker3.TabIndex = 61;
-            this.dateTimePicker3.UseWaitCursor = true;
-            this.dateTimePicker3.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Location = new System.Drawing.Point(305, 49);
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Margin = new System.Windows.Forms.Padding(4);
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Name = "dtp_fecha_remision_ejecutivo_iniciativa";
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Size = new System.Drawing.Size(104, 23);
+            this.dtp_fecha_remision_ejecutivo_iniciativa.TabIndex = 61;
+            this.dtp_fecha_remision_ejecutivo_iniciativa.UseWaitCursor = true;
+            this.dtp_fecha_remision_ejecutivo_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
             // 
             // cmb_sentido_resolucion_ejecutivo_iniciativa
             // 
@@ -7373,6 +7373,8 @@ namespace App_PLE.Vistas
             this.cmb_sentido_resolucion_ejecutivo_iniciativa.Size = new System.Drawing.Size(371, 26);
             this.cmb_sentido_resolucion_ejecutivo_iniciativa.TabIndex = 41;
             this.cmb_sentido_resolucion_ejecutivo_iniciativa.UseWaitCursor = true;
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.SelectedIndexChanged += new System.EventHandler(this.cmb_sentido_resolucion_ejecutivo_iniciativa_SelectedIndexChanged);
+            this.cmb_sentido_resolucion_ejecutivo_iniciativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sentido_resolucion_ejecutivo_iniciativa_Validating);
             // 
             // label139
             // 
@@ -7622,6 +7624,7 @@ namespace App_PLE.Vistas
             this.txt_total_votaciones_pleno_iniciativa.Size = new System.Drawing.Size(160, 24);
             this.txt_total_votaciones_pleno_iniciativa.TabIndex = 63;
             this.txt_total_votaciones_pleno_iniciativa.UseWaitCursor = true;
+            this.txt_total_votaciones_pleno_iniciativa.TextChanged += new System.EventHandler(this.txt_total_votaciones_pleno_iniciativa_TextChanged);
             // 
             // label142
             // 
@@ -7702,6 +7705,7 @@ namespace App_PLE.Vistas
             this.cmb_sentido_resolucion_pleno_iniciativa.Size = new System.Drawing.Size(371, 26);
             this.cmb_sentido_resolucion_pleno_iniciativa.TabIndex = 41;
             this.cmb_sentido_resolucion_pleno_iniciativa.UseWaitCursor = true;
+            this.cmb_sentido_resolucion_pleno_iniciativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sentido_resolucion_pleno_iniciativa_Validating);
             // 
             // label145
             // 
@@ -14965,7 +14969,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.DateTimePicker dtp_fecha_publicacion_gaceta_oficial_iniciativa;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.Label label138;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_remision_ejecutivo_iniciativa;
         private System.Windows.Forms.ComboBox cmb_sentido_resolucion_ejecutivo_iniciativa;
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.GroupBox groupBox35;

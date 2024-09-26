@@ -287,6 +287,8 @@ namespace App_PLE.Vistas
             Cmb_sentido_resolucion_primer_dictamen();
             Cmb_tipo_segundo_dictamen();
             Cmb_sentido_resolucion_segundo_dictamen();
+            Cmb_sentido_resolucion_ejecutivo_iniciativa();
+
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
@@ -348,7 +350,15 @@ namespace App_PLE.Vistas
             txt_otro_tipo_segundo_dictamen_especifique.Enabled = false;
             cmb_sentido_resolucion_segundo_dictamen.Enabled = false;
             txt_otro_sentido_resolucion_segundo_dictamen_especifique.Enabled = false;
-
+            dtp_fecha_resolucion_pleno_iniciativa.Enabled = false;
+            cmb_sentido_resolucion_pleno_iniciativa.Enabled = false;
+            txt_votaciones_pleno_a_favor_iniciativa.Enabled = false;
+            txt_votaciones_pleno_en_contra_iniciativa_vp.Enabled = false;
+            txt_votaciones_pleno_abstencion_iniciativa.Enabled = false;
+            txt_total_votaciones_pleno_iniciativa.Enabled = false;
+            dtp_fecha_remision_ejecutivo_iniciativa.Enabled = false;
+            cmb_sentido_resolucion_ejecutivo_iniciativa.Enabled = false;
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa.Enabled = false;
 
         }
 
@@ -393,7 +403,25 @@ namespace App_PLE.Vistas
 
         }
 
-        
+        private void cmb_sentido_resolucion_ejecutivo_iniciativa_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
