@@ -3554,10 +3554,10 @@ namespace App_PLE.Vistas
 
             // Verificar que los textos no estén vacíos y convertir a número
             if (!string.IsNullOrEmpty(txt_votaciones_pleno_a_favor_iniciativa.Text))
-                //int.TryParse(txt_votaciones_pleno_a_favor_iniciativa.Text, out aFavor);
+                int.TryParse(txt_votaciones_pleno_a_favor_iniciativa.Text, out aFavor);
 
-                if (!string.IsNullOrEmpty(txt_votaciones_pleno_en_contra_iniciativa_vp.Text))
-                    int.TryParse(txt_votaciones_pleno_en_contra_iniciativa_vp.Text, out enContra);
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_en_contra_iniciativa_vp.Text))
+                int.TryParse(txt_votaciones_pleno_en_contra_iniciativa_vp.Text, out enContra);
 
             if (!string.IsNullOrEmpty(txt_votaciones_pleno_abstencion_iniciativa.Text))
                 int.TryParse(txt_votaciones_pleno_abstencion_iniciativa.Text, out abstencion);
@@ -3567,6 +3567,28 @@ namespace App_PLE.Vistas
 
             // Mostrar el resultado en el TextBox total
             txt_total_votaciones_pleno_iniciativa.Text = total.ToString();
+
+            // Obtener las cantidades de distritos y diputaciones
+            int distritos = 0, plurinominales = 0;
+
+            // Solo intentar convertir si los campos no están vacíos
+            int.TryParse(Txt_distritos_uninominales.Text, out distritos);
+            int.TryParse(Txt_diputaciones_plurinominales.Text, out plurinominales);
+
+            // Verificar que el total no supere la suma de distritos y plurinominales
+            if (total > (distritos + plurinominales))
+            {
+                // Mostrar el mensaje de error
+                MessageBox.Show("El total debe ser igual o menor a la suma de los distritos uninominales y diputaciones plurinominales.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Limpiar los campos de votaciones
+                txt_votaciones_pleno_a_favor_iniciativa.Clear();
+                txt_votaciones_pleno_en_contra_iniciativa_vp.Clear();
+                txt_votaciones_pleno_abstencion_iniciativa.Clear();
+
+                // Opcional: Restablecer el total a 0
+                txt_total_votaciones_pleno_iniciativa.Text = "0";
+            }
         }
 
         // txt_votaciones_pleno_a_favor_iniciativa
