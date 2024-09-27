@@ -2127,7 +2127,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-2926, 32767);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-3014, 32767);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2252,7 +2252,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-3018, 32767);
+            this.button24.Location = new System.Drawing.Point(-3106, 32767);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -7318,6 +7318,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.TabIndex = 64;
             this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.UseWaitCursor = true;
             this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_publicacion_gaceta_oficial_iniciativa.CloseUp += new System.EventHandler(this.dtp_fecha_publicacion_gaceta_oficial_iniciativa_CloseUp);
             // 
             // groupBox34
             // 
@@ -7361,6 +7362,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_remision_ejecutivo_iniciativa.TabIndex = 61;
             this.dtp_fecha_remision_ejecutivo_iniciativa.UseWaitCursor = true;
             this.dtp_fecha_remision_ejecutivo_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_remision_ejecutivo_iniciativa.CloseUp += new System.EventHandler(this.dtp_fecha_remision_ejecutivo_iniciativa_CloseUp);
             // 
             // cmb_sentido_resolucion_ejecutivo_iniciativa
             // 
@@ -7561,6 +7563,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_abstencion_iniciativa.Size = new System.Drawing.Size(109, 24);
             this.txt_votaciones_pleno_abstencion_iniciativa.TabIndex = 69;
             this.txt_votaciones_pleno_abstencion_iniciativa.UseWaitCursor = true;
+            this.txt_votaciones_pleno_abstencion_iniciativa.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_abstencion_iniciativa_TextChanged);
             this.txt_votaciones_pleno_abstencion_iniciativa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_abstencion_iniciativa_KeyPress);
             // 
             // label141
@@ -7612,6 +7615,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_en_contra_iniciativa_vp.Size = new System.Drawing.Size(109, 24);
             this.txt_votaciones_pleno_en_contra_iniciativa_vp.TabIndex = 67;
             this.txt_votaciones_pleno_en_contra_iniciativa_vp.UseWaitCursor = true;
+            this.txt_votaciones_pleno_en_contra_iniciativa_vp.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_en_contra_iniciativa_vp_TextChanged);
             this.txt_votaciones_pleno_en_contra_iniciativa_vp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_en_contra_iniciativa_vp_KeyPress);
             // 
             // txt_total_votaciones_pleno_iniciativa
@@ -7649,6 +7653,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_a_favor_iniciativa.Size = new System.Drawing.Size(109, 24);
             this.txt_votaciones_pleno_a_favor_iniciativa.TabIndex = 65;
             this.txt_votaciones_pleno_a_favor_iniciativa.UseWaitCursor = true;
+            this.txt_votaciones_pleno_a_favor_iniciativa.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_a_favor_iniciativa_TextChanged);
             this.txt_votaciones_pleno_a_favor_iniciativa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_a_favor_iniciativa_KeyPress);
             // 
             // groupBox35
@@ -7693,6 +7698,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_resolucion_pleno_iniciativa.TabIndex = 61;
             this.dtp_fecha_resolucion_pleno_iniciativa.UseWaitCursor = true;
             this.dtp_fecha_resolucion_pleno_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_resolucion_pleno_iniciativa.CloseUp += new System.EventHandler(this.dtp_fecha_resolucion_pleno_iniciativa_CloseUp);
             // 
             // cmb_sentido_resolucion_pleno_iniciativa
             // 

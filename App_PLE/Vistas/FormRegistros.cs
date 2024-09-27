@@ -360,6 +360,7 @@ namespace App_PLE.Vistas
             cmb_sentido_resolucion_ejecutivo_iniciativa.Enabled = false;
             dtp_fecha_publicacion_gaceta_oficial_iniciativa.Enabled = false;
 
+            
         }
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
@@ -403,10 +404,23 @@ namespace App_PLE.Vistas
 
         }
 
-        private void cmb_sentido_resolucion_ejecutivo_iniciativa_Validated(object sender, EventArgs e)
-        {
+        
 
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

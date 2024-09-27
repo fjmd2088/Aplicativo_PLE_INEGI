@@ -3512,13 +3512,61 @@ namespace App_PLE.Vistas
                 }
             }
         }
+        private void dtp_fecha_resolucion_pleno_iniciativa_CloseUp(object sender, EventArgs e)
+        {
+            DateTime fechaResolución = dtp_fecha_resolucion_pleno_iniciativa.Value;
+            DateTime fechaPresentaciónini = dtp_fecha_sesion_presentacion_iniciativa.Value;
 
+            if (fechaResolución < fechaPresentaciónini)
+            {
+                MessageBox.Show("La fecha de resolución debe ser igual o mayor a la fecha de sesión que se presento la iniciativa.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Opcional: Resetear la fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+            }
+        }
 
         // VOTACIONES PLENARIAS------------------------------------------------------------------------------------------------------------
 
+        private void txt_votaciones_pleno_a_favor_iniciativa_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones();
+
+        }
+        private void txt_votaciones_pleno_en_contra_iniciativa_vp_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones();
+
+        }
+        private void txt_votaciones_pleno_abstencion_iniciativa_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones();
+
+        }
         private void txt_total_votaciones_pleno_iniciativa_TextChanged(object sender, EventArgs e)
         {
+            CalcularTotalVotaciones();
 
+        }
+        private void CalcularTotalVotaciones()
+        {
+            // Inicializar las variables
+            int aFavor = 0, enContra = 0, abstencion = 0;
+
+            // Verificar que los textos no estén vacíos y convertir a número
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_a_favor_iniciativa.Text))
+                //int.TryParse(txt_votaciones_pleno_a_favor_iniciativa.Text, out aFavor);
+
+                if (!string.IsNullOrEmpty(txt_votaciones_pleno_en_contra_iniciativa_vp.Text))
+                    int.TryParse(txt_votaciones_pleno_en_contra_iniciativa_vp.Text, out enContra);
+
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_abstencion_iniciativa.Text))
+                int.TryParse(txt_votaciones_pleno_abstencion_iniciativa.Text, out abstencion);
+
+            // Calcular el total
+            int total = aFavor + enContra + abstencion;
+
+            // Mostrar el resultado en el TextBox total
+            txt_total_votaciones_pleno_iniciativa.Text = total.ToString();
         }
 
         // txt_votaciones_pleno_a_favor_iniciativa
@@ -3553,6 +3601,18 @@ namespace App_PLE.Vistas
 
         // PODER EJECUTIVO --------------------------------------------------------------------------------------------------------------
 
+        private void dtp_fecha_remision_ejecutivo_iniciativa_CloseUp(object sender, EventArgs e)
+        {
+            DateTime fechaRemision = dtp_fecha_remision_ejecutivo_iniciativa.Value;
+            DateTime fechaResolucionPleno = dtp_fecha_resolucion_pleno_iniciativa.Value;
+
+            if (fechaRemision < fechaResolucionPleno)
+            {
+                MessageBox.Show("La fecha de remisión debe ser igual o mayor a la fecha de resolución pleno.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Opcional: Resetear la fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+            }
+        }
         private void Cmb_sentido_resolucion_ejecutivo_iniciativa()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -3593,8 +3653,7 @@ namespace App_PLE.Vistas
                 }
 
             }
-        }
-        
+        }        
         private void cmb_sentido_resolucion_ejecutivo_iniciativa_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -3658,15 +3717,22 @@ namespace App_PLE.Vistas
 
             }
         }
-        //--------------------------------------
 
+        // GACETA O PERIODICO OFICIAL ---------------------------------------------------------------------------------------------------
+                
+        // Método para comparar fechas        
+        private void dtp_fecha_publicacion_gaceta_oficial_iniciativa_CloseUp(object sender, EventArgs e)
+        {
+            DateTime fechaPublicacion = dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value;
+            DateTime fechaRemision = dtp_fecha_remision_ejecutivo_iniciativa.Value;
 
-
-
-
-
-
-
+            if (fechaPublicacion < fechaRemision)
+            {
+                MessageBox.Show("La fecha de publicación debe ser igual o mayor a la fecha de remisión.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Opcional: Resetear la fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+            }
+        }
 
     }
 
