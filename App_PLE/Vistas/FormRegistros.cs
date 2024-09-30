@@ -359,7 +359,17 @@ namespace App_PLE.Vistas
             dtp_fecha_remision_ejecutivo_iniciativa.Enabled = false;
             cmb_sentido_resolucion_ejecutivo_iniciativa.Enabled = false;
             dtp_fecha_publicacion_gaceta_oficial_iniciativa.Enabled = false;
-
+            //Fechas vacias
+            dtp_fecha_ingreso_iniciativa_oficialia_partes.CustomFormat = " ";
+            dtp_fecha_ingreso_iniciativa_oficialia_partes.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_sesion_presentacion_iniciativa.CustomFormat = " ";
+            dtp_fecha_sesion_presentacion_iniciativa.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_resolucion_pleno_iniciativa.CustomFormat = " ";
+            dtp_fecha_resolucion_pleno_iniciativa.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_remision_ejecutivo_iniciativa.CustomFormat = " ";
+            dtp_fecha_remision_ejecutivo_iniciativa.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa.CustomFormat = " ";
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa.Format = DateTimePickerFormat.Custom;
             
         }
 

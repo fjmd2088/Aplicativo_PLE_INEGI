@@ -1210,14 +1210,19 @@ namespace App_PLE.Vistas
         }
         private void dtp_fecha_ingreso_iniciativa_oficialia_partes_CloseUp(object sender, EventArgs e)
         {
-            DateTime fechaingresoIno = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value;
-            DateTime fechaterminoreportada = dtp_fecha_termino_informacion_reportada.Value;
+            // Obtener las fechas seleccionadas
+            DateTime fechaIngresoIniciativa = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value;
+            DateTime fechaTerminoReportada = dtp_fecha_termino_informacion_reportada.Value;
 
-            if (fechaingresoIno > fechaterminoreportada)
+            // Validar si la fecha de ingreso es mayor a la fecha de término
+            if (fechaIngresoIniciativa > fechaTerminoReportada)
             {
+                // Mostrar mensaje de error
                 MessageBox.Show("La fecha de ingreso a la iniciativa debe ser igual o menor a la fecha de término de la información reportada en datos generales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Opcional: Resetear la fecha de publicación
-                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+
+                // Vaciar el campo de fecha
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.CustomFormat = " ";  // Deja en blanco el campo
+                dtp_fecha_ingreso_iniciativa_oficialia_partes.Format = DateTimePickerFormat.Custom;  // Establece formato personalizado vacío
             }
         }
         private void dtp_fecha_sesion_presentacion_iniciativa_CloseUp(object sender, EventArgs e)
@@ -1230,6 +1235,10 @@ namespace App_PLE.Vistas
                 MessageBox.Show("La fecha de sesión debe ser igual o mayor a la Fecha de ingreso de la iniciativa a oficialía de partes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Opcional: Resetear la fecha de publicación
                 dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+
+                // Vaciar el campo de fecha
+                dtp_fecha_sesion_presentacion_iniciativa.CustomFormat = " ";  // Deja en blanco el campo
+                dtp_fecha_sesion_presentacion_iniciativa.Format = DateTimePickerFormat.Custom;  // Establece formato personalizado vacío
             }
         }
 
@@ -3546,6 +3555,10 @@ namespace App_PLE.Vistas
                 MessageBox.Show("La fecha de resolución debe ser igual o mayor a la fecha de sesión que se presento la iniciativa.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Opcional: Resetear la fecha de publicación
                 dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+
+                // Vaciar el campo de fecha
+                dtp_fecha_resolucion_pleno_iniciativa.CustomFormat = " ";  // Deja en blanco el campo
+                dtp_fecha_resolucion_pleno_iniciativa.Format = DateTimePickerFormat.Custom;  // Establece formato personalizado vacío
             }
         }
 
@@ -3657,6 +3670,10 @@ namespace App_PLE.Vistas
                 MessageBox.Show("La fecha de remisión debe ser igual o mayor a la fecha de resolución pleno.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Opcional: Resetear la fecha de publicación
                 dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+
+                // Vaciar el campo de fecha
+                dtp_fecha_remision_ejecutivo_iniciativa.CustomFormat = " ";  // Deja en blanco el campo
+                dtp_fecha_remision_ejecutivo_iniciativa.Format = DateTimePickerFormat.Custom;  // Establece formato personalizado vacío
             }
         }
         private void Cmb_sentido_resolucion_ejecutivo_iniciativa()
@@ -3777,6 +3794,10 @@ namespace App_PLE.Vistas
                 MessageBox.Show("La fecha de publicación debe ser igual o mayor a la fecha de remisión.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Opcional: Resetear la fecha de publicación
                 dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+
+                // Vaciar el campo de fecha
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.CustomFormat = " ";  // Deja en blanco el campo
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Format = DateTimePickerFormat.Custom;  // Establece formato personalizado vacío
             }
         }
 
