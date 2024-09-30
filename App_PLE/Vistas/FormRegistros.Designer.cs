@@ -2127,7 +2127,7 @@ namespace App_PLE.Vistas
             // 
             this.btnGuardarCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardarCL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCL.Location = new System.Drawing.Point(-3014, 32767);
+            this.btnGuardarCL.Location = new System.Drawing.Point(-3036, 32767);
             this.btnGuardarCL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCL.Name = "btnGuardarCL";
             this.btnGuardarCL.Size = new System.Drawing.Size(149, 43);
@@ -2252,7 +2252,7 @@ namespace App_PLE.Vistas
             this.button24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button24.Location = new System.Drawing.Point(-3106, 32767);
+            this.button24.Location = new System.Drawing.Point(-3128, 32767);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(149, 43);
@@ -8485,6 +8485,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_ingreso_iniciativa_oficialia_partes.TabIndex = 43;
             this.dtp_fecha_ingreso_iniciativa_oficialia_partes.UseWaitCursor = true;
             this.dtp_fecha_ingreso_iniciativa_oficialia_partes.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_ingreso_iniciativa_oficialia_partes.CloseUp += new System.EventHandler(this.dtp_fecha_ingreso_iniciativa_oficialia_partes_CloseUp);
             // 
             // label113
             // 
@@ -9192,6 +9193,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_sesion_presentacion_iniciativa.TabIndex = 53;
             this.dtp_fecha_sesion_presentacion_iniciativa.UseWaitCursor = true;
             this.dtp_fecha_sesion_presentacion_iniciativa.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_sesion_presentacion_iniciativa.CloseUp += new System.EventHandler(this.dtp_fecha_sesion_presentacion_iniciativa_CloseUp);
             // 
             // groupBox82
             // 

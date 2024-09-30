@@ -1208,6 +1208,30 @@ namespace App_PLE.Vistas
             txt_nombre_iniciativa.SelectionStart = txt_nombre_iniciativa.Text.Length;
 
         }
+        private void dtp_fecha_ingreso_iniciativa_oficialia_partes_CloseUp(object sender, EventArgs e)
+        {
+            DateTime fechaingresoIno = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value;
+            DateTime fechaterminoreportada = dtp_fecha_termino_informacion_reportada.Value;
+
+            if (fechaingresoIno > fechaterminoreportada)
+            {
+                MessageBox.Show("La fecha de ingreso a la iniciativa debe ser igual o menor a la fecha de término de la información reportada en datos generales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Opcional: Resetear la fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+            }
+        }
+        private void dtp_fecha_sesion_presentacion_iniciativa_CloseUp(object sender, EventArgs e)
+        {
+            DateTime fechaSeesión = dtp_fecha_sesion_presentacion_iniciativa.Value;
+            DateTime fechaOficialiaP = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value;
+
+            if (fechaSeesión < fechaOficialiaP)
+            {
+                MessageBox.Show("La fecha de sesión debe ser igual o mayor a la Fecha de ingreso de la iniciativa a oficialía de partes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Opcional: Resetear la fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value = DateTime.Now; // o una fecha predeterminada
+            }
+        }
 
         // Tipo 
         private void cmb_Tipo_iniciativa()
