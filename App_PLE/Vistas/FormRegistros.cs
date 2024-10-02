@@ -370,8 +370,39 @@ namespace App_PLE.Vistas
             dtp_fecha_remision_ejecutivo_iniciativa.Format = DateTimePickerFormat.Custom;
             dtp_fecha_publicacion_gaceta_oficial_iniciativa.CustomFormat = " ";
             dtp_fecha_publicacion_gaceta_oficial_iniciativa.Format = DateTimePickerFormat.Custom;
-            
+
+            // ---------------------------------------------- INICIATIVAS UO ---------------------------------------------------------------
+
+            Cmb_estatus_iniciativa_urgente_obvia();
+            Cmb_tipo_iniciativa_urgente_obvia();
+            Cmb_tipo_promovente_iniciativa_urgente_obvia();
+
+
+            // FECHAS
+            dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.CustomFormat = " ";
+            dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.CustomFormat = " ";
+            dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;
+
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_otro_tipo_iniciativa_urgente_obvia_especifique.Enabled = false;
+            cmb_nombre_persona_legisladora_1_UO.Enabled = false;
+            txt_ID_persona_legisladora_1_UO.Enabled = false;
+            btn_agregar_per_leg_UO.Enabled = false;
+            btn_eliminar_pers_legis_UO.Enabled = false;
+            dgv_per_legis_UO.BackgroundColor = Color.LightGray;
+            cmb_grupo_parlamentario_UO.Enabled = false;
+            btn_agregar_grupo_parla_UO.Enabled = false;
+            btn_eliminar_grupo_parla_UO.Enabled = false;
+            dgv_grupos_parla_UO.BackgroundColor = Color.LightGray;
+            cmb_nombre_comision_legislativa_1_UO.Enabled = false;
+            txt_ID_comision_legislativa_1_UO.Enabled = false;
+            btn_agregar_nom_com_leg_UO.Enabled = false;
+            btn_elimina_con_legisl_UO.Enabled = false;
+            dgv_com_legis_UO.BackgroundColor = Color.LightGray;
+
         }
+        
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
 
@@ -415,6 +446,19 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
