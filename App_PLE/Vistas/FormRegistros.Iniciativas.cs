@@ -1590,6 +1590,7 @@ namespace App_PLE.Vistas
         }
 
         // Tabla prsonas legisladoras
+
         private void Cmb_nombre_persona_legisladora_1()
         {
             string cadena = "Data Source = DB_PLE.db;Version=3;";
@@ -1732,12 +1733,14 @@ namespace App_PLE.Vistas
         }
 
         // Botones agregar y eliminar de la tabla personas legisladoras
+
         private void btn_agregar_per_leg_MouseClick(object sender, MouseEventArgs e)
         {
-            // Obtener el nombre seleccionado en el ComboBox
+            // Obtener el nombre y el ID seleccionados
             string nombreSeleccionado = cmb_nombre_persona_legisladora_1.Text.Trim();
+            string idSeleccionado = txt_ID_persona_legisladora_1.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(nombreSeleccionado))
+            if (string.IsNullOrWhiteSpace(nombreSeleccionado) || string.IsNullOrWhiteSpace(idSeleccionado))
             {
                 MessageBox.Show("Revisar datos vacíos");
             }
@@ -1753,13 +1756,12 @@ namespace App_PLE.Vistas
                 }
                 else
                 {
-                    // Agregar una nueva fila al DataGridView
-                    dgv_per_legis.Rows.Add(nombreSeleccionado, txt_ID_persona_legisladora_1.Text);
-                    cmb_nombre_persona_legisladora_1.Text = "";
+                    // Agregar una nueva fila al DataGridView con el formato: ID primero, luego el nombre
+                    dgv_per_legis.Rows.Add(idSeleccionado, nombreSeleccionado);
 
-                    // Limpiar los campos
+                    // Limpiar los campos después de agregar los datos
                     cmb_nombre_persona_legisladora_1.Text = "";
-                    txt_ID_persona_legisladora_1.Text = "";  // Limpiar el campo txt_ID_comision_legislativa_1
+                    txt_ID_persona_legisladora_1.Text = "";
                 }
             }
         }
@@ -1780,7 +1782,7 @@ namespace App_PLE.Vistas
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
-                string existingId = row.Cells["id_per_leg_agr"].Value.ToString();
+                string existingId = row.Cells["Pesonas_legisladoras_ini"].Value.ToString();
 
                 if (existingId == variable_cmb)
                 {
@@ -1790,7 +1792,8 @@ namespace App_PLE.Vistas
             return false;
         }
 
-        // Tabla grupo parrlamentario
+        // Tabla grupo parlamentario
+
         private void cmb_grupo_parlamentario_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -1860,6 +1863,7 @@ namespace App_PLE.Vistas
         }
 
         // Varios grupos parlamentarios
+
         private void cmb_varios_grupos_parlamentarios_especifique_1_Validating(object sender, CancelEventArgs e)
         {
             System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
@@ -2109,8 +2113,9 @@ namespace App_PLE.Vistas
         {
             // Obtener el nombre seleccionado en el ComboBox
             string nombreSeleccionado = cmb_nombre_comision_legislativa_1.Text.Trim();
+            string idSeleccionado = txt_ID_comision_legislativa_1.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(nombreSeleccionado))
+            if (string.IsNullOrWhiteSpace(nombreSeleccionado) || string.IsNullOrWhiteSpace(idSeleccionado))
             {
                 MessageBox.Show("Revisar datos vacíos");
             }
@@ -2127,7 +2132,7 @@ namespace App_PLE.Vistas
                 else
                 {
                     // Agregar una nueva fila al DataGridView
-                    dgv_com_legis.Rows.Add(nombreSeleccionado, txt_ID_comision_legislativa_1.Text);
+                    dgv_com_legis.Rows.Add(idSeleccionado, nombreSeleccionado);
 
                     // Limpiar los campos
                     cmb_nombre_comision_legislativa_1.Text = "";
@@ -2153,7 +2158,7 @@ namespace App_PLE.Vistas
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
-                string existingId = row.Cells["ID_COM_LEG"].Value.ToString();
+                string existingId = row.Cells["Com_leg_ini"].Value.ToString();
 
                 if (existingId == variable_cmb)
                 {

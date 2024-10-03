@@ -374,26 +374,25 @@ namespace App_PLE.Vistas
             this.cmb_nombre_comision_legislativa_1_UO = new System.Windows.Forms.ComboBox();
             this.dgv_com_legis_UO = new System.Windows.Forms.DataGridView();
             this.IDUO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom_com_l_i_uo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_agregar_nom_com_leg_UO = new System.Windows.Forms.Button();
             this.btn_elimina_con_legisl_UO = new System.Windows.Forms.Button();
             this.label315 = new System.Windows.Forms.Label();
             this.txt_ID_comision_legislativa_1_UO = new System.Windows.Forms.TextBox();
             this.label312 = new System.Windows.Forms.Label();
             this.groupBox98 = new System.Windows.Forms.GroupBox();
+            this.cmb_varios_grupos_parlamentarios_especifique_UO = new System.Windows.Forms.ComboBox();
+            this.label204 = new System.Windows.Forms.Label();
             this.label316 = new System.Windows.Forms.Label();
             this.cmb_grupo_parlamentario_UO = new System.Windows.Forms.ComboBox();
             this.dgv_grupos_parla_UO = new System.Windows.Forms.DataGridView();
-            this.IDGP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grupos_parlamentarios_ini_uo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_agregar_grupo_parla_UO = new System.Windows.Forms.Button();
             this.btn_eliminar_grupo_parla_UO = new System.Windows.Forms.Button();
             this.groupBox99 = new System.Windows.Forms.GroupBox();
             this.label317 = new System.Windows.Forms.Label();
             this.cmb_nombre_persona_legisladora_1_UO = new System.Windows.Forms.ComboBox();
             this.dgv_per_legis_UO = new System.Windows.Forms.DataGridView();
-            this.IDPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_agregar_per_leg_UO = new System.Windows.Forms.Button();
             this.btn_eliminar_pers_legis_UO = new System.Windows.Forms.Button();
             this.label318 = new System.Windows.Forms.Label();
@@ -1008,6 +1007,8 @@ namespace App_PLE.Vistas
             this.dtp_inicio_funciones_legislatura = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.IDPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Per_leg_ou = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageCom.SuspendLayout();
             this.groupBox117.SuspendLayout();
@@ -5471,6 +5472,8 @@ namespace App_PLE.Vistas
             this.cmb_nombre_comision_legislativa_1_UO.Size = new System.Drawing.Size(309, 26);
             this.cmb_nombre_comision_legislativa_1_UO.TabIndex = 71;
             this.cmb_nombre_comision_legislativa_1_UO.UseWaitCursor = true;
+            this.cmb_nombre_comision_legislativa_1_UO.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_comision_legislativa_1_UO_SelectedIndexChanged);
+            this.cmb_nombre_comision_legislativa_1_UO.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_comision_legislativa_1_UO_Validating);
             // 
             // dgv_com_legis_UO
             // 
@@ -5482,7 +5485,7 @@ namespace App_PLE.Vistas
             this.dgv_com_legis_UO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_com_legis_UO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDUO,
-            this.dataGridViewTextBoxColumn11});
+            this.Nom_com_l_i_uo});
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5509,12 +5512,12 @@ namespace App_PLE.Vistas
             this.IDUO.Name = "IDUO";
             this.IDUO.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn11
+            // Nom_com_l_i_uo
             // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Comisiones legislativas";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.Nom_com_l_i_uo.HeaderText = "Comisiones legislativas";
+            this.Nom_com_l_i_uo.MinimumWidth = 6;
+            this.Nom_com_l_i_uo.Name = "Nom_com_l_i_uo";
+            this.Nom_com_l_i_uo.ReadOnly = true;
             // 
             // btn_agregar_nom_com_leg_UO
             // 
@@ -5527,6 +5530,7 @@ namespace App_PLE.Vistas
             this.btn_agregar_nom_com_leg_UO.Text = "Agregar";
             this.btn_agregar_nom_com_leg_UO.UseVisualStyleBackColor = true;
             this.btn_agregar_nom_com_leg_UO.UseWaitCursor = true;
+            this.btn_agregar_nom_com_leg_UO.Click += new System.EventHandler(this.btn_agregar_nom_com_leg_UO_Click);
             // 
             // btn_elimina_con_legisl_UO
             // 
@@ -5539,6 +5543,7 @@ namespace App_PLE.Vistas
             this.btn_elimina_con_legisl_UO.Text = "Eliminar";
             this.btn_elimina_con_legisl_UO.UseVisualStyleBackColor = true;
             this.btn_elimina_con_legisl_UO.UseWaitCursor = true;
+            this.btn_elimina_con_legisl_UO.Click += new System.EventHandler(this.btn_elimina_con_legisl_UO_Click);
             // 
             // label315
             // 
@@ -5579,6 +5584,8 @@ namespace App_PLE.Vistas
             // 
             // groupBox98
             // 
+            this.groupBox98.Controls.Add(this.cmb_varios_grupos_parlamentarios_especifique_UO);
+            this.groupBox98.Controls.Add(this.label204);
             this.groupBox98.Controls.Add(this.label316);
             this.groupBox98.Controls.Add(this.cmb_grupo_parlamentario_UO);
             this.groupBox98.Controls.Add(this.dgv_grupos_parla_UO);
@@ -5592,6 +5599,31 @@ namespace App_PLE.Vistas
             this.groupBox98.TabIndex = 74;
             this.groupBox98.TabStop = false;
             this.groupBox98.UseWaitCursor = true;
+            // 
+            // cmb_varios_grupos_parlamentarios_especifique_UO
+            // 
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.FormattingEnabled = true;
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.Location = new System.Drawing.Point(454, 62);
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.Name = "cmb_varios_grupos_parlamentarios_especifique_UO";
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.Size = new System.Drawing.Size(339, 26);
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.TabIndex = 69;
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.UseWaitCursor = true;
+            this.cmb_varios_grupos_parlamentarios_especifique_UO.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_varios_grupos_parlamentarios_especifique_UO_Validating);
+            // 
+            // label204
+            // 
+            this.label204.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label204.ForeColor = System.Drawing.Color.Black;
+            this.label204.Location = new System.Drawing.Point(10, 62);
+            this.label204.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label204.Name = "label204";
+            this.label204.Size = new System.Drawing.Size(442, 28);
+            this.label204.TabIndex = 68;
+            this.label204.Text = "Grupo parlamentario promovente de la iniciativa (varios):";
+            this.label204.UseWaitCursor = true;
             // 
             // label316
             // 
@@ -5616,6 +5648,8 @@ namespace App_PLE.Vistas
             this.cmb_grupo_parlamentario_UO.Size = new System.Drawing.Size(381, 26);
             this.cmb_grupo_parlamentario_UO.TabIndex = 62;
             this.cmb_grupo_parlamentario_UO.UseWaitCursor = true;
+            this.cmb_grupo_parlamentario_UO.SelectedIndexChanged += new System.EventHandler(this.cmb_grupo_parlamentario_UO_SelectedIndexChanged);
+            this.cmb_grupo_parlamentario_UO.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_grupo_parlamentario_UO_Validating);
             // 
             // dgv_grupos_parla_UO
             // 
@@ -5626,8 +5660,7 @@ namespace App_PLE.Vistas
             this.dgv_grupos_parla_UO.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgv_grupos_parla_UO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_grupos_parla_UO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDGP,
-            this.dataGridViewTextBoxColumn12});
+            this.Grupos_parlamentarios_ini_uo});
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5636,35 +5669,28 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_grupos_parla_UO.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgv_grupos_parla_UO.Location = new System.Drawing.Point(17, 65);
+            this.dgv_grupos_parla_UO.Location = new System.Drawing.Point(17, 96);
             this.dgv_grupos_parla_UO.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_grupos_parla_UO.Name = "dgv_grupos_parla_UO";
             this.dgv_grupos_parla_UO.ReadOnly = true;
             this.dgv_grupos_parla_UO.RowHeadersVisible = false;
             this.dgv_grupos_parla_UO.RowHeadersWidth = 51;
             this.dgv_grupos_parla_UO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_grupos_parla_UO.Size = new System.Drawing.Size(601, 129);
+            this.dgv_grupos_parla_UO.Size = new System.Drawing.Size(601, 98);
             this.dgv_grupos_parla_UO.TabIndex = 65;
             this.dgv_grupos_parla_UO.UseWaitCursor = true;
             // 
-            // IDGP
+            // Grupos_parlamentarios_ini_uo
             // 
-            this.IDGP.HeaderText = "ID";
-            this.IDGP.MinimumWidth = 6;
-            this.IDGP.Name = "IDGP";
-            this.IDGP.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Grupos parlamentarios";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.Grupos_parlamentarios_ini_uo.HeaderText = "Grupos parlamentarios";
+            this.Grupos_parlamentarios_ini_uo.MinimumWidth = 6;
+            this.Grupos_parlamentarios_ini_uo.Name = "Grupos_parlamentarios_ini_uo";
+            this.Grupos_parlamentarios_ini_uo.ReadOnly = true;
             // 
             // btn_agregar_grupo_parla_UO
             // 
             this.btn_agregar_grupo_parla_UO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_grupo_parla_UO.Location = new System.Drawing.Point(635, 85);
+            this.btn_agregar_grupo_parla_UO.Location = new System.Drawing.Point(642, 105);
             this.btn_agregar_grupo_parla_UO.Margin = new System.Windows.Forms.Padding(4);
             this.btn_agregar_grupo_parla_UO.Name = "btn_agregar_grupo_parla_UO";
             this.btn_agregar_grupo_parla_UO.Size = new System.Drawing.Size(147, 33);
@@ -5672,11 +5698,12 @@ namespace App_PLE.Vistas
             this.btn_agregar_grupo_parla_UO.Text = "Agregar";
             this.btn_agregar_grupo_parla_UO.UseVisualStyleBackColor = true;
             this.btn_agregar_grupo_parla_UO.UseWaitCursor = true;
+            this.btn_agregar_grupo_parla_UO.Click += new System.EventHandler(this.btn_agregar_grupo_parla_UO_Click);
             // 
             // btn_eliminar_grupo_parla_UO
             // 
             this.btn_eliminar_grupo_parla_UO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar_grupo_parla_UO.Location = new System.Drawing.Point(636, 143);
+            this.btn_eliminar_grupo_parla_UO.Location = new System.Drawing.Point(642, 146);
             this.btn_eliminar_grupo_parla_UO.Margin = new System.Windows.Forms.Padding(4);
             this.btn_eliminar_grupo_parla_UO.Name = "btn_eliminar_grupo_parla_UO";
             this.btn_eliminar_grupo_parla_UO.Size = new System.Drawing.Size(147, 33);
@@ -5684,6 +5711,7 @@ namespace App_PLE.Vistas
             this.btn_eliminar_grupo_parla_UO.Text = "Eliminar";
             this.btn_eliminar_grupo_parla_UO.UseVisualStyleBackColor = true;
             this.btn_eliminar_grupo_parla_UO.UseWaitCursor = true;
+            this.btn_eliminar_grupo_parla_UO.Click += new System.EventHandler(this.btn_eliminar_grupo_parla_UO_Click);
             // 
             // groupBox99
             // 
@@ -5740,7 +5768,7 @@ namespace App_PLE.Vistas
             this.dgv_per_legis_UO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_per_legis_UO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDPL,
-            this.dataGridViewTextBoxColumn13});
+            this.Per_leg_ou});
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5759,20 +5787,6 @@ namespace App_PLE.Vistas
             this.dgv_per_legis_UO.Size = new System.Drawing.Size(581, 203);
             this.dgv_per_legis_UO.TabIndex = 56;
             this.dgv_per_legis_UO.UseWaitCursor = true;
-            // 
-            // IDPL
-            // 
-            this.IDPL.HeaderText = "ID";
-            this.IDPL.MinimumWidth = 6;
-            this.IDPL.Name = "IDPL";
-            this.IDPL.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Personas legisladoras";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
             // btn_agregar_per_leg_UO
             // 
@@ -14460,6 +14474,20 @@ namespace App_PLE.Vistas
             this.tabControl1.Size = new System.Drawing.Size(1688, 809);
             this.tabControl1.TabIndex = 0;
             // 
+            // IDPL
+            // 
+            this.IDPL.HeaderText = "ID";
+            this.IDPL.MinimumWidth = 6;
+            this.IDPL.Name = "IDPL";
+            this.IDPL.ReadOnly = true;
+            // 
+            // Per_leg_ou
+            // 
+            this.Per_leg_ou.HeaderText = "Personas legisladoras";
+            this.Per_leg_ou.MinimumWidth = 6;
+            this.Per_leg_ou.Name = "Per_leg_ou";
+            this.Per_leg_ou.ReadOnly = true;
+            // 
             // FormRegistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -15056,8 +15084,6 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label314;
         private System.Windows.Forms.ComboBox cmb_nombre_comision_legislativa_1_UO;
         private System.Windows.Forms.DataGridView dgv_com_legis_UO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDUO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.Button btn_agregar_nom_com_leg_UO;
         private System.Windows.Forms.Button btn_elimina_con_legisl_UO;
         private System.Windows.Forms.Label label315;
@@ -15067,16 +15093,12 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label316;
         private System.Windows.Forms.ComboBox cmb_grupo_parlamentario_UO;
         private System.Windows.Forms.DataGridView dgv_grupos_parla_UO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDGP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.Button btn_agregar_grupo_parla_UO;
         private System.Windows.Forms.Button btn_eliminar_grupo_parla_UO;
         private System.Windows.Forms.GroupBox groupBox99;
         private System.Windows.Forms.Label label317;
         private System.Windows.Forms.ComboBox cmb_nombre_persona_legisladora_1_UO;
         private System.Windows.Forms.DataGridView dgv_per_legis_UO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.Button btn_agregar_per_leg_UO;
         private System.Windows.Forms.Button btn_eliminar_pers_legis_UO;
         private System.Windows.Forms.Label label318;
@@ -15691,5 +15713,12 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.DateTimePicker dtp_inicio_funciones_legislatura;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.ComboBox cmb_varios_grupos_parlamentarios_especifique_UO;
+        private System.Windows.Forms.Label label204;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grupos_parlamentarios_ini_uo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDUO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom_com_l_i_uo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Per_leg_ou;
     }
 }

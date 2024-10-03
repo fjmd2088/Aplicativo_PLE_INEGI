@@ -666,6 +666,11 @@ namespace App_PLE.Vistas
                                 DataTable tableGrupoParlamentario = new DataTable();
                                 adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
 
+                                // Filtrar los resultados para eliminar cualquier fila que contenga "varios" en la columna "descripcion"
+                                tableGrupoParlamentario = tableGrupoParlamentario.AsEnumerable()
+                                                             .Where(row => row.Field<string>("descripcion").ToLower() != "varios")
+                                                             .CopyToDataTable();
+
                                 // Llenar el ComboBox "cmb_varios_grupos_parlamentarios_especifique_1" con los resultados de la consulta
                                 cmb_varios_grupos_parlamentarios_especifique_1.DisplayMember = "descripcion";
                                 cmb_varios_grupos_parlamentarios_especifique_1.ValueMember = "descripcion";  // Opcional si necesitas usar el valor en otro lugar
@@ -676,6 +681,58 @@ namespace App_PLE.Vistas
                                 cmb_varios_grupos_parlamentarios_especifique_1.AutoCompleteSource = AutoCompleteSource.ListItems;
                                 cmb_varios_grupos_parlamentarios_especifique_1.DropDownStyle = ComboBoxStyle.DropDown;
                                 
+                            }
+
+                            // NUEVA CONSULTA PARA LLENAR cmb_grupo_parlamentario_UO ---------------------------------------------
+                            string queryGrupoParlamentariovarios1 = "SELECT descripcion FROM TC_GRAL_GPO_PARL_PORMOVENTE WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryGrupoParlamentariovarios1, conexion))
+                            {
+                                cmdGrupoParlamentario.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapterGrupoParlamentario = new SQLiteDataAdapter(cmdGrupoParlamentario);
+                                DataTable tableGrupoParlamentario = new DataTable();
+                                adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
+
+                                // Filtrar los resultados para eliminar cualquier fila que contenga "varios" en la columna "descripcion"
+                                //tableGrupoParlamentario = tableGrupoParlamentario.AsEnumerable()
+                                                            // .Where(row => row.Field<string>("descripcion").ToLower() != "varios")
+                                                             //.CopyToDataTable();
+
+                                // Llenar el ComboBox "cmb_varios_grupos_parlamentarios_especifique_1" con los resultados filtrados
+                                cmb_grupo_parlamentario_UO.DisplayMember = "descripcion";
+                                cmb_grupo_parlamentario_UO.ValueMember = "descripcion";  // Opcional si necesitas usar el valor en otro lugar
+                                cmb_grupo_parlamentario_UO.DataSource = tableGrupoParlamentario;
+
+                                // Opcional: Configurar el modo de autocompletar y el estilo del ComboBox
+                                cmb_grupo_parlamentario_UO.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_grupo_parlamentario_UO.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_grupo_parlamentario_UO.DropDownStyle = ComboBoxStyle.DropDown;
+                            }
+
+                            // NUEVA CONSULTA PARA LLENAR cmb_grupo_parlamentario_UO Varios---------------------------------------------
+                            string queryGrupoParlamentariovariosv = "SELECT descripcion FROM TC_GRAL_GPO_PARL_PORMOVENTE WHERE entidad = @entidad_federativa";
+                            using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryGrupoParlamentariovariosv, conexion))
+                            {
+                                cmdGrupoParlamentario.Parameters.AddWithValue("@entidad_federativa", entidad_federativa);
+
+                                SQLiteDataAdapter adapterGrupoParlamentario = new SQLiteDataAdapter(cmdGrupoParlamentario);
+                                DataTable tableGrupoParlamentario = new DataTable();
+                                adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
+
+                                 //Filtrar los resultados para eliminar cualquier fila que contenga "varios" en la columna "descripcion"
+                                tableGrupoParlamentario = tableGrupoParlamentario.AsEnumerable()
+                                                            .Where(row => row.Field<string>("descripcion").ToLower() != "varios")
+                                                            .CopyToDataTable();
+
+                                // Llenar el ComboBox "cmb_varios_grupos_parlamentarios_especifique_1" con los resultados filtrados
+                                cmb_varios_grupos_parlamentarios_especifique_UO.DisplayMember = "descripcion";
+                                cmb_varios_grupos_parlamentarios_especifique_UO.ValueMember = "descripcion";  // Opcional si necesitas usar el valor en otro lugar
+                                cmb_varios_grupos_parlamentarios_especifique_UO.DataSource = tableGrupoParlamentario;
+
+                                // Opcional: Configurar el modo de autocompletar y el estilo del ComboBox
+                                cmb_varios_grupos_parlamentarios_especifique_UO.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_varios_grupos_parlamentarios_especifique_UO.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_varios_grupos_parlamentarios_especifique_UO.DropDownStyle = ComboBoxStyle.DropDown;
                             }
 
                             // NUEVA CONSULTA PARA LLENAR Ayuntamiento ------------------------------------------------------------
