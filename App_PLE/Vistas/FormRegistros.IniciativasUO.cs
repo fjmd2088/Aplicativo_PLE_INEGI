@@ -120,17 +120,39 @@ namespace App_PLE.Vistas
             if (valorComboBox1.Equals("Desechada o improcedente", StringComparison.OrdinalIgnoreCase) ||
                 valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
             {
-                // DTP
+                
                 cmb_sentido_resolucion_pleno_iniciativa_urgente_obvia.Enabled = true;
                 cmb_sentido_resolucion_pleno_iniciativa_urgente_obvia.BackColor = Color.Honeydew;
 
             }
             else
             {
-                // DTP
+               
                 cmb_sentido_resolucion_pleno_iniciativa_urgente_obvia.Enabled = false;
                 cmb_sentido_resolucion_pleno_iniciativa_urgente_obvia.BackColor = Color.LightGray;
                 cmb_sentido_resolucion_pleno_iniciativa_urgente_obvia.Text = "";
+
+            }
+
+            // Desbloquear Fecha publicación y CMB
+            if (valorComboBox1.Equals("Aprobada o procedente", StringComparison.OrdinalIgnoreCase))
+            {
+
+                cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.Enabled = true;
+                cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.BackColor = Color.Honeydew;
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Enabled = true;
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+
+                cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.Enabled = false;
+                cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.BackColor = Color.LightGray;
+                cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.Text = "";
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Enabled = false;
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.BackColor = Color.LightGray;
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Text = "";
 
             }
             // Combo box de Resolución Pleno
@@ -215,7 +237,7 @@ namespace App_PLE.Vistas
         {
             // Obtener las fechas seleccionadas
             DateTime fechaIngreso = dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Value.Date; // Solo la fecha, sin hora
-            DateTime fechaTermInf = dtp_fecha_termino_informacion_reportada.Value; 
+            DateTime fechaTermInf = dtp_fecha_termino_informacion_reportada.Value.Date; 
             // Validar si la fecha de ingreso es mayor que la fecha de término.
             if (fechaIngreso > fechaTermInf) // Solo si es mayor que fechaTermInf.
             {
@@ -1589,16 +1611,216 @@ namespace App_PLE.Vistas
         }
 
         // Sumatorias
-       
+        private void txt_votaciones_pleno_a_favor_iniciativa_urgente_obvia_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones_uo();
+        }
 
+        private void txt_votaciones_pleno_en_contra_iniciativa_urgente_obvia_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones_uo();
+        }
 
-        //-----------------------------
+        private void txt_votaciones_pleno_abstencion_iniciativa_urgente_obvia_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones_uo();
+        }
 
+        private void CalcularTotalVotaciones_uo()
+        {
+            // Inicializar las variables
+            int aFavor = 0, enContra = 0, abstencion = 0;
 
+            // Verificar que los textos no estén vacíos y convertir a número
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_a_favor_iniciativa_urgente_obvia.Text))
+                int.TryParse(txt_votaciones_pleno_a_favor_iniciativa_urgente_obvia.Text, out aFavor);
 
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_en_contra_iniciativa_urgente_obvia.Text))
+                int.TryParse(txt_votaciones_pleno_en_contra_iniciativa_urgente_obvia.Text, out enContra);
 
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_abstencion_iniciativa_urgente_obvia.Text))
+                int.TryParse(txt_votaciones_pleno_abstencion_iniciativa_urgente_obvia.Text, out abstencion);
 
+            // Calcular el total
+            int total = aFavor + enContra + abstencion;
 
+            // Mostrar el resultado en el TextBox total
+            txt_total_votaciones_pleno_iniciativa_urgente_obvia.Text = total.ToString();
+
+            // Obtener las cantidades de distritos y diputaciones
+            int distritos = 0, plurinominales = 0;
+
+            // Solo intentar convertir si los campos no están vacíos
+            int.TryParse(Txt_distritos_uninominales.Text, out distritos);
+            int.TryParse(Txt_diputaciones_plurinominales.Text, out plurinominales);
+
+            // Verificar que el total no supere la suma de distritos y plurinominales
+            if (total > (distritos + plurinominales))
+            {
+                // Mostrar el mensaje de error
+                MessageBox.Show("El total debe ser igual o menor a la suma de los distritos uninominales y diputaciones plurinominales.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Limpiar los campos de votaciones
+                txt_votaciones_pleno_a_favor_iniciativa_urgente_obvia.Clear();
+                txt_votaciones_pleno_en_contra_iniciativa_urgente_obvia.Clear();
+                txt_votaciones_pleno_abstencion_iniciativa_urgente_obvia.Clear();
+
+                // Restablecer el total a 0
+                txt_total_votaciones_pleno_iniciativa_urgente_obvia.Text = "0";
+            }
+        }
+
+        // Poder ejecutivo 
+
+        private void Cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SENT_RESOLUCION";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.DataSource = dataTable;
+                    cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.DisplayMember = "descripcion";
+
+                    cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia_TextChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.Text.Trim();
+
+            // Desbloquear Gaceta o periodico oficial
+            if (valorComboBox1.Equals("Aprobado", StringComparison.OrdinalIgnoreCase))
+            {
+                // Desbloquea dtp fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Enabled = true;
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.BackColor = Color.Honeydew;
+
+            }
+            else
+            {
+                // Desbloquea dtp fecha de publicación
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Enabled = false;
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.BackColor = Color.LightGray;
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Text = "";
+
+            }
+        }
+        private void dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia_CloseUp(object sender, EventArgs e)
+        {
+            // Obtener las fechas seleccionadas
+            DateTime fechaRemPE = dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaResPlen = dtp_fecha_resolucion_pleno_iniciativa_urgente_obvia.Value.Date;
+            // Validar si la fecha de ingreso es mayor que la fecha de término.
+            if (fechaRemPE < fechaResPlen) // Solo si es mayor que fechaTermInf.
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("La fecha de remisión poder ejecutivo debe ser igual o mayor a la fecha de resolución pleno.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o menor que la fecha de término), restaurar el formato de fecha corta
+                dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Short;
+            }
+        }
+        private void dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia_CloseUp(object sender, EventArgs e)
+        {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Value.Date; // Solo la fecha, sin hora
+
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta < fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("La fecha de publicación debe ser igual o mayor a la fecha de remisión del poder ejecutivo.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Short;
+            }
+        }
 
 
 

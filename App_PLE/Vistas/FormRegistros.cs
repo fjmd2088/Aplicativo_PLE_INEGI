@@ -380,6 +380,7 @@ namespace App_PLE.Vistas
             Cmb_nombre_comision_legislativa_1_UO();
             Cmb_tipo_organo_constitucional_autonomo_uo();
             Cmb_cond_adhesion_iniciativa_urgente_obvia();
+            Cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia();
 
             // FECHAS
             dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.CustomFormat = " ";
@@ -388,6 +389,10 @@ namespace App_PLE.Vistas
             dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;
             dtp_fecha_resolucion_pleno_iniciativa_urgente_obvia.CustomFormat = " ";
             dtp_fecha_resolucion_pleno_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.CustomFormat = " ";
+            dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.CustomFormat = " ";
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Custom;
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_otro_tipo_iniciativa_urgente_obvia_especifique.Enabled = false;
@@ -410,6 +415,9 @@ namespace App_PLE.Vistas
             cmb_tipo_organo_constitucional_autonomo_uo.Enabled = false;
             txt_otro_tipo_organo_constitucional_autonomo_especifique_uo.Enabled = false;
             cmb_sentido_resolucion_pleno_iniciativa_urgente_obvia.Enabled = false;
+            dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Enabled = false;
+            cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.Enabled = false;
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Enabled = false;
         }
         
 
@@ -455,6 +463,20 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

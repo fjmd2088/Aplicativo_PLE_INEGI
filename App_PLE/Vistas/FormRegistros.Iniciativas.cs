@@ -1211,8 +1211,8 @@ namespace App_PLE.Vistas
         private void dtp_fecha_ingreso_iniciativa_oficialia_partes_CloseUp(object sender, EventArgs e)
         {
             // Obtener las fechas seleccionadas
-            DateTime fechaIngresoIniciativa = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value;
-            DateTime fechaTerminoReportada = dtp_fecha_termino_informacion_reportada.Value;
+            DateTime fechaIngresoIniciativa = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value.Date;
+            DateTime fechaTerminoReportada = dtp_fecha_termino_informacion_reportada.Value.Date;
 
             // Validar si la fecha de ingreso es mayor a la fecha de término
             if (fechaIngresoIniciativa > fechaTerminoReportada)
@@ -1227,8 +1227,8 @@ namespace App_PLE.Vistas
         }
         private void dtp_fecha_sesion_presentacion_iniciativa_CloseUp(object sender, EventArgs e)
         {
-            DateTime fechaSeesión = dtp_fecha_sesion_presentacion_iniciativa.Value;
-            DateTime fechaOficialiaP = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value;
+            DateTime fechaSeesión = dtp_fecha_sesion_presentacion_iniciativa.Value.Date;
+            DateTime fechaOficialiaP = dtp_fecha_ingreso_iniciativa_oficialia_partes.Value.Date;
 
             if (fechaSeesión < fechaOficialiaP)
             {
@@ -3552,8 +3552,8 @@ namespace App_PLE.Vistas
         }
         private void dtp_fecha_resolucion_pleno_iniciativa_CloseUp(object sender, EventArgs e)
         {
-            DateTime fechaResolución = dtp_fecha_resolucion_pleno_iniciativa.Value;
-            DateTime fechaPresentaciónini = dtp_fecha_sesion_presentacion_iniciativa.Value;
+            DateTime fechaResolución = dtp_fecha_resolucion_pleno_iniciativa.Value.Date;
+            DateTime fechaPresentaciónini = dtp_fecha_sesion_presentacion_iniciativa.Value.Date;
 
             if (fechaResolución < fechaPresentaciónini)
             {
@@ -3667,8 +3667,8 @@ namespace App_PLE.Vistas
 
         private void dtp_fecha_remision_ejecutivo_iniciativa_CloseUp(object sender, EventArgs e)
         {
-            DateTime fechaRemision = dtp_fecha_remision_ejecutivo_iniciativa.Value;
-            DateTime fechaResolucionPleno = dtp_fecha_resolucion_pleno_iniciativa.Value;
+            DateTime fechaRemision = dtp_fecha_remision_ejecutivo_iniciativa.Value.Date;
+            DateTime fechaResolucionPleno = dtp_fecha_resolucion_pleno_iniciativa.Value.Date;
 
             if (fechaRemision < fechaResolucionPleno)
             {
@@ -3791,8 +3791,8 @@ namespace App_PLE.Vistas
         // Método para comparar fechas        
         private void dtp_fecha_publicacion_gaceta_oficial_iniciativa_CloseUp(object sender, EventArgs e)
         {
-            DateTime fechaPublicacion = dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value;
-            DateTime fechaRemision = dtp_fecha_remision_ejecutivo_iniciativa.Value;
+            DateTime fechaPublicacion = dtp_fecha_publicacion_gaceta_oficial_iniciativa.Value.Date;
+            DateTime fechaRemision = dtp_fecha_remision_ejecutivo_iniciativa.Value.Date;
 
             if (fechaPublicacion < fechaRemision)
             {
