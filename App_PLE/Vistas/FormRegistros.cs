@@ -418,8 +418,17 @@ namespace App_PLE.Vistas
             dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Enabled = false;
             cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia.Enabled = false;
             dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Enabled = false;
+
+            //-------------------------------------------------- JUICIOS POLITICOS ----------------------------------------------------
+
+            Cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual();
+            Cmb_cond_presentacion_denuncia_juicio_politico_periodo();
+            Cmb_numero_legislatura_presentacion_denuncia_juicio_politico();
+
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Enabled = false;
         }
-        
+
 
         //-------------------------------------------------- METODOS GENERALES ----------------------------------------------------
 
@@ -463,6 +472,12 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
 
 
 

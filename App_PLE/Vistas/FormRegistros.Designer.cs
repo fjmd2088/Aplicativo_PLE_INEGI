@@ -4195,6 +4195,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.TabIndex = 32;
             this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.UseWaitCursor = true;
+            this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual_SelectedIndexChanged);
+            this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual_Validating);
             // 
             // label200
             // 
@@ -4220,6 +4222,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.TabIndex = 41;
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_denuncia_juicio_politico_periodo_Validating);
             // 
             // cmb_numero_legislatura_presentacion_denuncia_juicio_politico
             // 
