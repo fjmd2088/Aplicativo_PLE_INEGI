@@ -261,7 +261,7 @@ namespace App_PLE.Vistas
             this.label192 = new System.Windows.Forms.Label();
             this.label197 = new System.Windows.Forms.Label();
             this.label198 = new System.Windows.Forms.Label();
-            this.txt_sexo_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
+            this.cmb_sexo_persona_servidora_publica_juicio_politico = new System.Windows.Forms.ComboBox();
             this.txt_apellido_3_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
             this.label324 = new System.Windows.Forms.Label();
             this.txt_apellido_2_persona_servidora_publica_juicio_politico = new System.Windows.Forms.TextBox();
@@ -3581,6 +3581,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_procedencia_denuncia_juicio_politico.TabIndex = 52;
             this.dtp_fecha_procedencia_denuncia_juicio_politico.UseWaitCursor = true;
             this.dtp_fecha_procedencia_denuncia_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_procedencia_denuncia_juicio_politico.CloseUp += new System.EventHandler(this.dtp_fecha_procedencia_denuncia_juicio_politico_CloseUp);
             // 
             // label196
             // 
@@ -3601,7 +3602,7 @@ namespace App_PLE.Vistas
             this.groupBox50.Controls.Add(this.label192);
             this.groupBox50.Controls.Add(this.label197);
             this.groupBox50.Controls.Add(this.label198);
-            this.groupBox50.Controls.Add(this.txt_sexo_persona_servidora_publica_juicio_politico);
+            this.groupBox50.Controls.Add(this.cmb_sexo_persona_servidora_publica_juicio_politico);
             this.groupBox50.Controls.Add(this.txt_apellido_3_persona_servidora_publica_juicio_politico);
             this.groupBox50.Controls.Add(this.label324);
             this.groupBox50.Controls.Add(this.txt_apellido_2_persona_servidora_publica_juicio_politico);
@@ -3925,17 +3926,18 @@ namespace App_PLE.Vistas
             this.label198.Text = "Primer nombre:";
             this.label198.UseWaitCursor = true;
             // 
-            // txt_sexo_persona_servidora_publica_juicio_politico
+            // cmb_sexo_persona_servidora_publica_juicio_politico
             // 
-            this.txt_sexo_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sexo_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1393, 54);
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Name = "txt_sexo_persona_servidora_publica_juicio_politico";
-            this.txt_sexo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(123, 26);
-            this.txt_sexo_persona_servidora_publica_juicio_politico.TabIndex = 57;
-            this.txt_sexo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.FormattingEnabled = true;
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1393, 54);
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.Name = "cmb_sexo_persona_servidora_publica_juicio_politico";
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(123, 26);
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.TabIndex = 57;
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.cmb_sexo_persona_servidora_publica_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sexo_persona_servidora_publica_juicio_politico_Validating);
             // 
             // txt_apellido_3_persona_servidora_publica_juicio_politico
             // 
@@ -4094,6 +4096,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.TabIndex = 52;
             this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.UseWaitCursor = true;
             this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.CloseUp += new System.EventHandler(this.dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes_CloseUp);
             // 
             // label151
             // 
@@ -4222,6 +4225,7 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.TabIndex = 41;
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_presentacion_denuncia_juicio_politico_periodo_SelectedIndexChanged);
             this.cmb_cond_presentacion_denuncia_juicio_politico_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_denuncia_juicio_politico_periodo_Validating);
             // 
             // cmb_numero_legislatura_presentacion_denuncia_juicio_politico
@@ -4294,6 +4298,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.TabIndex = 44;
             this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.UseWaitCursor = true;
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo_SelectedIndexChanged);
+            this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo_Validating);
             // 
             // txt_otro_estatus_denuncia_juicio_politico_especifique
             // 
@@ -4345,6 +4351,8 @@ namespace App_PLE.Vistas
             this.cmb_estatus_denuncia_juicio_politico.Size = new System.Drawing.Size(347, 26);
             this.cmb_estatus_denuncia_juicio_politico.TabIndex = 46;
             this.cmb_estatus_denuncia_juicio_politico.UseWaitCursor = true;
+            this.cmb_estatus_denuncia_juicio_politico.SelectedIndexChanged += new System.EventHandler(this.cmb_estatus_denuncia_juicio_politico_SelectedIndexChanged);
+            this.cmb_estatus_denuncia_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_estatus_denuncia_juicio_politico_Validating);
             // 
             // txt_improcedente_estatus_denuncia_juicio_politico_especifique
             // 
@@ -4555,6 +4563,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_abstencion_juicio_politico.Size = new System.Drawing.Size(112, 24);
             this.txt_votaciones_pleno_abstencion_juicio_politico.TabIndex = 66;
             this.txt_votaciones_pleno_abstencion_juicio_politico.UseWaitCursor = true;
+            this.txt_votaciones_pleno_abstencion_juicio_politico.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_abstencion_juicio_politico_TextChanged);
             this.txt_votaciones_pleno_abstencion_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_abstencion_juicio_politico_KeyPress);
             // 
             // label186
@@ -4580,6 +4589,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_a_favor_juicio_politico.Size = new System.Drawing.Size(131, 24);
             this.txt_votaciones_pleno_a_favor_juicio_politico.TabIndex = 62;
             this.txt_votaciones_pleno_a_favor_juicio_politico.UseWaitCursor = true;
+            this.txt_votaciones_pleno_a_favor_juicio_politico.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_a_favor_juicio_politico_TextChanged);
             this.txt_votaciones_pleno_a_favor_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_a_favor_juicio_politico_KeyPress);
             // 
             // label184
@@ -4642,6 +4652,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_en_contra_juicio_politico.Size = new System.Drawing.Size(112, 24);
             this.txt_votaciones_pleno_en_contra_juicio_politico.TabIndex = 64;
             this.txt_votaciones_pleno_en_contra_juicio_politico.UseWaitCursor = true;
+            this.txt_votaciones_pleno_en_contra_juicio_politico.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_en_contra_juicio_politico_TextChanged);
             this.txt_votaciones_pleno_en_contra_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_en_contra_juicio_politico_KeyPress);
             // 
             // groupBox106
@@ -4667,12 +4678,13 @@ namespace App_PLE.Vistas
             this.cmb_sentido_resolucion_pleno_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_sentido_resolucion_pleno_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sentido_resolucion_pleno_juicio_politico.FormattingEnabled = true;
-            this.cmb_sentido_resolucion_pleno_juicio_politico.Location = new System.Drawing.Point(1224, 43);
+            this.cmb_sentido_resolucion_pleno_juicio_politico.Location = new System.Drawing.Point(1259, 43);
             this.cmb_sentido_resolucion_pleno_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_sentido_resolucion_pleno_juicio_politico.Name = "cmb_sentido_resolucion_pleno_juicio_politico";
             this.cmb_sentido_resolucion_pleno_juicio_politico.Size = new System.Drawing.Size(333, 26);
             this.cmb_sentido_resolucion_pleno_juicio_politico.TabIndex = 54;
             this.cmb_sentido_resolucion_pleno_juicio_politico.UseWaitCursor = true;
+            this.cmb_sentido_resolucion_pleno_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sentido_resolucion_pleno_juicio_politico_Validating);
             // 
             // label188
             // 
@@ -4698,6 +4710,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_resolucion_pleno_juicio_politico.TabIndex = 52;
             this.dtp_fecha_resolucion_pleno_juicio_politico.UseWaitCursor = true;
             this.dtp_fecha_resolucion_pleno_juicio_politico.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_resolucion_pleno_juicio_politico.CloseUp += new System.EventHandler(this.dtp_fecha_resolucion_pleno_juicio_politico_CloseUp);
             // 
             // label195
             // 
@@ -14986,7 +14999,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label192;
         private System.Windows.Forms.Label label197;
         private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.ComboBox txt_sexo_persona_servidora_publica_juicio_politico;
+        private System.Windows.Forms.ComboBox cmb_sexo_persona_servidora_publica_juicio_politico;
         private System.Windows.Forms.TextBox txt_apellido_3_persona_servidora_publica_juicio_politico;
         private System.Windows.Forms.Label label324;
         private System.Windows.Forms.TextBox txt_apellido_2_persona_servidora_publica_juicio_politico;

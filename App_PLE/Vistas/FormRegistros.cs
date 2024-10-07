@@ -424,9 +424,38 @@ namespace App_PLE.Vistas
             Cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual();
             Cmb_cond_presentacion_denuncia_juicio_politico_periodo();
             Cmb_numero_legislatura_presentacion_denuncia_juicio_politico();
+            Cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo();
+            Cmb_estatus_denuncia_juicio_politico();
+            Cmb_sentido_resolucion_pleno_juicio_politico();
+            Cmb_sexo_persona_servidora_publica_juicio_politico();
+
+            // FECHAS
+            dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.CustomFormat = " ";
+            dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_procedencia_denuncia_juicio_politico.CustomFormat = " ";
+            dtp_fecha_procedencia_denuncia_juicio_politico.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_resolucion_pleno_juicio_politico.CustomFormat = " ";
+            dtp_fecha_resolucion_pleno_juicio_politico.Format = DateTimePickerFormat.Custom;
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Enabled = false;
+            cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Enabled = false;
+            txt_improcedente_estatus_denuncia_juicio_politico_especifique.Enabled = false;
+            txt_otro_estatus_denuncia_juicio_politico_especifique.Enabled = false;
+            dtp_fecha_procedencia_denuncia_juicio_politico.Enabled = false;
+            dtp_fecha_resolucion_pleno_juicio_politico.Enabled = false;
+            cmb_sentido_resolucion_pleno_juicio_politico.Enabled = false;
+            txt_votaciones_pleno_a_favor_juicio_politico.Enabled = false;
+            txt_votaciones_pleno_en_contra_juicio_politico.Enabled = false;
+            txt_votaciones_pleno_abstencion_juicio_politico.Enabled = false;
+            txt_total_votaciones_pleno_juicio_politico.Enabled = false;
+            txt_nombre_1_persona_servidora_publica_juicio_politico.Enabled = false; txt_nombre_1_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            txt_nombre_2_persona_servidora_publica_juicio_politico.Enabled = false; txt_nombre_2_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            txt_nombre_3_persona_servidora_publica_juicio_politico.Enabled = false; txt_nombre_3_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            txt_apellido_1_persona_servidora_publica_juicio_politico.Enabled = false; txt_apellido_1_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            txt_apellido_2_persona_servidora_publica_juicio_politico.Enabled = false; txt_apellido_2_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            txt_apellido_3_persona_servidora_publica_juicio_politico.Enabled = false; txt_apellido_3_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            cmb_sexo_persona_servidora_publica_juicio_politico.Enabled = false; cmb_sexo_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
         }
 
 
@@ -472,6 +501,32 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

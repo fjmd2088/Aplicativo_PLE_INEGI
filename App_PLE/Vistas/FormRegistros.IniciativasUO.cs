@@ -209,7 +209,7 @@ namespace App_PLE.Vistas
             }
             else
             {
-                // No hay elemento seleccionado en cmb_estatus_iniciativa
+                
             }
         }
 
