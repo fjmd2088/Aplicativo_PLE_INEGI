@@ -3348,6 +3348,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.TabIndex = 32;
             this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.UseWaitCursor = true;
+            this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual_SelectedIndexChanged);
+            this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual_Validating);
             // 
             // cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo
             // 
@@ -3360,6 +3362,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.TabIndex = 41;
             this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.UseWaitCursor = true;
+            this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo_SelectedIndexChanged);
+            this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo_Validating);
             // 
             // cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia
             // 
@@ -3372,6 +3376,7 @@ namespace App_PLE.Vistas
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(104, 26);
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.TabIndex = 42;
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_Validating);
             // 
             // txt_turno_denuncia_declaracion_procedencia
             // 

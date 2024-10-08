@@ -469,6 +469,20 @@ namespace App_PLE.Vistas
             btn_agregar_juic_pol.Enabled = false;
             btn_eliminar_juic_pol.Enabled = false;
             dgv_perjuicios_pub.BackgroundColor = Color.LightGray;
+
+            //-------------------------------------------------- DECLARACIONES PROCEDENCIA ----------------------------------------------------
+
+            Cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual();
+            Cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo();
+            Cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia();
+
+            // FECHAS
+
+
+            // CAMPOS DESHABILITADOS INICIALMENTE
+
+
+
         }
 
 
@@ -513,7 +527,20 @@ namespace App_PLE.Vistas
 
         }
 
-        
+        private void cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 

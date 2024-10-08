@@ -1,5 +1,11 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Office2010.Word;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SQLite;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +15,199 @@ namespace App_PLE.Vistas
 {
     public partial class FormRegistros: Form
     {
+        //CARACTERIZACIÓN INICIAL ---------------------------------------------------------------------------------------------------
 
-     // Configuración de TXT para mayuculas y Numeros 
+        // ---------------------------  Presentación ----------------------
+
+        private void Cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.DataSource = dataTable;
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.DisplayMember = "descripcion";
+
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.DataSource = dataTable;
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.DisplayMember = "descripcion";
+
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia()
+        {
+
+        }
+        private void cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+
+
+
+        // Configuración de TXT para mayuculas y Numeros 
 
         // txt_turno_denuncia_declaracion_procedencia
         private void txt_turno_denuncia_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
