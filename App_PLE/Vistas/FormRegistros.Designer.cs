@@ -299,10 +299,9 @@ namespace App_PLE.Vistas
             this.label173 = new System.Windows.Forms.Label();
             this.label171 = new System.Windows.Forms.Label();
             this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView15 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button48 = new System.Windows.Forms.Button();
-            this.button47 = new System.Windows.Forms.Button();
+            this.dgv_perjuicios_pub = new System.Windows.Forms.DataGridView();
+            this.btn_eliminar_juic_pol = new System.Windows.Forms.Button();
+            this.btn_agregar_juic_pol = new System.Windows.Forms.Button();
             this.groupBox51 = new System.Windows.Forms.GroupBox();
             this.groupBox123 = new System.Windows.Forms.GroupBox();
             this.txt_votaciones_pleno_abstencion_juicio_politico = new System.Windows.Forms.TextBox();
@@ -1009,6 +1008,7 @@ namespace App_PLE.Vistas
             this.dtp_inicio_funciones_legislatura = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Perjuicios_JP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageCom.SuspendLayout();
             this.groupBox117.SuspendLayout();
@@ -1044,7 +1044,7 @@ namespace App_PLE.Vistas
             this.groupBox41.SuspendLayout();
             this.groupBox103.SuspendLayout();
             this.groupBox48.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_perjuicios_pub)).BeginInit();
             this.groupBox51.SuspendLayout();
             this.groupBox123.SuspendLayout();
             this.groupBox106.SuspendLayout();
@@ -3709,6 +3709,8 @@ namespace App_PLE.Vistas
             this.cmb_municipio_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(316, 26);
             this.cmb_municipio_persona_servidora_publica_juicio_politico.TabIndex = 38;
             this.cmb_municipio_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.SelectedIndexChanged += new System.EventHandler(this.cmb_municipio_persona_servidora_publica_juicio_politico_SelectedIndexChanged);
+            this.cmb_municipio_persona_servidora_publica_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_municipio_persona_servidora_publica_juicio_politico_Validating);
             // 
             // label194
             // 
@@ -3772,9 +3774,11 @@ namespace App_PLE.Vistas
             this.cmb_cargo_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(220, 39);
             this.cmb_cargo_persona_servidora_publica_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cargo_persona_servidora_publica_juicio_politico.Name = "cmb_cargo_persona_servidora_publica_juicio_politico";
-            this.cmb_cargo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(1351, 26);
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(1366, 26);
             this.cmb_cargo_persona_servidora_publica_juicio_politico.TabIndex = 61;
             this.cmb_cargo_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_persona_servidora_publica_juicio_politico_SelectedIndexChanged);
+            this.cmb_cargo_persona_servidora_publica_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cargo_persona_servidora_publica_juicio_politico_Validating);
             // 
             // txt_AGEM_persona_servidora_publica_juicio_politico
             // 
@@ -3791,10 +3795,10 @@ namespace App_PLE.Vistas
             // 
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(1148, 149);
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Location = new System.Drawing.Point(928, 157);
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Name = "txt_nombre_institucion_persona_servidora_publica_juicio_politico";
-            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(443, 24);
+            this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.Size = new System.Drawing.Size(658, 24);
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.TabIndex = 71;
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.UseWaitCursor = true;
             this.txt_nombre_institucion_persona_servidora_publica_juicio_politico.TextChanged += new System.EventHandler(this.txt_nombre_institucion_persona_servidora_publica_juicio_politico_TextChanged);
@@ -3805,35 +3809,37 @@ namespace App_PLE.Vistas
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.FormattingEnabled = true;
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(284, 126);
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(507, 98);
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Name = "cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico";
-            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(87, 26);
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(64, 26);
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.TabIndex = 63;
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.UseWaitCursor = true;
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico_SelectedIndexChanged);
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico_Validating);
             // 
             // label331
             // 
             this.label331.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label331.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label331.Location = new System.Drawing.Point(1148, 96);
+            this.label331.Location = new System.Drawing.Point(14, 145);
             this.label331.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label331.Name = "label331";
-            this.label331.Size = new System.Drawing.Size(443, 49);
+            this.label331.Size = new System.Drawing.Size(922, 49);
             this.label331.TabIndex = 70;
             this.label331.Text = "Nombre de la institución pública a la que pertenece la persona servidora pública " +
     "sujeta a procedimiento de juicio político:";
-            this.label331.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label331.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label331.UseWaitCursor = true;
             // 
             // label328
             // 
             this.label328.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label328.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label328.Location = new System.Drawing.Point(19, 117);
+            this.label328.Location = new System.Drawing.Point(13, 98);
             this.label328.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label328.Name = "label328";
-            this.label328.Size = new System.Drawing.Size(259, 57);
+            this.label328.Size = new System.Drawing.Size(496, 34);
             this.label328.TabIndex = 64;
             this.label328.Text = "Condición de ser una persona legisladora de la legislatura actual:";
             this.label328.UseWaitCursor = true;
@@ -3843,35 +3849,35 @@ namespace App_PLE.Vistas
             this.cmb_nombre_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_nombre_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_nombre_persona_legisladora_juicio_politico.FormattingEnabled = true;
-            this.cmb_nombre_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(779, 149);
+            this.cmb_nombre_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(915, 98);
             this.cmb_nombre_persona_legisladora_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_nombre_persona_legisladora_juicio_politico.Name = "cmb_nombre_persona_legisladora_juicio_politico";
-            this.cmb_nombre_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(320, 26);
+            this.cmb_nombre_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(251, 26);
             this.cmb_nombre_persona_legisladora_juicio_politico.TabIndex = 69;
             this.cmb_nombre_persona_legisladora_juicio_politico.UseWaitCursor = true;
+            this.cmb_nombre_persona_legisladora_juicio_politico.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_persona_legisladora_juicio_politico_SelectedIndexChanged);
+            this.cmb_nombre_persona_legisladora_juicio_politico.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_persona_legisladora_juicio_politico_Validating);
             // 
             // label329
             // 
-            this.label329.AutoSize = true;
             this.label329.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label329.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label329.Location = new System.Drawing.Point(457, 114);
+            this.label329.Location = new System.Drawing.Point(1183, 98);
             this.label329.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label329.Name = "label329";
-            this.label329.Size = new System.Drawing.Size(259, 18);
+            this.label329.Size = new System.Drawing.Size(310, 32);
             this.label329.TabIndex = 66;
             this.label329.Text = "Identificador de la persona legisladora:";
             this.label329.UseWaitCursor = true;
             // 
             // label330
             // 
-            this.label330.AutoSize = true;
             this.label330.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label330.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label330.Location = new System.Drawing.Point(813, 117);
+            this.label330.Location = new System.Drawing.Point(596, 98);
             this.label330.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label330.Name = "label330";
-            this.label330.Size = new System.Drawing.Size(234, 18);
+            this.label330.Size = new System.Drawing.Size(311, 32);
             this.label330.TabIndex = 68;
             this.label330.Text = "Nombre de la persona legisladora:";
             this.label330.UseWaitCursor = true;
@@ -3880,10 +3886,10 @@ namespace App_PLE.Vistas
             // 
             this.txt_ID_persona_legisladora_juicio_politico.BackColor = System.Drawing.Color.Honeydew;
             this.txt_ID_persona_legisladora_juicio_politico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ID_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(517, 149);
+            this.txt_ID_persona_legisladora_juicio_politico.Location = new System.Drawing.Point(1501, 98);
             this.txt_ID_persona_legisladora_juicio_politico.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID_persona_legisladora_juicio_politico.Name = "txt_ID_persona_legisladora_juicio_politico";
-            this.txt_ID_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(131, 24);
+            this.txt_ID_persona_legisladora_juicio_politico.Size = new System.Drawing.Size(88, 24);
             this.txt_ID_persona_legisladora_juicio_politico.TabIndex = 67;
             this.txt_ID_persona_legisladora_juicio_politico.UseWaitCursor = true;
             // 
@@ -4386,9 +4392,9 @@ namespace App_PLE.Vistas
             this.groupBox48.Controls.Add(this.label173);
             this.groupBox48.Controls.Add(this.label171);
             this.groupBox48.Controls.Add(this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1);
-            this.groupBox48.Controls.Add(this.dataGridView15);
-            this.groupBox48.Controls.Add(this.button48);
-            this.groupBox48.Controls.Add(this.button47);
+            this.groupBox48.Controls.Add(this.dgv_perjuicios_pub);
+            this.groupBox48.Controls.Add(this.btn_eliminar_juic_pol);
+            this.groupBox48.Controls.Add(this.btn_agregar_juic_pol);
             this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox48.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox48.Location = new System.Drawing.Point(8, 1366);
@@ -4454,17 +4460,19 @@ namespace App_PLE.Vistas
             this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Size = new System.Drawing.Size(481, 26);
             this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.TabIndex = 62;
             this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.UseWaitCursor = true;
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.SelectedIndexChanged += new System.EventHandler(this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1_SelectedIndexChanged);
+            this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1_Validating);
             // 
-            // dataGridView15
+            // dgv_perjuicios_pub
             // 
-            this.dataGridView15.AllowUserToAddRows = false;
-            this.dataGridView15.AllowUserToDeleteRows = false;
-            this.dataGridView15.AllowUserToResizeRows = false;
-            this.dataGridView15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView15.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14});
+            this.dgv_perjuicios_pub.AllowUserToAddRows = false;
+            this.dgv_perjuicios_pub.AllowUserToDeleteRows = false;
+            this.dgv_perjuicios_pub.AllowUserToResizeRows = false;
+            this.dgv_perjuicios_pub.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_perjuicios_pub.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_perjuicios_pub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_perjuicios_pub.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Perjuicios_JP});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4472,48 +4480,43 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView15.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView15.Location = new System.Drawing.Point(19, 85);
-            this.dataGridView15.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView15.Name = "dataGridView15";
-            this.dataGridView15.ReadOnly = true;
-            this.dataGridView15.RowHeadersVisible = false;
-            this.dataGridView15.RowHeadersWidth = 51;
-            this.dataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView15.Size = new System.Drawing.Size(744, 129);
-            this.dataGridView15.TabIndex = 65;
-            this.dataGridView15.UseWaitCursor = true;
+            this.dgv_perjuicios_pub.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_perjuicios_pub.Location = new System.Drawing.Point(19, 85);
+            this.dgv_perjuicios_pub.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_perjuicios_pub.Name = "dgv_perjuicios_pub";
+            this.dgv_perjuicios_pub.ReadOnly = true;
+            this.dgv_perjuicios_pub.RowHeadersVisible = false;
+            this.dgv_perjuicios_pub.RowHeadersWidth = 51;
+            this.dgv_perjuicios_pub.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_perjuicios_pub.Size = new System.Drawing.Size(744, 129);
+            this.dgv_perjuicios_pub.TabIndex = 65;
+            this.dgv_perjuicios_pub.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn14
+            // btn_eliminar_juic_pol
             // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Perjuicio a los intereses públicos";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.btn_eliminar_juic_pol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_juic_pol.Location = new System.Drawing.Point(827, 162);
+            this.btn_eliminar_juic_pol.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar_juic_pol.Name = "btn_eliminar_juic_pol";
+            this.btn_eliminar_juic_pol.Size = new System.Drawing.Size(147, 33);
+            this.btn_eliminar_juic_pol.TabIndex = 64;
+            this.btn_eliminar_juic_pol.Text = "Eliminar";
+            this.btn_eliminar_juic_pol.UseVisualStyleBackColor = true;
+            this.btn_eliminar_juic_pol.UseWaitCursor = true;
+            this.btn_eliminar_juic_pol.Click += new System.EventHandler(this.btn_eliminar_juic_pol_Click);
             // 
-            // button48
+            // btn_agregar_juic_pol
             // 
-            this.button48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button48.Location = new System.Drawing.Point(827, 162);
-            this.button48.Margin = new System.Windows.Forms.Padding(4);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(147, 33);
-            this.button48.TabIndex = 64;
-            this.button48.Text = "Eliminar";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.UseWaitCursor = true;
-            // 
-            // button47
-            // 
-            this.button47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button47.Location = new System.Drawing.Point(825, 105);
-            this.button47.Margin = new System.Windows.Forms.Padding(4);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(147, 33);
-            this.button47.TabIndex = 63;
-            this.button47.Text = "Agregar";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.UseWaitCursor = true;
+            this.btn_agregar_juic_pol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_juic_pol.Location = new System.Drawing.Point(825, 105);
+            this.btn_agregar_juic_pol.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar_juic_pol.Name = "btn_agregar_juic_pol";
+            this.btn_agregar_juic_pol.Size = new System.Drawing.Size(147, 33);
+            this.btn_agregar_juic_pol.TabIndex = 63;
+            this.btn_agregar_juic_pol.Text = "Agregar";
+            this.btn_agregar_juic_pol.UseVisualStyleBackColor = true;
+            this.btn_agregar_juic_pol.UseWaitCursor = true;
+            this.btn_agregar_juic_pol.Click += new System.EventHandler(this.btn_agregar_juic_pol_Click);
             // 
             // groupBox51
             // 
@@ -14515,6 +14518,13 @@ namespace App_PLE.Vistas
             this.tabControl1.Size = new System.Drawing.Size(1688, 809);
             this.tabControl1.TabIndex = 0;
             // 
+            // Perjuicios_JP
+            // 
+            this.Perjuicios_JP.HeaderText = "Perjuicio a los intereses públicos";
+            this.Perjuicios_JP.MinimumWidth = 6;
+            this.Perjuicios_JP.Name = "Perjuicios_JP";
+            this.Perjuicios_JP.ReadOnly = true;
+            // 
             // FormRegistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -14590,7 +14600,7 @@ namespace App_PLE.Vistas
             this.groupBox103.PerformLayout();
             this.groupBox48.ResumeLayout(false);
             this.groupBox48.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_perjuicios_pub)).EndInit();
             this.groupBox51.ResumeLayout(false);
             this.groupBox123.ResumeLayout(false);
             this.groupBox123.PerformLayout();
@@ -15037,10 +15047,9 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Label label173;
         private System.Windows.Forms.Label label171;
         private System.Windows.Forms.ComboBox cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1;
-        private System.Windows.Forms.DataGridView dataGridView15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.DataGridView dgv_perjuicios_pub;
+        private System.Windows.Forms.Button btn_eliminar_juic_pol;
+        private System.Windows.Forms.Button btn_agregar_juic_pol;
         private System.Windows.Forms.GroupBox groupBox51;
         private System.Windows.Forms.GroupBox groupBox123;
         private System.Windows.Forms.TextBox txt_votaciones_pleno_abstencion_juicio_politico;
@@ -15747,5 +15756,6 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom_com_l_i_uo;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPL;
         private System.Windows.Forms.DataGridViewTextBoxColumn Per_leg_ou;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Perjuicios_JP;
     }
 }

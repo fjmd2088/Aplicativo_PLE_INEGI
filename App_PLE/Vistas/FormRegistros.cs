@@ -428,6 +428,10 @@ namespace App_PLE.Vistas
             Cmb_estatus_denuncia_juicio_politico();
             Cmb_sentido_resolucion_pleno_juicio_politico();
             Cmb_sexo_persona_servidora_publica_juicio_politico();
+            Cmb_cargo_persona_servidora_publica_juicio_politico();
+            Cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico();
+            Cmb_nombre_persona_legisladora_juicio_politico();
+            Cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1();
 
             // FECHAS
             dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.CustomFormat = " ";
@@ -456,6 +460,15 @@ namespace App_PLE.Vistas
             txt_apellido_2_persona_servidora_publica_juicio_politico.Enabled = false; txt_apellido_2_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
             txt_apellido_3_persona_servidora_publica_juicio_politico.Enabled = false; txt_apellido_3_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
             cmb_sexo_persona_servidora_publica_juicio_politico.Enabled = false; cmb_sexo_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
+            cmb_cargo_persona_servidora_publica_juicio_politico.Enabled = false;
+            cmb_cond_pertenencia_legislatura_actual_persona_legisladora_juicio_politico.Enabled = false;
+            cmb_nombre_persona_legisladora_juicio_politico.Enabled = false;
+            txt_ID_persona_legisladora_juicio_politico.Enabled = false; txt_ID_persona_legisladora_juicio_politico.BackColor = Color.LightGray;
+            cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1.Enabled = false;
+            txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.Enabled = false; txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique.BackColor = Color.LightGray;
+            btn_agregar_juic_pol.Enabled = false;
+            btn_eliminar_juic_pol.Enabled = false;
+            dgv_perjuicios_pub.BackgroundColor = Color.LightGray;
         }
 
 
@@ -501,6 +514,30 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
