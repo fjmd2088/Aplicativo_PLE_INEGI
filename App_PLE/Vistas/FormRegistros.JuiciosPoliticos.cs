@@ -832,18 +832,75 @@ namespace App_PLE.Vistas
 
         private void dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes_CloseUp(object sender, EventArgs e)
         {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_termino_informacion_reportada.Value.Date; // Solo la fecha, sin hora
 
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta > fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("La fecha de ingreso de la denuncia de juicio político a oficialía de partes debe ser igual o menor a la fecha de información reportada en datos generales.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Format = DateTimePickerFormat.Short;
+            }
         }
         private void dtp_fecha_procedencia_denuncia_juicio_politico_CloseUp(object sender, EventArgs e)
         {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_procedencia_denuncia_juicio_politico.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_ingreso_denuncia_juicio_politico_oficialia_partes.Value.Date; // Solo la fecha, sin hora
 
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta < fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("La fecha de procedencia debe ser igual o mayor a la fecha de ingreso de la denuncia de juicio político a oficialía de partes.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_procedencia_denuncia_juicio_politico.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_procedencia_denuncia_juicio_politico.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_procedencia_denuncia_juicio_politico.Format = DateTimePickerFormat.Short;
+            }
         }
 
         // ----------------------------- Pleno / Resolución ----------------------------
 
         private void dtp_fecha_resolucion_pleno_juicio_politico_CloseUp(object sender, EventArgs e)
         {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_resolucion_pleno_juicio_politico.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_procedencia_denuncia_juicio_politico.Value.Date; // Solo la fecha, sin hora
 
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta < fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("La fecha de resolución del porcedimiento de juicio politico debe ser igual o mayor a la fecha en la que se determinó la procedencia de la denucncia de juicio politico.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_resolucion_pleno_juicio_politico.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_resolucion_pleno_juicio_politico.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_resolucion_pleno_juicio_politico.Format = DateTimePickerFormat.Short;
+            }
         }
         private void Cmb_sentido_resolucion_pleno_juicio_politico()
         {

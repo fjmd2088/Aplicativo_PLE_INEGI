@@ -300,6 +300,7 @@ namespace App_PLE.Vistas
             this.label171 = new System.Windows.Forms.Label();
             this.cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1 = new System.Windows.Forms.ComboBox();
             this.dgv_perjuicios_pub = new System.Windows.Forms.DataGridView();
+            this.Perjuicios_JP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_eliminar_juic_pol = new System.Windows.Forms.Button();
             this.btn_agregar_juic_pol = new System.Windows.Forms.Button();
             this.groupBox51 = new System.Windows.Forms.GroupBox();
@@ -1008,7 +1009,6 @@ namespace App_PLE.Vistas
             this.dtp_inicio_funciones_legislatura = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Perjuicios_JP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageCom.SuspendLayout();
             this.groupBox117.SuspendLayout();
@@ -4491,6 +4491,13 @@ namespace App_PLE.Vistas
             this.dgv_perjuicios_pub.Size = new System.Drawing.Size(744, 129);
             this.dgv_perjuicios_pub.TabIndex = 65;
             this.dgv_perjuicios_pub.UseWaitCursor = true;
+            // 
+            // Perjuicios_JP
+            // 
+            this.Perjuicios_JP.HeaderText = "Perjuicio a los intereses públicos";
+            this.Perjuicios_JP.MinimumWidth = 6;
+            this.Perjuicios_JP.Name = "Perjuicios_JP";
+            this.Perjuicios_JP.ReadOnly = true;
             // 
             // btn_eliminar_juic_pol
             // 
@@ -14517,13 +14524,6 @@ namespace App_PLE.Vistas
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1688, 809);
             this.tabControl1.TabIndex = 0;
-            // 
-            // Perjuicios_JP
-            // 
-            this.Perjuicios_JP.HeaderText = "Perjuicio a los intereses públicos";
-            this.Perjuicios_JP.MinimumWidth = 6;
-            this.Perjuicios_JP.Name = "Perjuicios_JP";
-            this.Perjuicios_JP.ReadOnly = true;
             // 
             // FormRegistros
             // 
