@@ -480,7 +480,7 @@ namespace App_PLE.Vistas
 
 
             // CAMPOS DESHABILITADOS INICIALMENTE
-
+            cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = false;
 
 
         }
@@ -527,10 +527,7 @@ namespace App_PLE.Vistas
 
         }
 
-        private void cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
+        
 
 
 

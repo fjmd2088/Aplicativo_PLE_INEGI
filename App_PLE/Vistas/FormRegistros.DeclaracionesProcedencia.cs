@@ -104,7 +104,39 @@ namespace App_PLE.Vistas
         }
         private void cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string valorComboBox1 = cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Text.Trim();
 
+            // Bloquea la condición de la debnucia
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.Enabled = false;
+                cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.BackColor = Color.LightGray;
+                cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.Text = "";
+
+            }
+            else
+            {
+                cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.Enabled = true;
+                cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.BackColor = Color.Honeydew;
+                cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo.Text = "";
+
+            }
+           
+            // Bloquea la condicion de la denucnia
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = true;
+                cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = false;
+                cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Text = "";
+
+            }
         }
 
         private void Cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo()
@@ -197,7 +229,44 @@ namespace App_PLE.Vistas
 
         private void Cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia()
         {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
 
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_NUM_LEGISLATURA";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.DataSource = dataTable;
+                    cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.DisplayMember = "descripcion";
+
+                    cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
         }
         private void cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
         {
