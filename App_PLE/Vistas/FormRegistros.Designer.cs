@@ -3239,6 +3239,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Size = new System.Drawing.Size(104, 26);
             this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.TabIndex = 44;
             this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.UseWaitCursor = true;
+            this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo_SelectedIndexChanged);
+            this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo_Validating);
             // 
             // label175
             // 
@@ -3263,6 +3265,7 @@ namespace App_PLE.Vistas
             this.cmb_estatus_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(259, 26);
             this.cmb_estatus_denuncia_declaracion_procedencia.TabIndex = 46;
             this.cmb_estatus_denuncia_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_estatus_denuncia_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_estatus_denuncia_declaracion_procedencia_Validating);
             // 
             // groupBox109
             // 

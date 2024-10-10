@@ -475,12 +475,15 @@ namespace App_PLE.Vistas
             Cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual();
             Cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo();
             Cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia();
+            Cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo();
+            Cmb_estatus_denuncia_declaracion_procedencia();
 
             // FECHAS
 
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = false;
+            cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Enabled = false;
 
 
         }
@@ -528,6 +531,12 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
 
 
 
