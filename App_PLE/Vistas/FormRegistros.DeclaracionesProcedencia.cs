@@ -152,6 +152,21 @@ namespace App_PLE.Vistas
                 cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Text = "";
 
             }
+            // Bloquea la fcha de ingreso de la denuncia dee declaración de procedencia
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Enabled = false;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.BackColor = Color.LightGray;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Text = "";
+
+            }
+            else
+            {
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Enabled = true;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.BackColor = Color.Honeydew;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Text = "";
+
+            }
         }
 
         private void Cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo()
@@ -256,6 +271,36 @@ namespace App_PLE.Vistas
                 cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Text = "";
 
             }
+            // Bloquea la fcha de ingreso de la denuncia dee declaración de procedencia
+            if (valorComboBox1.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Enabled = false;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.BackColor = Color.LightGray;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Text = "";
+
+            }
+            else
+            {
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Enabled = true;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.BackColor = Color.Honeydew;
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Text = "";
+
+            }
+            // Se desbloquea la fecha de procedncia en que se determino
+            if (valorComboBox1.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Enabled = true;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.BackColor = Color.Honeydew;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Enabled = false;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.BackColor = Color.LightGray;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Text = "";
+
+            }
         }
 
         private void Cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia()
@@ -303,6 +348,19 @@ namespace App_PLE.Vistas
         {
 
         }
+
+        // txt_turno_denuncia_declaracion_procedencia
+        private void txt_turno_denuncia_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+
+        }
+
+
 
         // ---------------------------  Estatus --------------------------
 
@@ -557,25 +615,127 @@ namespace App_PLE.Vistas
                 }
             }
         }
-
-
-
-
-
-
-        // Configuración de TXT para mayuculas y Numeros 
-
-        // txt_turno_denuncia_declaracion_procedencia
-        private void txt_turno_denuncia_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
+        private void cmb_estatus_denuncia_declaracion_procedencia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Permitir números, backspace, y el signo menos si está al principio
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            string valorComboBox1 = cmb_estatus_denuncia_declaracion_procedencia.Text.Trim();
+
+            // Desbloquea la causa improcedencia
+            if (valorComboBox1.Equals("Improcedente (especifique)", StringComparison.OrdinalIgnoreCase))
             {
-                e.Handled = true; // Ignorar el carácter
+                txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Enabled = true;
+                txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.BackColor = Color.Honeydew;
+                txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Text = "";
+
+            }
+            else
+            {
+                txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Enabled = false;
+                txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.BackColor = Color.LightGray;
+                txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Text = "";
+
             }
 
-        }
+            // Desbloquea otro estatus
+            if (valorComboBox1.Equals("Otro estatus (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Enabled = true;
+                txt_otro_estatus_denuncia_declaracion_procedencia_especifique.BackColor = Color.Honeydew;
+                txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Text = "";
 
+            }
+            else
+            {
+                txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Enabled = false;
+                txt_otro_estatus_denuncia_declaracion_procedencia_especifique.BackColor = Color.LightGray;
+                txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Text = "";
+
+            }
+            // Se desbloquea la fecha de procedncia en que se determino
+            if (valorComboBox1.Equals("En trámite en instancia substanciadora", StringComparison.OrdinalIgnoreCase) || (valorComboBox1.Equals("Concluida", StringComparison.OrdinalIgnoreCase)))
+            {
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Enabled = true;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.BackColor = Color.Honeydew;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Enabled = false;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.BackColor = Color.LightGray;
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Text = "";
+
+            }
+            // Se desbloquea la fecha de resolucion del procedimiento 
+            if (valorComboBox1.Equals("Concluida", StringComparison.OrdinalIgnoreCase))
+            {
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.Enabled = true;
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.BackColor = Color.Honeydew;
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.Enabled = false;
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.BackColor = Color.LightGray;
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.Text = "";
+
+            }
+            // Se desbloquea CMB sentido de reesolución del procedimiento de declaración de procedencia. 
+            if (valorComboBox1.Equals("Concluida", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_sentido_resolucion_pleno_declaracion_procedencia.Enabled = true;
+                cmb_sentido_resolucion_pleno_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_sentido_resolucion_pleno_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_sentido_resolucion_pleno_declaracion_procedencia.Enabled = false;
+                cmb_sentido_resolucion_pleno_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_sentido_resolucion_pleno_declaracion_procedencia.Text = "";
+
+            }
+            // Se desbloquea SUMATORIAS. 
+            if (valorComboBox1.Equals("Concluida", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.Enabled = true;
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.Text = "";
+
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.Enabled = true;
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.Text = "";
+
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.Enabled = true;
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.Text = "";
+
+                txt_total_votaciones_pleno_declaracion_procedencia.Enabled = true;
+                txt_total_votaciones_pleno_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_total_votaciones_pleno_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.Enabled = false;
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.Text = "";
+
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.Enabled = false;
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.Text = "";
+
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.Enabled = false;
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.Text = "";
+
+                txt_total_votaciones_pleno_declaracion_procedencia.Enabled = false;
+                txt_total_votaciones_pleno_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_total_votaciones_pleno_declaracion_procedencia.Text = "";
+
+            }
+        }
+        
         // txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique
         private void txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -591,7 +751,7 @@ namespace App_PLE.Vistas
 
             txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.SelectionStart = txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Text.Length;
         }
-
+        
         // txt_otro_estatus_denuncia_declaracion_procedencia_especifique
         private void txt_otro_estatus_denuncia_declaracion_procedencia_especifique_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -607,6 +767,119 @@ namespace App_PLE.Vistas
 
             txt_otro_estatus_denuncia_declaracion_procedencia_especifique.SelectionStart = txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Text.Length;
         }
+
+        // ---------------------------  Fecha Ingreso ------------------------------
+
+        private void dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes_CloseUp(object sender, EventArgs e)
+        {
+
+        }
+
+        // ---------------------------  Fecha procedencia --------------------------
+
+        private void dtp_fecha_procedencia_denuncia_declaracion_procedencia_CloseUp(object sender, EventArgs e)
+        {
+
+        }
+
+        // PLENO ----------------------------------------------------------------------------------------------------------
+
+        // ---------------------------  Resolución ---------------------------------
+
+        private void dtp_fecha_resolucion_pleno_declaracion_procedencia_CloseUp(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cmb_sentido_resolucion_pleno_declaracion_procedencia()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SENT_RES_PLENO";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_sentido_resolucion_pleno_declaracion_procedencia.DataSource = dataTable;
+                    cmb_sentido_resolucion_pleno_declaracion_procedencia.DisplayMember = "descripcion";
+
+                    cmb_sentido_resolucion_pleno_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_sentido_resolucion_pleno_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_sentido_resolucion_pleno_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_sentido_resolucion_pleno_declaracion_procedencia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_sentido_resolucion_pleno_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // ---------------------------  Votaciones plenarias ----------------------
 
         // txt_votaciones_pleno_a_favor_declaracion_procedencia
         private void txt_votaciones_pleno_a_favor_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
@@ -637,6 +910,75 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
+
+        // SUMATORIAS
+
+        private void txt_votaciones_pleno_a_favor_declaracion_procedencia_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones_Proc();
+        }
+        private void txt_votaciones_pleno_en_contra_declaracion_procedencia_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones_Proc();
+        }
+        private void txt_votaciones_pleno_abstencion_declaracion_procedencia_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotalVotaciones_Proc();
+        }
+        private void CalcularTotalVotaciones_Proc()
+        {
+            // Inicializar las variables
+            int aFavor = 0, enContra = 0, abstencion = 0;
+
+            // Verificar que los textos no estén vacíos y convertir a número
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_a_favor_declaracion_procedencia.Text))
+                int.TryParse(txt_votaciones_pleno_a_favor_declaracion_procedencia.Text, out aFavor);
+
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_en_contra_declaracion_procedencia.Text))
+                int.TryParse(txt_votaciones_pleno_en_contra_declaracion_procedencia.Text, out enContra);
+
+            if (!string.IsNullOrEmpty(txt_votaciones_pleno_abstencion_declaracion_procedencia.Text))
+                int.TryParse(txt_votaciones_pleno_abstencion_declaracion_procedencia.Text, out abstencion);
+
+            // Calcular el total
+            int total = aFavor + enContra + abstencion;
+
+            // Mostrar el resultado en el TextBox total
+            txt_total_votaciones_pleno_declaracion_procedencia.Text = total.ToString();
+
+            // Obtener las cantidades de distritos y diputaciones
+            int distritos = 0, plurinominales = 0;
+
+            // Solo intentar convertir si los campos no están vacíos
+            int.TryParse(Txt_distritos_uninominales.Text, out distritos);
+            int.TryParse(Txt_diputaciones_plurinominales.Text, out plurinominales);
+
+            // Verificar que el total no supere la suma de distritos y plurinominales
+            if (total > (distritos + plurinominales))
+            {
+                // Mostrar el mensaje de error
+                MessageBox.Show("El total debe ser igual o menor a la suma de los distritos uninominales y diputaciones plurinominales.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Limpiar los campos de votaciones
+                txt_votaciones_pleno_a_favor_declaracion_procedencia.Clear();
+                txt_votaciones_pleno_en_contra_declaracion_procedencia.Clear();
+                txt_votaciones_pleno_abstencion_declaracion_procedencia.Clear();
+
+                // Restablecer el total a 0
+                txt_total_votaciones_pleno_declaracion_procedencia.Text = "0";
+            }
+        }
+
+        // Características sociodemográficas de la persona servidora pública sujeta a procedimiento de declaración de procedencia ------
+
+
+
+
+
+
+
+
+        // Configuración de TXT para mayuculas y Numeros 
 
         // txt_nombre_1_persona_servidora_publica_declaracion_procedencia
         private void txt_nombre_1_persona_servidora_publica_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)

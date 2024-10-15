@@ -2624,6 +2624,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.TabIndex = 67;
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_votaciones_pleno_abstencion_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_abstencion_declaracion_procedencia_TextChanged);
             this.txt_votaciones_pleno_abstencion_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_abstencion_declaracion_procedencia_KeyPress);
             // 
             // label167
@@ -2649,6 +2650,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.TabIndex = 65;
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_votaciones_pleno_en_contra_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_en_contra_declaracion_procedencia_TextChanged);
             this.txt_votaciones_pleno_en_contra_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_en_contra_declaracion_procedencia_KeyPress);
             // 
             // label174
@@ -2698,6 +2700,7 @@ namespace App_PLE.Vistas
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.TabIndex = 63;
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_votaciones_pleno_a_favor_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_votaciones_pleno_a_favor_declaracion_procedencia_TextChanged);
             this.txt_votaciones_pleno_a_favor_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_votaciones_pleno_a_favor_declaracion_procedencia_KeyPress);
             // 
             // label218
@@ -2742,6 +2745,7 @@ namespace App_PLE.Vistas
             this.cmb_sentido_resolucion_pleno_declaracion_procedencia.Size = new System.Drawing.Size(235, 26);
             this.cmb_sentido_resolucion_pleno_declaracion_procedencia.TabIndex = 58;
             this.cmb_sentido_resolucion_pleno_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_sentido_resolucion_pleno_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sentido_resolucion_pleno_declaracion_procedencia_Validating);
             // 
             // label176
             // 
@@ -2780,6 +2784,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_resolucion_pleno_declaracion_procedencia.TabIndex = 56;
             this.dtp_fecha_resolucion_pleno_declaracion_procedencia.UseWaitCursor = true;
             this.dtp_fecha_resolucion_pleno_declaracion_procedencia.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_resolucion_pleno_declaracion_procedencia.CloseUp += new System.EventHandler(this.dtp_fecha_resolucion_pleno_declaracion_procedencia_CloseUp);
             // 
             // groupBox115
             // 
@@ -3085,6 +3090,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_procedencia_denuncia_declaracion_procedencia.TabIndex = 54;
             this.dtp_fecha_procedencia_denuncia_declaracion_procedencia.UseWaitCursor = true;
             this.dtp_fecha_procedencia_denuncia_declaracion_procedencia.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_procedencia_denuncia_declaracion_procedencia.CloseUp += new System.EventHandler(this.dtp_fecha_procedencia_denuncia_declaracion_procedencia_CloseUp);
             // 
             // groupBox111
             // 
@@ -3126,6 +3132,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.TabIndex = 52;
             this.dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.UseWaitCursor = true;
             this.dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.CloseUp += new System.EventHandler(this.dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes_CloseUp);
             // 
             // groupBox47
             // 
@@ -3181,10 +3188,10 @@ namespace App_PLE.Vistas
             // 
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.BackColor = System.Drawing.Color.Honeydew;
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Location = new System.Drawing.Point(1309, 102);
+            this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Location = new System.Drawing.Point(1299, 99);
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Margin = new System.Windows.Forms.Padding(4);
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Name = "txt_otro_estatus_denuncia_declaracion_procedencia_especifique";
-            this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Size = new System.Drawing.Size(259, 24);
+            this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Size = new System.Drawing.Size(301, 24);
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.TabIndex = 49;
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.UseWaitCursor = true;
             this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique.TextChanged += new System.EventHandler(this.txt_otro_estatus_denuncia_declaracion_procedencia_especifique_TextChanged);
@@ -3246,10 +3253,10 @@ namespace App_PLE.Vistas
             // 
             this.label175.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label175.ForeColor = System.Drawing.Color.Black;
-            this.label175.Location = new System.Drawing.Point(843, 36);
+            this.label175.Location = new System.Drawing.Point(845, 34);
             this.label175.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label175.Name = "label175";
-            this.label175.Size = new System.Drawing.Size(432, 28);
+            this.label175.Size = new System.Drawing.Size(400, 28);
             this.label175.TabIndex = 45;
             this.label175.Text = "Estatus de la denuncia de declaración de procedencia:";
             this.label175.UseWaitCursor = true;
@@ -3259,12 +3266,13 @@ namespace App_PLE.Vistas
             this.cmb_estatus_denuncia_declaracion_procedencia.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_estatus_denuncia_declaracion_procedencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_estatus_denuncia_declaracion_procedencia.FormattingEnabled = true;
-            this.cmb_estatus_denuncia_declaracion_procedencia.Location = new System.Drawing.Point(1309, 36);
+            this.cmb_estatus_denuncia_declaracion_procedencia.Location = new System.Drawing.Point(1260, 36);
             this.cmb_estatus_denuncia_declaracion_procedencia.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_estatus_denuncia_declaracion_procedencia.Name = "cmb_estatus_denuncia_declaracion_procedencia";
-            this.cmb_estatus_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(259, 26);
+            this.cmb_estatus_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(341, 26);
             this.cmb_estatus_denuncia_declaracion_procedencia.TabIndex = 46;
             this.cmb_estatus_denuncia_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_estatus_denuncia_declaracion_procedencia.SelectedIndexChanged += new System.EventHandler(this.cmb_estatus_denuncia_declaracion_procedencia_SelectedIndexChanged);
             this.cmb_estatus_denuncia_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_estatus_denuncia_declaracion_procedencia_Validating);
             // 
             // groupBox109
@@ -14532,6 +14540,7 @@ namespace App_PLE.Vistas
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1688, 809);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // FormRegistros
             // 

@@ -477,14 +477,29 @@ namespace App_PLE.Vistas
             Cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia();
             Cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo();
             Cmb_estatus_denuncia_declaracion_procedencia();
+            Cmb_sentido_resolucion_pleno_declaracion_procedencia();
 
             // FECHAS
-
+            dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.CustomFormat = " ";
+            dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_procedencia_denuncia_declaracion_procedencia.CustomFormat = " ";
+            dtp_fecha_procedencia_denuncia_declaracion_procedencia.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_resolucion_pleno_declaracion_procedencia.CustomFormat = " ";
+            dtp_fecha_resolucion_pleno_declaracion_procedencia.Format = DateTimePickerFormat.Custom;
+            
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = false;
             cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Enabled = false;
-
+            txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Enabled = false;
+            txt_otro_estatus_denuncia_declaracion_procedencia_especifique.Enabled = false;
+            dtp_fecha_procedencia_denuncia_declaracion_procedencia.Enabled = false;
+            dtp_fecha_resolucion_pleno_declaracion_procedencia.Enabled = false;
+            cmb_sentido_resolucion_pleno_declaracion_procedencia.Enabled = false;
+            txt_votaciones_pleno_a_favor_declaracion_procedencia.Enabled = false;
+            txt_votaciones_pleno_en_contra_declaracion_procedencia.Enabled = false;
+            txt_votaciones_pleno_abstencion_declaracion_procedencia.Enabled = false;
+            txt_total_votaciones_pleno_declaracion_procedencia.Enabled = false;
 
         }
 
@@ -531,6 +546,24 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
