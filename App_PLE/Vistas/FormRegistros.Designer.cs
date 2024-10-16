@@ -2445,6 +2445,7 @@ namespace App_PLE.Vistas
             this.cmb_sexo_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(123, 26);
             this.cmb_sexo_persona_servidora_publica_declaracion_procedencia.TabIndex = 57;
             this.cmb_sexo_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_sexo_persona_servidora_publica_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sexo_persona_servidora_publica_declaracion_procedencia_Validating);
             // 
             // txt_apellido_3_persona_servidora_publica_declaracion_procedencia
             // 
@@ -2821,6 +2822,7 @@ namespace App_PLE.Vistas
             // 
             // txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique
             // 
+            this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.AcceptsReturn = true;
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.BackColor = System.Drawing.Color.Honeydew;
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Location = new System.Drawing.Point(971, 385);
@@ -2883,6 +2885,8 @@ namespace App_PLE.Vistas
             this.cmb_nombre_persona_legisladora_declaracion_procedencia.Size = new System.Drawing.Size(320, 26);
             this.cmb_nombre_persona_legisladora_declaracion_procedencia.TabIndex = 69;
             this.cmb_nombre_persona_legisladora_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_nombre_persona_legisladora_declaracion_procedencia.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_persona_legisladora_declaracion_procedencia_SelectedIndexChanged);
+            this.cmb_nombre_persona_legisladora_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_persona_legisladora_declaracion_procedencia_Validating);
             // 
             // txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia
             // 
@@ -2908,6 +2912,8 @@ namespace App_PLE.Vistas
             this.cmb_cargo_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(1404, 26);
             this.cmb_cargo_persona_servidora_publica_declaracion_procedencia.TabIndex = 61;
             this.cmb_cargo_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_cargo_persona_servidora_publica_declaracion_procedencia.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_persona_servidora_publica_declaracion_procedencia_SelectedIndexChanged);
+            this.cmb_cargo_persona_servidora_publica_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cargo_persona_servidora_publica_declaracion_procedencia_Validating);
             // 
             // label219
             // 
@@ -2935,6 +2941,8 @@ namespace App_PLE.Vistas
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Size = new System.Drawing.Size(91, 26);
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.TabIndex = 63;
             this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.SelectedIndexChanged += new System.EventHandler(this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia_SelectedIndexChanged);
+            this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia_Validating);
             // 
             // cmb_municipio_persona_servidora_publica_declaracion_procedencia
             // 
@@ -2947,6 +2955,8 @@ namespace App_PLE.Vistas
             this.cmb_municipio_persona_servidora_publica_declaracion_procedencia.Size = new System.Drawing.Size(396, 26);
             this.cmb_municipio_persona_servidora_publica_declaracion_procedencia.TabIndex = 38;
             this.cmb_municipio_persona_servidora_publica_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_municipio_persona_servidora_publica_declaracion_procedencia.SelectedIndexChanged += new System.EventHandler(this.cmb_municipio_persona_servidora_publica_declaracion_procedencia_SelectedIndexChanged);
+            this.cmb_municipio_persona_servidora_publica_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_municipio_persona_servidora_publica_declaracion_procedencia_Validating);
             // 
             // label226
             // 

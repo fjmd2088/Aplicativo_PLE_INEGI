@@ -277,7 +277,7 @@ namespace App_PLE.Vistas
             cmb_Tipo_promovente_iniciativa();
             tipo_Organo_constitucional_autonomo();
             Cmb_nombre_persona_legisladora_1();
-            Cmb_nombre_comision_legislativa_1();            
+            Cmb_nombre_comision_legislativa_1();
             Cmb_tipo_organo_constitucional_autonomo();
             Cmb_cond_iniciativa_preferente();
             Cmb_cond_adhesion_iniciativa();
@@ -478,6 +478,11 @@ namespace App_PLE.Vistas
             Cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo();
             Cmb_estatus_denuncia_declaracion_procedencia();
             Cmb_sentido_resolucion_pleno_declaracion_procedencia();
+            Cmb_sexo_persona_servidora_publica_declaracion_procedencia();
+            Cmb_cargo_persona_servidora_publica_declaracion_procedencia();
+            Cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia();
+            Cmb_nombre_persona_legisladora_declaracion_procedencia();
+            
 
             // FECHAS
             dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.CustomFormat = " ";
@@ -486,7 +491,7 @@ namespace App_PLE.Vistas
             dtp_fecha_procedencia_denuncia_declaracion_procedencia.Format = DateTimePickerFormat.Custom;
             dtp_fecha_resolucion_pleno_declaracion_procedencia.CustomFormat = " ";
             dtp_fecha_resolucion_pleno_declaracion_procedencia.Format = DateTimePickerFormat.Custom;
-            
+
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = false;
@@ -500,7 +505,21 @@ namespace App_PLE.Vistas
             txt_votaciones_pleno_en_contra_declaracion_procedencia.Enabled = false;
             txt_votaciones_pleno_abstencion_declaracion_procedencia.Enabled = false;
             txt_total_votaciones_pleno_declaracion_procedencia.Enabled = false;
-
+            txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Enabled = false; txt_nombre_1_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+            txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Enabled = false; txt_nombre_2_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+            txt_nombre_3_persona_servidora_publica_declaracion_procedencia.Enabled = false; txt_nombre_3_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+            txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Enabled = false; txt_apellido_1_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+            txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Enabled = false; txt_apellido_2_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+            txt_apellido_3_persona_servidora_publica_declaracion_procedencia.Enabled = false; txt_apellido_3_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+            cmb_sexo_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+            cmb_cargo_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+            cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Enabled = false;
+            cmb_nombre_persona_legisladora_declaracion_procedencia.Enabled = false;
+            txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+            txt_AGEM_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+            cmb_municipio_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+            txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Enabled = false;
+            txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Enabled = false;
         }
 
 
@@ -546,6 +565,24 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

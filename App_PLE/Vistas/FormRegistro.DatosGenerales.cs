@@ -801,6 +801,28 @@ namespace App_PLE.Vistas
 
                             }
 
+                            // NUEVA CONSULTA PARA LLENAR unicipios de declaración procedencia ------------------------------------------------------------
+                            string queryAyuntamiento_dp = "SELECT nom_mun FROM TC_AGEEM WHERE nom_ent = @ayuntamiento";
+                            using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryAyuntamiento_dp, conexion))
+                            {
+                                cmdGrupoParlamentario.Parameters.AddWithValue("@ayuntamiento", entidad_federativa);
+
+                                SQLiteDataAdapter adapterGrupoParlamentario = new SQLiteDataAdapter(cmdGrupoParlamentario);
+                                DataTable tableGrupoParlamentario = new DataTable();
+                                adapterGrupoParlamentario.Fill(tableGrupoParlamentario);
+
+                                // Llenar el ComboBox "cmb_varios_grupos_parlamentarios_especifique_1" con los resultados de la consulta
+                                cmb_municipio_persona_servidora_publica_declaracion_procedencia.DisplayMember = "nom_mun";
+                                cmb_municipio_persona_servidora_publica_declaracion_procedencia.ValueMember = "nom_mun";  // Opcional si necesitas usar el valor en otro lugar
+                                cmb_municipio_persona_servidora_publica_declaracion_procedencia.DataSource = tableGrupoParlamentario;
+
+                                // Opcional: Configurar el modo de autocompletar y el estilo del ComboBox
+                                cmb_municipio_persona_servidora_publica_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                cmb_municipio_persona_servidora_publica_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
+                                cmb_municipio_persona_servidora_publica_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+
+                            }
+
                             // Consulta SQL para obtener datos del cmb de entidad federativa y extraer la legislatura------------------------------
                             string query = "select distinct legislatura from TC_CALENDARIO_SESIONES WHERE entidad = @entidad_federativa";
                             using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))

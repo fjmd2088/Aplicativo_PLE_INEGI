@@ -167,6 +167,21 @@ namespace App_PLE.Vistas
                 dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Text = "";
 
             }
+            // Desbloquea Condición de ser una persona legisladora de la legislatura actual:
+            if (valorComboBox1.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Enabled = true;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Enabled = false;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Text = "";
+
+            }
         }
 
         private void Cmb_cond_presentacion_denuncia_declaracion_procedencia_periodo()
@@ -734,6 +749,53 @@ namespace App_PLE.Vistas
                 txt_total_votaciones_pleno_declaracion_procedencia.Text = "";
 
             }
+            // Se desbloquea priemr nombre de las caracteristicas sociodemograficaas. 
+            if (valorComboBox1.Equals("Concluida", StringComparison.OrdinalIgnoreCase))
+            {
+                // Nombre
+                txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_nombre_1_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Text = "";
+                // Apellido
+                txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_apellido_1_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Text = "";
+                // Sexo
+                cmb_sexo_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                cmb_sexo_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_sexo_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                // Nombre
+                txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_nombre_1_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Text = "";
+                // Apellido
+                txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_apellido_1_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Text = "";
+                // Sexo
+                cmb_sexo_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                cmb_sexo_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_sexo_persona_servidora_publica_declaracion_procedencia.Text = "";
+            }
+            // Se desbloquea cargo desempeñado 
+            if (valorComboBox1.Equals("Concluida", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cargo_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                cmb_cargo_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_cargo_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_cargo_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                cmb_cargo_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_cargo_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
         }
         
         // txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique
@@ -969,16 +1031,91 @@ namespace App_PLE.Vistas
             }
         }
 
-        // Características sociodemográficas de la persona servidora pública sujeta a procedimiento de declaración de procedencia ------
+        // ------------------------------ Características sociodemográficas de la persona servidora pública sujeta a procedimiento de declaración de procedencia ------------
 
+        private void Cmb_sexo_persona_servidora_publica_declaracion_procedencia()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
 
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
 
+                    // comando de sql
+                    string query = "select descripcion from TC_SEXO";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
 
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
 
+                    cmb_sexo_persona_servidora_publica_declaracion_procedencia.DataSource = dataTable;
+                    cmb_sexo_persona_servidora_publica_declaracion_procedencia.DisplayMember = "descripcion";
 
+                    cmb_sexo_persona_servidora_publica_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_sexo_persona_servidora_publica_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-        // Configuración de TXT para mayuculas y Numeros 
+                    cmb_sexo_persona_servidora_publica_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_sexo_persona_servidora_publica_declaracion_procedencia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_sexo_persona_servidora_publica_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
 
         // txt_nombre_1_persona_servidora_publica_declaracion_procedencia
         private void txt_nombre_1_persona_servidora_publica_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
@@ -994,6 +1131,20 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_nombre_1_persona_servidora_publica_declaracion_procedencia.SelectionStart = txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Text.Length;
+            
+            // Desbloquear txt_nombre_2_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_nombre_1_persona_servidora_publica_declaracion_procedencia.Text))
+            {
+                txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_nombre_2_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_nombre_2_persona_servidora_publica_juicio_politico está vacío, borrar y deshabilitar txt_nombre_2_personal_apoyo
+                txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Text = string.Empty;
+                txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_nombre_2_persona_servidora_publica_declaracion_procedencia.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
         }
 
         // txt_nombre_2_persona_servidora_publica_declaracion_procedencia
@@ -1010,6 +1161,20 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_nombre_2_persona_servidora_publica_declaracion_procedencia.SelectionStart = txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Text.Length;
+            
+            // Desbloquear txt_nombre_3_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_nombre_2_persona_servidora_publica_declaracion_procedencia.Text))
+            {
+                txt_nombre_3_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_nombre_3_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_nombre_2_persona_servidora_publica_declaracion_procedencia está vacío, borrar y deshabilitar txt_nombre_2_personal_apoyo
+                txt_nombre_3_persona_servidora_publica_declaracion_procedencia.Text = string.Empty;
+                txt_nombre_3_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_nombre_3_persona_servidora_publica_declaracion_procedencia.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
         }
 
         // txt_nombre_3_persona_servidora_publica_declaracion_procedencia
@@ -1042,6 +1207,20 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_apellido_1_persona_servidora_publica_declaracion_procedencia.SelectionStart = txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Text.Length;
+
+            // Desbloquear txt_apellido_1_persona_servidora_publica_juicio_politico, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_apellido_1_persona_servidora_publica_declaracion_procedencia.Text))
+            {
+                txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_apellido_2_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_apellido_2_persona_servidora_publica_declaracion_procedencia está vacío, borrar y deshabilitar txt_nombre_2_personal_apoyo
+                txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Text = string.Empty;
+                txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_apellido_2_persona_servidora_publica_declaracion_procedencia.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
         }
 
         // txt_apellido_2_persona_servidora_publica_declaracion_procedencia
@@ -1058,6 +1237,20 @@ namespace App_PLE.Vistas
             // Colocar el cursor al final del texto para mantener la posición del cursor
 
             txt_apellido_2_persona_servidora_publica_declaracion_procedencia.SelectionStart = txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Text.Length;
+
+            // Desbloquear txt_apellido_2_persona_servidora_publica_juicio_politico, cambiar su color de fondo, o borrarlo y deshabilitarlo
+            if (!string.IsNullOrEmpty(txt_apellido_2_persona_servidora_publica_declaracion_procedencia.Text))
+            {
+                txt_apellido_3_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_apellido_3_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+            }
+            else
+            {
+                // Si txt_apellido_3_persona_servidora_publica_declaracion_procedencia está vacío, borrar y deshabilitar txt_nombre_2_personal_apoyo
+                txt_apellido_3_persona_servidora_publica_declaracion_procedencia.Text = string.Empty;
+                txt_apellido_3_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_apellido_3_persona_servidora_publica_declaracion_procedencia.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
         }
 
         // txt_apellido_3_persona_servidora_publica_declaracion_procedencia
@@ -1076,6 +1269,543 @@ namespace App_PLE.Vistas
             txt_apellido_3_persona_servidora_publica_declaracion_procedencia.SelectionStart = txt_apellido_3_persona_servidora_publica_declaracion_procedencia.Text.Length;
         }
 
+        // ----------- Características sociodemográficas de la persona servidora pública sujeta a procedimiento de declaración de procedencia ------------
+
+        private void Cmb_cargo_persona_servidora_publica_declaracion_procedencia()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_CARGO_SERV_PUBLICO";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cargo_persona_servidora_publica_declaracion_procedencia.DataSource = dataTable;
+                    cmb_cargo_persona_servidora_publica_declaracion_procedencia.DisplayMember = "descripcion";
+
+                    cmb_cargo_persona_servidora_publica_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cargo_persona_servidora_publica_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cargo_persona_servidora_publica_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cargo_persona_servidora_publica_declaracion_procedencia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_cargo_persona_servidora_publica_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_cargo_persona_servidora_publica_declaracion_procedencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorComboBox1 = cmb_cargo_persona_servidora_publica_declaracion_procedencia.Text.Trim();
+
+            // Desbloquea nombre e ID de la persona legisladora
+            if (valorComboBox1.Equals("Legislador(a) del Congreso de la entidad federativa", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Enabled = true;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Text = "";
+
+                txt_ID_persona_legisladora_declaracion_procedencia.Enabled = false;
+                txt_ID_persona_legisladora_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_ID_persona_legisladora_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Enabled = false;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Text = "";
+
+                txt_ID_persona_legisladora_declaracion_procedencia.Enabled = false;
+                txt_ID_persona_legisladora_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_ID_persona_legisladora_declaracion_procedencia.Text = "";
+
+            }
+            // Desbloquea nombre de la institución
+            if (valorComboBox1.Equals("Titular de alguna institución  o unidad administrativa de la Administración Pública Estatal (excluyendo, de ser el caso, a la Procuraduría General de Justicia)", StringComparison.OrdinalIgnoreCase) | (valorComboBox1.Equals("Titular de algún otro órgano constitucional autónomo de la entidad federativa (excluyendo al organismo público local electoral, al organismo garante de acceso a la información y protección de datos personales, al organismo público de derechos humanos de la entidad federativa, y, de ser el caso, a la Fiscalía General de la entidad federativa)", StringComparison.OrdinalIgnoreCase) | (valorComboBox1.Equals("Titular de alguna institución o unidad administrativa de la Administración Pública del municipio o demarcación territorial", StringComparison.OrdinalIgnoreCase))))
+            {
+                txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
+            // Desbloquea AGGEM
+            if (valorComboBox1.Equals("Presidente(a) municipal", StringComparison.OrdinalIgnoreCase) | (valorComboBox1.Equals("Regidor(a)", StringComparison.OrdinalIgnoreCase) |(valorComboBox1.Equals("Síndico(a)", StringComparison.OrdinalIgnoreCase) | (valorComboBox1.Equals("Titular de alguna institución o unidad administrativa de la Administración Pública del municipio o demarcación territorial", StringComparison.OrdinalIgnoreCase) | (valorComboBox1.Equals("Otro cargo del ámbito municipal (especifique)", StringComparison.OrdinalIgnoreCase))))))
+            {
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.Enabled = true;
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+                txt_AGEM_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_AGEM_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
+                txt_AGEM_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+                txt_AGEM_persona_servidora_publica_declaracion_procedencia.Enabled = false;
+                txt_AGEM_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
+                txt_AGEM_persona_servidora_publica_declaracion_procedencia.Text = "";
+
+            }
+            // Desbloquea Otro cargo del ambito
+            if (valorComboBox1.Equals("Otro cargo del ámbito estatal (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Enabled = true;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.BackColor = Color.Honeydew;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Text = "";
+
+
+            }
+            else
+            {
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Enabled = false;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.BackColor = Color.LightGray;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Text = "";
+
+
+            }
+
+            // Desbloquea "Otro cargo del ámbito municipal (especifique)"
+            if (valorComboBox1.Equals("Otro cargo del ámbito municipal (especifique)", StringComparison.OrdinalIgnoreCase))
+            {
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Enabled = true;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.BackColor = Color.Honeydew;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Text = "";
+
+
+            }
+            else
+            {
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Enabled = false;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.BackColor = Color.LightGray;
+                txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Text = "";
+
+
+            }
+        }
+
+        private void Cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select descripcion from TC_SI_NO where id_si_no in (1,2)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.DataSource = dataTable;
+                    cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.DisplayMember = "descripcion";
+
+                    cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["descripcion"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["descripcion"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["descripcion"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia_SelectedIndexChanged(object sender, EventArgs e) 
+        {
+            string valorComboBox1 = cmb_cond_pertenencia_legislatura_actual_persona_legisladora_declaracion_procedencia.Text.Trim();
+
+            // Desbloquea la causa improcedencia
+            if (valorComboBox1.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                cmb_nombre_persona_legisladora_declaracion_procedencia.Enabled = true;
+                cmb_nombre_persona_legisladora_declaracion_procedencia.BackColor = Color.Honeydew;
+                cmb_nombre_persona_legisladora_declaracion_procedencia.Text = "";
+                txt_ID_persona_legisladora_declaracion_procedencia.Text = "";
+
+            }
+            else
+            {
+                cmb_nombre_persona_legisladora_declaracion_procedencia.Enabled = false;
+                cmb_nombre_persona_legisladora_declaracion_procedencia.BackColor = Color.LightGray;
+                cmb_nombre_persona_legisladora_declaracion_procedencia.Text = "";
+                txt_ID_persona_legisladora_declaracion_procedencia.Text = "";
+                txt_ID_persona_legisladora_declaracion_procedencia.BackColor = Color.LightGray;
+
+            }
+        }
+
+        private void Cmb_nombre_persona_legisladora_declaracion_procedencia()
+        {
+            string cadena = "Data Source = DB_PLE.db;Version=3;";
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // abrir la conexion
+                    conexion.Open();
+
+                    // comando de sql
+                    string query = "select txt_nombre_1_persona_legisladora from TR_PERSONAS_LEGISLADORAS";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                    // Utilizar un DataReader para obtener los datos
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conexion);
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    cmb_nombre_persona_legisladora_declaracion_procedencia.DataSource = dataTable;
+                    cmb_nombre_persona_legisladora_declaracion_procedencia.DisplayMember = "txt_nombre_1_persona_legisladora";
+
+                    cmb_nombre_persona_legisladora_declaracion_procedencia.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmb_nombre_persona_legisladora_declaracion_procedencia.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+                    cmb_nombre_persona_legisladora_declaracion_procedencia.DropDownStyle = ComboBoxStyle.DropDown;
+                    cmb_nombre_persona_legisladora_declaracion_procedencia.SelectedIndex = -1; // Aquí se establece como vacío
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
+        }
+        private void cmb_nombre_persona_legisladora_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["txt_nombre_1_persona_legisladora"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["txt_nombre_1_persona_legisladora"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["txt_nombre_1_persona_legisladora"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_nombre_persona_legisladora_declaracion_procedencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_nombre_persona_legisladora_declaracion_procedencia.Text;
+
+            // Verificar si el nombre seleccionado es nulo o vacío
+            if (string.IsNullOrEmpty(nombreSeleccionado))
+            {
+                txt_ID_persona_legisladora_declaracion_procedencia.Text = "";
+                return;
+            }
+
+            // Crear la cadena de conexión
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            // Usar la conexión a la base de datos
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Crear la consulta SQL para obtener el ID de la persona seleccionada
+                    string query = "SELECT txt_ID_persona_legisladora FROM TR_PERSONAS_LEGISLADORAS WHERE txt_nombre_1_persona_legisladora = @nombreSeleccionado";
+
+                    // Crear el comando SQL
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        // Asignar el valor del parámetro @nombreSeleccionado
+                        cmd.Parameters.AddWithValue("@nombreSeleccionado", nombreSeleccionado);
+
+                        // Ejecutar la consulta y obtener el resultado
+                        object resultado = cmd.ExecuteScalar();
+
+                        // Verificar si se obtuvo un resultado
+                        if (resultado != null)
+                        {
+                            txt_ID_persona_legisladora_declaracion_procedencia.Text = resultado.ToString();
+                        }
+                        else
+                        {
+                            txt_ID_persona_legisladora_declaracion_procedencia.Text = ""; // Limpiar el TextBox si no se encontró un ID
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el ID de la persona legisladora: " + ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión
+                    conexion.Close();
+                }
+            }
+        }
+
+        private void cmb_municipio_persona_servidora_publica_declaracion_procedencia_Validating(object sender, CancelEventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = sender as System.Windows.Forms.ComboBox;
+            if (comboBox != null)
+            {
+                // Quitar espacios en blanco del texto ingresado y convertir a minúsculas
+                string cleanedText = comboBox.Text.Trim().Replace(" ", string.Empty).ToLower();
+
+                // Permitir que el ComboBox se quede en blanco
+                if (string.IsNullOrEmpty(cleanedText))
+                {
+                    e.Cancel = false;
+                    return;
+                }
+
+                // Verificar si el texto del ComboBox coincide con alguna de las opciones
+                bool isValid = false;
+                foreach (DataRowView item in comboBox.Items)
+                {
+                    // ajustar el nombre a la columna dependiendo el combobox
+                    string cleanedItem = item["nom_mun"].ToString().Trim().Replace(" ", string.Empty).ToLower();
+                    if (cleanedText == cleanedItem)
+                    {
+                        isValid = true;
+                        break;
+                    }
+                    // Mostrar el valor actual de item (para depuración)
+                    Console.WriteLine(" Current item : " + item["nom_mun"]);
+                    // O usar Debug.WriteLine si estás depurando
+                    System.Diagnostics.Debug.WriteLine(" Current item : " + item["nom_mun"]);
+                }
+                if (!isValid)
+                {
+                    // Mostrar mensaje de error
+                    MessageBox.Show(" Por favor, seleccione una opción válida.", " Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Borrar el contenido del ComboBox
+                    comboBox.Text = string.Empty;
+                    // Evitar que el control pierda el foco
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void cmb_municipio_persona_servidora_publica_declaracion_procedencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el nombre seleccionado en el ComboBox
+            string nombreSeleccionado = cmb_municipio_persona_servidora_publica_declaracion_procedencia.Text;
+
+            // Verificar si el nombre seleccionado es nulo o vacío
+            if (string.IsNullOrEmpty(nombreSeleccionado))
+            {
+                txt_ageem_ini.Text = "";
+                return;
+            }
+
+            // Crear la cadena de conexión
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            // Usar la conexión a la base de datos
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Crear la consulta SQL para obtener el ID de la persona seleccionada
+                    string query = "SELECT cve_mun FROM TC_AGEEM WHERE nom_mun = @nombreSeleccionado";
+
+                    // Crear el comando SQL
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        // Asignar el valor del parámetro @nombreSeleccionado
+                        cmd.Parameters.AddWithValue("@nombreSeleccionado", nombreSeleccionado);
+
+                        // Ejecutar la consulta y obtener el resultado
+                        object resultado = cmd.ExecuteScalar();
+
+                        // Verificar si se obtuvo un resultado
+                        if (resultado != null)
+                        {
+                            txt_AGEM_persona_servidora_publica_declaracion_procedencia.Text = resultado.ToString();
+                        }
+                        else
+                        {
+                            txt_AGEM_persona_servidora_publica_declaracion_procedencia.Text = ""; // Limpiar el TextBox si no se encontró un ID
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el ID de la persona legisladora: " + ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión
+                    conexion.Close();
+                }
+            }
+        }
+
+
+        //---------------------------
 
         // txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia
         private void txt_nombre_institucion_persona_servidora_publica_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
