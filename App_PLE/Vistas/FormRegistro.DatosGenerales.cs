@@ -801,7 +801,7 @@ namespace App_PLE.Vistas
 
                             }
 
-                            // NUEVA CONSULTA PARA LLENAR unicipios de declaración procedencia ------------------------------------------------------------
+                            // NUEVA CONSULTA PARA LLENAR municipios de declaración procedencia ------------------------------------------------------------
                             string queryAyuntamiento_dp = "SELECT nom_mun FROM TC_AGEEM WHERE nom_ent = @ayuntamiento";
                             using (SQLiteCommand cmdGrupoParlamentario = new SQLiteCommand(queryAyuntamiento_dp, conexion))
                             {

@@ -520,6 +520,27 @@ namespace App_PLE.Vistas
             cmb_municipio_persona_servidora_publica_declaracion_procedencia.Enabled = false;
             txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_estatal_especifique.Enabled = false;
             txt_otro_cargo_persona_servidora_publica_declaracion_procedencia_ambito_municipal_especifique.Enabled = false;
+
+            //-------------------------------------------------- COMPARECENCIAS ----------------------------------------------------
+
+            Cmb_motivo_comparecencia();
+            Cmb_modalidad_comparecencia();
+
+
+
+            // FECHAS
+            dtp_fecha_comparecencia.CustomFormat = " ";
+            dtp_fecha_comparecencia.Format = DateTimePickerFormat.Custom;
+
+
+            // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_otro_motivo_comparecencia_especifique.Enabled = false;
+            cmb_otra_modalidad_comparecencia_especifique.Enabled = false;
+            txt_otro_motivo_comparecencia_especifique.Enabled = false;
+            cmb_otra_modalidad_comparecencia_especifique.Enabled = false;
+
+
+
         }
 
 
@@ -565,6 +586,16 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
 
 
 

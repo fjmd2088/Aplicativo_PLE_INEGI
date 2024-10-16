@@ -1933,7 +1933,7 @@ namespace App_PLE.Vistas
             this.cmb_otra_modalidad_comparecencia_especifique.Location = new System.Drawing.Point(431, 97);
             this.cmb_otra_modalidad_comparecencia_especifique.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_otra_modalidad_comparecencia_especifique.Name = "cmb_otra_modalidad_comparecencia_especifique";
-            this.cmb_otra_modalidad_comparecencia_especifique.Size = new System.Drawing.Size(276, 24);
+            this.cmb_otra_modalidad_comparecencia_especifique.Size = new System.Drawing.Size(347, 24);
             this.cmb_otra_modalidad_comparecencia_especifique.TabIndex = 79;
             this.cmb_otra_modalidad_comparecencia_especifique.UseWaitCursor = true;
             this.cmb_otra_modalidad_comparecencia_especifique.TextChanged += new System.EventHandler(this.cmb_otra_modalidad_comparecencia_especifique_TextChanged);
@@ -1996,9 +1996,11 @@ namespace App_PLE.Vistas
             this.cmb_modalidad_comparecencia.Location = new System.Drawing.Point(431, 39);
             this.cmb_modalidad_comparecencia.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_modalidad_comparecencia.Name = "cmb_modalidad_comparecencia";
-            this.cmb_modalidad_comparecencia.Size = new System.Drawing.Size(212, 26);
+            this.cmb_modalidad_comparecencia.Size = new System.Drawing.Size(347, 26);
             this.cmb_modalidad_comparecencia.TabIndex = 77;
             this.cmb_modalidad_comparecencia.UseWaitCursor = true;
+            this.cmb_modalidad_comparecencia.SelectedIndexChanged += new System.EventHandler(this.cmb_modalidad_comparecencia_SelectedIndexChanged);
+            this.cmb_modalidad_comparecencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_modalidad_comparecencia_Validating);
             // 
             // label212
             // 
@@ -2158,6 +2160,8 @@ namespace App_PLE.Vistas
             this.cmb_motivo_comparecencia.Size = new System.Drawing.Size(433, 26);
             this.cmb_motivo_comparecencia.TabIndex = 41;
             this.cmb_motivo_comparecencia.UseWaitCursor = true;
+            this.cmb_motivo_comparecencia.SelectedIndexChanged += new System.EventHandler(this.cmb_motivo_comparecencia_SelectedIndexChanged);
+            this.cmb_motivo_comparecencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_motivo_comparecencia_Validating);
             // 
             // label254
             // 
@@ -2196,6 +2200,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_comparecencia.TabIndex = 56;
             this.dtp_fecha_comparecencia.UseWaitCursor = true;
             this.dtp_fecha_comparecencia.Value = new System.DateTime(2024, 3, 12, 12, 34, 29, 0);
+            this.dtp_fecha_comparecencia.CloseUp += new System.EventHandler(this.dtp_fecha_comparecencia_CloseUp);
             // 
             // label253
             // 

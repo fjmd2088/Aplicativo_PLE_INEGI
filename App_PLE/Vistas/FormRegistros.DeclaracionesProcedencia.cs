@@ -834,14 +834,52 @@ namespace App_PLE.Vistas
 
         private void dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes_CloseUp(object sender, EventArgs e)
         {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_termino_informacion_reportada.Value.Date; // Solo la fecha, sin hora
 
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta > fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("Fecha de resolución del procedimiento de declaración de procedencia debe ser igual o menor a la fecha de información reportada en datos generales.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Format = DateTimePickerFormat.Short;
+            }
         }
 
         // ---------------------------  Fecha procedencia --------------------------
 
         private void dtp_fecha_procedencia_denuncia_declaracion_procedencia_CloseUp(object sender, EventArgs e)
         {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_procedencia_denuncia_declaracion_procedencia.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_ingreso_denuncia_declaracion_procedencia_oficialia_partes.Value.Date; // Solo la fecha, sin hora
 
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta < fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("Fecha en la que se determinó la procedencia de la denuncia de declaración de procedencia debe ser igual o mayor a la fecha de ingreso de la denuncia de declaración de procedencia a oficialía de partes.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_procedencia_denuncia_declaracion_procedencia.Format = DateTimePickerFormat.Short;
+            }
         }
 
         // PLENO ----------------------------------------------------------------------------------------------------------
@@ -850,7 +888,26 @@ namespace App_PLE.Vistas
 
         private void dtp_fecha_resolucion_pleno_declaracion_procedencia_CloseUp(object sender, EventArgs e)
         {
+            // Obtener las fechas seleccionadas
+            DateTime fechaGaceta = dtp_fecha_resolucion_pleno_declaracion_procedencia.Value.Date; // Solo la fecha, sin hora
+            DateTime fechaRemPE = dtp_fecha_procedencia_denuncia_declaracion_procedencia.Value.Date; // Solo la fecha, sin hora
 
+            // Validar si la fecha de publicación es menor que la fecha de remisión.
+            if (fechaGaceta < fechaRemPE)
+            {
+                // Mostrar mensaje de error
+                MessageBox.Show("Fecha de resolución del procedimiento de declaración de procedencia debe ser igual o mayor a la fecha en la que se determinó la procedencia de la denuncia de declaración de procedencia.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Vaciar el campo de fecha
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.CustomFormat = " ";  // Vaciar el campo
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.Format = DateTimePickerFormat.Custom;  // Establecer formato personalizado vacío
+            }
+            else
+            {
+                // Si la fecha es válida (igual o mayor que la fecha de remisión), restaurar el formato de fecha corta
+                dtp_fecha_resolucion_pleno_declaracion_procedencia.Format = DateTimePickerFormat.Short;
+            }
         }
 
         private void Cmb_sentido_resolucion_pleno_declaracion_procedencia()
