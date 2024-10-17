@@ -111,10 +111,11 @@ namespace App_PLE.Vistas
             this.groupBox120 = new System.Windows.Forms.GroupBox();
             this.label213 = new System.Windows.Forms.Label();
             this.cmb_nombre_comision_legislativa_1_comparecencia = new System.Windows.Forms.ComboBox();
-            this.dataGridView18 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button60 = new System.Windows.Forms.Button();
-            this.button61 = new System.Windows.Forms.Button();
+            this.dgv_comisiones_leg_comparecencias = new System.Windows.Forms.DataGridView();
+            this.ID_AGREG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.com_leg_comp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_agregar_compare = new System.Windows.Forms.Button();
+            this.btn_eliminar_compare = new System.Windows.Forms.Button();
             this.label214 = new System.Windows.Forms.Label();
             this.txt_ID_comision_legislativa_1_comparecencia = new System.Windows.Forms.TextBox();
             this.groupBox119 = new System.Windows.Forms.GroupBox();
@@ -1017,7 +1018,7 @@ namespace App_PLE.Vistas
             this.groupBox57.SuspendLayout();
             this.groupBox52.SuspendLayout();
             this.groupBox120.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_comisiones_leg_comparecencias)).BeginInit();
             this.groupBox119.SuspendLayout();
             this.groupBox59.SuspendLayout();
             this.tabPageDP.SuspendLayout();
@@ -1466,6 +1467,8 @@ namespace App_PLE.Vistas
             this.cmb_municipio_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(316, 26);
             this.cmb_municipio_persona_servidora_publica_comparecencia.TabIndex = 38;
             this.cmb_municipio_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.cmb_municipio_persona_servidora_publica_comparecencia.SelectedIndexChanged += new System.EventHandler(this.cmb_municipio_persona_servidora_publica_comparecencia_SelectedIndexChanged);
+            this.cmb_municipio_persona_servidora_publica_comparecencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_municipio_persona_servidora_publica_comparecencia_Validating);
             // 
             // label216
             // 
@@ -1518,6 +1521,8 @@ namespace App_PLE.Vistas
             this.cmb_cargo_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(1351, 26);
             this.cmb_cargo_persona_servidora_publica_comparecencia.TabIndex = 61;
             this.cmb_cargo_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.cmb_cargo_persona_servidora_publica_comparecencia.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_persona_servidora_publica_comparecencia_SelectedIndexChanged);
+            this.cmb_cargo_persona_servidora_publica_comparecencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_cargo_persona_servidora_publica_comparecencia_Validating);
             // 
             // txt_nombre_institucion_persona_servidora_publica_comparecencia
             // 
@@ -1526,7 +1531,7 @@ namespace App_PLE.Vistas
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.Location = new System.Drawing.Point(763, 110);
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.Name = "txt_nombre_institucion_persona_servidora_publica_comparecencia";
-            this.txt_nombre_institucion_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(393, 24);
+            this.txt_nombre_institucion_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(612, 24);
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.TabIndex = 71;
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.UseWaitCursor = true;
             this.txt_nombre_institucion_persona_servidora_publica_comparecencia.TextChanged += new System.EventHandler(this.txt_nombre_institucion_persona_servidora_publica_comparecencia_TextChanged);
@@ -1624,6 +1629,7 @@ namespace App_PLE.Vistas
             this.cmb_sexo_persona_servidora_publica_comparecencia.Size = new System.Drawing.Size(123, 26);
             this.cmb_sexo_persona_servidora_publica_comparecencia.TabIndex = 57;
             this.cmb_sexo_persona_servidora_publica_comparecencia.UseWaitCursor = true;
+            this.cmb_sexo_persona_servidora_publica_comparecencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sexo_persona_servidora_publica_comparecencia_Validating);
             // 
             // txt_apellido_3_persona_servidora_publica_comparecencia
             // 
@@ -1780,9 +1786,9 @@ namespace App_PLE.Vistas
             // 
             this.groupBox120.Controls.Add(this.label213);
             this.groupBox120.Controls.Add(this.cmb_nombre_comision_legislativa_1_comparecencia);
-            this.groupBox120.Controls.Add(this.dataGridView18);
-            this.groupBox120.Controls.Add(this.button60);
-            this.groupBox120.Controls.Add(this.button61);
+            this.groupBox120.Controls.Add(this.dgv_comisiones_leg_comparecencias);
+            this.groupBox120.Controls.Add(this.btn_agregar_compare);
+            this.groupBox120.Controls.Add(this.btn_eliminar_compare);
             this.groupBox120.Controls.Add(this.label214);
             this.groupBox120.Controls.Add(this.txt_ID_comision_legislativa_1_comparecencia);
             this.groupBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1820,17 +1826,20 @@ namespace App_PLE.Vistas
             this.cmb_nombre_comision_legislativa_1_comparecencia.Size = new System.Drawing.Size(269, 26);
             this.cmb_nombre_comision_legislativa_1_comparecencia.TabIndex = 58;
             this.cmb_nombre_comision_legislativa_1_comparecencia.UseWaitCursor = true;
+            this.cmb_nombre_comision_legislativa_1_comparecencia.SelectedIndexChanged += new System.EventHandler(this.cmb_nombre_comision_legislativa_1_comparecencia_SelectedIndexChanged);
+            this.cmb_nombre_comision_legislativa_1_comparecencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_nombre_comision_legislativa_1_comparecencia_Validating);
             // 
-            // dataGridView18
+            // dgv_comisiones_leg_comparecencias
             // 
-            this.dataGridView18.AllowUserToAddRows = false;
-            this.dataGridView18.AllowUserToDeleteRows = false;
-            this.dataGridView18.AllowUserToResizeRows = false;
-            this.dataGridView18.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView18.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView18.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView18.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15});
+            this.dgv_comisiones_leg_comparecencias.AllowUserToAddRows = false;
+            this.dgv_comisiones_leg_comparecencias.AllowUserToDeleteRows = false;
+            this.dgv_comisiones_leg_comparecencias.AllowUserToResizeRows = false;
+            this.dgv_comisiones_leg_comparecencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_comisiones_leg_comparecencias.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_comisiones_leg_comparecencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_comisiones_leg_comparecencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_AGREG,
+            this.com_leg_comp});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1838,48 +1847,57 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView18.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView18.Location = new System.Drawing.Point(797, 22);
-            this.dataGridView18.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView18.Name = "dataGridView18";
-            this.dataGridView18.ReadOnly = true;
-            this.dataGridView18.RowHeadersVisible = false;
-            this.dataGridView18.RowHeadersWidth = 51;
-            this.dataGridView18.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView18.Size = new System.Drawing.Size(792, 155);
-            this.dataGridView18.TabIndex = 56;
-            this.dataGridView18.UseWaitCursor = true;
+            this.dgv_comisiones_leg_comparecencias.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_comisiones_leg_comparecencias.Location = new System.Drawing.Point(797, 22);
+            this.dgv_comisiones_leg_comparecencias.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_comisiones_leg_comparecencias.Name = "dgv_comisiones_leg_comparecencias";
+            this.dgv_comisiones_leg_comparecencias.ReadOnly = true;
+            this.dgv_comisiones_leg_comparecencias.RowHeadersVisible = false;
+            this.dgv_comisiones_leg_comparecencias.RowHeadersWidth = 51;
+            this.dgv_comisiones_leg_comparecencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_comisiones_leg_comparecencias.Size = new System.Drawing.Size(792, 155);
+            this.dgv_comisiones_leg_comparecencias.TabIndex = 56;
+            this.dgv_comisiones_leg_comparecencias.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn15
+            // ID_AGREG
             // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Comisiones legislativas ante las cuales se compareció";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.ID_AGREG.HeaderText = "ID";
+            this.ID_AGREG.MinimumWidth = 6;
+            this.ID_AGREG.Name = "ID_AGREG";
+            this.ID_AGREG.ReadOnly = true;
             // 
-            // button60
+            // com_leg_comp
             // 
-            this.button60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button60.Location = new System.Drawing.Point(215, 132);
-            this.button60.Margin = new System.Windows.Forms.Padding(4);
-            this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(125, 33);
-            this.button60.TabIndex = 54;
-            this.button60.Text = "Agregar";
-            this.button60.UseVisualStyleBackColor = true;
-            this.button60.UseWaitCursor = true;
+            this.com_leg_comp.HeaderText = "Comisiones legislativas ante las cuales se compareció";
+            this.com_leg_comp.MinimumWidth = 6;
+            this.com_leg_comp.Name = "com_leg_comp";
+            this.com_leg_comp.ReadOnly = true;
             // 
-            // button61
+            // btn_agregar_compare
             // 
-            this.button61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button61.Location = new System.Drawing.Point(376, 132);
-            this.button61.Margin = new System.Windows.Forms.Padding(4);
-            this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(125, 33);
-            this.button61.TabIndex = 55;
-            this.button61.Text = "Eliminar";
-            this.button61.UseVisualStyleBackColor = true;
-            this.button61.UseWaitCursor = true;
+            this.btn_agregar_compare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar_compare.Location = new System.Drawing.Point(215, 132);
+            this.btn_agregar_compare.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar_compare.Name = "btn_agregar_compare";
+            this.btn_agregar_compare.Size = new System.Drawing.Size(125, 33);
+            this.btn_agregar_compare.TabIndex = 54;
+            this.btn_agregar_compare.Text = "Agregar";
+            this.btn_agregar_compare.UseVisualStyleBackColor = true;
+            this.btn_agregar_compare.UseWaitCursor = true;
+            this.btn_agregar_compare.Click += new System.EventHandler(this.btn_agregar_compare_Click);
+            // 
+            // btn_eliminar_compare
+            // 
+            this.btn_eliminar_compare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_compare.Location = new System.Drawing.Point(376, 132);
+            this.btn_eliminar_compare.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar_compare.Name = "btn_eliminar_compare";
+            this.btn_eliminar_compare.Size = new System.Drawing.Size(125, 33);
+            this.btn_eliminar_compare.TabIndex = 55;
+            this.btn_eliminar_compare.Text = "Eliminar";
+            this.btn_eliminar_compare.UseVisualStyleBackColor = true;
+            this.btn_eliminar_compare.UseWaitCursor = true;
+            this.btn_eliminar_compare.Click += new System.EventHandler(this.btn_eliminar_compare_Click);
             // 
             // label214
             // 
@@ -14587,7 +14605,7 @@ namespace App_PLE.Vistas
             this.groupBox52.PerformLayout();
             this.groupBox120.ResumeLayout(false);
             this.groupBox120.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_comisiones_leg_comparecencias)).EndInit();
             this.groupBox119.ResumeLayout(false);
             this.groupBox119.PerformLayout();
             this.groupBox59.ResumeLayout(false);
@@ -14891,10 +14909,9 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.GroupBox groupBox120;
         private System.Windows.Forms.Label label213;
         private System.Windows.Forms.ComboBox cmb_nombre_comision_legislativa_1_comparecencia;
-        private System.Windows.Forms.DataGridView dataGridView18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.Button button60;
-        private System.Windows.Forms.Button button61;
+        private System.Windows.Forms.DataGridView dgv_comisiones_leg_comparecencias;
+        private System.Windows.Forms.Button btn_agregar_compare;
+        private System.Windows.Forms.Button btn_eliminar_compare;
         private System.Windows.Forms.Label label214;
         private System.Windows.Forms.TextBox txt_ID_comision_legislativa_1_comparecencia;
         private System.Windows.Forms.GroupBox groupBox119;
@@ -15789,5 +15806,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPL;
         private System.Windows.Forms.DataGridViewTextBoxColumn Per_leg_ou;
         private System.Windows.Forms.DataGridViewTextBoxColumn Perjuicios_JP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_AGREG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn com_leg_comp;
     }
 }

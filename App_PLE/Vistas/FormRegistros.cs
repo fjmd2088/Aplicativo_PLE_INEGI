@@ -525,8 +525,9 @@ namespace App_PLE.Vistas
 
             Cmb_motivo_comparecencia();
             Cmb_modalidad_comparecencia();
-
-
+            Cmb_nombre_comision_legislativa_1_comparecencia();
+            Cmb_sexo_persona_servidora_publica_comparecencia();
+            Cmb_cargo_persona_servidora_publica_comparecencia();
 
             // FECHAS
             dtp_fecha_comparecencia.CustomFormat = " ";
@@ -538,9 +539,20 @@ namespace App_PLE.Vistas
             cmb_otra_modalidad_comparecencia_especifique.Enabled = false;
             txt_otro_motivo_comparecencia_especifique.Enabled = false;
             cmb_otra_modalidad_comparecencia_especifique.Enabled = false;
-
-
-
+            txt_ID_comision_legislativa_1_comparecencia.Enabled = false; txt_ID_comision_legislativa_1_comparecencia.BackColor = Color.LightGray;
+            cmb_nombre_comision_legislativa_1_comparecencia.Enabled = false;
+            btn_agregar_compare.Enabled = false;
+            btn_eliminar_compare.Enabled = false;
+            dgv_comisiones_leg_comparecencias.BackgroundColor = Color.LightGray;
+            txt_nombre_2_persona_servidora_publica_comparecencia.Enabled = false; txt_nombre_2_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
+            txt_nombre_3_persona_servidora_publica_comparecencia.Enabled = false; txt_nombre_3_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
+            txt_apellido_2_persona_servidora_publica_comparecencia.Enabled = false; txt_apellido_2_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
+            txt_apellido_3_persona_servidora_publica_comparecencia.Enabled = false; txt_apellido_3_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
+            txt_nombre_institucion_persona_servidora_publica_comparecencia.Enabled = false; txt_nombre_institucion_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
+            cmb_municipio_persona_servidora_publica_comparecencia.Enabled = false;
+            txt_AGEM_persona_servidora_publica_comparecencia.Enabled = false; txt_AGEM_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
+            txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.Enabled = false; txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_estatal_especifique.BackColor = Color.LightGray;
+            txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.Enabled = false; txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.BackColor = Color.LightGray;
         }
 
 
@@ -586,6 +598,24 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

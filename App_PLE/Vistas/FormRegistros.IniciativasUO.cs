@@ -485,7 +485,7 @@ namespace App_PLE.Vistas
                 }
             }
         }
-        private void cmb_tipo_promovente_iniciativa_urgente_obvia_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_tipo_promovente_iniciativa_urgente_obvia_SelectedIndexChanged(object sender, EventArgs e) 
         {
             string valorComboBox1 = cmb_tipo_promovente_iniciativa_urgente_obvia.Text.Trim();
 
