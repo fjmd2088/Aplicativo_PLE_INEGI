@@ -545,7 +545,7 @@ namespace App_PLE.Vistas
             return false;
         }
 
-        // ----------- Características sociodemográficas de la persona servidora pública compareciente ---------------------
+        // ----------- Características sociodemográficas de la persona servidora pública compareciente -----------------------------------------
 
         private void Cmb_sexo_persona_servidora_publica_comparecencia()
         {
@@ -786,7 +786,7 @@ namespace App_PLE.Vistas
             txt_apellido_3_persona_servidora_publica_comparecencia.SelectionStart = txt_apellido_3_persona_servidora_publica_comparecencia.Text.Length;
         }
 
-        // ----------- Características del cargo de la  persona servidora pública compareciente ---------------------
+        // ----------- Características del cargo de la  persona servidora pública compareciente -------------------------------------------
 
         private void Cmb_cargo_persona_servidora_publica_comparecencia()
         {
@@ -1052,7 +1052,7 @@ namespace App_PLE.Vistas
 
 
 
-        // -------------------------- Configuración de TXT para mayuculas y Numeros 
+        // -------------------------- Configuración de TXT para mayuculas y Numeros ------------------------------------------------------
 
         // txt_nombre_institucion_persona_servidora_publica_comparecencia
         private void txt_nombre_institucion_persona_servidora_publica_comparecencia_KeyPress(object sender, KeyPressEventArgs e)

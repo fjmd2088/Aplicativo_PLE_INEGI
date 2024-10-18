@@ -1578,7 +1578,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // Votaciones plenarias
+        // ---------------------- Votaciones plenarias ------------------------------
 
         // txt_votaciones_pleno_a_favor_iniciativa_urgente_obvia
         private void txt_votaciones_pleno_a_favor_iniciativa_urgente_obvia_KeyPress(object sender, KeyPressEventArgs e)
@@ -1670,7 +1670,7 @@ namespace App_PLE.Vistas
             }
         }
 
-        // Poder ejecutivo 
+        // ------------------- Poder ejecutivo -----------------------------------
 
         private void Cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia()
         {
