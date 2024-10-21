@@ -57,8 +57,84 @@ namespace App_PLE.Vistas
                 txt_nombre_2_personal_apoyo.Enabled = false;
                 txt_nombre_2_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
             }
+            // Lógica para generar ID a partir de nombres, apellidos, fecha de nacimiento y sexo
+            string primerosDigitos = "";
 
+            // Logica para generar ID de nombres
+            if (!string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_nombre_2_personal_apoyo.Text))
+                {
+                    string primeraLetraNombre1 = txt_nombre_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraNombre2 = txt_nombre_2_personal_apoyo.Text.Substring(0, 1);
 
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraNombre1 + primeraLetraNombre2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_nombre_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Lógica para generar ID de apellidos
+            if (!string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_apellido_2_personal_apoyo.Text))
+                {
+                    string primeraLetraApellido1 = txt_apellido_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraApellido2 = txt_apellido_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraApellido1 + primeraLetraApellido2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_apellido_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Extraer el año de la fecha de nacimiento
+            if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
+            {
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
+                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+            }
+
+            // Extraer la primera letra del sexo
+            if (!string.IsNullOrEmpty(cmb_sexo_personal_apoyo.Text))
+            {
+                primerosDigitos += cmb_sexo_personal_apoyo.Text.Substring(0, 1); // Obtener la primera letra
+            }
+
+            // Asignar el resultado a txt_ID_personal_apoyo
+            txt_ID_personal_apoyo.Text = primerosDigitos;
+
+            // Limpiar el campo ID si no se ingresa ningún nombre o apellido
+            if (string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text) && string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                txt_ID_personal_apoyo.Text = "";
+            }
         }
 
         // txt_nombre_2_personal_apoyo
@@ -88,6 +164,84 @@ namespace App_PLE.Vistas
                 txt_nombre_3_personal_apoyo.Text = string.Empty;
                 txt_nombre_3_personal_apoyo.Enabled = false;
                 txt_nombre_3_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
+            }
+            // Lógica para generar ID a partir de nombres, apellidos, fecha de nacimiento y sexo
+            string primerosDigitos = "";
+
+            // Logica para generar ID de nombres
+            if (!string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_nombre_2_personal_apoyo.Text))
+                {
+                    string primeraLetraNombre1 = txt_nombre_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraNombre2 = txt_nombre_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraNombre1 + primeraLetraNombre2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_nombre_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Lógica para generar ID de apellidos
+            if (!string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_apellido_2_personal_apoyo.Text))
+                {
+                    string primeraLetraApellido1 = txt_apellido_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraApellido2 = txt_apellido_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraApellido1 + primeraLetraApellido2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_apellido_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Extraer el año de la fecha de nacimiento
+            if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
+            {
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
+                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+            }
+
+            // Extraer la primera letra del sexo
+            if (!string.IsNullOrEmpty(cmb_sexo_personal_apoyo.Text))
+            {
+                primerosDigitos += cmb_sexo_personal_apoyo.Text.Substring(0, 1); // Obtener la primera letra
+            }
+
+            // Asignar el resultado a txt_ID_personal_apoyo
+            txt_ID_personal_apoyo.Text = primerosDigitos;
+
+            // Limpiar el campo ID si no se ingresa ningún nombre o apellido
+            if (string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text) && string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                txt_ID_personal_apoyo.Text = "";
             }
 
         }
@@ -137,6 +291,85 @@ namespace App_PLE.Vistas
                 txt_apellido_2_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
             }
 
+            // Lógica para generar ID a partir de nombres, apellidos, fecha de nacimiento y sexo
+            string primerosDigitos = "";
+
+            // Logica para generar ID de nombres
+            if (!string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_nombre_2_personal_apoyo.Text))
+                {
+                    string primeraLetraNombre1 = txt_nombre_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraNombre2 = txt_nombre_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraNombre1 + primeraLetraNombre2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_nombre_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Lógica para generar ID de apellidos
+            if (!string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_apellido_2_personal_apoyo.Text))
+                {
+                    string primeraLetraApellido1 = txt_apellido_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraApellido2 = txt_apellido_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraApellido1 + primeraLetraApellido2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_apellido_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Extraer el año de la fecha de nacimiento
+            if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
+            {
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
+                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+            }
+
+            // Extraer la primera letra del sexo
+            if (!string.IsNullOrEmpty(cmb_sexo_personal_apoyo.Text))
+            {
+                primerosDigitos += cmb_sexo_personal_apoyo.Text.Substring(0, 1); // Obtener la primera letra
+            }
+
+            // Asignar el resultado a txt_ID_personal_apoyo
+            txt_ID_personal_apoyo.Text = primerosDigitos;
+
+            // Limpiar el campo ID si no se ingresa ningún nombre o apellido
+            if (string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text) && string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                txt_ID_personal_apoyo.Text = "";
+            }
+
         }
 
         // txt_apellido_2_personal_apoyo
@@ -167,7 +400,84 @@ namespace App_PLE.Vistas
                 txt_apellido_3_personal_apoyo.Enabled = false;
                 txt_apellido_3_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
             }
+            // Lógica para generar ID a partir de nombres, apellidos, fecha de nacimiento y sexo
+            string primerosDigitos = "";
 
+            // Logica para generar ID de nombres
+            if (!string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_nombre_2_personal_apoyo.Text))
+                {
+                    string primeraLetraNombre1 = txt_nombre_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraNombre2 = txt_nombre_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraNombre1 + primeraLetraNombre2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_nombre_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Lógica para generar ID de apellidos
+            if (!string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_apellido_2_personal_apoyo.Text))
+                {
+                    string primeraLetraApellido1 = txt_apellido_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraApellido2 = txt_apellido_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraApellido1 + primeraLetraApellido2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_apellido_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Extraer el año de la fecha de nacimiento
+            if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
+            {
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
+                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+            }
+
+            // Extraer la primera letra del sexo
+            if (!string.IsNullOrEmpty(cmb_sexo_personal_apoyo.Text))
+            {
+                primerosDigitos += cmb_sexo_personal_apoyo.Text.Substring(0, 1); // Obtener la primera letra
+            }
+
+            // Asignar el resultado a txt_ID_personal_apoyo
+            txt_ID_personal_apoyo.Text = primerosDigitos;
+
+            // Limpiar el campo ID si no se ingresa ningún nombre o apellido
+            if (string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text) && string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                txt_ID_personal_apoyo.Text = "";
+            }
         }
 
         // txt_apellido_3_personal_apoyo
@@ -228,7 +538,6 @@ namespace App_PLE.Vistas
 
             }
         }
-
         private void cmb_sexo_personal_apoyo_Validating(object sender, CancelEventArgs e)
         {
 
@@ -272,6 +581,87 @@ namespace App_PLE.Vistas
                 }
             }
 
+        }
+        private void cmb_sexo_personal_apoyo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Lógica para generar ID a partir de nombres, apellidos, fecha de nacimiento y sexo
+            string primerosDigitos = "";
+
+            // Logica para generar ID de nombres
+            if (!string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_nombre_2_personal_apoyo.Text))
+                {
+                    string primeraLetraNombre1 = txt_nombre_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraNombre2 = txt_nombre_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraNombre1 + primeraLetraNombre2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_nombre_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_nombre_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Lógica para generar ID de apellidos
+            if (!string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                // Si el segundo campo también tiene texto, extraer la primera letra de ambos
+                if (!string.IsNullOrEmpty(txt_apellido_2_personal_apoyo.Text))
+                {
+                    string primeraLetraApellido1 = txt_apellido_1_personal_apoyo.Text.Substring(0, 1);
+                    string primeraLetraApellido2 = txt_apellido_2_personal_apoyo.Text.Substring(0, 1);
+
+                    // Combinar la primera letra de ambos campos
+                    primerosDigitos += primeraLetraApellido1 + primeraLetraApellido2;
+                }
+                else
+                {
+                    // Si el segundo campo está vacío, extraer las primeras dos letras del primero si tiene al menos dos caracteres
+                    if (txt_apellido_1_personal_apoyo.Text.Length >= 2)
+                    {
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text.Substring(0, 2);
+                    }
+                    else
+                    {
+                        // Si tiene menos de dos caracteres, usar el texto completo
+                        primerosDigitos += txt_apellido_1_personal_apoyo.Text;
+                    }
+                }
+            }
+
+            // Extraer el año de la fecha de nacimiento
+            if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
+            {
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
+                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+            }
+
+            // Extraer la primera letra del sexo
+            if (!string.IsNullOrEmpty(cmb_sexo_personal_apoyo.Text))
+            {
+                primerosDigitos += cmb_sexo_personal_apoyo.Text.Substring(0, 1); // Obtener la primera letra
+            }
+
+            // Asignar el resultado a txt_ID_personal_apoyo
+            txt_ID_personal_apoyo.Text = primerosDigitos;
+
+            // Limpiar el campo ID si no se ingresa ningún nombre o apellido
+            if (string.IsNullOrEmpty(txt_nombre_1_personal_apoyo.Text) && string.IsNullOrEmpty(txt_apellido_1_personal_apoyo.Text))
+            {
+                txt_ID_personal_apoyo.Text = "";
+            }
         }
 
         // LENGUA ------------------------------------------------------------------------------------------------------------------------------------

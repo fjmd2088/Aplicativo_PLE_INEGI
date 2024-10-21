@@ -141,7 +141,7 @@ namespace App_PLE.Vistas
             this.txt_otro_motivo_comparecencia_especifique = new System.Windows.Forms.TextBox();
             this.dtp_fecha_comparecencia = new System.Windows.Forms.DateTimePicker();
             this.label253 = new System.Windows.Forms.Label();
-            this.textBox108 = new System.Windows.Forms.TextBox();
+            this.txt_ID_comparecencias = new System.Windows.Forms.TextBox();
             this.tabPageDP = new System.Windows.Forms.TabPage();
             this.button17 = new System.Windows.Forms.Button();
             this.groupBox53 = new System.Windows.Forms.GroupBox();
@@ -1233,7 +1233,7 @@ namespace App_PLE.Vistas
             this.tabPageCom.Controls.Add(this.groupBox57);
             this.tabPageCom.Controls.Add(this.groupBox52);
             this.tabPageCom.Controls.Add(this.label253);
-            this.tabPageCom.Controls.Add(this.textBox108);
+            this.tabPageCom.Controls.Add(this.txt_ID_comparecencias);
             this.tabPageCom.Location = new System.Drawing.Point(4, 29);
             this.tabPageCom.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCom.Name = "tabPageCom";
@@ -2233,16 +2233,16 @@ namespace App_PLE.Vistas
             this.label253.Text = "Identificador de la comparecencia:";
             this.label253.UseWaitCursor = true;
             // 
-            // textBox108
+            // txt_ID_comparecencias
             // 
-            this.textBox108.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox108.Location = new System.Drawing.Point(1444, 18);
-            this.textBox108.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox108.Name = "textBox108";
-            this.textBox108.Size = new System.Drawing.Size(195, 26);
-            this.textBox108.TabIndex = 16;
-            this.textBox108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox108.UseWaitCursor = true;
+            this.txt_ID_comparecencias.BackColor = System.Drawing.Color.Honeydew;
+            this.txt_ID_comparecencias.Location = new System.Drawing.Point(1444, 18);
+            this.txt_ID_comparecencias.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ID_comparecencias.Name = "txt_ID_comparecencias";
+            this.txt_ID_comparecencias.Size = new System.Drawing.Size(195, 26);
+            this.txt_ID_comparecencias.TabIndex = 16;
+            this.txt_ID_comparecencias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_ID_comparecencias.UseWaitCursor = true;
             // 
             // tabPageDP
             // 
@@ -9776,6 +9776,7 @@ namespace App_PLE.Vistas
             this.cmb_sexo_personal_apoyo.Name = "cmb_sexo_personal_apoyo";
             this.cmb_sexo_personal_apoyo.Size = new System.Drawing.Size(136, 28);
             this.cmb_sexo_personal_apoyo.TabIndex = 23;
+            this.cmb_sexo_personal_apoyo.SelectedIndexChanged += new System.EventHandler(this.cmb_sexo_personal_apoyo_SelectedIndexChanged);
             this.cmb_sexo_personal_apoyo.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_sexo_personal_apoyo_Validating);
             // 
             // label259
@@ -14937,7 +14938,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.TextBox txt_otro_motivo_comparecencia_especifique;
         private System.Windows.Forms.DateTimePicker dtp_fecha_comparecencia;
         private System.Windows.Forms.Label label253;
-        private System.Windows.Forms.TextBox textBox108;
+        private System.Windows.Forms.TextBox txt_ID_comparecencias;
         private System.Windows.Forms.TabPage tabPageDP;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.GroupBox groupBox53;

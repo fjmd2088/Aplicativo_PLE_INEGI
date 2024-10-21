@@ -243,6 +243,7 @@ namespace App_PLE.Vistas
             cmb_Nombre_comision_legislativa_personal_apoyo();
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_personal_apoyo.Enabled = false;
             txt_nombre_2_personal_apoyo.Enabled = false; txt_nombre_2_personal_apoyo.BackColor = Color.LightGray;
             txt_nombre_3_personal_apoyo.Enabled = false; txt_nombre_3_personal_apoyo.BackColor = Color.LightGray;
             txt_apellido_2_personal_apoyo.Enabled = false; txt_apellido_2_personal_apoyo.BackColor = Color.LightGray;
@@ -291,6 +292,7 @@ namespace App_PLE.Vistas
 
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_iniciativa.Enabled = false;
             txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
             cmb_cond_presentacion_iniciativa_periodo.Enabled = true; cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.Honeydew;
 
@@ -383,6 +385,7 @@ namespace App_PLE.Vistas
             Cmb_sentido_resolucion_ejecutivo_iniciativa_urgente_obvia();
 
             // FECHAS
+            txt_ID_iniciativa_urgente_obvia.Enabled = false;
             dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.CustomFormat = " ";
             dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Format = DateTimePickerFormat.Custom;
             dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.CustomFormat = " ";
@@ -442,6 +445,7 @@ namespace App_PLE.Vistas
             dtp_fecha_resolucion_pleno_juicio_politico.Format = DateTimePickerFormat.Custom;
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_juicio_político.Enabled = false;
             cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Enabled = false;
             cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo.Enabled = false;
             txt_improcedente_estatus_denuncia_juicio_politico_especifique.Enabled = false;
@@ -494,6 +498,7 @@ namespace App_PLE.Vistas
 
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_declaracion_procedencia.Enabled = false;
             cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Enabled = false;
             cmb_cond_actualizacion_estatus_denuncia_declaracion_procedencia_periodo.Enabled = false;
             txt_improcedente_estatus_denuncia_declaracion_procedencia_especifique.Enabled = false;
@@ -535,6 +540,7 @@ namespace App_PLE.Vistas
 
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_comparecencias.Enabled = false;
             txt_otro_motivo_comparecencia_especifique.Enabled = false;
             cmb_otra_modalidad_comparecencia_especifique.Enabled = false;
             txt_otro_motivo_comparecencia_especifique.Enabled = false;
@@ -598,6 +604,8 @@ namespace App_PLE.Vistas
         }
 
         
+
+
 
 
 
