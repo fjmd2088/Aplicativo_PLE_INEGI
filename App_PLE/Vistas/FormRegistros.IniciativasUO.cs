@@ -26,6 +26,12 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
+        private void txt_turno_iniciativa_urgente_obvia_TextChanged(object sender, EventArgs e)
+        {
+            // Agrega el ID 
+            txt_ID_iniciativa_urgente_obvia.Text = "IN_" + "UO_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_iniciativa_urgente_obvia.Text;
+        }
+            
 
         // ESTATUS -------------------------------------------------------------------------------------------------------------------------
 

@@ -363,6 +363,32 @@ namespace App_PLE.Vistas
         {
 
         }
+        private void cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Reutilizamos la lógica de actualización del ID
+            ActualizarIDdeclaracionp();
+        }
+
+        // Método para actualizar txt_ID_juicio_político basado en las condiciones
+        private void ActualizarIDdeclaracionp()
+        {
+            // Verifica si el ComboBox tiene el valor "Si" o "No"
+            if (cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Text.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "Si", asigna el formato estándar con "IN_" al inicio
+                txt_ID_declaracion_procedencia.Text = "DP_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_declaracion_procedencia.Text;
+            }
+            else if (cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Text.Equals("No  ", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "No", asigna el ID con "IN_" seguido de los valores necesarios
+                txt_ID_declaracion_procedencia.Text = "DP_" + cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_declaracion_procedencia.Text;
+            }
+            else
+            {
+                // Si no es "Si" ni "No", limpiar el campo
+                txt_ID_declaracion_procedencia.Text = "";
+            }
+        }
 
         // txt_turno_denuncia_declaracion_procedencia
         private void txt_turno_denuncia_declaracion_procedencia_KeyPress(object sender, KeyPressEventArgs e)
@@ -374,7 +400,27 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void txt_turno_denuncia_declaracion_procedencia_TextChanged(object sender, EventArgs e)
+        {
+            // Verifica si el ComboBox tiene el valor "Si" o "No"
+            if (cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Text.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "Si", asigna el formato estándar con "IN_" al inicio
+                txt_ID_declaracion_procedencia.Text = "DP_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_declaracion_procedencia.Text;
+            }
+            else if (cmb_cond_presentacion_denuncia_declaracion_procedencia_legislatura_actual.Text.Equals("No  ", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "No", asigna el ID con "IN_" seguido de los valores necesarios
+                txt_ID_declaracion_procedencia.Text = "DP_" + cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_declaracion_procedencia.Text;
+            }
+            else
+            {
+                // Si no es "Si" ni "No", limpiar el campo
+                txt_ID_declaracion_procedencia.Text = "";
+            }
 
+            ActualizarIDdeclaracionp();
+        }
 
 
         // ---------------------------  Estatus --------------------------

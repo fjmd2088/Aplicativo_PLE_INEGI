@@ -103,6 +103,8 @@ namespace App_PLE.Vistas
         }
         private void cmb_cond_presentacion_iniciativa_legislatura_actual_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ActualizarIDIniciativa();
+
             // Obtener el valor seleccionado y eliminar espacios adicionales
             string valorComboBox1 = cmb_cond_presentacion_iniciativa_legislatura_actual.Text.Trim();
 
@@ -155,6 +157,8 @@ namespace App_PLE.Vistas
                 cmb_cond_modificacion_informacion_ingreso_periodo.BackColor = Color.LightGray;
                 cmb_cond_modificacion_informacion_ingreso_periodo.Text = "";
             }
+
+
         }
 
         // txt_turno_iniciativa
@@ -165,6 +169,29 @@ namespace App_PLE.Vistas
             {
                 e.Handled = true; // Ignorar el carácter
             }
+        }
+        private void txt_turno_iniciativa_TextChanged(object sender, EventArgs e)
+        {
+            
+
+            // Lógica para generar ID según la condición en el ComboBox
+            if (cmb_cond_presentacion_iniciativa_legislatura_actual.Text.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "Si", se asigna el ID con el formato deseado
+                txt_ID_iniciativa.Text = "IN_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_iniciativa.Text;
+            }
+            else if (cmb_cond_presentacion_iniciativa_legislatura_actual.Text.Equals("No  ", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "No", se asigna solo el ID sin "IN_" y con el turno al final
+                txt_ID_iniciativa.Text = "IN_" + cmb_numero_legislatura_presentacion_iniciativa.Text + "_" + txt_agee.Text + "_" + txt_turno_iniciativa.Text;
+            }
+            else
+            {
+                // Si no se selecciona ni "Si" ni "No", limpiar el campo
+                txt_ID_iniciativa.Text = "";
+            }
+
+            ActualizarIDIniciativa();
         }
 
         // cmb_numero_legislatura_presentacion_iniciativa
@@ -208,6 +235,32 @@ namespace App_PLE.Vistas
                     // Evitar que el control pierda el foco
                     e.Cancel = true;
                 }
+            }
+        }
+        private void cmb_numero_legislatura_presentacion_iniciativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Reutilizamos la lógica de actualización del ID
+            ActualizarIDIniciativa();
+        }
+
+        // Método para actualizar txt_ID_iniciativa basado en las condiciones
+        private void ActualizarIDIniciativa()
+        {
+            // Verifica si el ComboBox tiene el valor "Si" o "No"
+            if (cmb_cond_presentacion_iniciativa_legislatura_actual.Text.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "Si", asigna el formato estándar con "IN_" al inicio
+                txt_ID_iniciativa.Text = "IN_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_iniciativa.Text;
+            }
+            else if (cmb_cond_presentacion_iniciativa_legislatura_actual.Text.Equals("No  ", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "No", asigna el ID con "IN_" seguido de los valores necesarios
+                txt_ID_iniciativa.Text = "IN_" + cmb_numero_legislatura_presentacion_iniciativa.Text + "_" + txt_agee.Text + "_" + txt_turno_iniciativa.Text;
+            }
+            else
+            {
+                // Si no es "Si" ni "No", limpiar el campo
+                txt_ID_iniciativa.Text = "";
             }
         }
 

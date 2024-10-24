@@ -293,7 +293,7 @@ namespace App_PLE.Vistas
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_ID_iniciativa.Enabled = false;
-            txt_ID_iniciativa.Enabled = false; txt_ID_iniciativa.BackColor = Color.LightGray;
+            txt_ID_iniciativa.Enabled = false; 
             cmb_cond_presentacion_iniciativa_periodo.Enabled = true; cmb_cond_presentacion_iniciativa_periodo.BackColor = Color.Honeydew;
 
 
@@ -604,6 +604,22 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

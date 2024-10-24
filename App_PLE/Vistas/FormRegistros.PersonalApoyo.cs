@@ -37,11 +37,9 @@ namespace App_PLE.Vistas
         private void txt_nombre_1_personal_apoyo_TextChanged(object sender, EventArgs e)
         {
             // Convertir el texto del TextBox a mayúsculas y establecerlo de nuevo en el TextBox
-
             txt_nombre_1_personal_apoyo.Text = txt_nombre_1_personal_apoyo.Text.ToUpper();
 
             // Colocar el cursor al final del texto para mantener la posición del cursor
-
             txt_nombre_1_personal_apoyo.SelectionStart = txt_nombre_1_personal_apoyo.Text.Length;
 
             // Desbloquear txt_nombre_2_personal_apoyo, cambiar su color de fondo, o borrarlo y deshabilitarlo
@@ -57,6 +55,7 @@ namespace App_PLE.Vistas
                 txt_nombre_2_personal_apoyo.Enabled = false;
                 txt_nombre_2_personal_apoyo.BackColor = SystemColors.Window; // Restaurar el color predeterminado
             }
+
             // Lógica para generar ID a partir de nombres, apellidos, fecha de nacimiento y sexo
             string primerosDigitos = "";
 
@@ -114,11 +113,11 @@ namespace App_PLE.Vistas
                 }
             }
 
-            // Extraer el año de la fecha de nacimiento
+            // Extraer los últimos 4 dígitos del año de nacimiento
             if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
             {
-                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
-                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año completo
+                primerosDigitos += añoNacimiento.ToString(); // Añadir el año completo (4 dígitos)
             }
 
             // Extraer la primera letra del sexo
@@ -222,11 +221,11 @@ namespace App_PLE.Vistas
                 }
             }
 
-            // Extraer el año de la fecha de nacimiento
+            // Extraer los últimos 4 dígitos del año de nacimiento
             if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
             {
-                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
-                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año completo
+                primerosDigitos += añoNacimiento.ToString(); // Añadir el año completo (4 dígitos)
             }
 
             // Extraer la primera letra del sexo
@@ -348,11 +347,11 @@ namespace App_PLE.Vistas
                 }
             }
 
-            // Extraer el año de la fecha de nacimiento
+            // Extraer los últimos 4 dígitos del año de nacimiento
             if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
             {
-                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
-                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año completo
+                primerosDigitos += añoNacimiento.ToString(); // Añadir el año completo (4 dígitos)
             }
 
             // Extraer la primera letra del sexo
@@ -457,11 +456,11 @@ namespace App_PLE.Vistas
                 }
             }
 
-            // Extraer el año de la fecha de nacimiento
+            // Extraer los últimos 4 dígitos del año de nacimiento
             if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
             {
-                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
-                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año completo
+                primerosDigitos += añoNacimiento.ToString(); // Añadir el año completo (4 dígitos)
             }
 
             // Extraer la primera letra del sexo
@@ -641,11 +640,11 @@ namespace App_PLE.Vistas
                 }
             }
 
-            // Extraer el año de la fecha de nacimiento
+            // Extraer los últimos 4 dígitos del año de nacimiento
             if (dtp_fecha_nacimiento_personal_apoyo.Value != null)
             {
-                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año
-                primerosDigitos += añoNacimiento.ToString().Substring(2, 2); // Extraer los últimos 2 dígitos del año
+                int añoNacimiento = dtp_fecha_nacimiento_personal_apoyo.Value.Year; // Obtener el año completo
+                primerosDigitos += añoNacimiento.ToString(); // Añadir el año completo (4 dígitos)
             }
 
             // Extraer la primera letra del sexo

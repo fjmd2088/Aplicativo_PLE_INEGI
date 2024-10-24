@@ -28,6 +28,11 @@ namespace App_PLE.Vistas
             }
 
         }
+        private void txt_consecutivo_comparecencia_TextChanged(object sender, EventArgs e)
+        {
+            // Agrega el ID 
+            txt_ID_comparecencias.Text = "CMP_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_consecutivo_comparecencia.Text;
+        }
 
         private void dtp_fecha_comparecencia_CloseUp(object sender, EventArgs e)
         {

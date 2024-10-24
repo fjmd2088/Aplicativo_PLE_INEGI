@@ -104,6 +104,7 @@ namespace App_PLE.Vistas
         }
         private void cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ActualizarIDjuiciospoliticos();
             string valorComboBox1 = cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Text.Trim();
 
             // Bloquea la condicion de la denucnia
@@ -389,6 +390,32 @@ namespace App_PLE.Vistas
 
             }
         }
+        private void cmb_numero_legislatura_presentacion_denuncia_juicio_politico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Reutilizamos la lógica de actualización del ID
+            ActualizarIDjuiciospoliticos();
+        }
+
+        // Método para actualizar txt_ID_juicio_político basado en las condiciones
+        private void ActualizarIDjuiciospoliticos()
+        {
+            // Verifica si el ComboBox tiene el valor "Si" o "No"
+            if (cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Text.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "Si", asigna el formato estándar con "IN_" al inicio
+                txt_ID_juicio_político.Text = "JP_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_juicio_politico.Text;
+            }
+            else if (cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Text.Equals("No  ", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "No", asigna el ID con "IN_" seguido de los valores necesarios
+                txt_ID_juicio_político.Text = "JP_" + cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_juicio_politico.Text;
+            }
+            else
+            {
+                // Si no es "Si" ni "No", limpiar el campo
+                txt_ID_juicio_político.Text = "";
+            }
+        }
 
         // txt_turno_denuncia_juicio_politico
         private void txt_turno_denuncia_juicio_politico_KeyPress(object sender, KeyPressEventArgs e)
@@ -399,7 +426,27 @@ namespace App_PLE.Vistas
                 e.Handled = true; // Ignorar el carácter
             }
         }
-               
+        private void txt_turno_denuncia_juicio_politico_TextChanged(object sender, EventArgs e)
+        {
+            // Verifica si el ComboBox tiene el valor "Si" o "No"
+            if (cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Text.Equals("Si", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "Si", asigna el formato estándar con "IN_" al inicio
+                txt_ID_juicio_político.Text = "JP_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_juicio_politico.Text;
+            }
+            else if (cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual.Text.Equals("No  ", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es "No", asigna el ID con "IN_" seguido de los valores necesarios
+                txt_ID_juicio_político.Text = "JP_" + cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Text + "_" + txt_agee.Text + "_" + txt_turno_denuncia_juicio_politico.Text;
+            }
+            else
+            {
+                // Si no es "Si" ni "No", limpiar el campo
+                txt_ID_juicio_político.Text = "";
+            }
+
+            ActualizarIDjuiciospoliticos();
+        }
 
         private void Cmb_cond_actualizacion_estatus_denuncia_juicio_politico_periodo()
         {

@@ -2068,6 +2068,7 @@ namespace App_PLE.Vistas
             this.txt_consecutivo_comparecencia.Size = new System.Drawing.Size(248, 24);
             this.txt_consecutivo_comparecencia.TabIndex = 48;
             this.txt_consecutivo_comparecencia.UseWaitCursor = true;
+            this.txt_consecutivo_comparecencia.TextChanged += new System.EventHandler(this.txt_consecutivo_comparecencia_TextChanged);
             this.txt_consecutivo_comparecencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_consecutivo_comparecencia_KeyPress);
             // 
             // label251
@@ -3420,6 +3421,7 @@ namespace App_PLE.Vistas
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(104, 26);
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.TabIndex = 42;
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.UseWaitCursor = true;
+            this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.SelectedIndexChanged += new System.EventHandler(this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_SelectedIndexChanged);
             this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_numero_legislatura_presentacion_denuncia_declaracion_procedencia_Validating);
             // 
             // txt_turno_denuncia_declaracion_procedencia
@@ -3432,6 +3434,7 @@ namespace App_PLE.Vistas
             this.txt_turno_denuncia_declaracion_procedencia.Size = new System.Drawing.Size(104, 24);
             this.txt_turno_denuncia_declaracion_procedencia.TabIndex = 40;
             this.txt_turno_denuncia_declaracion_procedencia.UseWaitCursor = true;
+            this.txt_turno_denuncia_declaracion_procedencia.TextChanged += new System.EventHandler(this.txt_turno_denuncia_declaracion_procedencia_TextChanged);
             this.txt_turno_denuncia_declaracion_procedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_turno_denuncia_declaracion_procedencia_KeyPress);
             // 
             // label232
@@ -4294,6 +4297,7 @@ namespace App_PLE.Vistas
             this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.Size = new System.Drawing.Size(125, 26);
             this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.TabIndex = 42;
             this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.UseWaitCursor = true;
+            this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico.SelectedIndexChanged += new System.EventHandler(this.cmb_numero_legislatura_presentacion_denuncia_juicio_politico_SelectedIndexChanged);
             // 
             // txt_turno_denuncia_juicio_politico
             // 
@@ -4305,6 +4309,7 @@ namespace App_PLE.Vistas
             this.txt_turno_denuncia_juicio_politico.Size = new System.Drawing.Size(95, 24);
             this.txt_turno_denuncia_juicio_politico.TabIndex = 40;
             this.txt_turno_denuncia_juicio_politico.UseWaitCursor = true;
+            this.txt_turno_denuncia_juicio_politico.TextChanged += new System.EventHandler(this.txt_turno_denuncia_juicio_politico_TextChanged);
             this.txt_turno_denuncia_juicio_politico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_turno_denuncia_juicio_politico_KeyPress);
             // 
             // groupBox103
@@ -6175,6 +6180,7 @@ namespace App_PLE.Vistas
             this.txt_turno_iniciativa_urgente_obvia.Size = new System.Drawing.Size(163, 24);
             this.txt_turno_iniciativa_urgente_obvia.TabIndex = 40;
             this.txt_turno_iniciativa_urgente_obvia.UseWaitCursor = true;
+            this.txt_turno_iniciativa_urgente_obvia.TextChanged += new System.EventHandler(this.txt_turno_iniciativa_urgente_obvia_TextChanged);
             this.txt_turno_iniciativa_urgente_obvia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_turno_iniciativa_urgente_obvia_KeyPress);
             // 
             // label163
@@ -8263,12 +8269,13 @@ namespace App_PLE.Vistas
             // 
             this.txt_turno_iniciativa.BackColor = System.Drawing.Color.Honeydew;
             this.txt_turno_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_turno_iniciativa.Location = new System.Drawing.Point(1449, 38);
+            this.txt_turno_iniciativa.Location = new System.Drawing.Point(1449, 92);
             this.txt_turno_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_turno_iniciativa.Name = "txt_turno_iniciativa";
             this.txt_turno_iniciativa.Size = new System.Drawing.Size(84, 24);
             this.txt_turno_iniciativa.TabIndex = 40;
             this.txt_turno_iniciativa.UseWaitCursor = true;
+            this.txt_turno_iniciativa.TextChanged += new System.EventHandler(this.txt_turno_iniciativa_TextChanged);
             this.txt_turno_iniciativa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_turno_iniciativa_KeyPress);
             // 
             // cmb_numero_legislatura_presentacion_iniciativa
@@ -8276,19 +8283,20 @@ namespace App_PLE.Vistas
             this.cmb_numero_legislatura_presentacion_iniciativa.BackColor = System.Drawing.Color.Honeydew;
             this.cmb_numero_legislatura_presentacion_iniciativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_numero_legislatura_presentacion_iniciativa.FormattingEnabled = true;
-            this.cmb_numero_legislatura_presentacion_iniciativa.Location = new System.Drawing.Point(1383, 90);
+            this.cmb_numero_legislatura_presentacion_iniciativa.Location = new System.Drawing.Point(1440, 34);
             this.cmb_numero_legislatura_presentacion_iniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_numero_legislatura_presentacion_iniciativa.Name = "cmb_numero_legislatura_presentacion_iniciativa";
             this.cmb_numero_legislatura_presentacion_iniciativa.Size = new System.Drawing.Size(152, 26);
             this.cmb_numero_legislatura_presentacion_iniciativa.TabIndex = 39;
             this.cmb_numero_legislatura_presentacion_iniciativa.UseWaitCursor = true;
+            this.cmb_numero_legislatura_presentacion_iniciativa.SelectedIndexChanged += new System.EventHandler(this.cmb_numero_legislatura_presentacion_iniciativa_SelectedIndexChanged);
             this.cmb_numero_legislatura_presentacion_iniciativa.Validating += new System.ComponentModel.CancelEventHandler(this.cmb_numero_legislatura_presentacion_iniciativa_Validating);
             // 
             // label132
             // 
             this.label132.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label132.ForeColor = System.Drawing.Color.Black;
-            this.label132.Location = new System.Drawing.Point(1132, 38);
+            this.label132.Location = new System.Drawing.Point(1132, 92);
             this.label132.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label132.Name = "label132";
             this.label132.Size = new System.Drawing.Size(284, 28);
@@ -8300,7 +8308,7 @@ namespace App_PLE.Vistas
             // 
             this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label133.ForeColor = System.Drawing.Color.Black;
-            this.label133.Location = new System.Drawing.Point(925, 94);
+            this.label133.Location = new System.Drawing.Point(982, 38);
             this.label133.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(449, 23);
