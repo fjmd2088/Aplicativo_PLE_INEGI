@@ -21,8 +21,13 @@ namespace App_PLE.Vistas
         private void dtp_fecha_inicio_po_DropDown(object sender, EventArgs e)
         {
             f5 = dtp_fecha_inicio_po.Value;
+
+            // Muestra la fecha
+            dtp_fecha_inicio_po.Format = DateTimePickerFormat.Short;
+            dtp_fecha_inicio_po.CustomFormat = "dd/MM/yyyy";
         }
-        private void dtp_fecha_inicio_po_CloseUp(object sender, EventArgs e)
+        
+    private void dtp_fecha_inicio_po_CloseUp(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("¿Está seguro de MODIFICAR la fecha?", "Confirmacion",
               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -37,11 +42,16 @@ namespace App_PLE.Vistas
             // Cancelar cualquier entrada manual
             e.Handled = true;
         }
-   
+        
+
         private DateTime f6;
         private void dtp_fecha_termino_po_DropDown(object sender, EventArgs e)
         {
             f6 = dtp_fecha_termino_po.Value;
+
+            // Muestra la fecha
+            dtp_fecha_termino_po.Format = DateTimePickerFormat.Short;
+            dtp_fecha_termino_po.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_termino_po_CloseUp(object sender, EventArgs e)
         {
@@ -78,6 +88,10 @@ namespace App_PLE.Vistas
         private void dtp_fecha_inicio_p_rec_DropDown(object sender, EventArgs e)
         {
             f7 = dtp_fecha_inicio_p_rec.Value;
+
+            // Muestra la fecha
+            dtp_fecha_inicio_p_rec.Format = DateTimePickerFormat.Short;
+            dtp_fecha_inicio_p_rec.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_inicio_p_rec_CloseUp(object sender, EventArgs e)
         {
@@ -99,6 +113,10 @@ namespace App_PLE.Vistas
         private void dtp_fecha_termino_p_rec_DropDown(object sender, EventArgs e)
         {
             f8 = dtp_fecha_termino_p_rec.Value;
+
+            // Muestra la fecha
+            dtp_fecha_termino_p_rec.Format = DateTimePickerFormat.Short;
+            dtp_fecha_termino_p_rec.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_termino_p_rec_CloseUp(object sender, EventArgs e)
         {
@@ -1810,6 +1828,10 @@ namespace App_PLE.Vistas
         private void dtp_inicio_funciones_legislatura_DropDown(object sender, EventArgs e)
         {
             f1 = dtp_inicio_funciones_legislatura.Value;
+
+            // Muestra la fecha
+            dtp_inicio_funciones_legislatura.Format = DateTimePickerFormat.Short;
+            dtp_inicio_funciones_legislatura.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_inicio_funciones_legislatura_CloseUp(object sender, EventArgs e)
         {
@@ -1834,6 +1856,10 @@ namespace App_PLE.Vistas
         {
             f2 = dtp_termino_funciones_legislatura.Value;
 
+            // Muestra la fecha
+            dtp_termino_funciones_legislatura.Format = DateTimePickerFormat.Short;
+            dtp_termino_funciones_legislatura.CustomFormat = "dd/MM/yyyy";
+
         }
         private void dtp_termino_funciones_legislatura_CloseUp(object sender, EventArgs e)
         {
@@ -1856,6 +1882,10 @@ namespace App_PLE.Vistas
         private void dtp_fecha_inicio_informacion_reportada_DropDown(object sender, EventArgs e)
         {
             f3 = dtp_fecha_inicio_informacion_reportada.Value;
+
+            // Muestra la fecha
+            dtp_fecha_inicio_informacion_reportada.Format = DateTimePickerFormat.Short;
+            dtp_fecha_inicio_informacion_reportada.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_inicio_informacion_reportada_CloseUp(object sender, EventArgs e)
         {
@@ -1878,6 +1908,10 @@ namespace App_PLE.Vistas
         private void dtp_fecha_termino_informacion_reportada_DropDown(object sender, EventArgs e)
         {
             f4 = dtp_fecha_termino_informacion_reportada.Value;
+
+            // Muestra la fecha
+            dtp_fecha_termino_informacion_reportada.Format = DateTimePickerFormat.Short;
+            dtp_fecha_termino_informacion_reportada.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_termino_informacion_reportada_CloseUp(object sender, EventArgs e)
         {
@@ -1904,6 +1938,10 @@ namespace App_PLE.Vistas
         private void dtp_fecha_inicio_pe_DropDown(object sender, EventArgs e)
         {
             f9 = dtp_fecha_inicio_pe.Value;
+
+            // Muestra la fecha
+            dtp_fecha_inicio_pe.Format = DateTimePickerFormat.Short;
+            dtp_fecha_inicio_pe.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_inicio_pe_CloseUp(object sender, EventArgs e)
         {
@@ -1942,6 +1980,10 @@ namespace App_PLE.Vistas
         private void dtp_fecha_termino_pe_DropDown(object sender, EventArgs e)
         {
             f10 = dtp_fecha_termino_pe.Value;
+
+            // Muestra la fecha
+            dtp_fecha_termino_pe.Format = DateTimePickerFormat.Short;
+            dtp_fecha_termino_pe.CustomFormat = "dd/MM/yyyy";
         }
         private void dtp_fecha_termino_pe_CloseUp(object sender, EventArgs e)
         {

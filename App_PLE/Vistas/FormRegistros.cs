@@ -191,6 +191,7 @@ namespace App_PLE.Vistas
             dtp_fecha_nacimiento_persona_legisladora.Format = DateTimePickerFormat.Custom;
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            
             txt_nombre_2_persona_legisladora.Enabled = false; txt_nombre_2_persona_legisladora.BackColor = Color.LightGray;
             txt_nombre_3_persona_legisladora.Enabled = false; txt_nombre_3_persona_legisladora.BackColor = Color.LightGray;
             txt_apellido_2_persona_legisladora.Enabled = false; txt_apellido_2_persona_legisladora.BackColor = Color.LightGray;
@@ -211,7 +212,7 @@ namespace App_PLE.Vistas
             cmb_tipo_candidatura_persona_legisladora.Enabled = false; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
-            txt_ID_persona_legisladora.Enabled = false;
+            txt_ID_persona_legisladora.Enabled = false; 
             dgv_partido_coalicion.BackgroundColor = Color.LightGray;
             dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
             dgv_lengua_PA.BackgroundColor = Color.LightGray;
@@ -273,6 +274,8 @@ namespace App_PLE.Vistas
             dtp_fecha_nacimiento_personal_apoyo.Format = DateTimePickerFormat.Custom;
 
             // CAMPOS DESHABILITADOS INICIALMENTE
+            txt_ID_personal_apoyo.Text = "";
+            txt_ID_persona_legisladora.Text = "";
             txt_ID_personal_apoyo.Enabled = false;
             txt_nombre_2_personal_apoyo.Enabled = false; txt_nombre_2_personal_apoyo.BackColor = Color.LightGray;
             txt_nombre_3_personal_apoyo.Enabled = false; txt_nombre_3_personal_apoyo.BackColor = Color.LightGray;
@@ -334,6 +337,7 @@ namespace App_PLE.Vistas
             cmb_tema_comision_legislativa.Text = "";
             cmb_tipo_comision_legislativa.Text = "";
 
+            
             cmb_cond_presentacion_iniciativa_periodo.Enabled = false;
             cmb_numero_legislatura_presentacion_iniciativa.Enabled = false;
             cmb_cond_actualizacion_estatus_iniciativa_periodo.Enabled = false;
@@ -634,6 +638,18 @@ namespace App_PLE.Vistas
         }
 
         
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

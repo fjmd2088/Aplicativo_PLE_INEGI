@@ -1505,6 +1505,7 @@ namespace App_PLE.Vistas
                 cmb_municipio_persona_servidora_publica_declaracion_procedencia.Enabled = true;
                 cmb_municipio_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
                 cmb_municipio_persona_servidora_publica_declaracion_procedencia.Text = "";
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
                 txt_AGEM_persona_servidora_publica_declaracion_procedencia.Enabled = false;
                 txt_AGEM_persona_servidora_publica_declaracion_procedencia.BackColor = Color.Honeydew;
@@ -1516,6 +1517,7 @@ namespace App_PLE.Vistas
                 cmb_municipio_persona_servidora_publica_declaracion_procedencia.Enabled = false;
                 cmb_municipio_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;
                 cmb_municipio_persona_servidora_publica_declaracion_procedencia.Text = "";
+                cmb_municipio_persona_servidora_publica_declaracion_procedencia.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
                 txt_AGEM_persona_servidora_publica_declaracion_procedencia.Enabled = false;
                 txt_AGEM_persona_servidora_publica_declaracion_procedencia.BackColor = Color.LightGray;

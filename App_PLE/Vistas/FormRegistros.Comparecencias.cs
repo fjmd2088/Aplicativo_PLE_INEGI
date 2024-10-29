@@ -901,6 +901,7 @@ namespace App_PLE.Vistas
                 cmb_municipio_persona_servidora_publica_comparecencia.Enabled = true;
                 cmb_municipio_persona_servidora_publica_comparecencia.BackColor = Color.Honeydew;
                 cmb_municipio_persona_servidora_publica_comparecencia.Text = "";
+                cmb_municipio_persona_servidora_publica_comparecencia.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
                 txt_AGEM_persona_servidora_publica_comparecencia.Enabled = false;
                 txt_AGEM_persona_servidora_publica_comparecencia.BackColor = Color.Honeydew;
@@ -912,6 +913,7 @@ namespace App_PLE.Vistas
                 cmb_municipio_persona_servidora_publica_comparecencia.Enabled = false;
                 cmb_municipio_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;
                 cmb_municipio_persona_servidora_publica_comparecencia.Text = "";
+                cmb_municipio_persona_servidora_publica_comparecencia.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
                 txt_AGEM_persona_servidora_publica_comparecencia.Enabled = false;
                 txt_AGEM_persona_servidora_publica_comparecencia.BackColor = Color.LightGray;

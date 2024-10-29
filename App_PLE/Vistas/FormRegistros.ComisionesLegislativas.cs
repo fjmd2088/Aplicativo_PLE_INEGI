@@ -804,6 +804,14 @@ namespace App_PLE.Vistas
                 "se sugiere respetar el orden descendente de las fracciones establecidas en el correspondiente " +
                 "artículo de la Ley o Reglamento del Congreso de la entidad federativa.");
         }
+        private void txt_consecutivo_comision_legislativa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir números, backspace, y el signo menos si está al principio
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter
+            }
+        }
         private void txt_cant_iniciativas_turnadas_a_comision_legislativa_TextChanged(object sender, EventArgs e)
         {
             int valor;

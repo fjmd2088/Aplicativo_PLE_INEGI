@@ -31,7 +31,39 @@ namespace App_PLE.Vistas
             // Agrega el ID 
             txt_ID_iniciativa_urgente_obvia.Text = "IN_" + "UO_" + cmb_numero_legislatura.Text + "_" + txt_agee.Text + "_" + txt_turno_iniciativa_urgente_obvia.Text;
         }
-            
+
+        // Fechas para mostrar
+
+        private void dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.Format = DateTimePickerFormat.Short;
+            dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Short;
+            dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_resolucion_pleno_iniciativa_urgente_obvia_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_resolucion_pleno_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Short;
+            dtp_fecha_resolucion_pleno_iniciativa_urgente_obvia.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Short;
+            dtp_fecha_remision_ejecutivo_iniciativa_urgente_obvia.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.Format = DateTimePickerFormat.Short;
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia.CustomFormat = "dd/MM/yyyy";
+        }
 
         // ESTATUS -------------------------------------------------------------------------------------------------------------------------
 
@@ -531,8 +563,7 @@ namespace App_PLE.Vistas
             {
                 cmb_grupo_parlamentario_UO.Enabled = true;
                 cmb_grupo_parlamentario_UO.BackColor = Color.Honeydew;
-                //btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
-                //dgv_grupos_parla.BackgroundColor = Color.Honeydew;
+                cmb_grupo_parlamentario_UO.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
             }
             else
@@ -543,6 +574,7 @@ namespace App_PLE.Vistas
                 //btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
                 //dgv_grupos_parla.BackgroundColor = Color.LightGray;
                 dgv_grupos_parla_UO.Rows.Clear();
+                cmb_grupo_parlamentario_UO.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
 
             // Desbloquea Comisiones legislativas
@@ -585,6 +617,8 @@ namespace App_PLE.Vistas
                 cmb_ayuntamiento_uo.Enabled = true; txt_ageem_ini.Enabled = false;
                 cmb_ayuntamiento_uo.BackColor = Color.Honeydew;
                 cmb_ayuntamiento_uo.BackColor = Color.Honeydew;
+                cmb_ayuntamiento_uo.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
+
             }
             else
             {
@@ -594,6 +628,7 @@ namespace App_PLE.Vistas
                 txt_ageem_uo.Enabled = false;
                 txt_ageem_uo.BackColor = Color.LightGray;
                 txt_ageem_uo.Text = "";
+                cmb_ayuntamiento_uo.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
             // Desbloquea el Tipo de organo constitucional aytónomo promovente de la iniciativa
             if (valorComboBox1.Equals("Órgano constitucional autónomo", StringComparison.OrdinalIgnoreCase))
@@ -872,6 +907,7 @@ namespace App_PLE.Vistas
                 cmb_varios_grupos_parlamentarios_especifique_UO.Text = "";
                 btn_agregar_grupo_parla_UO.Enabled = true; btn_eliminar_grupo_parla_UO.Enabled = true;
                 dgv_grupos_parla_UO.BackgroundColor = Color.Honeydew;
+                cmb_varios_grupos_parlamentarios_especifique_UO.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
             else
             {
@@ -881,6 +917,7 @@ namespace App_PLE.Vistas
                 btn_agregar_grupo_parla_UO.Enabled = false; btn_eliminar_grupo_parla_UO.Enabled = false;
                 dgv_grupos_parla_UO.BackgroundColor = Color.LightGray;
                 dgv_grupos_parla_UO.Rows.Clear();
+                cmb_varios_grupos_parlamentarios_especifique_UO.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
         }
 

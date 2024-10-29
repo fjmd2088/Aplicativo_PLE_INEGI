@@ -456,6 +456,12 @@ namespace App_PLE.Vistas
                     sexo1, fechaNacimiento);
             txt_ID_personal_apoyo.Text = uniqueID;
         }
+        private void dtp_fecha_nacimiento_personal_apoyo_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_nacimiento_personal_apoyo.Format = DateTimePickerFormat.Short;
+            dtp_fecha_nacimiento_personal_apoyo.CustomFormat = "dd/MM/yyyy";
+        }
 
 
         // LENGUA ------------------------------------------------------------------------------------------------------------------------------------

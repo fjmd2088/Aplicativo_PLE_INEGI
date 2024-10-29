@@ -4037,7 +4037,12 @@ namespace App_PLE.Vistas
             // Cancelar cualquier entrada manual
             e.Handled = true;
         }
-
+        private void dtp_fecha_nacimiento_persona_legisladora_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_nacimiento_persona_legisladora.Format = DateTimePickerFormat.Short;
+            dtp_fecha_nacimiento_persona_legisladora.CustomFormat = "dd/MM/yyyy";
+        }
 
         private void cmb_cond_pob_diversidad_sexual_persona_legisladora_Leave(object sender, EventArgs e)
         {

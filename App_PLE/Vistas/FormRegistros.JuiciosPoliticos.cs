@@ -1476,6 +1476,7 @@ namespace App_PLE.Vistas
                 cmb_municipio_persona_servidora_publica_juicio_politico.Enabled = true;
                 cmb_municipio_persona_servidora_publica_juicio_politico.BackColor = Color.Honeydew;
                 cmb_municipio_persona_servidora_publica_juicio_politico.Text = "";
+                cmb_municipio_persona_servidora_publica_juicio_politico.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
                 txt_AGEM_persona_servidora_publica_juicio_politico.Enabled = false;
                 txt_AGEM_persona_servidora_publica_juicio_politico.BackColor = Color.Honeydew;
@@ -1486,6 +1487,7 @@ namespace App_PLE.Vistas
                 cmb_municipio_persona_servidora_publica_juicio_politico.Enabled = false;
                 cmb_municipio_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;
                 cmb_municipio_persona_servidora_publica_juicio_politico.Text = "";
+                cmb_municipio_persona_servidora_publica_juicio_politico.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
 
                 txt_AGEM_persona_servidora_publica_juicio_politico.Enabled = false;
                 txt_AGEM_persona_servidora_publica_juicio_politico.BackColor = Color.LightGray;

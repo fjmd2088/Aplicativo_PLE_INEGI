@@ -15,6 +15,40 @@ namespace App_PLE.Vistas
 {
     public partial class FormRegistros : Form
     {
+        // Mostrar fechas 
+
+        private void dtp_fecha_ingreso_iniciativa_oficialia_partes_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_ingreso_iniciativa_oficialia_partes.Format = DateTimePickerFormat.Short;
+            dtp_fecha_ingreso_iniciativa_oficialia_partes.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_resolucion_pleno_iniciativa_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_resolucion_pleno_iniciativa.Format = DateTimePickerFormat.Short;
+            dtp_fecha_resolucion_pleno_iniciativa.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_remision_ejecutivo_iniciativa_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_remision_ejecutivo_iniciativa.Format = DateTimePickerFormat.Short;
+            dtp_fecha_remision_ejecutivo_iniciativa.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_publicacion_gaceta_oficial_iniciativa_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa.Format = DateTimePickerFormat.Short;
+            dtp_fecha_publicacion_gaceta_oficial_iniciativa.CustomFormat = "dd/MM/yyyy";
+        }
+        private void dtp_fecha_sesion_presentacion_iniciativa_DropDown(object sender, EventArgs e)
+        {
+            // Muestra la fecha
+            dtp_fecha_sesion_presentacion_iniciativa.Format = DateTimePickerFormat.Short;
+            dtp_fecha_sesion_presentacion_iniciativa.CustomFormat = "dd/MM/yyyy";
+        }
+
+
 
         // PRESENTACION --------------------------------------------------------------------------------------------------------------------
 
@@ -1539,16 +1573,15 @@ namespace App_PLE.Vistas
             {
                 cmb_grupo_parlamentario.Enabled = true;
                 cmb_grupo_parlamentario.BackColor = Color.Honeydew;
-                //btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
-                //dgv_grupos_parla.BackgroundColor = Color.Honeydew;
+                cmb_grupo_parlamentario.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
+                                                            
             }
             else
             {
                 cmb_grupo_parlamentario.Enabled = false;
                 cmb_grupo_parlamentario.BackColor = Color.LightGray;
-                cmb_grupo_parlamentario.Text = "";
-                //btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
-                //dgv_grupos_parla.BackgroundColor = Color.LightGray;
+                cmb_grupo_parlamentario.SelectedIndex = -1; // Limpia la selección cuando se deshabilita
+                                                            
                 dgv_grupos_parla.Rows.Clear();
             }
 
@@ -1592,6 +1625,7 @@ namespace App_PLE.Vistas
                 cmb_ayuntamiento.Enabled = true; txt_ageem_ini.Enabled = false;
                 cmb_ayuntamiento.BackColor = Color.Honeydew;
                 txt_ageem_ini.BackColor = Color.Honeydew;
+                cmb_ayuntamiento.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
             else
             {
@@ -1601,6 +1635,7 @@ namespace App_PLE.Vistas
                 txt_ageem_ini.Enabled = false;
                 txt_ageem_ini.BackColor = Color.LightGray;
                 txt_ageem_ini.Text = "";
+                cmb_ayuntamiento.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
             // Desbloquea el Tipo de organo constitucional aytónomo promovente de la iniciativa
             if (valorComboBox1.Equals("Órgano constitucional autónomo", StringComparison.OrdinalIgnoreCase))
@@ -1901,6 +1936,7 @@ namespace App_PLE.Vistas
                 cmb_varios_grupos_parlamentarios_especifique_1.Text = "";
                 btn_agregar_grupo_parla.Enabled = true; btn_eliminar_grupo_parla.Enabled = true;
                 dgv_grupos_parla.BackgroundColor = Color.Honeydew;
+                cmb_varios_grupos_parlamentarios_especifique_1.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
             else
             {
@@ -1910,6 +1946,7 @@ namespace App_PLE.Vistas
                 btn_agregar_grupo_parla.Enabled = false; btn_eliminar_grupo_parla.Enabled = false;
                 dgv_grupos_parla.BackgroundColor = Color.LightGray;
                 dgv_grupos_parla.Rows.Clear();
+                cmb_varios_grupos_parlamentarios_especifique_1.SelectedIndex = -1; // Deja el ComboBox vacío desde el inicio
             }
 
            
