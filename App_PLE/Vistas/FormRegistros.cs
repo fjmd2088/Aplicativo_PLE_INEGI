@@ -68,8 +68,30 @@ namespace App_PLE.Vistas
             // ---------------------------------------------- DATOS GENERALES ---------------------------------------------------------------
             cmb_Entidad();
 
+            // FECHAS 
+            dtp_inicio_funciones_legislatura.CustomFormat = " ";
+            dtp_inicio_funciones_legislatura.Format = DateTimePickerFormat.Custom;
+            dtp_termino_funciones_legislatura.CustomFormat = " ";
+            dtp_termino_funciones_legislatura.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_inicio_informacion_reportada.CustomFormat = " ";
+            dtp_fecha_inicio_informacion_reportada.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_termino_informacion_reportada.CustomFormat = " ";
+            dtp_fecha_termino_informacion_reportada.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_inicio_po.CustomFormat = " ";
+            dtp_fecha_inicio_po.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_termino_po.CustomFormat = " ";
+            dtp_fecha_termino_po.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_inicio_p_rec.CustomFormat = " ";
+            dtp_fecha_inicio_p_rec.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_termino_p_rec.CustomFormat = " ";
+            dtp_fecha_termino_p_rec.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_inicio_pe.CustomFormat = " ";
+            dtp_fecha_inicio_pe.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_termino_pe.CustomFormat = " ";
+            dtp_fecha_termino_pe.Format = DateTimePickerFormat.Custom;
+
             // CAMPOS DESHABILITADOS INICIALMENTE
-            txt_agee.Enabled = false; txt_agee.BackColor = Color.LightGray;
+            txt_agee.Enabled = false;
 
             txt_id_legislatura.Enabled = false; dgvPE.Enabled = false; cmb_periodo_extraordinario_reportado.Enabled = false;
             Txt_sesiones_celebradas_pe.Enabled = false;
@@ -164,6 +186,10 @@ namespace App_PLE.Vistas
             cmb_Cargo_jucopo();
             cmb_Nombre_comision_legislativa();
 
+            // FECHAS
+            dtp_fecha_nacimiento_persona_legisladora.CustomFormat = " ";
+            dtp_fecha_nacimiento_persona_legisladora.Format = DateTimePickerFormat.Custom;
+
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_nombre_2_persona_legisladora.Enabled = false; txt_nombre_2_persona_legisladora.BackColor = Color.LightGray;
             txt_nombre_3_persona_legisladora.Enabled = false; txt_nombre_3_persona_legisladora.BackColor = Color.LightGray;
@@ -185,7 +211,7 @@ namespace App_PLE.Vistas
             cmb_tipo_candidatura_persona_legisladora.Enabled = false; cmb_tipo_candidatura_persona_legisladora.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_partido_unico.Enabled = false; cmb_partido_politico_candidatura_partido_unico.BackColor = Color.LightGray;
             cmb_partido_politico_candidatura_coalicion.Enabled = false; cmb_partido_politico_candidatura_coalicion.BackColor = Color.LightGray;
-            txt_ID_persona_legisladora.Enabled = false; txt_ID_persona_legisladora.BackColor = Color.LightGray;
+            txt_ID_persona_legisladora.Enabled = false;
             dgv_partido_coalicion.BackgroundColor = Color.LightGray;
             dgv_nivel_escolaridad_PL.BackgroundColor = Color.LightGray;
             dgv_lengua_PA.BackgroundColor = Color.LightGray;
@@ -241,6 +267,10 @@ namespace App_PLE.Vistas
             CMB_nombre_persona_legisladora_personal_apoyo();
             CMB_grupo_parlamentario_personal_apoyo();
             cmb_Nombre_comision_legislativa_personal_apoyo();
+
+            // FECHAS
+            dtp_fecha_nacimiento_personal_apoyo.CustomFormat = " ";
+            dtp_fecha_nacimiento_personal_apoyo.Format = DateTimePickerFormat.Custom;
 
             // CAMPOS DESHABILITADOS INICIALMENTE
             txt_ID_personal_apoyo.Enabled = false;
