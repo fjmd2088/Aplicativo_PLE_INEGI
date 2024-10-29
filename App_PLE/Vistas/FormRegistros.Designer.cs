@@ -9759,6 +9759,7 @@ namespace App_PLE.Vistas
             this.dtp_fecha_nacimiento_personal_apoyo.Size = new System.Drawing.Size(123, 23);
             this.dtp_fecha_nacimiento_personal_apoyo.TabIndex = 21;
             this.dtp_fecha_nacimiento_personal_apoyo.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtp_fecha_nacimiento_personal_apoyo.ValueChanged += new System.EventHandler(this.dtp_fecha_nacimiento_personal_apoyo_ValueChanged);
             // 
             // label260
             // 
