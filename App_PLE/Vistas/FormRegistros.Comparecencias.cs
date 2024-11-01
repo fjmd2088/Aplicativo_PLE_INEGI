@@ -1389,7 +1389,7 @@ namespace App_PLE.Vistas
                                             }
                                             if (j == 1)
                                             {
-                                                string query = "INSERT INTO TR_COMPARECENCIAS (id_legislatura, txt_ID_comparecencias, nombre_comision_legislativa_1_comparecencia," +
+                                                string query = "INSERT INTO TR_COMPARECENCIAS (id_legislatura, txt_ID_comparecencias, cmb_nombre_comision_legislativa_1_comparecencia," +
                                                     "fecha_actualizacion) " +
                                                 "VALUES " +
                                                 "(@id_legislatura,@txt_ID_comparecencias, @RowValue, @fecha_actualizacion)";
@@ -1437,7 +1437,7 @@ namespace App_PLE.Vistas
         private void ClearControlsCOMP(Control control)
         {
             // Lista de nombres de DataGridView a excluir
-            var excludedDataGridViews = new List<string> { "dgv_participacion_comisiones" };
+            var excludedDataGridViews = new List<string> { "dgv_registros_comp" };
 
             foreach (Control c in control.Controls)
             {

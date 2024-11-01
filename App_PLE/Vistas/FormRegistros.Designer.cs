@@ -235,7 +235,7 @@ namespace App_PLE.Vistas
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
-            this.dataGridView16 = new System.Windows.Forms.DataGridView();
+            this.dgv_registros_jp = new System.Windows.Forms.DataGridView();
             this.groupBox105 = new System.Windows.Forms.GroupBox();
             this.dtp_fecha_procedencia_denuncia_juicio_politico = new System.Windows.Forms.DateTimePicker();
             this.label196 = new System.Windows.Forms.Label();
@@ -1036,7 +1036,7 @@ namespace App_PLE.Vistas
             this.groupBox109.SuspendLayout();
             this.tabPageJP.SuspendLayout();
             this.groupBox108.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_registros_jp)).BeginInit();
             this.groupBox105.SuspendLayout();
             this.groupBox50.SuspendLayout();
             this.groupBox107.SuspendLayout();
@@ -3505,7 +3505,7 @@ namespace App_PLE.Vistas
             this.groupBox108.Controls.Add(this.button52);
             this.groupBox108.Controls.Add(this.button53);
             this.groupBox108.Controls.Add(this.button54);
-            this.groupBox108.Controls.Add(this.dataGridView16);
+            this.groupBox108.Controls.Add(this.dgv_registros_jp);
             this.groupBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox108.ForeColor = System.Drawing.Color.Green;
             this.groupBox108.Location = new System.Drawing.Point(17, 1710);
@@ -3579,14 +3579,14 @@ namespace App_PLE.Vistas
             this.button54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button54.UseVisualStyleBackColor = true;
             // 
-            // dataGridView16
+            // dgv_registros_jp
             // 
-            this.dataGridView16.AllowUserToAddRows = false;
-            this.dataGridView16.AllowUserToDeleteRows = false;
-            this.dataGridView16.AllowUserToResizeRows = false;
-            this.dataGridView16.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView16.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_registros_jp.AllowUserToAddRows = false;
+            this.dgv_registros_jp.AllowUserToDeleteRows = false;
+            this.dgv_registros_jp.AllowUserToResizeRows = false;
+            this.dgv_registros_jp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_registros_jp.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_registros_jp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3594,20 +3594,21 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView16.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView16.Location = new System.Drawing.Point(16, 26);
-            this.dataGridView16.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView16.MultiSelect = false;
-            this.dataGridView16.Name = "dataGridView16";
-            this.dataGridView16.ReadOnly = true;
-            this.dataGridView16.RowHeadersVisible = false;
-            this.dataGridView16.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgv_registros_jp.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_registros_jp.Location = new System.Drawing.Point(16, 26);
+            this.dgv_registros_jp.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_registros_jp.MultiSelect = false;
+            this.dgv_registros_jp.Name = "dgv_registros_jp";
+            this.dgv_registros_jp.ReadOnly = true;
+            this.dgv_registros_jp.RowHeadersVisible = false;
+            this.dgv_registros_jp.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView16.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView16.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView16.Size = new System.Drawing.Size(1439, 229);
-            this.dataGridView16.TabIndex = 30;
+            this.dgv_registros_jp.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_registros_jp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_registros_jp.Size = new System.Drawing.Size(1439, 229);
+            this.dgv_registros_jp.TabIndex = 30;
+          
             // 
             // groupBox105
             // 
@@ -14662,7 +14663,7 @@ namespace App_PLE.Vistas
             this.tabPageJP.ResumeLayout(false);
             this.tabPageJP.PerformLayout();
             this.groupBox108.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_registros_jp)).EndInit();
             this.groupBox105.ResumeLayout(false);
             this.groupBox105.PerformLayout();
             this.groupBox50.ResumeLayout(false);
@@ -15059,7 +15060,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.Button button52;
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button54;
-        private System.Windows.Forms.DataGridView dataGridView16;
+        private System.Windows.Forms.DataGridView dgv_registros_jp;
         private System.Windows.Forms.GroupBox groupBox105;
         private System.Windows.Forms.DateTimePicker dtp_fecha_procedencia_denuncia_juicio_politico;
         private System.Windows.Forms.Label label196;
