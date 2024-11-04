@@ -230,7 +230,7 @@ namespace App_PLE.Vistas
             this.tabPageJP = new System.Windows.Forms.TabPage();
             this.btnGuardarJP = new System.Windows.Forms.Button();
             this.groupBox108 = new System.Windows.Forms.GroupBox();
-            this.button50 = new System.Windows.Forms.Button();
+            this.btnActualizarDGV_JP = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
@@ -324,12 +324,12 @@ namespace App_PLE.Vistas
             this.tabPageIniUO = new System.Windows.Forms.TabPage();
             this.btnGuardarIniUO = new System.Windows.Forms.Button();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnActualizarDGV_UO = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
-            this.dataGridView14 = new System.Windows.Forms.DataGridView();
+            this.dgv_registros_UO = new System.Windows.Forms.DataGridView();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
             this.dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia = new System.Windows.Forms.DateTimePicker();
@@ -1051,7 +1051,7 @@ namespace App_PLE.Vistas
             this.groupBox106.SuspendLayout();
             this.tabPageIniUO.SuspendLayout();
             this.groupBox102.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_registros_UO)).BeginInit();
             this.groupBox44.SuspendLayout();
             this.groupBox100.SuspendLayout();
             this.groupBox101.SuspendLayout();
@@ -3500,7 +3500,7 @@ namespace App_PLE.Vistas
             // 
             // groupBox108
             // 
-            this.groupBox108.Controls.Add(this.button50);
+            this.groupBox108.Controls.Add(this.btnActualizarDGV_JP);
             this.groupBox108.Controls.Add(this.button51);
             this.groupBox108.Controls.Add(this.button52);
             this.groupBox108.Controls.Add(this.button53);
@@ -3517,18 +3517,19 @@ namespace App_PLE.Vistas
             this.groupBox108.TabStop = false;
             this.groupBox108.Text = "Registros de Juicios politicos";
             // 
-            // button50
+            // btnActualizarDGV_JP
             // 
-            this.button50.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button50.Image = ((System.Drawing.Image)(resources.GetObject("button50.Image")));
-            this.button50.Location = new System.Drawing.Point(1513, 46);
-            this.button50.Margin = new System.Windows.Forms.Padding(4);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(63, 58);
-            this.button50.TabIndex = 81;
-            this.button50.UseVisualStyleBackColor = false;
-            this.button50.UseWaitCursor = true;
+            this.btnActualizarDGV_JP.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnActualizarDGV_JP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDGV_JP.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDGV_JP.Image")));
+            this.btnActualizarDGV_JP.Location = new System.Drawing.Point(1513, 46);
+            this.btnActualizarDGV_JP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizarDGV_JP.Name = "btnActualizarDGV_JP";
+            this.btnActualizarDGV_JP.Size = new System.Drawing.Size(63, 58);
+            this.btnActualizarDGV_JP.TabIndex = 81;
+            this.btnActualizarDGV_JP.UseVisualStyleBackColor = false;
+            this.btnActualizarDGV_JP.UseWaitCursor = true;
+            this.btnActualizarDGV_JP.Click += new System.EventHandler(this.btnActualizarDGV_JP_Click);
             // 
             // button51
             // 
@@ -3608,7 +3609,6 @@ namespace App_PLE.Vistas
             this.dgv_registros_jp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_registros_jp.Size = new System.Drawing.Size(1439, 229);
             this.dgv_registros_jp.TabIndex = 30;
-          
             // 
             // groupBox105
             // 
@@ -4848,15 +4848,16 @@ namespace App_PLE.Vistas
             this.btnGuardarIniUO.TabIndex = 95;
             this.btnGuardarIniUO.Text = "Guardar información";
             this.btnGuardarIniUO.UseVisualStyleBackColor = true;
+            this.btnGuardarIniUO.Click += new System.EventHandler(this.btnGuardarIniUO_Click);
             // 
             // groupBox102
             // 
-            this.groupBox102.Controls.Add(this.button15);
+            this.groupBox102.Controls.Add(this.btnActualizarDGV_UO);
             this.groupBox102.Controls.Add(this.button16);
             this.groupBox102.Controls.Add(this.button44);
             this.groupBox102.Controls.Add(this.button45);
             this.groupBox102.Controls.Add(this.button46);
-            this.groupBox102.Controls.Add(this.dataGridView14);
+            this.groupBox102.Controls.Add(this.dgv_registros_UO);
             this.groupBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox102.ForeColor = System.Drawing.Color.Green;
             this.groupBox102.Location = new System.Drawing.Point(12, 1745);
@@ -4868,18 +4869,19 @@ namespace App_PLE.Vistas
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "Registros de Iniciativas Urgentes Obvias";
             // 
-            // button15
+            // btnActualizarDGV_UO
             // 
-            this.button15.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(1513, 46);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(63, 58);
-            this.button15.TabIndex = 81;
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.UseWaitCursor = true;
+            this.btnActualizarDGV_UO.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnActualizarDGV_UO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDGV_UO.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDGV_UO.Image")));
+            this.btnActualizarDGV_UO.Location = new System.Drawing.Point(1513, 46);
+            this.btnActualizarDGV_UO.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizarDGV_UO.Name = "btnActualizarDGV_UO";
+            this.btnActualizarDGV_UO.Size = new System.Drawing.Size(63, 58);
+            this.btnActualizarDGV_UO.TabIndex = 81;
+            this.btnActualizarDGV_UO.UseVisualStyleBackColor = false;
+            this.btnActualizarDGV_UO.UseWaitCursor = true;
+            this.btnActualizarDGV_UO.Click += new System.EventHandler(this.btnActualizarDGV_UO_Click);
             // 
             // button16
             // 
@@ -4930,14 +4932,14 @@ namespace App_PLE.Vistas
             this.button46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button46.UseVisualStyleBackColor = true;
             // 
-            // dataGridView14
+            // dgv_registros_UO
             // 
-            this.dataGridView14.AllowUserToAddRows = false;
-            this.dataGridView14.AllowUserToDeleteRows = false;
-            this.dataGridView14.AllowUserToResizeRows = false;
-            this.dataGridView14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView14.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_registros_UO.AllowUserToAddRows = false;
+            this.dgv_registros_UO.AllowUserToDeleteRows = false;
+            this.dgv_registros_UO.AllowUserToResizeRows = false;
+            this.dgv_registros_UO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_registros_UO.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.dgv_registros_UO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4945,20 +4947,20 @@ namespace App_PLE.Vistas
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView14.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView14.Location = new System.Drawing.Point(16, 26);
-            this.dataGridView14.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView14.MultiSelect = false;
-            this.dataGridView14.Name = "dataGridView14";
-            this.dataGridView14.ReadOnly = true;
-            this.dataGridView14.RowHeadersVisible = false;
-            this.dataGridView14.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgv_registros_UO.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_registros_UO.Location = new System.Drawing.Point(16, 26);
+            this.dgv_registros_UO.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_registros_UO.MultiSelect = false;
+            this.dgv_registros_UO.Name = "dgv_registros_UO";
+            this.dgv_registros_UO.ReadOnly = true;
+            this.dgv_registros_UO.RowHeadersVisible = false;
+            this.dgv_registros_UO.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView14.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView14.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView14.Size = new System.Drawing.Size(1439, 229);
-            this.dataGridView14.TabIndex = 30;
+            this.dgv_registros_UO.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_registros_UO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_registros_UO.Size = new System.Drawing.Size(1439, 229);
+            this.dgv_registros_UO.TabIndex = 30;
             // 
             // groupBox44
             // 
@@ -14688,7 +14690,7 @@ namespace App_PLE.Vistas
             this.tabPageIniUO.ResumeLayout(false);
             this.tabPageIniUO.PerformLayout();
             this.groupBox102.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_registros_UO)).EndInit();
             this.groupBox44.ResumeLayout(false);
             this.groupBox100.ResumeLayout(false);
             this.groupBox100.PerformLayout();
@@ -15055,7 +15057,7 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.TabPage tabPageJP;
         private System.Windows.Forms.Button btnGuardarJP;
         private System.Windows.Forms.GroupBox groupBox108;
-        private System.Windows.Forms.Button button50;
+        private System.Windows.Forms.Button btnActualizarDGV_JP;
         private System.Windows.Forms.Button button51;
         private System.Windows.Forms.Button button52;
         private System.Windows.Forms.Button button53;
@@ -15148,12 +15150,12 @@ namespace App_PLE.Vistas
         private System.Windows.Forms.TabPage tabPageIniUO;
         private System.Windows.Forms.Button btnGuardarIniUO;
         private System.Windows.Forms.GroupBox groupBox102;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnActualizarDGV_UO;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button44;
         private System.Windows.Forms.Button button45;
         private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.DataGridView dataGridView14;
+        private System.Windows.Forms.DataGridView dgv_registros_UO;
         private System.Windows.Forms.GroupBox groupBox44;
         private System.Windows.Forms.GroupBox groupBox100;
         private System.Windows.Forms.DateTimePicker dtp_fecha_publicacion_gaceta_oficial_iniciativa_urgente_obvia;

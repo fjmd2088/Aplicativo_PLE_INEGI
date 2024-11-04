@@ -1426,7 +1426,7 @@ namespace App_PLE.Vistas
 
                 if (c.Controls.Count > 0)
                 {
-                    RecorrerControles(c, data);
+                    RecorrerControlesCOMP(c, data);
                 }
 
 

@@ -2105,18 +2105,6 @@ namespace App_PLE.Vistas
 
         //-------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
         // txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique
         private void txt_otro_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_especifique_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -2371,10 +2359,30 @@ namespace App_PLE.Vistas
 
                     for (int i = 0; i < dataGridView.Rows.Count; i++)
                     {
-                    }
+                        string rowValues = string.Empty;
+                        for (int j = 0; j < dataGridView.Columns.Count; j++)
+                        {
+                            if (dataGridView.Rows[i].Cells[j].Value != null)
+                            {
+                                rowValues = dataGridView.Rows[i].Cells[j].Value.ToString(); // Agrega un separador, como un espacio
 
+                                if (!string.IsNullOrEmpty(rowValues))
+                                {
+                                    
+                                }
+
+                            }
+                        }
+                        if (!string.IsNullOrWhiteSpace(rowValues))
+                        {
+                            rowValues = rowValues.Trim(); // Elimina el espacio extra al final
+                            rowValuesList.Add(rowValues);
+                        }
+                    }
+                   
                     // Se guardan los datagridview que solo contienen una columna******
                     foreach (var rowValue in rowValuesList)
+                    
                     {
                         // Aquí debes agregar tu lógica para guardar en la base de datos
                         string idPL = txt_ID_juicio_político.Text;
@@ -2383,9 +2391,9 @@ namespace App_PLE.Vistas
                         using (SQLiteConnection conn = new SQLiteConnection(cadena))
                         {
                             conn.Open();
-                            if (dataGridView.Name == "dgv_lengua_PL")
+                            if (dataGridView.Name == "dgv_perjuicios_pub")
                             {
-                                string query = "INSERT INTO TR_PERSONAS_LEGISLADORAS (id_legislatura, txt_ID_juicio_político, cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1," +
+                                string query = "INSERT INTO TR_JUICIOS_POLITICOS (id_legislatura, txt_ID_juicio_político, cmb_perjuicio_a_los_intereses_publicos_fundamentales_y_de_su_buen_despacho_1," +
                                     "fecha_actualizacion) " +
                                     "VALUES " +
                                     "(@id_legislatura,@txt_ID_juicio_político, @RowValue, @fecha_actualizacion)";
@@ -2400,10 +2408,17 @@ namespace App_PLE.Vistas
                                     cmd.ExecuteNonQuery();
                                 }
                             }
-
+                            
 
                         }
                     }
+
+
+                }
+
+                if (c.Controls.Count > 0)
+                {
+                    RecorrerControlesJP(c, data);
                 }
             }
         }
