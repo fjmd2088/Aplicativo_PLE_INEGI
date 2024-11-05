@@ -6180,6 +6180,6 @@ namespace App_PLE.Vistas
             DGV_REGISTROS_PL();
         }
 
-
+        
     }
 }

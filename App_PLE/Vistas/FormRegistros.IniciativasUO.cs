@@ -1880,7 +1880,7 @@ namespace App_PLE.Vistas
                 if (respuesta == DialogResult.Yes)
                 {
                     // Agregar una nueva fila al DataGridView
-                    bool duplicado = IsDuplicateRecord_RegistrosPL(txt_ID_iniciativa_urgente_obvia.Text.ToString());
+                    bool duplicado = IsDuplicateRecord_RegistrosUO(txt_ID_iniciativa_urgente_obvia.Text.ToString());
 
                     if (duplicado == true)
                     {
@@ -1954,9 +1954,9 @@ namespace App_PLE.Vistas
             }
         }
         // REGISTROS PERSONAS LEGISLADORAS --------------------------------------------------------------
-        private bool IsDuplicateRecord_RegistrosOU(string variable_cmb)
+        private bool IsDuplicateRecord_RegistrosUO(string variable_cmb)
         {
-            foreach (DataGridViewRow row in dgv_registros_pl.Rows)
+            foreach (DataGridViewRow row in dgv_registros_UO.Rows)
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
@@ -1983,14 +1983,10 @@ namespace App_PLE.Vistas
 
                     // Comando de SQL
                     string query = "SELECT DISTINCT txt_ID_iniciativa_urgente_obvia, txt_turno_iniciativa_urgente_obvia, " +
-                                   "dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes, cmb_estatus_iniciativa_urgente_obvia, dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia " +
-                                   "FROM TR_PERSONAS_LEGISLADORAS " +
-                                   "WHERE id_legislatura = @id_legis " +
-                                   "AND txt_ID_iniciativa_urgente_obvia IS NOT NULL AND txt_ID_iniciativa_urgente_obvia <> '' " +
-                                   "AND txt_turno_iniciativa_urgente_obvia IS NOT NULL AND txt_turno_iniciativa_urgente_obvia <> '' " +
-                                   "AND dtp_fecha_ingreso_iniciativa_urgente_obvia_oficialia_partes IS NOT NULL " +
-                                   "AND cmb_estatus_iniciativa_urgente_obvia IS NOT NULL AND cmb_estatus_iniciativa_urgente_obvia <> '' " +
-                                   "AND dtp_fecha_sesion_presentacion_iniciativa_urgente_obvia IS NOT NULL ";
+                                   "cmb_estatus_iniciativa_urgente_obvia " +
+                                   "FROM TR_INICIATIVAS_URG_OBVIA " +
+                                   "WHERE id_legislatura = @id_legis ";
+                                   
                     ;
 
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
@@ -2260,7 +2256,7 @@ namespace App_PLE.Vistas
 
                 if (c.Controls.Count > 0)
                 {
-                    RecorrerControles(c, data);
+                    RecorrerControlesUO(c, data);
                 }
             }
 
