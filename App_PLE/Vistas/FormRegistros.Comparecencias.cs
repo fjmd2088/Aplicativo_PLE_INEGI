@@ -1109,5 +1109,363 @@ namespace App_PLE.Vistas
             txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.SelectionStart = txt_otro_cargo_persona_servidora_publica_comparecencia_ambito_municipal_especifique.Text.Length;
         }
 
+        // BOTON GUARRDAR
+
+        private void btnGuardarCOMP_Click(object sender, EventArgs e)
+        {
+            bool cv = ValidarCampos_COMP();
+            //bool cv = true;
+
+            if (cv == true)
+            {
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de Guardar los datos?", "Confirmacion",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    // Agregar una nueva fila al DataGridView
+                    bool duplicado = IsDuplicateRecord_RegistrosCOM(txt_ID_comparecencias.Text.ToString());
+
+                    if (duplicado == true)
+                    {
+                        MessageBox.Show("El ID ya se encuentra registrado. Favor de verificar la información.", "Comparecencias", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        GuardarDatosCOM();
+
+                        ClearControlsCOMP(tabPageCom);
+
+                        DGV_REGISTROS_COMP();
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+        private bool ValidarCampos_COMP()
+        {
+            // Array de controles a validar campos obligatorios
+            Control[] controlesAValidar = {
+        txt_consecutivo_comparecencia, dtp_fecha_comparecencia, cmb_motivo_comparecencia, cmb_modalidad_comparecencia
+    };
+
+            bool camposValidos = true;
+
+            foreach (Control c in controlesAValidar)
+            {
+                // Asigna el evento GotFocus fuera del bucle
+                c.GotFocus += Control_GotFocusCOM;
+
+                // Verificar si el control está vacío
+                if (c is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(c.Text))
+                {
+                    MessageBox.Show($"El campo {c.Name} está vacío.", "Campo vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    c.Focus(); // Enfocar el control vacío
+                    camposValidos = false; // Marcar que hay campos inválidos
+                    break; // Salir del bucle después de encontrar el primer campo vacío
+                }
+                else if (c is System.Windows.Forms.ComboBox && ((System.Windows.Forms.ComboBox)c).SelectedIndex == -1)
+                {
+                    MessageBox.Show($"Debe seleccionar una opción en {c.Name}.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    c.Focus(); // Enfocar el control vacío
+                    camposValidos = false; // Marcar que hay campos inválidos
+                    break; // Salir del bucle después de encontrar el primer campo vacío
+                }
+                // Agregar más validaciones según sea necesario para otros tipos de controles
+            }
+
+            return camposValidos;
+        }
+        private async void Control_GotFocusCOM(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            if (control != null)
+            {
+                Color originalColor = control.BackColor;
+                control.BackColor = Color.Yellow; // Color de resaltado
+                await Task.Delay(1500); // Espera 500 milisegundos
+                control.BackColor = originalColor; // Restablece el color original
+            }
+        }
+        // REGISTROS COMPARECENCIAS --------------------------------------------------------------
+        private bool IsDuplicateRecord_RegistrosCOM(string variable_cmb)
+        {
+            foreach (DataGridViewRow row in dgv_registros_comp.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                string existingId = row.Cells["txt_ID_comparecencias"].Value.ToString();
+
+                if (existingId == variable_cmb)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private void DGV_REGISTROS_COMP()
+        {
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+            string id_legis = txt_id_legislatura.Text;
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    // Abrir la conexión
+                    conexion.Open();
+
+                    // Comando de SQL
+                    string query = "SELECT DISTINCT txt_ID_comparecencias, " +
+                                   "dtp_fecha_comparecencia, cmb_motivo_comparecencia, cmb_modalidad_comparecencia " +
+                                   "FROM TR_COMPARECENCIAS " +
+                                   "WHERE id_legislatura = @id_legis " +
+                                   "AND txt_ID_comparecencias IS NOT NULL AND txt_ID_comparecencias <> '' " +
+                                   "AND dtp_fecha_comparecencia IS NOT NULL " +
+                                   "AND cmb_motivo_comparecencia IS NOT NULL AND cmb_motivo_comparecencia <> '' " +
+                                   "AND cmb_modalidad_comparecencia IS NOT NULL AND cmb_modalidad_comparecencia <> ''";
+                    ;
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        // Asignar el parámetro
+                        cmd.Parameters.AddWithValue("@id_legis", id_legis);
+
+                        // Utilizar un DataAdapter para obtener los datos
+                        using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+
+                            dgv_registros_comp.DataSource = dataTable;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar DGV personas legisladoras: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+        }
+        private void GuardarDatosCOM()
+        {
+            var data = new Dictionary<string, string>();
+
+            // Recorrer todos los controles y guardar datos no vacíos en el diccionario
+            RecorrerControlesCOMP(tabPageCom, data);
+
+            if (data.Count == 0)
+            {
+                MessageBox.Show("No hay datos para guardar.");
+                return;
+            }
+
+            string cadena = "Data Source=DB_PLE.db;Version=3;";
+
+            using (var connection = new SQLiteConnection(cadena))
+            {
+                connection.Open();
+                using (var transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // Construir dinámicamente la consulta SQL
+                        var columns = string.Join(", ", data.Keys);
+                        var parameters = string.Join(", ", data.Keys.Select(key => "@" + key));
+                        string query = $"INSERT INTO TR_COMPARECENCIAS ({columns}, fecha_actualizacion,id_legislatura) " +
+                            $"VALUES " +
+                            $"({parameters}, @fecha_actualizacion, @id_legislatura)";
+
+                        using (var command = new SQLiteCommand(query, connection, transaction))
+                        {
+                            // Agregar los parámetros al comando
+                            foreach (var kvp in data)
+                            {
+                                command.Parameters.AddWithValue($"@{kvp.Key}", kvp.Value);
+                            }
+
+                            // Registrar la consulta y los parámetros para depuración
+                            Console.WriteLine("Query: " + query);
+                            foreach (SQLiteParameter param in command.Parameters)
+                            {
+                                Console.WriteLine($"Parameter: {param.ParameterName} = {param.Value}");
+                            }
+
+                            command.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+                            command.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text.ToString());
+
+                            command.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        MessageBox.Show("Datos guardados correctamente.");
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show($"Error al guardar los datos: {ex.Message}");
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
+            }
+        }
+        private void RecorrerControlesCOMP(Control control, Dictionary<string, string> data)
+        {
+            // List of DataGridView names to exclude
+            var excludedDataGridViews = new List<string> { "dgv_registros_comp" };
+
+            foreach (Control c in control.Controls)
+            {
+                if (c is System.Windows.Forms.TextBox textBox && !string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    data.Add(textBox.Name, textBox.Text);
+                }
+                else if (c is System.Windows.Forms.ComboBox comboBox && !string.IsNullOrWhiteSpace(comboBox.Text))
+                {
+                    data.Add(comboBox.Name, comboBox.Text);
+                }
+                else if (c is System.Windows.Forms.DateTimePicker dateTimePicker)
+                {
+                    data.Add(dateTimePicker.Name, dateTimePicker.Text);
+                }
+                else if (c is DataGridView dataGridView && !excludedDataGridViews.Contains(dataGridView.Name))
+                {
+                    // Variable para almacenar las filas concatenadas
+                    List<string> rowValuesList = new List<string>();
+
+                    for (int i = 0; i < dataGridView.Rows.Count; i++)
+                    {
+                        string rowValues = string.Empty;
+                        for (int j = 0; j < dataGridView.Columns.Count; j++)
+                        {
+                            if (dataGridView.Rows[i].Cells[j].Value != null)
+                            {
+                                rowValues = dataGridView.Rows[i].Cells[j].Value.ToString(); // Agrega un separador, como un espacio
+
+                                if (!string.IsNullOrEmpty(rowValues))
+                                {
+                                    // se guardan los datagridviews que contienen (i,j) columnas*******
+                                    if (dataGridView.Name == "dgv_comisiones_leg_comparecencias")
+                                    {
+                                        string idPL2 = txt_ID_comparecencias.Text;
+                                        string cadena2 = "Data Source=DB_PLE.db;Version=3;";
+
+                                        using (SQLiteConnection conn = new SQLiteConnection(cadena2))
+                                        {
+                                            conn.Open();
+
+                                            if (j == 0)
+                                            {
+                                                string query = "INSERT INTO TR_COMPARECENCIAS (id_legislatura, " +
+                                                    "txt_ID_comparecencias," +
+                                                    "ID_comision_legislativa_1_comparecencia, " +
+                                                    "fecha_actualizacion) " +
+                                                 "VALUES " +
+                                                 "(@id_legislatura," +
+                                                 "@txt_ID_comparecencias," +
+                                                 "@RowValue," +
+                                                 "@fecha_actualizacion)";
+
+                                                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                                                {
+                                                    cmd.Parameters.AddWithValue("@RowValue", rowValues);
+                                                    cmd.Parameters.AddWithValue("@txt_ID_comparecencias", idPL2);
+                                                    cmd.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+                                                    cmd.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text.ToString());
+
+                                                    cmd.ExecuteNonQuery();
+                                                }
+                                            }
+                                            if (j == 1)
+                                            {
+                                                string query = "INSERT INTO TR_COMPARECENCIAS (id_legislatura, txt_ID_comparecencias, cmb_nombre_comision_legislativa_1_comparecencia," +
+                                                    "fecha_actualizacion) " +
+                                                "VALUES " +
+                                                "(@id_legislatura,@txt_ID_comparecencias, @RowValue, @fecha_actualizacion)";
+                                                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                                                {
+                                                    cmd.Parameters.AddWithValue("@RowValue", rowValues);
+                                                    cmd.Parameters.AddWithValue("@txt_ID_comparecencias", idPL2);
+                                                    cmd.Parameters.AddWithValue("@fecha_actualizacion", DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+                                                    cmd.Parameters.AddWithValue("@id_legislatura", txt_id_legislatura.Text.ToString());
+
+                                                    cmd.ExecuteNonQuery();
+                                                }
+                                            }
+                                           
+                                        }
+                                    }
+
+                                    
+                                }
+
+                            }
+                        }
+                        if (!string.IsNullOrWhiteSpace(rowValues))
+                        {
+                            rowValues = rowValues.Trim(); // Elimina el espacio extra al final
+                            rowValuesList.Add(rowValues);
+                        }
+                    }
+
+                    
+
+
+                }
+
+                if (c.Controls.Count > 0)
+                {
+                    RecorrerControlesCOMP(c, data);
+                }
+
+
+            }
+
+        }
+        // Método para limpiar los controles de un TabPage
+        private void ClearControlsCOMP(Control control)
+        {
+            // Lista de nombres de DataGridView a excluir
+            var excludedDataGridViews = new List<string> { "dgv_registros_comp" };
+
+            foreach (Control c in control.Controls)
+            {
+                if (c is System.Windows.Forms.TextBox)
+                {
+                    ((System.Windows.Forms.TextBox)c).Clear();
+                }
+                else if (c is System.Windows.Forms.ComboBox)
+                {
+                    ((System.Windows.Forms.ComboBox)c).SelectedIndex = -1;
+                }
+                else if (c is DataGridView)
+                {
+                    if (!excludedDataGridViews.Contains(c.Name))
+                    {
+                        ((DataGridView)c).Rows.Clear();
+                    }
+                }
+                else if (c.HasChildren)
+                {
+                    // Llamar recursivamente si el control tiene hijos
+                    ClearControlsCOMP(c);
+                }
+            }
+        }
+        private void btnActualizarDGV_COMP_Click(object sender, EventArgs e)
+        {
+            DGV_REGISTROS_COMP();
+        }
     }
 }

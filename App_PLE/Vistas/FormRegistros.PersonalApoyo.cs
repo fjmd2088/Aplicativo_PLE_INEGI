@@ -2606,11 +2606,11 @@ namespace App_PLE.Vistas
             }
         }
 
+        // BOTON GUARRDAR
 
+        private void btnGuardarDB_PA_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }
