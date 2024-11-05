@@ -2239,10 +2239,7 @@ namespace App_PLE.Vistas
                     string query = "SELECT DISTINCT txt_ID_juicio_político, " +
                                    "cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual, cmb_estatus_denuncia_juicio_politico " +
                                    "FROM TR_JUICIOS_POLITICOS " +
-                                   "WHERE id_legislatura = @id_legis " +
-                                   "AND txt_ID_juicio_político IS NOT NULL AND txt_ID_juicio_político <> '' " +
-                                   "AND cmb_cond_presentacion_denuncia_juicio_politico_legislatura_actual IS NOT NULL " +
-                                   "AND cmb_estatus_denuncia_juicio_politico IS NOT NULL AND cmb_estatus_denuncia_juicio_politico <> '' ";
+                                   "WHERE id_legislatura = @id_legis ";
                                   
                     ;
 
@@ -2263,7 +2260,7 @@ namespace App_PLE.Vistas
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al llenar DGV personas legisladoras: " + ex.Message);
+                    MessageBox.Show("Error al llenar DGV juicios politicos: " + ex.Message);
                 }
                 finally
                 {
